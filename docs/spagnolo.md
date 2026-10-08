@@ -1,0 +1,98 @@
+# Spagnolo: regole per scrivere e tradurre (dal 25/09/2026)
+
+Dal 25 settembre 2026 OriginsMeta è in tre lingue: inglese (riferimento), italiano e spagnolo. Ogni contenuto nuovo
+(news, guide, carte, luoghi, eventi, testi dell'interfaccia) si scrive nelle tre lingue nella stessa sessione, con la
+stessa cura SEO. Questo file raccoglie le scelte fatte per lo spagnolo, perché restino uguali da una sessione all'altra.
+
+## Varietà e tono
+
+- **Spagnolo neutro internazionale**, per chi gioca in Spagna e in America latina. Si dà del **tú**; mai *vosotros*
+  (se serve un plurale si riformula: "los jugadores…", la forma impersonale con "se").
+- Niente parole che cambiano da paese a paese: "PC" (non ordenador/computadora), "teléfono" (non móvil/celular),
+  mai "coger"; niente intercalari come "vale", "guay", "chévere".
+- Stessa voce dell'inglese e dell'italiano: diretta, concreta, frasi brevi, niente enfasi. OriginsMeta parla al "nosotros".
+- Ortografia completa: accenti, ¿ e ¡ in apertura. Titoli e intestazioni con la sola iniziale maiuscola.
+- Date "25 de septiembre de 2026" (mesi minuscoli), anche nelle description: mai "el 9/9"; orari a 24 ore con il
+  fuso dell'inglese ("19:00 CEST"), senza conversioni aggiunte; migliaia col punto e decimali con la virgola
+  ("10.000", "3,5"); "98 %". Importi in dollari con la parola: "10.000 dólares", mai "10.000 $" (in America latina
+  "$" si legge pesos).
+
+## Cosa non si traduce
+
+- **Nomi delle carte, dei luoghi, dei mazzi della community, di prodotti ed eventi**: Merlin, Queen of Hearts,
+  Van Helsing's Tools, Wonderland, "Healing Healsing", Steam Next Fest, Crimson Cup, Demo 2.0, MetaShifting. Il sito
+  trasforma da solo i nomi delle carte in link: vanno scritti esattamente come nel database.
+- **Parole chiave del gioco**: si usano i nomi ufficiali spagnoli, perché il gioco è tradotto: Al revelar, Al morir,
+  Escudo, Arrollar, Toque mortal, Defensor, Primer golpe, Ataque doble, Disparo certero, Renacer, Mover… (glossario
+  completo in `docs/testi-di-gioco.md`), nei testi delle carte come in guide, news e interfaccia (decisione di
+  Pierluigi del 25/09/2026). "Su habilidad Al revelar", non "su On Reveal". Restano in inglese Conquest e il gergo
+  (midrange, buff, nerf, "mazo move"). Le etichette di allineamento restano **Good / Evil / Neutral** come sulla carta
+  del gioco, ma nel testo delle regole il gioco scrive "tus personajes Buenos", "Malvados".
+- Segnaposto tra graffe ({n}, {lang}, {from}…), emoji e notazioni delle statistiche ("+2⚔️/+2❤️", "[5⚔️/3❤️]").
+
+## Glossario (EN → ES)
+
+| inglese | spagnolo | nota |
+|---|---|---|
+| deck, decklist | mazo, lista del mazo | mai "baraja" |
+| deck builder | Deck builder (nome dello strumento) | come in italiano |
+| card, base card | carta, carta base | |
+| Legendary | Legendaria (maiuscola, come "Leggendaria") | plurale Legendarias |
+| created card (token) | carta creada | IT "carta generata" |
+| unit, spell | unidad, hechizo | IT "unità, magia" |
+| character, ally, enemy | personaje, aliado, enemigo | |
+| barrier | barrera | |
+| location | ubicación | sezione "Ubicaciones" |
+| lane, space | carril, espacio | il gioco dice "espacio" (mai "casilla") |
+| mana, cost | maná, coste | |
+| Power, Health | Poder, Salud | |
+| round, turn, combat | ronda, turno, combate | |
+| hand, graveyard | mano, cementerio | |
+| draw, discard, summon, destroy, heal | robar, descartar, invocar, destruir, curar | |
+| deal X damage | inflige X de daño | la carta di gioco evidenzia "X de daño" |
+| ANY / OR (maiuscolo nei testi delle carte) | CUALQUIER / O | la carta di gioco evidenzia CUALQUIER |
+| patch, patch notes | parche, notas del parche | |
+| balance change, buff, nerf, rework | cambio de equilibrio, buff, nerf, rework | |
+| ranked, qualifier | clasificatoria, clasificatorio | |
+| best-of-three / five | al mejor de tres / cinco | |
+| prize pool | bolsa de premios | "premios por un valor de 10.000 dólares" |
+| boss | jefe | |
+| pack, box | sobre, caja | |
+| wishlist (Steam) | lista de deseados | |
+| In brief (riquadro "In breve") | En resumen | "En breve" vuol dire "tra poco" |
+| sign in (tasto dell'header) | Acceder | nel testo "iniciar sesión" |
+
+Sezioni: Noticias · Tier list · Guías · Cartas · Mazos · Deck builder · Torneos y eventos · FAQ · Quiénes somos ·
+Ubicaciones · Las más jugadas · Crea tu tier list · Autores.
+
+## Dove sta lo spagnolo nel codice
+
+- Interfaccia: `src/lib/dictionaries/es.ts` (tipo `Dictionary` = struttura di `en.ts`: il compilatore segnala le chiavi mancanti).
+- News: terzo argomento di `n(en, it, es)` in `src/lib/data/news.ts` (il quarto, facoltativo, è il vecchio francese)
+  e chiave `es` in `highlights` e `faq`.
+- Guide: solo i testi in `src/lib/content/guides-es.ts` (`title`, `metaTitle`, `excerpt`, `faq`, `body`); categoria,
+  carte, lista del mazzo, copertina, data e tempo di lettura vengono dalla versione inglese in `guides.ts`.
+- Carte: `origin.es` e `es` (testo della carta) in `src/lib/data/card-lore.ts`; saghe in `cards.ts`; storico in
+  `card-history.ts` (`note.es`). **I testi spagnoli delle carte sono quelli ufficiali del gioco**, letti il 25/09/2026
+  (trascrizione in `docs/testi-ufficiali/es.tsv`, confronto con `node scripts/official-texts.mjs es`); carte create e
+  rimosse con il glossario ufficiale. Procedura in `docs/testi-di-gioco.md`.
+- Luoghi (`locations.ts`), eventi (`events.ts`), autori (`authors.ts`), archetipi (`decks.ts`), FAQ approvate e
+  domande suggerite (`src/lib/content/faq.ts`): chiave `es` accanto a `it`.
+- Messaggi Discord dei tornei (`src/lib/tournament/notify.ts`): inglese e italiano sempre, come il nostro server;
+  dal 25/09/2026 i tornei in spagnolo hanno anche lo spagnolo, in testa (ordine ES, EN, IT).
+
+## SEO dello spagnolo
+
+- Stesse regole delle altre lingue: `metaTitle` con "Origins TCG" entro 60 caratteri (meglio entro 46, così ci sta
+  " · OriginsMeta"), description 120–158, H1 delle news entro 110, un solo H1 per pagina.
+- Link interni sempre con `/es/…`; ancore `{#…}` tradotte in slug spagnoli (senza accenti), e ogni `highlights[].anchor`
+  deve esistere nel `body` spagnolo della stessa news.
+- hreflang, sitemap e `og:locale` (`es_ES`) si generano da soli da `locales` in `src/lib/i18n.ts`; la radice `/`
+  manda a `/es` i browser in spagnolo (`next.config.ts`).
+- Date di news e guide tradotte (una regola sola, `modifiedIn` in `src/lib/data/news.ts`): la pubblicazione resta
+  quella dell'articolo originale, la modifica della versione spagnola non va mai prima del 25/09/2026, il giorno in
+  cui è nata; la sitemap applica la stessa soglia con `LOCALE_SINCE` di `src/lib/lastmod.ts`. Nella firma di una news,
+  quando la data di modifica spagnola è solo quella soglia (`newsDates`, campo `translated`), si legge "Traducido el
+  25 de septiembre de 2026" e non "Actualizado": nessun paragrafo "Actualización del …", che resta per gli
+  aggiornamenti veri (campo `updated`).
+- Parole che cercano i giocatori: "Origins TCG", "mazos", "cartas", "guía", "tier list", "demo", "torneo", "parche".

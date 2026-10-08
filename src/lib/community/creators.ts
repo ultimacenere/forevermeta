@@ -1,0 +1,151 @@
+import { supabasePublic, type Db } from "@/lib/supabase/public";
+import { CommunityReadError } from "./queries";
+import { cleanBio, cleanContentLangs, mainChannels, parseStoredLinks, twitchLogin, type ContentLang, type ProfileLink } from "./profileLinks";
+import { SHOWCASE_BADGES, isShowcaseBadge, normalizeBadge, type Badge } from "./badges";
+
+/**
+ * Letture del profilo pubblico e dei profili vetrina (pacchetto CREATOR, 26/09/2026): bio, canali e lingue dei contenuti
+ * di un iscritto (colonne di supabase/schema.sql, blocco CREATOR), l'elenco dei profili con il ruolo Creator, Autore,
+ * Pro o Staff (ruoli del 27/09/2026: directory /creators, icone accanto al nome in /decks, rotta /api/live). I tornei
+ * pubblici che organizzano (vetrina su /u) dal 27/09/2026 stanno in achievementQueries.ts (pacchetto TRAGUARDI).
+ *
+ * Errori come nel resto della community (queries.ts, DECKS-12): nelle pagine ISR una lettura fallita lancia, così
+ * Next tiene la pagina di prima invece di metterne in cache una senza canali. Unica eccezione, voluta: le colonne
+ * nuove che ancora non esistono (codice online prima della migrazione, errore 42703 di Postgres). Allora si risponde
+ * "nessun dato" e il sito resta com'era: /creators vuota e noindex, niente icone accanto ai nomi, profili senza bio.
+ * Lo stato "colonne mancanti" vale `MISSING_RETRY_MS` e poi si riprova: dopo la migrazione un'istanza rimasta accesa
+ * torna a leggere i dati da sola, senza un nuovo deploy.
+ */
+
+export type Showcase = { bio: string | null; links: ProfileLink[]; contentLangs: ContentLang[]; updatedAt: string | null };
+
+export type CreatorProfile = Showcase & {
+  id: string;
+  username: string;
+  display_name: string | null;
+  avatar_url: string | null;
+  /** Creator, Autore, Pro o Staff (`SHOWCASE_BADGES`) */
+  badge: Badge;
+  created_at: string;
+};
+
+const SHOWCASE_COLUMNS = "bio, links, content_langs, showcase_updated_at";
+
+type ShowcaseRow = { bio: string | null; links: unknown; content_langs: unknown; showcase_updated_at: string | null };
+type ReadError = { code?: string; message: string } | null;
+
+/** Per quanto tempo, dopo un 42703, non si interroga più il database (poi si riprova). */
+const MISSING_RETRY_MS = 5 * 60_000;
+/** Fino a quando le colonne si considerano mancanti (0: si legge); `logged`: il messaggio nei log una volta sola. */
+const columnsState = { missingUntil: 0, logged: false };
+
+/** Le colonne vanno lette adesso? No se un 42703 recente dice che mancano ancora. */
+function showcaseReadable(): boolean {
+  return Date.now() >= columnsState.missingUntil;
+}
+
+/** Le colonne del profilo pubblico mancano ancora (migrazione non applicata)? Lo si scrive nei log una volta sola. */
+function missingColumns(error: ReadError): boolean {
+  if (!error) return false;
+  const missing = error.code === "42703" || /(bio|links|content_langs|showcase_updated_at).*does not exist/.test(error.message);
+  if (missing) {
+    columnsState.missingUntil = Date.now() + MISSING_RETRY_MS;
+    if (!columnsState.logged) {
+      columnsState.logged = true;
+      console.error("[community] mancano le colonne del profilo pubblico (bio, links, content_langs): va applicata la migrazione del pacchetto CREATOR");
+    }
+  }
+  return missing;
+}
+
+/**
+ * Dalla riga del database ai dati mostrati: canali, lingue e bio ricontrollati (difesa in lettura). La bio passa da
+ * `cleanBio` come nel modulo di /account: una riga scritta via API saltando il sito (segni di direzione, caratteri a
+ * larghezza zero, righe vuote a catena) si mostra ripulita, anche prima che il vincolo del database la rifiuti; una bio
+ * che nemmeno così rientra nei limiti non si mostra.
+ */
+export function toShowcase(row: ShowcaseRow): Showcase {
+  const bio = typeof row.bio === "string" ? cleanBio(row.bio) : null;
+  return {
+    bio: bio && bio.ok ? bio.value : null,
+    links: parseStoredLinks(row.links),
+    contentLangs: cleanContentLangs(row.content_langs),
+    updatedAt: row.showcase_updated_at ?? null,
+  };
+}
+
+/** Bio, canali e lingue di un iscritto (pagina /u, scheda del mazzo). null se il profilo non c'è o le colonne mancano. */
+export async function getProfileShowcase(profileId: string): Promise<Showcase | null> {
+  const client = supabasePublic();
+  if (!client || !showcaseReadable()) return null;
+  const res = await client.from("profiles").select(SHOWCASE_COLUMNS).eq("id", profileId).maybeSingle();
+  if (missingColumns(res.error)) return null;
+  if (res.error) throw new CommunityReadError("getProfileShowcase", res.error.message);
+  return res.data ? toShowcase(res.data as ShowcaseRow) : null;
+}
+
+/**
+ * Il proprio profilo, per il modulo di /account (client con la sessione, pagina dinamica): come le altre letture del
+ * pannello privato un errore non rompe la pagina. `status`: `ok`; `missing` se le colonne non ci sono ancora (il
+ * modulo lo dice e non si può salvare); `error` se la lettura è fallita (il modulo non si mostra: salvarlo vuoto
+ * cancellerebbe canali che ci sono). Legge sempre, anche dopo un 42703: è una pagina dinamica, una query in più non
+ * costa, e appena la migrazione è applicata il modulo compare.
+ */
+export async function getOwnShowcase(
+  client: Db,
+  userId: string,
+): Promise<{ status: "ok" | "missing" | "error"; showcase: Showcase; username: string | null; badge: string | null }> {
+  const empty: Showcase = { bio: null, links: [], contentLangs: [], updatedAt: null };
+  const res = await client.from("profiles").select(`username, badge, ${SHOWCASE_COLUMNS}`).eq("id", userId).maybeSingle();
+  if (res.error) {
+    const missing = missingColumns(res.error);
+    if (!missing) console.error("[community] getOwnShowcase:", res.error.message);
+    const base = await client.from("profiles").select("username, badge").eq("id", userId).maybeSingle();
+    const row = base.data as { username: string | null; badge: string | null } | null;
+    return { status: missing ? "missing" : "error", showcase: empty, username: row?.username ?? null, badge: row?.badge ?? null };
+  }
+  const row = res.data as (ShowcaseRow & { username: string | null; badge: string | null }) | null;
+  return { status: "ok", showcase: row ? toShowcase(row) : empty, username: row?.username ?? null, badge: row?.badge ?? null };
+}
+
+/**
+ * I profili con il ruolo Creator, Autore, Pro o Staff (`SHOWCASE_BADGES`, 27/09/2026): la directory /creators, le
+ * icone accanto ai nomi in /decks e i canali Twitch da controllare per lo stato in diretta. Un tag che il codice non
+ * conosce (per esempio `influencer` prima della migrazione) resta fuori. Vuoto con la community spenta o le colonne
+ * mancanti.
+ */
+export async function listCreators(): Promise<CreatorProfile[]> {
+  const client = supabasePublic();
+  if (!client || !showcaseReadable()) return [];
+  const res = await client
+    .from("profiles")
+    .select(`id, username, display_name, avatar_url, badge, created_at, ${SHOWCASE_COLUMNS}`)
+    .in("badge", [...SHOWCASE_BADGES])
+    .order("created_at", { ascending: true })
+    .limit(500);
+  if (missingColumns(res.error)) return [];
+  if (res.error) throw new CommunityReadError("listCreators", res.error.message);
+  type Row = ShowcaseRow & { id: string; username: string | null; display_name: string | null; avatar_url: string | null; badge: string; created_at: string };
+  return ((res.data ?? []) as Row[])
+    .filter((r): r is Row & { username: string } => Boolean(r.username) && isShowcaseBadge(r.badge))
+    .map((r) => ({ id: r.id, username: r.username, display_name: r.display_name, avatar_url: r.avatar_url, badge: normalizeBadge(r.badge), created_at: r.created_at, ...toShowcase(r) }));
+}
+
+/** I profili vetrina per id del profilo, per trovare in fretta quelli di chi ha pubblicato una lista di mazzi. */
+export function creatorIndex(creators: readonly CreatorProfile[]): ReadonlyMap<string, CreatorProfile> {
+  return new Map(creators.map((c) => [c.id, c]));
+}
+
+/**
+ * Quello che l'elenco /decks mostra accanto al nome di chi ha pubblicato, se ha un ruolo vetrina (`ExplorerDeck.channels`
+ * e `liveUser`): i canali principali e, se ha un canale Twitch, il nome utente per il badge LIVE. Niente per gli altri.
+ */
+export function creatorExtras(index: ReadonlyMap<string, CreatorProfile>, ownerId: string): { channels?: ProfileLink[]; liveUser?: string } {
+  const c = index.get(ownerId);
+  if (!c || !isShowcaseBadge(c.badge)) return {};
+  const channels = mainChannels(c.links);
+  return { ...(channels.length ? { channels } : {}), ...(twitchLogin(c.links) ? { liveUser: c.username } : {}) };
+}
+
+// I tornei pubblici organizzati (vetrina su /u) si leggono in achievementQueries.ts, `readFeaturedTournaments`
+// (pacchetto TRAGUARDI, 27/09/2026): in arrivo e conclusi con due letture separate, conclusi solo con un vincitore.

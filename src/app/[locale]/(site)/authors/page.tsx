@@ -1,0 +1,56 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { href } from "@/lib/i18n";
+import { pageMeta, resolveLocale, type LocaleParams } from "@/lib/page";
+import { authors } from "@/lib/data/authors";
+import { JsonLd, breadcrumbs, collectionPage, organizationId, personId } from "@/components/JsonLd";
+
+export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
+  const { locale, dict } = await resolveLocale(params);
+  // Description scritta per la SERP, con il nome del gioco: l'intro della pagina non lo dice (piano SEO del 25/09/2026)
+  return pageMeta(locale, "/authors", dict.authors.metaTitle, dict.authors.description);
+}
+
+export default async function AuthorsPage({ params }: { params: LocaleParams }) {
+  const { locale, dict: d } = await resolveLocale(params);
+  // Stesso helper delle altre pagine lista: l'`@id` è `…/authors#collection`, come su carte, mazzi e guide. Ogni voce
+  // punta anche alla Person unica dell'autore (`personId`, Ondata 2, TOOL-09) e la lista parla di OriginsMeta.
+  const collection = collectionPage({
+    locale,
+    path: href(locale, "/authors"),
+    name: d.authors.title,
+    description: d.authors.intro,
+    items: authors.map((a) => ({ name: a.name, path: href(locale, `/authors/${a.slug}`), id: personId(a.slug) })),
+    about: organizationId,
+  });
+  return (
+    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
+      <JsonLd
+        data={[
+          collection,
+          breadcrumbs([
+            { name: "OriginsMeta", path: href(locale) },
+            { name: d.authors.title, path: href(locale, "/authors") },
+          ]),
+        ]}
+      />
+      <p className="kicker text-mint">{d.about.authorsTitle}</p>
+      <h1 className="t-page mt-2">{d.authors.title}</h1>
+      <p className="mt-4 max-w-2xl text-chalk-muted">{d.authors.intro}</p>
+      <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {authors.map((a) => (
+          <li key={a.slug}>
+            {/* Solo ruolo e nome (Pierluigi, 24/09/2026: "come descrizione solo Fondatore, per entrambi"); la tagline
+                resta la meta description della pagina autore */}
+            <Link href={href(locale, `/authors/${a.slug}`)} className="card-night card-night-hover flex h-full flex-col p-6">
+              <p className="kicker text-pale-muted">{a.role[locale]}</p>
+              <h2 className="t-item mt-1 flex-1 leading-tight">{a.name}</h2>
+              <span className="mt-4 font-display text-sm font-bold text-mint">{d.authors.profileCta} →</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-8 text-xs text-pale-muted">{d.common.notAffiliated}</p>
+    </div>
+  );
+}
