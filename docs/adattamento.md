@@ -8,7 +8,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 - `README.md` e `CLAUDE.md` di OriginsMeta spostati in `docs/motore-originsmeta-*.md` come guida del motore.
 - Workflow degli annunci Discord spostato in `docs/workflows-da-attivare/` (si rimette in `.github/workflows/` quando esistono i canali e i secret di ForeverMeta).
 - Nessun default per Supabase (`src/lib/supabase/env.ts`, `scripts/clear-profile-media.mjs`) né per GA4 (`src/app/[locale]/layout.tsx`, `.env.example`).
-- **Non verificati sulla copia:** `npm run build` e `npm test`. I test che controllano immagini, guide e news di Origins possono fallire finché i contenuti non sono sostituiti.
+- `npm run build` verde sulla copia l'08/10/2026, senza variabili d'ambiente (community e GA4 spenti). `npm test` non ancora lanciato: i test che controllano immagini, guide e news di Origins possono fallire finché i contenuti non sono sostituiti.
 
 ## Fase 1: infrastruttura (ordine deciso da Pierluigi il 27/09/2026)
 
