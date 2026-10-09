@@ -38,4 +38,4 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 
 ## Funzioni del motore
 
-Quali funzioni si tengono, si trasformano o si tolgono, e in che ordine, sta nella KB del progetto (§10): il repository è pubblico e i piani di prodotto non si scrivono qui.
+Quali funzioni si tengono, si trasformano o si tolgono, e in che ordine, sta nella KB del progetto (§7): il repository è pubblico e i piani di prodotto non si scrivono qui.
