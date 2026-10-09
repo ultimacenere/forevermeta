@@ -93,7 +93,28 @@ function sectionRedirects() {
   return [...browserLocales.flatMap(({ locale, acceptLanguage: language }) => to(locale, acceptLanguage(language))), ...to("en")];
 }
 
+/**
+ * ForeverMeta, cantiere (09/10/2026): finché il motore copiato da OriginsMeta non è adattato, ogni indirizzo mostra
+ * public/cantiere.html (noindex) e robots.txt chiude tutto, così forevermeta.me non pubblica una copia di OriginsMeta.
+ * Si apre con FOREVERMETA_OPEN=1, variabile di Vercel letta alla build: sulle anteprime per vedere il lavoro, in
+ * produzione solo al lancio, su decisione di Pierluigi. Con il cantiere chiuso i redirect del sito non servono.
+ */
+const cantiere = process.env.FOREVERMETA_OPEN !== "1";
+
 const nextConfig: NextConfig = {
+  async rewrites() {
+    if (!cantiere) return [];
+    return {
+      beforeFiles: [
+        { source: "/robots.txt", destination: "/cantiere-robots.txt" },
+        { source: "/", destination: "/cantiere.html" },
+        // tutto tranne i file di Next e le due pagine del cantiere (anche favicon e icon.svg, che sono ancora di OriginsMeta)
+        { source: "/:path((?!_next/|cantiere\\.html$|cantiere-robots\\.txt$).+)", destination: "/cantiere.html" },
+      ],
+      afterFiles: [],
+      fallback: [],
+    };
+  },
   experimental: {
     globalNotFound: true,
   },
@@ -106,6 +127,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/*/hqdefault.jpg", search: "" }],
   },
   async headers() {
+    if (cantiere) return [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }];
     return [
       // Le pagine del sito non si mostrano dentro un iframe di un altro sito (clickjacking): /account ha azioni vere
       // (profilo pubblico, "Scrivi allo staff", nascondi ed elimina mazzo), l'area staff pure. Nessuna pagina del sito
@@ -131,6 +153,7 @@ const nextConfig: NextConfig = {
     ];
   },
   async redirects() {
+    if (cantiere) return [];
     return [
       // La copia di Vercel (originsmeta.vercel.app) porta al dominio vero con lo stesso percorso, in modo permanente
       // (COMP-12, TRJ-05). Solo quell'host: le anteprime dei branch (altri *.vercel.app) e localhost restano come sono.

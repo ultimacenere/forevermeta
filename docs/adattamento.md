@@ -10,6 +10,11 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 - Nessun default per Supabase (`src/lib/supabase/env.ts`, `scripts/clear-profile-media.mjs`) né per GA4 (`src/app/[locale]/layout.tsx`, `.env.example`).
 - `npm run build` verde sulla copia l'08/10/2026, senza variabili d'ambiente (community e GA4 spenti). `npm test` non ancora lanciato: i test che controllano immagini, guide e news di Origins possono fallire finché i contenuti non sono sostituiti.
 
+## Cantiere (09/10/2026)
+
+- Finché `FOREVERMETA_OPEN` non vale `1` alla build, ogni indirizzo mostra `public/cantiere.html` (noindex, non affiliato a Blizzard), `robots.txt` è `public/cantiere-robots.txt` (Disallow su tutto) e i redirect del sito sono spenti (`next.config.ts`). Su Vercel: `FOREVERMETA_OPEN=1` solo nell'ambiente Preview, per vedere il lavoro; in Production solo al lancio, su decisione di Pierluigi.
+- Tolto il cron di `vercel.json` (`/api/cron/live` ogni 10 minuti): sul piano Hobby di Vercel i cron possono essere al massimo giornalieri e il deploy fallirebbe; e senza community non serve. Si rimette quando c'è Supabase, con il piano adatto.
+
 ## Fase 1: infrastruttura (ordine deciso da Pierluigi il 27/09/2026)
 
 1. ~~Repository GitHub `ultimacenere/forevermeta`, pubblico, e primo push~~: fatto il 09/10/2026.
