@@ -7,19 +7,17 @@ import { JsonLd, breadcrumbs, collectionPage, organizationId, personId } from "@
 
 export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
   const { locale, dict } = await resolveLocale(params);
-  // Description scritta per la SERP, con il nome del gioco: l'intro della pagina non lo dice (piano SEO del 25/09/2026)
   return pageMeta(locale, "/authors", dict.authors.metaTitle, dict.authors.description);
 }
 
+/** Indice degli autori: ruolo e nome, ognuno con la sua pagina. */
 export default async function AuthorsPage({ params }: { params: LocaleParams }) {
   const { locale, dict: d } = await resolveLocale(params);
-  // Stesso helper delle altre pagine lista: l'`@id` è `…/authors#collection`, come su carte, mazzi e guide. Ogni voce
-  // punta anche alla Person unica dell'autore (`personId`, Ondata 2, TOOL-09) e la lista parla di OriginsMeta.
   const collection = collectionPage({
     locale,
     path: href(locale, "/authors"),
     name: d.authors.title,
-    description: d.authors.intro,
+    description: d.authors.description,
     items: authors.map((a) => ({ name: a.name, path: href(locale, `/authors/${a.slug}`), id: personId(a.slug) })),
     about: organizationId,
   });
@@ -29,23 +27,21 @@ export default async function AuthorsPage({ params }: { params: LocaleParams }) 
         data={[
           collection,
           breadcrumbs([
-            { name: "OriginsMeta", path: href(locale) },
+            { name: "ForeverMeta", path: href(locale) },
             { name: d.authors.title, path: href(locale, "/authors") },
           ]),
         ]}
       />
-      <p className="kicker text-mint">{d.about.authorsTitle}</p>
+      <p className="kicker text-mint">ForeverMeta</p>
       <h1 className="t-page mt-2">{d.authors.title}</h1>
-      <p className="mt-4 max-w-2xl text-chalk-muted">{d.authors.intro}</p>
+      <p className="mt-4 max-w-2xl text-chalk-muted">{d.authors.description}</p>
       <ul className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
         {authors.map((a) => (
           <li key={a.slug}>
-            {/* Solo ruolo e nome (Pierluigi, 24/09/2026: "come descrizione solo Fondatore, per entrambi"); la tagline
-                resta la meta description della pagina autore */}
             <Link href={href(locale, `/authors/${a.slug}`)} className="card-night card-night-hover flex h-full flex-col p-6">
               <p className="kicker text-pale-muted">{a.role[locale]}</p>
               <h2 className="t-item mt-1 flex-1 leading-tight">{a.name}</h2>
-              <span className="mt-4 font-display text-sm font-bold text-mint">{d.authors.profileCta} →</span>
+              <p className="mt-3 text-sm text-pale">{a.tagline[locale]}</p>
             </Link>
           </li>
         ))}

@@ -1,87 +1,24 @@
 import type { NextConfig } from "next";
 
 /**
- * Gli URL di spam di aprile 2026 (/?r=…&channel=…&from=…, dal dominio parcheggiato prima di noi, TECH-10): la radice
- * con tutti e due i parametri non va più alla home (307 e poi 200, che li teneva in vita), ma risponde 410 da
- * `src/proxy.ts`. I redirect di questo file vengono prima del proxy, quindi quelli della radice vanno saltati in quel
- * caso e solo in quello. `missing` salta una regola appena c'è anche UNA delle chiavi elencate: per questo ogni regola
- * della radice esiste in due copie, una per chiave (`rootRedirect`). Con uno solo dei due parametri (/?r=discord,
- * /?channel=yt) una delle due copie scatta ancora e porta alla home nella lingua giusta, query compresa.
- */
-const spamKeys = ["r", "channel"] as const;
-
-/**
  * Lingua del visitatore per i redirect senza lingua (la radice e le sezioni): italiano; spagnolo anche per catalano,
- * galiziano e basco, che leggono lo spagnolo; francese (dal 07/10/2026); altrimenti inglese (la regola senza `has`, sempre per ultima). Si guarda
- * solo la prima lingua dell'header (è un'espressione regolare); i link brevi dei tornei pesano tutto l'elenco
- * (`preferredLocale` in src/app/t/locale.ts).
+ * galiziano e basco; altrimenti inglese (la regola senza `has`, sempre per ultima). Si guarda solo la prima lingua
+ * dell'header (è un'espressione regolare).
  */
 const browserLocales = [
   { locale: "it", acceptLanguage: "^it.*" },
   { locale: "es", acceptLanguage: "^(?:es|ca|gl|eu).*" },
-  // francese dal 07/10/2026 (quarta lingua): anche per chi legge il francese del Canada, del Belgio o della Svizzera (fr-CA, fr-BE…)
-  { locale: "fr", acceptLanguage: "^fr.*" },
 ] as const;
 
 const acceptLanguage = (value: string) => [{ type: "header" as const, key: "accept-language", value }];
 
-/** Un redirect temporaneo della radice, in due copie: scatta se manca `r` oppure se manca `channel`. */
-function rootRedirect(destination: string, language?: string) {
-  return spamKeys.map((key) => ({
-    source: "/",
-    ...(language ? { has: acceptLanguage(language) } : {}),
-    missing: [{ type: "query" as const, key }],
-    destination,
-    permanent: false,
-  }));
-}
-
 /**
- * Le sezioni del sito, cioè le cartelle di src/app/[locale]/(site) tranne `[...rest]` (il test in
- * `[...rest]/notFoundHtml.test.ts` controlla che l'elenco sia uguale alle cartelle: una sezione nuova va aggiunta qui).
- * Un indirizzo senza lingua con una sezione vera (/cards/merlin, /news/<slug>, /guides/<slug>, /cards, /faq), per
- * esempio un link incollato a mano, prima rispondeva 404 con i soli tasti verso le tre home, o con il guscio
- * `__next_error__` senza titolo (/cards, /decks, /faq): ora porta alla stessa pagina nella lingua del visitatore
- * (Ondata 1, correzione del 25/09/2026). Il resto del percorso e la query passano come sono; se la pagina non esiste
- * nemmeno con la lingua, risponde la 404 di quella lingua. Un primo segmento che non è né una lingua né una sezione
- * (/xx/pagina) resta alla 404 di `[...rest]/route.ts`.
+ * Le sezioni del sito, cioè le cartelle di src/app/[locale]/(site) tranne `[...rest]`: un indirizzo senza lingua con
+ * una sezione vera (/guides/<slug>, /glossary) porta alla stessa pagina nella lingua del visitatore. Il resto del
+ * percorso non ha punti (`[^.]+`), così i file di `public` non vengono toccati.
  */
-const sections = [
-  "about",
-  "account",
-  "analytics",
-  "authors",
-  "cards",
-  "creators",
-  "deck-builder",
-  "decks",
-  "draft",
-  "faq",
-  "guides",
-  "live",
-  "locations",
-  "login",
-  "metashifting",
-  "news",
-  "privacy",
-  "style",
-  "tier-list",
-  "tournaments",
-  "u",
-] as const;
+const sections = ["about", "account", "authors", "calendar", "changes", "faq", "glossary", "guides", "login", "news", "privacy"] as const;
 
-/**
- * Redirect temporanei (307) delle sezioni senza lingua, con le stesse regole della radice, in due forme per lingua: la
- * sola sezione (/cards) e la sezione con il resto del percorso (/cards/merlin, /tournaments/<slug>/deck).
- * Il resto del percorso non ha punti (`[^.]+`): i redirect di questo file vengono PRIMA dei file di `public` (docs di
- * Next, next-config-js/redirects.md: "Redirects are checked before the filesystem which includes pages and `/public`
- * files"), e public/cards ha le illustrazioni, le miniature e le copertine (/cards/aladdin.webp, /cards/sm/…,
- * /cards/cover/…). Con un `:path*` qualunque finivano su /en/cards/aladdin.webp, la 404 della scheda carta, e sparivano
- * tutte le immagini delle carte. Nessuno slug del sito ha punti (carte, news, guide, mazzi e nomi utente sono fatti di
- * lettere, cifre e trattini); un percorso con un punto che non è un file (/news/a.b) resta alla 404, come prima.
- * Nessun giro: le destinazioni cominciano con una lingua, che non è mai una sezione. Test in notFoundHtml.test.ts con
- * il matcher vero di Next, su tutti i file di `public`.
- */
 function sectionRedirects() {
   const section = `:section(${sections.join("|")})`;
   const forms = [
@@ -95,7 +32,7 @@ function sectionRedirects() {
 
 /**
  * ForeverMeta, cantiere (09/10/2026): finché il motore copiato da OriginsMeta non è adattato, ogni indirizzo mostra
- * public/cantiere.html (noindex) e robots.txt chiude tutto, così forevermeta.me non pubblica una copia di OriginsMeta.
+ * public/cantiere.html (noindex) e robots.txt chiude tutto, così forevermeta.me non pubblica il sito a metà.
  * Si apre con FOREVERMETA_OPEN=1, variabile di Vercel letta alla build: sulle anteprime per vedere il lavoro, in
  * produzione solo al lancio, su decisione di Pierluigi. Con il cantiere chiuso i redirect del sito non servono.
  */
@@ -108,7 +45,7 @@ const nextConfig: NextConfig = {
       beforeFiles: [
         { source: "/robots.txt", destination: "/cantiere-robots.txt" },
         { source: "/", destination: "/cantiere.html" },
-        // tutto tranne i file di Next e le due pagine del cantiere (anche favicon e icon.svg, che sono ancora di OriginsMeta)
+        // tutto tranne i file di Next e le due pagine del cantiere
         { source: "/:path((?!_next/|cantiere\\.html$|cantiere-robots\\.txt$).+)", destination: "/cantiere.html" },
       ],
       afterFiles: [],
@@ -118,36 +55,15 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
   },
-  // Miniature dei video YouTube dei mazzi e delle guide (pacchetto VIDEO, 26/09/2026): le scarica l'ottimizzatore del
-  // sito, così il browser chiede solo /_next/image a originsmeta.com e non contatta Google prima del clic sul video
-  // (`youtubeThumb` in src/lib/videos.ts, lettore `VideoEmbed`). Solo il file che il sito usa, i.ytimg.com/vi/<id>/
-  // hqdefault.jpg, senza query: con "/vi/**" /_next/image faceva da proxy per ogni file di ogni video di YouTube, a
-  // qualsiasi larghezza (ogni combinazione una trasformazione nuova, pagata sul piano di Vercel).
-  images: {
-    remotePatterns: [{ protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/*/hqdefault.jpg", search: "" }],
-  },
   async headers() {
     if (cantiere) return [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }];
     return [
-      // Le pagine del sito non si mostrano dentro un iframe di un altro sito (clickjacking): /account ha azioni vere
-      // (profilo pubblico, "Scrivi allo staff", nascondi ed elimina mazzo), l'area staff pure. Nessuna pagina del sito
-      // viene incorniciata altrove; il sito incornicia altri (YouTube, Twitch, Turnstile), e questo non cambia.
-      // X-Frame-Options per i browser che non leggono frame-ancestors. L'overlay (/overlay/…) non rientra nel percorso.
+      // Le pagine del sito non si mostrano dentro un iframe di un altro sito (clickjacking).
       {
-        source: "/:locale(en|it|es|fr)/:path*",
+        source: "/:locale(en|it|es)/:path*",
         headers: [
           { key: "Content-Security-Policy", value: "frame-ancestors 'self'" },
           { key: "X-Frame-Options", value: "SAMEORIGIN" },
-        ],
-      },
-      // Overlay per OBS (pacchetto STREAM, 26/09/2026, src/app/overlay): mai indicizzato, e usabile anche dentro un
-      // iframe (frame-ancestors aperto: la pagina mostra un mazzo pubblico e non ha azioni). La sorgente browser di OBS
-      // non è un iframe e funzionerebbe comunque.
-      {
-        source: "/overlay/:path*",
-        headers: [
-          { key: "X-Robots-Tag", value: "noindex, nofollow" },
-          { key: "Content-Security-Policy", value: "frame-ancestors *" },
         ],
       },
     ];
@@ -155,30 +71,12 @@ const nextConfig: NextConfig = {
   async redirects() {
     if (cantiere) return [];
     return [
-      // La copia di Vercel (originsmeta.vercel.app) porta al dominio vero con lo stesso percorso, in modo permanente
-      // (COMP-12, TRJ-05). Solo quell'host: le anteprime dei branch (altri *.vercel.app) e localhost restano come sono.
-      {
-        // Tranne le rotte del cron di Vercel (pacchetto SEGUI, /api/cron/live): il cron chiama l'indirizzo *.vercel.app
-        // della produzione e non segue i redirect, quindi con il 308 gli avvisi di diretta non partirebbero mai.
-        // L'eccezione è sul percorso (mai sull'user agent, che chiunque può falsificare): le rotte /api/cron/ sono
-        // protette da CRON_SECRET, tutto il resto riceve il 308.
-        source: "/:path((?!api/cron/).*)",
-        has: [{ type: "host", value: "originsmeta.vercel.app" }],
-        destination: "https://originsmeta.com/:path",
-        permanent: true,
-      },
-      // Radice del sito: manda alla lingua del browser (`browserLocales`). Redirect temporanei (307), mai permanenti:
-      // la radice deve poter cambiare lingua a ogni visita, e x-default resta /en.
-      ...browserLocales.flatMap(({ locale, acceptLanguage: language }) => rootRedirect(`/${locale}`, language)),
-      ...rootRedirect("/en"),
-      // Sezioni senza lingua (/cards/merlin, /news/<slug>…): la stessa pagina nella lingua del browser.
+      // La copia di Vercel porta al dominio vero con lo stesso percorso, in modo permanente.
+      { source: "/:path*", has: [{ type: "host", value: "forevermeta.vercel.app" }], destination: "https://forevermeta.me/:path*", permanent: true },
+      // Radice del sito: la lingua del browser, con redirect temporanei (la radice cambia lingua a ogni visita).
+      ...browserLocales.map(({ locale, acceptLanguage: language }) => ({ source: "/", has: acceptLanguage(language), destination: `/${locale}`, permanent: false })),
+      { source: "/", destination: "/en", permanent: false },
       ...sectionRedirects(),
-      // La pagina dei win rate (30/09/2026) è stata tolta il 02/10/2026: il tool è in pausa dalla patch 0.7 e la sua
-      // pagina è /analytics (Pierluigi: "togliamo la pagina del winrate, creiamo una pagina invece"). Permanente: la
-      // pagina vecchia era noindex e non torna con lo stesso indirizzo.
-      { source: "/:locale(en|it|es|fr)/tier-list/win-rate", destination: "/:locale/analytics", permanent: true },
-      // Il francese, ritirato il 15/09/2026 (allora /fr mandava a /en con un 308), è tornato il 07/10/2026 come quarta lingua:
-      // /fr è di nuovo una lingua vera, nessun redirect.
     ];
   },
 };

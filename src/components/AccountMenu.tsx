@@ -10,10 +10,7 @@ import { PROFILE_UPDATED_EVENT, avatarSrc } from "@/lib/community/profileMedia";
 import type { Profile } from "@/lib/community/types";
 import { AutoCloseDetails } from "./AutoCloseDetails";
 import { NavLink } from "./NavLink";
-// casella messaggi (26/09/2026, pacchetto INBOX): busta con i non letti (27/09/2026) e voci del menu, caricati nel browser
-import { InboxEnvelope, InboxMenuLinks, useInboxStatus } from "./inbox/InboxIndicator";
-
-export type AccountLabels = { login: string; account: string; builder: string; logout: string; player: string };
+export type AccountLabels = { login: string; account: string; logout: string; player: string };
 
 type Session = { id: string; email?: string } | null | undefined;
 
@@ -107,8 +104,6 @@ export function AccountMenu({ locale, labels }: { locale: string; labels: Accoun
     };
   }, []);
 
-  const inbox = useInboxStatus(user ? user.id : null);
-
   if (!supabaseEnabled) return null;
   if (user === undefined) return <SessionPlaceholder />;
   if (!user) {
@@ -120,12 +115,9 @@ export function AccountMenu({ locale, labels }: { locale: string; labels: Accoun
   }
   const name = profile?.display_name || profile?.username || (profileReady ? user.email?.split("@")[0] : "") || labels.player;
   return (
-    // Busta dei messaggi subito a sinistra dell'avatar (27/09/2026, richiesta di Pierluigi), a ogni larghezza: sotto 640 px
-    // la riga è logo, busta, avatar e Menu. Senza accesso non c'è (qui si arriva solo con una sessione).
-    // min-w-0 qui, sul menu e nella riga dell'header: se lo spazio manca si tronca il nome, busta e avatar restano interi
+    // min-w-0 qui, sul menu e nella riga dell'header: se lo spazio manca si tronca il nome, l'avatar resta intero
     <span className="flex min-w-0 items-center gap-2 max-[359px]:gap-1">
-      <InboxEnvelope locale={locale} status={inbox} />
-      <AccountDetails locale={locale} labels={labels} user={user} profile={profile} profileReady={profileReady} name={name} inbox={inbox} />
+      <AccountDetails locale={locale} labels={labels} user={user} profile={profile} profileReady={profileReady} name={name} />
     </span>
   );
 }
@@ -138,7 +130,6 @@ function AccountDetails({
   profile,
   profileReady,
   name,
-  inbox,
 }: {
   locale: string;
   labels: AccountLabels;
@@ -146,7 +137,6 @@ function AccountDetails({
   profile: Profile | null;
   profileReady: boolean;
   name: string;
-  inbox: ReturnType<typeof useInboxStatus>;
 }) {
   return (
     <AutoCloseDetails
@@ -166,10 +156,6 @@ function AccountDetails({
         <p className="truncate px-3 py-1 font-mono text-[11px] text-chalk-muted">{profile?.username ? `@${profile.username}` : profileReady ? user.email : ""}</p>
         <NavLink href={`/${locale}/account`} className="nav-link-block">
           {labels.account}
-        </NavLink>
-        <InboxMenuLinks locale={locale} status={inbox} />
-        <NavLink href={`/${locale}/deck-builder`} className="nav-link-block">
-          {labels.builder}
         </NavLink>
         <SignOutButton locale={locale} label={labels.logout} className="nav-link nav-link-block text-chalk-muted hover:text-pink" />
       </nav>

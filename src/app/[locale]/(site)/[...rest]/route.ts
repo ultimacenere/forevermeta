@@ -23,14 +23,14 @@ function pageFor(locale: Locale): NotFoundPage {
     blocks: [{ lang: locale, heading: d.notFound.title, text: d.notFound.text }],
     actions: [
       { href: href(locale), label: d.notFound.cta, primary: true },
-      { href: href(locale, "/cards"), label: d.nav.cards },
+      { href: href(locale, "/guides"), label: d.nav.guides },
     ],
     nav: [
       { href: href(locale, "/news"), label: d.nav.news },
-      { href: href(locale, "/tier-list"), label: d.nav.tierList },
       { href: href(locale, "/guides"), label: d.nav.guides },
-      { href: href(locale, "/decks"), label: d.nav.decks },
-      { href: href(locale, "/deck-builder"), label: d.nav.builder },
+      { href: href(locale, "/glossary"), label: d.nav.glossary },
+      { href: href(locale, "/calendar"), label: d.nav.calendar },
+      { href: href(locale, "/changes"), label: d.nav.changes },
     ],
     disclaimer: d.footer.disclaimer,
   };
@@ -40,7 +40,7 @@ function pageForUnknownLocale(): NotFoundPage {
   const en = getDictionary("en");
   return {
     lang: "en",
-    title: "404 · OriginsMeta",
+    title: "404 · ForeverMeta",
     description: locales.map((l) => NOT_FOUND_TITLE[l]).join(" · "),
     blocks: locales.map((l) => {
       const d = getDictionary(l);

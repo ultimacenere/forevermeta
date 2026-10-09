@@ -1,446 +1,63 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { redirect } from "next/navigation";
-import { formatDate, href, siteUrl } from "@/lib/i18n";
+import { href } from "@/lib/i18n";
 import { pageMeta, resolveLocale, type LocaleParams } from "@/lib/page";
-import { archetypeLabels } from "@/lib/data/decks";
-import { getCard, latestPatch, patchAt, patchLabel, patchOrder } from "@/lib/data/cards";
-import { deckCardsDate, deckOutdated, deckUpdateHref } from "@/lib/community/deckVersions";
-import { deckVersionLabels } from "@/lib/deckVersionLabels";
-import { fillLabel } from "@/lib/community/deckQuality";
-import { encodeOmCode } from "@/lib/deckcode";
 import { currentUser } from "@/lib/supabase/server";
-import { listSavedDecks, listUserDecks, publishedDeckLimit } from "@/lib/community/queries";
-import { removeFavorite } from "@/lib/community/favoriteActions";
-import { favoriteLabels } from "@/lib/favoriteLabels";
-import { countEntries, listUserTierLists } from "@/lib/community/tierlists";
-import { deleteTierList, setTierListStatus } from "@/lib/community/tierActions";
-import { deleteDeck, setDeckStatus } from "@/lib/community/actions";
-import type { CommunityDeck, Profile } from "@/lib/community/types";
-import { listUserTournaments } from "@/lib/tournament/queries";
-import { deleteTournament } from "@/lib/tournament/actions";
+import type { Profile } from "@/lib/community/types";
 import { Avatar, SignOutButton } from "@/components/AccountMenu";
-import { FollowingSection } from "@/components/follow/FollowingSection";
-import { TournamentCard } from "@/components/TournamentCard";
-import { ConfirmButton } from "@/components/ConfirmButton";
-import { AccountDeckSets } from "@/components/AccountDeckSets";
-import { AccountHashRedirect } from "@/components/AccountHashRedirect";
-import { AccountStreamGuide } from "@/components/stream/StreamTools";
-import { streamLabels } from "@/lib/streamLabels";
-import { DeckStatsPanel } from "@/components/DeckStatsPanel";
-import { Suspense } from "react";
-import { AccountGuides } from "@/components/guides/AccountGuides";
-import { AccountComics } from "@/components/comics/AccountComics";
-import { TRACKER_ACCOUNT_LINK_PUBLIC, trackerLabels } from "@/lib/trackerLabels";
-import { normalizeBadge } from "@/lib/community/badges";
 
 export const dynamic = "force-dynamic";
 
-/** Bottone "Elimina": .btn-danger del design system (rosso "bad", 5,2:1 sul blu notte; cornice da 2 px come gli altri). */
-const deleteBtn = "btn btn-danger text-xs";
-
 export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
   const { locale, dict } = await resolveLocale(params);
-  return { ...pageMeta(locale, "/account", dict.community.account.title, dict.community.account.intro), robots: { index: false, follow: false } };
+  return pageMeta(locale, "/account", dict.account.metaTitle, dict.account.intro, undefined, { noindex: true });
 }
 
-/** Nome della Leggendaria del mazzo, anche quando è una carta fuori dal nostro database. */
-function legendaryName(deck: CommunityDeck): string {
-  const leg = deck.legendary ? getCard(deck.legendary) : undefined;
-  return leg?.name ?? deck.custom_cards.find((x) => x.slug === deck.legendary)?.name ?? deck.legendary ?? "—";
-}
-
+/**
+ * Account (prima versione di ForeverMeta, 10/10/2026): profilo e uscita. Build pubblicate, tier list della community e
+ * gilde arrivano con il lancio del gioco e avranno qui le loro sezioni.
+ */
 export default async function AccountPage({ params }: { params: LocaleParams }) {
   const { locale, dict: d } = await resolveLocale(params);
-  const c = d.community;
+  const a = d.account;
   const { supabase, user } = await currentUser();
   if (!supabase) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <p className="card-night p-6 text-pale-muted">{c.account.disabled}</p>
+        <p className="card-night p-6 text-pale-muted">{d.auth.disabled}</p>
       </div>
     );
   }
   if (!user) redirect(`${href(locale, "/login")}?next=${encodeURIComponent(href(locale, "/account"))}`);
 
-  const { data: profileRow } = await supabase.from("profiles").select("username, display_name, avatar_url, role, badge, created_at").eq("id", user.id).maybeSingle();
-  const profile = (profileRow as (Profile & { role: string; badge: string | null; created_at: string }) | null) ?? null;
-  // il tracker in /account: a tutti dal lancio dell'app, prima solo a Staff e admin (TRACKER_ACCOUNT_LINK_PUBLIC)
-  const showTracker = TRACKER_ACCOUNT_LINK_PUBLIC || profile?.role === "admin" || normalizeBadge(profile?.badge) === "staff";
-  const name = profile?.display_name || profile?.username || user.email?.split("@")[0] || "player";
-  const [allDecks, tournaments, tierLists, deckLimit, saved] = await Promise.all([
-    listUserDecks(supabase, user.id),
-    listUserTournaments(supabase, user.id),
-    listUserTierLists(supabase, user.id),
-    publishedDeckLimit(supabase, user.id),
-    // mazzi salvati con "Salva" (30/09/2026); null senza la migrazione: la sezione non c'è
-    listSavedDecks(supabase, user.id),
-  ]);
-  const FL = favoriteLabels[locale];
-  // I mazzi privati ("Salva privato" del deck builder, stato 'draft') hanno la loro sezione: niente voti né scheda pubblica.
-  const decks = allDecks.filter((deck) => deck.status !== "draft");
-  const drafts = allDecks.filter((deck) => deck.status === "draft");
-  const x = d.tournaments;
+  const { data: row } = await supabase.from("profiles").select("username, display_name, avatar_url").eq("id", user.id).maybeSingle();
+  const profile = (row as Profile | null) ?? null;
+  const name = profile?.display_name || profile?.username || user.email?.split("@")[0] || d.nav.playerFallback;
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+    <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
       <p className="kicker text-mint">{d.nav.account}</p>
-      <h1 className="t-page mt-2">{c.account.title}</h1>
-      <p className="mt-4 max-w-2xl text-chalk-muted">{c.account.intro}</p>
-
+      <h1 className="t-page mt-2">{a.title}</h1>
+      <p className="mt-4 max-w-2xl text-chalk-muted">{a.intro}</p>
       <section className="card-night mt-8 flex flex-wrap items-center gap-4 p-6">
         <Avatar profile={profile} name={name} size={56} />
-        <div className="min-w-0 flex-1">
-          <p className="kicker text-pale-muted">{c.account.signedInAs}</p>
-          <p className="t-item">{name}</p>
-          <p className="break-all font-mono text-xs text-pale-muted">
-            {profile?.username ? `@${profile.username} · ` : ""}
-            {user.email}
-            {profile?.role === "admin" ? ` · ${c.account.role}: admin` : ""}
-          </p>
-        </div>
-        {/* La pagina pubblica dell'iscritto (23/09/2026): questo pannello resta privato, quella si può mandare in giro.
-            Sotto, "Modifica la mia pagina pubblica" (01/10/2026): profilo pubblico, foto, vetrina e numeri stanno in
-            /account/profile, perché qui rendevano il profilo innavigabile (Pierluigi). */}
-        <div className="flex flex-wrap items-start gap-2">
-          <div className="flex flex-col gap-2">
-            {profile?.username ? (
-              <Link href={href(locale, `/u/${profile.username}`)} className="btn btn-ink text-xs">
-                {c.account.publicPage}
-              </Link>
-            ) : null}
-            <Link href={href(locale, "/account/profile")} prefetch={false} className="btn btn-primary text-xs">
-              {c.account.editPublicPage}
-            </Link>
+        <dl className="min-w-0 flex-1 space-y-1 text-sm">
+          <div>
+            <dt className="kicker inline text-pale-muted">{a.displayName}: </dt>
+            <dd className="inline text-chalk">{name}</dd>
           </div>
-          <SignOutButton locale={locale} label={d.nav.logout} className="btn btn-ink text-xs" />
-        </div>
-      </section>
-      <AccountHashRedirect target={href(locale, "/account/profile")} />
-
-      {/* La casella messaggi non sta qui: vive tutta in /account/messages, dove porta la busta dell'header (Pierluigi, 27/09/2026:
-          "questo modulo deve stare sotto messaggi e non sotto profilo") */}
-      {/* Chi segui (pacchetto SEGUI, 27/09/2026): profili seguiti e "Smetti di seguire"; ancora #following */}
-      <FollowingSection locale={locale} supabase={supabase} userId={user.id} />
-
-      <section className="mt-10">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 className="t-section">{c.account.myDecks}</h2>
-          <Link href={href(locale, "/deck-builder")} className="btn btn-primary text-xs">
-            {d.nav.builder} →
-          </Link>
-        </div>
-        {/* Quanti mazzi pubblicati si possono avere (Pierluigi, 23/09/2026; ruoli del 27/09/2026): 5 per un account della
-            community, 20 per l'Autore, senza tetto per Creator, Pro e Staff. Scritto qui, non solo nell'errore al momento di pubblicare. */}
-        <p className="mt-2 font-mono text-xs text-pale-muted">
-          {Number.isFinite(deckLimit.cap)
-            ? c.account.deckQuota.replace("{used}", String(deckLimit.used)).replace("{cap}", String(deckLimit.cap))
-            : c.account.deckQuotaUnlimited.replace("{used}", String(deckLimit.used))}
-        </p>
-        {decks.length === 0 ? (
-          <div className="card-night mt-4 p-6">
-            <p className="text-pale-muted">{c.account.noDecks}</p>
-            <p className="mt-3">
-              <Link href={href(locale, "/deck-builder")} className="btn btn-ink text-xs">
-                {c.account.noDecksCta}
-              </Link>
-            </p>
-          </div>
-        ) : (
-          <ul className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {decks.map((deck) => {
-              const viewHref = href(locale, `/decks/community/${deck.slug}`);
-              // "Aggiorna alla versione …" (pacchetto VERSIONI, 30/09/2026): mazzi fermi a una patch di prima, con la migrazione
-              const patch = patchAt(deckCardsDate(deck));
-              const updateHref =
-                typeof deck.version === "number" && deck.status !== "draft" && deckOutdated(patch, patchOrder)
-                  ? deckUpdateHref(locale, deck.slug, deck.code_om ?? encodeOmCode({ name: deck.name, legendary: deck.legendary, cards: deck.cards, customCards: deck.custom_cards }))
-                  : null;
-              return (
-                <li key={deck.id} className="card-night flex flex-col p-5">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className={`stat-pill text-[11px] font-semibold uppercase ${deck.status === "published" ? "bg-mint text-ink" : "bg-night-3 text-pale"}`}>{c.status[deck.status]}</span>
-                    <span className="stat-pill bg-sky text-ink">{archetypeLabels[deck.archetype]?.[locale] ?? deck.archetype}</span>
-                    <span className="stat-pill bg-gold text-ink">★ {legendaryName(deck)}</span>
-                  </div>
-                  <p className="t-item mt-3 leading-tight">{deck.name}</p>
-                  <p className="mt-1 font-mono text-xs text-pale-muted">
-                    {deck.rating?.votes ? `★ ${deck.rating.avg.toFixed(1)} · ${deck.rating.votes} ${deck.rating.votes === 1 ? c.vote : c.votes}` : c.noVotes} · {d.common.updated} {formatDate(locale, deck.updated_at.slice(0, 10))}
-                  </p>
-                  <div className="mt-4 flex flex-wrap items-center gap-2">
-                    {deck.status === "published" ? (
-                      <Link href={viewHref} className="btn btn-ink text-xs">
-                        {c.account.view}
-                      </Link>
-                    ) : null}
-                    <Link href={`${viewHref}/edit`} className="btn btn-ink text-xs">
-                      {c.edit}
-                    </Link>
-                    {updateHref ? (
-                      <Link href={updateHref} className="btn btn-primary text-xs">
-                        {fillLabel(deckVersionLabels[locale].edit.updateTo, { patch: patchLabel(latestPatch, locale) })}
-                      </Link>
-                    ) : null}
-                    <form action={setDeckStatus}>
-                      <input type="hidden" name="id" value={deck.id} />
-                      <input type="hidden" name="locale" value={locale} />
-                      <input type="hidden" name="status" value={deck.status === "published" ? "hidden" : "published"} />
-                      <button type="submit" className="btn btn-ink text-xs">
-                        {deck.status === "published" ? c.hide : c.unhide}
-                      </button>
-                    </form>
-                    {/* prima era un clic secco: ora chiede conferma, come i tornei */}
-                    <form action={deleteDeck}>
-                      <input type="hidden" name="id" value={deck.id} />
-                      <input type="hidden" name="locale" value={locale} />
-                      <ConfirmButton label={c.delete} confirm={c.confirmDelete} className={deleteBtn} />
-                    </form>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </section>
-
-      {/* I tuoi mazzi torneo (04/10/2026): tre mazzi Conquest con una guida; ancora #tournament-decks */}
-      <Suspense fallback={null}>
-        <AccountDeckSets locale={locale} supabase={supabase} userId={user.id} dict={d} />
-      </Suspense>
-
-      {/* Le tue statistiche (pacchetto STATS, 26/09/2026): numeri dei mazzi pubblicati; per lo staff anche la classifica.
-          Dentro <Suspense>: il resto della pagina non aspetta le sue letture. */}
-      <Suspense fallback={null}>
-        <DeckStatsPanel supabase={supabase} userId={user.id} decks={decks} locale={locale} />
-      </Suspense>
-      
-      {/* Mazzi privati: "Salva privato" del deck builder (21/09/2026). Il salvataggio porta qui (#private). */}
-      <section id="private" className="mt-12 scroll-mt-24">
-        <h2 className="t-section">{c.account.privateTitle}</h2>
-        <p className="mt-2 max-w-2xl text-sm text-chalk-muted">{c.account.privateIntro}</p>
-        {drafts.length === 0 ? (
-          <div className="card-night mt-4 p-6">
-            <p className="text-pale-muted">{c.account.noPrivate}</p>
-          </div>
-        ) : (
-          <ul className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {drafts.map((deck) => {
-              const code = deck.code_om ?? encodeOmCode({ name: deck.name, legendary: deck.legendary, cards: deck.cards, customCards: deck.custom_cards });
-              return (
-                <li key={deck.id} className="card-night flex flex-col p-5">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="stat-pill bg-night-3 text-[11px] font-semibold uppercase text-pale">{c.account.privateBadge}</span>
-                    <span className="stat-pill bg-gold text-ink">★ {legendaryName(deck)}</span>
-                  </div>
-                  <p className="t-item mt-3 leading-tight">{deck.name}</p>
-                  <p className="mt-1 font-mono text-xs text-pale-muted">
-                    {d.common.updated} {formatDate(locale, deck.updated_at.slice(0, 10))}
-                  </p>
-                  <div className="mt-4 flex flex-wrap items-center gap-2">
-                    {/* navigazione completa: il modulo di pubblicazione e il builder leggono il mazzo dall'indirizzo */}
-                    <a href={`${href(locale, "/decks/publish")}?deck=${encodeURIComponent(code)}&draft=${deck.id}`} className="btn btn-primary text-xs">
-                      {c.account.publish}
-                    </a>
-                    {/* ?draft: "Salva privato" nel builder aggiorna questo mazzo invece di crearne un altro */}
-                    <a href={`${href(locale, "/deck-builder")}?draft=${deck.id}#${code}`} className="btn btn-ink text-xs">
-                      {c.openInBuilder}
-                    </a>
-                    <form action={deleteDeck}>
-                      <input type="hidden" name="id" value={deck.id} />
-                      <input type="hidden" name="locale" value={locale} />
-                      <input type="hidden" name="back" value="private" />
-                      <ConfirmButton label={c.delete} confirm={c.account.confirmDeletePrivate} className={deleteBtn} />
-                    </form>
-                  </div>
-                </li>
-              );
-            })}
-          </ul>
-        )}
-      </section>
-
-      {/* Mazzi salvati con "Salva" (blocco PREFERITI E TENDENZA, 30/09/2026): visibili solo a chi li ha salvati */}
-      {saved ? (
-        <section id="saved" className="mt-12 scroll-mt-24">
-          <h2 className="t-section">{FL.account.title}</h2>
-          <p className="mt-2 max-w-2xl text-sm text-chalk-muted">{FL.account.hint}</p>
-          {saved.length === 0 ? (
-            <div className="card-night mt-4 p-6">
-              <p className="text-pale-muted">{FL.account.empty}</p>
+          {profile?.username ? (
+            <div>
+              <dt className="kicker inline text-pale-muted">{a.username}: </dt>
+              <dd className="inline font-mono text-chalk">@{profile.username}</dd>
             </div>
-          ) : (
-            <ul className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-              {saved.map((s) => {
-                const live = s.deck && s.deck.status === "published" ? s.deck : null;
-                const leg = live?.legendary ? getCard(live.legendary) : undefined;
-                return (
-                  <li key={s.deck_id} className="card-night flex flex-wrap items-center gap-3 p-4">
-                    <div className="min-w-0 flex-1 basis-48">
-                      {live ? (
-                        <Link href={href(locale, `/decks/community/${live.slug}`)} className="t-item leading-tight hover:text-mint hover:underline">
-                          {live.name}
-                        </Link>
-                      ) : (
-                        <p className="text-sm text-pale-muted">{FL.account.unpublished}</p>
-                      )}
-                      <p className="mt-1 font-mono text-xs text-pale-muted">
-                        {leg ? `★ ${leg.name} · ` : ""}
-                        {formatDate(locale, s.created_at.slice(0, 10))}
-                      </p>
-                    </div>
-                    <form action={removeFavorite}>
-                      <input type="hidden" name="deck" value={s.deck_id} />
-                      <input type="hidden" name="locale" value={locale} />
-                      <button type="submit" className="btn btn-ghost text-xs">
-                        {FL.account.remove}
-                      </button>
-                    </form>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-        </section>
-      ) : null}
-
-      {/*
-        Le mie tier list (23/09/2026, §1 punto 27.5 della KB: "mazzi e tier list create visibili nel profilo di chi
-        le ha create"). Una per scheda: salvarne un'altra dallo strumento sostituisce questa. Le pubblicate contano
-        nella tier list della community; nascoste, restano solo qui.
-      */}
-      <section id="tierlists" className="mt-12 scroll-mt-24">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 className="t-section">{c.account.myTierLists}</h2>
-          <Link href={href(locale, "/tier-list/create")} className="btn btn-primary text-xs">
-            {c.account.newTierList} →
-          </Link>
-        </div>
-        <p className="mt-2 max-w-2xl text-sm text-chalk-muted">{c.account.tierListsIntro}</p>
-        {tierLists.length === 0 ? (
-          <div className="card-night mt-4 p-6">
-            <p className="text-pale-muted">{c.account.noTierLists}</p>
+          ) : null}
+          <div>
+            <dt className="kicker inline text-pale-muted">{a.email}: </dt>
+            <dd className="inline break-all font-mono text-chalk">{user.email}</dd>
           </div>
-        ) : (
-          <ul className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {tierLists.map((tl) => (
-              <li key={tl.id} className="card-night flex flex-col p-5">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="stat-pill bg-sky text-[11px] font-semibold uppercase text-ink">
-                    {tl.kind === "legendaries" ? d.tierMaker.tabLegendaries : d.tierMaker.tabCards}
-                  </span>
-                  {tl.status === "hidden" ? <span className="stat-pill bg-night-3 text-[11px] font-semibold uppercase text-pale">{c.status.hidden}</span> : null}
-                </div>
-                <p className="t-item mt-3 leading-tight">{tl.title || d.tierMaker.h1}</p>
-                <p className="mt-1 font-mono text-xs text-pale-muted">
-                  {countEntries(tl.entries)} {c.account.rankedCards} · {d.common.updated} {formatDate(locale, tl.updated_at.slice(0, 10))}
-                </p>
-                <div className="mt-4 flex flex-wrap items-center gap-2">
-                  {/* il codice TL1 nell'hash riapre esattamente questa lista nello strumento */}
-                  <a href={`${href(locale, "/tier-list/create")}#${tl.code}`} className="btn btn-primary text-xs">
-                    {c.account.openTierList}
-                  </a>
-                  <form action={setTierListStatus}>
-                    <input type="hidden" name="id" value={tl.id} />
-                    <input type="hidden" name="locale" value={locale} />
-                    <input type="hidden" name="status" value={tl.status === "hidden" ? "published" : "hidden"} />
-                    <button type="submit" className="btn btn-ink text-xs">
-                      {tl.status === "hidden" ? c.unhide : c.hide}
-                    </button>
-                  </form>
-                  <form action={deleteTierList}>
-                    <input type="hidden" name="id" value={tl.id} />
-                    <input type="hidden" name="locale" value={locale} />
-                    <ConfirmButton label={c.delete} confirm={c.account.confirmDeleteTierList} className={deleteBtn} />
-                  </form>
-                </div>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-
-      {/* Le mie guide (pacchetto GUIDE, 27/09/2026): solo per chi pubblica guide o ne ha già; ancora #guides */}
-      <AccountGuides locale={locale} supabase={supabase} userId={user.id} />
-      {/* I miei fumetti (pacchetto FUMETTI, 29/09/2026): solo per chi pubblica fumetti o ne ha già; ancora #comics */}
-      <AccountComics locale={locale} supabase={supabase} userId={user.id} />
-
-      {/* Strumenti per le dirette (pacchetto STREAM): comando !deck e overlay per OBS sull'ultimo mazzo pubblicato */}
-      {profile?.username ? (
-        <AccountStreamGuide username={profile.username} locale={locale} site={siteUrl} hasDecks={decks.some((deck) => deck.status === "published")} labels={streamLabels[locale].account} tools={streamLabels[locale].tools} />
-      ) : null}
-
-      {/* OriginsMeta Tracker (tracker/overlay, Fase 3, 30/09/2026): l'app per Windows si collega e si gestisce da /account/tracker */}
-      {showTracker ? (
-        <section id="tracker" className="mt-12 scroll-mt-24">
-          <h2 className="t-section">{trackerLabels[locale].account.title}</h2>
-          <p className="mt-2 max-w-2xl text-sm text-chalk-muted">{trackerLabels[locale].account.intro}</p>
-          <p className="mt-4">
-            <Link href={href(locale, "/account/tracker")} prefetch={false} className="btn btn-ink text-xs">
-              {trackerLabels[locale].account.open} →
-            </Link>
-          </p>
-        </section>
-      ) : null}
-
-      {/* Tournament Organizer: tornei organizzati e giocati */}
-      <section className="mt-12">
-        <div className="flex flex-wrap items-end justify-between gap-3">
-          <h2 className="t-section">{x.account.title}</h2>
-          <Link href={href(locale, "/tournaments/new")} className="btn btn-primary text-xs">
-            {x.account.newCta} →
-          </Link>
-        </div>
-        {tournaments.invited.length ? (
-          <>
-            <h3 className="mt-5 kicker text-gold">{x.account.invited}</h3>
-            <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {tournaments.invited.map((t) => (
-                <li key={t.id}>
-                  <TournamentCard t={t} locale={locale} dict={d} compact />
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : null}
-        {tournaments.organized.length === 0 && tournaments.playing.length === 0 && tournaments.invited.length === 0 ? (
-          <div className="card-night mt-4 p-6">
-            <p className="text-pale-muted">{x.account.none}</p>
-          </div>
-        ) : (
-          <>
-            {tournaments.organized.length ? (
-              <>
-                <h3 className="mt-5 kicker text-pale-muted">{x.account.organized}</h3>
-                <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
-                  {tournaments.organized.map((t) => (
-                    <li key={t.id} className="flex flex-col gap-2">
-                      <TournamentCard t={t} locale={locale} dict={d} compact />
-                      {t.status === "open" ? (
-                        <form action={deleteTournament} className="self-end">
-                          <input type="hidden" name="id" value={t.id} />
-                          <input type="hidden" name="locale" value={locale} />
-                          <ConfirmButton label={x.account.delete} confirm={x.account.confirmDelete} className={deleteBtn} />
-                        </form>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
-            {tournaments.playing.length ? (
-              <>
-                <h3 className="mt-6 kicker text-pale-muted">{x.account.playing}</h3>
-                <ul className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2">
-                  {tournaments.playing.map((t) => (
-                    <li key={t.id}>
-                      <TournamentCard t={t} locale={locale} dict={d} compact />
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
-          </>
-        )}
+        </dl>
+        <SignOutButton locale={locale} label={d.nav.logout} className="btn btn-ink text-xs" />
       </section>
     </div>
   );

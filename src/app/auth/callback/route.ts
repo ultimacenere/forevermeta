@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { EmailOtpType } from "@supabase/supabase-js";
 import { supabaseServer } from "@/lib/supabase/server";
 import { defaultLocale, isLocale, locales, type Locale } from "@/lib/i18n";
-import { LANGUAGE_ALIASES, preferredLocale } from "@/app/t/locale";
+import { LANGUAGE_ALIASES, preferredLocale } from "@/lib/preferredLocale";
 import { authErrorKind, type AuthErrorKind } from "@/lib/loginLabels";
 import { isNewAccount, withAuthSignal } from "@/lib/analytics";
 

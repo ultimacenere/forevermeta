@@ -40,7 +40,7 @@ export default async function NotFound() {
       <p className="mt-4 text-chalk-muted">{d.notFound.text}</p>
       <p className="mt-8 flex justify-center gap-3">
         <Link className="btn btn-primary" href={href(locale)}>{d.notFound.cta}</Link>
-        <Link className="btn btn-ghost" href={href(locale, "/cards")}>{d.nav.cards}</Link>
+        <Link className="btn btn-ghost" href={href(locale, "/guides")}>{d.nav.guides}</Link>
       </p>
     </div>
   );

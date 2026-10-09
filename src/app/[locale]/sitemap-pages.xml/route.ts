@@ -1,17 +1,16 @@
-import { locales } from "@/lib/i18n";
-import { sectionSitemapResponse } from "@/lib/sitemapData";
+import { isLocale, locales } from "@/lib/i18n";
+import { sectionSitemapResponse } from "@/lib/sitemap";
 
-/**
- * /<lingua>/sitemap-pages.xml: gli indici delle sezioni e le pagine fisse (tier list, deck builder, FAQ, chi siamo, autori).
- * Regole comuni (sezioni, date, hreflang, immagini) in src/lib/sitemapEntries.ts.
- */
-export const revalidate = 3600;
+/** /<lingua>/sitemap-pages.xml: vedi src/lib/sitemap.ts. Statica, si rigenera a ogni deploy. */
+export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export function GET(_request: Request, { params }: { params: Promise<{ locale: string }> }): Promise<Response> {
-  return sectionSitemapResponse("pages", params);
+export async function GET(_request: Request, { params }: { params: Promise<{ locale: string }> }): Promise<Response> {
+  const { locale } = await params;
+  if (!isLocale(locale)) return new Response("Not Found", { status: 404 });
+  return sectionSitemapResponse("pages", locale);
 }

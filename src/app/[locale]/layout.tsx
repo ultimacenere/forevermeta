@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Unbounded, Manrope, JetBrains_Mono, Noto_Sans, Caveat, Reenie_Beanie } from "next/font/google";
+import { Cinzel, Manrope, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
@@ -7,32 +7,18 @@ import { getDictionary, href, isLocale, locales, ogLocale, siteUrl, type Locale 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
-import { ServiceNotice } from "@/components/ServiceNotice";
 import { GoogleAnalytics, VercelAnalytics } from "@/components/GoogleAnalytics";
-import { FeedbackWidget } from "@/components/FeedbackWidget";
-import { feedbackLabels } from "@/lib/feedbackLabels";
-import { JsonLd, koinGames, organization, videoGame, website } from "@/components/JsonLd";
-import { defaultOgAlt } from "@/lib/page";
+import { JsonLd, blizzard, organization, videoGame, website } from "@/components/JsonLd";
+import { defaultOgAlt, defaultOgImage } from "@/lib/page";
 import { newsFeedLabels, newsFeedPath } from "@/lib/newsFeedMeta";
 
-/** ID misurazione GA4 (pubblico). Parte solo con il consenso "Accetta tutto" del banner cookie. */
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID || ""; // ForeverMeta: niente default (era la proprietà GA4 di OriginsMeta)
+/** ID misurazione GA4 (pubblico). Parte solo con il consenso "Accetta tutto" del banner cookie; senza variabile, niente GA4. */
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 
-const unbounded = Unbounded({ subsets: ["latin"], weight: ["500", "700", "800"], variable: "--font-unbounded", display: "swap" });
+// Identità di ForeverMeta (10/10/2026): Cinzel per titoli e logo, Manrope per il testo, JetBrains Mono per i numeri.
+const display = Cinzel({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-display-face", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-manrope", display: "swap" });
 const jet = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-jet", display: "swap" });
-// Solo per i tasti Discord: è il fallback dichiarato da Discord al posto del loro "gg sans" (proprietario).
-const noto = Noto_Sans({ subsets: ["latin"], weight: ["600"], variable: "--font-noto", display: "swap" });
-// Solo per i post-it (note del 22/09/2026: "scritto a penna"): Caveat, una grafia a penna leggibile anche piccola,
-// con le lettere accentate dell'italiano. Variabile (400-700, un solo file). Niente preload: serve a pochi
-// foglietti per pagina e non deve contendere la banda ai font del testo; con display swap si vede subito il ripiego.
-const hand = Caveat({ subsets: ["latin"], variable: "--font-hand", display: "swap", preload: false });
-// Solo per i due post-it grandi di Tier list e MetaShifting in home (Pierluigi, 22/09/2026: "come se stessi
-// scrivendo a penna", poi "scritte di fretta"): Reenie Beanie, una biro veloce e irregolare. Niente preload.
-const pen = Reenie_Beanie({ subsets: ["latin"], weight: ["400"], variable: "--font-pen", display: "swap", preload: false });
-
-// dynamicParams resta al default (true): le lingue sconosciute finiscono in notFound() qui sotto, e le pagine
-// generate su richiesta (mazzi della community) restano possibili.
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -48,8 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: { default: d.meta.homeTitle, template: `%s · ${d.meta.siteName}` },
     description: d.meta.description,
-    // Niente canonical né hreflang qui (Ondata 1, 25/09/2026): ogni pagina li dichiara con `pageMeta`, e una pagina
-    // che li ereditasse dal layout (una 404, un errore) punterebbe alla home. Le 404 li azzerano in (site)/not-found.tsx.
+    // Canonical e hreflang li dichiara ogni pagina con `pageMeta`: una pagina che li ereditasse dal layout punterebbe alla home.
     openGraph: {
       type: "website",
       siteName: d.meta.siteName,
@@ -57,14 +42,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: `${siteUrl}/${locale}`,
       title: d.meta.homeTitle,
       description: d.meta.description,
-      images: [{ url: "/media/og.jpg", width: 1200, height: 630, alt: defaultOgAlt[locale] }],
+      images: [{ url: defaultOgImage, width: 1200, height: 630, alt: defaultOgAlt[locale] }],
     },
-    twitter: { card: "summary_large_image", title: d.meta.homeTitle, description: d.meta.description, images: ["/media/og.jpg"] },
-    // Anteprime grandi in Discover e in Google Immagini (NEWS-05): valgono per tutto il sito. Una pagina noindex
-    // (`pageMeta` con `noindex`, account, login…) dichiara il proprio `robots`, che sostituisce per intero questo.
+    twitter: { card: "summary_large_image", title: d.meta.homeTitle, description: d.meta.description, images: [defaultOgImage] },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
-    // Verifica della proprietà su Google Search Console (account ultimacenere@gmail.com).
-    verification: { google: "ck0gbXaqDgigihYXiyoKywmrKP2LOC2YOOYFu6c8SZs" },
   };
 }
 
@@ -74,13 +55,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   const l: Locale = locale;
   const d = getDictionary(l);
   return (
-    <html lang={l} className={`${unbounded.variable} ${manrope.variable} ${jet.variable} ${noto.variable} ${hand.variable} ${pen.variable} h-full`}>
+    <html lang={l} className={`${display.variable} ${manrope.variable} ${jet.variable} h-full`}>
       <body className="min-h-full flex flex-col">
-        {/* Feed RSS delle news nella lingua della pagina (Ondata 2): React 19 porta i <link> nel <head>. Percorso e titolo
-            dal modulo leggero newsFeedMeta.ts (non da newsFeed.ts, che legge news, autori e file). Non passa dai
-            metadati perché `alternates` di `pageMeta` (canonical e hreflang di ogni pagina) sostituirebbe quello del layout. */}
         <link rel="alternate" type="application/rss+xml" title={newsFeedLabels[l].title} href={`${siteUrl}${newsFeedPath(l)}`} />
-        {/* Salta al contenuto: il <main> ha id="main" sia nella home sia nel gruppo (site). */}
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-mint focus:px-3 focus:py-2 focus:text-ink"
@@ -88,19 +65,12 @@ export default async function LocaleLayout({ children, params }: Props) {
           {d.nav.skipToContent}
         </a>
         <Header locale={l} dict={d} />
-        {/* Avviso di servizio chiudibile (07/10/2026, guasto DNS di Register.it): finestra e testi in src/lib/serviceNotice.ts */}
-        <ServiceNotice locale={l} />
         {children}
         <Footer locale={l} dict={d} />
-        {/* Segnalazioni e suggerimenti dei visitatori: su ogni pagina, fuori dal <main>, prima del banner dei cookie */}
-        <FeedbackWidget locale={l} labels={feedbackLabels(d)} />
         <CookieBanner labels={d.cookies} privacyHref={href(l, "/privacy")} />
-        {/* Il grafo del sito su ogni pagina (Ondata 2, GEO-08): il sito nella lingua, OriginsMeta con i fondatori, Koin
-            Games come entità propria e il gioco, che la usa per @id come sviluppatore ed editore */}
-        <JsonLd data={[website(l, d.meta.siteDescription), organization, koinGames, videoGame]} />
-        {/* GA4 col consenso, eventi, sign_up/login al ritorno dall'accesso, traffico interno: vedi src/lib/analytics.ts */}
+        {/* Il grafo del sito su ogni pagina: il sito nella lingua, ForeverMeta, Blizzard e il gioco */}
+        <JsonLd data={[website(l, d.meta.siteDescription), organization, blizzard, videoGame]} />
         <GoogleAnalytics id={GA_ID} />
-        {/* Vercel Web Analytics senza il traffico interno dello staff (?staff=<codice>): vedi src/lib/analytics.ts */}
         <VercelAnalytics />
         <SpeedInsights />
       </body>

@@ -1,0 +1,16 @@
+# ForeverMeta
+
+> Unofficial fan site about World of Warcraft: Forever (Blizzard Entertainment), in English, Italian and Spanish: signed news, beginner guides, a glossary of official names (English, Italian, Spanish from Spain and Latin America), the launch calendar and the beta changes. Not affiliated with Blizzard Entertainment. Facts come only from official Blizzard sources.
+
+## Main pages
+
+- [Guides](https://forevermeta.me/en/guides): beginner guides, each with its official sources and the date it was last checked.
+- [Glossary](https://forevermeta.me/en/glossary): official names in English, Italian, Spanish (Spain) and Spanish (Latin America).
+- [Calendar](https://forevermeta.me/en/calendar): official dates of the beta, name reservation and launch.
+- [Beta changes](https://forevermeta.me/en/changes): official development notes, update by update.
+- [News](https://forevermeta.me/en/news): summaries of official Blizzard posts with the link to the source.
+- [FAQ](https://forevermeta.me/en/faq)
+
+## Full text
+
+- [llms-full.txt](https://forevermeta.me/llms-full.txt): guides, news and glossary in English, in plain Markdown.

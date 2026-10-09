@@ -22,42 +22,47 @@
   magie del deck builder su fondo rosa tenue (.row-spell); costo in mana sempre visibile nelle anteprime e nelle
   carte che si girano al passaggio del mouse (.card-tile).
 */
+/*
+  ForeverMeta, palette "notte di Azeroth" (10/10/2026, identità propria decisa da Pierluigi): i nomi dei token restano
+  quelli del motore di OriginsMeta (mint = accento principale, sky = titoli e cornici, felt = fondo, night = schede),
+  cambiano i colori. Fondo blu notte, accento oro antico, titoli azzurro Skyborne, rosso per gli avvisi. Nessun colore
+  preso dalla grafica Blizzard.
+*/
 @theme {
-  --color-felt: #150c2c;
-  --color-felt-deep: #0e071f;
-  --color-felt-soft: #21143c;
-  --color-felt-line: #3a2a60;
-  --color-night: #182238;
-  --color-night-2: #121a2c;
-  --color-night-3: #22304b;
-  --color-ink: #16102a;
-  --color-ink-muted: #5e5672;
-  --color-pale: #c8d1dd;
-  --color-pale-muted: #8e9bb1;
-  --color-chalk: #d9dfe8;
-  --color-chalk-muted: #96a3b9;
-  --color-crimson: #c81e7a;
-  --color-crimson-deep: #971359;
-  /* tinta tenue del magenta, per la pastiglia "Evil" con testo ink (12,1:1): fa coppia con mint-soft di "Good" */
-  --color-crimson-soft: #f6c3dd;
-  --color-gold: #f2d23c;
-  --color-gold-deep: #c4a516;
-  --color-mint: #31e3bd;
-  --color-mint-deep: #17a689;
-  --color-mint-soft: #bff5e8;
-  --color-sky: #3fc4e8;
-  --color-sky-deep: #1a9ec4;
-  --color-pink: #ff3d9a;
-  --color-good: #46d369;
-  --color-bad: #ff5c5c;
+  --color-felt: #0b1220;
+  --color-felt-deep: #070c16;
+  --color-felt-soft: #13203a;
+  --color-felt-line: #263a58;
+  --color-night: #111c2e;
+  --color-night-2: #0d1624;
+  --color-night-3: #1a2a44;
+  --color-ink: #1a1206;
+  --color-ink-muted: #5c5140;
+  --color-pale: #cfd6e0;
+  --color-pale-muted: #94a1b4;
+  --color-chalk: #e3e8ef;
+  --color-chalk-muted: #9ba8bb;
+  --color-crimson: #e0544b;
+  --color-crimson-deep: #a6322b;
+  --color-crimson-soft: #f6cbc7;
+  --color-gold: #f3dc9a;
+  --color-gold-deep: #c9a54c;
+  --color-mint: #eab54e;
+  --color-mint-deep: #b9862a;
+  --color-mint-soft: #f7e3b6;
+  --color-sky: #82c9ee;
+  --color-sky-deep: #4a9fcc;
+  --color-pink: #ec7aa8;
+  --color-good: #5fd47e;
+  --color-bad: #ff6b5f;
 
-  --font-display: var(--font-unbounded), "Arial Black", Impact, sans-serif;
+  --font-display: var(--font-display-face), Georgia, "Times New Roman", serif;
   --font-body: var(--font-manrope), "Segoe UI", Arial, sans-serif;
   --font-mono: var(--font-jet), Consolas, "Courier New", monospace;
 
   --shadow-card: 0 1px 0 rgba(22, 16, 42, 0.35), 0 10px 30px -12px rgba(0, 0, 0, 0.55);
   --shadow-lift: 0 2px 0 rgba(22, 16, 42, 0.35), 0 24px 40px -18px rgba(0, 0, 0, 0.7);
-  --shadow-mint: 0 0 0 1px rgba(49, 227, 189, 0.45), 0 12px 32px -14px rgba(49, 227, 189, 0.45);
+  --shadow-mint: 0 0 0 1px rgba(234, 181, 78, 0.45), 0 12px 32px -14px rgba(234, 181, 78, 0.45);
 }
 
 @layer base {
@@ -67,7 +72,9 @@
     /* Gradiente stile Instagram dei bottoni primari (decisione di Pierluigi del 21/09/2026). Contrasto del testo
        bianco misurato sui colori del gradiente: 4,76:1 sul rosso (40%), 5,25:1 sul magenta (60%), 5,79 e 6,50 sul
        viola; sull'arancio degli angoli scende a 2,3:1, quindi il testo non deve mai starci sopra (vedi .btn-primary). */
-    --grad-ig: linear-gradient(45deg, #f09433 0%, #e6683c 18%, #dc2743 40%, #cc2366 60%, #bc1888 80%, #833ab4 100%);
+    /* ForeverMeta (10/10/2026): il gradiente dei bottoni primari è oro antico, con testo scuro (ink) al posto del
+       bianco: ink #1a1206 sta sopra 9:1 su tutto il gradiente. Il nome della variabile resta quello del motore. */
+    --grad-ig: linear-gradient(45deg, #f6d68a 0%, #eab54e 45%, #d99a32 75%, #c4832a 100%);
     /* Colori dei post-it, tutti con testo ink #16102a: rapporti misurati tra parentesi. */
     --postit-deck: #f2d23c; /* Nuovo mazzo, giallo (12,3:1) */
     --postit-news: #c4b0ff; /* News, viola (9,6:1) */
@@ -315,9 +322,9 @@
     background-origin: border-box;
     background-size: 200% 100%;
     background-position: 75% 50%;
-    color: #fff;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 10px 24px -14px rgba(204, 35, 102, 0.9);
+    color: var(--color-ink);
+    text-shadow: none;
+    box-shadow: 0 10px 24px -14px rgba(234, 181, 78, 0.8);
     transition: transform 120ms ease, background-position 420ms ease, box-shadow 200ms ease;
   }
   /* .btn-mint: nome storico. Dal 21/09/2026 è il bottone primario col gradiente, identico a .btn-primary
@@ -325,8 +332,8 @@
   .btn-primary:hover:not(:disabled, [aria-disabled="true"]),
   .btn-mint:hover:not(:disabled, [aria-disabled="true"]) {
     background-position: 100% 50%;
-    color: #fff;
-    box-shadow: 0 12px 28px -12px rgba(188, 24, 136, 0.95);
+    color: var(--color-ink);
+    box-shadow: 0 12px 28px -12px rgba(234, 181, 78, 0.95);
   }
   @media (prefers-reduced-motion: reduce) {
     .btn-primary,
@@ -3576,5 +3583,50 @@
     gap: 0.35rem;
     font: 600 11px/1.2 var(--font-mono);
     color: var(--color-mint);
+  }
+}
+
+/* ForeverMeta (10/10/2026): pastiglia neutra per la fonte di una news (Blizzard, ForeverMeta) e per le categorie. */
+@layer components {
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid var(--color-sky);
+    border-radius: 999px;
+    padding: 0.05rem 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-sky);
+  }
+}
+
+/* ForeverMeta (10/10/2026): titolo grande della home e fondo della testata, senza immagini Blizzard (finché Blizzard
+   non risponde per iscritto): due aloni, oro e azzurro, sul blu notte. */
+@layer components {
+  .t-hero {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(1.9rem, 1.2rem + 3vw, 3.4rem);
+    line-height: 1.12;
+    color: var(--color-chalk);
+    text-wrap: balance;
+  }
+  .hero-forever {
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, rgba(130, 201, 238, 0.16), transparent 60%),
+      radial-gradient(40rem 24rem at 10% 110%, rgba(234, 181, 78, 0.14), transparent 60%),
+      var(--color-felt);
+  }
+}
+
+/* ForeverMeta (10/10/2026): le tabelle fuori dal testo Markdown (glossario, home) scorrono di lato nel loro riquadro,
+   la pagina mai. */
+@layer components {
+  .table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
   }
 }

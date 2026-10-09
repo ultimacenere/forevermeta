@@ -42,9 +42,9 @@ const NOW = new Date("2026-09-25T15:00:00Z");
 
 describe("etichette", () => {
   test("titolo e descrizione in tutte le lingue, con la dicitura sull'affiliazione", () => {
-    const notAffiliated: Record<Locale, RegExp> = { en: /not affiliated with Koin Games/, it: /non affiliato a Koin Games/, es: /no afiliado a Koin Games/ };
+    const notAffiliated: Record<Locale, RegExp> = { en: /not affiliated with Blizzard Entertainment/, it: /non affiliato a Blizzard Entertainment/, es: /no afiliado a Blizzard Entertainment/ };
     for (const l of locales) {
-      assert.ok(newsFeedLabels[l].title.includes("Origins TCG"));
+      assert.ok(newsFeedLabels[l].title.includes("WoW Forever"));
       assert.match(newsFeedLabels[l].description, notAffiliated[l]);
     }
   });
@@ -56,9 +56,9 @@ describe("etichette", () => {
     const imports = [...src.matchAll(/^import\s.*$/gm)].map((m) => m[0]);
     assert.deepEqual(imports, [`import type { Locale } from "./i18n";`]);
   });
-  test("la formula dei dizionari: sito di fan, sitio de fans", () => {
-    assert.match(newsFeedLabels.it.description, /Sito di fan non ufficiale/);
-    assert.match(newsFeedLabels.es.description, /Sitio de fans no oficial/);
+  test("la formula dei dizionari: sito fan, sitio fan", () => {
+    assert.match(newsFeedLabels.it.description, /Sito fan non ufficiale/);
+    assert.match(newsFeedLabels.es.description, /Sitio fan no oficial/);
   });
 });
 
@@ -78,7 +78,7 @@ describe("voci", () => {
       assert.equal(items.length, Math.min(NEWS_FEED_ITEMS, sortedNews.length));
       items.forEach((it, i) => {
         const n = sortedNews[i];
-        assert.equal(it.link, `https://originsmeta.com/${l}/news/${n.slug}`);
+        assert.equal(it.link, `https://forevermeta.me/${l}/news/${n.slug}`);
         assert.equal(it.guid, it.link);
         assert.equal(it.title, n.title[l]);
         assert.equal(it.description, n.description[l]);
@@ -93,7 +93,7 @@ describe("voci", () => {
     for (const it of items) {
       assert.ok(it.image, it.link);
       assert.match(it.image?.url ?? "", /^https:\/\//);
-      if (it.image?.url.startsWith("https://originsmeta.com/")) assert.ok((it.image.width ?? 0) > 0 && (it.image.height ?? 0) > 0, it.image.url);
+      if (it.image?.url.startsWith("https://forevermeta.me/")) assert.ok((it.image.width ?? 0) > 0 && (it.image.height ?? 0) > 0, it.image.url);
     }
   });
 });
@@ -101,10 +101,10 @@ describe("voci", () => {
 describe("feed", () => {
   test("RSS completo con il self giusto e una voce per news", () => {
     const xml = newsFeedXml("es", NOW);
-    assert.match(xml, /<atom:link href="https:\/\/originsmeta\.com\/es\/news\/feed\.xml" rel="self"/);
-    assert.match(xml, /<link>https:\/\/originsmeta\.com\/es\/news<\/link>/);
+    assert.match(xml, /<atom:link href="https:\/\/forevermeta.me\/es\/news\/feed\.xml" rel="self"/);
+    assert.match(xml, /<link>https:\/\/forevermeta.me\/es\/news<\/link>/);
     assert.match(xml, /<language>es<\/language>/);
-    assert.equal(xml.match(/<item>/g)?.length, Math.min(NEWS_FEED_ITEMS, sortedNews.length));
+    assert.equal(xml.match(/<item>/g)?.length ?? 0, Math.min(NEWS_FEED_ITEMS, sortedNews.length));
     // nessun carattere di controllo né & non codificata
     assert.doesNotMatch(xml, /&(?!amp;|lt;|gt;|quot;|apos;)/);
   });

@@ -16,12 +16,11 @@ export const NOT_FOUND_TITLE: Record<Locale, string> = {
   en: "Page not found",
   it: "Pagina non trovata",
   es: "Página no encontrada",
-  fr: "Page introuvable",
 };
 
 /** "404 · Pagina non trovata · OriginsMeta": lo stesso titolo per le 404 di questa route e per quelle di notFound(). */
 export function notFoundTitle(locale: Locale): string {
-  return `404 · ${NOT_FOUND_TITLE[locale]} · OriginsMeta`;
+  return `404 · ${NOT_FOUND_TITLE[locale]} · ForeverMeta`;
 }
 
 /** Un blocco di testo con la sua lingua: fuori dalle lingue del sito ce n'è uno per lingua, come in global-not-found. */
@@ -57,20 +56,20 @@ export function escapeHtml(value: string): string {
 const STYLE = [
   ":root{color-scheme:dark}",
   "*{box-sizing:border-box}",
-  'body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px 16px;background:#150c2c;color:#d9dfe8;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}',
-  "main{width:100%;max-width:36rem;padding:32px 24px;text-align:center;border:3px solid #3fc4e8;border-radius:16px;background:linear-gradient(180deg,#182238 0%,#121a2c 100%);color:#c8d1dd}",
-  ".k{margin:0;font:600 .74rem/1.4 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;color:#31e3bd}",
-  "h1,.h{margin:8px 0 0;font-size:1.6rem;line-height:1.25;font-weight:800;color:#3fc4e8}",
+  'body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding:32px 16px;background:#0b1220;color:#e3e8ef;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}',
+  "main{width:100%;max-width:36rem;padding:32px 24px;text-align:center;border:3px solid #82c9ee;border-radius:16px;background:linear-gradient(180deg,#111c2e 0%,#0d1624 100%);color:#cfd6e0}",
+  ".k{margin:0;font:600 .74rem/1.4 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.16em;text-transform:uppercase;color:#eab54e}",
+  "h1,.h{margin:8px 0 0;font-size:1.6rem;line-height:1.25;font-weight:800;color:#82c9ee}",
   ".h{margin-top:20px;font-size:1.1rem}",
   "p{margin:12px 0 0}",
   ".a{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:24px}",
-  ".b{display:inline-flex;padding:10px 20px;border:2px solid #96a3b9;border-radius:999px;font-weight:700;font-size:.9rem;color:#d9dfe8;text-decoration:none}",
-  ".b.p{border-color:transparent;background:linear-gradient(45deg,#f09433 0%,#e6683c 18%,#dc2743 40%,#cc2366 60%,#bc1888 80%,#833ab4 100%);color:#fff}",
-  ".b:hover{border-color:#31e3bd}",
-  "a:focus-visible{outline:2px solid #31e3bd;outline-offset:2px}",
+  ".b{display:inline-flex;padding:10px 20px;border:2px solid #9ba8bb;border-radius:999px;font-weight:700;font-size:.9rem;color:#e3e8ef;text-decoration:none}",
+  ".b.p{border-color:transparent;background:linear-gradient(45deg,#f6d68a 0%,#eab54e 45%,#d99a32 75%,#c4832a 100%);color:#1a1206}",
+  ".b:hover{border-color:#eab54e}",
+  "a:focus-visible{outline:2px solid #eab54e;outline-offset:2px}",
   "nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;font-size:.9rem}",
-  "nav a{color:#31e3bd}",
-  "footer{max-width:36rem;text-align:center;font-size:.8rem;color:#96a3b9}",
+  "nav a{color:#eab54e}",
+  "footer{max-width:36rem;text-align:center;font-size:.8rem;color:#9ba8bb}",
 ].join("");
 
 const anchor = (l: NotFoundLink, cls?: string) => `<a${cls ? ` class="${cls}"` : ""} href="${escapeHtml(l.href)}">${escapeHtml(l.label)}</a>`;
