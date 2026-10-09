@@ -12,7 +12,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 
 ## Fase 1: infrastruttura (ordine deciso da Pierluigi il 27/09/2026)
 
-1. Repository GitHub `ultimacenere/forevermeta`, pubblico (creato da Pierluigi il 09/10/2026), e primo push.
+1. ~~Repository GitHub `ultimacenere/forevermeta`, pubblico, e primo push~~: fatto il 09/10/2026.
 2. Dominio principale **forevermeta.me** (deciso da Pierluigi il 09/10/2026) e DNS; forevermeta.online, .it ed .eu in redirect 308 verso forevermeta.me. Nel codice `originsmeta.com` diventa `forevermeta.me` (sezione "Identità del sito").
 3. Progetto Supabase nuovo (regione UE), `supabase/schema.sql` applicato da zero; variabili in `.env.local` e su Vercel.
 4. Progetto Vercel nuovo collegato al repository; piano Pro se ci sarà pubblicità (Hobby è solo non commerciale).
