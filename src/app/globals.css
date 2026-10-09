@@ -3755,22 +3755,31 @@
 /*
   Post-it delle news in home (10/10/2026, Pierluigi: "con colori diversi vorrei rimettere come su originsmeta i
   postit"). Stesse forme e animazioni di OriginsMeta (.postit qui sopra); un colore per argomento della news
-  (`topic` in news.ts): beta rosa, news viola, pvp arancio, event celeste. Testo ink sulla carta piena (contrasto
-  sopra 8:1 per tutti). Sul fondo pergamena l'ombra è calda e più leggera di quella pensata per il viola inchiostro.
+  (`topic` in news.ts): beta rosa, news lilla, pvp pesca, event azzurro. Toni pastello (Pierluigi, 10/10/2026:
+  "colori piu pastello meno accesi"), testo ink sulla carta piena (contrasto sopra 12:1 per tutti). Sul fondo pergamena l'ombra è calda e più leggera di quella pensata per il viola inchiostro.
 */
 @layer components {
+  :root {
+    --postit-pastel-beta: #f6cfe0;
+    --postit-pastel-news: #ddd4f5;
+    --postit-pastel-pvp: #f7dcbc;
+    --postit-pastel-event: #cfe7f1;
+  }
+  .postit-news {
+    --postit-bg: var(--postit-pastel-news);
+  }
   .postit-beta {
-    --postit-bg: var(--postit-patch);
+    --postit-bg: var(--postit-pastel-beta);
     --tilt: -1.8deg;
     --delay: -5.4s;
   }
   .postit-pvp {
-    --postit-bg: var(--postit-event);
+    --postit-bg: var(--postit-pastel-pvp);
     --tilt: 1.9deg;
     --delay: -4.4s;
   }
   .postit-event {
-    --postit-bg: var(--postit-tournament);
+    --postit-bg: var(--postit-pastel-event);
   }
   .postit {
     box-shadow: 0 1px 1px rgba(60, 40, 10, 0.25), 2px 8px 14px -6px rgba(60, 40, 10, 0.55);
@@ -3788,7 +3797,7 @@
   }
   /* bollino "Nuovo": rosa chiaro con testo ink (il rosa scuro del tema darebbe poco contrasto) */
   .postit.is-fresh::after {
-    background: #ff8fc4;
+    background: #f2b6cf;
   }
   :lang(es) .postit.is-fresh::after {
     content: "NUEVO";
