@@ -2234,7 +2234,7 @@ alter table public.profiles add constraint profiles_schedule_tz_check
 -- progetto di src/lib/supabase/env.ts (il test li confronta). Se un giorno il progetto Supabase cambia, cambia qui.
 create or replace function public.profile_media_url(p text)
 returns text language sql immutable set search_path = pg_catalog, pg_temp as $$
-  select 'https://obpnprlzxrlbvncpqlpq.supabase.co/storage/v1/object/public/profile-media/' || p
+  select 'https://jncrmiazefxzdxywsdga.supabase.co/storage/v1/object/public/profile-media/' || p
 $$;
 
 -- Il file c'è nel bucket, con un tipo ammesso e al massimo `max_bytes` (quando lo Storage li ha scritti nei metadati).
