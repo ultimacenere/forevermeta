@@ -7,7 +7,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 - Tolti: `public/cards/` (immagini delle carte, materiale Koin), `public/media/` (media kit Koin), `public/llms.txt`, il file di verifica di Search Console e la chiave IndexNow di originsmeta.com, `tracker/` (app OriginsMeta Analytics), `docs/testi-ufficiali/`, `docs/contatto-koin.md`.
 - `README.md` e `CLAUDE.md` di OriginsMeta spostati in `docs/motore-originsmeta-*.md` come guida del motore.
 - Workflow degli annunci Discord spostato in `docs/workflows-da-attivare/` (si rimette in `.github/workflows/` quando esistono i canali e i secret di ForeverMeta).
-- Nessun default per Supabase (`src/lib/supabase/env.ts`, `scripts/clear-profile-media.mjs`) né per GA4 (`src/app/[locale]/layout.tsx`, `.env.example`).
+- Mai più i servizi di OriginsMeta: Supabase punta al progetto di ForeverMeta (`src/lib/supabase/env.ts`, dal 09/10/2026), GA4 non ha default (`src/app/[locale]/layout.tsx`, `.env.example`).
 - `npm run build` verde sulla copia l'08/10/2026, senza variabili d'ambiente (community e GA4 spenti). `npm test` non ancora lanciato: i test che controllano immagini, guide e news di Origins possono fallire finché i contenuti non sono sostituiti.
 
 ## Cantiere (09/10/2026)
@@ -19,7 +19,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 
 1. ~~Repository GitHub `ultimacenere/forevermeta`, pubblico, e primo push~~: fatto il 09/10/2026.
 2. Dominio principale **forevermeta.me** (deciso da Pierluigi il 09/10/2026) e DNS; forevermeta.online, .it ed .eu in redirect 308 verso forevermeta.me. Nel codice `originsmeta.com` diventa `forevermeta.me` (sezione "Identità del sito").
-3. Progetto Supabase nuovo (regione UE), `supabase/schema.sql` applicato da zero; variabili in `.env.local` e su Vercel.
+3. ~~Progetto Supabase nuovo~~: fatto il 09/10/2026 (`jncrmiazefxzdxywsdga`, eu-west-1, schema applicato con `node scripts/db-migrate.mjs`, URL di Auth impostati). URL e chiave pubblica sono i default di `env.ts`, come su OriginsMeta: su Vercel non servono variabili. L’email di accesso parte ancora dal mittente di prova di Supabase (pochi messaggi l’ora) finché non c’è la casella del dominio (punto 7).
 4. Progetto Vercel nuovo collegato al repository; piano Pro se ci sarà pubblicità (Hobby è solo non commerciale).
 5. Search Console, GA4 (proprietà nuova), chiave IndexNow nuova.
 6. Server Discord di ForeverMeta e webhook; poi il workflow degli annunci torna attivo.
