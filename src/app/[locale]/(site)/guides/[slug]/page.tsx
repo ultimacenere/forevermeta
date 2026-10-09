@@ -108,7 +108,7 @@ export default async function GuidePage({ params }: { params: Params }) {
 
       <figure className="mt-8">
         <NewsCover src={g.image} alt={g.imageAlt} priority />
-        <figcaption className="mt-2 text-xs text-pale-muted">{d.common.imageCredit}</figcaption>
+        {g.image.startsWith("/covers/") ? null : <figcaption className="mt-2 text-xs text-pale-muted">{d.common.imageCredit}</figcaption>}
       </figure>
 
       <article className="card-night mt-8 p-6 sm:p-10">

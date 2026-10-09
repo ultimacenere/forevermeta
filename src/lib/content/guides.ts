@@ -24,8 +24,8 @@ export type GuideEntry = {
   published: string;
   /** ultimo controllo sulle fonti (ISO) */
   updated: string;
-  /** copertina in /public/media */
-  image: string;
+  /** copertina tipografica (src/app/covers): un nome proprio del gioco, uguale in tutte le lingue, e il colore */
+  cover: { word: string; tone: "gold" | "sky" };
   /** slug dell'autore (authorsCore.ts); se manca firma Pierluigi Cella */
   author?: string;
   /** fonti ufficiali usate dalla guida, mostrate in fondo */
@@ -34,7 +34,7 @@ export type GuideEntry = {
 };
 
 /** Una guida pronta per la pagina, in una lingua. */
-export type Guide = Omit<GuideEntry, "text"> & GuideCopy & { readTime: number };
+export type Guide = Omit<GuideEntry, "text"> & GuideCopy & { readTime: number; image: string };
 
 export const guideSlugs = guideEntries.map((g) => g.slug);
 export type GuideSlug = string;
@@ -43,7 +43,7 @@ function inLocale(entry: GuideEntry, locale: Locale): Guide {
   const { text, ...rest } = entry;
   const copy = text[locale];
   const words = `${copy.excerpt} ${copy.body}`.split(/\s+/).filter(Boolean).length;
-  return { ...rest, ...copy, readTime: Math.max(1, Math.round(words / 200)) };
+  return { ...rest, ...copy, readTime: Math.max(1, Math.round(words / 200)), image: `/covers/${entry.slug}.png` };
 }
 
 /** Tutte le guide in una lingua, dalla più recente per prima pubblicazione. */

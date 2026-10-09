@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test src/lib/analytics.test.ts src/lib/loginLabels.test.ts src/lib/seoXml.test.ts src/lib/newsFeed.test.ts scripts/schema-guard.test.mjs"
+    "test": "node --test src/lib/analytics.test.ts src/lib/loginLabels.test.ts src/lib/seoXml.test.ts src/lib/newsFeed.test.ts src/lib/contentMeta.test.ts scripts/schema-guard.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

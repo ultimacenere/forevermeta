@@ -48,6 +48,8 @@ function bytesOf(publicPath: string): number | undefined {
 function coverOf(n: NewsItem): RssImage | undefined {
   if (!n.image) return undefined;
   if (!n.image.startsWith("/")) return /^https:\/\//.test(n.image) ? { url: n.image, type: imageMime(n.image) } : undefined;
+  // copertine tipografiche generate dal sito (src/app/covers): non sono file in public, la misura è fissa
+  if (n.image.startsWith("/covers/")) return { url: `${siteUrl}${n.image}`, type: "image/png", width: 1600, height: 900 };
   const size = imageSizeOf(n.image);
   return { url: `${siteUrl}${n.image}`, type: imageMime(n.image), width: size?.width, height: size?.height, bytes: bytesOf(n.image) };
 }

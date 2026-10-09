@@ -39,8 +39,10 @@ export type NewsItem = {
    */
   source: "blizzard" | "site";
   url?: string;
-  /** copertina (sempre presente, diversa per ogni news): file in /public/media, credito in `imageCredit` del dizionario */
+  /** copertina (sempre presente, diversa per ogni news): un file in /public/media oppure /covers/<slug>.png con `cover` */
   image: string;
+  /** copertina tipografica generata dal sito (src/app/covers), quando non c'è un'immagine */
+  cover?: { word: string; tone: "gold" | "sky" };
   /** testo alternativo della copertina, nelle tre lingue */
   imageAlt: L10n;
   /** guide del sito collegate */
