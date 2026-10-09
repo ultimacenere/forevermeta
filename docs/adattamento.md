@@ -12,7 +12,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 
 ## Fase 1: infrastruttura (ordine deciso da Pierluigi il 27/09/2026)
 
-1. Repository GitHub privato `ultimacenere/forevermeta` e primo push (Pierluigi).
+1. Repository GitHub `ultimacenere/forevermeta`, pubblico (creato da Pierluigi il 09/10/2026), e primo push.
 2. Dominio principale **forevermeta.me** (deciso da Pierluigi il 09/10/2026) e DNS; forevermeta.online, .it ed .eu in redirect 308 verso forevermeta.me. Nel codice `originsmeta.com` diventa `forevermeta.me` (sezione "Identità del sito").
 3. Progetto Supabase nuovo (regione UE), `supabase/schema.sql` applicato da zero; variabili in `.env.local` e su Vercel.
 4. Progetto Vercel nuovo collegato al repository; piano Pro se ci sarà pubblicità (Hobby è solo non commerciale).
@@ -36,12 +36,6 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 - Documenti di Origins: `docs/spagnolo.md`, `docs/francese.md`, `docs/testi-di-gioco.md`, `docs/tracker.md`, `docs/fumetti.md`, `docs/guide-community.md` (gli ultimi due descrivono funzioni del motore, da rileggere).
 - Script legati a Origins: `scripts/import-woo.mjs`, `scripts/official-texts.mjs`, `scripts/import-card-art.mjs`, `scripts/llms-txt.mjs`.
 
-## Funzioni del motore da ripensare per un MMO
+## Funzioni del motore
 
-- Carte, deck builder e codici del gioco (`deckrules.ts`, `deckcode.ts`, `DeckBuilder.tsx`): diventano classi, specializzazioni e build. Il calcolatore di talenti è previsto (decisione di Pierluigi del 27/09), ma la fonte dei dati è un nodo aperto (l'EULA vieta il datamining).
-- Mazzi della community → build pubblicate con guida, voti e profilo dell'autore.
-- Tier list (OriginsMeta, community, voti, le più giocate) → per specializzazione e ruolo.
-- MetaShifting → storico delle modifiche per build e per specializzazione.
-- Tornei → duelli e sfide di gilda; Mazzi torneo e regole della Crimson Cup non servono.
-- Draft contro il Cervello, Luoghi, `src/lib/tracker/` e pagina `/analytics`: specifici di Origins, da togliere.
-- Nuova: bacheca di gilde e gruppi per lingua, ruleset, fazione e orari (KB §7).
+Quali funzioni si tengono, si trasformano o si tolgono, e in che ordine, sta nella KB del progetto (§10): il repository è pubblico e i piani di prodotto non si scrivono qui.

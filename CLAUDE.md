@@ -2,7 +2,7 @@
 
 # ForeverMeta — note per Claude
 
-Sito fan non ufficiale su **World of Warcraft: Forever** (Blizzard). Sottoprogetto di OriginsMeta: stessa proprietà (Pierluigi Cella), stesso metodo, motore del sito copiato da OriginsMeta l'08/10/2026. Repository GitHub `ultimacenere/forevermeta` (privato).
+Sito fan non ufficiale su **World of Warcraft: Forever** (Blizzard). Sottoprogetto di OriginsMeta: stessa proprietà (Pierluigi Cella), stesso metodo, motore del sito copiato da OriginsMeta l'08/10/2026. Repository GitHub `ultimacenere/forevermeta`, **pubblico** (scelta di Pierluigi del 09/10/2026, come originsmeta): mai segreti nel codice né nei commit, e i piani di prodotto stanno nella KB, non in `docs/`.
 
 KB di progetto (stato, decisioni, domini, ricerche, log): `G:\Il mio Drive\OriginsMeta\30_ForeverMeta\00_KB\_kb_master_forevermeta.md`, da leggere a inizio sessione; a fine sessione si aggiornano §1 (Stato) e §9 (Log). La KB di OriginsMeta (`G:\Il mio Drive\OriginsMeta\00_KB\_kb_master_originsmeta.md`) vale per il motore comune.
 
