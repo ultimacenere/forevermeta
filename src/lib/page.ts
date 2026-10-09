@@ -1,23 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { media } from "./media";
 import { alternatesFor, getDictionary, isLocale, ogLocale, siteUrl, type Dictionary, type Locale } from "./i18n";
 
 export type LocaleParams = Promise<{ locale: string }>;
 
 /**
- * Immagine social di riserva quando la pagina non ne ha una propria: 1200×630, generata dal sito con il logo testuale
- * (rotta src/app/og.png/route.tsx), quindi nessuna grafica Blizzard.
+ * Immagine social di riserva quando la pagina non ne ha una propria: l'illustrazione dell'Alleanza dal pacco ufficiale
+ * Blizzard (src/lib/media.ts), 1200×630.
  */
-export const defaultOgImage = "/og.png";
+export const defaultOgImage = media.og.src;
 
-const defaultOgSize = { width: 1200, height: 630 };
+const defaultOgSize = { width: media.og.width, height: media.og.height };
 
 /** Testo alternativo di `defaultOgImage` (descrive l'immagine, non la pagina). */
-export const defaultOgAlt: Record<Locale, string> = {
-  en: "ForeverMeta logo with the infinity symbol in gold on a night blue background, with the words “World of Warcraft: Forever fan site”.",
-  it: "Logo di ForeverMeta con il simbolo dell'infinito in oro su fondo blu notte, con la scritta “sito fan di World of Warcraft: Forever”.",
-  es: "Logo de ForeverMeta con el símbolo del infinito en dorado sobre fondo azul noche, con el texto «sitio fan de World of Warcraft: Forever».",
-};
+export const defaultOgAlt: Record<Locale, string> = media.og.alt;
 
 /** Oltre i ~160 caratteri Google taglia lo snippet: teniamo un margine. */
 export const DESCRIPTION_MAX = 158;

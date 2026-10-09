@@ -61,6 +61,11 @@ export const en = {
     changesText: "Every official development note, build by build, with what changed for each class.",
     glossaryTitle: "Official names, three languages",
     glossaryText: "WoW Forever has no Italian client and Spanish has two versions: the glossary puts English, Italian and both Spanish names side by side.",
+    worldTitle: "The world of Forever",
+    worldCta: "Zones, dungeons and raids",
+    latestNews: "Latest news",
+    /** etichette dei post-it delle news (una per argomento, campo topic di news.ts) */
+    postit: { beta: "Beta notes", news: "News", pvp: "PvP", event: "Dates" },
   },
   news: {
     title: "WoW Forever news",

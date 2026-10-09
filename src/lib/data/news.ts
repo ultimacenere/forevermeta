@@ -6,6 +6,8 @@ type L10n = Record<Locale, string>;
 type Highlight = { label: string; text?: string; anchor: string };
 type Qa = { q: string; a: string };
 
+export type NewsTopic = "beta" | "news" | "pvp" | "event";
+
 /**
  * Una news è un articolo con una pagina propria, `/news/<slug>`, firmata (regola ereditata da OriginsMeta): titolo,
  * titolo per la SERP, descrizione, riassunto, testo a sezioni, "In breve" ancorato, FAQ facoltative. Le news si
@@ -38,6 +40,11 @@ export type NewsItem = {
    * `site`: novità di ForeverMeta raccontate da noi (`url` facoltativo = la pagina del sito di cui parla).
    */
   source: "blizzard" | "site";
+  /**
+   * argomento, che decide il post-it della home e il suo colore: `beta` note e modifiche della beta (rosa),
+   * `news` annunci e articoli (viola), `pvp` campi di battaglia e PvP (arancio), `event` date ed eventi (celeste)
+   */
+  topic: NewsTopic;
   url?: string;
   /** copertina (sempre presente, diversa per ogni news): un file in /public/media oppure /covers/<slug>.png con `cover` */
   image: string;

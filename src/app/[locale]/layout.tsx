@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Cinzel, Manrope, JetBrains_Mono } from "next/font/google";
+import { Cinzel, Manrope, JetBrains_Mono, Caveat } from "next/font/google";
 import { notFound } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../globals.css";
@@ -18,6 +18,8 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 // Identità di ForeverMeta (10/10/2026): Cinzel per titoli e logo, Manrope per il testo, JetBrains Mono per i numeri.
 const display = Cinzel({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-display-face", display: "swap" });
 const manrope = Manrope({ subsets: ["latin"], weight: ["400", "500", "700"], variable: "--font-manrope", display: "swap" });
+// Solo per i post-it delle news in home (scritti a penna, come su OriginsMeta): Caveat, non precaricato.
+const hand = Caveat({ subsets: ["latin"], weight: ["700"], variable: "--font-hand", display: "swap", preload: false });
 const jet = JetBrains_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-jet", display: "swap" });
 
 export function generateStaticParams() {
@@ -55,7 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const l: Locale = locale;
   const d = getDictionary(l);
   return (
-    <html lang={l} className={`${display.variable} ${manrope.variable} ${jet.variable} h-full`}>
+    <html lang={l} className={`${display.variable} ${manrope.variable} ${jet.variable} ${hand.variable} h-full`}>
       <body className="min-h-full flex flex-col">
         <link rel="alternate" type="application/rss+xml" title={newsFeedLabels[l].title} href={`${siteUrl}${newsFeedPath(l)}`} />
         <a

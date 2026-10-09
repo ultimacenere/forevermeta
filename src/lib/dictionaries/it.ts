@@ -59,6 +59,11 @@ export const it: Dictionary = {
     changesText: "Tutte le note di sviluppo ufficiali, build per build, con cosa è cambiato per ogni classe.",
     glossaryTitle: "I nomi ufficiali, in tre lingue",
     glossaryText: "WoW Forever non ha il client in italiano e lo spagnolo ha due versioni: il glossario mette accanto i nomi inglesi, italiani e spagnoli.",
+    worldTitle: "Il mondo di Forever",
+    worldCta: "Zone, dungeon e incursioni",
+    latestNews: "Ultima news",
+    /** etichette dei post-it delle news (una per argomento, campo topic di news.ts) */
+    postit: { beta: "Note beta", news: "News", pvp: "PvP", event: "Date" },
   },
   news: {
     title: "News di WoW Forever",

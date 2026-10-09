@@ -23,45 +23,48 @@
   carte che si girano al passaggio del mouse (.card-tile).
 */
 /*
-  ForeverMeta, palette "notte di Azeroth" (10/10/2026, identità propria decisa da Pierluigi): i nomi dei token restano
-  quelli del motore di OriginsMeta (mint = accento principale, sky = titoli e cornici, felt = fondo, night = schede),
-  cambiano i colori. Fondo blu notte, accento oro antico, titoli azzurro Skyborne, rosso per gli avvisi. Nessun colore
-  preso dalla grafica Blizzard.
+  ForeverMeta, tema CHIARO "pergamena" (10/10/2026, Pierluigi: "lo voglio sul chiaro e con le grafiche di wow"). I nomi dei
+  token restano quelli del motore di OriginsMeta, cambiano i valori:
+    felt  = fondo della pagina (pergamena chiara)       night = schede (avorio)
+    chalk = testo principale (inchiostro blu scuro)     pale  = testo delle schede
+    mint  = accento (oro scuro, leggibile sul chiaro)   sky   = titoli (blu profondo)
+  Contrasti sul fondo delle schede #fffdf8: chalk 14:1, pale 12:1, pale-muted 5,4:1, mint 5,3:1, sky 7,2:1.
+  Le immagini del gioco (pacco ufficiale del Press Center) fanno da testata e copertine; il colore del sito resta nostro.
 */
 @theme {
-  --color-felt: #0b1220;
-  --color-felt-deep: #070c16;
-  --color-felt-soft: #13203a;
-  --color-felt-line: #263a58;
-  --color-night: #111c2e;
-  --color-night-2: #0d1624;
-  --color-night-3: #1a2a44;
+  --color-felt: #f4efe4;
+  --color-felt-deep: #e9e0cd;
+  --color-felt-soft: #eee6d6;
+  --color-felt-line: #d9ccb2;
+  --color-night: #fffdf8;
+  --color-night-2: #faf6ee;
+  --color-night-3: #f1e9d8;
   --color-ink: #1a1206;
   --color-ink-muted: #5c5140;
-  --color-pale: #cfd6e0;
-  --color-pale-muted: #94a1b4;
-  --color-chalk: #e3e8ef;
-  --color-chalk-muted: #9ba8bb;
-  --color-crimson: #e0544b;
-  --color-crimson-deep: #a6322b;
-  --color-crimson-soft: #f6cbc7;
-  --color-gold: #f3dc9a;
-  --color-gold-deep: #c9a54c;
-  --color-mint: #eab54e;
-  --color-mint-deep: #b9862a;
-  --color-mint-soft: #f7e3b6;
-  --color-sky: #82c9ee;
-  --color-sky-deep: #4a9fcc;
-  --color-pink: #ec7aa8;
-  --color-good: #5fd47e;
-  --color-bad: #ff6b5f;
+  --color-pale: #2c3442;
+  --color-pale-muted: #5e6878;
+  --color-chalk: #1f2633;
+  --color-chalk-muted: #5b6474;
+  --color-crimson: #b3322a;
+  --color-crimson-deep: #8c2620;
+  --color-crimson-soft: #f6d6d2;
+  --color-gold: #c9962f;
+  --color-gold-deep: #9a6f1c;
+  --color-mint: #9a6510;
+  --color-mint-deep: #7a4f0c;
+  --color-mint-soft: #f3e2bd;
+  --color-sky: #1d5f8a;
+  --color-sky-deep: #164a6c;
+  --color-pink: #b23a6e;
+  --color-good: #23803f;
+  --color-bad: #b3261e;
 
   --font-display: var(--font-display-face), Georgia, "Times New Roman", serif;
   --font-body: var(--font-manrope), "Segoe UI", Arial, sans-serif;
   --font-mono: var(--font-jet), Consolas, "Courier New", monospace;
 
-  --shadow-card: 0 1px 0 rgba(22, 16, 42, 0.35), 0 10px 30px -12px rgba(0, 0, 0, 0.55);
-  --shadow-lift: 0 2px 0 rgba(22, 16, 42, 0.35), 0 24px 40px -18px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 1px 2px rgba(60, 44, 20, 0.08), 0 10px 28px -16px rgba(60, 44, 20, 0.25);
+  --shadow-lift: 0 2px 4px rgba(60, 44, 20, 0.10), 0 24px 40px -20px rgba(60, 44, 20, 0.35);
   --shadow-mint: 0 0 0 1px rgba(234, 181, 78, 0.45), 0 12px 32px -14px rgba(234, 181, 78, 0.45);
 }
 
@@ -74,7 +77,7 @@
        viola; sull'arancio degli angoli scende a 2,3:1, quindi il testo non deve mai starci sopra (vedi .btn-primary). */
     /* ForeverMeta (10/10/2026): il gradiente dei bottoni primari è oro antico, con testo scuro (ink) al posto del
        bianco: ink #1a1206 sta sopra 9:1 su tutto il gradiente. Il nome della variabile resta quello del motore. */
-    --grad-ig: linear-gradient(45deg, #f6d68a 0%, #eab54e 45%, #d99a32 75%, #c4832a 100%);
+    --grad-ig: linear-gradient(45deg, #f3d385 0%, #e6b14c 45%, #d6993a 75%, #c98a2e 100%);
     /* Colori dei post-it, tutti con testo ink #16102a: rapporti misurati tra parentesi. */
     --postit-deck: #f2d23c; /* Nuovo mazzo, giallo (12,3:1) */
     --postit-news: #c4b0ff; /* News, viola (9,6:1) */
@@ -3628,5 +3631,167 @@
   .table-scroll {
     max-width: 100%;
     overflow-x: auto;
+  }
+}
+
+/*
+  ForeverMeta, tema chiaro (10/10/2026): le classi base del motore avevano colori scuri scritti a mano (gradienti,
+  trasparenze sul blu notte). Qui sono ridisegnate per il chiaro; vengono dopo, quindi vincono. Schede avorio con un
+  filo caldo e un'ombra leggera al posto della cornice celeste da 3 px.
+*/
+@layer base {
+  body::before {
+    background-image:
+      radial-gradient(1100px 520px at 10% -10%, rgba(201, 150, 47, 0.10), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(29, 95, 138, 0.08), transparent 55%);
+  }
+}
+@layer components {
+  .card-night {
+    background: var(--color-night);
+    color: var(--color-pale);
+    border: 1px solid var(--color-felt-line);
+    box-shadow: var(--shadow-card);
+  }
+  .card-night-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--color-gold);
+  }
+  .felt-panel {
+    border: 1px solid var(--color-felt-line);
+    background: var(--color-night-2);
+  }
+  .felt-panel-mint {
+    border: 1px solid var(--color-gold);
+    background: var(--color-night-2);
+  }
+  .btn-ink {
+    background: var(--color-night);
+    color: var(--color-chalk);
+    border-color: var(--color-felt-line);
+  }
+  .btn-ink:hover:not(:disabled, [aria-disabled="true"]) {
+    background: var(--color-night-3);
+    color: var(--color-sky);
+  }
+  .link-mint {
+    text-decoration-color: rgba(154, 101, 16, 0.4);
+  }
+  .link-mint:hover,
+  .link-mint:focus-visible {
+    color: var(--color-mint-deep);
+  }
+  .prose-night a {
+    color: var(--color-mint);
+    text-decoration-color: rgba(154, 101, 16, 0.45);
+  }
+  .prose-night h2 {
+    color: var(--color-sky);
+  }
+  .prose-night h3 {
+    color: var(--color-chalk);
+  }
+  .prose-night th,
+  .prose-night td {
+    border-bottom: 1px solid var(--color-felt-line);
+  }
+  .prose-night th {
+    color: var(--color-chalk);
+    background: var(--color-night-2);
+  }
+  .prose-night strong {
+    color: var(--color-chalk);
+  }
+  .t-page,
+  .t-section,
+  .t-item {
+    color: var(--color-sky);
+  }
+  .pill {
+    border-width: 1px;
+  }
+  /* testata della home: l'immagine del gioco a tutta larghezza, con una velatura scura in basso per il testo chiaro */
+  .hero-forever {
+    position: relative;
+    background: #1c2230;
+    color: #f6f1e6;
+    overflow: hidden;
+  }
+  .hero-forever-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero-forever-veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(14, 18, 28, 0.82) 0%, rgba(14, 18, 28, 0.55) 45%, rgba(14, 18, 28, 0.1) 100%);
+  }
+  .hero-forever .t-hero {
+    color: #fbf6ea;
+  }
+  .hero-forever .hero-text {
+    color: #e9e2d2;
+  }
+  .hero-forever .btn-ghost {
+    border-color: rgba(251, 246, 234, 0.7);
+    color: #fbf6ea;
+  }
+  .hero-forever .btn-ghost:hover:not(:disabled, [aria-disabled="true"]) {
+    border-color: var(--color-gold);
+    color: #f3d385;
+  }
+  .hero-forever .kicker {
+    color: #f3d385;
+  }
+  .t-hero {
+    color: var(--color-chalk);
+  }
+}
+
+/*
+  Post-it delle news in home (10/10/2026, Pierluigi: "con colori diversi vorrei rimettere come su originsmeta i
+  postit"). Stesse forme e animazioni di OriginsMeta (.postit qui sopra); un colore per argomento della news
+  (`topic` in news.ts): beta rosa, news viola, pvp arancio, event celeste. Testo ink sulla carta piena (contrasto
+  sopra 8:1 per tutti). Sul fondo pergamena l'ombra è calda e più leggera di quella pensata per il viola inchiostro.
+*/
+@layer components {
+  .postit-beta {
+    --postit-bg: var(--postit-patch);
+    --tilt: -1.8deg;
+    --delay: -5.4s;
+  }
+  .postit-pvp {
+    --postit-bg: var(--postit-event);
+    --tilt: 1.9deg;
+    --delay: -4.4s;
+  }
+  .postit-event {
+    --postit-bg: var(--postit-tournament);
+  }
+  .postit {
+    box-shadow: 0 1px 1px rgba(60, 40, 10, 0.25), 2px 8px 14px -6px rgba(60, 40, 10, 0.55);
+  }
+  .postit-lg {
+    box-shadow: 0 1px 1px rgba(60, 40, 10, 0.3), 3px 12px 18px -6px rgba(60, 40, 10, 0.6);
+  }
+  .postit.is-fresh {
+    box-shadow: 0 2px 2px rgba(60, 40, 10, 0.35), 3px 14px 22px -6px rgba(60, 40, 10, 0.7);
+  }
+  /* il nastro adesivo: carta velina chiara, visibile anche sulla pergamena */
+  .postit::before {
+    background: rgba(255, 253, 248, 0.6);
+    box-shadow: 0 1px 2px rgba(60, 40, 10, 0.25);
+  }
+  /* bollino "Nuovo": rosa chiaro con testo ink (il rosa scuro del tema darebbe poco contrasto) */
+  .postit.is-fresh::after {
+    background: #ff8fc4;
+  }
+  :lang(es) .postit.is-fresh::after {
+    content: "NUEVO";
+    content: "NUEVO" / "";
   }
 }

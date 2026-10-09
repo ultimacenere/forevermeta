@@ -9,6 +9,8 @@ import { sortedChanges } from "@/lib/data/changes";
 import { upcomingEvents } from "@/lib/data/events";
 import { NewsCover } from "@/components/NewsCover";
 import { CalendarStrip } from "@/components/CalendarStrip";
+import { media } from "@/lib/media";
+import { Postit } from "@/components/Postit";
 
 /** Si rigenera una volta al giorno: le prossime date del calendario cambiano da sole. */
 export const revalidate = 86400;
@@ -17,6 +19,17 @@ export async function generateMetadata({ params }: { params: LocaleParams }): Pr
   const { locale, dict } = await resolveLocale(params);
   return pageMeta(locale, "", dict.meta.homeTitle, dict.meta.description);
 }
+
+/**
+ * Post-it grandi delle tre news in cima (come su OriginsMeta): rotazioni diverse e non allineate, ognuno appoggiato in
+ * un punto un po' diverso dell'angolo della copertina (uno a destra), con fase e durate sue, così non si muovono
+ * all'unisono. Le classi sono utility Tailwind scritte per intero, perché Tailwind le trovi nel sorgente.
+ */
+const FEATURED_POSTITS = [
+  { tilt: -6, place: "postit-corner -top-1 left-3 [--delay:-0.4s] [--flap-dur:2.6s] [--sway-dur:7.5s]" },
+  { tilt: 4, place: "postit-corner top-0 left-auto right-4 [--delay:-1.3s] [--flap-dur:2.9s] [--sway-dur:8.8s]" },
+  { tilt: -3, place: "postit-corner -top-1.5 left-7 [--delay:-2.1s] [--flap-dur:2.3s] [--sway-dur:6.4s]" },
+] as const;
 
 /** Termini del glossario mostrati in anteprima nella home: i nomi che cambiano di più fra le lingue. */
 const GLOSSARY_PREVIEW = ["skyborne", "legacy-system", "campfire", "dungeon"];
@@ -33,16 +46,30 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
   const terms = GLOSSARY_PREVIEW.map((id) => glossary.find((t) => t.id === id)).filter((t) => t !== undefined);
   const lastChange = sortedChanges[0];
   const next = upcomingEvents().slice(0, 3);
+  // tre luoghi del gioco con il loro nome ufficiale nella lingua della pagina (dal glossario)
+  const nameOf = (id: string) => {
+    const t = glossary.find((x) => x.id === id);
+    return t ? (locale === "en" ? t.en : t[locale].term) : id;
+  };
+  const world = [
+    { id: "zephras-isle", media: media.zephras, name: nameOf("zephras-isle") },
+    { id: "hyjal-summit", media: media.hyjal, name: nameOf("hyjal-summit") },
+    { id: "darkspear-islands", media: media.darkspear, name: nameOf("darkspear-islands") },
+  ];
 
   return (
     <main id="main" className="flex-1">
       <CalendarStrip locale={locale} dict={d} />
-      <section className="hero-forever border-b border-felt-line/70">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:py-20">
+      <section className="hero-forever">
+        {/* Testata con il fotogramma del cinematic ufficiale (pacco del Press Center): contenuto, non identità del sito */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={media.hero.src} alt={media.hero.alt[locale]} width={media.hero.width} height={media.hero.height} className="hero-forever-img" fetchPriority="high" />
+        <div className="hero-forever-veil" aria-hidden="true" />
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.4fr_1fr] lg:py-24">
           <div>
-            <p className="kicker text-mint">{h.kicker}</p>
+            <p className="kicker">{h.kicker}</p>
             <h1 className="t-hero mt-3">{h.title}</h1>
-            <p className="mt-5 max-w-2xl text-lg leading-relaxed text-pale">{h.text}</p>
+            <p className="hero-text mt-5 max-w-2xl text-lg leading-relaxed">{h.text}</p>
             <p className="mt-8 flex flex-wrap gap-3">
               <Link href={href(locale, "/guides")} className="btn btn-primary">
                 {h.ctaGuides}
@@ -69,6 +96,7 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
             </div>
           </dl>
         </div>
+        <p className="absolute bottom-2 right-3 text-[10px] text-[#e9e2d2]/80">© Blizzard Entertainment, Inc.</p>
       </section>
 
       <div className="mx-auto max-w-7xl space-y-16 px-4 py-14 sm:px-6">
@@ -82,19 +110,27 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
                 {d.common.viewAll} →
               </Link>
             </div>
-            <ul className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
-              {latestNews.map((n) => (
-                <li key={n.slug}>
-                  <Link href={href(locale, newsPath(n))} className="card-night card-night-hover flex h-full flex-col p-5">
+            {/* gap-y-10: i post-it grandi sporgono sopra la scheda e non devono toccare quella di sopra sul telefono */}
+            <ul className="mt-8 grid grid-cols-1 gap-x-5 gap-y-10 md:grid-cols-3">
+              {latestNews.map((n, i) => {
+                const note = FEATURED_POSTITS[i % FEATURED_POSTITS.length];
+                return (
+                  <li key={n.slug} className="card-night card-night-hover relative flex flex-col p-6">
+                    {/* figlio diretto della scheda (contratto di .postit), a cavallo del bordo e sopra l'angolo della copertina */}
+                    <Postit kind={n.topic} label={h.postit[n.topic]} date={n.date} size="lg" tilt={note.tilt} className={note.place} />
                     <NewsCover src={n.image} className="mb-4" />
-                    <p className="font-mono text-xs text-pale-muted">
-                      <time dateTime={n.date}>{formatDate(locale, n.date)}</time>
+                    <p className="kicker text-mint">
+                      {i === 0 ? `${h.latestNews} · ` : null}<time dateTime={n.date}>{formatDate(locale, n.date)}</time>
                     </p>
-                    <h3 className="t-item mt-1 leading-snug">{n.title[locale]}</h3>
-                    <p className="mt-2 line-clamp-3 text-sm text-pale">{n.summary[locale]}</p>
-                  </Link>
-                </li>
-              ))}
+                    <h3 className="t-item mt-2 leading-snug">
+                      <Link href={href(locale, newsPath(n))} className="after:absolute after:inset-0 hover:underline">
+                        {n.title[locale]}
+                      </Link>
+                    </h3>
+                    <p className="mt-3 line-clamp-3 text-sm text-pale">{n.summary[locale]}</p>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ) : null}
@@ -123,6 +159,29 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
             </ul>
           </section>
         ) : null}
+
+        <section aria-labelledby="home-world">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <h2 id="home-world" className="t-section">
+              {h.worldTitle}
+            </h2>
+            <Link href={href(locale, "/guides/wow-forever-zones-dungeons-raids")} className="text-sm text-mint hover:underline">
+              {h.worldCta} →
+            </Link>
+          </div>
+          <ul className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-3">
+            {world.map((w) => (
+              <li key={w.id}>
+                <Link href={href(locale, "/guides/wow-forever-zones-dungeons-raids")} className="card-night card-night-hover block overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={w.media.src} alt={w.media.alt[locale]} width={w.media.width} height={w.media.height} loading="lazy" className="aspect-[16/9] w-full object-cover" />
+                  <p className="px-4 py-3 font-display text-base font-bold text-sky">{w.name}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-2 text-xs text-pale-muted">{d.common.imageCredit}</p>
+        </section>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           <section aria-labelledby="home-glossary" className="card-night p-6 sm:p-8">

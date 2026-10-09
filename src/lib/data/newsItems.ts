@@ -1,4 +1,7 @@
 import type { NewsItem } from "./news";
+import { media } from "../media";
+import darkspear from "./newsTexts/darkspear-islands-pvp";
+import skyborne from "./newsTexts/skyborne-visual-updates";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -11,14 +14,10 @@ export const newsItems: NewsItem[] = [
     slug: "beta-development-notes-october-8",
     date: "2026-10-08",
     source: "blizzard",
+    topic: "beta",
     url: DEV_NOTES_OCT_8,
-    image: "/covers/beta-development-notes-october-8.png",
-    cover: { word: "City of Dalaran", tone: "sky" },
-    imageAlt: n(
-      "ForeverMeta typographic cover with the words “City of Dalaran” in light blue on a night blue background",
-      "Copertina tipografica di ForeverMeta con la scritta «City of Dalaran» in azzurro su fondo blu notte",
-      "Portada tipográfica de ForeverMeta con el texto «City of Dalaran» en azul claro sobre fondo azul noche",
-    ),
+    image: media.dalaran.src,
+    imageAlt: media.dalaran.alt,
     guides: ["wow-forever-zones-dungeons-raids", "wow-forever-legacy-system"],
     title: n(
       "WoW Forever beta, 8 October notes: City of Dalaran opens, Rage is recalculated, 16 Legacy Points for testers",
@@ -182,4 +181,6 @@ Chat de voz también con Discord Voice (lo elige el líder del grupo), modo de v
 Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes (el error del Auto Shot, la racial de los gnomos) ya están en esta build: las notas no lo dicen.`,
     ),
   },
+  darkspear,
+  skyborne,
 ];

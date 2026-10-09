@@ -1,5 +1,6 @@
 import type { Locale } from "../i18n";
 import { guideEntries } from "./guideEntries";
+import { media, type MediaKey } from "../media";
 
 export type GuideCategory = "start" | "systems" | "world" | "dates";
 
@@ -26,6 +27,8 @@ export type GuideEntry = {
   updated: string;
   /** copertina tipografica (src/app/covers): un nome proprio del gioco, uguale in tutte le lingue, e il colore */
   cover: { word: string; tone: "gold" | "sky" };
+  /** immagine del pacco ufficiale Blizzard (src/lib/media.ts): se c'è, prende il posto della copertina tipografica */
+  media?: MediaKey;
   /** slug dell'autore (authorsCore.ts); se manca firma Pierluigi Cella */
   author?: string;
   /** fonti ufficiali usate dalla guida, mostrate in fondo */
@@ -43,7 +46,14 @@ function inLocale(entry: GuideEntry, locale: Locale): Guide {
   const { text, ...rest } = entry;
   const copy = text[locale];
   const words = `${copy.excerpt} ${copy.body}`.split(/\s+/).filter(Boolean).length;
-  return { ...rest, ...copy, readTime: Math.max(1, Math.round(words / 200)), image: `/covers/${entry.slug}.png` };
+  const m = entry.media ? media[entry.media] : undefined;
+  return {
+    ...rest,
+    ...copy,
+    readTime: Math.max(1, Math.round(words / 200)),
+    image: m ? m.src : `/covers/${entry.slug}.png`,
+    imageAlt: m ? m.alt[locale] : copy.imageAlt,
+  };
 }
 
 /** Tutte le guide in una lingua, dalla più recente per prima pubblicazione. */

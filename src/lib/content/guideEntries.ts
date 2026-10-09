@@ -9,4 +9,14 @@ import { guide as editions } from "./guideTexts/wow-forever-editions-prices";
 import { guide as world } from "./guideTexts/wow-forever-zones-dungeons-raids";
 
 /** Le guide di ForeverMeta, una per file in guideTexts/, in inglese, italiano e spagnolo, ognuna con le sue fonti ufficiali. */
-export const guideEntries: GuideEntry[] = [whatIs, releaseDate, rulesets, racesClasses, legacy, camping, editions, world];
+/** Le copertine dal pacco ufficiale Blizzard (src/lib/media.ts), una diversa per guida. */
+export const guideEntries: GuideEntry[] = [
+  { ...whatIs, media: "whatIs" },
+  { ...releaseDate, media: "releaseDate" },
+  { ...rulesets, media: "rulesets" },
+  { ...racesClasses, media: "racesClasses" },
+  { ...legacy, media: "legacy" },
+  { ...camping, media: "camping" },
+  { ...editions, media: "editions" },
+  { ...world, media: "zones" },
+];
