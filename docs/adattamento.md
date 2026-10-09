@@ -18,9 +18,9 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 ## Fase 1: infrastruttura (ordine deciso da Pierluigi il 27/09/2026)
 
 1. ~~Repository GitHub `ultimacenere/forevermeta`, pubblico, e primo push~~: fatto il 09/10/2026.
-2. Dominio principale **forevermeta.me** (deciso da Pierluigi il 09/10/2026) e DNS; forevermeta.online, .it ed .eu in redirect 308 verso forevermeta.me. Nel codice `originsmeta.com` diventa `forevermeta.me` (sezione "Identità del sito").
+2. ~~Dominio principale **forevermeta.me**~~: online il 09/10/2026 (DNS su Register.it, www in redirect 308). Da fare: forevermeta.online, .it ed .eu in redirect 308 verso forevermeta.me. Nel codice `originsmeta.com` diventa `forevermeta.me` (sezione "Identità del sito").
 3. ~~Progetto Supabase nuovo~~: fatto il 09/10/2026 (`jncrmiazefxzdxywsdga`, eu-west-1, schema applicato con `node scripts/db-migrate.mjs`, URL di Auth impostati). URL e chiave pubblica sono i default di `env.ts`, come su OriginsMeta: su Vercel non servono variabili. L’email di accesso parte ancora dal mittente di prova di Supabase (pochi messaggi l’ora) finché non c’è la casella del dominio (punto 7).
-4. Progetto Vercel nuovo collegato al repository; piano Pro se ci sarà pubblicità (Hobby è solo non commerciale).
+4. ~~Progetto Vercel~~: fatto il 09/10/2026, nel team Pro di OriginsMeta. Le anteprime si fanno sul branch `anteprima` (sito aperto, `FOREVERMETA_OPEN=1` solo in Preview).
 5. Search Console, GA4 (proprietà nuova), chiave IndexNow nuova.
 6. Server Discord di ForeverMeta e webhook; poi il workflow degli annunci torna attivo.
 7. Casella email del dominio (sul modello di staff@originsmeta.com).
