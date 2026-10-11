@@ -2,6 +2,8 @@ import type { NewsItem } from "./news";
 import { media } from "../media";
 import darkspear from "./newsTexts/darkspear-islands-pvp";
 import skyborne from "./newsTexts/skyborne-visual-updates";
+import aggrend from "./newsTexts/aggrend-dungeon-leveling";
+import classDeepDives from "./newsTexts/class-deep-dives";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -183,4 +185,6 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   },
   darkspear,
   skyborne,
+  aggrend,
+  classDeepDives,
 ];

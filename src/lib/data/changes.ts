@@ -29,7 +29,7 @@ const GRAPHICS_THREAD =
 
 /**
  * Fonti: solo i post ufficiali di Blizzard (forum US e news.blizzard.com). Il numero di build compare solo quando
- * l'ha scritto Blizzard (69977, 70205, 70245); i riavvii dei server senza modifiche al gioco non ci sono.
+ * l'ha scritto Blizzard (69977, 70205, 70245, 70338); i riavvii dei server senza modifiche al gioco non ci sono.
  * Nessun giudizio ("nerf", "buff"): si dice che cosa è cambiato.
  */
 export const changeUpdates: ChangeUpdate[] = [
@@ -1436,6 +1436,27 @@ export const changeUpdates: ChangeUpdate[] = [
         "Character-specific and general macros are no longer mixed; clicking a completed Legacy Challenge opens its window; “View Talents” in the target menu; level and class in the character panel.",
         "Macro specifiche e generali non più mescolate; un clic su una Legacy Challenge completata apre la sua finestra; “View Talents” nel menu del bersaglio; livello e classe nel pannello del personaggio.",
         "Las macros específicas y generales ya no se mezclan; al hacer clic en un Legacy Challenge completado se abre su ventana; “View Talents” en el menú del objetivo; nivel y clase en el panel de personaje.",
+      ),
+    ],
+  },
+  {
+    id: "2026-10-10-build-70338",
+    date: "2026-10-10",
+    build: "70338",
+    title: l("Client build: Stormwind water on Mac", "Build del client: l'acqua di Stormwind su Mac", "Build del cliente: el agua de Stormwind en Mac"),
+    url: `${GRAPHICS_THREAD}/577`,
+    items: [
+      c(
+        "general",
+        "Mac: the water in Stormwind should now display correctly.",
+        "Mac: l'acqua di Stormwind dovrebbe ora vedersi correttamente.",
+        "Mac: el agua de Stormwind debería verse ya correctamente.",
+      ),
+      c(
+        "general",
+        "Mac: the occasional color tint is not fixed yet; Blizzard has a fix it hopes to deploy the following week.",
+        "Mac: la tinta di colore che compare a volte non è ancora corretta; Blizzard ha una correzione che spera di distribuire la settimana dopo.",
+        "Mac: el tinte de color que aparece a veces aún no está corregido; Blizzard tiene una corrección que espera publicar la semana siguiente.",
       ),
     ],
   },

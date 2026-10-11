@@ -134,6 +134,22 @@ export const media = {
     "/media/darkspear.webp",
     n("World of Warcraft: Forever screenshot: a ship at sunset off the Darkspear Islands", "Screenshot di World of Warcraft: Forever: una nave al tramonto davanti alle Darkspear Islands", "Captura de World of Warcraft: Forever: un barco al atardecer frente a las Islas Lanza Negra"),
   ),
+  dungeonLeveling: cover(
+    "/media/news-dungeon-leveling.webp",
+    n(
+      "World of Warcraft: Forever screenshot: two green-skinned creatures in a dark corridor of the Alcaz Prison dungeon",
+      "Screenshot di World of Warcraft: Forever: due creature dalla pelle verde in un corridoio buio del dungeon Alcaz Prison",
+      "Captura de World of Warcraft: Forever: dos criaturas de piel verde en un pasillo oscuro de la mazmorra Prisión de Alcaz",
+    ),
+  ),
+  classDeepDives: cover(
+    "/media/news-class-deep-dives.webp",
+    n(
+      "World of Warcraft: Forever screenshot: three characters in purple and gold armour, including an orc, in a forest clearing",
+      "Screenshot di World of Warcraft: Forever: tre personaggi in armatura viola e oro, fra cui un orco, in una radura nel bosco",
+      "Captura de World of Warcraft: Forever: tres personajes con armadura morada y dorada, entre ellos un orco, en un claro del bosque",
+    ),
+  ),
 } satisfies Record<string, Media>;
 
 export type MediaKey = keyof typeof media;
