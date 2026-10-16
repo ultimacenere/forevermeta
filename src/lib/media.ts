@@ -150,6 +150,14 @@ export const media = {
       "Captura de World of Warcraft: Forever: tres personajes con armadura morada y dorada, entre ellos un orco, en un claro del bosque",
     ),
   ),
+  racialsMulgore: cover(
+    "/media/news-racials-mulgore.webp",
+    n(
+      "World of Warcraft: Forever screenshot: an airship flying past the mesas of Thunder Bluff, in Mulgore, at sunset",
+      "Screenshot di World of Warcraft: Forever: un'aeronave vola accanto agli altipiani di Thunder Bluff, a Mulgore, al tramonto",
+      "Captura de World of Warcraft: Forever: una aeronave pasa junto a las mesetas de Cima del Trueno, en Mulgore, al atardecer",
+    ),
+  ),
 } satisfies Record<string, Media>;
 
 export type MediaKey = keyof typeof media;

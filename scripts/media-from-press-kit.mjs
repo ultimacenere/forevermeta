@@ -36,6 +36,7 @@ const jobs = [
   [`${S}/WoW_Forever_SCENIC_Announce_Skyborne_Customization_061.png`, "news-skyborne.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Dungeon_AlcazPrison_066.jpg`, "news-dungeon-leveling.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_SCENIC_Announce_Race_Class_NewCombos_055.png`, "news-class-deep-dives.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Camelot_Announce_Zones_Mulgore_022.jpg`, "news-racials-mulgore.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_Hyjal_085.jpg`, "hyjal.webp", 1600, 900, "centre"],
