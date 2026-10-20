@@ -5,6 +5,7 @@ import skyborne from "./newsTexts/skyborne-visual-updates";
 import aggrend from "./newsTexts/aggrend-dungeon-leveling";
 import classDeepDives from "./newsTexts/class-deep-dives";
 import octoberFifteen from "./newsTexts/beta-notes-october-15";
+import levelingPast30 from "./newsTexts/leveling-past-30-video";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -189,4 +190,5 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   aggrend,
   classDeepDives,
   octoberFifteen,
+  levelingPast30,
 ];

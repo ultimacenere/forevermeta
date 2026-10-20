@@ -158,6 +158,17 @@ export const media = {
       "Captura de World of Warcraft: Forever: una aeronave pasa junto a las mesetas de Cima del Trueno, en Mulgore, al atardecer",
     ),
   ),
+  /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
+  levelingPast30: {
+    src: "/media/news-leveling-past-30.webp",
+    width: 1280,
+    height: 720,
+    alt: n(
+      "Thumbnail of the official World of Warcraft: Forever video: two players on a stone path next to a giant skeleton, beside the words Continuing your Forever journey",
+      "Miniatura del video ufficiale di World of Warcraft: Forever: due giocatori su un sentiero di pietra accanto a uno scheletro gigante, con la scritta Continuing your Forever journey",
+      "Miniatura del vídeo oficial de World of Warcraft: Forever: dos jugadores en un camino de piedra junto a un esqueleto gigante, con el texto Continuing your Forever journey",
+    ),
+  },
 } satisfies Record<string, Media>;
 
 export type MediaKey = keyof typeof media;
