@@ -15,6 +15,11 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 - Finché `FOREVERMETA_OPEN` non vale `1` alla build, ogni indirizzo mostra `public/cantiere.html` (noindex, non affiliato a Blizzard), `robots.txt` è `public/cantiere-robots.txt` (Disallow su tutto) e i redirect del sito sono spenti (`next.config.ts`). Su Vercel: `FOREVERMETA_OPEN=1` solo nell'ambiente Preview, per vedere il lavoro; in Production solo al lancio, su decisione di Pierluigi.
 - Tolto il cron di `vercel.json` (`/api/cron/live` ogni 10 minuti): sul piano Hobby di Vercel i cron possono essere al massimo giornalieri e il deploy fallirebbe; e senza community non serve. Si rimette quando c'è Supabase, con il piano adatto.
 
+## Progetto autonomo (22/10/2026)
+
+- ForeverMeta non è più un sottoprogetto di OriginsMeta (Pierluigi: "deve vivere in una sua repository, altrimenti è un casino, spostalo fuori da originsmeta e rendilo autonomo"): le sessioni Claude si aprono su questa cartella, la memoria è sua, `CLAUDE.md` e `README.md` sono stati riscritti. Il remote `upstream` resta in sola lettura ed è limitato a `main` (`remote.upstream.fetch = +refs/heads/main:refs/remotes/upstream/main`, impostazione locale del `.git/config`, da rifare su un clone nuovo insieme a `pushurl = DISABLED`).
+- Collegamenti con OriginsMeta che restano per scelta di prodotto (10/10/2026): "fatto dalla squadra di OriginsMeta" nei dizionari e nel profilo dell'autore, `parentOrganization` nei dati strutturati, Discord di OriginsMeta (`src/lib/discord.ts`) e contatto della privacy staff@originsmeta.com fino alla casella del dominio (punto 7 qui sotto).
+
 ## Fase 1: infrastruttura (ordine deciso da Pierluigi il 27/09/2026)
 
 1. ~~Repository GitHub `ultimacenere/forevermeta`, pubblico, e primo push~~: fatto il 09/10/2026.
@@ -25,7 +30,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 6. Server Discord di ForeverMeta e webhook; poi il workflow degli annunci torna attivo.
 7. Casella email del dominio (sul modello di staff@originsmeta.com).
 
-## Identità del sito (ancora OriginsMeta)
+## Identità del sito (elenco del 09/10/2026; dal 10/10 il sito ha identità propria, vedi la KB §1: restano i residui)
 
 - Dominio scritto nel codice: `originsmeta.com` compare circa 290 volte in 70 file di `src/` (fra cui `src/lib/i18n.ts`, `src/lib/indexnow.ts` con `INDEXNOW_SITE` e `INDEXNOW_KEY`, `src/lib/jsonld/entities.ts`, `src/lib/data/authorsCore.ts`, `src/lib/stream.ts`, `src/lib/community/shortLink.ts`, `src/lib/videos.ts`, dizionari e test). Conviene una costante unica del sito prima di sostituire.
 - Nome, logo e favicon: `src/app/icon.svg`, `src/app/favicon.ico` (`scripts/make-favicon.mjs`), header, footer, dizionari.
