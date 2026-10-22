@@ -1,5 +1,5 @@
 // Immagini del sito dal pacco ufficiale "World of Warcraft Forever Reveal" (Blizzard Press Center, archiviato su Drive in
-// OriginsMeta\30_ForeverMeta\10_Materiale_Blizzard). Decisione di Pierluigi del 10/10/2026: "con le grafiche di wow, ho
+// ForeverMeta\10_Materiale_Blizzard). Decisione di Pierluigi del 10/10/2026: "con le grafiche di wow, ho
 // scaricato il pacchetto apposta, sfruttiamolo". Nel repository (pubblico) vanno solo versioni ridotte per il web, mai gli
 // originali: WebP, 16:9 per le copertine, 21:9 per la testata, 1200×630 per i social. Credito "© Blizzard Entertainment,
 // Inc." sotto ogni immagine nelle pagine. I loghi del pacco non si usano (mai nell'identità del sito).
@@ -8,7 +8,7 @@ import { mkdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import sharp from "sharp";
 
-const kit = process.argv[2] ?? "G:/Il mio Drive/OriginsMeta/30_ForeverMeta/10_Materiale_Blizzard/WoW_Forever_Reveal_2026-10-10";
+const kit = process.argv[2] ?? "G:/Il mio Drive/ForeverMeta/10_Materiale_Blizzard/WoW_Forever_Reveal_2026-10-10";
 const out = "public/media";
 mkdirSync(out, { recursive: true });
 
