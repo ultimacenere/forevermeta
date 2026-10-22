@@ -12,6 +12,7 @@ type NavItem = { label: string; path: string };
 export function navItems(dict: Dictionary): NavItem[] {
   return [
     { label: dict.nav.news, path: "/news" },
+    { label: dict.nav.builder, path: "/builder" },
     { label: dict.nav.guides, path: "/guides" },
     { label: dict.nav.glossary, path: "/glossary" },
     { label: dict.nav.calendar, path: "/calendar" },
