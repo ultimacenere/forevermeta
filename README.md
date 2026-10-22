@@ -6,7 +6,7 @@ Progetto autonomo di Pierluigi Cella, nato dal motore di [OriginsMeta](https://g
 
 ## Stato
 
-Online dal 10/10/2026. Che cosa del motore è ancora di Origins e che cosa è stato adattato: [`docs/adattamento.md`](docs/adattamento.md). Stato e decisioni nella KB del progetto (Drive, `OriginsMeta\30_ForeverMeta\00_KB\`).
+Online dal 10/10/2026. Che cosa del motore è ancora di Origins e che cosa è stato adattato: [`docs/adattamento.md`](docs/adattamento.md). Stato e decisioni nella KB del progetto (Drive, `ForeverMeta\00_KB\`).
 
 ## Comandi
 
