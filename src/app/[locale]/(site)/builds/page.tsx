@@ -39,6 +39,9 @@ export default async function BuildsPage({ params }: { params: LocaleParams }) {
     author: authorOf(x, d.nav.playerFallback),
     avg: ratings.get(x.id)?.avg ?? 0,
     votes: ratings.get(x.id)?.votes ?? 0,
+    // indirizzo e data pronti qui: al client component non si passano funzioni
+    href: href(locale, buildPath(x.slug)),
+    dateLabel: formatDate(locale, x.created_at.slice(0, 10)),
   }));
   const path = href(locale, "/builds");
   return (
@@ -61,7 +64,7 @@ export default async function BuildsPage({ params }: { params: LocaleParams }) {
         {unavailable ? (
           <p className="card-night p-6 text-pale-muted">{L.list.unavailable}</p>
         ) : (
-          <BuildList items={items} classes={classMetas(locale)} raceNames={raceNameMap(locale)} labels={L} hrefOf={(slug) => href(locale, buildPath(slug))} iconBase={TALENT_ICON_BASE} dateOf={(iso) => formatDate(locale, iso.slice(0, 10))} />
+          <BuildList items={items} classes={classMetas(locale)} raceNames={raceNameMap(locale)} labels={L} iconBase={TALENT_ICON_BASE} />
         )}
       </div>
       <section className="mt-14 border-t border-felt-line pt-8" aria-labelledby="builds-how">
