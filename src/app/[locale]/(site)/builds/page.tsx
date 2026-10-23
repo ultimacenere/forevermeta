@@ -7,6 +7,7 @@ import { BuildList, type BuildListItem } from "@/components/builds/BuildList";
 import { listPublishedBuilds } from "@/lib/community/buildQueries";
 import { buildPath } from "@/lib/community/builds";
 import { authorOf, classMetas, raceNameMap } from "@/lib/community/buildView";
+import { localizedBuildCard } from "@/lib/community/buildTranslation";
 import { buildLabels } from "@/lib/buildLabels";
 import { TALENT_ICON_BASE } from "@/lib/data/talents";
 
@@ -23,26 +24,30 @@ export default async function BuildsPage({ params }: { params: LocaleParams }) {
   const b = d.builds;
   const L = buildLabels[locale];
   const { builds, ratings, unavailable } = await listPublishedBuilds();
-  const items: BuildListItem[] = builds.map((x) => ({
-    id: x.id,
-    slug: x.slug,
-    name: x.name,
-    class_id: x.class_id,
-    race_id: x.race_id,
-    level: x.level,
-    code: x.code,
-    points: x.points,
-    purpose: x.purpose,
-    summary: x.summary,
-    created_at: x.created_at,
-    guide_lang: x.guide_lang,
-    author: authorOf(x, d.nav.playerFallback),
-    avg: ratings.get(x.id)?.avg ?? 0,
-    votes: ratings.get(x.id)?.votes ?? 0,
-    // indirizzo e data pronti qui: al client component non si passano funzioni
-    href: href(locale, buildPath(x.slug)),
-    dateLabel: formatDate(locale, x.created_at.slice(0, 10)),
-  }));
+  const items: BuildListItem[] = builds.map((x) => {
+    // nome e riassunto nella lingua della pagina, se la traduzione è aggiornata; altrimenti quelli dell'autore
+    const card = localizedBuildCard(x, locale);
+    return {
+      id: x.id,
+      slug: x.slug,
+      name: card.name,
+      class_id: x.class_id,
+      race_id: x.race_id,
+      level: x.level,
+      code: x.code,
+      points: x.points,
+      purpose: x.purpose,
+      summary: card.summary,
+      created_at: x.created_at,
+      guide_lang: card.translated ? locale : x.guide_lang,
+      author: authorOf(x, d.nav.playerFallback),
+      avg: ratings.get(x.id)?.avg ?? 0,
+      votes: ratings.get(x.id)?.votes ?? 0,
+      // indirizzo e data pronti qui: al client component non si passano funzioni
+      href: href(locale, buildPath(x.slug)),
+      dateLabel: formatDate(locale, x.created_at.slice(0, 10)),
+    };
+  });
   const path = href(locale, "/builds");
   return (
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">

@@ -271,7 +271,7 @@ export const en = {
     howTitle: "How published builds work",
     how: [
       "Every build comes from the builder and keeps its code: open it there with one click and change it as you like.",
-      "The guide is written by the author in their language and is shown as written; from 75 words the page is indexed in that language.",
+      "The guide is written by the author in their language and the site translates it into the other two on its own, with a link to the original; from 75 words the page is indexed in every language it can be read in.",
       "One vote per member and per build, never on your own. “Top rated” weighs the average by the number of votes.",
       "You can edit, hide or delete your builds from the build page or from your account at any time.",
     ],

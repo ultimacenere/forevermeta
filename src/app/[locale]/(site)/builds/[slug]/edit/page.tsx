@@ -12,6 +12,8 @@ import { buildLabels, languageNames } from "@/lib/buildLabels";
 type Params = Promise<{ locale: string; slug: string }>;
 
 export const dynamic = "force-dynamic";
+// la Server Action ritraduce la guida dopo la risposta (`after()`): la funzione resta viva finché il modello risponde
+export const maxDuration = 300;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
   const { slug } = await params;

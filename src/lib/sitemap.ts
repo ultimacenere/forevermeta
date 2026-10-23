@@ -93,17 +93,26 @@ export function sitemapIndexResponse(): Response {
 }
 
 /**
- * Sitemap delle build pubblicate (23/10/2026), una per lingua: ogni scheda compare solo nella sitemap della lingua
- * della sua guida e solo da `BUILD_MIN_WORDS` parole (nelle altre lingue è noindex). Letta dal database con il client
- * anonimo; se la tabella non c'è ancora, la sitemap è vuota. `lastmod` dal giorno dell'ultimo aggiornamento.
+ * Sitemap delle build pubblicate (23/10/2026), una per lingua: ogni scheda compare nella sitemap della lingua della
+ * sua guida e, dal 23/10/2026 sera, delle lingue in cui ha una traduzione aggiornata (le stesse di hreflang e robots:
+ * `buildIndexing`), solo da `BUILD_MIN_WORDS` parole dell'originale. Letta dal database con il client anonimo; se la
+ * tabella non c'è ancora, la sitemap è vuota. `lastmod` dal giorno dell'ultimo aggiornamento dell'autore o, per una
+ * versione tradotta, dall'arrivo della traduzione se è più recente.
  */
 export async function buildsSitemapResponse(locale: Locale): Promise<Response> {
   const { sitemapBuilds } = await import("./community/buildQueries");
   const { BUILD_MIN_WORDS } = await import("./community/builds");
   const all = await sitemapBuilds();
   const entries: UrlEntry[] = all
-    .filter((b) => b.lang === locale && b.words >= BUILD_MIN_WORDS)
-    .map((b) => ({ url: `${siteUrl}${href(locale, `/builds/${b.slug}`)}`, lastmod: clampDay([b.updated, PAGE_UPDATED["/builds"]]), alternates: alternatesFor(`/builds/${b.slug}`, [locale]).languages }));
+    .filter((b) => b.words >= BUILD_MIN_WORDS && (b.lang === locale || b.translated[locale]))
+    .map((b) => {
+      const languages = locales.filter((l) => l === b.lang || b.translated[l]);
+      return {
+        url: `${siteUrl}${href(locale, `/builds/${b.slug}`)}`,
+        lastmod: clampDay([b.updated, b.translated[locale], PAGE_UPDATED["/builds"]]),
+        alternates: alternatesFor(`/builds/${b.slug}`, languages).languages,
+      };
+    });
   return new Response(urlsetXml(entries), { headers: XML_HEADERS });
 }
 
