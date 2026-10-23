@@ -54,15 +54,16 @@ const opt = (name) => {
 const i18n = readFileSync(path.join(root, "src/lib/i18n.ts"), "utf8");
 const LOCALES = JSON.parse(`[${/export const locales = \[([^\]]+)\]/.exec(i18n)[1]}]`);
 
-// .env.local: quello indicato, quello del repo o quello del checkout principale (i worktree non lo hanno).
+// .env.local: quello indicato, quello del repo o quello del checkout principale (un worktree ne ha spesso uno con la sola
+// FOREVERMETA_OPEN, senza la password del database: si prende il primo che ce l'ha).
 function envFile() {
   const candidates = [opt("--env"), path.join(root, ".env.local")];
   try {
     const common = execSync("git rev-parse --path-format=absolute --git-common-dir", { cwd: root, encoding: "utf8" }).trim();
     candidates.push(path.join(path.dirname(common), ".env.local"));
   } catch {}
-  const found = candidates.find((f) => f && existsSync(f));
-  if (!found) throw new Error(".env.local non trovato: indicarlo con --env <file>");
+  const found = candidates.find((f) => f && existsSync(f) && /^SUPABASE_DB_PASSWORD=.+/m.test(readFileSync(f, "utf8")));
+  if (!found) throw new Error(".env.local con SUPABASE_DB_PASSWORD non trovato: indicarlo con --env <file>");
   return found;
 }
 const env = Object.fromEntries(
@@ -94,11 +95,17 @@ const db = new pg.Client({
 await db.connect();
 
 const only = opt("--only");
-const { rows } = await db.query(
-  `select id, slug, status, guide_lang, name, summary, plan, strengths, weaknesses, notes, translations from public.community_builds
+const { rows } = await db
+  .query(
+    `select id, slug, status, guide_lang, name, summary, plan, strengths, weaknesses, notes, translations from public.community_builds
     where status in ('published','hidden') ${only ? "and slug = $1" : ""} order by created_at`,
-  only ? [only] : [],
-);
+    only ? [only] : [],
+  )
+  .catch(async (e) => {
+    await db.end();
+    if (e?.code === "42703") throw new Error("la colonna community_builds.translations non c'è ancora: lanciare prima la migrazione (node scripts/db-migrate.mjs, blocco BUILD TRADOTTE)");
+    throw e;
+  });
 const buildOf = (r) => ({
   ...r,
   guide_lang: LOCALES.includes(r.guide_lang) ? r.guide_lang : "en",
