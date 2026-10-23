@@ -6552,7 +6552,7 @@ create table if not exists public.community_guilds (
   refreshed_at timestamptz not null default now(),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
-  constraint community_guilds_contact_check check (discord_url <> '' or website_url <> '' or contact <> '')
+  constraint community_guilds_any_contact_check check (discord_url <> '' or website_url <> '' or contact <> '')
 );
 create index if not exists community_guilds_status_idx on public.community_guilds (status, refreshed_at desc);
 create index if not exists community_guilds_owner_idx on public.community_guilds (owner);
