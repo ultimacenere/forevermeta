@@ -8,7 +8,7 @@ import { glossary } from "@/lib/data/glossary";
 import { sortedChanges } from "@/lib/data/changes";
 import { upcomingEvents } from "@/lib/data/events";
 import { NewsCover } from "@/components/NewsCover";
-import { CalendarStrip } from "@/components/CalendarStrip";
+import { EventTicker } from "@/components/EventTicker";
 import { media } from "@/lib/media";
 import { Postit } from "@/components/Postit";
 
@@ -59,7 +59,7 @@ export default async function HomePage({ params }: { params: LocaleParams }) {
 
   return (
     <main id="main" className="flex-1">
-      <CalendarStrip locale={locale} dict={d} />
+      <EventTicker locale={locale} dict={d} />
       <section className="hero-forever">
         {/* Testata con il fotogramma del cinematic ufficiale (pacco del Press Center): contenuto, non identità del sito */}
         {/* eslint-disable-next-line @next/next/no-img-element */}

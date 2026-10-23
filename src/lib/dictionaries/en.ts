@@ -45,6 +45,9 @@ export const en = {
     faqTitle: "Frequently asked questions",
     inBrief: "In brief",
     newTab: "(opens in a new tab)",
+    next: "Next",
+    scrollLeft: "Scroll the calendar left",
+    scrollRight: "Scroll the calendar right",
   },
   home: {
     kicker: "World of Warcraft: Forever",

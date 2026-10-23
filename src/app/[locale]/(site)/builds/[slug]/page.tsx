@@ -6,7 +6,7 @@ import { formatDate, href, siteUrl } from "@/lib/i18n";
 import { pageMeta, pageTitleWith, resolveLocale } from "@/lib/page";
 import { JsonLd, breadcrumbs, organizationId, websiteId } from "@/components/JsonLd";
 import { Avatar } from "@/components/AccountMenu";
-import { BuildTrees } from "@/components/builds/BuildTrees";
+import { BuildTrees, TakenTalents } from "@/components/builds/BuildTrees";
 import { BuildStars } from "@/components/builds/BuildStars";
 import { BuildOwnerActions } from "@/components/builds/BuildOwnerActions";
 import { CopyCode, NewBanner } from "@/components/builds/BuildExtras";
@@ -47,9 +47,10 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 }
 
 /**
- * La scheda di una build pubblicata (ISR 60): testata con classe, razza, livello e punti, voti, tasti verso il builder,
- * i tre alberi in sola lettura, i tratti razziali, la guida com'è scritta dall'autore (una sola lingua per pagina:
- * nelle altre lingue la pagina è noindex e dice in che lingua è la guida), i tasti del proprietario.
+ * La scheda di una build pubblicata (ISR 60). Ordine deciso da Pierluigi il 23/10/2026: testata con classe, razza,
+ * livello e punti, voti e tasti verso il builder; poi la guida com'è scritta dall'autore (riassunto e sezioni; una
+ * sola lingua per pagina: nelle altre lingue la pagina è noindex e dice in che lingua è la guida); poi i tre alberi
+ * in sola lettura e i tratti razziali; in fondo l'elenco dei talenti presi e i tasti del proprietario.
  */
 export default async function BuildPage({ params }: { params: Params }) {
   const { slug } = await params;
@@ -133,24 +134,8 @@ export default async function BuildPage({ params }: { params: Params }) {
         </Link>
         <CopyCode code={build.code} label={L.page.copyCode} copied={L.page.copied} />
       </div>
-      <section className="mt-8" aria-label={L.page.talents}>
-        {decoded && data ? <BuildTrees data={data} build={decoded} color={c.color} ink={c.ink} talentsLabel={L.page.talents} /> : <p className="card-night p-4 text-sm text-pale-muted">{build.code}</p>}
-      </section>
-      {race ? (
-        <section className="mt-8" aria-labelledby="build-racials">
-          <h2 id="build-racials" className="t-section">
-            {L.page.racials} · {raceName(race, locale)}
-          </h2>
-          <ul className="mt-3 grid gap-2 text-sm text-pale sm:grid-cols-2">
-            {race.racials.map((x) => (
-              <li key={x.name} className="card-inset px-3 py-2">
-                <span className="font-semibold text-chalk">{x.name}</span> <span className="text-pale-muted">— {x.text[locale]}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
-      <article className="mt-10 max-w-3xl">
+
+      <article className="mt-8 max-w-3xl">
         {build.guide_lang !== locale ? <p className="alert-good mb-4 text-sm">{fill(L.page.guideLang, { lang: languageNames[locale][build.guide_lang] })}</p> : null}
         <p className="text-lg text-chalk">{build.summary}</p>
         {sections.map((s) => (
@@ -171,6 +156,25 @@ export default async function BuildPage({ params }: { params: Params }) {
           </section>
         ))}
       </article>
+
+      <section className="mt-10" aria-label={L.page.talents}>
+        {decoded && data ? <BuildTrees data={data} build={decoded} color={c.color} ink={c.ink} /> : <p className="card-night p-4 text-sm text-pale-muted">{build.code}</p>}
+      </section>
+      {race ? (
+        <section className="mt-8" aria-labelledby="build-racials">
+          <h2 id="build-racials" className="t-section">
+            {L.page.racials} · {raceName(race, locale)}
+          </h2>
+          <ul className="mt-3 grid gap-2 text-sm text-pale sm:grid-cols-2">
+            {race.racials.map((x) => (
+              <li key={x.name} className="card-inset px-3 py-2">
+                <span className="font-semibold text-chalk">{x.name}</span> <span className="text-pale-muted">— {x.text[locale]}</span>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {decoded && data ? <TakenTalents data={data} build={decoded} label={L.page.talents} /> : null}
       <BuildOwnerActions buildId={build.id} slug={build.slug} ownerId={build.owner} status={build.status} locale={locale} editHref={href(locale, `${buildPath(build.slug)}/edit`)} labels={L.owner} />
       <p className="mt-10 text-xs text-pale-muted">{d.common.notAffiliated}</p>
     </div>

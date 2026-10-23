@@ -6,10 +6,11 @@ import { TALENT_ICON_BASE } from "@/lib/data/talents";
 
 /**
  * I tre alberi di una build pubblicata, in sola lettura (server component, nessun JavaScript): le stesse classi di
- * stile del builder (`.tb-tree`, `.tb-grid`, `.tb-cell`), celle come `div` con il testo del rango preso nel `title`,
- * e sotto l'elenco dei talenti presi in testo, per i motori di ricerca e i lettori di schermo.
+ * stile del builder (`.tb-tree`, `.tb-grid`, `.tb-cell`), celle come `div` con il testo del rango preso nel `title`.
+ * L'elenco dei talenti presi in testo è `TakenTalents`, in fondo alla pagina (Pierluigi, 23/10/2026: "questo in fondo
+ * alla guida"), per i motori di ricerca e i lettori di schermo.
  */
-export function BuildTrees({ data, build, color, ink, talentsLabel }: { data: ClassTalents; build: Build; color: string; ink: string; talentsLabel: string }) {
+export function BuildTrees({ data, build, color, ink }: { data: ClassTalents; build: Build; color: string; ink: string }) {
   const style = { "--tb-class": color, "--tb-ink": ink } as CSSProperties;
   return (
     <div className="tb tb-readonly" style={style}>
@@ -71,34 +72,40 @@ export function BuildTrees({ data, build, color, ink, talentsLabel }: { data: Cl
           );
         })}
       </div>
-      <section className="mt-6" aria-labelledby="build-talents">
-        <h2 id="build-talents" className="t-section">
-          {talentsLabel}
-        </h2>
-        <div className="mt-3 grid gap-4 sm:grid-cols-3">
-          {data.trees.map((tree) => {
-            const taken = orderedTalents(tree).filter((t) => rankOf(build, t.id) > 0);
-            if (!taken.length) return null;
-            return (
-              <div key={tree.id} className="text-sm">
-                <p className="font-semibold text-chalk">
-                  {tree.name} · {treePoints(tree, build.ranks)}
-                </p>
-                <ul className="mt-1 space-y-0.5 text-pale">
-                  {taken.map((t) => (
-                    <li key={t.id}>
-                      <span className="font-mono text-xs text-pale-muted">
-                        {rankOf(build, t.id)}/{t.maxRank}
-                      </span>{" "}
-                      {t.name}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-      </section>
     </div>
+  );
+}
+
+/** L'elenco dei talenti presi, albero per albero, in testo: sta in fondo alla pagina della build. */
+export function TakenTalents({ data, build, label }: { data: ClassTalents; build: Build; label: string }) {
+  return (
+    <section className="mt-10" aria-labelledby="build-talents">
+      <h2 id="build-talents" className="t-section">
+        {label}
+      </h2>
+      <div className="mt-3 grid gap-4 sm:grid-cols-3">
+        {data.trees.map((tree) => {
+          const taken = orderedTalents(tree).filter((t) => rankOf(build, t.id) > 0);
+          if (!taken.length) return null;
+          return (
+            <div key={tree.id} className="text-sm">
+              <p className="font-semibold text-chalk">
+                {tree.name} · {treePoints(tree, build.ranks)}
+              </p>
+              <ul className="mt-1 space-y-0.5 text-pale">
+                {taken.map((t) => (
+                  <li key={t.id}>
+                    <span className="font-mono text-xs text-pale-muted">
+                      {rankOf(build, t.id)}/{t.maxRank}
+                    </span>{" "}
+                    {t.name}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }

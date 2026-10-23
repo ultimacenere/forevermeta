@@ -60,6 +60,15 @@
   --color-pink: #b23a6e;
   --color-good: #23803f;
   --color-bad: #b3261e;
+  /* Fazioni di Warcraft, solo come decorazione (striscia del calendario, 23/10/2026): rosso Orda e blu Alleanza
+     scuriti per il tema chiaro. Testo avorio (night) sui pieni: Orda 7,9:1, Alleanza 7,4:1; colore pieno sulla
+     tinta soft: Orda 5,3:1, Alleanza 6:1. */
+  --color-horde: #9b1c1c;
+  --color-horde-deep: #7a1414;
+  --color-horde-soft: #f9dcdc;
+  --color-alliance: #1f4e9c;
+  --color-alliance-deep: #173c7a;
+  --color-alliance-soft: #dbe5f8;
 
   --font-display: var(--font-display-face), Georgia, "Times New Roman", serif;
   --font-body: var(--font-manrope), "Segoe UI", Arial, sans-serif;
@@ -2185,14 +2194,19 @@
     color: var(--color-sky);
   }
 
-  /* Striscia del calendario: scorre da sola (JS), si ferma al passaggio del mouse, frecce ai lati, navigabile a mano.
-     Le due righe che la chiudono sono da 2 px come i cubi data e le frecce che contiene (niente righette da 1 px:
-     quelle restano ai soli controlli dei moduli); il colore felt-line le tiene discrete. */
+  /*
+    Striscia del calendario (23/10/2026, dal motore di OriginsMeta: scorre da sola con JS, si ferma al passaggio del
+    mouse, frecce ai lati, navigabile a mano). Rivista per il tema chiaro e resa più visibile (Pierluigi: "un po' più
+    visibile, alterna i colori orda e alleanza"): fondo pergamena scura, bordo in alto blu Alleanza e in basso rosso
+    Orda, cubetti data da 52 px pieni del colore della fazione, titolo nel colore della fazione. L'alternanza è solo
+    decorazione: le date non sono di una fazione. La voce "prossima" ha il fondo tinto del suo colore.
+    Spessori: 2 px i bordi della striscia, i cubi e le frecce (regola delle cornici: 2 px chip e pastiglie).
+  */
   .ticker {
     position: relative;
-    border-top: 2px solid var(--color-felt-line);
-    border-bottom: 2px solid var(--color-felt-line);
-    background: rgba(14, 7, 31, 0.7);
+    border-top: 2px solid var(--color-alliance);
+    border-bottom: 2px solid var(--color-horde);
+    background: linear-gradient(90deg, var(--color-alliance-soft) 0%, var(--color-felt-deep) 28%, var(--color-felt-deep) 72%, var(--color-horde-soft) 100%);
   }
   .ticker-scroll {
     overflow-x: auto;
@@ -2207,8 +2221,8 @@
     display: flex;
     width: max-content;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.55rem 3rem;
+    gap: 0.5rem;
+    padding: 0.6rem 3rem;
   }
   .ticker-arrow {
     position: absolute;
@@ -2216,46 +2230,83 @@
     z-index: 2;
     display: grid;
     place-items: center;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     transform: translateY(-50%);
     border-radius: 999px;
     border: 2px solid var(--color-sky);
-    background: rgba(14, 7, 31, 0.9);
+    background: var(--color-night);
     color: var(--color-sky);
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     line-height: 1;
     cursor: pointer;
+    box-shadow: var(--shadow-card);
   }
   .ticker-arrow:hover {
     background: var(--color-night-3);
   }
-  /* Stacco tra la fine e l'inizio del ciclo: blocco con il logo del gioco */
+  /* Stacco tra la fine e l'inizio del ciclo: il wordmark del sito (mai loghi Blizzard nell'identità) */
   .ticker-spacer {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
     margin: 0 0.75rem;
-    padding: 0.25rem 1.25rem;
-    border-left: 2px solid var(--color-sky);
-    border-right: 2px solid var(--color-sky);
-    color: var(--color-chalk-muted);
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
+    padding: 0.35rem 1.25rem;
+    border-left: 2px solid var(--color-felt-line);
+    border-right: 2px solid var(--color-felt-line);
     white-space: nowrap;
   }
-  .ticker-spacer img {
-    height: 26px;
-    width: auto;
+  /* Una voce del nastro: --f, --f-deep e --f-soft sono il colore della fazione, deciso dalla classe is-alliance / is-horde */
+  .ticker-item {
+    --f: var(--color-sky);
+    --f-deep: var(--color-sky-deep);
+    --f-soft: var(--color-night-3);
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.3rem 0.75rem 0.3rem 0.4rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 160ms ease;
+  }
+  .ticker-item.is-alliance {
+    --f: var(--color-alliance);
+    --f-deep: var(--color-alliance-deep);
+    --f-soft: var(--color-alliance-soft);
+  }
+  .ticker-item.is-horde {
+    --f: var(--color-horde);
+    --f-deep: var(--color-horde-deep);
+    --f-soft: var(--color-horde-soft);
+  }
+  .ticker-item.is-next,
+  .ticker-item:hover,
+  .ticker-item:focus-visible {
+    background: var(--f-soft);
+  }
+  .ticker-item-title {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.98rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--f);
+  }
+  .ticker-item-sub {
+    display: block;
+    margin-top: 0.1rem;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-chalk-muted);
   }
   .date-cube {
     display: grid;
     place-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 8px;
+    width: 52px;
+    height: 52px;
+    border-radius: 10px;
     background: var(--color-night-3);
     color: var(--color-sky);
     border: 2px solid var(--color-sky);
@@ -2263,13 +2314,25 @@
     font-weight: 800;
     line-height: 1;
   }
+  .date-cube-day {
+    font-size: 1.35rem;
+  }
   .date-cube small {
     font-family: var(--font-mono);
-    font-size: 0.55rem;
+    font-size: 0.6rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 400;
     color: var(--color-pale-muted);
+  }
+  /* Nel nastro il cubo è pieno del colore della fazione, con il mese nella tinta chiara della stessa fazione */
+  .ticker-item .date-cube {
+    background: var(--f);
+    border-color: var(--f-deep);
+    color: var(--color-night);
+  }
+  .ticker-item .date-cube small {
+    color: var(--f-soft);
   }
   .date-cube.is-next {
     background: var(--color-gold);

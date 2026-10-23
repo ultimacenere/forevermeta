@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { href } from "@/lib/i18n";
+import { formatDate, href } from "@/lib/i18n";
 import { pageMeta, resolveLocale, type LocaleParams } from "@/lib/page";
 import { JsonLd, breadcrumbs } from "@/components/JsonLd";
 import { BuildList, type BuildListItem } from "@/components/builds/BuildList";
 import { listPublishedBuilds } from "@/lib/community/buildQueries";
+import { buildPath } from "@/lib/community/builds";
 import { authorOf, classMetas, raceNameMap } from "@/lib/community/buildView";
 import { buildLabels } from "@/lib/buildLabels";
 import { TALENT_ICON_BASE } from "@/lib/data/talents";
@@ -38,6 +39,9 @@ export default async function BuildsPage({ params }: { params: LocaleParams }) {
     author: authorOf(x, d.nav.playerFallback),
     avg: ratings.get(x.id)?.avg ?? 0,
     votes: ratings.get(x.id)?.votes ?? 0,
+    // indirizzo e data pronti qui: al client component non si passano funzioni
+    href: href(locale, buildPath(x.slug)),
+    dateLabel: formatDate(locale, x.created_at.slice(0, 10)),
   }));
   const path = href(locale, "/builds");
   return (
@@ -60,7 +64,7 @@ export default async function BuildsPage({ params }: { params: LocaleParams }) {
         {unavailable ? (
           <p className="card-night p-6 text-pale-muted">{L.list.unavailable}</p>
         ) : (
-          <BuildList items={items} classes={classMetas(locale)} raceNames={raceNameMap(locale)} labels={L} locale={locale} iconBase={TALENT_ICON_BASE} />
+          <BuildList items={items} classes={classMetas(locale)} raceNames={raceNameMap(locale)} labels={L} iconBase={TALENT_ICON_BASE} />
         )}
       </div>
       <section className="mt-14 border-t border-felt-line pt-8" aria-labelledby="builds-how">
