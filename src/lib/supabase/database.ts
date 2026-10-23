@@ -83,6 +83,46 @@ type GuildReportRow = {
   created_at: string;
 };
 
+/** Interfaccia condivisa (blocco "INTERFACCE" di supabase/schema.sql, 24/10/2026). */
+export type InterfaceRow = {
+  id: string;
+  slug: string;
+  owner: string;
+  name: string;
+  layout: string;
+  cooldowns: string;
+  shots: string[];
+  classes: string[];
+  roles: string[];
+  input: string;
+  preset: string;
+  resolution: string;
+  ui_scale: number | null;
+  addons: string;
+  description_lang: string;
+  description: string;
+  game_version: string;
+  status: string;
+  created_at: string;
+  updated_at: string;
+};
+
+type InterfaceVoteRow = {
+  interface_id: string;
+  user_id: string;
+  stars: number;
+  created_at: string;
+  updated_at: string;
+};
+
+type InterfaceReportRow = {
+  id: number;
+  interface_id: string;
+  user_id: string | null;
+  reason: string;
+  created_at: string;
+};
+
 export type Database = {
   public: {
     Tables: {
@@ -116,10 +156,32 @@ export type Database = {
         Update: Partial<GuildReportRow>;
         Relationships: [];
       };
+      community_interfaces: {
+        Row: InterfaceRow;
+        Insert: Partial<InterfaceRow> & Pick<InterfaceRow, "slug" | "owner" | "name" | "layout" | "shots" | "description">;
+        Update: Partial<InterfaceRow>;
+        Relationships: [{ foreignKeyName: "community_interfaces_owner_fkey"; columns: ["owner"]; isOneToOne: false; referencedRelation: "profiles"; referencedColumns: ["id"] }];
+      };
+      interface_votes: {
+        Row: InterfaceVoteRow;
+        Insert: Pick<InterfaceVoteRow, "interface_id" | "user_id" | "stars"> & Partial<InterfaceVoteRow>;
+        Update: Partial<InterfaceVoteRow>;
+        Relationships: [];
+      };
+      interface_reports: {
+        Row: InterfaceReportRow;
+        Insert: Pick<InterfaceReportRow, "interface_id" | "reason"> & Partial<InterfaceReportRow>;
+        Update: Partial<InterfaceReportRow>;
+        Relationships: [];
+      };
     };
     Views: {
       build_ratings: {
         Row: { build_id: string; avg_stars: number | string; votes: number };
+        Relationships: [];
+      };
+      interface_ratings: {
+        Row: { interface_id: string; avg_stars: number | string; votes: number };
         Relationships: [];
       };
     };

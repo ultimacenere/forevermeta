@@ -33,6 +33,8 @@ export const PAGE_UPDATED: Record<string, string> = {
   "/builds": "2026-10-23",
   // la bacheca delle gilde (23/10/2026): l'elenco qui, gli annunci in /<lingua>/sitemap-guilds.xml
   "/guilds": "2026-10-23",
+  // le interfacce condivise (24/10/2026): l'elenco qui, le schede in /<lingua>/sitemap-interfaces.xml
+  "/interfaces": "2026-10-24",
 };
 
 export const SITEMAP_SECTIONS = ["pages", "news", "guides"] as const;
@@ -93,6 +95,8 @@ export function sitemapIndexResponse(): Response {
   for (const l of locales) items.push({ url: `${siteUrl}${buildsSitemapPath(l)}`, lastmod: clampDay([PAGE_UPDATED["/builds"]]) });
   // gli annunci di gilda (23/10/2026): stessa cosa
   for (const l of locales) items.push({ url: `${siteUrl}${guildsSitemapPath(l)}`, lastmod: clampDay([PAGE_UPDATED["/guilds"]]) });
+  // le interfacce condivise (24/10/2026): stessa cosa
+  for (const l of locales) items.push({ url: `${siteUrl}${interfacesSitemapPath(l)}`, lastmod: clampDay([PAGE_UPDATED["/interfaces"]]) });
   return new Response(sitemapIndexXml(items), { headers: XML_HEADERS });
 }
 
@@ -114,6 +118,25 @@ export async function guildsSitemapResponse(locale: Locale): Promise<Response> {
 /** Indirizzo della sitemap delle gilde di una lingua, per l'indice. */
 export function guildsSitemapPath(locale: Locale): string {
   return `/${locale}/sitemap-guilds.xml`;
+}
+
+/**
+ * Sitemap delle interfacce condivise (24/10/2026), una per lingua: ogni scheda compare solo nella sitemap della lingua
+ * della sua descrizione e da `INTERFACE_MIN_WORDS` parole. `lastmod` dal giorno dell'ultimo aggiornamento.
+ */
+export async function interfacesSitemapResponse(locale: Locale): Promise<Response> {
+  const { sitemapInterfaces } = await import("./community/interfaceQueries");
+  const { INTERFACE_MIN_WORDS, interfaceWords } = await import("./community/interfaces");
+  const all = await sitemapInterfaces();
+  const entries: UrlEntry[] = all
+    .filter((i) => i.lang === locale && interfaceWords(i.description) >= INTERFACE_MIN_WORDS)
+    .map((i) => ({ url: `${siteUrl}${href(locale, `/interfaces/${i.slug}`)}`, lastmod: clampDay([i.updated, PAGE_UPDATED["/interfaces"]]), alternates: alternatesFor(`/interfaces/${i.slug}`, [locale]).languages }));
+  return new Response(urlsetXml(entries), { headers: XML_HEADERS });
+}
+
+/** Indirizzo della sitemap delle interfacce di una lingua, per l'indice. */
+export function interfacesSitemapPath(locale: Locale): string {
+  return `/${locale}/sitemap-interfaces.xml`;
 }
 
 /**

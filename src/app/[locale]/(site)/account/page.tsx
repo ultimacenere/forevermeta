@@ -14,6 +14,9 @@ import { fill } from "@/lib/builderLabels";
 import { listUserGuilds } from "@/lib/community/guildQueries";
 import { guildPath } from "@/lib/community/guilds";
 import { guildLabels } from "@/lib/guildLabels";
+import { listUserInterfaces } from "@/lib/community/interfaceQueries";
+import { interfacePath } from "@/lib/community/interfaces";
+import { interfaceLabels } from "@/lib/interfaceLabels";
 
 export const dynamic = "force-dynamic";
 
@@ -47,6 +50,8 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
   const classNames = classNameMap(locale);
   const G = guildLabels[locale];
   const myGuilds = await listUserGuilds(supabase, user.id);
+  const U = interfaceLabels[locale];
+  const myInterfaces = await listUserInterfaces(supabase, user.id);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -139,6 +144,42 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
                 </Link>
                 <Link href={href(locale, `${guildPath(g.slug)}/edit`)} className="btn btn-ghost px-3 py-1 text-xs" prefetch={false}>
                   {G.owner.edit}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      <section id="interfaces" className="mt-10" aria-labelledby="account-interfaces">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 id="account-interfaces" className="t-section">
+            {U.account.title}
+          </h2>
+          <Link href={href(locale, "/interfaces/publish")} className="btn btn-gold px-3 py-1.5 text-xs" prefetch={false}>
+            {U.account.publish}
+          </Link>
+        </div>
+        {myInterfaces.unavailable ? (
+          <p className="mt-4 text-sm text-pale-muted">{U.list.unavailable}</p>
+        ) : myInterfaces.interfaces.length === 0 ? (
+          <p className="mt-4 text-sm text-pale-muted">{U.account.empty}</p>
+        ) : (
+          <ul className="mt-4 space-y-2">
+            {myInterfaces.interfaces.map((i) => (
+              <li key={i.id} className="card-night flex flex-wrap items-center gap-3 p-4 text-sm">
+                <div className="min-w-0 flex-1">
+                  <p className="t-item text-base">{i.name}</p>
+                  <p className="text-pale-muted">
+                    {U.inputs[i.input]} · {i.roles.length ? i.roles.map((r) => U.roles[r]).join(", ") : U.page.anyRole} · {formatDate(locale, i.created_at.slice(0, 10))}
+                  </p>
+                </div>
+                <span className={i.status === "published" ? "stat-pill bg-mint-soft text-mint-deep" : "stat-pill bg-crimson-soft text-crimson-deep"}>{U.account.status[i.status]}</span>
+                <Link href={href(locale, interfacePath(i.slug))} className="btn btn-choice px-3 py-1 text-xs" prefetch={false}>
+                  {U.account.open}
+                </Link>
+                <Link href={href(locale, `${interfacePath(i.slug)}/edit`)} className="btn btn-ghost px-3 py-1 text-xs" prefetch={false}>
+                  {U.owner.edit}
                 </Link>
               </li>
             ))}

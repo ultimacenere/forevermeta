@@ -6692,3 +6692,171 @@ end $$;
 drop trigger if exists community_builds_touch on public.community_builds;
 create trigger community_builds_touch before update on public.community_builds
   for each row execute function public.touch_build_updated_at();
+
+-- =====================================================================================================
+-- ===== 24/10/2026: INTERFACCE =====
+-- =====================================================================================================
+-- Interfacce condivise dagli iscritti (Pierluigi, 23/10/2026: "creare una sezione dove gli utenti creano delle
+-- interfacce e le condividono... come le build"; 24/10/2026: si procede dopo il tema scuro). Al lancio solo layout
+-- dell'Edit Mode di Blizzard: la stringa di Condividi (testo in chiaro, nessun codice) più, facoltativa, quella del
+-- Cooldown Manager; da 1 a 4 screenshot caricati dall'autore nel bucket `interface-shots` (`<owner>/<uuid>.webp`);
+-- classi e ruoli (vuoto = tutti), input (mouse o gamepad), preset di partenza, risoluzione e scala dell'interfaccia,
+-- addon richiesti in testo libero (vuoto = solo interfaccia di Blizzard), descrizione nella lingua dell'autore. Voti 1-5,
+-- uno per iscritto, mai sulla propria; segnalazioni lette dagli admin; tetto di 10 interfacce pubblicate per iscritto.
+-- Ricerca: 00_KB/_interfacce_condivisione_2026-10-23.md. Regole uguali a src/lib/community/interfaces.ts.
+-- Nomi dei vincoli: solo quelli automatici delle colonne (community_interfaces_<colonna>_check); i controlli che
+-- guardano più colonne stanno nel trigger guard_interface, così nessun nome si scontra (lezione del 23/10/2026 sulla
+-- bacheca delle gilde).
+create table if not exists public.community_interfaces (
+  id uuid primary key default gen_random_uuid(),
+  slug text unique not null check (slug ~ '^[a-z0-9-]{3,80}$'),
+  owner uuid not null references public.profiles(id) on delete cascade,
+  name text not null check (char_length(name) between 3 and 60),
+  layout text not null check (char_length(layout) between 40 and 16000 and layout ~ '^[0-9]{1,3} [0-9]{1,3}( |$)' and layout !~ '[^ -~]' and position('<' in layout) = 0),
+  cooldowns text not null default '' check (cooldowns = '' or (char_length(cooldowns) between 16 and 32000 and cooldowns ~ '^[0-9]{1,3}\|[A-Za-z0-9+/]+={0,2}$')),
+  shots text[] not null check (cardinality(shots) between 1 and 4),
+  classes text[] not null default '{}' check (classes <@ array['druid','hunter','mage','paladin','priest','rogue','shaman','warlock','warrior']::text[]),
+  roles text[] not null default '{}' check (roles <@ array['tank','healer','dps']::text[]),
+  input text not null default 'mouse' check (input in ('mouse','gamepad')),
+  preset text not null default 'modern' check (preset in ('modern','classic','custom')),
+  resolution text not null default '' check (resolution = '' or resolution ~ '^[0-9]{3,5}x[0-9]{3,5}$'),
+  ui_scale numeric(3,2) check (ui_scale is null or ui_scale between 0.40 and 1.20),
+  addons text not null default '' check (char_length(addons) <= 400),
+  description_lang text not null default 'en' check (description_lang in ('en','it','es')),
+  description text not null check (char_length(description) between 80 and 4000),
+  game_version text not null default '' check (char_length(game_version) <= 40),
+  status text not null default 'published' check (status in ('published','hidden')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists community_interfaces_status_idx on public.community_interfaces (status, created_at desc);
+create index if not exists community_interfaces_owner_idx on public.community_interfaces (owner);
+
+drop trigger if exists community_interfaces_touch on public.community_interfaces;
+create trigger community_interfaces_touch before update on public.community_interfaces
+  for each row execute function public.touch_updated_at();
+
+-- screenshot solo nella cartella del proprietario e con il nome che dà il sito; tetto alle interfacce pubblicate
+create or replace function public.guard_interface()
+returns trigger language plpgsql security definer set search_path = public as $$
+declare
+  n int;
+  p text;
+begin
+  foreach p in array new.shots loop
+    if p !~ ('^' || new.owner::text || '/[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(webp|png|jpg)$') then
+      raise exception 'interface shot outside owner folder' using errcode = 'check_violation';
+    end if;
+  end loop;
+  if new.status = 'published' and (tg_op = 'INSERT' or old.status <> 'published') then
+    select count(*) into n from public.community_interfaces where owner = new.owner and status = 'published' and id <> new.id;
+    if n >= 10 then raise exception 'interface limit reached' using errcode = 'check_violation'; end if;
+  end if;
+  return new;
+end $$;
+drop trigger if exists community_interfaces_guard on public.community_interfaces;
+create trigger community_interfaces_guard before insert or update on public.community_interfaces
+  for each row execute function public.guard_interface();
+
+create table if not exists public.interface_votes (
+  interface_id uuid not null references public.community_interfaces(id) on delete cascade,
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  stars smallint not null check (stars between 1 and 5),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  primary key (interface_id, user_id)
+);
+drop trigger if exists interface_votes_touch on public.interface_votes;
+create trigger interface_votes_touch before update on public.interface_votes
+  for each row execute function public.touch_updated_at();
+
+create or replace view public.interface_ratings as
+  select interface_id, round(avg(stars)::numeric, 2) as avg_stars, count(*)::int as votes
+  from public.interface_votes group by interface_id;
+
+create table if not exists public.interface_reports (
+  id bigserial primary key,
+  interface_id uuid not null references public.community_interfaces(id) on delete cascade,
+  user_id uuid references public.profiles(id) on delete set null,
+  reason text not null check (char_length(reason) between 3 and 500),
+  created_at timestamptz not null default now()
+);
+create index if not exists interface_reports_interface_idx on public.interface_reports (interface_id, created_at desc);
+
+alter table public.community_interfaces enable row level security;
+alter table public.interface_votes enable row level security;
+alter table public.interface_reports enable row level security;
+
+drop policy if exists "published interfaces are public" on public.community_interfaces;
+create policy "published interfaces are public" on public.community_interfaces for select
+  using (status = 'published' or owner = auth.uid() or public.is_admin());
+drop policy if exists "users insert own interfaces" on public.community_interfaces;
+create policy "users insert own interfaces" on public.community_interfaces for insert
+  with check (owner = auth.uid());
+drop policy if exists "owners update interfaces" on public.community_interfaces;
+create policy "owners update interfaces" on public.community_interfaces for update
+  using (owner = auth.uid() or public.is_admin()) with check (owner = auth.uid() or public.is_admin());
+drop policy if exists "owners remove interfaces" on public.community_interfaces;
+create policy "owners remove interfaces" on public.community_interfaces for delete
+  using (owner = auth.uid() or public.is_admin());
+
+drop policy if exists "interface votes are public" on public.interface_votes;
+create policy "interface votes are public" on public.interface_votes for select using (true);
+drop policy if exists "users vote interfaces once" on public.interface_votes;
+create policy "users vote interfaces once" on public.interface_votes for insert
+  with check (user_id = auth.uid() and not exists (select 1 from public.community_interfaces i where i.id = interface_id and i.owner = auth.uid()));
+drop policy if exists "users change own interface vote" on public.interface_votes;
+create policy "users change own interface vote" on public.interface_votes for update
+  using (user_id = auth.uid())
+  with check (user_id = auth.uid() and not exists (select 1 from public.community_interfaces i where i.id = interface_id and i.owner = auth.uid()));
+drop policy if exists "users remove own interface vote" on public.interface_votes;
+create policy "users remove own interface vote" on public.interface_votes for delete using (user_id = auth.uid());
+
+drop policy if exists "users report interfaces" on public.interface_reports;
+create policy "users report interfaces" on public.interface_reports for insert
+  with check (user_id = auth.uid());
+drop policy if exists "admins read interface reports" on public.interface_reports;
+create policy "admins read interface reports" on public.interface_reports for select using (public.is_admin());
+
+grant select on public.community_interfaces, public.interface_votes, public.interface_ratings to anon, authenticated;
+grant insert, update, delete on public.community_interfaces, public.interface_votes to authenticated;
+grant select, insert on public.interface_reports to authenticated;
+
+-- ---------- Storage: screenshot delle interfacce (caricati dal browser, ognuno nella sua cartella) ----------
+-- quanti file ha l'iscritto nel bucket (la policy di caricamento lo legge: tetto morbido di 40)
+create or replace function public.interface_shots_count()
+returns integer language sql stable security definer set search_path = public, storage as $$
+  select count(*)::integer from storage.objects o
+  where o.bucket_id = 'interface-shots' and (storage.foldername(o.name))[1] = auth.uid()::text;
+$$;
+
+do $$
+begin
+  insert into storage.buckets (id, name, public, file_size_limit, allowed_mime_types)
+  values ('interface-shots', 'interface-shots', true, 3145728, array['image/webp','image/png','image/jpeg'])
+  on conflict (id) do update set public = excluded.public, file_size_limit = excluded.file_size_limit, allowed_mime_types = excluded.allowed_mime_types;
+
+  -- gli indirizzi pubblici funzionano senza policy (bucket pubblico); l'elenco dei file lo vedono il proprietario e gli admin
+  drop policy if exists "interface shots owners read" on storage.objects;
+  create policy "interface shots owners read" on storage.objects for select to authenticated using (
+    bucket_id = 'interface-shots' and ((storage.foldername(name))[1] = auth.uid()::text or public.is_admin())
+  );
+  -- <id>/<uuid>.webp|png|jpg, solo il nome che dà il sito, al massimo 40 file per iscritto; peso e tipo li limita il bucket
+  drop policy if exists "interface shots upload" on storage.objects;
+  create policy "interface shots upload" on storage.objects for insert to authenticated with check (
+    bucket_id = 'interface-shots'
+    and array_length(storage.foldername(name), 1) = 1
+    and (storage.foldername(name))[1] = auth.uid()::text
+    and storage.filename(name) ~ '^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\.(webp|png|jpg)$'
+    and public.interface_shots_count() < 40
+  );
+  -- si cancellano i propri file (un admin anche quelli degli altri), mai uno in uso da un'interfaccia
+  drop policy if exists "interface shots owners delete" on storage.objects;
+  create policy "interface shots owners delete" on storage.objects for delete to authenticated using (
+    bucket_id = 'interface-shots'
+    and ((storage.foldername(name))[1] = auth.uid()::text or public.is_admin())
+    and not exists (select 1 from public.community_interfaces i where name = any (i.shots))
+  );
+exception when others then
+  raise notice 'Storage interface-shots non configurato da SQL (%): creare bucket e policy dalla dashboard, vedi docs/interfacce.md.', sqlerrm;
+end $$;
