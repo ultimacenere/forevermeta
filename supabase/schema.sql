@@ -6521,10 +6521,10 @@ grant insert, update, delete on public.community_builds, public.build_votes to a
 -- ===== 23/10/2026: BACHECA GILDE =====
 -- =====================================================================================================
 -- Annunci di reclutamento delle gilde di WoW: Forever pubblicati dagli iscritti (Pierluigi, 23/10/2026: "iniziamo qui ad
--- approcciare la bacheca gilde"), sul modello delle build pubblicate: una riga per annuncio con regione, reame, tipo di
--- reame, fazione, lingue, obiettivi, ruoli e classi cercati, giorni di raid, dimensione, descrizione nella lingua
+-- approcciare la bacheca gilde"), sul modello delle build pubblicate: una riga per annuncio con regione, ruleset (Forever
+-- è "realmless": niente reami), fazione, lingue, obiettivi, ruoli e classi cercati, giorni di raid, dimensione, descrizione nella lingua
 -- dell'autore e i contatti (invito Discord già normalizzato dal sito in https://discord.gg/<codice>, sito, nota di
--- contatto: almeno uno dei tre). `refreshed_at` è il rinnovo dell'autore: gli annunci fermi da più di 45 giorni escono
+-- contatto: almeno uno dei tre). `refreshed_at` è il rinnovo dell'autore: gli annunci fermi da più di 30 giorni escono
 -- dall'elenco pubblico (filtro del sito, src/lib/community/guilds.ts, non del database). Tetto di 3 annunci pubblicati
 -- per iscritto (trigger). Le segnalazioni le scrive chi è entrato e le leggono solo gli admin. Le letture pubbliche
 -- filtrano su status = 'published'; il proprietario e gli admin vedono anche i nascosti.
@@ -6533,10 +6533,9 @@ create table if not exists public.community_guilds (
   slug text unique not null check (slug ~ '^[a-z0-9-]{3,80}$'),
   owner uuid not null references public.profiles(id) on delete cascade,
   name text not null check (char_length(name) between 2 and 24),
-  region text not null check (region in ('eu','us','kr','tw','other')),
-  realm text not null check (char_length(realm) between 2 and 40),
-  realm_type text not null default 'normal' check (realm_type in ('normal','pvp','rp','hardcore')),
-  faction text not null check (faction in ('alliance','horde')),
+  region text not null check (region in ('eu','us','kr','tw')),
+  ruleset text not null default 'normal' check (ruleset in ('normal','pvp','rp','rppvp','hardcore','undecided')),
+  faction text not null check (faction in ('alliance','horde','undecided')),
   languages text[] not null check (cardinality(languages) between 1 and 3 and languages <@ array['en','it','es','de','fr','pt','ru','pl','other']::text[]),
   focus text[] not null check (cardinality(focus) between 1 and 4 and focus <@ array['leveling','dungeons','raids','pvp','social','rp']::text[]),
   roles text[] not null default '{}' check (roles <@ array['tank','healer','dps']::text[]),

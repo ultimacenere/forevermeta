@@ -5,18 +5,24 @@ import type { Locale } from "../i18n";
  * blocco "BACHECA GILDE" di supabase/schema.sql, pulizia dei testi, inviti Discord normalizzati, slug, soglia di
  * indicizzazione, scadenza degli annunci. Nessun import di React né di Supabase: le prova guilds.test.ts.
  *
- * Perché una bacheca (rapporto "Funzioni e fonti" del 27/09/2026): "trovare gilda e gruppo" era la seconda richiesta
- * dei giocatori sul forum ufficiale, le 5-7 bacheche inglesi non mostrano numeri e nessuna è in italiano o spagnolo.
- * La prenotazione dei nomi parte il 27/10/2026 e il gioco esce il 04/11/2026: le gilde si formano adesso.
+ * Perché una bacheca (rapporto "Funzioni e fonti" del 27/09/2026 e ricerca `_bacheca_gilde_ricerca_2026-10-23.md`):
+ * "trovare gilda e gruppo" era la seconda richiesta dei giocatori sul forum ufficiale; nel sottoforum italiano 21
+ * annunci su 31 riguardano Forever e nessuna bacheca è in italiano. La prenotazione dei nomi parte il 27/10/2026 e il
+ * gioco esce il 04/11/2026: le gilde si formano adesso.
+ *
+ * Forever è "realmless": niente reami, si sceglie una regione e un ruleset (Blizzard, articolo sulla prenotazione dei
+ * nomi e post di Aggrend del 22/10/2026 sul Roleplay-PvP). Gruppi, spedizioni e incursioni solo nello stesso ruleset,
+ * mai fra fazioni diverse: per questo regione, ruleset e fazione sono i primi tre filtri.
  */
-export const GUILD_REGIONS = ["eu", "us", "kr", "tw", "other"] as const;
+export const GUILD_REGIONS = ["eu", "us", "kr", "tw"] as const;
 export type GuildRegion = (typeof GUILD_REGIONS)[number];
 
-/** Tipo di reame: i reami Hardcore sono reami a parte (ruleset annunciato dopo il lancio, senza data). */
-export const REALM_TYPES = ["normal", "pvp", "rp", "hardcore"] as const;
-export type RealmType = (typeof REALM_TYPES)[number];
+/** Ruleset di Forever al lancio (Normal, PvP, Roleplaying, Roleplay-PvP), Hardcore dopo il lancio; "da decidere" per chi si forma. */
+export const RULESETS = ["normal", "pvp", "rp", "rppvp", "hardcore", "undecided"] as const;
+export type Ruleset = (typeof RULESETS)[number];
 
-export const FACTIONS = ["alliance", "horde"] as const;
+/** Alleanza, Orda, oppure "da decidere" per una gilda in formazione prima del lancio. */
+export const FACTIONS = ["alliance", "horde", "undecided"] as const;
 export type Faction = (typeof FACTIONS)[number];
 
 /** Lingue della gilda (quella in cui si parla in chat vocale e di gilda), non le lingue del sito. */
@@ -43,7 +49,6 @@ export type GuildSize = (typeof GUILD_SIZES)[number];
 export const GUILD_LIMITS = {
   /** il gioco accetta nomi di gilda fino a 24 caratteri */
   name: { min: 2, max: 24 },
-  realm: { min: 2, max: 40 },
   languages: { min: 1, max: 3 },
   focus: { min: 1, max: 4 },
   schedule: { max: 120 },
@@ -57,15 +62,14 @@ export const GUILD_MIN_WORDS = 60;
 /** Annunci pubblicati per iscritto (uguale al trigger `enforce_guild_limit`). */
 export const GUILDS_PER_USER = 3;
 /** Giorni senza rinnovo dopo i quali un annuncio esce dall'elenco pubblico (resta aperto dal link, con l'avviso). */
-export const GUILD_STALE_DAYS = 45;
+export const GUILD_STALE_DAYS = 30;
 
 export type GuildStatus = "published" | "hidden";
 
 export type GuildFields = {
   name: string;
   region: GuildRegion;
-  realm: string;
-  realmType: RealmType;
+  ruleset: Ruleset;
   faction: Faction;
   languages: GuildLanguage[];
   focus: GuildFocus[];
@@ -84,8 +88,7 @@ export type GuildFields = {
 export type GuildFieldError =
   | "invalidName"
   | "invalidRegion"
-  | "invalidRealm"
-  | "invalidRealmType"
+  | "invalidRuleset"
   | "invalidFaction"
   | "noLanguage"
   | "tooManyLanguages"
@@ -108,8 +111,7 @@ export type CommunityGuild = {
   owner: string;
   name: string;
   region: GuildRegion;
-  realm: string;
-  realm_type: RealmType;
+  ruleset: Ruleset;
   faction: Faction;
   languages: GuildLanguage[];
   focus: GuildFocus[];
@@ -131,7 +133,7 @@ export type CommunityGuild = {
 };
 
 export const GUILD_SELECT =
-  "id, slug, owner, name, region, realm, realm_type, faction, languages, focus, roles, classes, raid_days, schedule, size, description_lang, description, discord_url, website_url, contact, status, refreshed_at, created_at, updated_at, profile:profiles!community_guilds_owner_fkey(username, display_name, avatar_url, badge)";
+  "id, slug, owner, name, region, ruleset, faction, languages, focus, roles, classes, raid_days, schedule, size, description_lang, description, discord_url, website_url, contact, status, refreshed_at, created_at, updated_at, profile:profiles!community_guilds_owner_fkey(username, display_name, avatar_url, badge)";
 
 /** Testo di una riga: niente caratteri di controllo, spazi compattati, tagliato a `max`. */
 export function cleanLine(raw: unknown, max: number): string {
@@ -194,9 +196,7 @@ export function checkGuildFields(input: Record<string, unknown>, locales: readon
   const name = cleanLine(input.name, GUILD_LIMITS.name.max);
   if (name.length < GUILD_LIMITS.name.min) return { ok: false, error: "invalidName", field: "name" };
   if (!oneOf(input.region, GUILD_REGIONS)) return { ok: false, error: "invalidRegion", field: "region" };
-  const realm = cleanLine(input.realm, GUILD_LIMITS.realm.max);
-  if (realm.length < GUILD_LIMITS.realm.min) return { ok: false, error: "invalidRealm", field: "realm" };
-  if (!oneOf(input.realmType, REALM_TYPES)) return { ok: false, error: "invalidRealmType", field: "realmType" };
+  if (!oneOf(input.ruleset, RULESETS)) return { ok: false, error: "invalidRuleset", field: "ruleset" };
   if (!oneOf(input.faction, FACTIONS)) return { ok: false, error: "invalidFaction", field: "faction" };
   const languages = pickMany(input.languages, GUILD_LANGUAGES);
   if (languages.length < GUILD_LIMITS.languages.min) return { ok: false, error: "noLanguage", field: "languages" };
@@ -224,7 +224,7 @@ export function checkGuildFields(input: Record<string, unknown>, locales: readon
   if (!discordUrl && !websiteUrl && !contact) return { ok: false, error: "noContact", field: "discordUrl" };
   return {
     ok: true,
-    fields: { name, region: input.region, realm, realmType: input.realmType, faction: input.faction, languages, focus, roles, classes, raidDays, schedule, size: input.size, descriptionLang: lang as Locale, description, discordUrl, websiteUrl, contact },
+    fields: { name, region: input.region, ruleset: input.ruleset, faction: input.faction, languages, focus, roles, classes, raidDays, schedule, size: input.size, descriptionLang: lang as Locale, description, discordUrl, websiteUrl, contact },
   };
 }
 
@@ -260,10 +260,10 @@ export function slugBase(text: string): string {
     .replace(/^-+|-+$/g, "");
 }
 
-/** Slug unico: nome e reame più quattro caratteri casuali (`random` sostituibile nei test). */
-export function newGuildSlug(name: string, realm: string, random: () => number = Math.random): string {
+/** Slug unico: nome e regione più quattro caratteri casuali (`random` sostituibile nei test). */
+export function newGuildSlug(name: string, region: string, random: () => number = Math.random): string {
   const tail = Array.from({ length: 4 }, () => "abcdefghijklmnopqrstuvwxyz0123456789"[Math.floor(random() * 36)]).join("");
-  const base = [slugBase(name), slugBase(realm)].filter(Boolean).join("-").slice(0, 60).replace(/-+$/, "");
+  const base = [slugBase(name), slugBase(region)].filter(Boolean).join("-").slice(0, 60).replace(/-+$/, "");
   return `${base.length >= 3 ? base : `guild-${base}`.replace(/-$/, "")}-${tail}`;
 }
 

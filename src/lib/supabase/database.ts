@@ -53,8 +53,7 @@ export type GuildRow = {
   owner: string;
   name: string;
   region: string;
-  realm: string;
-  realm_type: string;
+  ruleset: string;
   faction: string;
   languages: string[];
   focus: string[];
@@ -105,7 +104,7 @@ export type Database = {
       };
       community_guilds: {
         Row: GuildRow;
-        Insert: Partial<GuildRow> & Pick<GuildRow, "slug" | "owner" | "name" | "region" | "realm" | "faction" | "languages" | "focus" | "description">;
+        Insert: Partial<GuildRow> & Pick<GuildRow, "slug" | "owner" | "name" | "region" | "faction" | "languages" | "focus" | "description">;
         Update: Partial<GuildRow>;
         Relationships: [{ foreignKeyName: "community_guilds_owner_fkey"; columns: ["owner"]; isOneToOne: false; referencedRelation: "profiles"; referencedColumns: ["id"] }];
       };

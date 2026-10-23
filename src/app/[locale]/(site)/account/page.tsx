@@ -130,7 +130,7 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
                 <div className="min-w-0 flex-1">
                   <p className="t-item text-base">{g.name}</p>
                   <p className="text-pale-muted">
-                    {G.factions[g.faction]} · {g.realm} · {G.regions[g.region]} · {g.languages.map((l) => G.languages[l]).join(", ")} · {G.page.refreshed} {formatDate(locale, g.refreshed_at.slice(0, 10))}
+                    {G.factions[g.faction]} · {G.regions[g.region]} · {G.rulesets[g.ruleset]} · {g.languages.map((l) => G.languages[l]).join(", ")} · {G.page.refreshed} {formatDate(locale, g.refreshed_at.slice(0, 10))}
                   </p>
                 </div>
                 <span className={g.status === "published" ? "stat-pill bg-mint-soft text-mint-deep" : "stat-pill bg-crimson-soft text-crimson-deep"}>{G.account.status[g.status]}</span>

@@ -27,8 +27,7 @@ const locales = ["en", "it", "es"];
 const good = {
   name: "  Cenere   Eterna ",
   region: "eu",
-  realm: "Pyrewood Village",
-  realmType: "pvp",
+  ruleset: "pvp",
   faction: "horde",
   languages: ["it", "en"],
   focus: ["leveling", "raids"],
@@ -70,10 +69,13 @@ describe("campi del modulo", () => {
     assert.deepEqual(checkGuildFields({ ...good, focus: "pvp" }, locales).ok, true);
     assert.deepEqual(checkGuildFields({ ...good, focus: ["ignoto"] }, locales), { ok: false, error: "noFocus", field: "focus" });
   });
-  test("valori fuori elenco e lingua della descrizione", () => {
-    assert.deepEqual(checkGuildFields({ ...good, region: "mars" }, locales), { ok: false, error: "invalidRegion", field: "region" });
+  test("niente reami: regione, ruleset e fazione da elenco, con 'da decidere' per chi si forma", () => {
+    assert.deepEqual(checkGuildFields({ ...good, region: "other" }, locales), { ok: false, error: "invalidRegion", field: "region" });
+    assert.deepEqual(checkGuildFields({ ...good, realm: "Pyrewood Village" }, locales).ok, true);
+    assert.equal(checkGuildFields({ ...good, ruleset: "rppvp" }, locales).ok, true);
+    assert.equal(checkGuildFields({ ...good, ruleset: "undecided", faction: "undecided" }, locales).ok, true);
+    assert.deepEqual(checkGuildFields({ ...good, ruleset: "hc" }, locales), { ok: false, error: "invalidRuleset", field: "ruleset" });
     assert.deepEqual(checkGuildFields({ ...good, faction: "neutral" }, locales), { ok: false, error: "invalidFaction", field: "faction" });
-    assert.deepEqual(checkGuildFields({ ...good, realmType: "hc" }, locales), { ok: false, error: "invalidRealmType", field: "realmType" });
     assert.deepEqual(checkGuildFields({ ...good, size: "huge" }, locales), { ok: false, error: "invalidSize", field: "size" });
     assert.deepEqual(checkGuildFields({ ...good, descriptionLang: "fr" }, locales), { ok: false, error: "invalidLang", field: "descriptionLang" });
   });
@@ -116,12 +118,13 @@ describe("elenchi, parole, scadenza, slug", () => {
   test("le parole contano lettere e cifre, non i segni", () => {
     assert.equal(guildWords("Gilda Orda - 2 sere / settimana, raid il mercoledì!"), 8);
   });
-  test("scadenza dopo 45 giorni e data di taglio stabile nel giorno", () => {
+  test("scadenza dopo 30 giorni e data di taglio stabile nel giorno", () => {
     const now = Date.parse("2026-11-20T12:00:00Z");
+    assert.equal(GUILD_STALE_DAYS, 30);
     assert.equal(isStale("2026-11-19T00:00:00Z", now), false);
     assert.equal(isStale(new Date(now - (GUILD_STALE_DAYS + 1) * 86_400_000).toISOString(), now), true);
     assert.equal(isStale("non una data", now), true);
-    assert.equal(staleCutoff(now), "2026-10-06T00:00:00.000Z");
+    assert.equal(staleCutoff(now), "2026-10-21T00:00:00.000Z");
     assert.equal(staleCutoff(now + 3600_000), staleCutoff(now));
   });
   test("indicizzabile solo se pubblicato, lungo abbastanza e non scaduto", () => {
@@ -130,14 +133,14 @@ describe("elenchi, parole, scadenza, slug", () => {
     assert.equal(guildIndexable({ status: "published", description: text, refreshed_at: "2026-11-19T00:00:00Z" }, now), true);
     assert.equal(guildIndexable({ status: "hidden", description: text, refreshed_at: "2026-11-19T00:00:00Z" }, now), false);
     assert.equal(guildIndexable({ status: "published", description: "poche parole", refreshed_at: "2026-11-19T00:00:00Z" }, now), false);
-    assert.equal(guildIndexable({ status: "published", description: text, refreshed_at: "2026-08-01T00:00:00Z" }, now), false);
+    assert.equal(guildIndexable({ status: "published", description: text, refreshed_at: "2026-09-01T00:00:00Z" }, now), false);
   });
-  test("slug da nome e reame, senza accenti, con la coda casuale", () => {
-    const slug = newGuildSlug("Cenere Eterna", "Pyrewood Village", () => 0);
-    assert.equal(slug, "cenere-eterna-pyrewood-village-aaaa");
+  test("slug da nome e regione, senza accenti, con la coda casuale", () => {
+    const slug = newGuildSlug("Cenere Eterna", "eu", () => 0);
+    assert.equal(slug, "cenere-eterna-eu-aaaa");
     assert.match(slug, GUILD_SLUG_RE);
-    assert.match(newGuildSlug("Ñu", "È", () => 0.5), /^nu-e-ssss$/);
-    assert.match(newGuildSlug("!!", "??", () => 0), /^guild-aaaa$/);
+    assert.match(newGuildSlug("Ñu", "us", () => 0.5), /^nu-us-ssss$/);
+    assert.match(newGuildSlug("!!", "", () => 0), /^guild-aaaa$/);
   });
   test("riconosce la tabella mancante", () => {
     assert.equal(guildTableMissing({ code: "42P01", message: "" }), true);

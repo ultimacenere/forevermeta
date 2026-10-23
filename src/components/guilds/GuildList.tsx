@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { formatDate, href, type Locale } from "@/lib/i18n";
-import { FACTIONS, GUILD_FOCUS, GUILD_LANGUAGES, GUILD_REGIONS, GUILD_ROLES, REALM_TYPES, guildPath, type CommunityGuild, type Faction, type GuildFocus, type GuildLanguage, type GuildRegion, type GuildRole, type RealmType } from "@/lib/community/guilds";
+import { FACTIONS, GUILD_FOCUS, GUILD_LANGUAGES, GUILD_REGIONS, GUILD_ROLES, RULESETS, guildPath, type CommunityGuild, type Faction, type GuildFocus, type GuildLanguage, type GuildRegion, type GuildRole, type Ruleset } from "@/lib/community/guilds";
 import { fill } from "@/lib/builderLabels";
 import type { GuildLabels } from "@/lib/guildLabels";
 
-export type GuildListItem = Pick<CommunityGuild, "id" | "slug" | "name" | "region" | "realm" | "realm_type" | "faction" | "languages" | "focus" | "roles" | "size" | "description" | "refreshed_at" | "created_at"> & { author: string };
+export type GuildListItem = Pick<CommunityGuild, "id" | "slug" | "name" | "region" | "ruleset" | "faction" | "languages" | "focus" | "roles" | "size" | "description" | "refreshed_at" | "created_at"> & { author: string };
 
 export type GuildListProps = {
   items: GuildListItem[];
@@ -21,18 +21,18 @@ export type GuildListProps = {
 const SELECT = "mt-1 rounded-lg border border-felt-line bg-night px-3 py-1.5 text-chalk";
 
 /**
- * Elenco delle gilde con i filtri (lingua, regione, fazione, tipo di reame, obiettivo, ruolo, reame) e l'ordine: tutte
- * le schede stanno nell'HTML, i filtri le nascondono soltanto, come per le build. I conteggi per lingua stanno accanto
- * alle opzioni, così si vede subito quante gilde parlano italiano o spagnolo (nessuna bacheca li mostra).
+ * Elenco delle gilde con i filtri (lingua, regione, ruleset, fazione, obiettivo, ruolo) e l'ordine: tutte le schede
+ * stanno nell'HTML, i filtri le nascondono soltanto, come per le build. I conteggi per lingua stanno accanto alle
+ * opzioni, così si vede subito quante gilde parlano italiano o spagnolo (nessuna bacheca li mostra). "Da decidere" su
+ * ruleset o fazione passa qualsiasi filtro: una gilda in formazione va trovata da tutti.
  */
 export function GuildList({ items, labels, locale, initialLanguage = "" }: GuildListProps) {
   const [lang, setLang] = useState<GuildLanguage | "">(initialLanguage);
   const [region, setRegion] = useState<GuildRegion | "">("");
+  const [ruleset, setRuleset] = useState<Ruleset | "">("");
   const [faction, setFaction] = useState<Faction | "">("");
-  const [realmType, setRealmType] = useState<RealmType | "">("");
   const [focus, setFocus] = useState<GuildFocus | "">("");
   const [role, setRole] = useState<GuildRole | "">("");
-  const [realm, setRealm] = useState("");
   const [sort, setSort] = useState<"renewed" | "newest">("renewed");
   const L = labels.list;
 
@@ -43,20 +43,18 @@ export function GuildList({ items, labels, locale, initialLanguage = "" }: Guild
   }, [items]);
 
   const visible = useMemo(() => {
-    const q = realm.trim().toLowerCase();
     const list = items.filter(
       (g) =>
         (!lang || g.languages.includes(lang)) &&
         (!region || g.region === region) &&
-        (!faction || g.faction === faction) &&
-        (!realmType || g.realm_type === realmType) &&
+        (!ruleset || g.ruleset === ruleset || g.ruleset === "undecided") &&
+        (!faction || g.faction === faction || g.faction === "undecided") &&
         (!focus || g.focus.includes(focus)) &&
-        (!role || g.roles.length === 0 || g.roles.includes(role)) &&
-        (!q || g.realm.toLowerCase().includes(q)),
+        (!role || g.roles.length === 0 || g.roles.includes(role)),
     );
     list.sort((a, b) => (sort === "newest" ? b.created_at.localeCompare(a.created_at) : b.refreshed_at.localeCompare(a.refreshed_at)));
     return list;
-  }, [items, lang, region, faction, realmType, focus, role, realm, sort]);
+  }, [items, lang, region, ruleset, faction, focus, role, sort]);
 
   return (
     <div>
@@ -85,23 +83,23 @@ export function GuildList({ items, labels, locale, initialLanguage = "" }: Guild
           </select>
         </label>
         <label className="text-sm">
-          <span className="kicker block text-pale-muted">{L.filterFaction}</span>
-          <select value={faction} onChange={(e) => setFaction(e.target.value as Faction | "")} className={SELECT}>
+          <span className="kicker block text-pale-muted">{L.filterRuleset}</span>
+          <select value={ruleset} onChange={(e) => setRuleset(e.target.value as Ruleset | "")} className={SELECT}>
             <option value="">{L.all}</option>
-            {FACTIONS.map((x) => (
-              <option key={x} value={x}>
-                {labels.factions[x]}
+            {RULESETS.filter((t) => t !== "undecided").map((t) => (
+              <option key={t} value={t}>
+                {labels.rulesets[t]}
               </option>
             ))}
           </select>
         </label>
         <label className="text-sm">
-          <span className="kicker block text-pale-muted">{L.filterRealmType}</span>
-          <select value={realmType} onChange={(e) => setRealmType(e.target.value as RealmType | "")} className={SELECT}>
+          <span className="kicker block text-pale-muted">{L.filterFaction}</span>
+          <select value={faction} onChange={(e) => setFaction(e.target.value as Faction | "")} className={SELECT}>
             <option value="">{L.all}</option>
-            {REALM_TYPES.map((t) => (
-              <option key={t} value={t}>
-                {labels.realmTypes[t]}
+            {FACTIONS.filter((x) => x !== "undecided").map((x) => (
+              <option key={x} value={x}>
+                {labels.factions[x]}
               </option>
             ))}
           </select>
@@ -129,10 +127,6 @@ export function GuildList({ items, labels, locale, initialLanguage = "" }: Guild
           </select>
         </label>
         <label className="text-sm">
-          <span className="kicker block text-pale-muted">{L.searchRealm}</span>
-          <input type="search" value={realm} onChange={(e) => setRealm(e.target.value)} placeholder={L.searchPlaceholder} className={`${SELECT} w-40`} />
-        </label>
-        <label className="text-sm">
           <span className="kicker block text-pale-muted">{L.sort}</span>
           <select value={sort} onChange={(e) => setSort(e.target.value as "renewed" | "newest")} className={SELECT}>
             <option value="renewed">{L.renewed}</option>
@@ -157,8 +151,7 @@ export function GuildList({ items, labels, locale, initialLanguage = "" }: Guild
                   <span className="min-w-0">
                     <span className="guild-card-name">{g.name}</span>
                     <span className="guild-card-sub">
-                      {labels.factions[g.faction]} · {g.realm} · {labels.regions[g.region]}
-                      {g.realm_type !== "normal" ? ` · ${labels.realmTypes[g.realm_type]}` : ""}
+                      {labels.factions[g.faction]} · {labels.regions[g.region]} · {labels.rulesets[g.ruleset]}
                     </span>
                   </span>
                 </span>

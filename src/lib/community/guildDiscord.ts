@@ -22,7 +22,7 @@ import { guildPath, type CommunityGuild } from "./guilds";
 const GOLD = 0xeab54e;
 const TIMEOUT_MS = 3000;
 
-type Announced = Pick<CommunityGuild, "slug" | "name" | "region" | "realm" | "realm_type" | "faction" | "languages" | "focus" | "roles" | "size"> & { author: string };
+type Announced = Pick<CommunityGuild, "slug" | "name" | "region" | "ruleset" | "faction" | "languages" | "focus" | "roles" | "size"> & { author: string };
 
 /** Messaggio del canale: italiano per primo, poi inglese e spagnolo, con i link alle tre pagine. */
 export function guildPayload(g: Announced): DiscordWebhookPayload {
@@ -30,7 +30,7 @@ export function guildPayload(g: Announced): DiscordWebhookPayload {
   const name = escapeDiscord(g.name).slice(0, 200);
   const line = (l: "it" | "en" | "es") => {
     const L = guildLabels[l];
-    const parts = [L.factions[g.faction], `${escapeDiscord(g.realm)} (${L.regions[g.region]}${g.realm_type !== "normal" ? `, ${L.realmTypes[g.realm_type]}` : ""})`, g.languages.map((x) => L.languages[x]).join("/"), g.focus.map((x) => L.focus[x]).join(", ")];
+    const parts = [L.factions[g.faction], `${L.regions[g.region]} · ${L.rulesets[g.ruleset]}`, g.languages.map((x) => L.languages[x]).join("/"), g.focus.map((x) => L.focus[x]).join(", ")];
     if (g.roles.length) parts.push(g.roles.map((x) => L.roles[x]).join(", "));
     return `${parts.join(" · ")} · ${L.page.by} ${author}`;
   };
@@ -61,7 +61,7 @@ async function readPublished(slug: string): Promise<Announced | null> {
   });
   const { data } = await sb
     .from("community_guilds")
-    .select("slug, name, region, realm, realm_type, faction, languages, focus, roles, size, status, owner:profiles!community_guilds_owner_fkey(username, display_name)")
+    .select("slug, name, region, ruleset, faction, languages, focus, roles, size, status, owner:profiles!community_guilds_owner_fkey(username, display_name)")
     .eq("slug", slug)
     .maybeSingle();
   const row = data as unknown as (Announced & { status: string; owner: { username: string | null; display_name: string | null } | null }) | null;

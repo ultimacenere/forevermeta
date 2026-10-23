@@ -37,8 +37,7 @@ function fieldsOf(formData: FormData) {
     {
       name: one("name"),
       region: one("region"),
-      realm: one("realm"),
-      realmType: one("realmType"),
+      ruleset: one("ruleset"),
       faction: one("faction"),
       languages: many("languages"),
       focus: many("focus"),
@@ -61,8 +60,7 @@ function rowOf(f: GuildFields): Omit<GuildRow, "id" | "slug" | "owner" | "status
   return {
     name: f.name,
     region: f.region,
-    realm: f.realm,
-    realm_type: f.realmType,
+    ruleset: f.ruleset,
     faction: f.faction,
     languages: f.languages,
     focus: f.focus,
@@ -99,7 +97,7 @@ export async function publishGuild(_prev: GuildActionState, formData: FormData):
   if ((count ?? 0) >= GUILDS_PER_USER) return { error: "limit" };
   const row = { ...rowOf(parsed.fields), owner: user.id, status: "published" };
   for (let attempt = 0; attempt < 6; attempt++) {
-    const slug = newGuildSlug(parsed.fields.name, parsed.fields.realm);
+    const slug = newGuildSlug(parsed.fields.name, parsed.fields.region);
     const { data, error } = await supabase
       .from("community_guilds")
       .insert({ ...row, slug })

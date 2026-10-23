@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
-import { FACTIONS, GUILD_CLASSES, GUILD_FOCUS, GUILD_LANGUAGES, GUILD_LIMITS, GUILD_MIN_WORDS, GUILD_REGIONS, GUILD_ROLES, GUILD_SIZES, RAID_DAYS, REALM_TYPES, guildWords, type CommunityGuild } from "@/lib/community/guilds";
+import { FACTIONS, GUILD_CLASSES, GUILD_FOCUS, GUILD_LANGUAGES, GUILD_LIMITS, GUILD_MIN_WORDS, GUILD_REGIONS, GUILD_ROLES, GUILD_SIZES, RAID_DAYS, RULESETS, guildWords, type CommunityGuild } from "@/lib/community/guilds";
 import { publishGuild, updateGuild, type GuildActionState } from "@/lib/community/guildActions";
 import { fill } from "@/lib/builderLabels";
 import type { GuildLabels } from "@/lib/guildLabels";
@@ -39,9 +39,9 @@ function Checks<T extends string>({ name, options, labels, value, onChange, max 
 }
 
 /**
- * Modulo di pubblicazione e di modifica di un annuncio di gilda: i dati della gilda (nome, regione, reame, tipo,
- * fazione, dimensione), chi cercate (lingue, obiettivi, ruoli, classi, giorni e orari), il testo nella lingua
- * dell'autore e i contatti (almeno uno). I limiti sono quelli di guilds.ts; la Server Action li ricontrolla.
+ * Modulo di pubblicazione e di modifica di un annuncio di gilda: i dati della gilda (nome, regione, ruleset, fazione,
+ * dimensione: Forever non ha reami), chi cercate (lingue, obiettivi, ruoli, classi, giorni e orari), il testo nella
+ * lingua dell'autore e i contatti (almeno uno). I limiti sono quelli di guilds.ts; la Server Action li ricontrolla.
  */
 export function GuildForm({ locale, labels, languageNames, initial }: GuildFormProps) {
   const router = useRouter();
@@ -50,8 +50,7 @@ export function GuildForm({ locale, labels, languageNames, initial }: GuildFormP
   const [fields, setFields] = useState({
     name: initial?.name ?? "",
     region: initial?.region ?? (locale === "en" ? "" : "eu"),
-    realm: initial?.realm ?? "",
-    realmType: initial?.realm_type ?? "normal",
+    ruleset: initial?.ruleset ?? "normal",
     faction: initial?.faction ?? "",
     size: initial?.size ?? "forming",
     schedule: initial?.schedule ?? "",
@@ -111,23 +110,17 @@ export function GuildForm({ locale, labels, languageNames, initial }: GuildFormP
             {err("region") ? <p className="text-error mt-1 text-sm">{err("region")}</p> : null}
           </div>
           <div>
-            <label htmlFor="gf-realm" className="kicker text-pale-muted">
-              {f.realm} {counter(fields.realm, GUILD_LIMITS.realm.max)}
+            <label htmlFor="gf-ruleset" className="kicker text-pale-muted">
+              {f.ruleset}
             </label>
-            <input id="gf-realm" name="realm" value={fields.realm} onChange={set("realm")} maxLength={GUILD_LIMITS.realm.max} placeholder={f.realmPlaceholder} required className={INPUT} />
-            {err("realm") ? <p className="text-error mt-1 text-sm">{err("realm")}</p> : <p className="mt-1 text-xs text-pale-muted">{f.realmHint}</p>}
-          </div>
-          <div>
-            <label htmlFor="gf-realm-type" className="kicker text-pale-muted">
-              {f.realmType}
-            </label>
-            <select id="gf-realm-type" name="realmType" value={fields.realmType} onChange={set("realmType")} className={INPUT}>
-              {REALM_TYPES.map((t) => (
+            <select id="gf-ruleset" name="ruleset" value={fields.ruleset} onChange={set("ruleset")} className={INPUT}>
+              {RULESETS.map((t) => (
                 <option key={t} value={t}>
-                  {labels.realmTypes[t]}
+                  {labels.rulesets[t]}
                 </option>
               ))}
             </select>
+            {err("ruleset") ? <p className="text-error mt-1 text-sm">{err("ruleset")}</p> : null}
           </div>
           <div>
             <label htmlFor="gf-faction" className="kicker text-pale-muted">
@@ -156,6 +149,7 @@ export function GuildForm({ locale, labels, languageNames, initial }: GuildFormP
             </select>
           </div>
         </div>
+        <p className="text-xs text-pale-muted">{f.rulesetHint}</p>
       </section>
 
       <section className="card-night space-y-4 p-5">

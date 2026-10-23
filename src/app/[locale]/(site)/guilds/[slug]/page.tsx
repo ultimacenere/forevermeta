@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!guild) return {};
   const L = guildLabels[locale];
   const indexable = guildIndexable(guild) && guild.description_lang === locale;
-  return pageMeta(locale, guildPath(guild.slug), pageTitleWith(guild.name, `${L.factions[guild.faction]} · ${guild.realm}`), guild.description, undefined, {
+  return pageMeta(locale, guildPath(guild.slug), pageTitleWith(guild.name, `${L.factions[guild.faction]} · ${L.regions[guild.region]}`), guild.description, undefined, {
     type: "article",
     published: guild.created_at,
     modified: guild.updated_at,
@@ -65,7 +65,8 @@ export default async function GuildPage({ params }: { params: Params }) {
   const author = guild.profile?.display_name || guild.profile?.username || d.nav.playerFallback;
   const stale = isStale(guild.refreshed_at);
   const details: { key: string; title: string; value: string }[] = [
-    { key: "realm", title: L.page.realm, value: `${guild.realm} · ${L.regions[guild.region]}${guild.realm_type !== "normal" ? ` · ${L.realmTypes[guild.realm_type]}` : ""}` },
+    { key: "region", title: L.page.region, value: L.regions[guild.region] },
+    { key: "ruleset", title: L.page.ruleset, value: L.rulesets[guild.ruleset] },
     { key: "faction", title: L.page.faction, value: L.factions[guild.faction] },
     { key: "languages", title: L.page.languages, value: guild.languages.map((l) => L.languages[l]).join(", ") },
     { key: "focus", title: L.page.focus, value: guild.focus.map((x) => L.focus[x]).join(", ") },
@@ -115,8 +116,7 @@ export default async function GuildPage({ params }: { params: Params }) {
         <h1 className="t-page">{guild.name}</h1>
       </div>
       <p className="mt-3 text-sm text-pale">
-        <span className={`gl-pill gl-pill-${guild.faction}`}>{L.factions[guild.faction]}</span> <span className="font-semibold text-chalk">{guild.realm}</span> · {L.regions[guild.region]}
-        {guild.realm_type !== "normal" ? ` · ${L.realmTypes[guild.realm_type]}` : ""} · {L.sizes[guild.size]}
+        <span className={`gl-pill gl-pill-${guild.faction}`}>{L.factions[guild.faction]}</span> <span className="font-semibold text-chalk">{L.regions[guild.region]}</span> · {L.rulesets[guild.ruleset]} · {L.sizes[guild.size]}
       </p>
       <div className="mt-4 flex items-center gap-2 text-sm text-pale">
         <Avatar profile={guild.profile ?? null} name={author} size={32} />
