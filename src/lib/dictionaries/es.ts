@@ -44,6 +44,9 @@ export const es: Dictionary = {
     faqTitle: "Preguntas frecuentes",
     inBrief: "En resumen",
     newTab: "(se abre en una pestaña nueva)",
+    next: "Próxima",
+    scrollLeft: "Desplaza el calendario a la izquierda",
+    scrollRight: "Desplaza el calendario a la derecha",
   },
   home: {
     kicker: "World of Warcraft: Forever",

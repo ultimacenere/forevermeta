@@ -74,3 +74,9 @@ export function monthShort(locale: Locale, iso: string): string {
 export function dayNumber(iso: string): string {
   return String(Number(iso.slice(8, 10)));
 }
+
+/** Giorno della settimana per intero ("mercoledì"), per la seconda riga della striscia del calendario. */
+export function weekdayLong(locale: Locale, iso: string): string {
+  const d = new Date(iso + (iso.length === 10 ? "T12:00:00Z" : ""));
+  return new Intl.DateTimeFormat(locale, { weekday: "long", timeZone: "UTC" }).format(d);
+}
