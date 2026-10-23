@@ -2180,6 +2180,24 @@ export const changeUpdates: ChangeUpdate[] = [
       ),
     ],
   },
+  {
+    id: "2026-10-21-mac-fixes-delayed",
+    date: "2026-10-21",
+    title: l(
+      "Mac graphics fixes postponed to after the stress test",
+      "Correzioni grafiche per Mac rinviate a dopo lo stress test",
+      "Correcciones gráficas para Mac aplazadas hasta después de la prueba de estrés",
+    ),
+    url: `${GRAPHICS_THREAD}/682`,
+    items: [
+      c(
+        "general",
+        "Mac: because of technical difficulties, the build with the next round of graphics fixes (which Blizzard hopes will address the color tint) is not deployed until Thursday 22 October, after the stress test.",
+        "Mac: per difficoltà tecniche, la build con la prossima tornata di correzioni grafiche (che secondo Blizzard dovrebbe risolvere la tinta dei colori) non esce prima di giovedì 22 ottobre, dopo lo stress test.",
+        "Mac: por dificultades técnicas, la build con la siguiente tanda de correcciones gráficas (que Blizzard espera que resuelva el tinte de color) no se publica hasta el jueves 22 de octubre, después de la prueba de estrés.",
+      ),
+    ],
+  },
 ];
 
 /** Etichette delle aree, nelle tre lingue: le nove classi, poi i sistemi. */

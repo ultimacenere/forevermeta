@@ -4,7 +4,7 @@ export const guide: GuideEntry = {
   slug: "wow-forever-release-date",
   category: "dates",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-10-23",
   cover: { word: "4.11.2026", tone: "sky" },
   sources: [
     {
@@ -81,7 +81,7 @@ These offsets are the ones in force on November 4: the US leaves daylight saving
 | Date | What happens |
 |---|---|
 | September 12, 2026 | Announcement at BlizzCon 2026, upgrade editions on pre-purchase |
-| September 17 – October 21 (PST) | Beta |
+| September 17 – October 23 (PST) | Beta (extended on October 20) |
 | From October 20 (PST) | Invite-A-Friend codes start arriving by email |
 | October 27 – November 3 (PST) | Early Name Reservation |
 | November 4, 3:00 p.m. PST | Launch |
@@ -89,25 +89,26 @@ These offsets are the ones in force on November 4: the US leaves daylight saving
 | December 9 | New raids unlock |
 | January 11, 2027 | Last day of the Warcraft Forever Collection |
 | Early 2027 | Standard Definition models for the Skyborne |
-| No date yet | Hardcore ruleset, beta Server Slam |
+| October 21 | Beta stress test (Server Slam), open to everyone |
+| No date yet | Hardcore ruleset |
 
 You'll find them in the [calendar](/en/calendar) too.
 
-## The beta: September 17 to October 21 {#beta}
+## The beta: September 17 to October 23 {#beta}
 
-Blizzard set the beta from September 17 to October 21, 2026 (PST) and called October 21 "the last full day of testing". You get in through opt-in invitations or with the Skyborne Epic Pack or the Warcraft Forever Collection. The level cap was 20 at the start; since the October 1 build it is 30, according to the development notes Blizzard posts on its forums.
+Blizzard set the beta from September 17 to October 21, 2026 (PST), called October 21 "the last full day of testing", then on October 20 extended it to October 23 at 10:00 a.m. PDT (19:00 in Central Europe). You get in through opt-in invitations or with the Skyborne Epic Pack or the Warcraft Forever Collection. The level cap was 20 at the start; since the October 1 build it is 30, according to the development notes Blizzard posts on its forums.
 
-Blizzard also announced a Server Slam, a test of a few hours open to everyone, "at a later point during the test period". As of October 10 it has given no date.
+The Server Slam, a test of a few hours open to everyone with a World of Warcraft account, took place on October 21, 2026 as a stress test.
 
 ## Before launch: invite codes and names {#before-launch}
 
 Invite-A-Friend codes arrive by email from October 20 (PST): one with the Skyborne Heroic Pack, three in total with the Epic Pack or the Collection. Gift purchases don't include them. The friend you invite can play Forever from November 4 through November 11 without a subscription, but without beta access.
 
-Early Name Reservation runs from October 27 through November 3 (PST) and comes with any upgrade purchase: you can reserve names for up to three characters, first come, first served. Blizzard has not said what time it opens. What each edition includes: [editions and prices](/en/guides/wow-forever-editions-prices).
+Early Name Reservation runs from October 27 through November 3 (PST) and comes with any upgrade purchase: you can reserve names for up to three characters, first come, first served. It opens on October 27 at 18:00 CET in Europe and 1:00 p.m. PDT in North America, and the three names count across all rulesets. What each edition includes: [editions and prices](/en/guides/wow-forever-editions-prices).
 
 ## After launch {#after-launch}
 
-New raids unlock on Wednesday, December 9. The two raids announced are Hyjal Summit and the Barrow Deeps, but Blizzard doesn't say which ones open that day ([zones, dungeons and raids](/en/guides/wow-forever-zones-dungeons-raids)). The Warcraft Forever Collection stays on sale until January 11, 2027.
+New raids unlock on Wednesday, December 9. Three open that day: the Barrow Deeps, Hyjal Summit and Onyxia's Lair, according to Blizzard's article of October 20 ([zones, dungeons and raids](/en/guides/wow-forever-zones-dungeons-raids)). The Warcraft Forever Collection stays on sale until January 11, 2027.
 
 Hardcore "will be available sometime after launch", with no date, while the other rulesets start with the game ([rulesets](/en/guides/wow-forever-rulesets)). Standard Definition Skyborne models are "arriving early 2027". Blizzard's later plans (more raids and dungeons, PvP updates, a revamped iconic raid) have no dates either.
 
@@ -119,8 +120,6 @@ Hardcore "will be available sometime after launch", with no date, while the othe
 ## What we don't know yet {#what-we-dont-know-yet}
 
 - What time Early Name Reservation opens.
-- The date of the Server Slam.
-- Which raids unlock on December 9.
 - When Hardcore arrives.
 - Whether any region gets a different time: Blizzard only gives the global one.
 
@@ -132,11 +131,11 @@ New to the game? Start with [what WoW Forever is](/en/guides/what-is-wow-forever
         },
         {
           q: "When does the WoW Forever beta end?",
-          a: "On October 21, 2026 (PST), which Blizzard calls the last full day of testing.",
+          a: "On October 23, 2026 at 10:00 a.m. PDT (19:00 in Central Europe). The original last day was October 21; Blizzard extended the beta by two days on October 20.",
         },
         {
           q: "When can I reserve my character name?",
-          a: "From October 27 to November 3, 2026 (PST), with any upgrade edition, for up to three characters. The opening time hasn't been announced.",
+          a: "From October 27 to November 3, 2026 (PST), with any upgrade edition, for up to three characters. It opens at 18:00 CET in Europe and 1:00 p.m. PDT in North America.",
         },
         {
           q: "Is Hardcore available at launch?",
@@ -172,7 +171,7 @@ Sono gli scarti in vigore il 4 novembre: gli Stati Uniti tornano all'ora solare 
 | Data | Cosa succede |
 |---|---|
 | 12 settembre 2026 | Annuncio alla BlizzCon 2026, edizioni in preacquisto |
-| 17 settembre – 21 ottobre (PST) | Beta |
+| 17 settembre – 23 ottobre (PST) | Beta (prorogata il 20 ottobre) |
 | Dal 20 ottobre (PST) | Arrivano per email i codici Invita un amico |
 | 27 ottobre – 3 novembre (PST) | Prenotazione anticipata dei nomi |
 | 5 novembre, 00:00 (4 novembre, 15:00 PST) | Lancio |
@@ -180,25 +179,26 @@ Sono gli scarti in vigore il 4 novembre: gli Stati Uniti tornano all'ora solare 
 | 9 dicembre | Si sbloccano i nuovi raid |
 | 11 gennaio 2027 | Ultimo giorno della Warcraft Forever Collection |
 | Inizio 2027 | Modelli in definizione standard (SD) per gli Skyborne |
-| Senza data | Set di regole Hardcore, Server Slam della beta |
+| 21 ottobre | Stress test della beta (Server Slam), aperto a tutti |
+| Senza data | Set di regole Hardcore |
 
 Le trovi anche nel [calendario](/it/calendar).
 
-## La beta: dal 17 settembre al 21 ottobre {#beta}
+## La beta: dal 17 settembre al 23 ottobre {#beta}
 
-Blizzard ha fissato la beta dal 17 settembre al 21 ottobre 2026 (ora del Pacifico) e indica il 21 ottobre come l'ultimo giorno completo di test. Si entra con gli inviti, a cui ci si candida, oppure con il Pacchetto Epic Skyborne o la Warcraft Forever Collection. All'inizio il livello massimo era 20; dalla build del 1° ottobre è 30, secondo le note di sviluppo che Blizzard pubblica sui forum.
+Blizzard ha fissato la beta dal 17 settembre al 21 ottobre 2026 (ora del Pacifico), indicando il 21 ottobre come l'ultimo giorno completo di test, poi il 20 ottobre l'ha prorogata al 23 ottobre alle 10:00 PDT (le 19:00 in Italia). Si entra con gli inviti, a cui ci si candida, oppure con il Pacchetto Epic Skyborne o la Warcraft Forever Collection. All'inizio il livello massimo era 20; dalla build del 1° ottobre è 30, secondo le note di sviluppo che Blizzard pubblica sui forum.
 
-Blizzard ha annunciato anche un Server Slam, un test di qualche ora aperto a tutti, "più avanti durante il periodo di test". Al 10 ottobre non c'è una data.
+Il Server Slam, un test di qualche ora aperto a chiunque avesse un account di World of Warcraft, si è tenuto il 21 ottobre 2026 come stress test.
 
 ## Prima del lancio: codici e nomi {#prima-del-lancio}
 
 I codici di lancio Invita un amico (Invite-A-Friend) arrivano per email dal 20 ottobre (PST): uno con il Pacchetto Heroic Skyborne, tre in tutto con il Pacchetto Epic o la Collection. Gli acquisti regalo non li comprendono. L'amico che inviti può giocare a Forever dal 4 all'11 novembre senza abbonamento, ma non entra nella beta.
 
-La prenotazione anticipata dei nomi va dal 27 ottobre al 3 novembre (PST) ed è compresa in qualsiasi edizione: puoi riservare i nomi di tre personaggi al massimo, e vale chi arriva prima. Blizzard non ha detto a che ora apre. Cosa c'è in ogni edizione: [edizioni e prezzi](/it/guides/wow-forever-editions-prices).
+La prenotazione anticipata dei nomi va dal 27 ottobre al 3 novembre (PST) ed è compresa in qualsiasi edizione: puoi riservare i nomi di tre personaggi al massimo, e vale chi arriva prima. Apre il 27 ottobre alle 18:00 in Italia (18:00 CET; 13:00 PDT in Nord America), e i tre nomi contano su tutti i set di regole. Cosa c'è in ogni edizione: [edizioni e prezzi](/it/guides/wow-forever-editions-prices).
 
 ## Dopo il lancio {#dopo-il-lancio}
 
-I nuovi raid (incursioni) si sbloccano mercoledì 9 dicembre. I due raid annunciati sono Hyjal Summit e Barrow Deeps, ma Blizzard non dice quali aprono quel giorno ([zone, dungeon e raid](/it/guides/wow-forever-zones-dungeons-raids)). La Warcraft Forever Collection resta in vendita fino all'11 gennaio 2027.
+I nuovi raid (incursioni) si sbloccano mercoledì 9 dicembre. Sono tre: Barrow Deeps, Hyjal Summit e Onyxia's Lair, secondo l'articolo di Blizzard del 20 ottobre ([zone, dungeon e raid](/it/guides/wow-forever-zones-dungeons-raids)). La Warcraft Forever Collection resta in vendita fino all'11 gennaio 2027.
 
 Hardcore arriverà "dopo il lancio", senza data, mentre gli altri set di regole partono con il gioco ([set di regole](/it/guides/wow-forever-rulesets)). I modelli SD degli Skyborne arrivano a inizio 2027. Anche i piani successivi di Blizzard (altri raid e dungeon, aggiornamenti PvP, un raid storico rinnovato) sono senza date.
 
@@ -210,8 +210,6 @@ Hardcore arriverà "dopo il lancio", senza data, mentre gli altri set di regole 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo-ancora}
 
 - A che ora apre la prenotazione dei nomi.
-- La data del Server Slam.
-- Quali raid si sbloccano il 9 dicembre.
 - Quando arriva Hardcore.
 - Se qualche regione avrà un orario diverso: Blizzard dà solo quello globale.
 
@@ -223,11 +221,11 @@ Sei nuovo? Parti da [cos'è WoW Forever](/it/guides/what-is-wow-forever) o dalle
         },
         {
           q: "Quando finisce la beta di WoW Forever?",
-          a: "Il 21 ottobre 2026 (ora del Pacifico), che Blizzard indica come l'ultimo giorno completo di test.",
+          a: "Il 23 ottobre 2026 alle 10:00 PDT, le 19:00 in Italia. L'ultimo giorno previsto era il 21 ottobre; Blizzard ha prorogato la beta di due giorni il 20 ottobre.",
         },
         {
           q: "Quando posso prenotare il nome del personaggio?",
-          a: "Dal 27 ottobre al 3 novembre 2026 (PST), con qualsiasi edizione, per un massimo di tre personaggi. L'ora di apertura non è stata annunciata.",
+          a: "Dal 27 ottobre al 3 novembre 2026 (PST), con qualsiasi edizione, per un massimo di tre personaggi. Apre alle 18:00 in Italia (18:00 CET).",
         },
         {
           q: "Hardcore c'è dal lancio?",
@@ -263,7 +261,7 @@ Son las diferencias vigentes el 4 de noviembre: Estados Unidos deja el horario d
 | Fecha | Qué pasa |
 |---|---|
 | 12 de septiembre de 2026 | Anuncio en la BlizzCon 2026, ediciones en precompra |
-| 17 de septiembre – 21 de octubre (PST) | Beta |
+| 17 de septiembre – 23 de octubre (PST) | Beta (prorrogada el 20 de octubre) |
 | Desde el 20 de octubre (PST) | Llegan por correo los códigos de invitación |
 | 27 de octubre – 3 de noviembre (PST) | Reserva de nombres anticipada |
 | 4 de noviembre, 15:00 PST | Lanzamiento |
@@ -271,25 +269,26 @@ Son las diferencias vigentes el 4 de noviembre: Estados Unidos deja el horario d
 | 9 de diciembre | Se desbloquean las bandas nuevas |
 | 11 de enero de 2027 | Último día de la Warcraft Forever Collection |
 | Principios de 2027 | Modelos en definición estándar (SD) para los célicos |
-| Sin fecha | Conjunto de reglas Hardcore, Server Slam de la beta |
+| 21 de octubre | Prueba de estrés de la beta (Server Slam), abierta a todos |
+| Sin fecha | Conjunto de reglas Hardcore |
 
 También están en el [calendario](/es/calendar).
 
-## La beta: del 17 de septiembre al 21 de octubre {#beta}
+## La beta: del 17 de septiembre al 23 de octubre {#beta}
 
-Blizzard fijó la beta del 17 de septiembre al 21 de octubre de 2026 (hora del Pacífico) y llama al 21 de octubre el último día completo de pruebas. Se entra por invitación, apuntándote, o con el Pack Epic de los célicos (Paquete épico de los cielonato en Latinoamérica) o la Warcraft Forever Collection. Al principio el nivel máximo era 20; desde la build del 1 de octubre es 30, según las notas de desarrollo que Blizzard publica en sus foros.
+Blizzard fijó la beta del 17 de septiembre al 21 de octubre de 2026 (hora del Pacífico), llamó al 21 de octubre el último día completo de pruebas y el 20 de octubre la prorrogó hasta el 23 de octubre a las 10:00 PDT (las 19:00 en España peninsular). Se entra por invitación, apuntándote, o con el Pack Epic de los célicos (Paquete épico de los cielonato en Latinoamérica) o la Warcraft Forever Collection. Al principio el nivel máximo era 20; desde la build del 1 de octubre es 30, según las notas de desarrollo que Blizzard publica en sus foros.
 
-Blizzard anunció también un Server Slam, una prueba de unas horas abierta a todos, "más adelante durante el periodo de pruebas". A 10 de octubre no tiene fecha.
+El Server Slam, una prueba de unas horas abierta a cualquiera con una cuenta de World of Warcraft, se celebró el 21 de octubre de 2026 como prueba de estrés.
 
 ## Antes del lanzamiento: códigos y nombres {#antes-del-lanzamiento}
 
 Los códigos de invitación de lanzamiento (Invite-A-Friend) llegan por correo desde el 20 de octubre (PST): uno con el Pack Heroic de los célicos, tres en total con el Pack Epic o la Collection. Las compras como regalo no los incluyen. El amigo al que invitas puede jugar a Forever del 4 al 11 de noviembre sin suscripción, pero no entra en la beta.
 
-La reserva de nombres anticipada va del 27 de octubre al 3 de noviembre (PST) y viene con cualquier edición: puedes reservar nombres para hasta tres personajes, y el primero que llega se lo queda. Blizzard no ha dicho a qué hora empieza. Qué trae cada edición: [ediciones y precios](/es/guides/wow-forever-editions-prices).
+La reserva de nombres anticipada va del 27 de octubre al 3 de noviembre (PST) y viene con cualquier edición: puedes reservar nombres para hasta tres personajes, y el primero que llega se lo queda. Abre el 27 de octubre a las 18:00 CET en Europa (13:00 PDT en Norteamérica), y los tres nombres cuentan entre todos los conjuntos de reglas. Qué trae cada edición: [ediciones y precios](/es/guides/wow-forever-editions-prices).
 
 ## Después del lanzamiento {#despues-del-lanzamiento}
 
-Las bandas nuevas se desbloquean el miércoles 9 de diciembre. Las dos bandas anunciadas son la Cima Hyjal y las Cavernas del Túmulo, pero Blizzard no dice cuáles abren ese día ([zonas, mazmorras y bandas](/es/guides/wow-forever-zones-dungeons-raids)). La Warcraft Forever Collection sigue a la venta hasta el 11 de enero de 2027.
+Las bandas nuevas se desbloquean el miércoles 9 de diciembre. Son tres: las Cavernas del Túmulo, la Cima Hyjal y la Guarida de Onyxia, según el artículo de Blizzard del 20 de octubre ([zonas, mazmorras y bandas](/es/guides/wow-forever-zones-dungeons-raids)). La Warcraft Forever Collection sigue a la venta hasta el 11 de enero de 2027.
 
 Hardcore llegará después del lanzamiento, sin fecha, mientras que los demás conjuntos de reglas empiezan con el juego ([conjuntos de reglas](/es/guides/wow-forever-rulesets)). Los modelos SD de los célicos llegan a principios de 2027. Los planes posteriores de Blizzard (más bandas y mazmorras, novedades JcJ, una banda clásica renovada) tampoco tienen fecha.
 
@@ -302,8 +301,6 @@ Hardcore llegará después del lanzamiento, sin fecha, mientras que los demás c
 ## Lo que aún no sabemos {#lo-que-aun-no-sabemos}
 
 - A qué hora empieza la reserva de nombres.
-- La fecha del Server Slam.
-- Qué bandas se desbloquean el 9 de diciembre.
 - Cuándo llega Hardcore.
 - Si alguna región tendrá otra hora: Blizzard solo da la global.
 
@@ -319,7 +316,7 @@ Hardcore llegará después del lanzamiento, sin fecha, mientras que los demás c
         },
         {
           q: "¿Cuándo termina la beta de WoW Forever?",
-          a: "El 21 de octubre de 2026 (hora del Pacífico), que Blizzard llama el último día completo de pruebas.",
+          a: "El 23 de octubre de 2026 a las 10:00 PDT, las 19:00 en España peninsular. El último día previsto era el 21 de octubre; Blizzard prorrogó la beta dos días el 20 de octubre.",
         },
         {
           q: "¿Hardcore está disponible desde el lanzamiento?",

@@ -4,7 +4,7 @@ export const guide: GuideEntry = {
   slug: "wow-forever-editions-prices",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-10-23",
   cover: { word: "Editions", tone: "gold" },
   sources: [
     {
@@ -84,11 +84,11 @@ The official name is Invite-A-Friend. The Heroic Pack comes with 1 code, the Epi
 
 ## Early Name Reservation {#name-reservation}
 
-Any upgrade purchase includes Early Name Reservation, from 27 October to 3 November 2026 (PST): up to three characters, and names go to whoever claims them first. Blizzard has not said at what time it opens. Key dates are on the [calendar](/en/calendar).
+Any upgrade purchase includes Early Name Reservation, from 27 October to 3 November 2026 (PST): up to three characters, and names go to whoever claims them first. It opens on 27 October at 18:00 CET in Europe and 1:00 p.m. PDT in North America, and the three names count across all rulesets. Key dates are on the [calendar](/en/calendar).
 
 ## Beta access {#beta-access}
 
-The Epic Pack and the Collection include access to the beta, which started on 17 September 2026 and runs through 21 October 2026 (PST). The other way in is opting in for an invitation. The level cap started at 20 and was raised to 30, as a Blizzard forum post confirmed on 1 October. Blizzard has also announced a Server Slam of a few hours open to everyone, still without a date.
+The Epic Pack and the Collection include access to the beta, which ran from 17 September to 23 October 2026 (PST), after a two-day extension. The other way in is opting in for an invitation. The level cap started at 20 and was raised to 30, as a Blizzard forum post confirmed on 1 October. The Server Slam open to everyone took place on 21 October 2026 as a stress test.
 
 ## Collection deadline and Collector's Edition {#collection-and-collectors-edition}
 
@@ -100,7 +100,6 @@ There is also a physical World of Warcraft: Forever Collector's Edition, sold th
 
 - Price and contents of the physical Collector's Edition.
 - The exact time Early Name Reservation opens on 27 October.
-- The date of the Server Slam.
 - Whether prices will change before or after launch: those above are a reading from 10 October 2026.
 
 More answers in the [FAQ](/en/faq).`,
@@ -174,11 +173,11 @@ Il nome ufficiale del programma è Invite-A-Friend. Il Pacchetto Heroic dà 1 co
 
 ## Prenotazione dei nomi {#prenotazione-nomi}
 
-Qualsiasi aggiornamento comprende la prenotazione anticipata dei nomi, dal 27 ottobre al 3 novembre 2026 (ora del Pacifico): fino a tre personaggi, e il nome va a chi lo prende per primo. Blizzard non ha detto a che ora si apre. Le date sono anche nel [calendario](/it/calendar).
+Qualsiasi aggiornamento comprende la prenotazione anticipata dei nomi, dal 27 ottobre al 3 novembre 2026 (ora del Pacifico): fino a tre personaggi, e il nome va a chi lo prende per primo. Apre il 27 ottobre alle 18:00 in Italia (13:00 PDT in Nord America), e i tre nomi contano su tutti i set di regole. Le date sono anche nel [calendario](/it/calendar).
 
 ## Accesso alla beta {#accesso-alla-beta}
 
-Il Pacchetto Epic e la Collection danno l'accesso alla beta, partita il 17 settembre 2026 e aperta fino al 21 ottobre 2026 (ora del Pacifico). L'altra strada è iscriversi per ricevere un invito. Il livello massimo era 20 all'inizio ed è salito a 30, come ha confermato un post di Blizzard sul forum il 1° ottobre. Blizzard ha annunciato anche un Server Slam di qualche ora aperto a tutti, ancora senza data.
+Il Pacchetto Epic e la Collection danno l'accesso alla beta, partita il 17 settembre 2026 e chiusa il 23 ottobre 2026 (ora del Pacifico), dopo una proroga di due giorni. L'altra strada è iscriversi per ricevere un invito. Il livello massimo era 20 all'inizio ed è salito a 30, come ha confermato un post di Blizzard sul forum il 1° ottobre. Il Server Slam aperto a tutti si è tenuto il 21 ottobre 2026 come stress test.
 
 ## Scadenza della Collection e Collector's Edition {#collection-e-collectors-edition}
 
@@ -190,7 +189,6 @@ Esiste anche un'edizione fisica, la World of Warcraft: Forever Collector's Editi
 
 - Prezzo e contenuto della Collector's Edition fisica.
 - L'ora esatta in cui si apre la prenotazione dei nomi il 27 ottobre.
-- La data del Server Slam.
 - Se i prezzi cambieranno prima o dopo il lancio: quelli qui sopra sono letti il 10 ottobre 2026.
 
 Altre risposte nelle [domande frequenti](/it/faq).`,
@@ -268,11 +266,11 @@ Ojo: el artículo para España dice «del 5 al 12 de noviembre» en el texto y d
 
 ## Reserva de nombres {#reserva-de-nombres}
 
-Cualquier mejora incluye la reserva de nombres anticipada, del 27 de octubre al 3 de noviembre de 2026 (hora del Pacífico): hasta tres personajes, y cada nombre es para quien lo reserve primero. Blizzard no ha dicho a qué hora se abre. Fechas en el [calendario](/es/calendar).
+Cualquier mejora incluye la reserva de nombres anticipada, del 27 de octubre al 3 de noviembre de 2026 (hora del Pacífico): hasta tres personajes, y cada nombre es para quien lo reserve primero. Abre el 27 de octubre a las 18:00 CET en Europa (13:00 PDT en Norteamérica), y los tres nombres cuentan entre todos los conjuntos de reglas. Fechas en el [calendario](/es/calendar).
 
 ## Acceso a la beta {#acceso-a-la-beta}
 
-El Pack Epic y la Collection incluyen el acceso a la beta, abierta del 17 de septiembre al 21 de octubre de 2026 (hora del Pacífico). La otra vía es apuntarse para recibir una invitación. El nivel máximo pasó de 20 a 30 (mensaje de Blizzard en el foro del 1 de octubre). Blizzard también ha anunciado un Server Slam de unas horas abierto a todos, todavía sin fecha.
+El Pack Epic y la Collection incluyen el acceso a la beta, abierta del 17 de septiembre al 23 de octubre de 2026 (hora del Pacífico), tras una prórroga de dos días. La otra vía es apuntarse para recibir una invitación. El nivel máximo pasó de 20 a 30 (mensaje de Blizzard en el foro del 1 de octubre). El Server Slam abierto a todos se celebró el 21 de octubre de 2026 como prueba de estrés.
 
 ## La Collection y la edición de coleccionista {#collection-y-edicion-de-coleccionista}
 
@@ -284,7 +282,6 @@ También existe una edición física, la World of Warcraft: Forever Collector's 
 
 - Precio y contenido de la edición de coleccionista física.
 - La hora exacta a la que se abre la reserva de nombres el 27 de octubre.
-- La fecha del Server Slam.
 - Si los precios cambiarán: los de arriba son del 10 de octubre.
 
 Más respuestas en las [preguntas frecuentes](/es/faq).`,

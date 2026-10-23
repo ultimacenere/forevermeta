@@ -56,7 +56,7 @@ export const en = {
     launchWhen: "4 November 2026, 3:00 pm PST",
     launchLocal: "Midnight between 4 and 5 November in Central Europe",
     betaLabel: "Beta",
-    betaWhen: "Until 21 October 2026",
+    betaWhen: "Ended on 23 October 2026",
     ctaGuides: "Start here",
     ctaGlossary: "Open the glossary",
     newsTitle: "Latest news",

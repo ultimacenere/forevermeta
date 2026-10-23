@@ -16,7 +16,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "release-date",
       q: "When does WoW Forever come out?",
-      a: "On 4 November 2026 at 3:00 p.m. PST, which is midnight between 4 and 5 November in Central Europe. The beta runs until 21 October.",
+      a: "On 4 November 2026 at 3:00 p.m. PST, which is midnight between 4 and 5 November in Central Europe. The beta ran until 23 October 2026, after a two-day extension.",
       links: [
         { path: "/guides/wow-forever-release-date", label: "Release date and times" },
         { path: "/calendar", label: "Calendar" },
@@ -43,7 +43,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "beta",
       q: "How do I get into the beta?",
-      a: "By invitation through the opt-in, or with the Skyborne Epic Pack or the Warcraft Forever Collection, which include beta access. The beta ends on 21 October 2026.",
+      a: "By invitation through the opt-in, or with the Skyborne Epic Pack or the Warcraft Forever Collection, which include beta access. The beta ended on 23 October 2026, after a two-day extension announced on 20 October.",
       links: [{ path: "/guides/wow-forever-release-date", label: "Dates of the beta" }],
     },
     {
@@ -69,7 +69,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "release-date",
       q: "Quando esce WoW Forever?",
-      a: "Il 4 novembre 2026 alle 15:00 PST, cioè a mezzanotte fra il 4 e il 5 novembre in Italia. La beta dura fino al 21 ottobre.",
+      a: "Il 4 novembre 2026 alle 15:00 PST, cioè a mezzanotte fra il 4 e il 5 novembre in Italia. La beta è durata fino al 23 ottobre 2026, dopo una proroga di due giorni.",
       links: [
         { path: "/guides/wow-forever-release-date", label: "Data di uscita e orari" },
         { path: "/calendar", label: "Calendario" },
@@ -96,7 +96,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "beta",
       q: "Come si entra nella beta?",
-      a: "Su invito, iscrivendosi all'opt-in, oppure con il Pacchetto Epic Skyborne o la Warcraft Forever Collection, che includono l'accesso alla beta. La beta finisce il 21 ottobre 2026.",
+      a: "Su invito, iscrivendosi all'opt-in, oppure con il Pacchetto Epic Skyborne o la Warcraft Forever Collection, che includono l'accesso alla beta. La beta è finita il 23 ottobre 2026, dopo una proroga di due giorni annunciata il 20 ottobre.",
       links: [{ path: "/guides/wow-forever-release-date", label: "Le date della beta" }],
     },
     {
@@ -122,7 +122,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "release-date",
       q: "¿Cuándo sale WoW Forever?",
-      a: "El 4 de noviembre de 2026 a las 15:00 PST, es decir, a medianoche entre el 4 y el 5 de noviembre en España. La beta dura hasta el 21 de octubre.",
+      a: "El 4 de noviembre de 2026 a las 15:00 PST, es decir, a medianoche entre el 4 y el 5 de noviembre en España. La beta duró hasta el 23 de octubre de 2026, tras una prórroga de dos días.",
       links: [
         { path: "/guides/wow-forever-release-date", label: "Fecha de lanzamiento y horarios" },
         { path: "/calendar", label: "Calendario" },
@@ -149,7 +149,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "beta",
       q: "¿Cómo se entra en la beta?",
-      a: "Por invitación, apuntándote en el opt-in, o con el Pack Epic de los célicos o la Warcraft Forever Collection, que incluyen el acceso a la beta. La beta termina el 21 de octubre de 2026.",
+      a: "Por invitación, apuntándote en el opt-in, o con el Pack Epic de los célicos o la Warcraft Forever Collection, que incluyen el acceso a la beta. La beta terminó el 23 de octubre de 2026, tras una prórroga de dos días anunciada el 20 de octubre.",
       links: [{ path: "/guides/wow-forever-release-date", label: "Las fechas de la beta" }],
     },
     {

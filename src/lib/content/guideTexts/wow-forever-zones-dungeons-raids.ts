@@ -4,9 +4,17 @@ export const guide: GuideEntry = {
   slug: "wow-forever-zones-dungeons-raids",
   category: "world",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-10-23",
   cover: { word: "Riverglades", tone: "sky" },
   sources: [
+    {
+      label: "Explore the New Dungeons of World of Warcraft: Forever (Blizzard News, 20 October 2026)",
+      url: "https://news.blizzard.com/en-us/article/24301455/explore-the-new-dungeons-of-world-of-warcraft-forever",
+    },
+    {
+      label: "World of Warcraft: Forever Raid Overview—Locations, Raid Sizes, and Attunement (Blizzard News, 20 October 2026)",
+      url: "https://news.blizzard.com/en-us/article/24303009/world-of-warcraft-forever-raid-overviewlocations-raid-sizes-and-attunement",
+    },
     {
       label: "World of Warcraft: Forever What's Next Panel Recap (Blizzard News, 12 September 2026)",
       url: "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap",
@@ -38,12 +46,12 @@ export const guide: GuideEntry = {
   ],
   text: {
     en: {
-      title: "WoW Forever zones, dungeons and raids: Riverglades, Mount Hyjal, nine dungeons and two raids",
+      title: "WoW Forever zones, dungeons and raids: Riverglades, Mount Hyjal, nine dungeons and three raids",
       metaTitle: "WoW Forever new zones, dungeons and raids",
       excerpt:
-        "Every new place announced for WoW Forever: Zephras Isle, the Riverglades, Mount Hyjal, Shen'dralas, nine dungeons, two raids and the Darkspear Islands.",
+        "Every new place announced for WoW Forever: Zephras Isle, the Riverglades, Mount Hyjal, Shen'dralas, nine dungeons, three raids and the Darkspear Islands.",
       imageAlt: "ForeverMeta typographic cover with the word «Riverglades» in light blue on a midnight blue background",
-      body: `World of Warcraft: Forever adds four new zones (Zephras Isle, the Riverglades, Mount Hyjal and Shen'dralas), expands the Wetlands and Desolace, and brings nine new dungeons, two raids (the Barrow Deeps and Hyjal Summit) and a new battleground, the Darkspear Islands. Here is what Blizzard has said about each, and which levels are known so far.
+      body: `World of Warcraft: Forever adds four new zones (Zephras Isle, the Riverglades, Mount Hyjal and Shen'dralas), expands the Wetlands and Desolace, and brings nine new dungeons, three raids on 9 December (the Barrow Deeps, Hyjal Summit and Onyxia's Lair) and a new battleground, the Darkspear Islands. Here is what Blizzard has said about each, with the levels it published on 20 October 2026.
 
 ## New zones {#new-zones}
 
@@ -80,28 +88,33 @@ The Found Photos recap also lists two existing zones that grow: the Wetlands and
 
 ## The nine new dungeons {#dungeons}
 
-| Dungeon | Levels | Status |
-|---|---|---|
-| Hall of Thanes (beneath Ironforge) | 13–18 | In the beta |
-| Ruins of Lordaeron | 15–20 | In the beta |
-| Excavation Site: Wetlands (above Whelgar's Excavation) | 26–31 | In the beta since the 1 October build |
-| City of Dalaran | Not published | Testable since the 8 October build |
-| Blackmaw Hold | Not published | Announced |
-| Drowned City | Not published | Announced |
-| Krol'dok Stronghold | Not published | Announced |
-| Alcaz Prison | Not published | Announced |
-| Shaper's Terrace | Not published | Announced |
+All nine are five-player dungeons. Levels and locations come from Blizzard's article "Explore the New Dungeons of World of Warcraft: Forever" of 20 October 2026.
 
-The full list comes from the What's Next recap. The first two level ranges are from the beta article of 17 September; the excavation's name and levels and the Dalaran test come from Blizzard's beta development notes on the official forum.
+| Dungeon | Levels | Where |
+|---|---|---|
+| Hall of Thanes | 13–18 | Beneath Ironforge, Dun Morogh |
+| Ruins of Lordaeron | 15–20 | The ruins above the Undercity, Tirisfal Glades |
+| Excavation Site | 24–29 | Above Whelgar's Excavation, Wetlands |
+| City of Dalaran | 28–33 | Alterac Mountains |
+| The Drowned City | 35–40 | Off the coast of Stranglethorn Vale, west of Grom'gol |
+| Krol'dok Stronghold | 40–45 | Riverglades |
+| Alcaz Prison | 48–53 | Alcaz Island, Dustwallow Marsh |
+| Blackmaw Hold | 55–60 | Azshara |
+| Shaper's Terrace | 58–60 | The northern hills of Un'Goro Crater |
+
+Hall of Thanes is easy to reach for the Alliance and in enemy territory for the Horde; Ruins of Lordaeron the other way round. City of Dalaran needs an attunement questline: "An Alarming Request" from Emissary Jacques in Southshore for the Alliance, "Key to the City" and "Prison Break-In" from Magus Wordeen Voidglare in Tarren Mill for the Horde. In the beta the excavation was called "Excavation Site: Wetlands" and the development notes of 1 October gave it levels 26–31; the article's 24–29 is the newer figure. What each dungeon is about is in our [news on the article](/en/news/nine-dungeons-levels-and-raids-december-9).
 
 ## Raids {#raids}
 
-| Raid | Size | Bosses |
-|---|---|---|
-| Barrow Deeps | 10 players, maximum level | 8 |
-| Hyjal Summit | 20 players | 13 |
+Three level 60 raids open on 9 December 2026, according to Blizzard's "Raid Overview" of 20 October:
 
-Blizzard plans the Barrow Deeps as a maximum-level 10-player challenge and Hyjal Summit as 20-player encounters. The boss counts come from the [Legacy System](/en/guides/wow-forever-legacy-system) challenges, which ask you to defeat all 13 Hyjal Summit bosses and all 8 Barrow Deeps bosses. Blizzard also says new raids unlock on 9 December, without saying which ones, and mentions new tier sets and a legendary reward without details. Dates are on the [calendar](/en/calendar).
+| Raid | Size | Bosses | Where |
+|---|---|---|---|
+| The Barrow Deeps | 10 players | 8 | Within Mount Hyjal, with entrances from Mount Hyjal, Winterspring and Blackmaw Hold |
+| Hyjal Summit | 20 players | 13 | The summit of Mount Hyjal, near Nordrassil |
+| Onyxia's Lair | 40 players | 1 (Onyxia) | Dustwallow Marsh |
+
+The Barrow Deeps is the prison that held Illidan Stormrage for 10,000 years. Hyjal Summit opens with an ancient guardian and then offers multiple paths above and below ground. Onyxia's Lair returns as a three-phase fight with heavy fire damage: every raider needs the Drakefire Amulet in their bags, earned through a faction-specific questline that ends in Upper Blackrock Spire. Blizzard says all raids are "currently planned" to reset weekly. The boss counts of the two new raids match the [Legacy System](/en/guides/wow-forever-legacy-system) challenges. Blizzard also mentions new tier sets and a legendary reward without details, and in the podcast of 22 October it described Molten Core as "reimagined", without a date. Dates are on the [calendar](/en/calendar).
 
 ## Darkspear Islands battleground {#darkspear-islands}
 
@@ -111,11 +124,10 @@ The two sides are the Darkspear Raiders, based on the Merchant Coast in the Barr
 
 ## What we don't know yet {#what-we-dont-know}
 
-- The levels of six of the nine dungeons, and the boss count of every dungeon.
+- The boss count of every dungeon.
 - The levels of Mount Hyjal and Shen'dralas.
-- Which raids unlock on 9 December.
 - The final number of quests in the Riverglades.
-- The name of the revamped iconic raid Blizzard lists among later updates.
+- When the "reimagined" Molten Core opens.
 
 More answers in the [FAQ](/en/faq).`,
       faq: [
@@ -125,7 +137,7 @@ More answers in the [FAQ](/en/faq).`,
         },
         {
           q: "How many players are WoW Forever's new raids for?",
-          a: "The Barrow Deeps is a 10-player raid at maximum level with 8 bosses; Hyjal Summit is for 20 players and has 13 bosses.",
+          a: "The Barrow Deeps is a 10-player raid at level 60 with 8 bosses, Hyjal Summit is for 20 players with 13 bosses, and Onyxia's Lair is for 40 players. All three open on 9 December 2026.",
         },
         {
           q: "Is it Riverglades or Riverlands?",
@@ -134,12 +146,12 @@ More answers in the [FAQ](/en/faq).`,
       ],
     },
     it: {
-      title: "WoW Forever, zone, dungeon e raid: Riverglades, Mount Hyjal, nove spedizioni e due incursioni",
+      title: "WoW Forever, zone, dungeon e raid: Riverglades, Mount Hyjal, nove spedizioni e tre incursioni",
       metaTitle: "WoW Forever: nuove zone, dungeon e raid",
       excerpt:
-        "Tutti i luoghi nuovi annunciati per WoW Forever: Zephras Isle, Riverglades, Mount Hyjal, Shen'dralas, nove dungeon, due raid e le Darkspear Islands.",
+        "Tutti i luoghi nuovi annunciati per WoW Forever: Zephras Isle, Riverglades, Mount Hyjal, Shen'dralas, nove dungeon, tre raid e le Darkspear Islands.",
       imageAlt: "Copertina tipografica di ForeverMeta con la scritta «Riverglades» in azzurro su fondo blu notte",
-      body: `World of Warcraft: Forever aggiunge quattro zone nuove (Zephras Isle, Riverglades, Mount Hyjal e Shen'dralas), amplia Wetlands e Desolace e porta nove dungeon (spedizioni) nuovi, due raid (incursioni), Barrow Deeps e Hyjal Summit, e un campo di battaglia nuovo, le Darkspear Islands. Il client non ha l'italiano, quindi i nomi restano in inglese, come nelle pagine italiane di Blizzard. Ecco cosa ha detto Blizzard su ognuno e quali livelli si conoscono.
+      body: `World of Warcraft: Forever aggiunge quattro zone nuove (Zephras Isle, Riverglades, Mount Hyjal e Shen'dralas), amplia Wetlands e Desolace e porta nove dungeon (spedizioni) nuovi, tre raid (incursioni) dal 9 dicembre, Barrow Deeps, Hyjal Summit e Onyxia's Lair, e un campo di battaglia nuovo, le Darkspear Islands. Il client non ha l'italiano, quindi i nomi restano in inglese, come nelle pagine italiane di Blizzard. Ecco cosa ha detto Blizzard su ognuno, con i livelli pubblicati il 20 ottobre 2026.
 
 ## Le zone nuove {#zone-nuove}
 
@@ -176,28 +188,33 @@ Il riepilogo Found Photos cita anche due zone esistenti che si allargano: Wetlan
 
 ## I nove dungeon nuovi {#dungeon}
 
-| Dungeon | Livelli | Stato |
-|---|---|---|
-| Hall of Thanes (sotto Ironforge) | 13–18 | Nella beta |
-| Ruins of Lordaeron | 15–20 | Nella beta |
-| Excavation Site: Wetlands (sopra Whelgar's Excavation) | 26–31 | Nella beta dalla build del 1° ottobre |
-| City of Dalaran | Non pubblicati | In prova dalla build dell'8 ottobre |
-| Blackmaw Hold | Non pubblicati | Annunciato |
-| Drowned City | Non pubblicati | Annunciato |
-| Krol'dok Stronghold | Non pubblicati | Annunciato |
-| Alcaz Prison | Non pubblicati | Annunciato |
-| Shaper's Terrace | Non pubblicati | Annunciato |
+Sono tutti dungeon per cinque giocatori. Livelli e luoghi vengono dall'articolo di Blizzard «Esplora le nuove Spedizioni di World of Warcraft: Forever» del 20 ottobre 2026.
 
-L'elenco completo viene dal riepilogo What's Next. I primi due intervalli di livello sono nell'articolo della beta del 17 settembre; nome e livelli dello scavo e la prova di Dalaran vengono dalle note di sviluppo della beta sul forum ufficiale.
+| Dungeon | Livelli | Dove |
+|---|---|---|
+| Hall of Thanes | 13–18 | Sotto Ironforge, Dun Morogh |
+| Ruins of Lordaeron | 15–20 | Le rovine sopra Undercity, Tirisfal Glades |
+| Excavation Site | 24–29 | Sopra Whelgar's Excavation, Wetlands |
+| City of Dalaran | 28–33 | Alterac Mountains |
+| The Drowned City | 35–40 | Al largo di Stranglethorn Vale, a ovest di Grom'gol |
+| Krol'dok Stronghold | 40–45 | Riverglades |
+| Alcaz Prison | 48–53 | Alcaz Island, Dustwallow Marsh |
+| Blackmaw Hold | 55–60 | Azshara |
+| Shaper's Terrace | 58–60 | Le colline a nord di Un'Goro Crater |
+
+Hall of Thanes è comodo per l'Alleanza e in territorio nemico per l'Orda; Ruins of Lordaeron il contrario. City of Dalaran richiede una catena di attunement: «An Alarming Request» da Emissary Jacques a Southshore per l'Alleanza, «Key to the City» e «Prison Break-In» da Magus Wordeen Voidglare a Tarren Mill per l'Orda. In beta lo scavo si chiamava «Excavation Site: Wetlands» e le note di sviluppo del 1° ottobre gli davano i livelli 26–31; il 24–29 dell'articolo è il dato più recente. Di cosa parla ogni dungeon è nella nostra [news sull'articolo](/it/news/nine-dungeons-levels-and-raids-december-9).
 
 ## Le incursioni {#raid}
 
-| Raid | Giocatori | Boss |
-|---|---|---|
-| Barrow Deeps | 10, al livello massimo | 8 |
-| Hyjal Summit | 20 | 13 |
+Il 9 dicembre 2026 aprono tre incursioni di livello 60, secondo la «Panoramica sulle incursioni» di Blizzard del 20 ottobre:
 
-Blizzard prevede Barrow Deeps come sfida per 10 giocatori al livello massimo e Hyjal Summit con scontri per 20. Il numero dei boss viene dalle sfide del [Legacy System](/it/guides/wow-forever-legacy-system), che chiedono di sconfiggere tutti i 13 boss di Hyjal Summit e tutti gli 8 di Barrow Deeps. Blizzard dice anche che nuovi raid si sbloccano il 9 dicembre, senza dire quali, e annuncia nuovi set tier e una ricompensa leggendaria senza dettagli. Le date sono nel [calendario](/it/calendar).
+| Raid | Giocatori | Boss | Dove |
+|---|---|---|---|
+| The Barrow Deeps | 10 | 8 | Dentro Mount Hyjal, con ingressi da Mount Hyjal, Winterspring e Blackmaw Hold |
+| Hyjal Summit | 20 | 13 | La cima di Mount Hyjal, vicino a Nordrassil |
+| Onyxia's Lair | 40 | 1 (Onyxia) | Dustwallow Marsh |
+
+Barrow Deeps è la prigione che ha tenuto Illidan Stormrage per 10.000 anni. Hyjal Summit si apre con un guardiano antico e poi offre più percorsi, sopra e sotto terra. Onyxia's Lair torna come scontro in tre fasi con molto danno da fuoco: ogni membro dell'incursione deve avere nelle borse il Drakefire Amulet, che si ottiene con una catena di missioni diversa per fazione e che finisce in Upper Blackrock Spire. Blizzard dice che tutte le incursioni, «secondo i piani attuali», si azzerano ogni settimana. Il numero dei boss delle due incursioni nuove coincide con le sfide del [Legacy System](/it/guides/wow-forever-legacy-system). Blizzard annuncia anche nuovi set tier e una ricompensa leggendaria senza dettagli, e nel podcast del 22 ottobre ha descritto Molten Core come «reimagined», senza una data. Le date sono nel [calendario](/it/calendar).
 
 ## Il campo di battaglia Darkspear Islands {#darkspear-islands}
 
@@ -207,11 +224,10 @@ Le due parti sono i Darkspear Raiders, con base a Merchant Coast nelle Barrens, 
 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
-- I livelli di sei dei nove dungeon e il numero di boss di ogni dungeon.
+- Il numero di boss di ogni dungeon.
 - I livelli di Mount Hyjal e Shen'dralas.
-- Quali raid si sbloccano il 9 dicembre.
 - Il numero definitivo di missioni a Riverglades.
-- Il nome del raid storico rinnovato che Blizzard mette fra gli aggiornamenti futuri.
+- Quando apre il Molten Core «reimagined».
 
 Altre risposte nelle [domande frequenti](/it/faq).`,
       faq: [
@@ -221,7 +237,7 @@ Altre risposte nelle [domande frequenti](/it/faq).`,
         },
         {
           q: "Per quanti giocatori sono i nuovi raid di WoW Forever?",
-          a: "Barrow Deeps è per 10 giocatori al livello massimo e ha 8 boss; Hyjal Summit è per 20 e ha 13 boss.",
+          a: "Barrow Deeps è per 10 giocatori di livello 60 e ha 8 boss, Hyjal Summit è per 20 e ha 13 boss, Onyxia's Lair è per 40. Aprono tutte e tre il 9 dicembre 2026.",
         },
         {
           q: "Si chiama Riverglades o Riverlands?",
@@ -230,12 +246,12 @@ Altre risposte nelle [domande frequenti](/it/faq).`,
       ],
     },
     es: {
-      title: "Zonas, mazmorras y bandas de WoW Forever: Clarofluvial, Monte Hyjal, nueve mazmorras y dos bandas",
+      title: "Zonas, mazmorras y bandas de WoW Forever: Clarofluvial, Monte Hyjal, nueve mazmorras y tres bandas",
       metaTitle: "WoW Forever: nuevas zonas, mazmorras y bandas",
       excerpt:
-        "Todos los lugares nuevos de WoW Forever: Isla de Zephras, Clarofluvial, Monte Hyjal, Shen'dralas, nueve mazmorras, dos bandas y las Islas Lanza Negra.",
+        "Todos los lugares nuevos de WoW Forever: Isla de Zephras, Clarofluvial, Monte Hyjal, Shen'dralas, nueve mazmorras, tres bandas y las Islas Lanza Negra.",
       imageAlt: "Portada tipográfica de ForeverMeta con la palabra «Riverglades» en azul claro sobre fondo azul noche",
-      body: `World of Warcraft: Forever añade cuatro zonas nuevas (la Isla de Zephras, Clarofluvial, el Monte Hyjal y Shen'dralas), amplía Los Humedales y Desolace y trae nueve mazmorras nuevas, dos bandas (las Cavernas del Túmulo y la Cima Hyjal) y un campo de batalla nuevo, las Islas Lanza Negra. Esto es lo que ha contado Blizzard de cada una y los niveles que se conocen.
+      body: `World of Warcraft: Forever añade cuatro zonas nuevas (la Isla de Zephras, Clarofluvial, el Monte Hyjal y Shen'dralas), amplía Los Humedales y Desolace y trae nueve mazmorras nuevas, tres bandas desde el 9 de diciembre (las Cavernas del Túmulo, la Cima Hyjal y la Guarida de Onyxia) y un campo de batalla nuevo, las Islas Lanza Negra. Esto es lo que ha contado Blizzard de cada una, con los niveles publicados el 20 de octubre de 2026.
 
 ## Zonas nuevas {#zonas-nuevas}
 
@@ -272,28 +288,33 @@ Según el resumen Found Photos, dos zonas existentes crecen: Los Humedales y Des
 
 ## Las nueve mazmorras nuevas {#mazmorras}
 
-| Inglés | España | Latinoamérica | Niveles |
-|---|---|---|---|
-| Hall of Thanes | Salón de los Feudales | Salón de Señores Feudales | 13–18 |
-| Ruins of Lordaeron | Ruinas de Lordaeron | Ruinas de Lordaeron | 15–20 |
-| Excavation Site: Wetlands | Sobre la Excavación de Whelgar | Sobre la Excavación de Whelgar | 26–31 |
-| City of Dalaran | Ciudad de Dalaran | Ciudad de Dalaran | Sin publicar |
-| Blackmaw Hold | Bastión Faucenegra | Bastión Faucenegra | Sin publicar |
-| Drowned City | Ciudad Sumergida | Ciudad Anegada | Sin publicar |
-| Krol'dok Stronghold | Bastión Krol'dok | Bastión de Krol'dok | Sin publicar |
-| Alcaz Prison | Prisión de Alcaz | Prisión de Alcaz | Sin publicar |
-| Shaper's Terrace | Bancal del Creador | Bancal del Creador | Sin publicar |
+Todas son mazmorras para cinco jugadores. Niveles y lugares salen del artículo de Blizzard «Explore the New Dungeons of World of Warcraft: Forever» del 20 de octubre de 2026.
 
-La lista sale del resumen What's Next; los niveles, del artículo de la beta del 17 de septiembre y de las notas de desarrollo del foro oficial. El Salón de los Feudales está bajo Forjaz. Los anuncios en español describen la excavación como un lugar sobre la Excavación de Whelgar; en la beta se llama Excavation Site: Wetlands desde la versión del 1 de octubre, y la Ciudad de Dalaran se puede probar desde la del 8 de octubre.
+| Inglés | España | Latinoamérica | Niveles | Dónde |
+|---|---|---|---|---|
+| Hall of Thanes | Salón de los Feudales | Salón de Señores Feudales | 13–18 | Bajo Forjaz, Dun Morogh |
+| Ruins of Lordaeron | Ruinas de Lordaeron | Ruinas de Lordaeron | 15–20 | Las ruinas sobre Entrañas, Claros de Tirisfal |
+| Excavation Site | Sobre la Excavación de Whelgar | Sobre la Excavación de Whelgar | 24–29 | Los Humedales |
+| City of Dalaran | Ciudad de Dalaran | Ciudad de Dalaran | 28–33 | Montañas de Alterac |
+| Drowned City | Ciudad Sumergida | Ciudad Anegada | 35–40 | Frente a la costa de la Vega de Tuercespina, al oeste de Grom'gol |
+| Krol'dok Stronghold | Bastión Krol'dok | Bastión de Krol'dok | 40–45 | Clarofluvial |
+| Alcaz Prison | Prisión de Alcaz | Prisión de Alcaz | 48–53 | Isla de Alcaz, Marjal Revolcafango |
+| Blackmaw Hold | Bastión Faucenegra | Bastión Faucenegra | 55–60 | Azshara |
+| Shaper's Terrace | Bancal del Creador | Bancal del Creador | 58–60 | Las colinas del norte del Cráter de Un'Goro |
+
+El Salón de los Feudales es cómodo para la Alianza y está en territorio enemigo para la Horda; las Ruinas de Lordaeron, al revés. La Ciudad de Dalaran exige una cadena de sintonización: «An Alarming Request» del emisario Jacques en Costasur para la Alianza, «Key to the City» y «Prison Break-In» del magus Wordeen Voidglare en el Molino Tarren para la Horda. En la beta la excavación se llamaba «Excavation Site: Wetlands» y las notas de desarrollo del 1 de octubre le daban los niveles 26–31; el 24–29 del artículo es el dato más reciente. De qué va cada mazmorra está en nuestra [noticia sobre el artículo](/es/news/nine-dungeons-levels-and-raids-december-9).
 
 ## Bandas {#bandas}
 
-| Banda | Jugadores | Jefes |
-|---|---|---|
-| Cavernas del Túmulo | 10, nivel máximo | 8 |
-| Cima Hyjal | 20 | 13 |
+El 9 de diciembre de 2026 abren tres bandas de nivel 60, según el «Raid Overview» de Blizzard del 20 de octubre:
 
-El número de jefes sale de los desafíos del [sistema de legado](/es/guides/wow-forever-legacy-system), que piden derrotar a los 13 jefes de la Cima Hyjal y a los 8 de las Cavernas del Túmulo. Blizzard dice también que las nuevas bandas se desbloquean el 9 de diciembre, sin decir cuáles, y anuncia nuevos conjuntos de tier y una recompensa legendaria sin detalles. Tienes las fechas en el [calendario](/es/calendar).
+| Banda | Jugadores | Jefes | Dónde |
+|---|---|---|---|
+| Cavernas del Túmulo (The Barrow Deeps) | 10 | 8 | Dentro del Monte Hyjal, con entradas desde el Monte Hyjal, Cuna del Invierno y Bastión Faucenegra |
+| Cima Hyjal | 20 | 13 | La cima del Monte Hyjal, junto a Nordrassil |
+| Guarida de Onyxia | 40 | 1 (Onyxia) | Marjal Revolcafango |
+
+Las Cavernas del Túmulo son la prisión que retuvo a Illidan Tempestira durante 10 000 años. La Cima Hyjal empieza con un guardián ancestral y luego ofrece varios caminos, sobre y bajo tierra. La Guarida de Onyxia vuelve como un combate en tres fases con mucho daño de fuego: cada miembro de la banda necesita en las bolsas el Drakefire Amulet, que se consigue con una cadena de misiones distinta por facción y que termina en Cumbre de Roca Negra Superior. Blizzard dice que todas las bandas, «según los planes actuales», se reinician cada semana. El número de jefes de las dos bandas nuevas coincide con los desafíos del [sistema de legado](/es/guides/wow-forever-legacy-system). Blizzard anuncia también nuevos conjuntos de tier y una recompensa legendaria sin detalles, y en el pódcast del 22 de octubre describió el Núcleo de Magma como «reimagined», sin fecha. Tienes las fechas en el [calendario](/es/calendar).
 
 ## El campo de batalla de las Islas Lanza Negra {#islas-lanza-negra}
 
@@ -303,11 +324,10 @@ Los dos bandos son los Asaltantes Lanza Negra, con base en la Merchant Coast de 
 
 ## Lo que aún no sabemos {#lo-que-aun-no-sabemos}
 
-- Los niveles de seis de las nueve mazmorras y el número de jefes de cada una.
+- El número de jefes de cada mazmorra.
 - Los niveles del Monte Hyjal y de Shen'dralas.
-- Qué bandas se desbloquean el 9 de diciembre.
 - El número definitivo de misiones de Clarofluvial.
-- El nombre de la banda clásica renovada que Blizzard incluye entre las actualizaciones futuras.
+- Cuándo abre el Núcleo de Magma «reimagined».
 
 Más respuestas en las [preguntas frecuentes](/es/faq).`,
       faq: [
@@ -317,7 +337,7 @@ Más respuestas en las [preguntas frecuentes](/es/faq).`,
         },
         {
           q: "¿Para cuántos jugadores son las nuevas bandas de WoW Forever?",
-          a: "Las Cavernas del Túmulo son para 10 jugadores de nivel máximo y tienen 8 jefes; la Cima Hyjal es para 20 y tiene 13 jefes.",
+          a: "Las Cavernas del Túmulo son para 10 jugadores de nivel 60 y tienen 8 jefes, la Cima Hyjal es para 20 y tiene 13 jefes, y la Guarida de Onyxia es para 40. Las tres abren el 9 de diciembre de 2026.",
         },
         {
           q: "¿Riverglades y Clarofluvial son la misma zona?",

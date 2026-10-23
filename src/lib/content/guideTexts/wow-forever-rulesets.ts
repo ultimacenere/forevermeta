@@ -4,12 +4,20 @@ export const guide: GuideEntry = {
   slug: "wow-forever-rulesets",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-10-23",
   cover: { word: "Rulesets", tone: "gold" },
   sources: [
     {
-      label: "Choose Your Ruleset in World of Warcraft: Forever (Blizzard News, September 21, 2026)",
-      url: "https://news.blizzard.com/en-us/article/24302070/choose-your-ruleset-in-world-of-warcraft-forever",
+      label: "Choose Your Ruleset in World of Warcraft: Forever (Blizzard News, September 21, 2026, updated October 22)",
+      url: "https://news.blizzard.com/en-us/article/24302070/updated-10-22-choose-your-ruleset-in-world-of-warcraft-forever",
+    },
+    {
+      label: "The Roleplay-PvP Ruleset is Coming to WoW Forever (Aggrend, Blizzard forums, October 22, 2026)",
+      url: "https://us.forums.blizzard.com/en/wow/t/the-roleplay-pvp-ruleset-is-coming-to-wow-forever/2389502",
+    },
+    {
+      label: "Claim Your World of Warcraft: Forever Character Names (Blizzard News, October 20, 2026)",
+      url: "https://news.blizzard.com/en-us/article/24303866/claim-your-world-of-warcraft-forever-character-names",
     },
     {
       label: "Create a Name of Your Own in WoW: Forever (Blizzard News, September 21, 2026)",
@@ -35,22 +43,27 @@ export const guide: GuideEntry = {
       excerpt:
         "WoW Forever has no realms: you pick a ruleset. What Normal, PvP, Roleplaying and Hardcore mean, who you can group with and what stays account-wide.",
       imageAlt: "ForeverMeta typographic cover with the word «Rulesets» in gold on a midnight blue background",
-      body: `World of Warcraft: Forever has no realms to choose from: when you create a character you pick a ruleset instead. There are four of them, Normal, PvP, Roleplaying and Hardcore, and Hardcore will only arrive some time after launch. Your choice decides who you can group with, and you cannot change it later.
+      body: `World of Warcraft: Forever has no realms to choose from: when you create a character you pick a ruleset instead. There are five of them: Normal, PvP, Roleplaying, Roleplay-PvP (added on October 22, 2026) and Hardcore, and Hardcore will only arrive some time after launch. Your choice decides who you can group with, and you cannot change it later.
 
-Everything below comes from Blizzard's article "Choose Your Ruleset in World of Warcraft: Forever" of September 21, 2026, plus the BlizzCon Deep Dive panel recap of September 13.
+Everything below comes from Blizzard's article "Choose Your Ruleset in World of Warcraft: Forever" of September 21, 2026 (updated on October 22), the BlizzCon Deep Dive panel recap of September 13 and the forum post of October 22 in which Josh "Aggrend" Greenfield announced the Roleplay-PvP ruleset.
 
-## The four rulesets at a glance {#at-a-glance}
+## The five rulesets at a glance {#at-a-glance}
 
 | Ruleset | Who it is for, according to Blizzard | Available |
 |---|---|---|
 | Normal | "The baseline World of Warcraft experience": exploration, questing, cooperation, and player-versus-player combat only when you choose to engage in it | At launch |
 | PvP | Players who want contested territory to carry more danger, excitement and open-world conflict | At launch |
 | Roleplaying | Players who want to "lean more deeply into the fantasy of Azeroth" and find like-minded adventurers | At launch |
+| Roleplay-PvP | Announced on October 22, 2026 after player feedback; Blizzard has not described it yet | At launch |
 | Hardcore | Players seeking "the ultimate challenge", where every decision matters and death carries lasting consequences | Some time after launch, no date |
 
 The Deep Dive recap adds one detail about Normal: there, player-versus-player combat requires mutual consent.
 
 Blizzard does not call any ruleset the best one, and neither do we: each is described by the kind of player it is meant for.
+
+## Roleplay-PvP, added on October 22 {#roleplay-pvp}
+
+In episode 4 of the WoW Forever Podcast (October 15) Blizzard had explained why it did not plan a Roleplay-PvP ruleset: the roleplaying community is small, and splitting it in a realmless game that needs a critical mass of players had to be weighed carefully. On October 22, Josh "Aggrend" Greenfield announced on the official forum that the team had examined what it would take "and decided to go for it": a Roleplay-PvP ruleset will be available at launch on November 4, and Blizzard is working to make it selectable, with name reservation, from October 27. Blizzard has not published the rules of the new ruleset; the story is in our [news on the announcement](/en/news/roleplay-pvp-ruleset-at-launch).
 
 ## No realms: each ruleset is its own world {#no-realms}
 
@@ -89,7 +102,7 @@ The setting is account-wide, applies to all your characters and has a **24-hour 
 
 ## Character names {#names}
 
-Names are unique per region, as explained in the article "Create a Name of Your Own in WoW: Forever" (September 21). Anyone who buys an upgrade edition gets the Early Name Reservation, from October 27 to November 3, 2026 (PST), for up to three characters, first come first served. Dates are in our [release date guide](/en/guides/wow-forever-release-date), the editions in [editions and prices](/en/guides/wow-forever-editions-prices).
+Names are unique per region, as explained in the article "Create a Name of Your Own in WoW: Forever" (September 21). Anyone who buys an upgrade edition gets the Early Name Reservation, from October 27 to November 3, 2026, for up to three characters in total across all rulesets, first come first served. It opens on October 27 at 18:00 CET in Europe and at 1:00 p.m. PDT in North America (all the times in our [news on the opening times](/en/news/early-name-reservation-october-27-times)). Dates are in our [release date guide](/en/guides/wow-forever-release-date), the editions in [editions and prices](/en/guides/wow-forever-editions-prices).
 
 ## Before you choose {#before-you-choose}
 
@@ -98,20 +111,21 @@ These are not recommendations, just the facts that weigh on the choice:
 - your friends need to be on the same ruleset to group up, run dungeons and raid with you;
 - on PvP your account commits to one faction;
 - the ruleset cannot be changed afterwards;
-- Hardcore will not be available on November 4.
+- Hardcore will not be available on November 4;
+- Roleplay-PvP was announced on October 22 and its rules have not been published.
 
 ## What we don't know yet {#unknowns}
 
 - **When Hardcore arrives**: Blizzard only says "sometime after launch".
 - **How faction balancing works** in Forever: only the comparison with Season of Discovery is official.
 - **How the language preference is used**: Blizzard says you will meet players who share it, not how (for example in the Group Finder that appears in the beta notes).
-- **What time name reservation opens** on October 27: no official source gives the hour.
+- **The rules of Roleplay-PvP**: whether the PvP limit of one faction per account applies to it, and whether it will really be selectable on October 27, which Blizzard presents as a goal.
 
 Localized names of the rulesets are in the [glossary](/en/glossary); more answers in the [FAQ](/en/faq).`,
       faq: [
         {
           q: "Can I choose a server in WoW Forever?",
-          a: "No. Forever is realmless: you choose a ruleset (Normal, PvP or Roleplaying at launch) and play with everyone on that ruleset.",
+          a: "No. Forever is realmless: you choose a ruleset (Normal, PvP, Roleplaying or Roleplay-PvP at launch) and play with everyone on that ruleset.",
         },
         {
           q: "Can I move my character to another ruleset?",
@@ -133,22 +147,27 @@ Localized names of the rulesets are in the [glossary](/en/glossary); more answer
       excerpt:
         "In WoW Forever non ci sono reami: scegli un set di regole. Cosa vogliono dire Normal, PvP, Roleplaying e Hardcore, con chi giochi e cosa vale per l'account.",
       imageAlt: "Copertina tipografica di ForeverMeta con la scritta «Rulesets» in oro su fondo blu notte",
-      body: `In World of Warcraft: Forever non scegli un reame: quando crei un personaggio scegli un set di regole (ruleset). Sono quattro, Normal, PvP, Roleplaying e Hardcore, e Hardcore arriverà solo qualche tempo dopo il lancio. La scelta decide con chi puoi giocare in gruppo e non si cambia più.
+      body: `In World of Warcraft: Forever non scegli un reame: quando crei un personaggio scegli un set di regole (ruleset). Sono cinque: Normal, PvP, Roleplaying, Roleplay-PvP (aggiunto il 22 ottobre 2026) e Hardcore, e Hardcore arriverà solo qualche tempo dopo il lancio. La scelta decide con chi puoi giocare in gruppo e non si cambia più.
 
-I fatti qui sotto vengono dall'articolo di Blizzard "Scegli il tuo set di regole in World of Warcraft: Forever" del 21 settembre 2026 e dal riepilogo del pannello Deep Dive della BlizzCon del 13 settembre.
+I fatti qui sotto vengono dall'articolo di Blizzard "Scegli il tuo set di regole in World of Warcraft: Forever" del 21 settembre 2026 (aggiornato in inglese il 22 ottobre), dal riepilogo del pannello Deep Dive della BlizzCon del 13 settembre e dal post sul forum del 22 ottobre con cui Josh "Aggrend" Greenfield ha annunciato il set Roleplay-PvP.
 
-## I quattro set di regole in breve {#in-breve}
+## I cinque set di regole in breve {#in-breve}
 
 | Set di regole | Per chi è, secondo Blizzard | Disponibile |
 |---|---|---|
 | Normal | L'esperienza di base di World of Warcraft: esplorazione, missioni, cooperazione e combattimento fra giocatori solo quando scegli di farlo | Al lancio |
 | PvP | Per chi vuole che ogni viaggio in territorio conteso porti più pericolo, emozione e scontri nel mondo aperto | Al lancio |
 | Roleplaying | Per chi vuole immergersi di più nella fantasia di Azeroth e cercare avventurieri con la stessa passione | Al lancio |
+| Roleplay-PvP | Annunciato il 22 ottobre 2026 dopo il feedback dei giocatori; Blizzard non l'ha ancora descritto | Al lancio |
 | Hardcore | Per chi cerca la sfida definitiva: ogni decisione conta e la morte ha conseguenze durature | Dopo il lancio, senza data |
 
 Il riepilogo del Deep Dive aggiunge un dettaglio sul Normal: lì il PvP richiede il consenso di tutti e due i giocatori.
 
 Blizzard non dice quale sia il set di regole migliore, e non lo diciamo neanche noi: ognuno è descritto per il tipo di giocatore a cui è pensato.
+
+## Roleplay-PvP, aggiunto il 22 ottobre {#roleplay-pvp}
+
+Nella puntata 4 del podcast di WoW Forever (15 ottobre) Blizzard aveva spiegato perché non prevedeva un set di regole Roleplay-PvP: la community del gioco di ruolo è piccola, e dividerla in un gioco senza reami, che ha bisogno di una massa critica di giocatori, andava valutato con attenzione. Il 22 ottobre Josh "Aggrend" Greenfield ha annunciato sul forum ufficiale che il team ha valutato cosa servisse "e ha deciso di farlo": un set di regole Roleplay-PvP sarà disponibile al lancio del 4 novembre, e Blizzard lavora per renderlo selezionabile, con la prenotazione del nome, dal 27 ottobre. Blizzard non ha pubblicato le regole del set nuovo; la storia è nella nostra [news sull'annuncio](/it/news/roleplay-pvp-ruleset-at-launch).
 
 ## Niente reami: ogni set di regole è un mondo a sé {#niente-reami}
 
@@ -187,7 +206,7 @@ L'impostazione vale per tutto l'account e per tutti i personaggi, e dopo ogni mo
 
 ## I nomi dei personaggi {#nomi}
 
-I nomi sono unici per regione, come spiega l'articolo "Crea un nome solo tuo su WoW: Forever" del 21 settembre. Chi compra un'edizione a pagamento ha la prenotazione anticipata dei nomi, dal 27 ottobre al 3 novembre 2026 (ora del Pacifico), per un massimo di tre personaggi: chi arriva prima prende il nome. Le date sono nella guida alla [data di uscita](/it/guides/wow-forever-release-date), le edizioni in [edizioni e prezzi](/it/guides/wow-forever-editions-prices).
+I nomi sono unici per regione, come spiega l'articolo "Crea un nome solo tuo su WoW: Forever" del 21 settembre. Chi compra un'edizione a pagamento ha la prenotazione anticipata dei nomi, dal 27 ottobre al 3 novembre 2026, per un massimo di tre personaggi in totale su tutti i set di regole: chi arriva prima prende il nome. Apre il 27 ottobre alle 18:00 in Italia (18:00 CET per l'Europa, 13:00 PDT in Nord America; tutti gli orari nella nostra [news sugli orari di apertura](/it/news/early-name-reservation-october-27-times)). Le date sono nella guida alla [data di uscita](/it/guides/wow-forever-release-date), le edizioni in [edizioni e prezzi](/it/guides/wow-forever-editions-prices).
 
 ## Prima di scegliere {#prima-di-scegliere}
 
@@ -196,20 +215,21 @@ Non sono consigli, solo i fatti che pesano sulla scelta:
 - per fare gruppo, dungeon e raid con gli amici dovete stare sullo stesso set di regole;
 - sul PvP il tuo account sceglie una sola fazione;
 - il set di regole non si cambia dopo;
-- Hardcore non ci sarà il giorno del lancio.
+- Hardcore non ci sarà il giorno del lancio;
+- Roleplay-PvP è stato annunciato il 22 ottobre e le sue regole non sono ancora pubblicate.
 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
 - **Quando arriva Hardcore**: Blizzard dice solo "dopo il lancio".
 - **Come funziona il bilanciamento delle fazioni** in Forever: di ufficiale c'è solo il paragone con Season of Discovery.
 - **Come si usa la lingua preferita**: Blizzard dice che incontrerai chi ha la stessa preferenza, non come (per esempio nel Group Finder che compare nelle note della beta).
-- **A che ora apre la prenotazione dei nomi** il 27 ottobre: nessuna fonte ufficiale lo dice.
+- **Le regole del Roleplay-PvP**: se il limite del PvP, una sola fazione per account, vale anche lì, e se sarà davvero selezionabile il 27 ottobre, che Blizzard presenta come un obiettivo.
 
 I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); altre risposte nelle [FAQ](/it/faq).`,
       faq: [
         {
           q: "In WoW Forever posso scegliere un server?",
-          a: "No. Forever non ha reami: scegli un set di regole (al lancio Normal, PvP o Roleplaying) e giochi con tutti quelli dello stesso set.",
+          a: "No. Forever non ha reami: scegli un set di regole (al lancio Normal, PvP, Roleplaying o Roleplay-PvP) e giochi con tutti quelli dello stesso set.",
         },
         {
           q: "Posso spostare un personaggio su un altro set di regole?",
@@ -231,11 +251,11 @@ I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); 
       excerpt:
         "WoW Forever no tiene reinos: eliges un conjunto de reglas. Qué son Normal, JcJ, Rol y Hardcore, con quién puedes jugar y qué se comparte en la cuenta.",
       imageAlt: "Portada tipográfica de ForeverMeta con la palabra «Rulesets» en dorado sobre fondo azul noche",
-      body: `En World of Warcraft: Forever no eliges reino: al crear un personaje eliges un conjunto de reglas. Son cuatro, Normal, JcJ, Rol y Hardcore, y Hardcore llegará algún tiempo después del lanzamiento. Tu elección decide con quién puedes agruparte y no se puede cambiar después.
+      body: `En World of Warcraft: Forever no eliges reino: al crear un personaje eliges un conjunto de reglas. Son cinco: Normal, JcJ, Rol, Rol-JcJ (añadido el 22 de octubre de 2026) y Hardcore, y Hardcore llegará algún tiempo después del lanzamiento. Tu elección decide con quién puedes agruparte y no se puede cambiar después.
 
-Los datos vienen del artículo de Blizzard del 21 de septiembre de 2026 sobre los conjuntos de reglas y del resumen del "Repaso a fondo" de la BlizzCon (13 de septiembre).
+Los datos vienen del artículo de Blizzard del 21 de septiembre de 2026 sobre los conjuntos de reglas (actualizado en inglés el 22 de octubre), del resumen del "Repaso a fondo" de la BlizzCon (13 de septiembre) y del mensaje en el foro del 22 de octubre con el que Josh "Aggrend" Greenfield anunció el conjunto Rol-JcJ.
 
-## Los cuatro conjuntos de reglas de un vistazo {#de-un-vistazo}
+## Los cinco conjuntos de reglas de un vistazo {#de-un-vistazo}
 
 Entre paréntesis, los nombres de Latinoamérica.
 
@@ -244,11 +264,16 @@ Entre paréntesis, los nombres de Latinoamérica.
 | Normal | La experiencia básica de World of Warcraft: exploración, misiones, cooperación y combate entre jugadores solo cuando tú decides participar | En el lanzamiento |
 | JcJ | Para quien quiere que cada viaje a territorio en disputa tenga más peligro, emoción y conflicto en el mundo abierto | En el lanzamiento |
 | Rol (Juego de rol) | Para quien quiere sumergirse más en la fantasía de Azeroth y buscar aventureros con los mismos gustos | En el lanzamiento |
+| Rol-JcJ (Roleplay-PvP) | Anunciado el 22 de octubre de 2026 tras las opiniones de los jugadores; Blizzard aún no lo ha descrito | En el lanzamiento |
 | Hardcore (Extremo) | Para quien busca el desafío definitivo: cada decisión importa y la muerte tiene consecuencias duraderas | Después del lanzamiento, sin fecha |
 
 El resumen del "Repaso a fondo" añade un detalle sobre Normal: allí el combate JcJ requiere el consentimiento de ambos jugadores.
 
 Blizzard no dice cuál es el mejor, y nosotros tampoco.
+
+## Rol-JcJ, añadido el 22 de octubre {#rol-jcj}
+
+En el episodio 4 del pódcast de WoW Forever (15 de octubre) Blizzard había explicado por qué no preveía un conjunto de reglas de rol con JcJ: la comunidad de rol es pequeña, y dividirla en un juego sin reinos, que necesita una masa crítica de jugadores, había que sopesarlo con cuidado. El 22 de octubre Josh "Aggrend" Greenfield anunció en el foro oficial que el equipo había examinado qué haría falta "y decidió hacerlo": un conjunto de reglas Rol-JcJ (Roleplay-PvP) estará disponible en el lanzamiento del 4 de noviembre, y Blizzard trabaja para que se pueda elegir, con reserva de nombre, desde el 27 de octubre. Blizzard no ha publicado las reglas del conjunto nuevo; la historia está en nuestra [noticia sobre el anuncio](/es/news/roleplay-pvp-ruleset-at-launch).
 
 ## Sin reinos: cada conjunto es un mundo propio {#sin-reinos}
 
@@ -287,7 +312,7 @@ Forever tiene cliente en español, así que en tu menú los nombres pueden apare
 
 ## Los nombres de los personajes {#nombres}
 
-Los nombres son únicos por región, como explica el artículo "Crea un nombre verdaderamente tuyo en WoW: Forever" del 21 de septiembre. Quien compra una edición mejorada tiene la reserva de nombres anticipada, del 27 de octubre al 3 de noviembre de 2026 (hora del Pacífico), para un máximo de tres personajes: el primero que llega se queda el nombre. Las fechas están en la guía de la [fecha de lanzamiento](/es/guides/wow-forever-release-date) y las ediciones en [ediciones y precios](/es/guides/wow-forever-editions-prices).
+Los nombres son únicos por región, como explica el artículo "Crea un nombre verdaderamente tuyo en WoW: Forever" del 21 de septiembre. Quien compra una edición mejorada tiene la reserva de nombres anticipada, del 27 de octubre al 3 de noviembre de 2026, para un máximo de tres personajes en total entre todos los conjuntos de reglas: el primero que llega se queda el nombre. Abre el 27 de octubre a las 18:00 CET en Europa y a las 13:00 PDT en Norteamérica (todas las horas en nuestra [noticia sobre los horarios de apertura](/es/news/early-name-reservation-october-27-times)). Las fechas están en la guía de la [fecha de lanzamiento](/es/guides/wow-forever-release-date) y las ediciones en [ediciones y precios](/es/guides/wow-forever-editions-prices).
 
 ## Antes de elegir {#antes-de-elegir}
 
@@ -296,20 +321,21 @@ No son recomendaciones, solo los datos que pesan en la elección:
 - para agruparte, hacer mazmorras y bandas con tus amigos, todos deben estar en el mismo conjunto;
 - en JcJ tu cuenta se queda con una sola facción;
 - el conjunto de reglas no se cambia después;
-- Hardcore no estará disponible el día del lanzamiento.
+- Hardcore no estará disponible el día del lanzamiento;
+- Rol-JcJ se anunció el 22 de octubre y sus reglas aún no se han publicado.
 
 ## Lo que aún no sabemos {#lo-que-no-sabemos}
 
 - **Cuándo llega Hardcore**: Blizzard solo dice "después del lanzamiento". La página para Latinoamérica dice "poco después", pero el original en inglés no da ningún plazo.
 - **Cómo funciona el equilibrio de facciones** en Forever: lo único oficial es la comparación con Season of Discovery.
 - **Cómo se usa el idioma preferido**: Blizzard dice que te encontrarás con quien comparte esa preferencia, no cómo (por ejemplo en el Group Finder que aparece en las notas de la beta).
-- **A qué hora abre la reserva de nombres** el 27 de octubre: ninguna fuente oficial lo dice.
+- **Las reglas de Rol-JcJ**: si el límite del JcJ, una sola facción por cuenta, se aplica también allí, y si se podrá elegir de verdad el 27 de octubre, que Blizzard presenta como un objetivo.
 
 Los nombres de los conjuntos de reglas en cada idioma están en el [glosario](/es/glossary); más respuestas en las [preguntas frecuentes](/es/faq).`,
       faq: [
         {
           q: "¿Puedo elegir servidor en WoW Forever?",
-          a: "No. Forever no tiene reinos: eliges un conjunto de reglas (Normal, JcJ o Rol en el lanzamiento) y juegas con todos los de ese conjunto.",
+          a: "No. Forever no tiene reinos: eliges un conjunto de reglas (Normal, JcJ, Rol o Rol-JcJ en el lanzamiento) y juegas con todos los de ese conjunto.",
         },
         {
           q: "¿Puedo pasar mi personaje a otro conjunto de reglas?",

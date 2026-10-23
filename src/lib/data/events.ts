@@ -19,28 +19,36 @@ export type CalendarEvent = {
 
 const n = (en: string, it: string, es: string): L10n => ({ en, it, es });
 
-/** Fonti ufficiali delle date (raccolta del 10/10/2026). */
+/** Fonti ufficiali delle date (raccolta del 10/10/2026, aggiornata il 23/10/2026). */
 const preorder = {
   label: "Pre-Purchase World of Warcraft: Forever Upgrades (Blizzard News, 12/09/2026)",
   url: "https://news.blizzard.com/en-us/article/24301508/pre-purchase-world-of-warcraft-forever-upgrades-and-begin-your-next-journey-in-azeroth",
 };
-const whatsNext = {
-  label: "World of Warcraft: Forever What's Next Panel Recap (Blizzard News, 12/09/2026)",
-  url: "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap",
+const betaEnd = {
+  label: "The WoW Forever Beta Celebration is Underway (Kaivax, Blizzard forums, 22/10/2026)",
+  url: "https://us.forums.blizzard.com/en/wow/t/the-wow-forever-beta-celebration-is-underway/2389633",
+};
+const names = {
+  label: "Claim Your World of Warcraft: Forever Character Names (Blizzard News, 20/10/2026)",
+  url: "https://news.blizzard.com/en-us/article/24303866/claim-your-world-of-warcraft-forever-character-names",
+};
+const raidOverview = {
+  label: "World of Warcraft: Forever Raid Overview—Locations, Raid Sizes, and Attunement (Blizzard News, 20/10/2026)",
+  url: "https://news.blizzard.com/en-us/article/24303009/world-of-warcraft-forever-raid-overviewlocations-raid-sizes-and-attunement",
 };
 
 export const events: CalendarEvent[] = [
   {
     slug: "beta",
     start: "2026-09-17",
-    end: "2026-10-21",
+    end: "2026-10-23",
     title: n("World of Warcraft: Forever beta", "Beta di World of Warcraft: Forever", "Beta de World of Warcraft: Forever"),
     text: n(
-      "From 17 September to 21 October 2026 (Pacific time), the last full day of testing. Access by invitation or with the Skyborne Epic Pack or the Warcraft Forever Collection.",
-      "Dal 17 settembre al 21 ottobre 2026 (ora del Pacifico), l'ultimo giorno completo di test. Si entra su invito o con lo Skyborne Epic Pack o la Warcraft Forever Collection.",
-      "Del 17 de septiembre al 21 de octubre de 2026 (hora del Pacífico), el último día completo de pruebas. Se entra por invitación o con el Pack Epic de los célicos o la Warcraft Forever Collection.",
+      "From 17 September to 23 October 2026 at 10:00 a.m. PDT (19:00 in Central Europe). The last full day was to be 21 October; Blizzard extended the beta by two days on 20 October. Access by invitation or with the Skyborne Epic Pack or the Warcraft Forever Collection.",
+      "Dal 17 settembre al 23 ottobre 2026 alle 10:00 PDT (le 19:00 in Italia). L'ultimo giorno completo doveva essere il 21 ottobre; Blizzard ha prorogato la beta di due giorni il 20 ottobre. Si entra su invito o con lo Skyborne Epic Pack o la Warcraft Forever Collection.",
+      "Del 17 de septiembre al 23 de octubre de 2026 a las 10:00 PDT (las 19:00 en España peninsular). El último día completo iba a ser el 21 de octubre; Blizzard prorrogó la beta dos días el 20 de octubre. Se entra por invitación o con el Pack Epic de los célicos o la Warcraft Forever Collection.",
     ),
-    source: preorder,
+    source: betaEnd,
   },
   {
     slug: "invite-a-friend",
@@ -57,13 +65,14 @@ export const events: CalendarEvent[] = [
     slug: "name-reservation",
     start: "2026-10-27",
     end: "2026-11-03",
+    startAt: "2026-10-27T18:00:00+01:00",
     title: n("Early Name Reservation", "Prenotazione anticipata dei nomi", "Reserva de nombres anticipada"),
     text: n(
-      "With any upgrade edition you can reserve up to three character names, first come, first served. Blizzard has not announced the opening time.",
-      "Con un'edizione a pagamento puoi prenotare fino a tre nomi di personaggio, a chi arriva prima. Blizzard non ha annunciato l'ora di apertura.",
-      "Con cualquier edición de pago puedes reservar hasta tres nombres de personaje; el primero que llega se lo queda. Blizzard no ha anunciado la hora de apertura.",
+      "With any upgrade edition you can reserve up to three character names in total across all rulesets, first come, first served. It opens on 27 October at 18:00 CET in Europe and at 1:00 p.m. PDT in North America, and closes on 3 November.",
+      "Con un'edizione a pagamento puoi prenotare fino a tre nomi di personaggio in totale su tutti i set di regole, a chi arriva prima. Apre il 27 ottobre alle 18:00 in Italia (18:00 CET) e alle 13:00 PDT in Nord America, e chiude il 3 novembre.",
+      "Con cualquier edición de pago puedes reservar hasta tres nombres de personaje en total entre todos los conjuntos de reglas; el primero que llega se lo queda. Abre el 27 de octubre a las 18:00 CET en Europa y a las 13:00 PDT en Norteamérica, y cierra el 3 de noviembre.",
     ),
-    source: preorder,
+    source: names,
   },
   {
     slug: "launch",
@@ -82,11 +91,11 @@ export const events: CalendarEvent[] = [
     start: "2026-12-09",
     title: n("New raids unlock", "Si sbloccano le nuove incursioni", "Se desbloquean las nuevas bandas"),
     text: n(
-      "Blizzard says new raids unlock on 9 December, without saying which ones. The two announced raids are the Barrow Deeps (10 players) and Hyjal Summit (20 players).",
-      "Blizzard dice che le nuove incursioni si sbloccano il 9 dicembre, senza dire quali. Le due annunciate sono Barrow Deeps (10 giocatori) e Hyjal Summit (20 giocatori).",
-      "Blizzard dice que las nuevas bandas se desbloquean el 9 de diciembre, sin decir cuáles. Las dos anunciadas son las Cavernas del Túmulo (10 jugadores) y la Cima Hyjal (20 jugadores).",
+      "Three level 60 raids open on 9 December: the Barrow Deeps (10 players), Hyjal Summit (20 players) and Onyxia's Lair (40 players, Drakefire Amulet required).",
+      "Il 9 dicembre aprono tre incursioni di livello 60: Barrow Deeps (10 giocatori), Hyjal Summit (20 giocatori) e Onyxia's Lair (40 giocatori, serve il Drakefire Amulet).",
+      "El 9 de diciembre abren tres bandas de nivel 60: las Cavernas del Túmulo (10 jugadores), la Cima Hyjal (20 jugadores) y la Guarida de Onyxia (40 jugadores, hace falta el Drakefire Amulet).",
     ),
-    source: whatsNext,
+    source: raidOverview,
   },
   {
     slug: "collection-end",

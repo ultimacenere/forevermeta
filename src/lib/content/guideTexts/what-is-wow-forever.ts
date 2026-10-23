@@ -4,7 +4,7 @@ export const guide: GuideEntry = {
   slug: "what-is-wow-forever",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-10-23",
   cover: { word: "WoW Forever", tone: "gold" },
   sources: [
     {
@@ -118,7 +118,7 @@ You don't pick a realm, you pick a ruleset: Normal, PvP, Roleplaying or Hardcore
 
 ## Beta and launch {#beta-and-launch}
 
-The beta runs from September 17 to October 21, 2026 (PST), by invitation or with the Epic Pack or the Collection. Early Name Reservation runs from October 27 to November 3. Launch is November 4 at 3:00 p.m. PST, which is midnight between November 4 and 5 in Central Europe. All times and dates: [release date guide](/en/guides/wow-forever-release-date) and the [calendar](/en/calendar).
+The beta ran from September 17 to October 23, 2026 (PST; extended by two days on October 20), by invitation or with the Epic Pack or the Collection. Early Name Reservation runs from October 27 to November 3. Launch is November 4 at 3:00 p.m. PST, which is midnight between November 4 and 5 in Central Europe. All times and dates: [release date guide](/en/guides/wow-forever-release-date) and the [calendar](/en/calendar).
 
 ## Languages {#languages}
 
@@ -208,7 +208,7 @@ Non scegli un reame ma un set di regole (ruleset): Normal, PvP, Roleplaying o Ha
 
 ## Beta e lancio {#beta-e-lancio}
 
-La beta va dal 17 settembre al 21 ottobre 2026 (ora del Pacifico), su invito o con il Pacchetto Epic o la Collection, e la prenotazione anticipata dei nomi dal 27 ottobre al 3 novembre. Il lancio, alle 15:00 PST del 4 novembre, in Italia cade alle 00:00 del 5. Orari e date nella guida alla [data di uscita](/it/guides/wow-forever-release-date) e nel [calendario](/it/calendar).
+La beta è andata dal 17 settembre al 23 ottobre 2026 (ora del Pacifico, prorogata di due giorni il 20 ottobre), su invito o con il Pacchetto Epic o la Collection, e la prenotazione anticipata dei nomi dal 27 ottobre al 3 novembre. Il lancio, alle 15:00 PST del 4 novembre, in Italia cade alle 00:00 del 5. Orari e date nella guida alla [data di uscita](/it/guides/wow-forever-release-date) e nel [calendario](/it/calendar).
 
 ## Lingue: niente italiano {#lingue}
 
@@ -298,7 +298,7 @@ No eliges un reino, sino un conjunto de reglas: Normal, JcJ, Rol o Hardcore (Ext
 
 ## Beta y lanzamiento {#beta-y-lanzamiento}
 
-La beta va del 17 de septiembre al 21 de octubre de 2026 (hora del Pacífico) y la reserva de nombres anticipada del 27 de octubre al 3 de noviembre. El lanzamiento, a las 15:00 PST del 4 de noviembre, cae a las 00:00 del 5 en España peninsular y a las 17:00 del 4 en Ciudad de México. Detalles en la [fecha de lanzamiento](/es/guides/wow-forever-release-date) y el [calendario](/es/calendar).
+La beta fue del 17 de septiembre al 23 de octubre de 2026 (hora del Pacífico, prorrogada dos días el 20 de octubre) y la reserva de nombres anticipada del 27 de octubre al 3 de noviembre. El lanzamiento, a las 15:00 PST del 4 de noviembre, cae a las 00:00 del 5 en España peninsular y a las 17:00 del 4 en Ciudad de México. Detalles en la [fecha de lanzamiento](/es/guides/wow-forever-release-date) y el [calendario](/es/calendar).
 
 ## Idiomas {#idiomas}
 

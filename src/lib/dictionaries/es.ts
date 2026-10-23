@@ -57,7 +57,7 @@ export const es: Dictionary = {
     launchWhen: "4 de noviembre de 2026, 15:00 PST",
     launchLocal: "En España: medianoche entre el 4 y el 5 de noviembre",
     betaLabel: "Beta",
-    betaWhen: "Hasta el 21 de octubre de 2026",
+    betaWhen: "Terminó el 23 de octubre de 2026",
     ctaGuides: "Empieza aquí",
     ctaGlossary: "Abrir el glosario",
     newsTitle: "Últimas noticias",

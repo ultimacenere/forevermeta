@@ -6,6 +6,12 @@ import aggrend from "./newsTexts/aggrend-dungeon-leveling";
 import classDeepDives from "./newsTexts/class-deep-dives";
 import octoberFifteen from "./newsTexts/beta-notes-october-15";
 import levelingPast30 from "./newsTexts/leveling-past-30-video";
+import nameReservation from "./newsTexts/name-reservation-times";
+import nineDungeons from "./newsTexts/nine-dungeons-raids";
+import campingOfficial from "./newsTexts/camping-official";
+import rpPvp from "./newsTexts/roleplay-pvp-ruleset";
+import betaEnd from "./newsTexts/beta-end-celebration";
+import podcast5 from "./newsTexts/podcast-episode-5";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -191,4 +197,10 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   classDeepDives,
   octoberFifteen,
   levelingPast30,
+  nameReservation,
+  nineDungeons,
+  campingOfficial,
+  rpPvp,
+  betaEnd,
+  podcast5,
 ];

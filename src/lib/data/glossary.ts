@@ -44,6 +44,22 @@ export const glossarySources = {
     label: n("Choose Your Ruleset in World of Warcraft: Forever (Blizzard News, 21/09/2026)", "Scegli il tuo set di regole in World of Warcraft: Forever (Blizzard News, 21/09/2026)", "Elige un conjunto de reglas para World of Warcraft: Forever (Blizzard News, 21/09/2026)"),
     url: "https://news.blizzard.com/en-us/article/24302070/choose-your-ruleset-in-world-of-warcraft-forever",
   },
+  rpPvp: {
+    label: n("The Roleplay-PvP Ruleset is Coming to WoW Forever (Aggrend, Blizzard forums, 22/10/2026)", "The Roleplay-PvP Ruleset is Coming to WoW Forever (Aggrend, forum Blizzard, 22/10/2026)", "The Roleplay-PvP Ruleset is Coming to WoW Forever (Aggrend, foros de Blizzard, 22/10/2026)"),
+    url: "https://us.forums.blizzard.com/en/wow/t/the-roleplay-pvp-ruleset-is-coming-to-wow-forever/2389502",
+  },
+  campfire: {
+    label: n("Gather Around the Campfire in World of Warcraft: Forever (Blizzard News, 21/10/2026)", "Siediti accanto al falò in World of Warcraft: Forever (Blizzard News, 21/10/2026)", "Gather Around the Campfire in World of Warcraft: Forever (Blizzard News, 21/10/2026)"),
+    url: "https://news.blizzard.com/en-us/article/24301516/gather-around-the-campfire-in-world-of-warcraft-forever",
+  },
+  names: {
+    label: n("Claim Your World of Warcraft: Forever Character Names (Blizzard News, 20/10/2026)", "Prenota i nomi dei tuoi personaggi in World of Warcraft: Forever (Blizzard News, 20/10/2026)", "Claim Your World of Warcraft: Forever Character Names (Blizzard News, 20/10/2026)"),
+    url: "https://news.blizzard.com/en-us/article/24303866/claim-your-world-of-warcraft-forever-character-names",
+  },
+  raidOverview: {
+    label: n("World of Warcraft: Forever Raid Overview (Blizzard News, 20/10/2026)", "Panoramica sulle incursioni di World of Warcraft: Forever (Blizzard News, 20/10/2026)", "World of Warcraft: Forever Raid Overview (Blizzard News, 20/10/2026)"),
+    url: "https://news.blizzard.com/en-us/article/24303009/world-of-warcraft-forever-raid-overviewlocations-raid-sizes-and-attunement",
+  },
   skyborne: {
     label: n("WoW: Forever Meet the New Skyborne (Blizzard News, 22/09/2026)", "WoW: Forever - Ti presentiamo i nuovi Skyborne (Blizzard News, 22/09/2026)", "Conoce a los nuevos célicos de WoW: Forever (Blizzard News, 22/09/2026)"),
     url: "https://news.blizzard.com/en-us/article/24302071/wow-forever-meet-the-new-skyborne",
@@ -243,9 +259,37 @@ export const glossary: GlossaryTerm[] = [
     source: "foreverPage",
   },
   { id: "basic-campfire", category: "system", en: "Basic Campfire", it: en("Basic Campfire"), es: o("hoguera básica"), mx: o("hoguera básica"), note: noItalian, source: "whatsNext" },
+  {
+    id: "camp-feature",
+    category: "system",
+    en: "camp feature",
+    it: en("camp feature"),
+    es: en("objeto de campamento"),
+    mx: en("objeto de campamento"),
+    note: n(
+      "A profession-made object placed at a campfire (up to three on a Basic Campfire); its buff is exclusive with a class buff.",
+      "Oggetto fatto con una professione e piazzato a un fuoco (fino a tre su un Basic Campfire); il suo buff si esclude con un buff di classe.",
+      "Objeto hecho con una profesión y colocado en una hoguera (hasta tres en una hoguera básica); su beneficio es excluyente con uno de clase.",
+    ),
+    source: "campfire",
+  },
   { id: "ruleset", category: "system", en: "ruleset", it: o("set di regole"), es: o("conjunto de reglas"), mx: o("reglas"), source: "rulesets" },
   { id: "ruleset-pvp", category: "system", en: "PvP (ruleset)", it: o("PvP"), es: o("JcJ"), mx: o("JcJ"), source: "rulesets" },
   { id: "ruleset-rp", category: "system", en: "Roleplaying (ruleset)", it: o("Roleplaying"), es: o("Rol"), mx: o("Juego de rol"), source: "rulesets" },
+  {
+    id: "ruleset-rp-pvp",
+    category: "system",
+    en: "Roleplay-PvP (ruleset)",
+    it: en("Roleplay-PvP"),
+    es: en("Rol-JcJ"),
+    mx: en("Rol-JcJ"),
+    note: n(
+      "Added on 22 October 2026 for launch; Blizzard has not published its rules or localized names yet.",
+      "Aggiunto il 22 ottobre 2026 per il lancio; Blizzard non ha ancora pubblicato le regole né i nomi nelle altre lingue.",
+      "Añadido el 22 de octubre de 2026 para el lanzamiento; Blizzard aún no ha publicado sus reglas ni los nombres en otros idiomas.",
+    ),
+    source: "rpPvp",
+  },
   {
     id: "ruleset-hardcore",
     category: "system",
@@ -261,10 +305,10 @@ export const glossary: GlossaryTerm[] = [
   { id: "game-time", category: "system", en: "Game Time", it: o("tempo di gioco"), es: o("tiempo de juego"), mx: o("tiempo de juego"), source: "factSheet" },
   // Contenuti
   { id: "dungeon", category: "content", en: "dungeon", it: o("spedizione"), es: o("mazmorra"), mx: o("calabozo"), note: n("Forever has 9 new ones.", "Forever ne ha 9 nuove.", "Forever tiene 9 nuevas."), source: "factSheet" },
-  { id: "raid", category: "content", en: "raid", it: o("incursione"), es: o("banda"), mx: o("banda"), note: n("New raids unlock on 9 December.", "Le nuove incursioni si sbloccano il 9 dicembre.", "Las nuevas bandas se desbloquean el 9 de diciembre."), source: "factSheet" },
+  { id: "raid", category: "content", en: "raid", it: o("incursione"), es: o("banda"), mx: o("banda"), note: n("Three open on 9 December: the Barrow Deeps, Hyjal Summit and Onyxia's Lair.", "Il 9 dicembre ne aprono tre: Barrow Deeps, Hyjal Summit e Onyxia's Lair.", "El 9 de diciembre abren tres: Cavernas del Túmulo, Cima Hyjal y Guarida de Onyxia."), source: "raidOverview" },
   { id: "end-game", category: "content", en: "end game", it: o("gioco di livello massimo"), es: o("sistema poscampaña"), mx: o("fase final del juego"), source: "factSheet" },
   { id: "quests", category: "content", en: "quests", it: o("missioni"), es: o("misiones"), mx: o("misiones"), note: n("Over 1,000 new ones.", "Oltre 1.000 nuove.", "Más de 1000 nuevas."), source: "factSheet" },
-  { id: "early-name-reservation", category: "content", en: "Early Name Reservation", it: o("prenotazione anticipata dei nomi"), es: o("reserva de nombres anticipada"), mx: o("reserva anticipada de nombres"), note: n("27 October – 3 November 2026 (PST), with any upgrade.", "Dal 27 ottobre al 3 novembre 2026 (PST), con un'edizione a pagamento.", "Del 27 de octubre al 3 de noviembre de 2026 (PST), con cualquier edición de pago."), source: "shop" },
+  { id: "early-name-reservation", category: "content", en: "Early Name Reservation", it: o("prenotazione anticipata dei nomi"), es: o("reserva de nombres anticipada"), mx: o("reserva anticipada de nombres"), note: n("27 October – 3 November 2026, with any upgrade: opens at 18:00 CET in Europe and 1:00 p.m. PDT in North America, three names across all rulesets.", "Dal 27 ottobre al 3 novembre 2026, con un'edizione a pagamento: apre alle 18:00 CET in Europa e alle 13:00 PDT in Nord America, tre nomi su tutti i set di regole.", "Del 27 de octubre al 3 de noviembre de 2026, con cualquier edición de pago: abre a las 18:00 CET en Europa y a las 13:00 PDT en Norteamérica, tres nombres entre todos los conjuntos."), source: "names" },
   { id: "invite-a-friend", category: "content", en: "Invite-A-Friend", it: o("Invita un amico"), es: o("código de invitación de lanzamiento"), mx: o("código de invitación para el lanzamiento"), note: n("Launch codes emailed from 20 October, valid 4–11 November.", "Codici inviati via email dal 20 ottobre, validi dal 4 all'11 novembre.", "Códigos enviados por correo desde el 20 de octubre, válidos del 4 al 11 de noviembre."), source: "shop" },
   // Edizioni
   { id: "skyborne-heroic-pack", category: "edition", en: "Skyborne Heroic Pack", it: o("Pacchetto Heroic Skyborne"), es: o("Pack Heroic de los célicos"), mx: o("Paquete heroico de los cielonato"), source: "shop" },

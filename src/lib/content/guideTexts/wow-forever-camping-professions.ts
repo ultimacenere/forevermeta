@@ -4,9 +4,13 @@ export const guide: GuideEntry = {
   slug: "wow-forever-camping-professions",
   category: "systems",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-10-23",
   cover: { word: "Camping", tone: "sky" },
   sources: [
+    {
+      label: "Gather Around the Campfire in World of Warcraft: Forever (Blizzard News, October 21, 2026)",
+      url: "https://news.blizzard.com/en-us/article/24301516/gather-around-the-campfire-in-world-of-warcraft-forever",
+    },
     {
       label: "World of Warcraft: Forever What's Next Panel Recap (Blizzard News, September 12, 2026)",
       url: "https://news.blizzard.com/en-us/article/24303862/world-of-warcraft-forever-whats-next-panel-recap",
@@ -43,7 +47,7 @@ export const guide: GuideEntry = {
       excerpt:
         "How Camping works in WoW Forever: the Basic Campfire, campsites, profession items and one-hour buffs, plus 600+ new recipes and other quality-of-life changes.",
       imageAlt: "ForeverMeta typographic cover with the word “Camping” in light blue on a night-blue background",
-      body: `Camping is the World of Warcraft: Forever system that turns the old Cooking Fire into a Basic Campfire you build in the open world: other players can stop by, add items made with their professions and share one-hour buffs. Blizzard presented it at BlizzCon 2026, in the panels of September 12 and 13, together with more than 600 new profession recipes.
+      body: `Camping is the World of Warcraft: Forever system that turns the old Cooking Fire into a Basic Campfire you build in the open world: other players can stop by, add items made with their professions and share one-hour buffs. Blizzard presented it at BlizzCon 2026, in the panels of September 12 and 13, together with more than 600 new profession recipes, and on October 21, 2026 published the first full article on the system, with the official table of the profession items: this guide follows that article.
 
 ## What Camping is {#what-is-camping}
 
@@ -53,18 +57,40 @@ A note on the name: the official press fact sheet speaks of the “Campfire feat
 
 ## How a campsite works {#how-campsites-work}
 
-The rules Blizzard has shared so far:
+The rules, from Blizzard's article of October 21, 2026:
 
 | What | How it works |
 |---|---|
-| Starting point | the Basic Campfire, which replaces the Cooking Fire |
-| Profession items per fire | up to 3 |
-| Improved campfires made by cooks | up to 5 or 10 items |
-| Buff duration | one hour |
-| First items | at profession skill 20 |
-| Blueprints | drop from dungeon bosses |
+| Starting point | the Basic Campfire, which replaces the Cooking Fire (Cooking skill 1) |
+| Camp features per fire | up to 3, one per player |
+| Improved campfires made by cooks | 5 or 10 camp features |
+| How you get the buffs | sit or craft at the campsite for at least 1 minute |
+| Duration and cooldown | one hour; all camp features share a 1-hour cooldown |
+| Stacking | each buff is a variant of a class buff and is exclusive with it |
+| First items | at profession skill 20, from starting-zone quests or the profession trainer |
+| Items at skill 140 and above | drop in dungeons and raids |
 
-The idea is social: the fire stays in the open world, and the players who pass by can add something with their own professions and share the buffs of the campsite.
+The idea is social: the fire stays in the open world, and the players who pass by can add something with their own professions and share the buffs of the campsite. Blizzard adds that on a PvP ruleset a camp is a risk when enemy players come upon it.
+
+## The camp feature of each profession {#camp-features}
+
+Blizzard calls this table "a sample", so there may be more items. Numbers depend on your level; the class buff in brackets is the one the item is exclusive with.
+
+| Profession | Item | Skill | Effect |
+|---|---|---|---|
+| Cooking | Basic Campfire | 1 | cooking, plus up to 3 camp features |
+| First Aid | First Aid Kit | 20 | +3 to +56 Stamina (Power Word: Fortitude) |
+| Fishing | Fishing Bowl | 20 | +8% to all stats (Blessing of Kings) |
+| Alchemy | Mana Well | 20 | 10 to 29 Mana every 5 seconds (Blessing of Wisdom) |
+| Blacksmithing | Sharpening Wheel | 20 | +6 to +34 Strength (Strength of Earth Totem) |
+| Enchanting | Enchanted Lute | 20 | +28 to +260 Armor, +0 to +13 all stats, +0 to +22 all resistances (Mark of the Wild) |
+| Engineering | Reagent Bot | 20 | sells reagents to everyone nearby |
+| Herbalism | Incense Candle | 20 | +2 to +25 Intellect (Arcane Intellect) |
+| Leatherworking | Camp Tent | 20 | rested experience up by 5% of a level, if you have less than that |
+| Skinning | Camp Chair | 20 | +2% critical strike chance with spells and attacks (Moonkin Aura) |
+| Tailoring | Faction Banner | 20 | +14 to +32 Spirit, for your faction only (Divine Spirit) |
+
+Cooks can eventually learn campfires with 5 or 10 slots, and other professions unlock "helpful conveniences" such as Alchemy Laboratories and Tanning Racks, with no skill levels given. A simple quest early in the game introduces the system. The article is summed up in our [news on the Camping article](/en/news/camping-system-official-camp-features).
 
 ## What changed in the beta {#beta-changes}
 
@@ -73,7 +99,7 @@ The beta development notes posted by Blizzard on the official forums (a thread s
 - the build of September 24 mentions the “Campfire buff”;
 - since the build of October 1, campfires no longer deal damage to players below level 5.
 
-The beta runs through October 21, 2026, the last full day of testing according to Blizzard. If the notes change the rules above, we will update this guide.
+The beta ended on October 23, 2026, after a two-day extension. The rules above are those of the article of October 21; if Blizzard changes them, we will update this guide.
 
 ## Professions {#professions}
 
@@ -103,9 +129,9 @@ New terms are explained in the [glossary](/en/glossary), and the full list of di
 
 ## What we don't know yet {#what-we-dont-know}
 
-- **The buffs**: what each campfire buff does and which professions make which items.
-- **Improved campfires**: how cooks make the 5- and 10-item versions, and how long a fire stays lit.
-- **Blueprints**: what they unlock.
+- **The full list of camp features**: Blizzard's table is a sample.
+- **Improved campfires**: at which skill cooks learn the 5- and 10-slot versions, what the Alchemy Laboratory and the Tanning Rack do, and how long a fire stays lit.
+- **Blueprints**: what they unlock; the article of October 21 does not use the word.
 - **Trade factions**: how the Azeroth Commerce Authority and Durotar Supply and Logistics work, from reputation to rewards.
 - **Classic Mode**: Blizzard lists it, but we have not found a detailed official description to cite yet.`,
       faq: [
@@ -115,11 +141,11 @@ New terms are explained in the [glossary](/en/glossary), and the full list of di
         },
         {
           q: "How long do campfire buffs last in WoW Forever?",
-          a: "One hour, according to Blizzard's Deep Dive panel recap.",
+          a: "One hour, and all camp features share a one-hour cooldown, according to Blizzard's article of October 21, 2026. You get the buffs by sitting or crafting at the campsite for at least one minute.",
         },
         {
           q: "How many profession items can a campfire hold?",
-          a: "Up to three on a Basic Campfire. Improved campfires made by cooks raise the limit to five or ten.",
+          a: "Up to three on a Basic Campfire, one per player. Improved campfires made by cooks raise the limit to five or ten.",
         },
         {
           q: "Can I turn off transmog in WoW Forever?",
@@ -133,7 +159,7 @@ New terms are explained in the [glossary](/en/glossary), and the full list of di
       excerpt:
         "Come funziona il Camping di WoW Forever: Basic Campfire, accampamenti, oggetti delle professioni e buff di un'ora, più 600 ricette nuove e altre comodità.",
       imageAlt: "Copertina tipografica di ForeverMeta con la scritta «Camping» in azzurro su fondo blu notte",
-      body: `Il Camping è il sistema di World of Warcraft: Forever che trasforma il vecchio Cooking Fire in un Basic Campfire da costruire nel mondo aperto: gli altri giocatori possono fermarsi, aggiungere oggetti fatti con le loro professioni e condividere buff di un'ora. Blizzard lo ha presentato alla BlizzCon 2026, nei pannelli del 12 e del 13 settembre, insieme a più di 600 ricette nuove per le professioni.
+      body: `Il Camping è il sistema di World of Warcraft: Forever che trasforma il vecchio Cooking Fire in un Basic Campfire da costruire nel mondo aperto: gli altri giocatori possono fermarsi, aggiungere oggetti fatti con le loro professioni e condividere buff di un'ora. Blizzard lo ha presentato alla BlizzCon 2026, nei pannelli del 12 e del 13 settembre, insieme a più di 600 ricette nuove per le professioni, e il 21 ottobre 2026 ha pubblicato il primo articolo completo sul sistema, con la tabella ufficiale degli oggetti delle professioni: questa guida segue quell'articolo.
 
 ## Che cos'è il Camping {#che-cosa-e-il-camping}
 
@@ -143,18 +169,40 @@ Il nome resta in inglese: la pagina italiana di Forever parla del «nuovo sistem
 
 ## Come funziona un accampamento {#come-funziona-un-accampamento}
 
-Le regole che Blizzard ha condiviso finora:
+Le regole, dall'articolo di Blizzard del 21 ottobre 2026:
 
 | Cosa | Come funziona |
 |---|---|
-| Punto di partenza | il Basic Campfire, che prende il posto del Cooking Fire |
-| Oggetti da professione per fuoco | fino a 3 |
-| Campfire migliorati fatti dai cuochi | fino a 5 o 10 oggetti |
-| Durata dei buff | un'ora |
-| Primi oggetti | con la professione a 20 |
-| Blueprint | si ottengono dai boss dei dungeon (spedizioni) |
+| Punto di partenza | il Basic Campfire, che prende il posto del Cooking Fire (Cooking a 1) |
+| Camp feature per fuoco | fino a 3, una per giocatore |
+| Campfire migliorati fatti dai cuochi | 5 o 10 camp feature |
+| Come si prendono i buff | ci si siede o si crafta all'accampamento per almeno 1 minuto |
+| Durata e tempo di recupero | un'ora; tutte le camp feature condividono un tempo di recupero di 1 ora |
+| Cumulo | ogni buff è una variante di un buff di classe e si esclude con quello |
+| Primi oggetti | con la professione a 20, dalle missioni delle zone iniziali o dal trainer |
+| Oggetti da skill 140 in su | droppano nei dungeon (spedizioni) e nei raid (incursioni) |
 
-L'idea è sociale: il fuoco resta nel mondo aperto, e chi passa può aggiungere qualcosa con le proprie professioni e condividere i buff dell'accampamento.
+L'idea è sociale: il fuoco resta nel mondo aperto, e chi passa può aggiungere qualcosa con le proprie professioni e condividere i buff dell'accampamento. Blizzard aggiunge che su un set di regole PvP l'accampamento è un rischio quando lo trovano giocatori nemici.
+
+## La camp feature di ogni professione {#camp-feature}
+
+Blizzard chiama questa tabella «un campione», quindi potrebbero esserci altri oggetti. I numeri dipendono dal livello; il buff di classe fra parentesi è quello con cui l'oggetto si esclude. I nomi degli oggetti restano in inglese anche nell'articolo italiano di Blizzard.
+
+| Professione | Oggetto | Skill | Effetto |
+|---|---|---|---|
+| Cooking | Basic Campfire | 1 | cucina, più fino a 3 camp feature |
+| First Aid | First Aid Kit | 20 | da +3 a +56 Stamina (Power Word: Fortitude) |
+| Fishing | Fishing Bowl | 20 | +8% a tutte le statistiche (Blessing of Kings) |
+| Alchemy | Mana Well | 20 | da 10 a 29 Mana ogni 5 secondi (Blessing of Wisdom) |
+| Blacksmithing | Sharpening Wheel | 20 | da +6 a +34 Forza (Strength of Earth Totem) |
+| Enchanting | Enchanted Lute | 20 | da +28 a +260 armatura, da +0 a +13 a tutte le statistiche, da +0 a +22 a tutte le resistenze (Mark of the Wild) |
+| Engineering | Reagent Bot | 20 | vende reagenti a chi è vicino |
+| Herbalism | Incense Candle | 20 | da +2 a +25 Intelletto (Arcane Intellect) |
+| Leatherworking | Camp Tent | 20 | esperienza riposata aumentata del 5% di un livello, se ne hai meno |
+| Skinning | Camp Chair | 20 | +2% di probabilità di critico con incantesimi e attacchi (Moonkin Aura) |
+| Tailoring | Faction Banner | 20 | da +14 a +32 Spirito, solo per la tua fazione (Divine Spirit) |
+
+I cuochi possono imparare col tempo fuochi da 5 o 10 posti, e le altre professioni sbloccano «comodità utili» come l'Alchemy Laboratory e il Tanning Rack, senza livelli di skill indicati. Una missione semplice all'inizio del gioco presenta il sistema. L'articolo è riassunto nella nostra [news sull'articolo del Camping](/it/news/camping-system-official-camp-features).
 
 ## Cosa è cambiato in beta {#cosa-e-cambiato-in-beta}
 
@@ -163,7 +211,7 @@ Le note di sviluppo della beta pubblicate da Blizzard sul forum ufficiale (una d
 - la build del 24 settembre parla del «Campfire buff»;
 - dalla build del 1° ottobre i fuochi non fanno più danni ai giocatori sotto il livello 5.
 
-La beta dura fino al 21 ottobre 2026, l'ultimo giorno completo di test secondo Blizzard. Se le note cambiano le regole qui sopra, aggiorniamo la guida.
+La beta è finita il 23 ottobre 2026, dopo una proroga di due giorni. Le regole qui sopra sono quelle dell'articolo del 21 ottobre; se Blizzard le cambia, aggiorniamo la guida.
 
 ## Le professioni {#professioni}
 
@@ -193,9 +241,9 @@ I termini nuovi sono spiegati nel [glossario](/it/glossary) e l'elenco completo 
 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo-ancora}
 
-- **I buff**: che cosa fa ogni buff dei fuochi e quali professioni fanno quali oggetti.
-- **I Campfire migliorati**: come i cuochi fanno le versioni da 5 e da 10 oggetti, e quanto resta acceso un fuoco.
-- **I Blueprint**: che cosa sbloccano.
+- **La lista completa delle camp feature**: la tabella di Blizzard è un campione.
+- **I Campfire migliorati**: a quale skill i cuochi imparano le versioni da 5 e da 10 posti, cosa fanno l'Alchemy Laboratory e il Tanning Rack, e quanto resta acceso un fuoco.
+- **I Blueprint**: che cosa sbloccano; l'articolo del 21 ottobre non usa la parola.
 - **Le fazioni del commercio**: come funzionano Azeroth Commerce Authority e Durotar Supply and Logistics, dalla reputazione alle ricompense.
 - **Il Classic Mode**: Blizzard lo cita, ma non abbiamo ancora trovato una descrizione ufficiale dettagliata da riportare.`,
       faq: [
@@ -205,11 +253,11 @@ I termini nuovi sono spiegati nel [glossario](/it/glossary) e l'elenco completo 
         },
         {
           q: "Quanto durano i buff dei fuochi in WoW Forever?",
-          a: "Un'ora, secondo il resoconto del pannello Deep Dive di Blizzard.",
+          a: "Un'ora, e tutte le camp feature condividono un tempo di recupero di un'ora, secondo l'articolo di Blizzard del 21 ottobre 2026. I buff si prendono sedendosi o craftando all'accampamento per almeno un minuto.",
         },
         {
           q: "Quanti oggetti da professione può avere un fuoco?",
-          a: "Fino a tre su un Basic Campfire. I Campfire migliorati fatti dai cuochi portano il limite a cinque o dieci.",
+          a: "Fino a tre su un Basic Campfire, una per giocatore. I Campfire migliorati fatti dai cuochi portano il limite a cinque o dieci.",
         },
         {
           q: "Si può disattivare la trasmogrificazione in WoW Forever?",
@@ -223,7 +271,7 @@ I termini nuovi sono spiegati nel [glossario](/it/glossary) e l'elenco completo 
       excerpt:
         "Cómo funciona la acampada en WoW Forever: hoguera básica, campamentos, objetos de profesión, beneficios de una hora, más de 600 recetas y otras mejoras.",
       imageAlt: "Portada tipográfica de ForeverMeta con la palabra «Camping» en azul celeste sobre fondo azul noche",
-      body: `La acampada (Camping en inglés; sistema de campamento en Latinoamérica) es el sistema de World of Warcraft: Forever que convierte la antigua lumbre de cocina en una hoguera básica que construyes en el mundo abierto: otros jugadores pueden detenerse, añadir objetos hechos con sus profesiones y compartir beneficios de una hora. Blizzard lo presentó en la BlizzCon 2026, en las mesas redondas del 12 y el 13 de septiembre, junto con más de 600 recetas nuevas de profesiones.
+      body: `La acampada (Camping en inglés; sistema de campamento en Latinoamérica) es el sistema de World of Warcraft: Forever que convierte la antigua lumbre de cocina en una hoguera básica que construyes en el mundo abierto: otros jugadores pueden detenerse, añadir objetos hechos con sus profesiones y compartir beneficios de una hora. Blizzard lo presentó en la BlizzCon 2026, en las mesas redondas del 12 y el 13 de septiembre, junto con más de 600 recetas nuevas de profesiones, y el 21 de octubre de 2026 publicó el primer artículo completo sobre el sistema, con la tabla oficial de los objetos de profesión: esta guía sigue ese artículo.
 
 ## Qué es la acampada {#que-es-la-acampada}
 
@@ -233,18 +281,40 @@ Sobre el nombre: la ficha oficial para la prensa habla de «Campfire feature», 
 
 ## Cómo funciona un campamento {#como-funciona-un-campamento}
 
-Las reglas que Blizzard ha compartido hasta ahora:
+Las reglas, según el artículo de Blizzard del 21 de octubre de 2026:
 
 | Qué | Cómo funciona |
 |---|---|
-| Punto de partida | la hoguera básica, que sustituye a la lumbre de cocina |
-| Objetos de profesión por hoguera | hasta 3 |
-| Hogueras mejoradas que hacen los cocineros | hasta 5 o 10 objetos |
-| Duración de los beneficios | una hora |
-| Primeros objetos | con la profesión a 20 |
-| Planos (Blueprints) | los sueltan los jefes de mazmorra |
+| Punto de partida | la hoguera básica (Basic Campfire), que sustituye a la lumbre de cocina (cocina a 1) |
+| Objetos de campamento por hoguera | hasta 3, uno por jugador |
+| Hogueras mejoradas que hacen los cocineros | 5 o 10 objetos de campamento |
+| Cómo se consiguen los beneficios | sentándose o fabricando en el campamento durante al menos 1 minuto |
+| Duración y reutilización | una hora; todos los objetos de campamento comparten una reutilización de 1 hora |
+| Acumulación | cada beneficio es una variante de uno de clase y es excluyente con él |
+| Primeros objetos | con la profesión a 20, en misiones de las zonas iniciales o con el maestro |
+| Objetos de habilidad 140 o más | los sueltan mazmorras y bandas |
 
-La idea es social: la hoguera se queda en el mundo abierto, y quien pasa puede añadir algo con sus propias profesiones y compartir los beneficios del campamento.
+La idea es social: la hoguera se queda en el mundo abierto, y quien pasa puede añadir algo con sus propias profesiones y compartir los beneficios del campamento. Blizzard añade que en un conjunto de reglas JcJ el campamento es un riesgo cuando lo encuentran jugadores enemigos.
+
+## El objeto de campamento de cada profesión {#objetos-de-campamento}
+
+Blizzard llama a esta tabla «una muestra», así que puede haber más objetos. Los números dependen del nivel; el beneficio de clase entre paréntesis es con el que el objeto es excluyente. Los nombres de los objetos se quedan en inglés: Blizzard aún no ha publicado el artículo en español.
+
+| Profesión | Objeto | Habilidad | Efecto |
+|---|---|---|---|
+| Cocina | Basic Campfire | 1 | cocinar, más hasta 3 objetos de campamento |
+| Primeros auxilios | First Aid Kit | 20 | de +3 a +56 de aguante (Power Word: Fortitude) |
+| Pesca | Fishing Bowl | 20 | +8% a todas las características (Blessing of Kings) |
+| Alquimia | Mana Well | 20 | de 10 a 29 de maná cada 5 segundos (Blessing of Wisdom) |
+| Herrería | Sharpening Wheel | 20 | de +6 a +34 de fuerza (Strength of Earth Totem) |
+| Encantamiento | Enchanted Lute | 20 | de +28 a +260 de armadura, de +0 a +13 a todas las características, de +0 a +22 a todas las resistencias (Mark of the Wild) |
+| Ingeniería | Reagent Bot | 20 | vende reactivos a quien esté cerca |
+| Herboristería | Incense Candle | 20 | de +2 a +25 de intelecto (Arcane Intellect) |
+| Peletería | Camp Tent | 20 | experiencia de descanso aumentada un 5% de un nivel, si tienes menos |
+| Desuello | Camp Chair | 20 | +2% de probabilidad de golpe crítico con hechizos y ataques (Moonkin Aura) |
+| Sastrería | Faction Banner | 20 | de +14 a +32 de espíritu, solo para tu facción (Divine Spirit) |
+
+Los cocineros pueden aprender con el tiempo hogueras de 5 o 10 huecos, y las demás profesiones desbloquean «comodidades útiles» como el Alchemy Laboratory y el Tanning Rack, sin niveles de habilidad indicados. Una misión sencilla al principio del juego presenta el sistema. El artículo está resumido en nuestra [noticia sobre el artículo de la acampada](/es/news/camping-system-official-camp-features).
 
 ## Qué ha cambiado en la beta {#que-ha-cambiado-en-la-beta}
 
@@ -253,7 +323,7 @@ Las notas de desarrollo de la beta que Blizzard publica en el foro oficial (un h
 - la compilación del 24 de septiembre menciona el «Campfire buff»;
 - desde la compilación del 1 de octubre, las hogueras ya no hacen daño a los jugadores por debajo del nivel 5.
 
-La beta dura hasta el 21 de octubre de 2026, el último día completo de pruebas según Blizzard. Si las notas cambian las reglas de arriba, actualizaremos esta guía.
+La beta terminó el 23 de octubre de 2026, tras una prórroga de dos días. Las reglas de arriba son las del artículo del 21 de octubre; si Blizzard las cambia, actualizaremos esta guía.
 
 ## Las profesiones {#profesiones}
 
@@ -283,9 +353,9 @@ Los términos nuevos están en el [glosario](/es/glossary) y la lista completa d
 
 ## Lo que aún no sabemos {#lo-que-aun-no-sabemos}
 
-- **Los beneficios**: qué hace cada beneficio de la hoguera y qué profesiones fabrican qué objetos.
-- **Las hogueras mejoradas**: cómo hacen los cocineros las versiones de 5 y 10 objetos, y cuánto tiempo sigue encendida una hoguera.
-- **Los planos**: qué desbloquean.
+- **La lista completa de objetos de campamento**: la tabla de Blizzard es una muestra.
+- **Las hogueras mejoradas**: con qué habilidad aprenden los cocineros las versiones de 5 y 10 huecos, qué hacen el Alchemy Laboratory y el Tanning Rack, y cuánto tiempo sigue encendida una hoguera.
+- **Los planos**: qué desbloquean; el artículo del 21 de octubre no usa la palabra.
 - **Las facciones comerciales**: cómo funcionan la Azeroth Commerce Authority y Durotar Supply and Logistics, de la reputación a las recompensas.
 - **El Classic Mode**: Blizzard lo menciona, pero aún no hemos encontrado una descripción oficial detallada que citar.`,
       faq: [
@@ -295,11 +365,11 @@ Los términos nuevos están en el [glosario](/es/glossary) y la lista completa d
         },
         {
           q: "¿Cuánto duran los beneficios de las hogueras en WoW Forever?",
-          a: "Una hora, según el resumen de la mesa redonda Deep Dive de Blizzard.",
+          a: "Una hora, y todos los objetos de campamento comparten una reutilización de una hora, según el artículo de Blizzard del 21 de octubre de 2026. Los beneficios se consiguen sentándose o fabricando en el campamento durante al menos un minuto.",
         },
         {
           q: "¿Cuántos objetos de profesión admite una hoguera?",
-          a: "Hasta tres en una hoguera básica. Las hogueras mejoradas que hacen los cocineros suben el límite a cinco o diez.",
+          a: "Hasta tres en una hoguera básica, uno por jugador. Las hogueras mejoradas que hacen los cocineros suben el límite a cinco o diez.",
         },
         {
           q: "¿Se puede desactivar la transfiguración en WoW Forever?",
