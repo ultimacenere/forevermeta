@@ -1,5 +1,6 @@
 import type { Locale } from "../i18n";
 import type { ClassId, RaceId } from "../builder/types";
+import type { BuildTranslations } from "./buildTranslation";
 
 /**
  * Regole delle build pubblicate (23/10/2026), funzioni pure: limiti dei campi uguali ai vincoli del blocco "BUILD
@@ -61,10 +62,42 @@ export type CommunityBuild = {
   created_at: string;
   updated_at: string;
   profile?: { username: string | null; display_name: string | null; avatar_url: string | null; badge: string | null } | null;
+  /** traduzioni automatiche di nome e guida (buildTranslation.ts): solo nella lettura della scheda (`BUILD_DETAIL_SELECT`) */
+  translations?: BuildTranslations | null;
 };
 
 export const BUILD_SELECT =
   "id, slug, owner, name, class_id, race_id, level, code, points, purpose, guide_lang, summary, plan, strengths, weaknesses, notes, game_version, status, created_at, updated_at, profile:profiles!community_builds_owner_fkey(username, display_name, avatar_url, badge)";
+
+/**
+ * Le lingue delle colonne leggere delle traduzioni: scritte qui perché questo modulo (usato anche dai componenti
+ * client) non importa i dizionari; se una lingua del sito mancasse la riga di controllo sotto non compilerebbe, e il
+ * test di buildTranslation.test.ts le confronta con `locales` di i18n.ts.
+ */
+export const TR_LOCALES = ["en", "it", "es"] as const satisfies readonly Locale[];
+export type TrLocale = (typeof TR_LOCALES)[number];
+const allLocalesListed: Locale extends TrLocale ? true : never = true;
+void allLocalesListed;
+
+/** Colonne leggere con cui gli elenchi leggono le traduzioni senza scaricare tutta la colonna `translations`. */
+export type BuildListTranslationFields = Partial<Record<`tr_${TrLocale}_hash` | `tr_${TrLocale}_at` | `tr_${TrLocale}_name` | `tr_${TrLocale}_summary`, string | null>>;
+
+/** Select delle colonne leggere (PostgREST: `alias:colonna->chiave->>chiave`): impronta, data, nome e riassunto tradotti per lingua. */
+export const BUILD_TRANSLATION_LIST_SELECT = TR_LOCALES.flatMap((l) => [
+  `tr_${l}_hash:translations->${l}->>hash`,
+  `tr_${l}_at:translations->${l}->>at`,
+  `tr_${l}_name:translations->${l}->guide->>name`,
+  `tr_${l}_summary:translations->${l}->guide->>summary`,
+]).join(", ");
+
+/** Le sole colonne leggere di impronta e data, per la sitemap. */
+export const BUILD_TRANSLATION_SITEMAP_SELECT = TR_LOCALES.flatMap((l) => [`tr_${l}_hash:translations->${l}->>hash`, `tr_${l}_at:translations->${l}->>at`]).join(", ");
+
+/** Elenchi pubblici: la riga più le colonne leggere delle traduzioni (nome e riassunto nella lingua della pagina). */
+export const BUILD_LIST_SELECT = `${BUILD_SELECT}, ${BUILD_TRANSLATION_LIST_SELECT}`;
+
+/** La scheda di una build: la riga più tutte le traduzioni. */
+export const BUILD_DETAIL_SELECT = `${BUILD_SELECT}, translations`;
 
 /** Testo semplice: niente caratteri di controllo, a capo normalizzati, al massimo due righe vuote di fila, tagliato a `max`. */
 export function cleanText(raw: unknown, max: number): string {

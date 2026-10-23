@@ -125,3 +125,59 @@ node scripts\db-migrate.mjs
 
 Verifica dopo: `/it/builds` risponde con l'elenco vuoto ("Nessuna build pubblicata ancora") invece del messaggio
 "non ancora attive"; una build pubblicata dal builder compare in `/account#builds` e in `/it/builds`.
+
+## Traduzione automatica di nome e guida (23/10/2026)
+
+Pierluigi: "tutti i contenuti, anche le guide vanno tradotte nelle tre lingue del sito". Fino a qui la guida di una
+build si leggeva solo nella lingua dell'autore e nelle altre due lingue la scheda era noindex con la nota "Guida scritta
+in …". Dal 23/10/2026 (sera) il sito traduce **nome e guida** nelle altre due lingue, come OriginsMeta fa con mazzi e
+guide della community (`deckTranslation.ts` / `translate.ts` di quel motore).
+
+| Pezzo | File |
+| --- | --- |
+| Regole pure (impronta, scelta della versione, colonne leggere, indicizzazione, prompt, richiesta, controlli) | `src/lib/community/buildTranslation.ts` + `buildTranslation.test.ts` |
+| Giro del sito (dopo la pubblicazione o la modifica, dentro `after()`) | `src/lib/community/buildTranslate.ts`, chiamato da `buildActions.ts` |
+| Arretrati e nuovi tentativi | `scripts/translate-builds.mjs` |
+| Select con le colonne leggere e con tutte le traduzioni | `BUILD_LIST_SELECT`, `BUILD_DETAIL_SELECT` in `builds.ts` |
+| Testi (nota "Tradotta automaticamente", "Testo originale", suggerimento nel modulo) | `src/lib/buildLabels.ts` (`page.translatedNote`, `page.langFrom`, `page.originalText`, `form.guideLangHint`) |
+| SQL | blocco `-- ===== 23/10/2026: BUILD TRADOTTE =====` in fondo a `supabase/schema.sql` |
+
+Come funziona:
+
+- Dopo `publishBuild`, `updateBuild` e `setBuildStatus` (verso online) parte `translateBuildLater`, **dopo la risposta al
+  browser** (`after()`; le pagine di scrittura hanno `maxDuration = 300`): chi pubblica non aspetta il modello. Si
+  traduce solo nelle lingue che mancano o che sono rimaste indietro rispetto al testo (impronta `hash` di lingua, nome
+  e campi della guida: una correzione dell'autore invalida le traduzioni, che si rifanno al salvataggio). Prima di
+  scrivere si rilegge la build: se è cambiata o non è più online, si lascia perdere. Si scrive con la sessione del
+  proprietario nella colonna `translations` (`{"en": {hash, at, model, guide: {name, summary, plan, …}}}`).
+- Modello `claude-opus-5-5` con sforzo basso, risposta vincolata allo schema dei campi, istruzioni fisse in cache,
+  riserva automatica se il modello declina (`server-side-fallback`). Il prompt porta il **glossario ufficiale** del sito
+  (classi, razze, fazioni, luoghi, dungeon, incursioni e sistemi da `classes.ts`, `races.ts`, `glossary.ts`, più i termini
+  di gioco ricorrenti) e la regola delle guide del builder: **i nomi di talenti, abilità e alberi restano in inglese**
+  (l'elenco dei talenti trovati nel testo viaggia nel messaggio, `namesIn`).
+- La scheda mostra nome e guida nella lingua della pagina quando la traduzione è aggiornata, con la nota "Tradotta
+  automaticamente dall'italiano" e il link all'originale (`<article lang>` nella lingua mostrata); altrimenti l'originale
+  con la nota di prima. L'elenco `/builds` legge nome e riassunto tradotti dalle colonne leggere
+  (`tr_<lingua>_hash|at|name|summary`, alias PostgREST su `translations`) senza scaricare tutta la colonna.
+- **SEO con un criterio solo** (`buildIndexing`): la scheda si indicizza nelle lingue in cui la guida si legge davvero
+  (originale più traduzioni aggiornate) e solo da 75 parole dell'originale; robots, hreflang e la sitemap per lingua
+  dicono la stessa cosa. Una build sotto soglia tiene la sola canonical (`dropHreflang`). Il `lastmod` della versione
+  tradotta è il più recente fra l'aggiornamento dell'autore e l'arrivo della traduzione; scrivere le traduzioni non
+  sposta `updated_at` (trigger `community_builds_touch` con `touch_build_updated_at`).
+- Il database ricontrolla ogni traduzione (`guard_build_translations`: lingue del sito, mai quella dell'autore, forma e
+  lunghezze entro 2,5 volte i massimi dell'originale più 200, `community_build_translation_ok`) e toglie la traduzione
+  nella lingua in cui l'autore passa a scrivere.
+
+**Interruttore**: `ANTHROPIC_API_KEY` su Vercel (Settings → Environment Variables, tipo Secret, Production e Preview).
+Senza, non parte nulla e tutto funziona come prima. **Migrazione da lanciare** (dalla cartella del repository, con la
+password del database in `.env.local`): `node scripts\db-migrate.mjs`; prima della migrazione il sito regge (le select
+con `translations` falliscono con "colonna inesistente": `getPublishedBuild` lancia e la pagina ISR tiene la versione
+precedente, l'elenco idem), quindi **si migra prima del deploy**.
+
+Arretrati (la build pubblicata il 23/10 prima della traduzione automatica) e nuovi tentativi:
+
+```
+node scripts\translate-builds.mjs --dry-run         # che cosa manca
+node scripts\translate-builds.mjs                   # traduce con l'API (ANTHROPIC_API_KEY nell'ambiente o in .env.local) e salva
+node scripts\translate-builds.mjs --export out.json # testi da tradurre fuori; poi --from out.json con le traduzioni
+```

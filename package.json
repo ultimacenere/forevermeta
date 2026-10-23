@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test src/lib/analytics.test.ts src/lib/loginLabels.test.ts src/lib/seoXml.test.ts src/lib/newsFeed.test.ts src/lib/contentMeta.test.ts src/lib/builder/engine.test.ts src/lib/data/talents/talents.test.ts src/lib/community/builds.test.ts src/lib/community/guilds.test.ts scripts/schema-guard.test.mjs"
+    "test": "node --test src/lib/analytics.test.ts src/lib/loginLabels.test.ts src/lib/seoXml.test.ts src/lib/newsFeed.test.ts src/lib/contentMeta.test.ts src/lib/builder/engine.test.ts src/lib/data/talents/talents.test.ts src/lib/community/builds.test.ts src/lib/community/buildTranslation.test.ts src/lib/community/guilds.test.ts scripts/schema-guard.test.mjs"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.127.0",
     "@supabase/ssr": "^0.12.7",
     "@supabase/supabase-js": "^2.116.0",
     "@vercel/analytics": "^2.0.1",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { CSSProperties } from "react";
-import { formatDate, href, siteUrl } from "@/lib/i18n";
+import { formatDate, href, locales, siteUrl } from "@/lib/i18n";
 import { pageMeta, pageTitleWith, resolveLocale } from "@/lib/page";
 import { JsonLd, breadcrumbs, organizationId, websiteId } from "@/components/JsonLd";
 import { Avatar } from "@/components/AccountMenu";
@@ -11,7 +11,8 @@ import { BuildStars } from "@/components/builds/BuildStars";
 import { BuildOwnerActions } from "@/components/builds/BuildOwnerActions";
 import { CopyCode, NewBanner } from "@/components/builds/BuildExtras";
 import { getPublishedBuild } from "@/lib/community/buildQueries";
-import { BUILD_SLUG_RE, buildIndexable, buildPath } from "@/lib/community/builds";
+import { BUILD_SLUG_RE, buildPath } from "@/lib/community/builds";
+import { buildIndexing, dropHreflang, localizedBuild } from "@/lib/community/buildTranslation";
 import { authorOf, builderHref, paragraphsOf } from "@/lib/community/buildView";
 import { buildLabels, languageNames } from "@/lib/buildLabels";
 import { fill } from "@/lib/builderLabels";
@@ -35,22 +36,27 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { build } = await getPublishedBuild(slug);
   if (!build) return {};
   const cls = className(getClass(build.class_id), locale);
-  const indexable = buildIndexable(build) && build.guide_lang === locale;
-  return pageMeta(locale, buildPath(build.slug), pageTitleWith(build.name, cls), build.summary, undefined, {
+  // la pagina si indicizza nelle lingue in cui la guida si legge davvero (originale e traduzioni aggiornate), da 75
+  // parole; una build sotto soglia tiene la sola canonical, senza presentare tre pagine noindex come alternative
+  const idx = buildIndexing(build, locales, locale);
+  const view = localizedBuild(build, locale);
+  const meta = pageMeta(locale, buildPath(build.slug), pageTitleWith(view.text.name, cls), view.text.summary, undefined, {
     type: "article",
     published: build.created_at,
     modified: build.updated_at,
-    languages: [build.guide_lang],
-    noindex: !indexable,
+    languages: idx.hreflang ? idx.languages : [locale],
+    noindex: idx.noindex,
     imageAlt: dict.builds.title,
   });
+  return idx.hreflang ? meta : dropHreflang(meta);
 }
 
 /**
  * La scheda di una build pubblicata (ISR 60). Ordine deciso da Pierluigi il 23/10/2026: testata con classe, razza,
- * livello e punti, voti e tasti verso il builder; poi la guida com'è scritta dall'autore (riassunto e sezioni; una
- * sola lingua per pagina: nelle altre lingue la pagina è noindex e dice in che lingua è la guida); poi i tre alberi
- * in sola lettura e i tratti razziali; in fondo l'elenco dei talenti presi e i tasti del proprietario.
+ * livello e punti, voti e tasti verso il builder; poi la guida (riassunto e sezioni) nella lingua della pagina: la
+ * traduzione automatica con il rimando all'originale quando c'è ed è aggiornata, altrimenti il testo dell'autore con la
+ * nota sulla lingua (e la pagina noindex in quella lingua); poi i tre alberi in sola lettura e i tratti razziali; in
+ * fondo l'elenco dei talenti presi e i tasti del proprietario.
  */
 export default async function BuildPage({ params }: { params: Params }) {
   const { slug } = await params;
@@ -73,19 +79,22 @@ export default async function BuildPage({ params }: { params: Params }) {
   const race = build.race_id ? races.find((r) => r.id === build.race_id) : undefined;
   const path = href(locale, buildPath(build.slug));
   const author = authorOf(build, d.nav.playerFallback);
+  const view = localizedBuild(build, locale);
+  const g = view.text;
+  const originalLang = languageNames[locale][build.guide_lang];
   const sections: { key: string; title: string; text: string }[] = [
-    { key: "plan", title: L.page.plan, text: build.plan },
-    { key: "strengths", title: L.page.strengths, text: build.strengths },
-    { key: "weaknesses", title: L.page.weaknesses, text: build.weaknesses },
-    { key: "notes", title: L.page.notes, text: build.notes },
+    { key: "plan", title: L.page.plan, text: g.plan },
+    { key: "strengths", title: L.page.strengths, text: g.strengths ?? "" },
+    { key: "weaknesses", title: L.page.weaknesses, text: g.weaknesses ?? "" },
+    { key: "notes", title: L.page.notes, text: g.notes ?? "" },
   ].filter((s) => s.text.trim());
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${siteUrl}${path}#article`,
-    headline: build.name,
-    description: build.summary,
-    inLanguage: build.guide_lang,
+    headline: g.name,
+    description: g.summary,
+    inLanguage: view.lang,
     datePublished: build.created_at,
     dateModified: build.updated_at,
     author: { "@type": "Person", name: author },
@@ -101,7 +110,7 @@ export default async function BuildPage({ params }: { params: Params }) {
           breadcrumbs([
             { name: "ForeverMeta", path: href(locale) },
             { name: d.builds.title, path: href(locale, "/builds") },
-            { name: build.name, path },
+            { name: g.name, path },
           ]),
         ]}
       />
@@ -110,7 +119,7 @@ export default async function BuildPage({ params }: { params: Params }) {
       <div className="mt-2 flex flex-wrap items-center gap-3">
         {/* eslint-disable-next-line @next/next/no-img-element -- icona piccola già nel sito */}
         <img src={`${TALENT_ICON_BASE}${c.icon}.jpg`} alt="" width={44} height={44} className="tb-class-icon-lg" style={{ "--tb-ink": c.ink } as CSSProperties} />
-        <h1 className="t-page">{build.name}</h1>
+        <h1 className="t-page">{g.name}</h1>
       </div>
       <p className="mt-3 text-sm text-pale">
         <span className="font-semibold text-chalk">{cls}</span>
@@ -135,9 +144,20 @@ export default async function BuildPage({ params }: { params: Params }) {
         <CopyCode code={build.code} label={L.page.copyCode} copied={L.page.copied} />
       </div>
 
-      <article className="mt-8 max-w-3xl">
-        {build.guide_lang !== locale ? <p className="alert-good mb-4 text-sm">{fill(L.page.guideLang, { lang: languageNames[locale][build.guide_lang] })}</p> : null}
-        <p className="text-lg text-chalk">{build.summary}</p>
+      <article className="mt-8 max-w-3xl" lang={view.lang}>
+        {/* Traduzione automatica con il rimando all'originale, oppure la nota sulla lingua dell'autore. L'originale non si
+            incorpora qui: una sola lingua per pagina (Search Central, "Managing multi-regional and multilingual sites"). */}
+        {view.translated ? (
+          <p className="alert-good mb-4 text-sm">
+            {fill(L.page.translatedNote, { from: L.page.langFrom[build.guide_lang] })}{" "}
+            <Link href={href(build.guide_lang, buildPath(build.slug))} hrefLang={build.guide_lang} className="font-semibold underline underline-offset-2" prefetch={false}>
+              {fill(L.page.originalText, { lang: originalLang })} →
+            </Link>
+          </p>
+        ) : build.guide_lang !== locale ? (
+          <p className="alert-good mb-4 text-sm">{fill(L.page.guideLang, { lang: originalLang })}</p>
+        ) : null}
+        <p className="text-lg text-chalk">{g.summary}</p>
         {sections.map((s) => (
           <section key={s.key} className="mt-6" aria-labelledby={`build-${s.key}`}>
             <h2 id={`build-${s.key}`} className="t-section">

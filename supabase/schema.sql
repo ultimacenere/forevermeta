@@ -6611,3 +6611,84 @@ create policy "admins read guild reports" on public.guild_reports for select usi
 grant select on public.community_guilds to anon, authenticated;
 grant insert, update, delete on public.community_guilds to authenticated;
 grant select, insert on public.guild_reports to authenticated;
+-- ===== 23/10/2026: BUILD TRADOTTE =====
+-- =====================================================================================================
+-- Traduzioni automatiche di nome e guida delle build pubblicate (Pierluigi, 23/10/2026: "tutti i contenuti, anche le
+-- guide vanno tradotte nelle tre lingue del sito"), sul modello dei mazzi della community di OriginsMeta: l'autore
+-- scrive nella sua lingua, il sito traduce nelle altre due lingue del sito (src/lib/community/buildTranslation.ts) e
+-- le salva qui, una per lingua, con l'impronta del testo da cui sono state fatte:
+-- {"en": {"hash": "…", "at": "…", "model": "…", "guide": {"name": "…", "summary": "…", "plan": "…", …}}}.
+-- Le policy di community_builds valgono anche per questa colonna: la scrive il sito con la sessione del proprietario
+-- (o lo staff con scripts/translate-builds.mjs). Il trigger ricontrolla forma e lunghezze (2,5 volte i massimi
+-- dell'originale più 200: BUILD_TRANSLATION_LIMITS in buildTranslation.ts, il test li confronta) e toglie la
+-- traduzione nella lingua in cui l'autore scrive; il tetto di dimensione ferma chi volesse riempirla a mano.
+alter table public.community_builds add column if not exists translations jsonb not null default '{}'::jsonb;
+alter table public.community_builds drop constraint if exists community_builds_translations_check;
+alter table public.community_builds add constraint community_builds_translations_check
+  check (jsonb_typeof(translations) = 'object' and octet_length(translations::text) <= 200000);
+
+-- Una traduzione salvata (una lingua) valida: {hash, at, model, guide} con i soli campi della guida, nome, riassunto e
+-- piano sempre, le altre sezioni facoltative, ognuno entro il suo massimo.
+create or replace function public.community_build_translation_ok(t jsonb)
+returns boolean language sql immutable set search_path = pg_catalog as $$
+  select case
+    when t is null or jsonb_typeof(t) is distinct from 'object' then false
+    when (t - 'hash' - 'at' - 'model' - 'guide') <> '{}'::jsonb then false
+    when jsonb_typeof(t -> 'hash') is distinct from 'string' or char_length(t ->> 'hash') > 32 then false
+    when t ? 'at' and (jsonb_typeof(t -> 'at') is distinct from 'string' or char_length(t ->> 'at') > 40) then false
+    when t ? 'model' and (jsonb_typeof(t -> 'model') is distinct from 'string' or char_length(t ->> 'model') > 80) then false
+    when jsonb_typeof(t -> 'guide') is distinct from 'object' then false
+    when ((t -> 'guide') - 'name' - 'summary' - 'plan' - 'strengths' - 'weaknesses' - 'notes') <> '{}'::jsonb then false
+    when jsonb_typeof(t -> 'guide' -> 'name') is distinct from 'string' or char_length(t -> 'guide' ->> 'name') not between 1 and 350 then false
+    when jsonb_typeof(t -> 'guide' -> 'summary') is distinct from 'string' or char_length(t -> 'guide' ->> 'summary') not between 1 and 1700 then false
+    when jsonb_typeof(t -> 'guide' -> 'plan') is distinct from 'string' or char_length(t -> 'guide' ->> 'plan') not between 1 and 15200 then false
+    when t -> 'guide' ? 'strengths' and (jsonb_typeof(t -> 'guide' -> 'strengths') is distinct from 'string' or char_length(t -> 'guide' ->> 'strengths') not between 1 and 5200) then false
+    when t -> 'guide' ? 'weaknesses' and (jsonb_typeof(t -> 'guide' -> 'weaknesses') is distinct from 'string' or char_length(t -> 'guide' ->> 'weaknesses') not between 1 and 5200) then false
+    when t -> 'guide' ? 'notes' and (jsonb_typeof(t -> 'guide' -> 'notes') is distinct from 'string' or char_length(t -> 'guide' ->> 'notes') not between 1 and 7700) then false
+    else true
+  end;
+$$;
+revoke all on function public.community_build_translation_ok(jsonb) from public, anon;
+grant execute on function public.community_build_translation_ok(jsonb) to authenticated, service_role;
+comment on function public.community_build_translation_ok(jsonb) is 'Traduzione di una build valida: impronta, data, modello e la guida con i soli campi ammessi, entro 2,5 volte i massimi dell''originale più 200 (dal 23/10/2026).';
+
+-- Il trigger: quando cambia la lingua dell'autore cade la traduzione in quella lingua; quando cambiano le traduzioni
+-- ogni voce deve essere una lingua del sito diversa da quella dell'autore e passare il controllo qui sopra.
+create or replace function public.guard_build_translations()
+returns trigger language plpgsql set search_path = public, pg_temp as $$
+declare
+  k text;
+  v jsonb;
+begin
+  if tg_op = 'UPDATE' and new.guide_lang is distinct from old.guide_lang then
+    new.translations := new.translations - new.guide_lang;
+  end if;
+  if tg_op = 'INSERT' or new.translations is distinct from old.translations then
+    if jsonb_typeof(new.translations) is distinct from 'object' then
+      raise exception 'build_translation' using errcode = '23514';
+    end if;
+    for k, v in select e.key, e.value from jsonb_each(new.translations) as e loop
+      if k not in ('en','it','es') or k = new.guide_lang or not public.community_build_translation_ok(v) then
+        raise exception 'build_translation' using errcode = '23514';
+      end if;
+    end loop;
+  end if;
+  return new;
+end $$;
+drop trigger if exists community_builds_translations on public.community_builds;
+create trigger community_builds_translations before insert or update on public.community_builds
+  for each row execute function public.guard_build_translations();
+
+-- La data di aggiornamento di una build resta quella dell'autore: scrivere le traduzioni non la sposta (la scheda la
+-- mostra come "aggiornata il", la sitemap la usa come lastmod). Sostituisce touch_updated_at sul trigger di sopra.
+create or replace function public.touch_build_updated_at()
+returns trigger language plpgsql as $$
+begin
+  if (to_jsonb(new) - 'translations' - 'updated_at') is distinct from (to_jsonb(old) - 'translations' - 'updated_at') then
+    new.updated_at := now();
+  end if;
+  return new;
+end $$;
+drop trigger if exists community_builds_touch on public.community_builds;
+create trigger community_builds_touch before update on public.community_builds
+  for each row execute function public.touch_build_updated_at();

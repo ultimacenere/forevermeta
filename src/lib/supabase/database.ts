@@ -34,6 +34,8 @@ export type BuildRow = {
   notes: string;
   game_version: string;
   status: string;
+  /** traduzioni automatiche di nome e guida, una per lingua (blocco "BUILD TRADOTTE" di schema.sql) */
+  translations: Record<string, unknown>;
   created_at: string;
   updated_at: string;
 };

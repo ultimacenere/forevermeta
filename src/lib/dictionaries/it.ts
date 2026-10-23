@@ -269,7 +269,7 @@ export const it: Dictionary = {
     howTitle: "Come funzionano le build pubblicate",
     how: [
       "Ogni build arriva dal builder e tiene il suo codice: la riapri lì con un clic e la cambi come vuoi.",
-      "La guida la scrive l'autore nella sua lingua e si legge com'è scritta; da 75 parole la pagina è indicizzata in quella lingua.",
+      "La guida la scrive l'autore nella sua lingua e il sito la traduce da solo nelle altre due, con il rimando all'originale; da 75 parole la pagina è indicizzata in ogni lingua in cui si legge.",
       "Un voto per iscritto e per build, mai sulla propria. “Più votate” pesa la media sul numero dei voti.",
       "Le tue build le modifichi, le nascondi o le elimini dalla loro pagina o dal tuo account, quando vuoi.",
     ],
