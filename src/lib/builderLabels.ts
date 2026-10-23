@@ -77,7 +77,7 @@ const EN = {
   cancel: "Cancel",
   /** pubblicazione */
   publish: "Publish your build",
-  publishSoon: "Publishing builds with a guide, votes and your profile arrives with the launch of the game, on 4 November.",
+  publishHint: "The build opens in the publish form with one click: you add a name, a purpose and your guide. You need an account.",
   /** salvataggio nel browser */
   autosaved: "Your build is saved in this browser and in the link.",
   restored: "Build restored from this browser.",
@@ -92,6 +92,7 @@ const EN = {
   gameVersion: "Game version: {version}.",
   /** errori */
   dataMissing: "The talent trees of this class are not available yet.",
+  textsOurs: "Talent texts translated by us from the English of the client; talent and ability names stay in English, as in the game.",
   /** messaggi dell'area aria-live, dopo ogni azione o rifiuto */
   msgRank: "{talent} {r}/{max}. {left} points left.",
   msgRowLocked: "Needs {n} points in {tree} first (you have {have}).",
@@ -179,7 +180,7 @@ const IT: BuilderLabels = {
   resetYes: "Sì, toglili",
   cancel: "Annulla",
   publish: "Pubblica la tua build",
-  publishSoon: "La pubblicazione delle build con guida, voti e profilo arriva con il lancio del gioco, il 4 novembre.",
+  publishHint: "La build si apre nel modulo di pubblicazione con un clic: aggiungi nome, scopo e la tua guida. Serve un account.",
   autosaved: "La build resta salvata in questo browser e nel link.",
   restored: "Build ripresa da questo browser.",
   treeTabs: "Alberi dei talenti",
@@ -190,6 +191,7 @@ const IT: BuilderLabels = {
   dataLicense: "Licenza dei dati: {license}.",
   gameVersion: "Versione del gioco: {version}.",
   dataMissing: "Gli alberi dei talenti di questa classe non sono ancora disponibili.",
+  textsOurs: "Testi dei talenti tradotti da noi dall'inglese del client; i nomi dei talenti e delle abilità restano in inglese, come nel gioco.",
   msgRank: "{talent} {r}/{max}. {left} punti da spendere.",
   msgRowLocked: "Servono prima {n} punti in {tree} (ne hai {have}).",
   msgPrereq: "Serve prima {talent} a {max}/{max}.",
@@ -276,7 +278,7 @@ const ES: BuilderLabels = {
   resetYes: "Sí, quitarlos",
   cancel: "Cancelar",
   publish: "Publica tu build",
-  publishSoon: "La publicación de builds con guía, votos y perfil llega con el lanzamiento del juego, el 4 de noviembre.",
+  publishHint: "La build se abre en el formulario de publicación con un clic: añades un nombre, un propósito y tu guía. Hace falta una cuenta.",
   autosaved: "Tu build queda guardada en este navegador y en el enlace.",
   restored: "Build recuperada de este navegador.",
   treeTabs: "Árboles de talentos",
@@ -287,6 +289,7 @@ const ES: BuilderLabels = {
   dataLicense: "Licencia de los datos: {license}.",
   gameVersion: "Versión del juego: {version}.",
   dataMissing: "Los árboles de talentos de esta clase aún no están disponibles.",
+  textsOurs: "Textos de los talentos traducidos por nosotros del inglés del cliente; los nombres de talentos y habilidades se quedan en inglés, como en el juego.",
   msgRank: "{talent} {r}/{max}. Quedan {left} puntos.",
   msgRowLocked: "Antes hacen falta {n} puntos en {tree} (tienes {have}).",
   msgPrereq: "Antes hace falta {talent} a {max}/{max}.",

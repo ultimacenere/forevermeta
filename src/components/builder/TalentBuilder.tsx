@@ -54,6 +54,8 @@ export type TalentBuilderProps = {
   classHrefs: Record<ClassId, string>;
   /** cartella delle icone dei talenti (`/talents/icons/`): da qui `<icona>.jpg`; senza, le iniziali */
   iconBase?: string;
+  /** pagina di pubblicazione (`/<lingua>/builds/publish`): il tasto Pubblica ci porta con il codice nell'hash */
+  publishHref: string;
 };
 
 type Active = { id: string; how: "hover" | "focus" | "tap"; left: number; top: number };
@@ -97,7 +99,7 @@ function coarseSnapshot(): boolean {
  * All'apertura vince il link, poi il browser, poi una build vuota. Ogni azione o rifiuto viene detto nell'area
  * aria-live; Annulla/Ripeti coprono punti, cascate, azzeramenti, livello e importazioni. La pagina è statica.
  */
-export function TalentBuilder({ classId, className, color, ink, data, races, labels, pageUrl, classHrefs, iconBase }: TalentBuilderProps) {
+export function TalentBuilder({ classId, className, color, ink, data, races, labels, pageUrl, classHrefs, iconBase, publishHref }: TalentBuilderProps) {
   const router = useRouter();
   const iconUrl = useMemo(() => (iconBase ? (icon: string) => `${iconBase}${icon}.jpg` : undefined), [iconBase]);
   const allowedRaces = useMemo(() => races.filter((r) => r.allowed).map((r) => r.id), [races]);
@@ -406,7 +408,7 @@ export function TalentBuilder({ classId, className, color, ink, data, races, lab
       <div className="tb-top">
         <section className="tb-panel" aria-label={labels.pickRace}>
           <p className="tb-panel-title">{labels.pickRace}</p>
-          <RacePicker races={races} value={build.raceId} className={className} labels={labels} onChange={(r: RaceId | null) => commit({ ...build, raceId: r }, null)} />
+          <RacePicker races={races} iconBase={iconBase} value={build.raceId} className={className} labels={labels} onChange={(r: RaceId | null) => commit({ ...build, raceId: r }, null)} />
         </section>
         <section className="tb-panel tb-level" aria-label={labels.level}>
           <label className="tb-level-label" htmlFor="tb-level">
@@ -534,11 +536,13 @@ export function TalentBuilder({ classId, className, color, ink, data, races, lab
               {labels.resetAll}
             </button>
           )}
-          <button type="button" className="btn btn-primary" disabled title={labels.publishSoon}>
+          <a href={`${publishHref}#${code}`} className={total > 0 ? "btn btn-primary" : "btn btn-primary"} aria-disabled={total === 0} onClick={(e) => {
+            if (total === 0) e.preventDefault();
+          }}>
             {labels.publish}
-          </button>
+          </a>
         </div>
-        <p className="tb-actions-hint">{labels.publishSoon}</p>
+        <p className="tb-actions-hint">{labels.publishHint}</p>
         {shareOpen ? (
           <SharePanel
             link={link}

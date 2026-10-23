@@ -1,0 +1,502 @@
+{
+  "it": {
+    "barrage": [
+      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 3%.",
+      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 7%.",
+      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 10%."
+    ],
+    "bestial-discipline": [
+      "Aumenta la rigenerazione di Focus dei tuoi animali del 10% e permette al 25% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Aumenta la rigenerazione di Focus dei tuoi animali del 20% e permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi."
+    ],
+    "bestial-swiftness": [
+      "Aumenta la velocità di movimento dei tuoi animali del 30%."
+    ],
+    "bestial-wrath": [
+      "Manda il tuo animale su tutte le furie, facendogli infliggere il 50% di danni aggiuntivi per 18 secondi. Mentre è infuriata, la bestia non prova pietà, rimorso o paura e non può essere fermata se non uccidendola."
+    ],
+    "careful-aim": [
+      "Aumenta la tua Potenza d'attacco del 20% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco del 40% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco del 60% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco dell'80% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco del 100% del tuo Intelletto."
+    ],
+    "clever-traps": [
+      "Aumenta la durata degli effetti di Freezing Trap e Frost Trap del 15% e i danni degli effetti di Immolation Trap ed Explosive Trap del 15%.",
+      "Aumenta la durata degli effetti di Freezing Trap e Frost Trap del 30% e i danni degli effetti di Immolation Trap ed Explosive Trap del 30%."
+    ],
+    "counterattack": [
+      "Un colpo che diventa disponibile dopo aver parato l'attacco di un avversario. Questo attacco infligge il 50% dei danni dell'arma più 13 e immobilizza il bersaglio per 5 secondi. Counterattack non può essere bloccato, schivato o parato."
+    ],
+    "deadly-aspects": [
+      "Mentre Aspect of the Hawk è attivo, Auto Shot ha il 2% di probabilità di aumentare la velocità d'attacco a distanza del 30% per 12 secondi. Mentre Aspect of the Beast è attivo, tutti gli attacchi automatici in mischia hanno il 2% di probabilità di aumentare la velocità d'attacco in mischia del 30% per 12 secondi.",
+      "Mentre Aspect of the Hawk è attivo, Auto Shot ha il 4% di probabilità di aumentare la velocità d'attacco a distanza del 30% per 12 secondi. Mentre Aspect of the Beast è attivo, tutti gli attacchi automatici in mischia hanno il 4% di probabilità di aumentare la velocità d'attacco in mischia del 30% per 12 secondi.",
+      "Mentre Aspect of the Hawk è attivo, Auto Shot ha il 6% di probabilità di aumentare la velocità d'attacco a distanza del 30% per 12 secondi. Mentre Aspect of the Beast è attivo, tutti gli attacchi automatici in mischia hanno il 6% di probabilità di aumentare la velocità d'attacco in mischia del 30% per 12 secondi.",
+      "Mentre Aspect of the Hawk è attivo, Auto Shot ha l'8% di probabilità di aumentare la velocità d'attacco a distanza del 30% per 12 secondi. Mentre Aspect of the Beast è attivo, tutti gli attacchi automatici in mischia hanno l'8% di probabilità di aumentare la velocità d'attacco in mischia del 30% per 12 secondi.",
+      "Mentre Aspect of the Hawk è attivo, Auto Shot ha il 10% di probabilità di aumentare la velocità d'attacco a distanza del 30% per 12 secondi. Mentre Aspect of the Beast è attivo, tutti gli attacchi automatici in mischia hanno il 10% di probabilità di aumentare la velocità d'attacco in mischia del 30% per 12 secondi."
+    ],
+    "deflection": [
+      "Aumenta la tua probabilità di parata dell'1%.",
+      "Aumenta la tua probabilità di parata del 2%.",
+      "Aumenta la tua probabilità di parata del 3%.",
+      "Aumenta la tua probabilità di parata del 4%.",
+      "Aumenta la tua probabilità di parata del 5%."
+    ],
+    "deterrence": [
+      "Quando viene attivato, aumenta la tua probabilità di schivata e di parata del 25% per 10 secondi."
+    ],
+    "efficiency": [
+      "Riduce il costo in Mana delle tue abilità Shot e Sting e delle tue abilità in mischia del 3%.",
+      "Riduce il costo in Mana delle tue abilità Shot e Sting e delle tue abilità in mischia del 6%.",
+      "Riduce il costo in Mana delle tue abilità Shot e Sting e delle tue abilità in mischia del 9%.",
+      "Riduce il costo in Mana delle tue abilità Shot e Sting e delle tue abilità in mischia del 12%.",
+      "Riduce il costo in Mana delle tue abilità Shot e Sting e delle tue abilità in mischia del 15%."
+    ],
+    "endurance-training": [
+      "Aumenta la Salute e l'armatura dei tuoi animali del 3%.",
+      "Aumenta la Salute e l'armatura dei tuoi animali del 6%.",
+      "Aumenta la Salute e l'armatura dei tuoi animali del 9%.",
+      "Aumenta la Salute e l'armatura dei tuoi animali del 12%.",
+      "Aumenta la Salute e l'armatura dei tuoi animali del 15%."
+    ],
+    "entrapment": [
+      "Quando le tue trappole scattano, tutti i bersagli colpiti subiscono l'effetto Entrapped, che impedisce loro di muoversi per 1 secondo.",
+      "Quando le tue trappole scattano, tutti i bersagli colpiti subiscono l'effetto Entrapped, che impedisce loro di muoversi per 2 secondi.",
+      "Quando le tue trappole scattano, tutti i bersagli colpiti subiscono l'effetto Entrapped, che impedisce loro di muoversi per 3 secondi.",
+      "Quando le tue trappole scattano, tutti i bersagli colpiti subiscono l'effetto Entrapped, che impedisce loro di muoversi per 4 secondi.",
+      "Quando le tue trappole scattano, tutti i bersagli colpiti subiscono l'effetto Entrapped, che impedisce loro di muoversi per 5 secondi."
+    ],
+    "expose-prey": [
+      "Dà ai tuoi attacchi in mischia e a distanza contro i nemici afflitti da Hunter's Mark il 5% di probabilità di permettere un'attivazione di Mongoose Bite. Dura 10 secondi.",
+      "Dà ai tuoi attacchi in mischia e a distanza contro i nemici afflitti da Hunter's Mark il 10% di probabilità di permettere un'attivazione di Mongoose Bite. Dura 10 secondi."
+    ],
+    "ferocity": [
+      "Aumenta la probabilità di colpo critico dei tuoi animali e dei tuoi falchi del 2%.",
+      "Aumenta la probabilità di colpo critico dei tuoi animali e dei tuoi falchi del 4%.",
+      "Aumenta la probabilità di colpo critico dei tuoi animali e dei tuoi falchi del 6%.",
+      "Aumenta la probabilità di colpo critico dei tuoi animali e dei tuoi falchi dell'8%.",
+      "Aumenta la probabilità di colpo critico dei tuoi animali e dei tuoi falchi del 10%."
+    ],
+    "focused-fire": [
+      "Aumenta tutti i danni inflitti da te e dal tuo animale dell'1% mentre il tuo animale è attivo.",
+      "Aumenta tutti i danni inflitti da te e dal tuo animale del 2% mentre il tuo animale è attivo."
+    ],
+    "frenzy": [
+      "Dà al tuo animale il 20% di probabilità di ottenere un aumento del 30% della velocità d'attacco per 8 secondi dopo aver inflitto un colpo critico.",
+      "Dà al tuo animale il 40% di probabilità di ottenere un aumento del 30% della velocità d'attacco per 8 secondi dopo aver inflitto un colpo critico.",
+      "Dà al tuo animale il 60% di probabilità di ottenere un aumento del 30% della velocità d'attacco per 8 secondi dopo aver inflitto un colpo critico.",
+      "Dà al tuo animale l'80% di probabilità di ottenere un aumento del 30% della velocità d'attacco per 8 secondi dopo aver inflitto un colpo critico.",
+      "Dà al tuo animale il 100% di probabilità di ottenere un aumento del 30% della velocità d'attacco per 8 secondi dopo aver inflitto un colpo critico."
+    ],
+    "hawk-eye": [
+      "Aumenta la gittata delle tue armi a distanza di 2 metri.",
+      "Aumenta la gittata delle tue armi a distanza di 4 metri.",
+      "Aumenta la gittata delle tue armi a distanza di 6 metri."
+    ],
+    "improved-arcane-shot": [
+      "Riduce il tempo di ricarica del tuo Arcane Shot di 0.3 secondi. Non influisce sul tempo di ricarica delle abilità che condividono il tempo di ricarica con Arcane Shot.",
+      "Riduce il tempo di ricarica del tuo Arcane Shot di 0.6 secondi. Non influisce sul tempo di ricarica delle abilità che condividono il tempo di ricarica con Arcane Shot.",
+      "Riduce il tempo di ricarica del tuo Arcane Shot di 0.9 secondi. Non influisce sul tempo di ricarica delle abilità che condividono il tempo di ricarica con Arcane Shot.",
+      "Riduce il tempo di ricarica del tuo Arcane Shot di 1.2 secondi. Non influisce sul tempo di ricarica delle abilità che condividono il tempo di ricarica con Arcane Shot.",
+      "Riduce il tempo di ricarica del tuo Arcane Shot di 1.5 secondi. Non influisce sul tempo di ricarica delle abilità che condividono il tempo di ricarica con Arcane Shot."
+    ],
+    "improved-aspect-of-the-monkey": [
+      "Aumenta il bonus di schivata del tuo Aspect of the Monkey del 2%. Inoltre, il tuo animale ottiene il 50% dell'effetto della tua abilità Aspect of the Monkey.",
+      "Aumenta il bonus di schivata del tuo Aspect of the Monkey del 4%. Inoltre, il tuo animale ottiene il 50% dell'effetto della tua abilità Aspect of the Monkey.",
+      "Aumenta il bonus di schivata del tuo Aspect of the Monkey del 6%. Inoltre, il tuo animale ottiene il 50% dell'effetto della tua abilità Aspect of the Monkey."
+    ],
+    "improved-concussive-shot": [
+      "Dà al tuo Concussive Shot il 4% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà al tuo Concussive Shot l'8% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà al tuo Concussive Shot il 12% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà al tuo Concussive Shot il 16% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà al tuo Concussive Shot il 20% di probabilità di stordire il bersaglio per 3 secondi."
+    ],
+    "improved-mend-pet": [
+      "Dà al tuo incantesimo Mend Pet il 15% di probabilità di rimuovere 1 effetto di maledizione, malattia, magia o veleno dal tuo animale ogni volta che cura e ne riduce il costo in Mana del 10%.",
+      "Dà al tuo incantesimo Mend Pet il 50% di probabilità di rimuovere 1 effetto di maledizione, malattia, magia o veleno dal tuo animale ogni volta che cura e ne riduce il costo in Mana del 20%."
+    ],
+    "improved-revive-pet": [
+      "Il tempo di lancio di Revive Pet è ridotto di 3 secondi, il costo in Mana è ridotto del 20% e la Salute con cui torna il tuo animale aumenta di un ulteriore 15%.",
+      "Il tempo di lancio di Revive Pet è ridotto di 6 secondi, il costo in Mana è ridotto del 40% e la Salute con cui torna il tuo animale aumenta di un ulteriore 30%."
+    ],
+    "improved-stings": [
+      "Aumenta i danni della tua abilità Serpent Sting del 6%, riduce il tempo di ricarica della tua abilità Viper Sting di 2 secondi e aumenta la durata della tua abilità Scorpid Sting di 15 secondi.",
+      "Aumenta i danni della tua abilità Serpent Sting del 13%, riduce il tempo di ricarica della tua abilità Viper Sting di 4 secondi e aumenta la durata della tua abilità Scorpid Sting di 30 secondi.",
+      "Aumenta i danni della tua abilità Serpent Sting del 20%, riduce il tempo di ricarica della tua abilità Viper Sting di 6 secondi e aumenta la durata della tua abilità Scorpid Sting di 45 secondi."
+    ],
+    "improved-tracking": [
+      "Mentre usi il tracciamento di Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, tutti i danni che infliggi al tipo di creatura tracciato aumentano dell'1%.",
+      "Mentre usi il tracciamento di Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, tutti i danni che infliggi al tipo di creatura tracciato aumentano del 2%.",
+      "Mentre usi il tracciamento di Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, tutti i danni che infliggi al tipo di creatura tracciato aumentano del 3%.",
+      "Mentre usi il tracciamento di Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, tutti i danni che infliggi al tipo di creatura tracciato aumentano del 4%.",
+      "Mentre usi il tracciamento di Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, tutti i danni che infliggi al tipo di creatura tracciato aumentano del 5%."
+    ],
+    "improved-wing-clip": [
+      "Dà alla tua abilità Wing Clip il 7% di probabilità di immobilizzare il bersaglio per 5 secondi.",
+      "Dà alla tua abilità Wing Clip il 13% di probabilità di immobilizzare il bersaglio per 5 secondi.",
+      "Dà alla tua abilità Wing Clip il 20% di probabilità di immobilizzare il bersaglio per 5 secondi."
+    ],
+    "intimidation": [
+      "Ordina al tuo animale di stordire il bersaglio per 3 secondi con il suo prossimo attacco andato a segno, che ottiene anche il 100% di probabilità di colpo critico in più. Genera molta minaccia."
+    ],
+    "lacerating-strikes": [
+      "Il tuo Mongoose Bite fa anche sanguinare il bersaglio, infliggendo danni pari al 40% dei danni inflitti da Mongoose Bite in 21 secondi."
+    ],
+    "lethal-attacks": [
+      "Aumenta la tua probabilità di colpo critico con tutti gli attacchi dell'1%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli attacchi del 2%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli attacchi del 3%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli attacchi del 4%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli attacchi del 5%."
+    ],
+    "lightning-reflexes": [
+      "Aumenta la tua Agilità del 2%.",
+      "Aumenta la tua Agilità del 4%.",
+      "Aumenta la tua Agilità del 6%.",
+      "Aumenta la tua Agilità dell'8%.",
+      "Aumenta la tua Agilità del 10%."
+    ],
+    "lone-wolf": [
+      "Infliggi il 20% di danni in più con tutti gli attacchi mentre non hai un animale attivo."
+    ],
+    "mortal-shots": [
+      "Aumenta il bonus ai danni critici di tutte le abilità a distanza del 6%.",
+      "Aumenta il bonus ai danni critici di tutte le abilità a distanza del 12%.",
+      "Aumenta il bonus ai danni critici di tutte le abilità a distanza dell'18%.",
+      "Aumenta il bonus ai danni critici di tutte le abilità a distanza del 24%.",
+      "Aumenta il bonus ai danni critici di tutte le abilità a distanza del 30%."
+    ],
+    "pathfinding": [
+      "Aumenta il bonus di velocità dei tuoi Aspect of the Cheetah e Aspect of the Pack del 3%.",
+      "Aumenta il bonus di velocità dei tuoi Aspect of the Cheetah e Aspect of the Pack del 6%."
+    ],
+    "predators-edge": [
+      "Aumenta i danni critici delle tue abilità in mischia del 6% e i danni della tua arma secondaria del 10%.",
+      "Aumenta i danni critici delle tue abilità in mischia del 12% e i danni della tua arma secondaria del 20%.",
+      "Aumenta i danni critici delle tue abilità in mischia dell'18% e i danni della tua arma secondaria del 30%.",
+      "Aumenta i danni critici delle tue abilità in mischia del 24% e i danni della tua arma secondaria del 40%.",
+      "Aumenta i danni critici delle tue abilità in mischia del 30% e i danni della tua arma secondaria del 50%."
+    ],
+    "ranged-weapon-specialization": [
+      "Aumenta i danni che infliggi con le armi a distanza dell'1%.",
+      "Aumenta i danni che infliggi con le armi a distanza del 2%.",
+      "Aumenta i danni che infliggi con le armi a distanza del 3%.",
+      "Aumenta i danni che infliggi con le armi a distanza del 4%.",
+      "Aumenta i danni che infliggi con le armi a distanza del 5%."
+    ],
+    "rapid-killing": [
+      "Riduce il tempo di ricarica della tua abilità Rapid Fire di 1 minuto. Inoltre, quando uccidi un nemico non banale o questo muore mentre è afflitto dal tuo Serpent Sting, ottieni Rapid Killing, che aumenta del 10% i danni della tua prossima abilità Shot entro 20 secondi.",
+      "Riduce il tempo di ricarica della tua abilità Rapid Fire di 2 minuti. Inoltre, quando uccidi un nemico non banale o questo muore mentre è afflitto dal tuo Serpent Sting, ottieni Rapid Killing, che aumenta del 20% i danni della tua prossima abilità Shot entro 20 secondi."
+    ],
+    "rapid-recuperation": [
+      "Affliggere un bersaglio con Serpent Sting permette al 25% della tua rigenerazione di Mana di continuare mentre lanci incantesimi per 15 secondi, aumentato al 50% quando Rapid Killing viene consumato.",
+      "Affliggere un bersaglio con Serpent Sting permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi per 15 secondi, aumentato al 100% quando Rapid Killing viene consumato."
+    ],
+    "resourcefulness": [
+      "Riduce il costo in Mana delle tue abilità Trap e in mischia del 30% e dà ai colpi critici delle tue abilità in mischia e a distanza il 50% di probabilità di permettere al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi per 30 secondi.",
+      "Riduce il costo in Mana delle tue abilità Trap e in mischia del 60% e dà ai colpi critici delle tue abilità in mischia e a distanza il 100% di probabilità di permettere al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi per 30 secondi."
+    ],
+    "savage-strikes": [
+      "Aumenta la probabilità di colpo critico di tutte le tue abilità in mischia del 2%.",
+      "Aumenta la probabilità di colpo critico di tutte le tue abilità in mischia del 4%."
+    ],
+    "scatter-shot": [
+      "Un tiro a corta gittata che infligge il 50% dei danni dell'arma e disorienta il bersaglio per 4 secondi. Qualsiasi danno inflitto rimuove l'effetto. Interrompe il tuo attacco quando viene usato."
+    ],
+    "sniper-shot": [
+      "Un tiro a lunga gittata che infligge i danni a distanza più 160 e aumenta la gittata dei tuoi prossimi 3 Shot di 10 metri per 10 secondi."
+    ],
+    "spirit-bond": [
+      "Mentre il tuo animale è attivo, tu e il tuo animale rigenerate l'1% della Salute totale ogni 10 secondi.",
+      "Mentre il tuo animale è attivo, tu e il tuo animale rigenerate l'1% della Salute totale ogni 5 secondi."
+    ],
+    "strider-kick": [
+      "Un calcio potente che infligge il 100% dei danni dell'arma in mischia e aumenta la velocità di movimento del 30% per 3 secondi."
+    ],
+    "summon-hawk": [
+      "Ordina a un falco di piombare sul nemico che hai come bersaglio, infliggendo 32 più il 5% della tua Potenza d'attacco a distanza come danni fisici e continuando il suo assalto per 18 secondi. Possono essere attivi solo 2 falchi alla volta. Summon Hawk condivide il tempo di ricarica con Arcane Shot."
+    ],
+    "surefooted": [
+      "Aumenta la tua probabilità di colpire dell'1% e riduce la durata degli effetti che limitano il movimento su di te del 10%.",
+      "Aumenta la tua probabilità di colpire del 2% e riduce la durata degli effetti che limitano il movimento su di te del 20%.",
+      "Aumenta la tua probabilità di colpire del 3% e riduce la durata degli effetti che limitano il movimento su di te del 30%."
+    ],
+    "survival-tactics": [
+      "Aumenta la tua probabilità di colpire con le tue abilità Trap e Feign Death del 5%.",
+      "Aumenta la tua probabilità di colpire con le tue abilità Trap e Feign Death del 10%."
+    ],
+    "survivalist": [
+      "Aumenta la tua Salute totale del 2%.",
+      "Aumenta la tua Salute totale del 4%.",
+      "Aumenta la tua Salute totale del 6%.",
+      "Aumenta la tua Salute totale dell'8%.",
+      "Aumenta la tua Salute totale del 10%."
+    ],
+    "survivalists-discipline": [
+      "Riduce il tempo di ricarica delle tue abilità Trap e Deterrence del 20%.",
+      "Riduce il tempo di ricarica delle tue abilità Trap e Deterrence del 40%."
+    ],
+    "trueshot-aura": [
+      "Aumenta di 30 la Potenza d'attacco a distanza dei membri del gruppo o dell'incursione entro 45 metri."
+    ],
+    "unleashed-fury": [
+      "Aumenta i danni inflitti dai tuoi animali e dai tuoi falchi del 3%.",
+      "Aumenta i danni inflitti dai tuoi animali e dai tuoi falchi del 6%.",
+      "Aumenta i danni inflitti dai tuoi animali e dai tuoi falchi del 9%.",
+      "Aumenta i danni inflitti dai tuoi animali e dai tuoi falchi del 12%.",
+      "Aumenta i danni inflitti dai tuoi animali e dai tuoi falchi del 15%."
+    ]
+  },
+  "es": {
+    "barrage": [
+      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 3%.",
+      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 7%.",
+      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 10%."
+    ],
+    "bestial-discipline": [
+      "Aumenta la regeneración de Focus de tus mascotas en un 10% y permite que un 25% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Aumenta la regeneración de Focus de tus mascotas en un 20% y permite que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos."
+    ],
+    "bestial-swiftness": [
+      "Aumenta la velocidad de movimiento de tus mascotas en un 30%."
+    ],
+    "bestial-wrath": [
+      "Enfurece a tu mascota, haciendo que inflija un 50% de daño adicional durante 18 segundos. Mientras está enfurecida, la bestia no siente piedad, remordimiento ni miedo, y no se la puede detener a menos que la maten."
+    ],
+    "careful-aim": [
+      "Aumenta tu Poder de ataque en un 20% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en un 40% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en un 60% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en un 80% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en un 100% de tu Intelecto."
+    ],
+    "clever-traps": [
+      "Aumenta la duración de los efectos de Freezing Trap y Frost Trap en un 15% y el daño de los efectos de Immolation Trap y Explosive Trap en un 15%.",
+      "Aumenta la duración de los efectos de Freezing Trap y Frost Trap en un 30% y el daño de los efectos de Immolation Trap y Explosive Trap en un 30%."
+    ],
+    "counterattack": [
+      "Un golpe que se activa tras parar el ataque de un adversario. Este ataque inflige un 50% del daño del arma más 13 e inmoviliza al objetivo durante 5 segundos. Counterattack no se puede bloquear, esquivar ni parar."
+    ],
+    "deadly-aspects": [
+      "Mientras Aspect of the Hawk está activo, Auto Shot tiene un 2% de probabilidad de aumentar la velocidad de ataque a distancia en un 30% durante 12 segundos. Mientras Aspect of the Beast está activo, todos los ataques automáticos cuerpo a cuerpo tienen un 2% de probabilidad de aumentar la velocidad de ataque cuerpo a cuerpo en un 30% durante 12 segundos.",
+      "Mientras Aspect of the Hawk está activo, Auto Shot tiene un 4% de probabilidad de aumentar la velocidad de ataque a distancia en un 30% durante 12 segundos. Mientras Aspect of the Beast está activo, todos los ataques automáticos cuerpo a cuerpo tienen un 4% de probabilidad de aumentar la velocidad de ataque cuerpo a cuerpo en un 30% durante 12 segundos.",
+      "Mientras Aspect of the Hawk está activo, Auto Shot tiene un 6% de probabilidad de aumentar la velocidad de ataque a distancia en un 30% durante 12 segundos. Mientras Aspect of the Beast está activo, todos los ataques automáticos cuerpo a cuerpo tienen un 6% de probabilidad de aumentar la velocidad de ataque cuerpo a cuerpo en un 30% durante 12 segundos.",
+      "Mientras Aspect of the Hawk está activo, Auto Shot tiene un 8% de probabilidad de aumentar la velocidad de ataque a distancia en un 30% durante 12 segundos. Mientras Aspect of the Beast está activo, todos los ataques automáticos cuerpo a cuerpo tienen un 8% de probabilidad de aumentar la velocidad de ataque cuerpo a cuerpo en un 30% durante 12 segundos.",
+      "Mientras Aspect of the Hawk está activo, Auto Shot tiene un 10% de probabilidad de aumentar la velocidad de ataque a distancia en un 30% durante 12 segundos. Mientras Aspect of the Beast está activo, todos los ataques automáticos cuerpo a cuerpo tienen un 10% de probabilidad de aumentar la velocidad de ataque cuerpo a cuerpo en un 30% durante 12 segundos."
+    ],
+    "deflection": [
+      "Aumenta tu probabilidad de parar en un 1%.",
+      "Aumenta tu probabilidad de parar en un 2%.",
+      "Aumenta tu probabilidad de parar en un 3%.",
+      "Aumenta tu probabilidad de parar en un 4%.",
+      "Aumenta tu probabilidad de parar en un 5%."
+    ],
+    "deterrence": [
+      "Al activarse, aumenta tu probabilidad de esquivar y de parar en un 25% durante 10 segundos."
+    ],
+    "efficiency": [
+      "Reduce el coste de Maná de tus habilidades Shot y Sting y de tus habilidades cuerpo a cuerpo en un 3%.",
+      "Reduce el coste de Maná de tus habilidades Shot y Sting y de tus habilidades cuerpo a cuerpo en un 6%.",
+      "Reduce el coste de Maná de tus habilidades Shot y Sting y de tus habilidades cuerpo a cuerpo en un 9%.",
+      "Reduce el coste de Maná de tus habilidades Shot y Sting y de tus habilidades cuerpo a cuerpo en un 12%.",
+      "Reduce el coste de Maná de tus habilidades Shot y Sting y de tus habilidades cuerpo a cuerpo en un 15%."
+    ],
+    "endurance-training": [
+      "Aumenta la Salud y la armadura de tus mascotas en un 3%.",
+      "Aumenta la Salud y la armadura de tus mascotas en un 6%.",
+      "Aumenta la Salud y la armadura de tus mascotas en un 9%.",
+      "Aumenta la Salud y la armadura de tus mascotas en un 12%.",
+      "Aumenta la Salud y la armadura de tus mascotas en un 15%."
+    ],
+    "entrapment": [
+      "Cuando se activan tus trampas, todos los objetivos afectados sufren el efecto Entrapped, que les impide moverse durante 1 segundo.",
+      "Cuando se activan tus trampas, todos los objetivos afectados sufren el efecto Entrapped, que les impide moverse durante 2 segundos.",
+      "Cuando se activan tus trampas, todos los objetivos afectados sufren el efecto Entrapped, que les impide moverse durante 3 segundos.",
+      "Cuando se activan tus trampas, todos los objetivos afectados sufren el efecto Entrapped, que les impide moverse durante 4 segundos.",
+      "Cuando se activan tus trampas, todos los objetivos afectados sufren el efecto Entrapped, que les impide moverse durante 5 segundos."
+    ],
+    "expose-prey": [
+      "Otorga a tus ataques cuerpo a cuerpo y a distancia contra enemigos afectados por Hunter's Mark un 5% de probabilidad de permitir una activación de Mongoose Bite. Dura 10 segundos.",
+      "Otorga a tus ataques cuerpo a cuerpo y a distancia contra enemigos afectados por Hunter's Mark un 10% de probabilidad de permitir una activación de Mongoose Bite. Dura 10 segundos."
+    ],
+    "ferocity": [
+      "Aumenta la probabilidad de golpe crítico de tus mascotas y halcones en un 2%.",
+      "Aumenta la probabilidad de golpe crítico de tus mascotas y halcones en un 4%.",
+      "Aumenta la probabilidad de golpe crítico de tus mascotas y halcones en un 6%.",
+      "Aumenta la probabilidad de golpe crítico de tus mascotas y halcones en un 8%.",
+      "Aumenta la probabilidad de golpe crítico de tus mascotas y halcones en un 10%."
+    ],
+    "focused-fire": [
+      "Aumenta todo el daño que infligen tú y tu mascota en un 1% mientras tu mascota está activa.",
+      "Aumenta todo el daño que infligen tú y tu mascota en un 2% mientras tu mascota está activa."
+    ],
+    "frenzy": [
+      "Otorga a tu mascota un 20% de probabilidad de obtener un aumento del 30% de velocidad de ataque durante 8 segundos tras infligir un golpe crítico.",
+      "Otorga a tu mascota un 40% de probabilidad de obtener un aumento del 30% de velocidad de ataque durante 8 segundos tras infligir un golpe crítico.",
+      "Otorga a tu mascota un 60% de probabilidad de obtener un aumento del 30% de velocidad de ataque durante 8 segundos tras infligir un golpe crítico.",
+      "Otorga a tu mascota un 80% de probabilidad de obtener un aumento del 30% de velocidad de ataque durante 8 segundos tras infligir un golpe crítico.",
+      "Otorga a tu mascota un 100% de probabilidad de obtener un aumento del 30% de velocidad de ataque durante 8 segundos tras infligir un golpe crítico."
+    ],
+    "hawk-eye": [
+      "Aumenta el alcance de tus armas a distancia en 2 metros.",
+      "Aumenta el alcance de tus armas a distancia en 4 metros.",
+      "Aumenta el alcance de tus armas a distancia en 6 metros."
+    ],
+    "improved-arcane-shot": [
+      "Reduce el tiempo de reutilización de tu Arcane Shot en 0.3 segundos. No afecta al tiempo de reutilización de las habilidades que comparten tiempo de reutilización con Arcane Shot.",
+      "Reduce el tiempo de reutilización de tu Arcane Shot en 0.6 segundos. No afecta al tiempo de reutilización de las habilidades que comparten tiempo de reutilización con Arcane Shot.",
+      "Reduce el tiempo de reutilización de tu Arcane Shot en 0.9 segundos. No afecta al tiempo de reutilización de las habilidades que comparten tiempo de reutilización con Arcane Shot.",
+      "Reduce el tiempo de reutilización de tu Arcane Shot en 1.2 segundos. No afecta al tiempo de reutilización de las habilidades que comparten tiempo de reutilización con Arcane Shot.",
+      "Reduce el tiempo de reutilización de tu Arcane Shot en 1.5 segundos. No afecta al tiempo de reutilización de las habilidades que comparten tiempo de reutilización con Arcane Shot."
+    ],
+    "improved-aspect-of-the-monkey": [
+      "Aumenta la bonificación de esquivar de tu Aspect of the Monkey en un 2%. Además, tu mascota obtiene un 50% del efecto de tu habilidad Aspect of the Monkey.",
+      "Aumenta la bonificación de esquivar de tu Aspect of the Monkey en un 4%. Además, tu mascota obtiene un 50% del efecto de tu habilidad Aspect of the Monkey.",
+      "Aumenta la bonificación de esquivar de tu Aspect of the Monkey en un 6%. Además, tu mascota obtiene un 50% del efecto de tu habilidad Aspect of the Monkey."
+    ],
+    "improved-concussive-shot": [
+      "Otorga a tu Concussive Shot un 4% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Otorga a tu Concussive Shot un 8% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Otorga a tu Concussive Shot un 12% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Otorga a tu Concussive Shot un 16% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Otorga a tu Concussive Shot un 20% de probabilidad de aturdir al objetivo durante 3 segundos."
+    ],
+    "improved-mend-pet": [
+      "Otorga a tu hechizo Mend Pet un 15% de probabilidad de eliminar 1 efecto de maldición, enfermedad, magia o veneno de tu mascota cada vez que sana y reduce su coste de Maná en un 10%.",
+      "Otorga a tu hechizo Mend Pet un 50% de probabilidad de eliminar 1 efecto de maldición, enfermedad, magia o veneno de tu mascota cada vez que sana y reduce su coste de Maná en un 20%."
+    ],
+    "improved-revive-pet": [
+      "El tiempo de lanzamiento de Revive Pet se reduce en 3 segundos, el coste de Maná se reduce en un 20% y la Salud con la que regresa tu mascota aumenta en un 15% adicional.",
+      "El tiempo de lanzamiento de Revive Pet se reduce en 6 segundos, el coste de Maná se reduce en un 40% y la Salud con la que regresa tu mascota aumenta en un 30% adicional."
+    ],
+    "improved-stings": [
+      "Aumenta el daño de tu habilidad Serpent Sting en un 6%, reduce el tiempo de reutilización de tu habilidad Viper Sting en 2 segundos y aumenta la duración de tu habilidad Scorpid Sting en 15 segundos.",
+      "Aumenta el daño de tu habilidad Serpent Sting en un 13%, reduce el tiempo de reutilización de tu habilidad Viper Sting en 4 segundos y aumenta la duración de tu habilidad Scorpid Sting en 30 segundos.",
+      "Aumenta el daño de tu habilidad Serpent Sting en un 20%, reduce el tiempo de reutilización de tu habilidad Viper Sting en 6 segundos y aumenta la duración de tu habilidad Scorpid Sting en 45 segundos."
+    ],
+    "improved-tracking": [
+      "Mientras usas el rastreo de Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, todo el daño que infliges al tipo de criatura rastreado aumenta en un 1%.",
+      "Mientras usas el rastreo de Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, todo el daño que infliges al tipo de criatura rastreado aumenta en un 2%.",
+      "Mientras usas el rastreo de Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, todo el daño que infliges al tipo de criatura rastreado aumenta en un 3%.",
+      "Mientras usas el rastreo de Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, todo el daño que infliges al tipo de criatura rastreado aumenta en un 4%.",
+      "Mientras usas el rastreo de Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids o Undead, todo el daño que infliges al tipo de criatura rastreado aumenta en un 5%."
+    ],
+    "improved-wing-clip": [
+      "Otorga a tu habilidad Wing Clip un 7% de probabilidad de inmovilizar al objetivo durante 5 segundos.",
+      "Otorga a tu habilidad Wing Clip un 13% de probabilidad de inmovilizar al objetivo durante 5 segundos.",
+      "Otorga a tu habilidad Wing Clip un 20% de probabilidad de inmovilizar al objetivo durante 5 segundos."
+    ],
+    "intimidation": [
+      "Ordena a tu mascota aturdir al objetivo durante 3 segundos con su próximo ataque exitoso, que además obtiene un 100% más de probabilidad de golpe crítico. Genera mucha amenaza."
+    ],
+    "lacerating-strikes": [
+      "Tu Mongoose Bite también hace sangrar al objetivo, infligiendo un daño igual al 40% del daño infligido por Mongoose Bite durante 21 segundos."
+    ],
+    "lethal-attacks": [
+      "Aumenta tu probabilidad de golpe crítico con todos los ataques en un 1%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los ataques en un 2%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los ataques en un 3%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los ataques en un 4%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los ataques en un 5%."
+    ],
+    "lightning-reflexes": [
+      "Aumenta tu Agilidad en un 2%.",
+      "Aumenta tu Agilidad en un 4%.",
+      "Aumenta tu Agilidad en un 6%.",
+      "Aumenta tu Agilidad en un 8%.",
+      "Aumenta tu Agilidad en un 10%."
+    ],
+    "lone-wolf": [
+      "Infliges un 20% más de daño con todos los ataques mientras no tienes una mascota activa."
+    ],
+    "mortal-shots": [
+      "Aumenta la bonificación de daño crítico de todas las habilidades a distancia en un 6%.",
+      "Aumenta la bonificación de daño crítico de todas las habilidades a distancia en un 12%.",
+      "Aumenta la bonificación de daño crítico de todas las habilidades a distancia en un 18%.",
+      "Aumenta la bonificación de daño crítico de todas las habilidades a distancia en un 24%.",
+      "Aumenta la bonificación de daño crítico de todas las habilidades a distancia en un 30%."
+    ],
+    "pathfinding": [
+      "Aumenta la bonificación de velocidad de tus Aspect of the Cheetah y Aspect of the Pack en un 3%.",
+      "Aumenta la bonificación de velocidad de tus Aspect of the Cheetah y Aspect of the Pack en un 6%."
+    ],
+    "predators-edge": [
+      "Aumenta el daño crítico de tus habilidades cuerpo a cuerpo en un 6% y el daño de tu arma de mano secundaria en un 10%.",
+      "Aumenta el daño crítico de tus habilidades cuerpo a cuerpo en un 12% y el daño de tu arma de mano secundaria en un 20%.",
+      "Aumenta el daño crítico de tus habilidades cuerpo a cuerpo en un 18% y el daño de tu arma de mano secundaria en un 30%.",
+      "Aumenta el daño crítico de tus habilidades cuerpo a cuerpo en un 24% y el daño de tu arma de mano secundaria en un 40%.",
+      "Aumenta el daño crítico de tus habilidades cuerpo a cuerpo en un 30% y el daño de tu arma de mano secundaria en un 50%."
+    ],
+    "ranged-weapon-specialization": [
+      "Aumenta el daño que infliges con armas a distancia en un 1%.",
+      "Aumenta el daño que infliges con armas a distancia en un 2%.",
+      "Aumenta el daño que infliges con armas a distancia en un 3%.",
+      "Aumenta el daño que infliges con armas a distancia en un 4%.",
+      "Aumenta el daño que infliges con armas a distancia en un 5%."
+    ],
+    "rapid-killing": [
+      "Reduce el tiempo de reutilización de tu habilidad Rapid Fire en 1 minuto. Además, cuando matas a un enemigo no trivial o este muere mientras está afectado por tu Serpent Sting, obtienes Rapid Killing, que aumenta en un 10% el daño de tu próxima habilidad Shot en los siguientes 20 segundos.",
+      "Reduce el tiempo de reutilización de tu habilidad Rapid Fire en 2 minutos. Además, cuando matas a un enemigo no trivial o este muere mientras está afectado por tu Serpent Sting, obtienes Rapid Killing, que aumenta en un 20% el daño de tu próxima habilidad Shot en los siguientes 20 segundos."
+    ],
+    "rapid-recuperation": [
+      "Afectar a un objetivo con Serpent Sting permite que un 25% de tu regeneración de Maná continúe mientras lanzas hechizos durante 15 segundos, aumentado a un 50% cuando se consume Rapid Killing.",
+      "Afectar a un objetivo con Serpent Sting permite que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos durante 15 segundos, aumentado a un 100% cuando se consume Rapid Killing."
+    ],
+    "resourcefulness": [
+      "Reduce el coste de Maná de tus habilidades Trap y cuerpo a cuerpo en un 30% y otorga a los golpes críticos de tus habilidades cuerpo a cuerpo y a distancia un 50% de probabilidad de permitir que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos durante 30 segundos.",
+      "Reduce el coste de Maná de tus habilidades Trap y cuerpo a cuerpo en un 60% y otorga a los golpes críticos de tus habilidades cuerpo a cuerpo y a distancia un 100% de probabilidad de permitir que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos durante 30 segundos."
+    ],
+    "savage-strikes": [
+      "Aumenta la probabilidad de golpe crítico de todas tus habilidades cuerpo a cuerpo en un 2%.",
+      "Aumenta la probabilidad de golpe crítico de todas tus habilidades cuerpo a cuerpo en un 4%."
+    ],
+    "scatter-shot": [
+      "Un disparo de corto alcance que inflige un 50% del daño del arma y desorienta al objetivo durante 4 segundos. Cualquier daño causado elimina el efecto. Desactiva tu ataque al usarlo."
+    ],
+    "sniper-shot": [
+      "Un disparo de largo alcance que inflige el daño a distancia más 160 y aumenta el alcance de tus próximos 3 Shot en 10 metros durante 10 segundos."
+    ],
+    "spirit-bond": [
+      "Mientras tu mascota está activa, tú y tu mascota regeneran un 1% de la Salud total cada 10 segundos.",
+      "Mientras tu mascota está activa, tú y tu mascota regeneran un 1% de la Salud total cada 5 segundos."
+    ],
+    "strider-kick": [
+      "Una patada poderosa que inflige un 100% del daño del arma cuerpo a cuerpo y aumenta la velocidad de movimiento en un 30% durante 3 segundos."
+    ],
+    "summon-hawk": [
+      "Ordena a un halcón lanzarse en picado sobre el enemigo que tienes como objetivo, infligiendo 32 más un 5% de tu Poder de ataque a distancia como daño físico y continuando su asalto durante 18 segundos. Solo pueden estar activos 2 halcones a la vez. Summon Hawk comparte su tiempo de reutilización con Arcane Shot."
+    ],
+    "surefooted": [
+      "Aumenta tu probabilidad de golpear en un 1% y reduce la duración de los efectos que limitan el movimiento sobre ti en un 10%.",
+      "Aumenta tu probabilidad de golpear en un 2% y reduce la duración de los efectos que limitan el movimiento sobre ti en un 20%.",
+      "Aumenta tu probabilidad de golpear en un 3% y reduce la duración de los efectos que limitan el movimiento sobre ti en un 30%."
+    ],
+    "survival-tactics": [
+      "Aumenta tu probabilidad de golpear con tus habilidades Trap y Feign Death en un 5%.",
+      "Aumenta tu probabilidad de golpear con tus habilidades Trap y Feign Death en un 10%."
+    ],
+    "survivalist": [
+      "Aumenta tu Salud total en un 2%.",
+      "Aumenta tu Salud total en un 4%.",
+      "Aumenta tu Salud total en un 6%.",
+      "Aumenta tu Salud total en un 8%.",
+      "Aumenta tu Salud total en un 10%."
+    ],
+    "survivalists-discipline": [
+      "Reduce el tiempo de reutilización de tus habilidades Trap y Deterrence en un 20%.",
+      "Reduce el tiempo de reutilización de tus habilidades Trap y Deterrence en un 40%."
+    ],
+    "trueshot-aura": [
+      "Aumenta en 30 el Poder de ataque a distancia de los miembros del grupo o de la banda a menos de 45 metros."
+    ],
+    "unleashed-fury": [
+      "Aumenta el daño infligido por tus mascotas y halcones en un 3%.",
+      "Aumenta el daño infligido por tus mascotas y halcones en un 6%.",
+      "Aumenta el daño infligido por tus mascotas y halcones en un 9%.",
+      "Aumenta el daño infligido por tus mascotas y halcones en un 12%.",
+      "Aumenta el daño infligido por tus mascotas y halcones en un 15%."
+    ]
+  }
+}

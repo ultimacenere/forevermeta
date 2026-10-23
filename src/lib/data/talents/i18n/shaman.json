@@ -1,0 +1,502 @@
+{
+  "it": {
+    "ancestral-healing": [
+      "Aumenta il valore di armatura del tuo bersaglio del 8% per 15 s dopo che ha ricevuto un effetto critico da uno dei tuoi incantesimi di cura.",
+      "Aumenta il valore di armatura del tuo bersaglio del 17% per 15 s dopo che ha ricevuto un effetto critico da uno dei tuoi incantesimi di cura.",
+      "Aumenta il valore di armatura del tuo bersaglio del 25% per 15 s dopo che ha ricevuto un effetto critico da uno dei tuoi incantesimi di cura."
+    ],
+    "ancestral-knowledge": [
+      "Aumenta il tuo Intelletto del 2%.",
+      "Aumenta il tuo Intelletto del 4%.",
+      "Aumenta il tuo Intelletto del 6%.",
+      "Aumenta il tuo Intelletto del 8%.",
+      "Aumenta il tuo Intelletto del 10%."
+    ],
+    "anticipation": [
+      "Aumenta la tua probabilità di schivata di un ulteriore 2%.",
+      "Aumenta la tua probabilità di schivata di un ulteriore 4%.",
+      "Aumenta la tua probabilità di schivata di un ulteriore 6%."
+    ],
+    "call-of-flame": [
+      "Aumenta i danni inflitti dai tuoi totem del Fuoco e dai tuoi incantesimi Flame Shock, Fire Nova e Lava Burst del 5% e aumenta la durata del tuo incantesimo Flame Shock di 3 s.",
+      "Aumenta i danni inflitti dai tuoi totem del Fuoco e dai tuoi incantesimi Flame Shock, Fire Nova e Lava Burst del 10% e aumenta la durata del tuo incantesimo Flame Shock di 6 s.",
+      "Aumenta i danni inflitti dai tuoi totem del Fuoco e dai tuoi incantesimi Flame Shock, Fire Nova e Lava Burst del 15% e aumenta la durata del tuo incantesimo Flame Shock di 9 s."
+    ],
+    "concussion": [
+      "Aumenta i danni inflitti dai tuoi incantesimi Lightning Bolt, Chain Lightning ed Earth Shock del 1%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi Lightning Bolt, Chain Lightning ed Earth Shock del 2%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi Lightning Bolt, Chain Lightning ed Earth Shock del 3%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi Lightning Bolt, Chain Lightning ed Earth Shock del 4%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi Lightning Bolt, Chain Lightning ed Earth Shock del 5%."
+    ],
+    "convection": [
+      "Riduce il costo in Mana dei tuoi incantesimi Shock, Lightning Bolt, Lava Burst e Chain Lightning del 2%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Shock, Lightning Bolt, Lava Burst e Chain Lightning del 4%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Shock, Lightning Bolt, Lava Burst e Chain Lightning del 6%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Shock, Lightning Bolt, Lava Burst e Chain Lightning del 8%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Shock, Lightning Bolt, Lava Burst e Chain Lightning del 10%."
+    ],
+    "earthbound": [
+      "Il tuo Earthbind Totem immobilizza i bersagli vicini per 5 s quando viene lanciato."
+    ],
+    "earths-grasp": [
+      "Aumenta la Salute del tuo Stoneclaw Totem del 25% e il raggio del tuo Earthbind Totem del 10%.",
+      "Aumenta la Salute del tuo Stoneclaw Totem del 50% e il raggio del tuo Earthbind Totem del 20%."
+    ],
+    "elemental-alacrity": [
+      "Riduce il tempo di lancio dei tuoi incantesimi Lightning Bolt, Chain Lightning e Lava Burst di 0.17 s.",
+      "Riduce il tempo di lancio dei tuoi incantesimi Lightning Bolt, Chain Lightning e Lava Burst di 0.33 s.",
+      "Riduce il tempo di lancio dei tuoi incantesimi Lightning Bolt, Chain Lightning e Lava Burst di 0.50 s."
+    ],
+    "elemental-devastation": [
+      "I tuoi colpi critici con gli incantesimi a danno diretto aumentano la tua probabilità di colpo critico con gli attacchi in mischia del 3% per 10 s.",
+      "I tuoi colpi critici con gli incantesimi a danno diretto aumentano la tua probabilità di colpo critico con gli attacchi in mischia del 6% per 10 s.",
+      "I tuoi colpi critici con gli incantesimi a danno diretto aumentano la tua probabilità di colpo critico con gli attacchi in mischia del 9% per 10 s."
+    ],
+    "elemental-focus": [
+      "Ti dà una probabilità del 10% di entrare in uno stato di Clearcasting dopo aver lanciato un incantesimo da danno di Fuoco, Gelo o Natura. Lo stato di Clearcasting riduce il costo in Mana del tuo prossimo incantesimo da danno del 100%."
+    ],
+    "elemental-fury": [
+      "Aumenta il bonus ai danni dei colpi critici del tuo Searing Totem, del tuo Magma Totem e dei tuoi incantesimi di Fuoco, Gelo e Natura del 20%.",
+      "Aumenta il bonus ai danni dei colpi critici del tuo Searing Totem, del tuo Magma Totem e dei tuoi incantesimi di Fuoco, Gelo e Natura del 40%.",
+      "Aumenta il bonus ai danni dei colpi critici del tuo Searing Totem, del tuo Magma Totem e dei tuoi incantesimi di Fuoco, Gelo e Natura del 60%.",
+      "Aumenta il bonus ai danni dei colpi critici del tuo Searing Totem, del tuo Magma Totem e dei tuoi incantesimi di Fuoco, Gelo e Natura del 80%.",
+      "Aumenta il bonus ai danni dei colpi critici del tuo Searing Totem, del tuo Magma Totem e dei tuoi incantesimi di Fuoco, Gelo e Natura del 100%."
+    ],
+    "elemental-mastery": [
+      "Ottieni la padronanza del Fuoco e del Fulmine, riducendo il tempo di lancio di Lightning Bolt e Lava Burst di 0.5 s ed eliminando il tempo di ricarica di Chain Lightning. Dura 15 s."
+    ],
+    "elemental-reach": [
+      "Aumenta la gittata dei tuoi incantesimi Lightning Bolt, Chain Lightning, Fire Nova e Lava Burst di 3 metri e riduce il tempo di ricarica di Totemic Projection di 10 s.",
+      "Aumenta la gittata dei tuoi incantesimi Lightning Bolt, Chain Lightning, Fire Nova e Lava Burst di 6 metri e riduce il tempo di ricarica di Totemic Projection di 20 s."
+    ],
+    "elemental-warding": [
+      "Riduce i danni subiti dagli effetti di Fuoco, Gelo e Natura del 3%.",
+      "Riduce i danni subiti dagli effetti di Fuoco, Gelo e Natura del 7%.",
+      "Riduce i danni subiti dagli effetti di Fuoco, Gelo e Natura del 10%."
+    ],
+    "elemental-weapons": [
+      "Aumenta il bonus alla Potenza d'attacco in mischia del tuo Rockbiter Weapon del 7%, l'effetto del tuo Windfury Weapon del 13% e aumenta i danni inflitti dai tuoi Flametongue Weapon e Frostbrand Weapon del 5%.",
+      "Aumenta il bonus alla Potenza d'attacco in mischia del tuo Rockbiter Weapon del 13%, l'effetto del tuo Windfury Weapon del 27% e aumenta i danni inflitti dai tuoi Flametongue Weapon e Frostbrand Weapon del 10%.",
+      "Aumenta il bonus alla Potenza d'attacco in mischia del tuo Rockbiter Weapon del 20%, l'effetto del tuo Windfury Weapon del 40% e aumenta i danni inflitti dai tuoi Flametongue Weapon e Frostbrand Weapon del 15%."
+    ],
+    "eye-of-the-storm": [
+      "Riduce del 23% il ritardo del lancio causato dagli attacchi che ti infliggono danni mentre lanci Lightning Bolt, Chain Lightning e Lava Burst.",
+      "Riduce del 47% il ritardo del lancio causato dagli attacchi che ti infliggono danni mentre lanci Lightning Bolt, Chain Lightning e Lava Burst.",
+      "Riduce del 70% il ritardo del lancio causato dagli attacchi che ti infliggono danni mentre lanci Lightning Bolt, Chain Lightning e Lava Burst."
+    ],
+    "flurry": [
+      "Aumenta la tua velocità d'attacco del 5% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
+      "Aumenta la tua velocità d'attacco del 10% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
+      "Aumenta la tua velocità d'attacco del 15% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
+      "Aumenta la tua velocità d'attacco del 20% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
+      "Aumenta la tua velocità d'attacco del 25% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia."
+    ],
+    "guardian-totems": [
+      "Aumenta la quantità di danni ridotta dai tuoi Stoneskin Totem e Windwall Totem del 10% e riduce il tempo di ricarica del tuo Grounding Totem di 1 s.",
+      "Aumenta la quantità di danni ridotta dai tuoi Stoneskin Totem e Windwall Totem del 20% e riduce il tempo di ricarica del tuo Grounding Totem di 2 s."
+    ],
+    "healing-focus": [
+      "Ti dà una probabilità del 23% di evitare l'interruzione causata dai danni mentre lanci un incantesimo di cura.",
+      "Ti dà una probabilità del 47% di evitare l'interruzione causata dai danni mentre lanci un incantesimo di cura.",
+      "Ti dà una probabilità del 70% di evitare l'interruzione causata dai danni mentre lanci un incantesimo di cura."
+    ],
+    "healing-way": [
+      "Aumenta la quantità di cure del tuo incantesimo Healing Wave del 8%.",
+      "Aumenta la quantità di cure del tuo incantesimo Healing Wave del 17%.",
+      "Aumenta la quantità di cure del tuo incantesimo Healing Wave del 25%."
+    ],
+    "improved-ghost-wolf": [
+      "Riduce il tempo di lancio del tuo incantesimo Ghost Wolf di 1.0 s, e Ghost Wolf può essere usato al chiuso.",
+      "Riduce il tempo di lancio del tuo incantesimo Ghost Wolf di 3.0 s, e Ghost Wolf può essere usato al chiuso."
+    ],
+    "improved-healing-wave": [
+      "Riduce il tempo di lancio del tuo incantesimo Healing Wave di 0.1 s.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Wave di 0.2 s.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Wave di 0.3 s.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Wave di 0.4 s.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Wave di 0.5 s."
+    ],
+    "improved-lightning-shield": [
+      "Aumenta i danni inflitti dalle sfere del tuo Lightning Shield del 5%.",
+      "Aumenta i danni inflitti dalle sfere del tuo Lightning Shield del 10%.",
+      "Aumenta i danni inflitti dalle sfere del tuo Lightning Shield del 15%."
+    ],
+    "improved-reincarnation": [
+      "Riduce il tempo di ricarica del tuo incantesimo Reincarnation di 10 min, aumenta la tua Salute massima del 2% e aumenta la quantità di Salute e Mana con cui ti reincarni di un ulteriore 10%.",
+      "Riduce il tempo di ricarica del tuo incantesimo Reincarnation di 20 min, aumenta la tua Salute massima del 4% e aumenta la quantità di Salute e Mana con cui ti reincarni di un ulteriore 20%."
+    ],
+    "improved-stormstrike": [
+      "Quando usi Stormstrike, hai una probabilità del 50% di ottenere il 50% della rigenerazione di Mana mentre lanci incantesimi per 15 s, e il tempo di ricarica di Stormstrike ha una probabilità del 50% di azzerarsi ogni volta che schivi o pari.",
+      "Quando usi Stormstrike, hai una probabilità del 100% di ottenere il 50% della rigenerazione di Mana mentre lanci incantesimi per 15 s, e il tempo di ricarica di Stormstrike ha una probabilità del 100% di azzerarsi ogni volta che schivi o pari."
+    ],
+    "lava-burst": [
+      "Scagli lava fusa contro il bersaglio, infliggendo da 113 a 145 danni da Fuoco. Se il tuo Flame Shock è attivo sul bersaglio, Lava Burst infligge il 20% di danni in più."
+    ],
+    "lightning-overload": [
+      "Dà ai tuoi incantesimi Lightning Bolt e Chain Lightning una probabilità del 3% di lanciare un secondo incantesimo simile sullo stesso bersaglio senza costi aggiuntivi, che infligge metà dei danni e non genera minaccia.",
+      "Dà ai tuoi incantesimi Lightning Bolt e Chain Lightning una probabilità del 7% di lanciare un secondo incantesimo simile sullo stesso bersaglio senza costi aggiuntivi, che infligge metà dei danni e non genera minaccia.",
+      "Dà ai tuoi incantesimi Lightning Bolt e Chain Lightning una probabilità del 10% di lanciare un secondo incantesimo simile sullo stesso bersaglio senza costi aggiuntivi, che infligge metà dei danni e non genera minaccia."
+    ],
+    "maelstrom-weapon": [
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 4%. Si accumula fino a 5 volte. Dura 30 s.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 8%. Si accumula fino a 5 volte. Dura 30 s.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 12%. Si accumula fino a 5 volte. Dura 30 s.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 16%. Si accumula fino a 5 volte. Dura 30 s.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s."
+    ],
+    "mana-tide-totem": [
+      "Evoca un Mana Tide Totem con 5 Salute ai piedi dell'incantatore per 12 s, che ripristina 88 Mana ogni 3 secondi ai membri del gruppo entro 30 metri."
+    ],
+    "mental-dexterity": [
+      "Aumenta la tua Potenza d'attacco di una quantità pari al 33% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco di una quantità pari al 67% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco di una quantità pari al 100% del tuo Intelletto."
+    ],
+    "mental-quickness": [
+      "Aumenta i tuoi Danni da incantesimo e le tue Cure fino al 15% del tuo Intelletto.",
+      "Aumenta i tuoi Danni da incantesimo e le tue Cure fino al 30% del tuo Intelletto."
+    ],
+    "mindfulness": [
+      "Permette al 17% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 33% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi."
+    ],
+    "natural-grace": [
+      "Riduce la minaccia generata dai tuoi incantesimi del 5%.",
+      "Riduce la minaccia generata dai tuoi incantesimi del 10%.",
+      "Riduce la minaccia generata dai tuoi incantesimi del 15%."
+    ],
+    "natures-swiftness": [
+      "Quando viene attivato, il tuo prossimo incantesimo di Natura con un tempo di lancio inferiore a 10 s diventa un incantesimo istantaneo."
+    ],
+    "purification": [
+      "Aumenta l'efficacia dei tuoi incantesimi di cura del 2%.",
+      "Aumenta l'efficacia dei tuoi incantesimi di cura del 4%.",
+      "Aumenta l'efficacia dei tuoi incantesimi di cura del 6%.",
+      "Aumenta l'efficacia dei tuoi incantesimi di cura del 8%.",
+      "Aumenta l'efficacia dei tuoi incantesimi di cura del 10%."
+    ],
+    "rage-of-the-farseer": [
+      "Aumenta la tua velocità d'attacco del 30% per 25 s."
+    ],
+    "restorative-totems": [
+      "Aumenta l'effetto del tuo Mana Spring Totem del 5% e aumenta l'effetto del tuo Healing Stream Totem del 10%.",
+      "Aumenta l'effetto del tuo Mana Spring Totem del 10% e aumenta l'effetto del tuo Healing Stream Totem del 20%.",
+      "Aumenta l'effetto del tuo Mana Spring Totem del 15% e aumenta l'effetto del tuo Healing Stream Totem del 30%.",
+      "Aumenta l'effetto del tuo Mana Spring Totem del 20% e aumenta l'effetto del tuo Healing Stream Totem del 40%.",
+      "Aumenta l'effetto del tuo Mana Spring Totem del 25% e aumenta l'effetto del tuo Healing Stream Totem del 50%."
+    ],
+    "reverberation": [
+      "Riduce il tempo di ricarica dei tuoi incantesimi Shock di 0.2 s.",
+      "Riduce il tempo di ricarica dei tuoi incantesimi Shock di 0.4 s.",
+      "Riduce il tempo di ricarica dei tuoi incantesimi Shock di 0.6 s.",
+      "Riduce il tempo di ricarica dei tuoi incantesimi Shock di 0.8 s.",
+      "Riduce il tempo di ricarica dei tuoi incantesimi Shock di 1.0 s."
+    ],
+    "riptide": [
+      "Cura un bersaglio alleato da 485 a 533, più altri 445 in 15 s, e aumenta l'efficacia dei tuoi lanci di Chain Heal direttamente su quel bersaglio del 25%."
+    ],
+    "shamanistic-focus": [
+      "Riduce il costo in Mana dei tuoi incantesimi Shock e Lightning Shield del 45%."
+    ],
+    "spirit-weapons": [
+      "Dà una probabilità di parare gli attacchi in mischia nemici, riduce del 30% tutta la minaccia generata dai tuoi attacchi mentre Rockbiter Weapon non è attivo e aumenta del 30% tutta la minaccia generata mentre Rockbiter Weapon è attivo."
+    ],
+    "stormstrike": [
+      "Colpisci istantaneamente infliggendo i danni normali dell'arma e aumenti del 20% per 12 s i danni che infliggi al bersaglio con il tuo prossimo incantesimo Lightning Bolt, Chain Lightning o Earth Shock."
+    ],
+    "thundering-strikes": [
+      "Aumenta la tua probabilità di colpo critico con tutti gli incantesimi e gli attacchi del 1%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli incantesimi e gli attacchi del 2%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli incantesimi e gli attacchi del 3%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli incantesimi e gli attacchi del 4%.",
+      "Aumenta la tua probabilità di colpo critico con tutti gli incantesimi e gli attacchi del 5%."
+    ],
+    "tidal-focus": [
+      "Riduce il costo in Mana dei tuoi incantesimi di cura del 1% e aumenta la tua probabilità di colpire del 1%.",
+      "Riduce il costo in Mana dei tuoi incantesimi di cura del 2% e aumenta la tua probabilità di colpire del 2%.",
+      "Riduce il costo in Mana dei tuoi incantesimi di cura del 3% e aumenta la tua probabilità di colpire del 3%.",
+      "Riduce il costo in Mana dei tuoi incantesimi di cura del 4% e aumenta la tua probabilità di colpire del 4%.",
+      "Riduce il costo in Mana dei tuoi incantesimi di cura del 5% e aumenta la tua probabilità di colpire del 5%."
+    ],
+    "tidal-mastery": [
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi di cura del 1%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi di cura del 2%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi di cura del 3%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi di cura del 4%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi di cura del 5%."
+    ],
+    "totemic-focus": [
+      "Riduce il costo in Mana dei tuoi totem e di tutti gli incantesimi che li evocano o li spostano del 5%.",
+      "Riduce il costo in Mana dei tuoi totem e di tutti gli incantesimi che li evocano o li spostano del 10%.",
+      "Riduce il costo in Mana dei tuoi totem e di tutti gli incantesimi che li evocano o li spostano del 15%.",
+      "Riduce il costo in Mana dei tuoi totem e di tutti gli incantesimi che li evocano o li spostano del 20%.",
+      "Riduce il costo in Mana dei tuoi totem e di tutti gli incantesimi che li evocano o li spostano del 25%."
+    ],
+    "toughness": [
+      "Aumenta la tua Tempra del 2%.",
+      "Aumenta la tua Tempra del 4%.",
+      "Aumenta la tua Tempra del 6%.",
+      "Aumenta la tua Tempra del 8%.",
+      "Aumenta la tua Tempra del 10%."
+    ],
+    "trial-by-fire": [
+      "Aumenta i danni inflitti dal tuo incantesimo Fire Nova del 10%, riduce il suo tempo di ricarica di 2 s e aumenta la durata del tuo Magma Totem di 10 s.",
+      "Aumenta i danni inflitti dal tuo incantesimo Fire Nova del 20%, riduce il suo tempo di ricarica di 4 s e aumenta la durata del tuo Magma Totem di 20 s."
+    ],
+    "water-shield": [
+      "L'incantatore è circondato da 3 globi d'acqua. Quando un incantesimo o un attacco in mischia o a distanza colpisce l'incantatore, o quando uno degli incantesimi dell'incantatore ottiene un risultato critico, l'incantatore recupera il 2% del Mana massimo, consumando un globo d'acqua. Si attiva un solo globo ogni pochi secondi. Dura 10 min.\n\nSullo Sciamano può essere attivo un solo Elemental Shield alla volta."
+    ]
+  },
+  "es": {
+    "ancestral-healing": [
+      "Aumenta el valor de armadura de tu objetivo en un 8% durante 15 s tras recibir un efecto crítico de uno de tus hechizos de sanación.",
+      "Aumenta el valor de armadura de tu objetivo en un 17% durante 15 s tras recibir un efecto crítico de uno de tus hechizos de sanación.",
+      "Aumenta el valor de armadura de tu objetivo en un 25% durante 15 s tras recibir un efecto crítico de uno de tus hechizos de sanación."
+    ],
+    "ancestral-knowledge": [
+      "Aumenta tu Intelecto en un 2%.",
+      "Aumenta tu Intelecto en un 4%.",
+      "Aumenta tu Intelecto en un 6%.",
+      "Aumenta tu Intelecto en un 8%.",
+      "Aumenta tu Intelecto en un 10%."
+    ],
+    "anticipation": [
+      "Aumenta tu probabilidad de esquivar en un 2% adicional.",
+      "Aumenta tu probabilidad de esquivar en un 4% adicional.",
+      "Aumenta tu probabilidad de esquivar en un 6% adicional."
+    ],
+    "call-of-flame": [
+      "Aumenta el daño infligido por tus tótems de Fuego y por tus hechizos Flame Shock, Fire Nova y Lava Burst en un 5%, y aumenta la duración de tu hechizo Flame Shock en 3 s.",
+      "Aumenta el daño infligido por tus tótems de Fuego y por tus hechizos Flame Shock, Fire Nova y Lava Burst en un 10%, y aumenta la duración de tu hechizo Flame Shock en 6 s.",
+      "Aumenta el daño infligido por tus tótems de Fuego y por tus hechizos Flame Shock, Fire Nova y Lava Burst en un 15%, y aumenta la duración de tu hechizo Flame Shock en 9 s."
+    ],
+    "concussion": [
+      "Aumenta el daño infligido por tus hechizos Lightning Bolt, Chain Lightning y Earth Shock en un 1%.",
+      "Aumenta el daño infligido por tus hechizos Lightning Bolt, Chain Lightning y Earth Shock en un 2%.",
+      "Aumenta el daño infligido por tus hechizos Lightning Bolt, Chain Lightning y Earth Shock en un 3%.",
+      "Aumenta el daño infligido por tus hechizos Lightning Bolt, Chain Lightning y Earth Shock en un 4%.",
+      "Aumenta el daño infligido por tus hechizos Lightning Bolt, Chain Lightning y Earth Shock en un 5%."
+    ],
+    "convection": [
+      "Reduce el coste de Maná de tus hechizos Shock, Lightning Bolt, Lava Burst y Chain Lightning en un 2%.",
+      "Reduce el coste de Maná de tus hechizos Shock, Lightning Bolt, Lava Burst y Chain Lightning en un 4%.",
+      "Reduce el coste de Maná de tus hechizos Shock, Lightning Bolt, Lava Burst y Chain Lightning en un 6%.",
+      "Reduce el coste de Maná de tus hechizos Shock, Lightning Bolt, Lava Burst y Chain Lightning en un 8%.",
+      "Reduce el coste de Maná de tus hechizos Shock, Lightning Bolt, Lava Burst y Chain Lightning en un 10%."
+    ],
+    "earthbound": [
+      "Tu Earthbind Totem inmoviliza a los objetivos cercanos durante 5 s cuando se lanza."
+    ],
+    "earths-grasp": [
+      "Aumenta la Salud de tu Stoneclaw Totem en un 25% y el radio de tu Earthbind Totem en un 10%.",
+      "Aumenta la Salud de tu Stoneclaw Totem en un 50% y el radio de tu Earthbind Totem en un 20%."
+    ],
+    "elemental-alacrity": [
+      "Reduce el tiempo de lanzamiento de tus hechizos Lightning Bolt, Chain Lightning y Lava Burst en 0.17 s.",
+      "Reduce el tiempo de lanzamiento de tus hechizos Lightning Bolt, Chain Lightning y Lava Burst en 0.33 s.",
+      "Reduce el tiempo de lanzamiento de tus hechizos Lightning Bolt, Chain Lightning y Lava Burst en 0.50 s."
+    ],
+    "elemental-devastation": [
+      "Tus golpes críticos con hechizos de daño directo aumentan tu probabilidad de golpe crítico con los ataques cuerpo a cuerpo en un 3% durante 10 s.",
+      "Tus golpes críticos con hechizos de daño directo aumentan tu probabilidad de golpe crítico con los ataques cuerpo a cuerpo en un 6% durante 10 s.",
+      "Tus golpes críticos con hechizos de daño directo aumentan tu probabilidad de golpe crítico con los ataques cuerpo a cuerpo en un 9% durante 10 s."
+    ],
+    "elemental-focus": [
+      "Te otorga una probabilidad del 10% de entrar en un estado de Clearcasting tras lanzar cualquier hechizo de daño de Fuego, Escarcha o Naturaleza. El estado de Clearcasting reduce el coste de Maná de tu siguiente hechizo de daño en un 100%."
+    ],
+    "elemental-fury": [
+      "Aumenta la bonificación de daño de golpe crítico de tu Searing Totem, tu Magma Totem y tus hechizos de Fuego, Escarcha y Naturaleza en un 20%.",
+      "Aumenta la bonificación de daño de golpe crítico de tu Searing Totem, tu Magma Totem y tus hechizos de Fuego, Escarcha y Naturaleza en un 40%.",
+      "Aumenta la bonificación de daño de golpe crítico de tu Searing Totem, tu Magma Totem y tus hechizos de Fuego, Escarcha y Naturaleza en un 60%.",
+      "Aumenta la bonificación de daño de golpe crítico de tu Searing Totem, tu Magma Totem y tus hechizos de Fuego, Escarcha y Naturaleza en un 80%.",
+      "Aumenta la bonificación de daño de golpe crítico de tu Searing Totem, tu Magma Totem y tus hechizos de Fuego, Escarcha y Naturaleza en un 100%."
+    ],
+    "elemental-mastery": [
+      "Obtienes maestría sobre el Fuego y el Rayo, lo que reduce el tiempo de lanzamiento de Lightning Bolt y Lava Burst en 0.5 s y elimina el tiempo de reutilización de Chain Lightning. Dura 15 s."
+    ],
+    "elemental-reach": [
+      "Aumenta el alcance de tus hechizos Lightning Bolt, Chain Lightning, Fire Nova y Lava Burst en 3 metros y reduce el tiempo de reutilización de Totemic Projection en 10 s.",
+      "Aumenta el alcance de tus hechizos Lightning Bolt, Chain Lightning, Fire Nova y Lava Burst en 6 metros y reduce el tiempo de reutilización de Totemic Projection en 20 s."
+    ],
+    "elemental-warding": [
+      "Reduce el daño recibido de los efectos de Fuego, Escarcha y Naturaleza en un 3%.",
+      "Reduce el daño recibido de los efectos de Fuego, Escarcha y Naturaleza en un 7%.",
+      "Reduce el daño recibido de los efectos de Fuego, Escarcha y Naturaleza en un 10%."
+    ],
+    "elemental-weapons": [
+      "Aumenta la bonificación de Poder de ataque cuerpo a cuerpo de tu Rockbiter Weapon en un 7%, el efecto de tu Windfury Weapon en un 13% y aumenta el daño infligido por tus Flametongue Weapon y Frostbrand Weapon en un 5%.",
+      "Aumenta la bonificación de Poder de ataque cuerpo a cuerpo de tu Rockbiter Weapon en un 13%, el efecto de tu Windfury Weapon en un 27% y aumenta el daño infligido por tus Flametongue Weapon y Frostbrand Weapon en un 10%.",
+      "Aumenta la bonificación de Poder de ataque cuerpo a cuerpo de tu Rockbiter Weapon en un 20%, el efecto de tu Windfury Weapon en un 40% y aumenta el daño infligido por tus Flametongue Weapon y Frostbrand Weapon en un 15%."
+    ],
+    "eye-of-the-storm": [
+      "Reduce en un 23% el retraso del lanzamiento causado por los ataques que te infligen daño mientras lanzas Lightning Bolt, Chain Lightning y Lava Burst.",
+      "Reduce en un 47% el retraso del lanzamiento causado por los ataques que te infligen daño mientras lanzas Lightning Bolt, Chain Lightning y Lava Burst.",
+      "Reduce en un 70% el retraso del lanzamiento causado por los ataques que te infligen daño mientras lanzas Lightning Bolt, Chain Lightning y Lava Burst."
+    ],
+    "flurry": [
+      "Aumenta tu velocidad de ataque en un 5% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
+      "Aumenta tu velocidad de ataque en un 10% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
+      "Aumenta tu velocidad de ataque en un 15% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
+      "Aumenta tu velocidad de ataque en un 20% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
+      "Aumenta tu velocidad de ataque en un 25% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo."
+    ],
+    "guardian-totems": [
+      "Aumenta la cantidad de daño reducida por tus Stoneskin Totem y Windwall Totem en un 10% y reduce el tiempo de reutilización de tu Grounding Totem en 1 s.",
+      "Aumenta la cantidad de daño reducida por tus Stoneskin Totem y Windwall Totem en un 20% y reduce el tiempo de reutilización de tu Grounding Totem en 2 s."
+    ],
+    "healing-focus": [
+      "Te otorga una probabilidad del 23% de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo de sanación.",
+      "Te otorga una probabilidad del 47% de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo de sanación.",
+      "Te otorga una probabilidad del 70% de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo de sanación."
+    ],
+    "healing-way": [
+      "Aumenta la cantidad sanada por tu hechizo Healing Wave en un 8%.",
+      "Aumenta la cantidad sanada por tu hechizo Healing Wave en un 17%.",
+      "Aumenta la cantidad sanada por tu hechizo Healing Wave en un 25%."
+    ],
+    "improved-ghost-wolf": [
+      "Reduce el tiempo de lanzamiento de tu hechizo Ghost Wolf en 1.0 s, y Ghost Wolf puede usarse en interiores.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Ghost Wolf en 3.0 s, y Ghost Wolf puede usarse en interiores."
+    ],
+    "improved-healing-wave": [
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Wave en 0.1 s.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Wave en 0.2 s.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Wave en 0.3 s.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Wave en 0.4 s.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Wave en 0.5 s."
+    ],
+    "improved-lightning-shield": [
+      "Aumenta el daño infligido por los orbes de tu Lightning Shield en un 5%.",
+      "Aumenta el daño infligido por los orbes de tu Lightning Shield en un 10%.",
+      "Aumenta el daño infligido por los orbes de tu Lightning Shield en un 15%."
+    ],
+    "improved-reincarnation": [
+      "Reduce el tiempo de reutilización de tu hechizo Reincarnation en 10 min, aumenta tu Salud máxima en un 2% y aumenta la cantidad de Salud y Maná con la que te reencarnas en un 10% adicional.",
+      "Reduce el tiempo de reutilización de tu hechizo Reincarnation en 20 min, aumenta tu Salud máxima en un 4% y aumenta la cantidad de Salud y Maná con la que te reencarnas en un 20% adicional."
+    ],
+    "improved-stormstrike": [
+      "Cuando usas Stormstrike, tienes una probabilidad del 50% de obtener un 50% de regeneración de Maná mientras lanzas hechizos durante 15 s, y el tiempo de reutilización de Stormstrike tiene una probabilidad del 50% de reiniciarse cada vez que esquivas o paras.",
+      "Cuando usas Stormstrike, tienes una probabilidad del 100% de obtener un 50% de regeneración de Maná mientras lanzas hechizos durante 15 s, y el tiempo de reutilización de Stormstrike tiene una probabilidad del 100% de reiniciarse cada vez que esquivas o paras."
+    ],
+    "lava-burst": [
+      "Lanzas lava fundida contra el objetivo e infliges de 113 a 145 de daño de Fuego. Si tu Flame Shock está activo en el objetivo, Lava Burst inflige un 20% más de daño."
+    ],
+    "lightning-overload": [
+      "Otorga a tus hechizos Lightning Bolt y Chain Lightning una probabilidad del 3% de lanzar un segundo hechizo similar sobre el mismo objetivo sin coste adicional, que inflige la mitad del daño y no genera amenaza.",
+      "Otorga a tus hechizos Lightning Bolt y Chain Lightning una probabilidad del 7% de lanzar un segundo hechizo similar sobre el mismo objetivo sin coste adicional, que inflige la mitad del daño y no genera amenaza.",
+      "Otorga a tus hechizos Lightning Bolt y Chain Lightning una probabilidad del 10% de lanzar un segundo hechizo similar sobre el mismo objetivo sin coste adicional, que inflige la mitad del daño y no genera amenaza."
+    ],
+    "maelstrom-weapon": [
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 4%. Se acumula hasta 5 veces. Dura 30 s.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 8%. Se acumula hasta 5 veces. Dura 30 s.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 12%. Se acumula hasta 5 veces. Dura 30 s.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 16%. Se acumula hasta 5 veces. Dura 30 s.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s."
+    ],
+    "mana-tide-totem": [
+      "Invoca un Mana Tide Totem con 5 de Salud a los pies del taumaturgo durante 12 s, que restaura 88 de Maná cada 3 segundos a los miembros del grupo en un radio de 30 metros."
+    ],
+    "mental-dexterity": [
+      "Aumenta tu Poder de ataque en una cantidad igual al 33% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en una cantidad igual al 67% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en una cantidad igual al 100% de tu Intelecto."
+    ],
+    "mental-quickness": [
+      "Aumenta tu Daño de hechizos y tu Sanación hasta en un 15% de tu Intelecto.",
+      "Aumenta tu Daño de hechizos y tu Sanación hasta en un 30% de tu Intelecto."
+    ],
+    "mindfulness": [
+      "Permite que el 17% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que el 33% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que el 50% de tu regeneración de Maná continúe mientras lanzas hechizos."
+    ],
+    "natural-grace": [
+      "Reduce la amenaza generada por tus hechizos en un 5%.",
+      "Reduce la amenaza generada por tus hechizos en un 10%.",
+      "Reduce la amenaza generada por tus hechizos en un 15%."
+    ],
+    "natures-swiftness": [
+      "Cuando se activa, tu siguiente hechizo de Naturaleza con un tiempo de lanzamiento inferior a 10 s se convierte en un hechizo instantáneo."
+    ],
+    "purification": [
+      "Aumenta la eficacia de tus hechizos de sanación en un 2%.",
+      "Aumenta la eficacia de tus hechizos de sanación en un 4%.",
+      "Aumenta la eficacia de tus hechizos de sanación en un 6%.",
+      "Aumenta la eficacia de tus hechizos de sanación en un 8%.",
+      "Aumenta la eficacia de tus hechizos de sanación en un 10%."
+    ],
+    "rage-of-the-farseer": [
+      "Aumenta tu velocidad de ataque en un 30% durante 25 s."
+    ],
+    "restorative-totems": [
+      "Aumenta el efecto de tu Mana Spring Totem en un 5% y aumenta el efecto de tu Healing Stream Totem en un 10%.",
+      "Aumenta el efecto de tu Mana Spring Totem en un 10% y aumenta el efecto de tu Healing Stream Totem en un 20%.",
+      "Aumenta el efecto de tu Mana Spring Totem en un 15% y aumenta el efecto de tu Healing Stream Totem en un 30%.",
+      "Aumenta el efecto de tu Mana Spring Totem en un 20% y aumenta el efecto de tu Healing Stream Totem en un 40%.",
+      "Aumenta el efecto de tu Mana Spring Totem en un 25% y aumenta el efecto de tu Healing Stream Totem en un 50%."
+    ],
+    "reverberation": [
+      "Reduce el tiempo de reutilización de tus hechizos Shock en 0.2 s.",
+      "Reduce el tiempo de reutilización de tus hechizos Shock en 0.4 s.",
+      "Reduce el tiempo de reutilización de tus hechizos Shock en 0.6 s.",
+      "Reduce el tiempo de reutilización de tus hechizos Shock en 0.8 s.",
+      "Reduce el tiempo de reutilización de tus hechizos Shock en 1.0 s."
+    ],
+    "riptide": [
+      "Sana a un objetivo aliado de 485 a 533, más 445 adicionales en 15 s, y aumenta la eficacia de tus lanzamientos de Chain Heal directamente sobre ese objetivo en un 25%."
+    ],
+    "shamanistic-focus": [
+      "Reduce el coste de Maná de tus hechizos Shock y Lightning Shield en un 45%."
+    ],
+    "spirit-weapons": [
+      "Otorga una probabilidad de parar los ataques cuerpo a cuerpo enemigos, reduce en un 30% toda la amenaza generada por tus ataques mientras Rockbiter Weapon no está activo y aumenta en un 30% toda la amenaza generada mientras Rockbiter Weapon está activo."
+    ],
+    "stormstrike": [
+      "Golpeas al instante infligiendo el daño normal del arma y aumentas en un 20% durante 12 s el daño que infliges al objetivo con tu siguiente hechizo Lightning Bolt, Chain Lightning o Earth Shock."
+    ],
+    "thundering-strikes": [
+      "Aumenta tu probabilidad de golpe crítico con todos los hechizos y ataques en un 1%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los hechizos y ataques en un 2%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los hechizos y ataques en un 3%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los hechizos y ataques en un 4%.",
+      "Aumenta tu probabilidad de golpe crítico con todos los hechizos y ataques en un 5%."
+    ],
+    "tidal-focus": [
+      "Reduce el coste de Maná de tus hechizos de sanación en un 1% y aumenta tu probabilidad de golpear en un 1%.",
+      "Reduce el coste de Maná de tus hechizos de sanación en un 2% y aumenta tu probabilidad de golpear en un 2%.",
+      "Reduce el coste de Maná de tus hechizos de sanación en un 3% y aumenta tu probabilidad de golpear en un 3%.",
+      "Reduce el coste de Maná de tus hechizos de sanación en un 4% y aumenta tu probabilidad de golpear en un 4%.",
+      "Reduce el coste de Maná de tus hechizos de sanación en un 5% y aumenta tu probabilidad de golpear en un 5%."
+    ],
+    "tidal-mastery": [
+      "Aumenta la probabilidad de efecto crítico de tus hechizos de sanación en un 1%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos de sanación en un 2%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos de sanación en un 3%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos de sanación en un 4%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos de sanación en un 5%."
+    ],
+    "totemic-focus": [
+      "Reduce el coste de Maná de tus tótems y de cualquier hechizo que los invoque o los mueva en un 5%.",
+      "Reduce el coste de Maná de tus tótems y de cualquier hechizo que los invoque o los mueva en un 10%.",
+      "Reduce el coste de Maná de tus tótems y de cualquier hechizo que los invoque o los mueva en un 15%.",
+      "Reduce el coste de Maná de tus tótems y de cualquier hechizo que los invoque o los mueva en un 20%.",
+      "Reduce el coste de Maná de tus tótems y de cualquier hechizo que los invoque o los mueva en un 25%."
+    ],
+    "toughness": [
+      "Aumenta tu Aguante en un 2%.",
+      "Aumenta tu Aguante en un 4%.",
+      "Aumenta tu Aguante en un 6%.",
+      "Aumenta tu Aguante en un 8%.",
+      "Aumenta tu Aguante en un 10%."
+    ],
+    "trial-by-fire": [
+      "Aumenta el daño infligido por tu hechizo Fire Nova en un 10%, reduce su tiempo de reutilización en 2 s y aumenta la duración de tu Magma Totem en 10 s.",
+      "Aumenta el daño infligido por tu hechizo Fire Nova en un 20%, reduce su tiempo de reutilización en 4 s y aumenta la duración de tu Magma Totem en 20 s."
+    ],
+    "water-shield": [
+      "El taumaturgo está rodeado por 3 globos de agua. Cuando un hechizo o un ataque cuerpo a cuerpo o a distancia golpea al taumaturgo, o cuando uno de los hechizos del taumaturgo obtiene un resultado crítico, el taumaturgo recupera un 2% de su Maná máximo, consumiendo un globo de agua. Solo se activa un globo cada pocos segundos. Dura 10 min.\n\nSolo puede haber un Elemental Shield activo en el Chamán al mismo tiempo."
+    ]
+  }
+}

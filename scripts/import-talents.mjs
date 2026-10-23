@@ -170,7 +170,13 @@ const classesRaw = data.talents ?? {};
 const today = new Date().toISOString().slice(0, 10);
 console.log(`fonte: ${opt("--from") ?? SOURCE_URL} · generato il ${data.generated ?? "?"} · licenza ${data.license ?? "?"}`);
 
-const iconNames = new Set();
+/** Icone di classi e razze (classicon_* e achievement_character_*_male del gioco), per la striscia delle classi e le razze. */
+const EXTRA_ICONS = [
+  ...["druid", "hunter", "mage", "paladin", "priest", "rogue", "shaman", "warlock", "warrior"].map((c) => `classicon_${c}`),
+  ...["human", "dwarf", "nightelf", "gnome", "orc", "undead", "tauren", "troll"].map((r) => `achievement_character_${r}_male`),
+];
+
+const iconNames = new Set(EXTRA_ICONS);
 for (const raw of Object.values(classesRaw)) for (const tree of raw.trees ?? []) for (const t of tree.talents ?? []) if (t.icon) iconNames.add(t.icon);
 
 if (flag("--icons")) {

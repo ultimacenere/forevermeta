@@ -13,6 +13,7 @@ export const en = {
   nav: {
     news: "News",
     builder: "Builder",
+    builds: "Builds",
     guides: "Guides",
     glossary: "Glossary",
     calendar: "Calendar",
@@ -246,7 +247,7 @@ export const en = {
       "Choose the race (only the ones that can play that class are active) and set the level: the points you can spend follow it.",
       "Left click adds a point, right click or Shift + click removes it; on a touch screen tap the talent and use + and −. Greyed talents need more points in the tree, or the talent their arrow starts from.",
       "Share gives you a link, a short code and a text list; paste a code or a link in “Open a build” to load someone else's build.",
-      "Publishing builds with a guide, votes and your profile arrives with the launch of the game.",
+      "Publish your build with a guide: it gets its own page, votes from other players and a link back to the builder. You need an account.",
     ],
     rulesTitle: "Talent rules in WoW Forever",
     rules: [
@@ -256,6 +257,21 @@ export const en = {
       "Blizzard has kept the same structure and number of rows as Classic, with the threshold talents at 11, 21 and 31 points plus a new one at 16 points.",
     ],
     sourcesTitle: "Sources",
+  },
+  builds: {
+    title: "WoW Forever builds",
+    metaTitle: "WoW Forever builds by the community",
+    description: "Builds for World of Warcraft: Forever published by players with their guide: class, race, level, talents and votes. Open any of them in the builder.",
+    intro: "Builds published by players from the builder, each with a guide written by its author. Vote the ones you try, open them in the builder, publish yours.",
+    publishMeta: "Publish a build",
+    editTitle: "Edit a build",
+    howTitle: "How published builds work",
+    how: [
+      "Every build comes from the builder and keeps its code: open it there with one click and change it as you like.",
+      "The guide is written by the author in their language and is shown as written; from 75 words the page is indexed in that language.",
+      "One vote per member and per build, never on your own. “Top rated” weighs the average by the number of votes.",
+      "You can edit, hide or delete your builds from the build page or from your account at any time.",
+    ],
   },
   notFound: {
     title: "Page not found",

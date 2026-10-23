@@ -11,6 +11,7 @@ export const it: Dictionary = {
   nav: {
     news: "News",
     builder: "Builder",
+    builds: "Build",
     guides: "Guide",
     glossary: "Glossario",
     calendar: "Calendario",
@@ -243,7 +244,7 @@ export const it: Dictionary = {
       "Scegli la razza (sono attive solo quelle che possono fare quella classe) e imposta il livello: i punti da spendere lo seguono.",
       "Il clic sinistro aggiunge un punto, il clic destro o Maiusc + clic lo toglie; sul touch tocca il talento e usa + e −. I talenti in grigio chiedono altri punti nell'albero, o il talento da cui parte la loro freccia.",
       "Condividi ti dà un link, un codice corto e una lista in testo; incolla un codice o un link in “Apri una build” per caricare la build di qualcun altro.",
-      "La pubblicazione delle build con guida, voti e profilo arriva con il lancio del gioco.",
+      "Pubblica la tua build con una guida: ha una pagina sua, i voti degli altri giocatori e il link per riaprirla nel builder. Serve un account.",
     ],
     rulesTitle: "Le regole dei talenti in WoW Forever",
     rules: [
@@ -253,6 +254,21 @@ export const it: Dictionary = {
       "Blizzard ha tenuto la struttura e il numero di file di Classic, con i talenti di soglia a 11, 21 e 31 punti più uno nuovo a 16 punti.",
     ],
     sourcesTitle: "Fonti",
+  },
+  builds: {
+    title: "Build di WoW Forever",
+    metaTitle: "Build di WoW Forever della community",
+    description: "Le build di World of Warcraft: Forever pubblicate dai giocatori con la loro guida: classe, razza, livello, talenti e voti. Ognuna si apre nel builder.",
+    intro: "Le build pubblicate dai giocatori dal builder, ognuna con una guida scritta dal suo autore. Vota quelle che provi, aprile nel builder, pubblica la tua.",
+    publishMeta: "Pubblica una build",
+    editTitle: "Modifica una build",
+    howTitle: "Come funzionano le build pubblicate",
+    how: [
+      "Ogni build arriva dal builder e tiene il suo codice: la riapri lì con un clic e la cambi come vuoi.",
+      "La guida la scrive l'autore nella sua lingua e si legge com'è scritta; da 75 parole la pagina è indicizzata in quella lingua.",
+      "Un voto per iscritto e per build, mai sulla propria. “Più votate” pesa la media sul numero dei voti.",
+      "Le tue build le modifichi, le nascondi o le elimini dalla loro pagina o dal tuo account, quando vuoi.",
+    ],
   },
   notFound: {
     title: "Pagina non trovata",

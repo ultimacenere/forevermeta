@@ -1,0 +1,510 @@
+{
+  "it": {
+    "berserk": [
+      "Fa sì che la tua abilità Primal Bite colpisca fino a 3 bersagli, ne elimina il tempo di ricarica e aumenta del 100% la probabilità di colpo critico delle tue abilità che generano Punti combo. Rimuove gli effetti di paura e rende immuni a essi per tutta la durata. Dura 15 s."
+    ],
+    "blood-frenzy": [
+      "Ti dà il 50% di probabilità di ottenere 5 Ira in più ogni volta che metti a segno un colpo critico mentre sei in Bear Form o Dire Bear Form. Inoltre, i colpi critici non periodici delle tue abilità di Cat Form che generano Punti combo hanno il 50% di probabilità di aggiungere un Punto combo in più.",
+      "Ti dà il 100% di probabilità di ottenere 5 Ira in più ogni volta che metti a segno un colpo critico mentre sei in Bear Form o Dire Bear Form. Inoltre, i colpi critici non periodici delle tue abilità di Cat Form che generano Punti combo hanno il 100% di probabilità di aggiungere un Punto combo in più."
+    ],
+    "brutal-impact": [
+      "Aumenta la durata dello stordimento delle tue abilità Bash e Pounce di 0.5 s e riduce il tempo di ricarica di Bash di 15 s.",
+      "Aumenta la durata dello stordimento delle tue abilità Bash e Pounce di 1 s e riduce il tempo di ricarica di Bash di 30 s."
+    ],
+    "eclipse": [
+      "Il tuo incantesimo Wrath riduce il tempo di lancio dei tuoi prossimi 2 incantesimi Starfire di 0.17 s. Accumula fino a 4 cariche. Dura 15 s.",
+      "Il tuo incantesimo Wrath riduce il tempo di lancio dei tuoi prossimi 2 incantesimi Starfire di 0.33 s. Accumula fino a 4 cariche. Dura 15 s.",
+      "Il tuo incantesimo Wrath riduce il tempo di lancio dei tuoi prossimi 2 incantesimi Starfire di 0.50 s. Accumula fino a 4 cariche. Dura 15 s."
+    ],
+    "feral-charge": [
+      "Ti lanci alla carica contro un nemico, immobilizzandolo e interrompendo qualsiasi incantesimo stia lanciando per 4 s.\n\nFeral Charge (Cat): gittata 8-25 metri, istantanea, 30 s di tempo di ricarica, richiede Cat Form. Balzi alle spalle di un nemico."
+    ],
+    "feral-instinct": [
+      "Aumenta i danni inflitti dalla tua abilità Swipe del 10% e riduce la probabilità che i nemici ti scoprano mentre usi Prowl come se avessi 1 livello in più.",
+      "Aumenta i danni inflitti dalla tua abilità Swipe del 20% e riduce la probabilità che i nemici ti scoprano mentre usi Prowl come se avessi 2 livelli in più.",
+      "Aumenta i danni inflitti dalla tua abilità Swipe del 30% e riduce la probabilità che i nemici ti scoprano mentre usi Prowl come se avessi 3 livelli in più."
+    ],
+    "feral-swiftness": [
+      "Aumenta la tua velocità di movimento mentre sei in Cat Form del 15% e aumenta la tua probabilità di schivata del 2%.",
+      "Aumenta la tua velocità di movimento mentre sei in Cat Form del 30% e aumenta la tua probabilità di schivata del 4%."
+    ],
+    "ferocity": [
+      "Riduce il costo delle tue abilità Maul, Primal Bite, Swipe, Claw e Rake di 1 Ira o Energia.",
+      "Riduce il costo delle tue abilità Maul, Primal Bite, Swipe, Claw e Rake di 2 Ira o Energia.",
+      "Riduce il costo delle tue abilità Maul, Primal Bite, Swipe, Claw e Rake di 3 Ira o Energia.",
+      "Riduce il costo delle tue abilità Maul, Primal Bite, Swipe, Claw e Rake di 4 Ira o Energia.",
+      "Riduce il costo delle tue abilità Maul, Primal Bite, Swipe, Claw e Rake di 5 Ira o Energia."
+    ],
+    "furor": [
+      "Ti dà il 20% di probabilità di ottenere 10 Ira quando ti trasformi in Bear Form o Dire Bear Form. Trasformarti in Cat Form ripristina il 20% dell'Energia che avevi l'ultima volta che eri in Cat Form, più 2 Energia per ogni secondo trascorso fuori da Bear Form o Dire Bear Form, fino a 20 Energia.",
+      "Ti dà il 40% di probabilità di ottenere 10 Ira quando ti trasformi in Bear Form o Dire Bear Form. Trasformarti in Cat Form ripristina il 40% dell'Energia che avevi l'ultima volta che eri in Cat Form, più 4 Energia per ogni secondo trascorso fuori da Bear Form o Dire Bear Form, fino a 40 Energia.",
+      "Ti dà il 60% di probabilità di ottenere 10 Ira quando ti trasformi in Bear Form o Dire Bear Form. Trasformarti in Cat Form ripristina il 60% dell'Energia che avevi l'ultima volta che eri in Cat Form, più 6 Energia per ogni secondo trascorso fuori da Bear Form o Dire Bear Form, fino a 60 Energia.",
+      "Ti dà l'80% di probabilità di ottenere 10 Ira quando ti trasformi in Bear Form o Dire Bear Form. Trasformarti in Cat Form ripristina l'80% dell'Energia che avevi l'ultima volta che eri in Cat Form, più 8 Energia per ogni secondo trascorso fuori da Bear Form o Dire Bear Form, fino a 80 Energia.",
+      "Ti dà il 100% di probabilità di ottenere 10 Ira quando ti trasformi in Bear Form o Dire Bear Form. Trasformarti in Cat Form ripristina il 100% dell'Energia che avevi l'ultima volta che eri in Cat Form, più 10 Energia per ogni secondo trascorso fuori da Bear Form o Dire Bear Form, fino a 100 Energia."
+    ],
+    "genesis": [
+      "Aumenta dell'1% i danni periodici e le cure periodiche dei tuoi incantesimi e delle tue abilità.",
+      "Aumenta del 2% i danni periodici e le cure periodiche dei tuoi incantesimi e delle tue abilità.",
+      "Aumenta del 3% i danni periodici e le cure periodiche dei tuoi incantesimi e delle tue abilità.",
+      "Aumenta del 4% i danni periodici e le cure periodiche dei tuoi incantesimi e delle tue abilità.",
+      "Aumenta del 5% i danni periodici e le cure periodiche dei tuoi incantesimi e delle tue abilità."
+    ],
+    "gift-of-nature": [
+      "Aumenta l'effetto di tutti i tuoi incantesimi di cura del 2%.",
+      "Aumenta l'effetto di tutti i tuoi incantesimi di cura del 4%.",
+      "Aumenta l'effetto di tutti i tuoi incantesimi di cura del 6%.",
+      "Aumenta l'effetto di tutti i tuoi incantesimi di cura dell'8%.",
+      "Aumenta l'effetto di tutti i tuoi incantesimi di cura del 10%."
+    ],
+    "gift-of-the-earthmother": [
+      "Riduce di 0.5 secondi il tempo di ricarica globale dei tuoi incantesimi Rejuvenation, Swiftmend e Wild Growth."
+    ],
+    "heart-of-the-wild": [
+      "Aumenta il tuo Intelletto del 2%. Inoltre, mentre sei in Bear Form o Dire Bear Form la tua Tempra aumenta del 4% e mentre sei in Cat Form la tua Forza aumenta del 2%.",
+      "Aumenta il tuo Intelletto del 4%. Inoltre, mentre sei in Bear Form o Dire Bear Form la tua Tempra aumenta dell'8% e mentre sei in Cat Form la tua Forza aumenta del 4%.",
+      "Aumenta il tuo Intelletto del 6%. Inoltre, mentre sei in Bear Form o Dire Bear Form la tua Tempra aumenta del 12% e mentre sei in Cat Form la tua Forza aumenta del 6%.",
+      "Aumenta il tuo Intelletto dell'8%. Inoltre, mentre sei in Bear Form o Dire Bear Form la tua Tempra aumenta del 16% e mentre sei in Cat Form la tua Forza aumenta dell'8%.",
+      "Aumenta il tuo Intelletto del 10%. Inoltre, mentre sei in Bear Form o Dire Bear Form la tua Tempra aumenta del 20% e mentre sei in Cat Form la tua Forza aumenta del 10%."
+    ],
+    "improved-entangling-roots": [
+      "Aumenta i danni inflitti dal tuo incantesimo Entangling Roots del 25% e le sue vittime possono subire fino al 25% di danni in più senza che l'effetto venga interrotto.",
+      "Aumenta i danni inflitti dal tuo incantesimo Entangling Roots del 50% e le sue vittime possono subire fino al 50% di danni in più senza che l'effetto venga interrotto.",
+      "Aumenta i danni inflitti dal tuo incantesimo Entangling Roots del 75% e le sue vittime possono subire fino al 75% di danni in più senza che l'effetto venga interrotto."
+    ],
+    "improved-moonfire": [
+      "Aumenta i danni e la probabilità di colpo critico del tuo incantesimo Moonfire del 5%.",
+      "Aumenta i danni e la probabilità di colpo critico del tuo incantesimo Moonfire del 10%."
+    ],
+    "improved-regrowth": [
+      "Aumenta la probabilità di effetto critico del tuo incantesimo Regrowth del 10%.",
+      "Aumenta la probabilità di effetto critico del tuo incantesimo Regrowth del 20%.",
+      "Aumenta la probabilità di effetto critico del tuo incantesimo Regrowth del 30%.",
+      "Aumenta la probabilità di effetto critico del tuo incantesimo Regrowth del 40%.",
+      "Aumenta la probabilità di effetto critico del tuo incantesimo Regrowth del 50%."
+    ],
+    "improved-rejuvenation": [
+      "Aumenta l'effetto del tuo incantesimo Rejuvenation del 5%.",
+      "Aumenta l'effetto del tuo incantesimo Rejuvenation del 10%.",
+      "Aumenta l'effetto del tuo incantesimo Rejuvenation del 15%."
+    ],
+    "improved-shifting-power": [
+      "Riduce il tempo di ricarica del tuo incantesimo Shifting Power di 4 s.",
+      "Riduce il tempo di ricarica del tuo incantesimo Shifting Power di 8 s."
+    ],
+    "improved-starfire": [
+      "Riduce il tempo di lancio di Starfire di 0.1 s e Starfire ha il 3% di probabilità di stordire il suo bersaglio per 3 s.",
+      "Riduce il tempo di lancio di Starfire di 0.2 s e Starfire ha il 6% di probabilità di stordire il suo bersaglio per 3 s.",
+      "Riduce il tempo di lancio di Starfire di 0.3 s e Starfire ha il 9% di probabilità di stordire il suo bersaglio per 3 s.",
+      "Riduce il tempo di lancio di Starfire di 0.4 s e Starfire ha il 12% di probabilità di stordire il suo bersaglio per 3 s.",
+      "Riduce il tempo di lancio di Starfire di 0.5 s e Starfire ha il 15% di probabilità di stordire il suo bersaglio per 3 s."
+    ],
+    "improved-tranquility": [
+      "Riduce la minaccia generata da Tranquility del 50% e il suo tempo di ricarica del 30%.",
+      "Riduce la minaccia generata da Tranquility del 100% e il suo tempo di ricarica del 60%."
+    ],
+    "improved-wrath": [
+      "Riduce il tempo di lancio del tuo incantesimo Wrath di 0.1 s e il suo costo in Mana del 10%.",
+      "Riduce il tempo di lancio del tuo incantesimo Wrath di 0.2 s e il suo costo in Mana del 20%.",
+      "Riduce il tempo di lancio del tuo incantesimo Wrath di 0.3 s e il suo costo in Mana del 30%.",
+      "Riduce il tempo di lancio del tuo incantesimo Wrath di 0.4 s e il suo costo in Mana del 40%.",
+      "Riduce il tempo di lancio del tuo incantesimo Wrath di 0.5 s e il suo costo in Mana del 50%."
+    ],
+    "insect-swarm": [
+      "Il bersaglio nemico viene assalito da uno sciame di insetti, che riduce del 2% la sua probabilità di colpire con gli attacchi e infligge 48 danni da Natura in 12 s."
+    ],
+    "leader-of-the-pack": [
+      "Mentre sei in Cat Form, Bear Form o Dire Bear Form, Leader of the Pack aumenta del 3% la probabilità di colpo critico in mischia e a distanza di tutti i membri del gruppo o dell'incursione entro 45 metri."
+    ],
+    "living-spirit": [
+      "Aumenta il tuo Spirito del 5%.",
+      "Aumenta il tuo Spirito del 10%.",
+      "Aumenta il tuo Spirito del 15%."
+    ],
+    "moonfury": [
+      "Aumenta i danni inflitti dai tuoi incantesimi di Arcano e di Natura del 2%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi di Arcano e di Natura del 4%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi di Arcano e di Natura del 6%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi di Arcano e di Natura dell'8%.",
+      "Aumenta i danni inflitti dai tuoi incantesimi di Arcano e di Natura del 10%."
+    ],
+    "moonglow": [
+      "Riduce il costo in Mana dei tuoi incantesimi che infliggono danni dell'8%.",
+      "Riduce il costo in Mana dei tuoi incantesimi che infliggono danni del 17%.",
+      "Riduce il costo in Mana dei tuoi incantesimi che infliggono danni del 25%."
+    ],
+    "moonkin-form": [
+      "Ti trasformi in Moonkin Form: la probabilità che Omen of Clarity si attivi aumenta del 100%, il contributo all'armatura degli oggetti del 360% e la probabilità di colpo critico con gli incantesimi di tutti i membri del gruppo o dell'incursione entro 45 metri del 3%. Protegge inoltre chi la usa dagli effetti di Polymorph e impedisce l'uso degli incantesimi di cura.\n\nL'atto di trasformarsi libera chi lo compie dagli effetti di Polymorph e da quelli che riducono il movimento."
+    ],
+    "natural-instinct": [
+      "Aumenta il bonus ai danni dei colpi critici delle tue abilità in mischia del 10% e aumenta le tue cure da incantesimo del 12% del tuo Intelletto.",
+      "Aumenta il bonus ai danni dei colpi critici delle tue abilità in mischia del 20% e aumenta le tue cure da incantesimo del 25% del tuo Intelletto."
+    ],
+    "natural-reaction": [
+      "Aumenta la tua probabilità di schivata dell'1% e ti dà il 20% di probabilità di ottenere 5 Ira ogni volta che schivi.",
+      "Aumenta la tua probabilità di schivata del 2% e ti dà il 40% di probabilità di ottenere 5 Ira ogni volta che schivi.",
+      "Aumenta la tua probabilità di schivata del 3% e ti dà il 60% di probabilità di ottenere 5 Ira ogni volta che schivi.",
+      "Aumenta la tua probabilità di schivata del 4% e ti dà l'80% di probabilità di ottenere 5 Ira ogni volta che schivi.",
+      "Aumenta la tua probabilità di schivata del 5% e ti dà il 100% di probabilità di ottenere 5 Ira ogni volta che schivi."
+    ],
+    "natural-shapeshifter": [
+      "Riduce il costo in Mana di tutte le trasformazioni del 10%.",
+      "Riduce il costo in Mana di tutte le trasformazioni del 20%.",
+      "Riduce il costo in Mana di tutte le trasformazioni del 30%."
+    ],
+    "naturalist": [
+      "Riduce il tempo di lancio del tuo incantesimo Healing Touch di 0.1 s e aumenta tutti i danni che infliggi dell'1%.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Touch di 0.2 s e aumenta tutti i danni che infliggi del 2%.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Touch di 0.3 s e aumenta tutti i danni che infliggi del 3%.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Touch di 0.4 s e aumenta tutti i danni che infliggi del 4%.",
+      "Riduce il tempo di lancio del tuo incantesimo Healing Touch di 0.5 s e aumenta tutti i danni che infliggi del 5%."
+    ],
+    "natures-focus": [
+      "Ti dà il 14% di probabilità di evitare l'interruzione causata dai danni mentre lanci incantesimi di Arcano e di Natura.",
+      "Ti dà il 28% di probabilità di evitare l'interruzione causata dai danni mentre lanci incantesimi di Arcano e di Natura.",
+      "Ti dà il 42% di probabilità di evitare l'interruzione causata dai danni mentre lanci incantesimi di Arcano e di Natura.",
+      "Ti dà il 56% di probabilità di evitare l'interruzione causata dai danni mentre lanci incantesimi di Arcano e di Natura.",
+      "Ti dà il 70% di probabilità di evitare l'interruzione causata dai danni mentre lanci incantesimi di Arcano e di Natura."
+    ],
+    "natures-grace": [
+      "Tutti i colpi critici non periodici dei tuoi incantesimi ti donano una benedizione della natura, che aumenta la tua velocità di lancio degli incantesimi e riduce il tuo tempo di ricarica globale del 10% per 3 s."
+    ],
+    "natures-majesty": [
+      "Aumenta la tua probabilità di colpo critico con gli incantesimi e con gli attacchi in mischia del 2%.",
+      "Aumenta la tua probabilità di colpo critico con gli incantesimi e con gli attacchi in mischia del 4%."
+    ],
+    "natures-reach": [
+      "Aumenta la gittata dei tuoi incantesimi offensivi del ramo Balance del 10% e migliora la tua probabilità di colpire del 2%.",
+      "Aumenta la gittata dei tuoi incantesimi offensivi del ramo Balance del 20% e migliora la tua probabilità di colpire del 4%."
+    ],
+    "natures-splendor": [
+      "Aumenta la durata dei tuoi incantesimi Moonfire e Rejuvenation di 3 s, quella del tuo incantesimo Regrowth di 6 s e quella del tuo incantesimo Insect Swarm di 2 s."
+    ],
+    "natures-swiftness": [
+      "Quando viene attivato, il tuo prossimo incantesimo di Natura diventa un incantesimo a lancio istantaneo."
+    ],
+    "overgrowth": [
+      "Aumenta di 1 il numero massimo di bersagli che puoi tenere sotto l'effetto di Entangling Roots.",
+      "Aumenta di 2 il numero massimo di bersagli che puoi tenere sotto l'effetto di Entangling Roots."
+    ],
+    "predatory-strikes": [
+      "Aumenta la tua potenza d'attacco in mischia in Cat Form, Bear Form e Dire Bear Form del 50% del tuo livello.",
+      "Aumenta la tua potenza d'attacco in mischia in Cat Form, Bear Form e Dire Bear Form del 100% del tuo livello.",
+      "Aumenta la tua potenza d'attacco in mischia in Cat Form, Bear Form e Dire Bear Form del 150% del tuo livello."
+    ],
+    "primal-bite": [
+      "Mordi il bersaglio, infliggendo il 100% dei danni normali più 26 e generando una grande quantità di minaccia."
+    ],
+    "reflection": [
+      "Permette al 17% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 33% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi."
+    ],
+    "rend-and-tear": [
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 2%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 4%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 6%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento dell'8%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 10%."
+    ],
+    "savage-fury": [
+      "Aumenta i danni inflitti dalle tue abilità Claw, Rake, Shred, Maul e Swipe del 5%.",
+      "Aumenta i danni inflitti dalle tue abilità Claw, Rake, Shred, Maul e Swipe del 10%."
+    ],
+    "sharpened-claws": [
+      "Aumenta la tua probabilità di colpo critico mentre sei in Bear Form, Dire Bear Form o Cat Form del 3%.",
+      "Aumenta la tua probabilità di colpo critico mentre sei in Bear Form, Dire Bear Form o Cat Form del 6%."
+    ],
+    "shifting-power": [
+      "Converte all'istante il 55% del Mana base in 40 Energia. Il costo di Shifting Power è ridotto dagli effetti che riducono il costo delle trasformazioni."
+    ],
+    "shredding-attacks": [
+      "Riduce il costo in Energia della tua abilità Shred di 6 e riduce il costo in Ira della tua abilità Lacerate di 1.",
+      "Riduce il costo in Energia della tua abilità Shred di 12 e riduce il costo in Ira della tua abilità Lacerate di 2.",
+      "Riduce il costo in Energia della tua abilità Shred di 18 e riduce il costo in Ira della tua abilità Lacerate di 3."
+    ],
+    "subtlety": [
+      "Riduce la minaccia generata dai tuoi incantesimi di Natura e di Arcano del 10%.",
+      "Riduce la minaccia generata dai tuoi incantesimi di Natura e di Arcano del 20%.",
+      "Riduce la minaccia generata dai tuoi incantesimi di Natura e di Arcano del 30%."
+    ],
+    "swiftmend": [
+      "Cura all'istante un bersaglio con un effetto di Rejuvenation o Regrowth attivo per una quantità pari all'intera durata dell'effetto periodico di uno di quei due incantesimi."
+    ],
+    "thick-hide": [
+      "Mentre sei in Bear Form, Cat Form, Dire Bear Form o Moonkin Form, ottieni 1 punto di armatura base in più per livello e altri 0.67 punti di armatura base per ogni punto dell'abilità di difesa oltre cinque volte il tuo livello. Questo valore può essere ulteriormente aumentato dai moltiplicatori di quelle forme.",
+      "Mentre sei in Bear Form, Cat Form, Dire Bear Form o Moonkin Form, ottieni 2 punti di armatura base in più per livello e altri 1.33 punti di armatura base per ogni punto dell'abilità di difesa oltre cinque volte il tuo livello. Questo valore può essere ulteriormente aumentato dai moltiplicatori di quelle forme.",
+      "Mentre sei in Bear Form, Cat Form, Dire Bear Form o Moonkin Form, ottieni 3 punti di armatura base in più per livello e altri 2.00 punti di armatura base per ogni punto dell'abilità di difesa oltre cinque volte il tuo livello. Questo valore può essere ulteriormente aumentato dai moltiplicatori di quelle forme."
+    ],
+    "tranquil-spirit": [
+      "Riduce il costo in Mana dei tuoi incantesimi Healing Touch e Tranquility del 2%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Healing Touch e Tranquility del 4%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Healing Touch e Tranquility del 6%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Healing Touch e Tranquility dell'8%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Healing Touch e Tranquility del 10%."
+    ],
+    "vengeance": [
+      "Aumenta il bonus ai danni dei colpi critici dei tuoi incantesimi di Arcano e di Natura del 20%.",
+      "Aumenta il bonus ai danni dei colpi critici dei tuoi incantesimi di Arcano e di Natura del 40%.",
+      "Aumenta il bonus ai danni dei colpi critici dei tuoi incantesimi di Arcano e di Natura del 60%.",
+      "Aumenta il bonus ai danni dei colpi critici dei tuoi incantesimi di Arcano e di Natura dell'80%.",
+      "Aumenta il bonus ai danni dei colpi critici dei tuoi incantesimi di Arcano e di Natura del 100%."
+    ],
+    "wild-growth": [
+      "Cura il bersaglio e il suo gruppo di 336 in 7 s. I membri del gruppo devono trovarsi entro 43 metri dal bersaglio. La quantità curata viene applicata rapidamente all'inizio e rallenta man mano che Wild Growth si avvicina alla fine della sua durata."
+    ]
+  },
+  "es": {
+    "berserk": [
+      "Hace que tu habilidad Primal Bite golpee hasta 3 objetivos, elimina su tiempo de reutilización y aumenta un 100% la probabilidad de golpe crítico de tus habilidades que generan Puntos de combo. Elimina los efectos de miedo y otorga inmunidad a ellos mientras dura. Dura 15 s."
+    ],
+    "blood-frenzy": [
+      "Te da un 50% de probabilidad de obtener 5 de Ira adicional cada vez que asestas un golpe crítico mientras estás en Bear Form o Dire Bear Form. Además, los golpes críticos no periódicos de tus habilidades de Cat Form que generan Puntos de combo tienen un 50% de probabilidad de añadir un Punto de combo adicional.",
+      "Te da un 100% de probabilidad de obtener 5 de Ira adicional cada vez que asestas un golpe crítico mientras estás en Bear Form o Dire Bear Form. Además, los golpes críticos no periódicos de tus habilidades de Cat Form que generan Puntos de combo tienen un 100% de probabilidad de añadir un Punto de combo adicional."
+    ],
+    "brutal-impact": [
+      "Aumenta la duración del aturdimiento de tus habilidades Bash y Pounce en 0.5 s y reduce el tiempo de reutilización de Bash en 15 s.",
+      "Aumenta la duración del aturdimiento de tus habilidades Bash y Pounce en 1 s y reduce el tiempo de reutilización de Bash en 30 s."
+    ],
+    "eclipse": [
+      "Tu hechizo Wrath reduce el tiempo de lanzamiento de tus próximos 2 hechizos Starfire en 0.17 s. Acumula hasta 4 cargas. Dura 15 s.",
+      "Tu hechizo Wrath reduce el tiempo de lanzamiento de tus próximos 2 hechizos Starfire en 0.33 s. Acumula hasta 4 cargas. Dura 15 s.",
+      "Tu hechizo Wrath reduce el tiempo de lanzamiento de tus próximos 2 hechizos Starfire en 0.50 s. Acumula hasta 4 cargas. Dura 15 s."
+    ],
+    "feral-charge": [
+      "Cargas contra un enemigo, inmovilizándolo e interrumpiendo cualquier hechizo que esté lanzando durante 4 s.\n\nFeral Charge (Cat): alcance de 8-25 metros, instantánea, 30 s de tiempo de reutilización, requiere Cat Form. Saltas detrás de un enemigo."
+    ],
+    "feral-instinct": [
+      "Aumenta el daño de tu habilidad Swipe en un 10% y reduce la probabilidad de que los enemigos te detecten mientras usas Prowl como si tuvieras 1 nivel más.",
+      "Aumenta el daño de tu habilidad Swipe en un 20% y reduce la probabilidad de que los enemigos te detecten mientras usas Prowl como si tuvieras 2 niveles más.",
+      "Aumenta el daño de tu habilidad Swipe en un 30% y reduce la probabilidad de que los enemigos te detecten mientras usas Prowl como si tuvieras 3 niveles más."
+    ],
+    "feral-swiftness": [
+      "Aumenta tu velocidad de movimiento mientras estás en Cat Form un 15% y aumenta tu probabilidad de esquivar un 2%.",
+      "Aumenta tu velocidad de movimiento mientras estás en Cat Form un 30% y aumenta tu probabilidad de esquivar un 4%."
+    ],
+    "ferocity": [
+      "Reduce el coste de tus habilidades Maul, Primal Bite, Swipe, Claw y Rake en 1 de Ira o Energía.",
+      "Reduce el coste de tus habilidades Maul, Primal Bite, Swipe, Claw y Rake en 2 de Ira o Energía.",
+      "Reduce el coste de tus habilidades Maul, Primal Bite, Swipe, Claw y Rake en 3 de Ira o Energía.",
+      "Reduce el coste de tus habilidades Maul, Primal Bite, Swipe, Claw y Rake en 4 de Ira o Energía.",
+      "Reduce el coste de tus habilidades Maul, Primal Bite, Swipe, Claw y Rake en 5 de Ira o Energía."
+    ],
+    "furor": [
+      "Te da un 20% de probabilidad de obtener 10 de Ira cuando te transformas en Bear Form o Dire Bear Form. Transformarte en Cat Form restaura un 20% de la Energía que tenías la última vez que estuviste en Cat Form, más 2 de Energía por cada segundo pasado fuera de Bear Form o Dire Bear Form, hasta 20 de Energía.",
+      "Te da un 40% de probabilidad de obtener 10 de Ira cuando te transformas en Bear Form o Dire Bear Form. Transformarte en Cat Form restaura un 40% de la Energía que tenías la última vez que estuviste en Cat Form, más 4 de Energía por cada segundo pasado fuera de Bear Form o Dire Bear Form, hasta 40 de Energía.",
+      "Te da un 60% de probabilidad de obtener 10 de Ira cuando te transformas en Bear Form o Dire Bear Form. Transformarte en Cat Form restaura un 60% de la Energía que tenías la última vez que estuviste en Cat Form, más 6 de Energía por cada segundo pasado fuera de Bear Form o Dire Bear Form, hasta 60 de Energía.",
+      "Te da un 80% de probabilidad de obtener 10 de Ira cuando te transformas en Bear Form o Dire Bear Form. Transformarte en Cat Form restaura un 80% de la Energía que tenías la última vez que estuviste en Cat Form, más 8 de Energía por cada segundo pasado fuera de Bear Form o Dire Bear Form, hasta 80 de Energía.",
+      "Te da un 100% de probabilidad de obtener 10 de Ira cuando te transformas en Bear Form o Dire Bear Form. Transformarte en Cat Form restaura un 100% de la Energía que tenías la última vez que estuviste en Cat Form, más 10 de Energía por cada segundo pasado fuera de Bear Form o Dire Bear Form, hasta 100 de Energía."
+    ],
+    "genesis": [
+      "Aumenta un 1% el daño periódico y la sanación periódica de tus hechizos y habilidades.",
+      "Aumenta un 2% el daño periódico y la sanación periódica de tus hechizos y habilidades.",
+      "Aumenta un 3% el daño periódico y la sanación periódica de tus hechizos y habilidades.",
+      "Aumenta un 4% el daño periódico y la sanación periódica de tus hechizos y habilidades.",
+      "Aumenta un 5% el daño periódico y la sanación periódica de tus hechizos y habilidades."
+    ],
+    "gift-of-nature": [
+      "Aumenta el efecto de todos tus hechizos de sanación en un 2%.",
+      "Aumenta el efecto de todos tus hechizos de sanación en un 4%.",
+      "Aumenta el efecto de todos tus hechizos de sanación en un 6%.",
+      "Aumenta el efecto de todos tus hechizos de sanación en un 8%.",
+      "Aumenta el efecto de todos tus hechizos de sanación en un 10%."
+    ],
+    "gift-of-the-earthmother": [
+      "Reduce en 0.5 segundos el tiempo de reutilización global de tus hechizos Rejuvenation, Swiftmend y Wild Growth."
+    ],
+    "heart-of-the-wild": [
+      "Aumenta tu Intelecto un 2%. Además, mientras estás en Bear Form o Dire Bear Form tu Aguante aumenta un 4% y mientras estás en Cat Form tu Fuerza aumenta un 2%.",
+      "Aumenta tu Intelecto un 4%. Además, mientras estás en Bear Form o Dire Bear Form tu Aguante aumenta un 8% y mientras estás en Cat Form tu Fuerza aumenta un 4%.",
+      "Aumenta tu Intelecto un 6%. Además, mientras estás en Bear Form o Dire Bear Form tu Aguante aumenta un 12% y mientras estás en Cat Form tu Fuerza aumenta un 6%.",
+      "Aumenta tu Intelecto un 8%. Además, mientras estás en Bear Form o Dire Bear Form tu Aguante aumenta un 16% y mientras estás en Cat Form tu Fuerza aumenta un 8%.",
+      "Aumenta tu Intelecto un 10%. Además, mientras estás en Bear Form o Dire Bear Form tu Aguante aumenta un 20% y mientras estás en Cat Form tu Fuerza aumenta un 10%."
+    ],
+    "improved-entangling-roots": [
+      "Aumenta el daño de tu hechizo Entangling Roots en un 25% y sus víctimas pueden recibir hasta un 25% más de daño sin que el efecto se interrumpa.",
+      "Aumenta el daño de tu hechizo Entangling Roots en un 50% y sus víctimas pueden recibir hasta un 50% más de daño sin que el efecto se interrumpa.",
+      "Aumenta el daño de tu hechizo Entangling Roots en un 75% y sus víctimas pueden recibir hasta un 75% más de daño sin que el efecto se interrumpa."
+    ],
+    "improved-moonfire": [
+      "Aumenta el daño y la probabilidad de golpe crítico de tu hechizo Moonfire en un 5%.",
+      "Aumenta el daño y la probabilidad de golpe crítico de tu hechizo Moonfire en un 10%."
+    ],
+    "improved-regrowth": [
+      "Aumenta la probabilidad de efecto crítico de tu hechizo Regrowth en un 10%.",
+      "Aumenta la probabilidad de efecto crítico de tu hechizo Regrowth en un 20%.",
+      "Aumenta la probabilidad de efecto crítico de tu hechizo Regrowth en un 30%.",
+      "Aumenta la probabilidad de efecto crítico de tu hechizo Regrowth en un 40%.",
+      "Aumenta la probabilidad de efecto crítico de tu hechizo Regrowth en un 50%."
+    ],
+    "improved-rejuvenation": [
+      "Aumenta el efecto de tu hechizo Rejuvenation en un 5%.",
+      "Aumenta el efecto de tu hechizo Rejuvenation en un 10%.",
+      "Aumenta el efecto de tu hechizo Rejuvenation en un 15%."
+    ],
+    "improved-shifting-power": [
+      "Reduce el tiempo de reutilización de tu hechizo Shifting Power en 4 s.",
+      "Reduce el tiempo de reutilización de tu hechizo Shifting Power en 8 s."
+    ],
+    "improved-starfire": [
+      "Reduce el tiempo de lanzamiento de Starfire en 0.1 s y Starfire tiene un 3% de probabilidad de aturdir a su objetivo durante 3 s.",
+      "Reduce el tiempo de lanzamiento de Starfire en 0.2 s y Starfire tiene un 6% de probabilidad de aturdir a su objetivo durante 3 s.",
+      "Reduce el tiempo de lanzamiento de Starfire en 0.3 s y Starfire tiene un 9% de probabilidad de aturdir a su objetivo durante 3 s.",
+      "Reduce el tiempo de lanzamiento de Starfire en 0.4 s y Starfire tiene un 12% de probabilidad de aturdir a su objetivo durante 3 s.",
+      "Reduce el tiempo de lanzamiento de Starfire en 0.5 s y Starfire tiene un 15% de probabilidad de aturdir a su objetivo durante 3 s."
+    ],
+    "improved-tranquility": [
+      "Reduce la amenaza generada por Tranquility en un 50% y su tiempo de reutilización en un 30%.",
+      "Reduce la amenaza generada por Tranquility en un 100% y su tiempo de reutilización en un 60%."
+    ],
+    "improved-wrath": [
+      "Reduce el tiempo de lanzamiento de tu hechizo Wrath en 0.1 s y su coste de Maná en un 10%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Wrath en 0.2 s y su coste de Maná en un 20%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Wrath en 0.3 s y su coste de Maná en un 30%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Wrath en 0.4 s y su coste de Maná en un 40%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Wrath en 0.5 s y su coste de Maná en un 50%."
+    ],
+    "insect-swarm": [
+      "El objetivo enemigo es asediado por un enjambre de insectos, lo que reduce un 2% su probabilidad de golpear con sus ataques e inflige 48 de daño de Naturaleza durante 12 s."
+    ],
+    "leader-of-the-pack": [
+      "Mientras estás en Cat Form, Bear Form o Dire Bear Form, Leader of the Pack aumenta un 3% la probabilidad de golpe crítico cuerpo a cuerpo y a distancia de todos los miembros del grupo o de la banda a menos de 45 metros."
+    ],
+    "living-spirit": [
+      "Aumenta tu Espíritu un 5%.",
+      "Aumenta tu Espíritu un 10%.",
+      "Aumenta tu Espíritu un 15%."
+    ],
+    "moonfury": [
+      "Aumenta el daño de tus hechizos de Arcano y Naturaleza en un 2%.",
+      "Aumenta el daño de tus hechizos de Arcano y Naturaleza en un 4%.",
+      "Aumenta el daño de tus hechizos de Arcano y Naturaleza en un 6%.",
+      "Aumenta el daño de tus hechizos de Arcano y Naturaleza en un 8%.",
+      "Aumenta el daño de tus hechizos de Arcano y Naturaleza en un 10%."
+    ],
+    "moonglow": [
+      "Reduce el coste de Maná de tus hechizos de daño en un 8%.",
+      "Reduce el coste de Maná de tus hechizos de daño en un 17%.",
+      "Reduce el coste de Maná de tus hechizos de daño en un 25%."
+    ],
+    "moonkin-form": [
+      "Te transformas en Moonkin Form: la probabilidad de que se active Omen of Clarity aumenta un 100%, la contribución de armadura de los objetos un 360% y la probabilidad de golpe crítico con hechizos de todos los miembros del grupo o de la banda a menos de 45 metros un 3%. Además, protege al lanzador de los efectos de Polymorph e impide el uso de hechizos de sanación.\n\nEl acto de cambiar de forma libera al lanzador de los efectos de Polymorph y de los efectos que reducen el movimiento."
+    ],
+    "natural-instinct": [
+      "Aumenta la bonificación de daño de golpe crítico de tus habilidades cuerpo a cuerpo en un 10% y aumenta tu sanación de hechizos en un 12% de tu Intelecto.",
+      "Aumenta la bonificación de daño de golpe crítico de tus habilidades cuerpo a cuerpo en un 20% y aumenta tu sanación de hechizos en un 25% de tu Intelecto."
+    ],
+    "natural-reaction": [
+      "Aumenta tu probabilidad de esquivar un 1% y te da un 20% de probabilidad de obtener 5 de Ira cada vez que esquivas.",
+      "Aumenta tu probabilidad de esquivar un 2% y te da un 40% de probabilidad de obtener 5 de Ira cada vez que esquivas.",
+      "Aumenta tu probabilidad de esquivar un 3% y te da un 60% de probabilidad de obtener 5 de Ira cada vez que esquivas.",
+      "Aumenta tu probabilidad de esquivar un 4% y te da un 80% de probabilidad de obtener 5 de Ira cada vez que esquivas.",
+      "Aumenta tu probabilidad de esquivar un 5% y te da un 100% de probabilidad de obtener 5 de Ira cada vez que esquivas."
+    ],
+    "natural-shapeshifter": [
+      "Reduce el coste de Maná de todos los cambios de forma en un 10%.",
+      "Reduce el coste de Maná de todos los cambios de forma en un 20%.",
+      "Reduce el coste de Maná de todos los cambios de forma en un 30%."
+    ],
+    "naturalist": [
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Touch en 0.1 s y aumenta todo el daño que infliges en un 1%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Touch en 0.2 s y aumenta todo el daño que infliges en un 2%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Touch en 0.3 s y aumenta todo el daño que infliges en un 3%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Touch en 0.4 s y aumenta todo el daño que infliges en un 4%.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Healing Touch en 0.5 s y aumenta todo el daño que infliges en un 5%."
+    ],
+    "natures-focus": [
+      "Te da un 14% de probabilidad de evitar la interrupción causada por el daño mientras lanzas hechizos de Arcano y Naturaleza.",
+      "Te da un 28% de probabilidad de evitar la interrupción causada por el daño mientras lanzas hechizos de Arcano y Naturaleza.",
+      "Te da un 42% de probabilidad de evitar la interrupción causada por el daño mientras lanzas hechizos de Arcano y Naturaleza.",
+      "Te da un 56% de probabilidad de evitar la interrupción causada por el daño mientras lanzas hechizos de Arcano y Naturaleza.",
+      "Te da un 70% de probabilidad de evitar la interrupción causada por el daño mientras lanzas hechizos de Arcano y Naturaleza."
+    ],
+    "natures-grace": [
+      "Todos los golpes críticos no periódicos de tus hechizos te conceden una bendición de la naturaleza, que aumenta tu velocidad de lanzamiento de hechizos y reduce tu tiempo de reutilización global un 10% durante 3 s."
+    ],
+    "natures-majesty": [
+      "Aumenta tu probabilidad de golpe crítico con hechizos y ataques cuerpo a cuerpo en un 2%.",
+      "Aumenta tu probabilidad de golpe crítico con hechizos y ataques cuerpo a cuerpo en un 4%."
+    ],
+    "natures-reach": [
+      "Aumenta el alcance de tus hechizos ofensivos de la rama Balance en un 10% y mejora tu probabilidad de golpear en un 2%.",
+      "Aumenta el alcance de tus hechizos ofensivos de la rama Balance en un 20% y mejora tu probabilidad de golpear en un 4%."
+    ],
+    "natures-splendor": [
+      "Aumenta la duración de tus hechizos Moonfire y Rejuvenation en 3 s, la de tu hechizo Regrowth en 6 s y la de tu hechizo Insect Swarm en 2 s."
+    ],
+    "natures-swiftness": [
+      "Cuando se activa, tu siguiente hechizo de Naturaleza se convierte en un hechizo de lanzamiento instantáneo."
+    ],
+    "overgrowth": [
+      "Aumenta en 1 el número máximo de objetivos que puedes tener afectados por Entangling Roots.",
+      "Aumenta en 2 el número máximo de objetivos que puedes tener afectados por Entangling Roots."
+    ],
+    "predatory-strikes": [
+      "Aumenta tu poder de ataque cuerpo a cuerpo en Cat Form, Bear Form y Dire Bear Form en un 50% de tu nivel.",
+      "Aumenta tu poder de ataque cuerpo a cuerpo en Cat Form, Bear Form y Dire Bear Form en un 100% de tu nivel.",
+      "Aumenta tu poder de ataque cuerpo a cuerpo en Cat Form, Bear Form y Dire Bear Form en un 150% de tu nivel."
+    ],
+    "primal-bite": [
+      "Muerdes al objetivo, infligiendo un 100% del daño normal más 26 y generando una gran cantidad de amenaza."
+    ],
+    "reflection": [
+      "Permite que un 17% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que un 33% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos."
+    ],
+    "rend-and-tear": [
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 2%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 4%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 6%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 8%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 10%."
+    ],
+    "savage-fury": [
+      "Aumenta el daño de tus habilidades Claw, Rake, Shred, Maul y Swipe en un 5%.",
+      "Aumenta el daño de tus habilidades Claw, Rake, Shred, Maul y Swipe en un 10%."
+    ],
+    "sharpened-claws": [
+      "Aumenta tu probabilidad de golpe crítico mientras estás en Bear Form, Dire Bear Form o Cat Form en un 3%.",
+      "Aumenta tu probabilidad de golpe crítico mientras estás en Bear Form, Dire Bear Form o Cat Form en un 6%."
+    ],
+    "shifting-power": [
+      "Convierte al instante un 55% del Maná base en 40 de Energía. El coste de Shifting Power se reduce con los efectos que reducen el coste de los cambios de forma."
+    ],
+    "shredding-attacks": [
+      "Reduce el coste de Energía de tu habilidad Shred en 6 y reduce el coste de Ira de tu habilidad Lacerate en 1.",
+      "Reduce el coste de Energía de tu habilidad Shred en 12 y reduce el coste de Ira de tu habilidad Lacerate en 2.",
+      "Reduce el coste de Energía de tu habilidad Shred en 18 y reduce el coste de Ira de tu habilidad Lacerate en 3."
+    ],
+    "subtlety": [
+      "Reduce la amenaza generada por tus hechizos de Naturaleza y Arcano en un 10%.",
+      "Reduce la amenaza generada por tus hechizos de Naturaleza y Arcano en un 20%.",
+      "Reduce la amenaza generada por tus hechizos de Naturaleza y Arcano en un 30%."
+    ],
+    "swiftmend": [
+      "Sana al instante a un objetivo con un efecto de Rejuvenation o Regrowth activo por una cantidad igual a la duración completa del efecto periódico de uno de esos hechizos."
+    ],
+    "thick-hide": [
+      "Mientras estás en Bear Form, Cat Form, Dire Bear Form o Moonkin Form, obtienes 1 punto de armadura base adicional por nivel y otros 0.67 puntos de armadura base por cada punto de habilidad de defensa por encima de cinco veces tu nivel. Esta cantidad puede aumentar aún más con los multiplicadores de esas formas.",
+      "Mientras estás en Bear Form, Cat Form, Dire Bear Form o Moonkin Form, obtienes 2 puntos de armadura base adicionales por nivel y otros 1.33 puntos de armadura base por cada punto de habilidad de defensa por encima de cinco veces tu nivel. Esta cantidad puede aumentar aún más con los multiplicadores de esas formas.",
+      "Mientras estás en Bear Form, Cat Form, Dire Bear Form o Moonkin Form, obtienes 3 puntos de armadura base adicionales por nivel y otros 2.00 puntos de armadura base por cada punto de habilidad de defensa por encima de cinco veces tu nivel. Esta cantidad puede aumentar aún más con los multiplicadores de esas formas."
+    ],
+    "tranquil-spirit": [
+      "Reduce el coste de Maná de tus hechizos Healing Touch y Tranquility en un 2%.",
+      "Reduce el coste de Maná de tus hechizos Healing Touch y Tranquility en un 4%.",
+      "Reduce el coste de Maná de tus hechizos Healing Touch y Tranquility en un 6%.",
+      "Reduce el coste de Maná de tus hechizos Healing Touch y Tranquility en un 8%.",
+      "Reduce el coste de Maná de tus hechizos Healing Touch y Tranquility en un 10%."
+    ],
+    "vengeance": [
+      "Aumenta la bonificación de daño de golpe crítico de tus hechizos de Arcano y Naturaleza en un 20%.",
+      "Aumenta la bonificación de daño de golpe crítico de tus hechizos de Arcano y Naturaleza en un 40%.",
+      "Aumenta la bonificación de daño de golpe crítico de tus hechizos de Arcano y Naturaleza en un 60%.",
+      "Aumenta la bonificación de daño de golpe crítico de tus hechizos de Arcano y Naturaleza en un 80%.",
+      "Aumenta la bonificación de daño de golpe crítico de tus hechizos de Arcano y Naturaleza en un 100%."
+    ],
+    "wild-growth": [
+      "Sana al objetivo y a su grupo por 336 durante 7 s. Los miembros del grupo deben estar a menos de 43 metros del objetivo. La cantidad sanada se aplica rápidamente al principio y se ralentiza a medida que Wild Growth se acerca al final de su duración."
+    ]
+  }
+}

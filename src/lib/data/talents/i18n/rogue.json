@@ -1,0 +1,496 @@
+{
+  "it": {
+    "adrenaline-rush": [
+      "Aumenta del 100% la tua velocità di rigenerazione dell'Energia per 15 secondi."
+    ],
+    "aggression": [
+      "Aumenta del 2% i danni delle tue abilità Sinister Strike, Backstab ed Eviscerate.",
+      "Aumenta del 4% i danni delle tue abilità Sinister Strike, Backstab ed Eviscerate.",
+      "Aumenta del 6% i danni delle tue abilità Sinister Strike, Backstab ed Eviscerate."
+    ],
+    "blade-flurry": [
+      "Aumenta del 20% la tua velocità d'attacco in mischia e i tuoi attacchi in mischia colpiscono un avversario vicino aggiuntivo. Dura 15 secondi."
+    ],
+    "camouflage": [
+      "Riduce del 3% la penalità alla velocità della tua abilità Stealth e riduce di 2 secondi il suo tempo di ricarica.",
+      "Riduce del 6% la penalità alla velocità della tua abilità Stealth e riduce di 3 secondi il suo tempo di ricarica.",
+      "Riduce del 9% la penalità alla velocità della tua abilità Stealth e riduce di 4 secondi il suo tempo di ricarica.",
+      "Riduce del 12% la penalità alla velocità della tua abilità Stealth e riduce di 5 secondi il suo tempo di ricarica.",
+      "Riduce del 15% la penalità alla velocità della tua abilità Stealth e riduce di 6 secondi il suo tempo di ricarica."
+    ],
+    "cold-blood": [
+      "Quando viene attivata, aumenta del 100% la probabilità di colpo critico del tuo prossimo Sinister Strike, Backstab, Ambush, Eviscerate o Mutilate."
+    ],
+    "cutthroat": [
+      "Il tuo Backstab ha il 3% di probabilità di far sì che il tuo prossimo Ambush entro 10 secondi non richieda la furtività.",
+      "Il tuo Backstab ha il 6% di probabilità di far sì che il tuo prossimo Ambush entro 10 secondi non richieda la furtività.",
+      "Il tuo Backstab ha il 9% di probabilità di far sì che il tuo prossimo Ambush entro 10 secondi non richieda la furtività.",
+      "Il tuo Backstab ha il 12% di probabilità di far sì che il tuo prossimo Ambush entro 10 secondi non richieda la furtività.",
+      "Il tuo Backstab ha il 15% di probabilità di far sì che il tuo prossimo Ambush entro 10 secondi non richieda la furtività."
+    ],
+    "deflection": [
+      "Aumenta del 2% la tua probabilità di parata.",
+      "Aumenta del 4% la tua probabilità di parata.",
+      "Aumenta del 6% la tua probabilità di parata."
+    ],
+    "dirty-deeds": [
+      "Riduce di 10 il costo in Energia delle tue abilità Cheap Shot e Garrote, e la tua abilità Garrote non richiede più che tu sia alle spalle del bersaglio.",
+      "Riduce di 20 il costo in Energia delle tue abilità Cheap Shot e Garrote, e la tua abilità Garrote non richiede più che tu sia alle spalle del bersaglio."
+    ],
+    "dirty-tricks": [
+      "Riduce del 25% il costo in Energia delle tue abilità Sap e Blind.",
+      "Riduce del 50% il costo in Energia delle tue abilità Sap e Blind."
+    ],
+    "dual-wield-specialization": [
+      "Aumenta del 5% i danni inflitti dall'arma nella tua mano secondaria.",
+      "Aumenta del 10% i danni inflitti dall'arma nella tua mano secondaria.",
+      "Aumenta del 15% i danni inflitti dall'arma nella tua mano secondaria.",
+      "Aumenta del 20% i danni inflitti dall'arma nella tua mano secondaria.",
+      "Aumenta del 25% i danni inflitti dall'arma nella tua mano secondaria."
+    ],
+    "elusiveness": [
+      "Riduce di 45 secondi il tempo di ricarica delle tue abilità Vanish e Blind.",
+      "Riduce di 90 secondi il tempo di ricarica delle tue abilità Vanish e Blind."
+    ],
+    "endurance": [
+      "Riduce del 30% il tempo di ricarica delle tue abilità Sprint ed Evasion.",
+      "Riduce del 60% il tempo di ricarica delle tue abilità Sprint ed Evasion."
+    ],
+    "flawless-execution": [
+      "Riduce di 10 il costo in Energia della tua abilità Eviscerate."
+    ],
+    "ghostly-strike": [
+      "Un colpo che infligge il 125% dei danni dell'arma (180% se hai un pugnale equipaggiato nella mano principale) e aumenta del 15% la tua probabilità di schivata per 7 secondi. Conferisce 1 punto combo."
+    ],
+    "hack-and-slash": [
+      "Dà ai tuoi attacchi con le armi in mischia un beneficio che dipende dall'arma.\n\n Ascia/Spada: i tuoi attacchi in mischia riusciti hanno il 1% di probabilità di attivare un attacco aggiuntivo sul bersaglio.\n\n Pugnale/Arma da pugno: aumenta del 1% la tua probabilità di colpo critico.\n\n Mazza: i tuoi attacchi ignorano il 3% dell'armatura del bersaglio.",
+      "Dà ai tuoi attacchi con le armi in mischia un beneficio che dipende dall'arma.\n\n Ascia/Spada: i tuoi attacchi in mischia riusciti hanno il 2% di probabilità di attivare un attacco aggiuntivo sul bersaglio.\n\n Pugnale/Arma da pugno: aumenta del 2% la tua probabilità di colpo critico.\n\n Mazza: i tuoi attacchi ignorano il 6% dell'armatura del bersaglio.",
+      "Dà ai tuoi attacchi con le armi in mischia un beneficio che dipende dall'arma.\n\n Ascia/Spada: i tuoi attacchi in mischia riusciti hanno il 3% di probabilità di attivare un attacco aggiuntivo sul bersaglio.\n\n Pugnale/Arma da pugno: aumenta del 3% la tua probabilità di colpo critico.\n\n Mazza: i tuoi attacchi ignorano il 9% dell'armatura del bersaglio.",
+      "Dà ai tuoi attacchi con le armi in mischia un beneficio che dipende dall'arma.\n\n Ascia/Spada: i tuoi attacchi in mischia riusciti hanno il 4% di probabilità di attivare un attacco aggiuntivo sul bersaglio.\n\n Pugnale/Arma da pugno: aumenta del 4% la tua probabilità di colpo critico.\n\n Mazza: i tuoi attacchi ignorano il 12% dell'armatura del bersaglio.",
+      "Dà ai tuoi attacchi con le armi in mischia un beneficio che dipende dall'arma.\n\n Ascia/Spada: i tuoi attacchi in mischia riusciti hanno il 5% di probabilità di attivare un attacco aggiuntivo sul bersaglio.\n\n Pugnale/Arma da pugno: aumenta del 5% la tua probabilità di colpo critico.\n\n Mazza: i tuoi attacchi ignorano il 15% dell'armatura del bersaglio."
+    ],
+    "heightened-senses": [
+      "Aumenta il tuo rilevamento della furtività come se fossi di 1 livello superiore e riduce del 2% la tua probabilità di essere colpito da incantesimi e attacchi a distanza.",
+      "Aumenta il tuo rilevamento della furtività come se fossi di 3 livelli superiore e riduce del 4% la tua probabilità di essere colpito da incantesimi e attacchi a distanza."
+    ],
+    "hemorrhage": [
+      "Un colpo istantaneo che infligge il 100% dei danni dell'arma (145% se hai un pugnale equipaggiato) e fa sì che il bersaglio subisca il 15% di danni in più da Rupture da parte del Rogue. Dura 15 secondi. Conferisce 1 Punto combo."
+    ],
+    "improved-ambush": [
+      "Aumenta del 15% la probabilità di colpo critico della tua abilità Ambush.",
+      "Aumenta del 30% la probabilità di colpo critico della tua abilità Ambush.",
+      "Aumenta del 45% la probabilità di colpo critico della tua abilità Ambush."
+    ],
+    "improved-distract": [
+      "Aumenta di 3 metri il raggio della tua abilità Distract e riduce ulteriormente il rilevamento della furtività dei nemici distratti, come se fossero inferiori di 1 livello aggiuntivo.",
+      "Aumenta di 5 metri il raggio della tua abilità Distract e riduce ulteriormente il rilevamento della furtività dei nemici distratti, come se fossero inferiori di 2 livelli aggiuntivi."
+    ],
+    "improved-eviscerate": [
+      "Aumenta del 7% i danni inflitti dalla tua abilità Eviscerate.",
+      "Aumenta del 13% i danni inflitti dalla tua abilità Eviscerate.",
+      "Aumenta del 20% i danni inflitti dalla tua abilità Eviscerate."
+    ],
+    "improved-expose-armor": [
+      "Riduce di 5 il costo in Energia della tua abilità Expose Armor e rimborsa 1 Punto combo quando viene usata con 5 Punti combo.",
+      "Riduce di 10 il costo in Energia della tua abilità Expose Armor e rimborsa 2 Punti combo quando viene usata con 5 Punti combo."
+    ],
+    "improved-gouge": [
+      "Aumenta la durata della tua abilità Gouge di 0.5 secondi.",
+      "Aumenta la durata della tua abilità Gouge di 1 secondo.",
+      "Aumenta la durata della tua abilità Gouge di 1.5 secondi."
+    ],
+    "improved-kick": [
+      "Dà alla tua abilità Kick il 50% di probabilità di silenziare il bersaglio per 2 secondi.",
+      "Dà alla tua abilità Kick il 100% di probabilità di silenziare il bersaglio per 2 secondi."
+    ],
+    "improved-kidney-shot": [
+      "I nemici storditi dalla tua abilità Kidney Shot subiscono il 5% di danni in più dai tuoi veleni e attacchi.",
+      "I nemici storditi dalla tua abilità Kidney Shot subiscono il 10% di danni in più dai tuoi veleni e attacchi."
+    ],
+    "improved-poisons": [
+      "Aumenta del 2% la probabilità di applicare i veleni al tuo bersaglio e dà alle applicazioni di veleno il 10% di probabilità di non consumare una carica.",
+      "Aumenta del 4% la probabilità di applicare i veleni al tuo bersaglio e dà alle applicazioni di veleno il 20% di probabilità di non consumare una carica.",
+      "Aumenta del 6% la probabilità di applicare i veleni al tuo bersaglio e dà alle applicazioni di veleno il 30% di probabilità di non consumare una carica.",
+      "Aumenta del 8% la probabilità di applicare i veleni al tuo bersaglio e dà alle applicazioni di veleno il 40% di probabilità di non consumare una carica.",
+      "Aumenta del 10% la probabilità di applicare i veleni al tuo bersaglio e dà alle applicazioni di veleno il 50% di probabilità di non consumare una carica."
+    ],
+    "improved-sinister-strike": [
+      "Riduce di 3 il costo in Energia della tua abilità Sinister Strike.",
+      "Riduce di 5 il costo in Energia della tua abilità Sinister Strike."
+    ],
+    "improved-slice-and-dice": [
+      "Aumenta del 15% la durata della tua abilità Slice and Dice.",
+      "Aumenta del 30% la durata della tua abilità Slice and Dice.",
+      "Aumenta del 45% la durata della tua abilità Slice and Dice."
+    ],
+    "improved-sprint": [
+      "Dà il 50% di probabilità di rimuovere tutti gli effetti che limitano il movimento quando attivi la tua abilità Sprint.",
+      "Dà il 100% di probabilità di rimuovere tutti gli effetti che limitano il movimento quando attivi la tua abilità Sprint."
+    ],
+    "initiative": [
+      "Ti dà il 33% di probabilità di aggiungere un punto combo aggiuntivo al tuo bersaglio quando usi la tua abilità Ambush, Garrote o Cheap Shot.",
+      "Ti dà il 67% di probabilità di aggiungere un punto combo aggiuntivo al tuo bersaglio quando usi la tua abilità Ambush, Garrote o Cheap Shot.",
+      "Ti dà il 100% di probabilità di aggiungere un punto combo aggiuntivo al tuo bersaglio quando usi la tua abilità Ambush, Garrote o Cheap Shot."
+    ],
+    "lethality": [
+      "Aumenta del 4% il bonus ai danni da colpo critico delle tue abilità Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike e Hemorrhage.",
+      "Aumenta del 8% il bonus ai danni da colpo critico delle tue abilità Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike e Hemorrhage.",
+      "Aumenta del 12% il bonus ai danni da colpo critico delle tue abilità Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike e Hemorrhage.",
+      "Aumenta del 16% il bonus ai danni da colpo critico delle tue abilità Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike e Hemorrhage.",
+      "Aumenta del 20% il bonus ai danni da colpo critico delle tue abilità Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike e Hemorrhage."
+    ],
+    "lightning-reflexes": [
+      "Aumenta del 1% la tua probabilità di schivata.",
+      "Aumenta del 2% la tua probabilità di schivata.",
+      "Aumenta del 3% la tua probabilità di schivata.",
+      "Aumenta del 4% la tua probabilità di schivata.",
+      "Aumenta del 5% la tua probabilità di schivata."
+    ],
+    "malice": [
+      "Aumenta del 1% la tua probabilità di colpo critico con tutti gli attacchi e i veleni.",
+      "Aumenta del 2% la tua probabilità di colpo critico con tutti gli attacchi e i veleni.",
+      "Aumenta del 3% la tua probabilità di colpo critico con tutti gli attacchi e i veleni.",
+      "Aumenta del 4% la tua probabilità di colpo critico con tutti gli attacchi e i veleni.",
+      "Aumenta del 5% la tua probabilità di colpo critico con tutti gli attacchi e i veleni."
+    ],
+    "master-of-deception": [
+      "Riduce la probabilità che i nemici ti individuino mentre sei in furtività come se fossi di 1 livello superiore.",
+      "Riduce la probabilità che i nemici ti individuino mentre sei in furtività come se fossi di 2 livelli superiore.",
+      "Riduce la probabilità che i nemici ti individuino mentre sei in furtività come se fossi di 3 livelli superiore."
+    ],
+    "murder": [
+      "Aumenta del 2% tutti i danni inflitti ai bersagli Umanoidi e Giganti.",
+      "Aumenta del 4% tutti i danni inflitti ai bersagli Umanoidi e Giganti."
+    ],
+    "mutilate": [
+      "Attacca istantaneamente con entrambe le armi infliggendo il 75% dei danni dell'arma più 13 aggiuntivi con ciascuna arma. Danni aumentati del 20% contro i bersagli avvelenati. Conferisce 2 Punti combo."
+    ],
+    "opportunity": [
+      "Aumenta del 5% i danni inflitti dalle tue abilità Backstab, Garrote, Ambush e Mutilate.",
+      "Aumenta del 10% i danni inflitti dalle tue abilità Backstab, Garrote, Ambush e Mutilate."
+    ],
+    "precision": [
+      "Migliora del 1% la tua probabilità di colpire.",
+      "Migliora del 2% la tua probabilità di colpire.",
+      "Migliora del 3% la tua probabilità di colpire."
+    ],
+    "premeditation": [
+      "Aggiunge 2 Punti combo al tuo bersaglio. Devi aggiungerne altri o usare quei punti combo entro 20 secondi, altrimenti i punti combo vanno persi."
+    ],
+    "preparation": [
+      "Quando viene attivata, questa abilità termina immediatamente il tempo di ricarica delle tue altre abilità da Rogue."
+    ],
+    "puncturing-wounds": [
+      "Aumenta la probabilità di colpo critico del tuo Backstab del 10% e del tuo Mutilate del 5%, e dà a Backstab il 15% di probabilità di aggiungere un Punto combo aggiuntivo.",
+      "Aumenta la probabilità di colpo critico del tuo Backstab del 20% e del tuo Mutilate del 10%, e dà a Backstab il 30% di probabilità di aggiungere un Punto combo aggiuntivo.",
+      "Aumenta la probabilità di colpo critico del tuo Backstab del 30% e del tuo Mutilate del 15%, e dà a Backstab il 45% di probabilità di aggiungere un Punto combo aggiuntivo."
+    ],
+    "quietus": [
+      "Le tue abilità Sinister Strike, Ghostly Strike e Hemorrhage infliggono il 2% di danni in più ai bersagli con meno del 35% di Salute.",
+      "Le tue abilità Sinister Strike, Ghostly Strike e Hemorrhage infliggono il 4% di danni in più ai bersagli con meno del 35% di Salute.",
+      "Le tue abilità Sinister Strike, Ghostly Strike e Hemorrhage infliggono il 6% di danni in più ai bersagli con meno del 35% di Salute.",
+      "Le tue abilità Sinister Strike, Ghostly Strike e Hemorrhage infliggono il 8% di danni in più ai bersagli con meno del 35% di Salute.",
+      "Le tue abilità Sinister Strike, Ghostly Strike e Hemorrhage infliggono il 10% di danni in più ai bersagli con meno del 35% di Salute."
+    ],
+    "relentless-strikes": [
+      "Le tue mosse finali hanno il 20% di probabilità per Punto combo di ripristinare 25 Energia."
+    ],
+    "remorseless-attacks": [
+      "Dopo aver ucciso un nemico non banale, ti dà il 20% di probabilità di colpo critico in più sul tuo prossimo Sinister Strike, Backstab, Ambush, Mutilate o Ghostly Strike. Dura 20 secondi.",
+      "Dopo aver ucciso un nemico non banale, ti dà il 40% di probabilità di colpo critico in più sul tuo prossimo Sinister Strike, Backstab, Ambush, Mutilate o Ghostly Strike. Dura 20 secondi."
+    ],
+    "riposte": [
+      "Un colpo che si attiva dopo aver parato l'attacco di un avversario. Questo attacco infligge il 150% dei danni dell'arma e disarma il bersaglio per 6 secondi."
+    ],
+    "ruthlessness": [
+      "Dà alle tue mosse finali il 20% di probabilità di aggiungere un Punto combo al tuo bersaglio.",
+      "Dà alle tue mosse finali il 40% di probabilità di aggiungere un Punto combo al tuo bersaglio.",
+      "Dà alle tue mosse finali il 60% di probabilità di aggiungere un Punto combo al tuo bersaglio."
+    ],
+    "seal-fate": [
+      "I tuoi colpi critici con le abilità che aggiungono Punti combo hanno il 20% di probabilità di aggiungere un Punto combo aggiuntivo.",
+      "I tuoi colpi critici con le abilità che aggiungono Punti combo hanno il 40% di probabilità di aggiungere un Punto combo aggiuntivo.",
+      "I tuoi colpi critici con le abilità che aggiungono Punti combo hanno il 60% di probabilità di aggiungere un Punto combo aggiuntivo.",
+      "I tuoi colpi critici con le abilità che aggiungono Punti combo hanno il 80% di probabilità di aggiungere un Punto combo aggiuntivo.",
+      "I tuoi colpi critici con le abilità che aggiungono Punti combo hanno il 100% di probabilità di aggiungere un Punto combo aggiuntivo."
+    ],
+    "serrated-blades": [
+      "Fa sì che i tuoi attacchi ignorino il 3% dell'armatura del bersaglio e aumenta del 10% i danni inflitti dalla tua abilità Rupture.",
+      "Fa sì che i tuoi attacchi ignorino il 6% dell'armatura del bersaglio e aumenta del 20% i danni inflitti dalla tua abilità Rupture.",
+      "Fa sì che i tuoi attacchi ignorino il 9% dell'armatura del bersaglio e aumenta del 30% i danni inflitti dalla tua abilità Rupture."
+    ],
+    "setup": [
+      "Ti dà il 33% di probabilità di aggiungere un Punto combo al tuo bersaglio dopo aver schivato uno dei suoi attacchi o resistito completamente a uno dei suoi incantesimi.",
+      "Ti dà il 67% di probabilità di aggiungere un Punto combo al tuo bersaglio dopo aver schivato uno dei suoi attacchi o resistito completamente a uno dei suoi incantesimi.",
+      "Ti dà il 100% di probabilità di aggiungere un Punto combo al tuo bersaglio dopo aver schivato uno dei suoi attacchi o resistito completamente a uno dei suoi incantesimi."
+    ],
+    "thousand-cuts": [
+      "Quando la tua abilità Rupture infligge danni periodici, il costo in Energia della tua prossima abilità Hemorrhage o Backstab entro 10 secondi è ridotto di 3, accumulabile fino a 5 volte."
+    ],
+    "venom": [
+      "Mossa finale che aumenta del 30% i danni dei tuoi veleni e del 10% la tua probabilità di applicare i veleni. Dura più a lungo per ogni punto combo:\n 1 punto : 9 secondi\n 2 punti: 12 secondi\n 3 punti: 15 secondi\n 4 punti: 18 secondi\n 5 punti: 21 secondi"
+    ],
+    "vigor": [
+      "Aumenta di 5 la tua Energia massima.",
+      "Aumenta di 10 la tua Energia massima."
+    ],
+    "vile-poisons": [
+      "Aumenta del 4% i danni inflitti dai tuoi veleni e dà ai tuoi veleni un ulteriore 8% di probabilità di resistere agli effetti di dissoluzione.",
+      "Aumenta del 8% i danni inflitti dai tuoi veleni e dà ai tuoi veleni un ulteriore 16% di probabilità di resistere agli effetti di dissoluzione.",
+      "Aumenta del 12% i danni inflitti dai tuoi veleni e dà ai tuoi veleni un ulteriore 24% di probabilità di resistere agli effetti di dissoluzione.",
+      "Aumenta del 16% i danni inflitti dai tuoi veleni e dà ai tuoi veleni un ulteriore 32% di probabilità di resistere agli effetti di dissoluzione.",
+      "Aumenta del 20% i danni inflitti dai tuoi veleni e dà ai tuoi veleni un ulteriore 40% di probabilità di resistere agli effetti di dissoluzione."
+    ],
+    "weapon-expertise": [
+      "Riduce del 1% la probabilità che i tuoi attacchi vengano schivati o parati.",
+      "Riduce del 2% la probabilità che i tuoi attacchi vengano schivati o parati."
+    ]
+  },
+  "es": {
+    "adrenaline-rush": [
+      "Aumenta un 100% tu velocidad de regeneración de Energía durante 15 segundos."
+    ],
+    "aggression": [
+      "Aumenta un 2% el daño de tus habilidades Sinister Strike, Backstab y Eviscerate.",
+      "Aumenta un 4% el daño de tus habilidades Sinister Strike, Backstab y Eviscerate.",
+      "Aumenta un 6% el daño de tus habilidades Sinister Strike, Backstab y Eviscerate."
+    ],
+    "blade-flurry": [
+      "Aumenta un 20% tu velocidad de ataque cuerpo a cuerpo y tus ataques cuerpo a cuerpo golpean a un oponente cercano adicional. Dura 15 segundos."
+    ],
+    "camouflage": [
+      "Reduce un 3% la penalización de velocidad de tu habilidad Stealth y reduce en 2 segundos su tiempo de reutilización.",
+      "Reduce un 6% la penalización de velocidad de tu habilidad Stealth y reduce en 3 segundos su tiempo de reutilización.",
+      "Reduce un 9% la penalización de velocidad de tu habilidad Stealth y reduce en 4 segundos su tiempo de reutilización.",
+      "Reduce un 12% la penalización de velocidad de tu habilidad Stealth y reduce en 5 segundos su tiempo de reutilización.",
+      "Reduce un 15% la penalización de velocidad de tu habilidad Stealth y reduce en 6 segundos su tiempo de reutilización."
+    ],
+    "cold-blood": [
+      "Al activarse, aumenta un 100% la probabilidad de golpe crítico de tu siguiente Sinister Strike, Backstab, Ambush, Eviscerate o Mutilate."
+    ],
+    "cutthroat": [
+      "Tu Backstab tiene un 3% de probabilidad de hacer que tu siguiente Ambush en los próximos 10 segundos no requiera sigilo.",
+      "Tu Backstab tiene un 6% de probabilidad de hacer que tu siguiente Ambush en los próximos 10 segundos no requiera sigilo.",
+      "Tu Backstab tiene un 9% de probabilidad de hacer que tu siguiente Ambush en los próximos 10 segundos no requiera sigilo.",
+      "Tu Backstab tiene un 12% de probabilidad de hacer que tu siguiente Ambush en los próximos 10 segundos no requiera sigilo.",
+      "Tu Backstab tiene un 15% de probabilidad de hacer que tu siguiente Ambush en los próximos 10 segundos no requiera sigilo."
+    ],
+    "deflection": [
+      "Aumenta un 2% tu probabilidad de parar.",
+      "Aumenta un 4% tu probabilidad de parar.",
+      "Aumenta un 6% tu probabilidad de parar."
+    ],
+    "dirty-deeds": [
+      "Reduce en 10 el coste de Energía de tus habilidades Cheap Shot y Garrote, y tu habilidad Garrote ya no requiere que estés detrás de tu objetivo.",
+      "Reduce en 20 el coste de Energía de tus habilidades Cheap Shot y Garrote, y tu habilidad Garrote ya no requiere que estés detrás de tu objetivo."
+    ],
+    "dirty-tricks": [
+      "Reduce un 25% el coste de Energía de tus habilidades Sap y Blind.",
+      "Reduce un 50% el coste de Energía de tus habilidades Sap y Blind."
+    ],
+    "dual-wield-specialization": [
+      "Aumenta un 5% el daño infligido por el arma de tu mano secundaria.",
+      "Aumenta un 10% el daño infligido por el arma de tu mano secundaria.",
+      "Aumenta un 15% el daño infligido por el arma de tu mano secundaria.",
+      "Aumenta un 20% el daño infligido por el arma de tu mano secundaria.",
+      "Aumenta un 25% el daño infligido por el arma de tu mano secundaria."
+    ],
+    "elusiveness": [
+      "Reduce en 45 segundos el tiempo de reutilización de tus habilidades Vanish y Blind.",
+      "Reduce en 90 segundos el tiempo de reutilización de tus habilidades Vanish y Blind."
+    ],
+    "endurance": [
+      "Reduce un 30% el tiempo de reutilización de tus habilidades Sprint y Evasion.",
+      "Reduce un 60% el tiempo de reutilización de tus habilidades Sprint y Evasion."
+    ],
+    "flawless-execution": [
+      "Reduce en 10 el coste de Energía de tu habilidad Eviscerate."
+    ],
+    "ghostly-strike": [
+      "Un golpe que inflige un 125% del daño del arma (180% si tienes una daga equipada en la mano principal) y aumenta un 15% tu probabilidad de esquivar durante 7 segundos. Otorga 1 punto de combo."
+    ],
+    "hack-and-slash": [
+      "Otorga a tus ataques con armas cuerpo a cuerpo un beneficio según el arma.\n\n Hacha/Espada: tus ataques cuerpo a cuerpo exitosos tienen un 1% de probabilidad de activar un ataque adicional contra el objetivo.\n\n Daga/Arma de puño: aumenta un 1% tu probabilidad de golpe crítico.\n\n Maza: tus ataques ignoran un 3% de la armadura de tu objetivo.",
+      "Otorga a tus ataques con armas cuerpo a cuerpo un beneficio según el arma.\n\n Hacha/Espada: tus ataques cuerpo a cuerpo exitosos tienen un 2% de probabilidad de activar un ataque adicional contra el objetivo.\n\n Daga/Arma de puño: aumenta un 2% tu probabilidad de golpe crítico.\n\n Maza: tus ataques ignoran un 6% de la armadura de tu objetivo.",
+      "Otorga a tus ataques con armas cuerpo a cuerpo un beneficio según el arma.\n\n Hacha/Espada: tus ataques cuerpo a cuerpo exitosos tienen un 3% de probabilidad de activar un ataque adicional contra el objetivo.\n\n Daga/Arma de puño: aumenta un 3% tu probabilidad de golpe crítico.\n\n Maza: tus ataques ignoran un 9% de la armadura de tu objetivo.",
+      "Otorga a tus ataques con armas cuerpo a cuerpo un beneficio según el arma.\n\n Hacha/Espada: tus ataques cuerpo a cuerpo exitosos tienen un 4% de probabilidad de activar un ataque adicional contra el objetivo.\n\n Daga/Arma de puño: aumenta un 4% tu probabilidad de golpe crítico.\n\n Maza: tus ataques ignoran un 12% de la armadura de tu objetivo.",
+      "Otorga a tus ataques con armas cuerpo a cuerpo un beneficio según el arma.\n\n Hacha/Espada: tus ataques cuerpo a cuerpo exitosos tienen un 5% de probabilidad de activar un ataque adicional contra el objetivo.\n\n Daga/Arma de puño: aumenta un 5% tu probabilidad de golpe crítico.\n\n Maza: tus ataques ignoran un 15% de la armadura de tu objetivo."
+    ],
+    "heightened-senses": [
+      "Aumenta tu detección de sigilo como si fueras 1 nivel superior y reduce un 2% tu probabilidad de ser golpeado por hechizos y ataques a distancia.",
+      "Aumenta tu detección de sigilo como si fueras 3 niveles superior y reduce un 4% tu probabilidad de ser golpeado por hechizos y ataques a distancia."
+    ],
+    "hemorrhage": [
+      "Un golpe instantáneo que inflige un 100% del daño del arma (145% si tienes una daga equipada) y hace que el objetivo reciba un 15% más de daño de Rupture por parte del Rogue. Dura 15 segundos. Otorga 1 Punto de combo."
+    ],
+    "improved-ambush": [
+      "Aumenta un 15% la probabilidad de golpe crítico de tu habilidad Ambush.",
+      "Aumenta un 30% la probabilidad de golpe crítico de tu habilidad Ambush.",
+      "Aumenta un 45% la probabilidad de golpe crítico de tu habilidad Ambush."
+    ],
+    "improved-distract": [
+      "Aumenta en 3 metros el radio de tu habilidad Distract y reduce aún más la detección de sigilo de los enemigos distraídos, como si fueran 1 nivel adicional más bajos.",
+      "Aumenta en 5 metros el radio de tu habilidad Distract y reduce aún más la detección de sigilo de los enemigos distraídos, como si fueran 2 niveles adicionales más bajos."
+    ],
+    "improved-eviscerate": [
+      "Aumenta un 7% el daño infligido por tu habilidad Eviscerate.",
+      "Aumenta un 13% el daño infligido por tu habilidad Eviscerate.",
+      "Aumenta un 20% el daño infligido por tu habilidad Eviscerate."
+    ],
+    "improved-expose-armor": [
+      "Reduce en 5 el coste de Energía de tu habilidad Expose Armor y devuelve 1 Punto de combo cuando se usa con 5 Puntos de combo.",
+      "Reduce en 10 el coste de Energía de tu habilidad Expose Armor y devuelve 2 Puntos de combo cuando se usa con 5 Puntos de combo."
+    ],
+    "improved-gouge": [
+      "Aumenta la duración de tu habilidad Gouge en 0.5 segundos.",
+      "Aumenta la duración de tu habilidad Gouge en 1 segundo.",
+      "Aumenta la duración de tu habilidad Gouge en 1.5 segundos."
+    ],
+    "improved-kick": [
+      "Otorga a tu habilidad Kick un 50% de probabilidad de silenciar al objetivo durante 2 segundos.",
+      "Otorga a tu habilidad Kick un 100% de probabilidad de silenciar al objetivo durante 2 segundos."
+    ],
+    "improved-kidney-shot": [
+      "Los enemigos aturdidos por tu habilidad Kidney Shot reciben un 5% más de daño de tus venenos y ataques.",
+      "Los enemigos aturdidos por tu habilidad Kidney Shot reciben un 10% más de daño de tus venenos y ataques."
+    ],
+    "improved-poisons": [
+      "Aumenta un 2% la probabilidad de aplicar venenos a tu objetivo y otorga a las aplicaciones de veneno un 10% de probabilidad de no consumir una carga.",
+      "Aumenta un 4% la probabilidad de aplicar venenos a tu objetivo y otorga a las aplicaciones de veneno un 20% de probabilidad de no consumir una carga.",
+      "Aumenta un 6% la probabilidad de aplicar venenos a tu objetivo y otorga a las aplicaciones de veneno un 30% de probabilidad de no consumir una carga.",
+      "Aumenta un 8% la probabilidad de aplicar venenos a tu objetivo y otorga a las aplicaciones de veneno un 40% de probabilidad de no consumir una carga.",
+      "Aumenta un 10% la probabilidad de aplicar venenos a tu objetivo y otorga a las aplicaciones de veneno un 50% de probabilidad de no consumir una carga."
+    ],
+    "improved-sinister-strike": [
+      "Reduce en 3 el coste de Energía de tu habilidad Sinister Strike.",
+      "Reduce en 5 el coste de Energía de tu habilidad Sinister Strike."
+    ],
+    "improved-slice-and-dice": [
+      "Aumenta un 15% la duración de tu habilidad Slice and Dice.",
+      "Aumenta un 30% la duración de tu habilidad Slice and Dice.",
+      "Aumenta un 45% la duración de tu habilidad Slice and Dice."
+    ],
+    "improved-sprint": [
+      "Otorga un 50% de probabilidad de eliminar todos los efectos que impiden el movimiento cuando activas tu habilidad Sprint.",
+      "Otorga un 100% de probabilidad de eliminar todos los efectos que impiden el movimiento cuando activas tu habilidad Sprint."
+    ],
+    "initiative": [
+      "Te otorga un 33% de probabilidad de añadir un punto de combo adicional a tu objetivo cuando usas tu habilidad Ambush, Garrote o Cheap Shot.",
+      "Te otorga un 67% de probabilidad de añadir un punto de combo adicional a tu objetivo cuando usas tu habilidad Ambush, Garrote o Cheap Shot.",
+      "Te otorga un 100% de probabilidad de añadir un punto de combo adicional a tu objetivo cuando usas tu habilidad Ambush, Garrote o Cheap Shot."
+    ],
+    "lethality": [
+      "Aumenta un 4% la bonificación de daño de golpe crítico de tus habilidades Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike y Hemorrhage.",
+      "Aumenta un 8% la bonificación de daño de golpe crítico de tus habilidades Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike y Hemorrhage.",
+      "Aumenta un 12% la bonificación de daño de golpe crítico de tus habilidades Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike y Hemorrhage.",
+      "Aumenta un 16% la bonificación de daño de golpe crítico de tus habilidades Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike y Hemorrhage.",
+      "Aumenta un 20% la bonificación de daño de golpe crítico de tus habilidades Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike y Hemorrhage."
+    ],
+    "lightning-reflexes": [
+      "Aumenta un 1% tu probabilidad de esquivar.",
+      "Aumenta un 2% tu probabilidad de esquivar.",
+      "Aumenta un 3% tu probabilidad de esquivar.",
+      "Aumenta un 4% tu probabilidad de esquivar.",
+      "Aumenta un 5% tu probabilidad de esquivar."
+    ],
+    "malice": [
+      "Aumenta un 1% tu probabilidad de golpe crítico con todos los ataques y venenos.",
+      "Aumenta un 2% tu probabilidad de golpe crítico con todos los ataques y venenos.",
+      "Aumenta un 3% tu probabilidad de golpe crítico con todos los ataques y venenos.",
+      "Aumenta un 4% tu probabilidad de golpe crítico con todos los ataques y venenos.",
+      "Aumenta un 5% tu probabilidad de golpe crítico con todos los ataques y venenos."
+    ],
+    "master-of-deception": [
+      "Reduce la probabilidad de que los enemigos te detecten mientras estás en sigilo como si fueras 1 nivel superior.",
+      "Reduce la probabilidad de que los enemigos te detecten mientras estás en sigilo como si fueras 2 niveles superior.",
+      "Reduce la probabilidad de que los enemigos te detecten mientras estás en sigilo como si fueras 3 niveles superior."
+    ],
+    "murder": [
+      "Aumenta un 2% todo el daño infligido a objetivos Humanoides y Gigantes.",
+      "Aumenta un 4% todo el daño infligido a objetivos Humanoides y Gigantes."
+    ],
+    "mutilate": [
+      "Ataca al instante con ambas armas infligiendo un 75% del daño del arma más 13 adicionales con cada arma. El daño aumenta un 20% contra objetivos envenenados. Otorga 2 Puntos de combo."
+    ],
+    "opportunity": [
+      "Aumenta un 5% el daño infligido por tus habilidades Backstab, Garrote, Ambush y Mutilate.",
+      "Aumenta un 10% el daño infligido por tus habilidades Backstab, Garrote, Ambush y Mutilate."
+    ],
+    "precision": [
+      "Mejora un 1% tu probabilidad de golpear.",
+      "Mejora un 2% tu probabilidad de golpear.",
+      "Mejora un 3% tu probabilidad de golpear."
+    ],
+    "premeditation": [
+      "Añade 2 Puntos de combo a tu objetivo. Debes añadir más o usar esos puntos de combo en un plazo de 20 segundos, o los puntos de combo se pierden."
+    ],
+    "preparation": [
+      "Al activarse, esta habilidad finaliza de inmediato el tiempo de reutilización de tus otras habilidades de Rogue."
+    ],
+    "puncturing-wounds": [
+      "Aumenta la probabilidad de golpe crítico de tu Backstab un 10% y de tu Mutilate un 5%, y otorga a Backstab un 15% de probabilidad de añadir un Punto de combo adicional.",
+      "Aumenta la probabilidad de golpe crítico de tu Backstab un 20% y de tu Mutilate un 10%, y otorga a Backstab un 30% de probabilidad de añadir un Punto de combo adicional.",
+      "Aumenta la probabilidad de golpe crítico de tu Backstab un 30% y de tu Mutilate un 15%, y otorga a Backstab un 45% de probabilidad de añadir un Punto de combo adicional."
+    ],
+    "quietus": [
+      "Tus habilidades Sinister Strike, Ghostly Strike y Hemorrhage infligen un 2% más de daño a objetivos con menos de un 35% de Salud.",
+      "Tus habilidades Sinister Strike, Ghostly Strike y Hemorrhage infligen un 4% más de daño a objetivos con menos de un 35% de Salud.",
+      "Tus habilidades Sinister Strike, Ghostly Strike y Hemorrhage infligen un 6% más de daño a objetivos con menos de un 35% de Salud.",
+      "Tus habilidades Sinister Strike, Ghostly Strike y Hemorrhage infligen un 8% más de daño a objetivos con menos de un 35% de Salud.",
+      "Tus habilidades Sinister Strike, Ghostly Strike y Hemorrhage infligen un 10% más de daño a objetivos con menos de un 35% de Salud."
+    ],
+    "relentless-strikes": [
+      "Tus remates tienen un 20% de probabilidad por Punto de combo de restaurar 25 de Energía."
+    ],
+    "remorseless-attacks": [
+      "Después de matar a un enemigo no trivial, te otorga un 20% más de probabilidad de golpe crítico en tu siguiente Sinister Strike, Backstab, Ambush, Mutilate o Ghostly Strike. Dura 20 segundos.",
+      "Después de matar a un enemigo no trivial, te otorga un 40% más de probabilidad de golpe crítico en tu siguiente Sinister Strike, Backstab, Ambush, Mutilate o Ghostly Strike. Dura 20 segundos."
+    ],
+    "riposte": [
+      "Un golpe que se activa después de parar el ataque de un oponente. Este ataque inflige un 150% del daño del arma y desarma al objetivo durante 6 segundos."
+    ],
+    "ruthlessness": [
+      "Otorga a tus remates un 20% de probabilidad de añadir un Punto de combo a tu objetivo.",
+      "Otorga a tus remates un 40% de probabilidad de añadir un Punto de combo a tu objetivo.",
+      "Otorga a tus remates un 60% de probabilidad de añadir un Punto de combo a tu objetivo."
+    ],
+    "seal-fate": [
+      "Tus golpes críticos con habilidades que añaden Puntos de combo tienen un 20% de probabilidad de añadir un Punto de combo adicional.",
+      "Tus golpes críticos con habilidades que añaden Puntos de combo tienen un 40% de probabilidad de añadir un Punto de combo adicional.",
+      "Tus golpes críticos con habilidades que añaden Puntos de combo tienen un 60% de probabilidad de añadir un Punto de combo adicional.",
+      "Tus golpes críticos con habilidades que añaden Puntos de combo tienen un 80% de probabilidad de añadir un Punto de combo adicional.",
+      "Tus golpes críticos con habilidades que añaden Puntos de combo tienen un 100% de probabilidad de añadir un Punto de combo adicional."
+    ],
+    "serrated-blades": [
+      "Hace que tus ataques ignoren un 3% de la armadura de tu objetivo y aumenta un 10% el daño infligido por tu habilidad Rupture.",
+      "Hace que tus ataques ignoren un 6% de la armadura de tu objetivo y aumenta un 20% el daño infligido por tu habilidad Rupture.",
+      "Hace que tus ataques ignoren un 9% de la armadura de tu objetivo y aumenta un 30% el daño infligido por tu habilidad Rupture."
+    ],
+    "setup": [
+      "Te otorga un 33% de probabilidad de añadir un Punto de combo a tu objetivo después de esquivar uno de sus ataques o resistir por completo uno de sus hechizos.",
+      "Te otorga un 67% de probabilidad de añadir un Punto de combo a tu objetivo después de esquivar uno de sus ataques o resistir por completo uno de sus hechizos.",
+      "Te otorga un 100% de probabilidad de añadir un Punto de combo a tu objetivo después de esquivar uno de sus ataques o resistir por completo uno de sus hechizos."
+    ],
+    "thousand-cuts": [
+      "Cuando tu habilidad Rupture inflige daño periódico, el coste de Energía de tu siguiente habilidad Hemorrhage o Backstab en los próximos 10 segundos se reduce en 3, acumulable hasta 5 veces."
+    ],
+    "venom": [
+      "Remate que aumenta un 30% el daño de tus venenos y un 10% tu probabilidad de aplicar venenos. Dura más por cada punto de combo:\n 1 punto : 9 segundos\n 2 puntos: 12 segundos\n 3 puntos: 15 segundos\n 4 puntos: 18 segundos\n 5 puntos: 21 segundos"
+    ],
+    "vigor": [
+      "Aumenta en 5 tu Energía máxima.",
+      "Aumenta en 10 tu Energía máxima."
+    ],
+    "vile-poisons": [
+      "Aumenta un 4% el daño infligido por tus venenos y otorga a tus venenos un 8% adicional de probabilidad de resistir los efectos de disipación.",
+      "Aumenta un 8% el daño infligido por tus venenos y otorga a tus venenos un 16% adicional de probabilidad de resistir los efectos de disipación.",
+      "Aumenta un 12% el daño infligido por tus venenos y otorga a tus venenos un 24% adicional de probabilidad de resistir los efectos de disipación.",
+      "Aumenta un 16% el daño infligido por tus venenos y otorga a tus venenos un 32% adicional de probabilidad de resistir los efectos de disipación.",
+      "Aumenta un 20% el daño infligido por tus venenos y otorga a tus venenos un 40% adicional de probabilidad de resistir los efectos de disipación."
+    ],
+    "weapon-expertise": [
+      "Reduce un 1% la probabilidad de que tus ataques sean esquivados o parados.",
+      "Reduce un 2% la probabilidad de que tus ataques sean esquivados o parados."
+    ]
+  }
+}

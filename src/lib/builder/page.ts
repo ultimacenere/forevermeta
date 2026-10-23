@@ -32,6 +32,7 @@ export function raceOptions(locale: Locale, classId: ClassId): RaceOption[] {
     allowed: r.classes.includes(classId),
     isNew: r.newClasses?.includes(classId) ?? false,
     paid: r.paid ?? false,
+    icon: r.icon,
     racials: r.racials.map((x) => ({ name: x.name, kind: x.kind, text: x.text[locale] })),
   }));
 }

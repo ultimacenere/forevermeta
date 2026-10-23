@@ -6415,3 +6415,104 @@ comment on function public.card_vote_totals() is 'Voti, votanti, carte votate e 
 -- perdono, e la pagina francese mostra l'originale con la sua nota; scripts/translate-*.mjs recuperano gli arretrati dopo.
 alter table public.analytics_interest drop constraint if exists analytics_interest_locale_check;
 alter table public.analytics_interest add constraint analytics_interest_locale_check check (locale in ('en', 'it', 'es', 'fr'));
+
+-- =====================================================================================================
+-- ===== 23/10/2026: BUILD PUBBLICATE =====
+-- =====================================================================================================
+-- Build del builder pubblicate dagli iscritti (Pierluigi, 23/10/2026: "attiviamo la pubblicazione delle build sì da
+-- subito"), sul modello dei mazzi della community di OriginsMeta: una riga per build con il codice condivisibile
+-- (FW1.<classe>.<razza>.<livello>.<alberi>), classe, razza e livello già letti dal codice dal sito, la guida in testo
+-- semplice a sezioni (riassunto, piano, punti forti, punti deboli, note) nella lingua dell'autore, lo scopo, lo stato.
+-- Voti 1-5 stelle, uno per iscritto e per build, mai sulla propria. Tetto di 20 build pubblicate per iscritto
+-- (trigger). Le letture pubbliche filtrano su status = 'published'; il proprietario e gli admin vedono anche le nascoste.
+create table if not exists public.community_builds (
+  id uuid primary key default gen_random_uuid(),
+  slug text unique not null check (slug ~ '^[a-z0-9-]{3,80}$'),
+  owner uuid not null references public.profiles(id) on delete cascade,
+  name text not null check (char_length(name) between 3 and 60),
+  class_id text not null check (class_id in ('druid','hunter','mage','paladin','priest','rogue','shaman','warlock','warrior')),
+  race_id text check (race_id in ('human','dwarf','night-elf','gnome','skyborne-high-order','orc','undead','tauren','troll','skyborne-windshaper')),
+  level smallint not null check (level between 10 and 60),
+  code text not null check (code ~ '^FW1\.[a-z]{2}\.[a-z]{2}\.[0-9]{1,2}(\.[0-9]*){3}$'),
+  points smallint not null default 0 check (points between 0 and 51),
+  purpose text not null default 'general' check (purpose in ('general','leveling','dungeon','raid','pvp')),
+  guide_lang text not null default 'en' check (guide_lang in ('en','it','es')),
+  summary text not null check (char_length(summary) between 40 and 600),
+  plan text not null check (char_length(plan) between 100 and 6000),
+  strengths text not null default '' check (char_length(strengths) <= 2000),
+  weaknesses text not null default '' check (char_length(weaknesses) <= 2000),
+  notes text not null default '' check (char_length(notes) <= 3000),
+  game_version text not null default '' check (char_length(game_version) <= 40),
+  status text not null default 'published' check (status in ('published','hidden')),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+create index if not exists community_builds_status_idx on public.community_builds (status, created_at desc);
+create index if not exists community_builds_owner_idx on public.community_builds (owner);
+create index if not exists community_builds_class_idx on public.community_builds (class_id);
+
+drop trigger if exists community_builds_touch on public.community_builds;
+create trigger community_builds_touch before update on public.community_builds
+  for each row execute function public.touch_updated_at();
+
+-- tetto alle build pubblicate per iscritto (il sito lo dice prima con un messaggio; qui il controllo vero)
+create or replace function public.enforce_build_limit()
+returns trigger language plpgsql security definer set search_path = public as $$
+declare n int;
+begin
+  if new.status = 'published' and (tg_op = 'INSERT' or old.status <> 'published') then
+    select count(*) into n from public.community_builds where owner = new.owner and status = 'published' and id <> new.id;
+    if n >= 20 then raise exception 'build limit reached' using errcode = 'check_violation'; end if;
+  end if;
+  return new;
+end $$;
+drop trigger if exists community_builds_limit on public.community_builds;
+create trigger community_builds_limit before insert or update on public.community_builds
+  for each row execute function public.enforce_build_limit();
+
+create table if not exists public.build_votes (
+  build_id uuid not null references public.community_builds(id) on delete cascade,
+  user_id uuid not null references public.profiles(id) on delete cascade,
+  stars smallint not null check (stars between 1 and 5),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  primary key (build_id, user_id)
+);
+drop trigger if exists build_votes_touch on public.build_votes;
+create trigger build_votes_touch before update on public.build_votes
+  for each row execute function public.touch_updated_at();
+
+create or replace view public.build_ratings as
+  select build_id, round(avg(stars)::numeric, 2) as avg_stars, count(*)::int as votes
+  from public.build_votes group by build_id;
+
+alter table public.community_builds enable row level security;
+alter table public.build_votes enable row level security;
+
+drop policy if exists "published builds are public" on public.community_builds;
+create policy "published builds are public" on public.community_builds for select
+  using (status = 'published' or owner = auth.uid() or public.is_admin());
+drop policy if exists "users insert own builds" on public.community_builds;
+create policy "users insert own builds" on public.community_builds for insert
+  with check (owner = auth.uid());
+drop policy if exists "owners update builds" on public.community_builds;
+create policy "owners update builds" on public.community_builds for update
+  using (owner = auth.uid() or public.is_admin()) with check (owner = auth.uid() or public.is_admin());
+drop policy if exists "owners remove builds" on public.community_builds;
+create policy "owners remove builds" on public.community_builds for delete
+  using (owner = auth.uid() or public.is_admin());
+
+drop policy if exists "build votes are public" on public.build_votes;
+create policy "build votes are public" on public.build_votes for select using (true);
+drop policy if exists "users vote builds once" on public.build_votes;
+create policy "users vote builds once" on public.build_votes for insert
+  with check (user_id = auth.uid() and not exists (select 1 from public.community_builds b where b.id = build_id and b.owner = auth.uid()));
+drop policy if exists "users change own build vote" on public.build_votes;
+create policy "users change own build vote" on public.build_votes for update
+  using (user_id = auth.uid())
+  with check (user_id = auth.uid() and not exists (select 1 from public.community_builds b where b.id = build_id and b.owner = auth.uid()));
+drop policy if exists "users remove own build vote" on public.build_votes;
+create policy "users remove own build vote" on public.build_votes for delete using (user_id = auth.uid());
+
+grant select on public.community_builds, public.build_votes, public.build_ratings to anon, authenticated;
+grant insert, update, delete on public.community_builds, public.build_votes to authenticated;

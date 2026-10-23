@@ -1,0 +1,510 @@
+{
+  "it": {
+    "binding-heal": [
+      "Cura un bersaglio alleato e l'incantatore da 236 a 284. Bassa minaccia."
+    ],
+    "blackout": [
+      "Dà ai tuoi incantesimi da danno d'Ombra il 2% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà ai tuoi incantesimi da danno d'Ombra il 4% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà ai tuoi incantesimi da danno d'Ombra il 6% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà ai tuoi incantesimi da danno d'Ombra l'8% di probabilità di stordire il bersaglio per 3 secondi.",
+      "Dà ai tuoi incantesimi da danno d'Ombra il 10% di probabilità di stordire il bersaglio per 3 secondi."
+    ],
+    "blessed-recovery": [
+      "Dopo aver subito un colpo critico in mischia o a distanza, o più del 30% della tua Salute massima da un singolo attacco, curi l'8% dei danni subiti nell'arco di 6 secondi. Rinnovare questo effetto trasferisce le cure rimanenti.",
+      "Dopo aver subito un colpo critico in mischia o a distanza, o più del 30% della tua Salute massima da un singolo attacco, curi il 17% dei danni subiti nell'arco di 6 secondi. Rinnovare questo effetto trasferisce le cure rimanenti.",
+      "Dopo aver subito un colpo critico in mischia o a distanza, o più del 30% della tua Salute massima da un singolo attacco, curi il 25% dei danni subiti nell'arco di 6 secondi. Rinnovare questo effetto trasferisce le cure rimanenti."
+    ],
+    "dark-inspiration": [
+      "Il tuo Mind Blast e un Mind Flay incanalato per intero provocano Dark Inspiration, aumentando lo Spirito tuo e del tuo gruppo del 3% per 10 secondi.",
+      "Il tuo Mind Blast e un Mind Flay incanalato per intero provocano Dark Inspiration, aumentando lo Spirito tuo e del tuo gruppo del 6% per 10 secondi.",
+      "Il tuo Mind Blast e un Mind Flay incanalato per intero provocano Dark Inspiration, aumentando lo Spirito tuo e del tuo gruppo del 9% per 10 secondi.",
+      "Il tuo Mind Blast e un Mind Flay incanalato per intero provocano Dark Inspiration, aumentando lo Spirito tuo e del tuo gruppo del 12% per 10 secondi.",
+      "Il tuo Mind Blast e un Mind Flay incanalato per intero provocano Dark Inspiration, aumentando lo Spirito tuo e del tuo gruppo del 15% per 10 secondi."
+    ],
+    "darkness": [
+      "Aumenta i danni d'Ombra che infliggi del 2%.",
+      "Aumenta i danni d'Ombra che infliggi del 4%.",
+      "Aumenta i danni d'Ombra che infliggi del 6%.",
+      "Aumenta i danni d'Ombra che infliggi dell'8%.",
+      "Aumenta i danni d'Ombra che infliggi del 10%."
+    ],
+    "devouring-contagion": [
+      "Riduce il costo in mana del tuo Devouring Plague del 25%.\n\nI bersagli che muoiono mentre Devouring Plague è attivo lo diffondono, facendolo saltare a 2 nemici vicini entro 5 metri per la durata rimanente.",
+      "Riduce il costo in mana del tuo Devouring Plague del 50%.\n\nI bersagli che muoiono mentre Devouring Plague è attivo lo diffondono, facendolo saltare a 2 nemici vicini entro 10 metri per la durata rimanente."
+    ],
+    "divine-aegis": [
+      "Le tue cure critiche non periodiche creano uno scudo protettivo sul bersaglio, che assorbe il 5% della quantità curata. Lo scudo assorbe fino a 1,200 danni e dura 12 secondi.",
+      "Le tue cure critiche non periodiche creano uno scudo protettivo sul bersaglio, che assorbe il 10% della quantità curata. Lo scudo assorbe fino a 1,200 danni e dura 12 secondi.",
+      "Le tue cure critiche non periodiche creano uno scudo protettivo sul bersaglio, che assorbe il 15% della quantità curata. Lo scudo assorbe fino a 1,200 danni e dura 12 secondi."
+    ],
+    "divine-fury": [
+      "Riduce il tempo di lancio dei tuoi incantesimi Smite, Holy Fire, Heal e Greater Heal di 0.1 secondi.",
+      "Riduce il tempo di lancio dei tuoi incantesimi Smite, Holy Fire, Heal e Greater Heal di 0.2 secondi.",
+      "Riduce il tempo di lancio dei tuoi incantesimi Smite, Holy Fire, Heal e Greater Heal di 0.3 secondi.",
+      "Riduce il tempo di lancio dei tuoi incantesimi Smite, Holy Fire, Heal e Greater Heal di 0.4 secondi.",
+      "Riduce il tempo di lancio dei tuoi incantesimi Smite, Holy Fire, Heal e Greater Heal di 0.5 secondi."
+    ],
+    "early-demise": [
+      "Aumenta la probabilità di colpo critico di Shadow Word: Death sui bersagli con il 20% di salute o meno del 15%.",
+      "Aumenta la probabilità di colpo critico di Shadow Word: Death sui bersagli con il 20% di salute o meno del 30%."
+    ],
+    "holy-nova": [
+      "Provoca un'esplosione di luce sacra attorno all'incantatore, infliggendo da 26 a 30 danni Sacri a tutti i bersagli nemici entro 10 metri e curando tutti i membri del gruppo entro 10 metri per un valore da 49 a 57. Questi effetti non generano minaccia."
+    ],
+    "holy-precision": [
+      "Aumenta la tua probabilità di colpire con gli incantesimi Sacri del 6%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi Sacri del 12%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi Sacri del 18%."
+    ],
+    "holy-reach": [
+      "Aumenta la gittata dei tuoi incantesimi Smite e Holy Fire e il raggio dei tuoi incantesimi Prayer of Healing e Holy Nova del 10%.",
+      "Aumenta la gittata dei tuoi incantesimi Smite e Holy Fire e il raggio dei tuoi incantesimi Prayer of Healing e Holy Nova del 20%."
+    ],
+    "holy-specialization": [
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi Sacri dell'1%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi Sacri del 2%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi Sacri del 3%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi Sacri del 4%.",
+      "Aumenta la probabilità di effetto critico dei tuoi incantesimi Sacri del 5%."
+    ],
+    "improved-healing": [
+      "Riduce il costo in Mana dei tuoi incantesimi Lesser Heal, Heal, Greater Heal, Penance e Prayer of Mending del 5%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Lesser Heal, Heal, Greater Heal, Penance e Prayer of Mending del 10%.",
+      "Riduce il costo in Mana dei tuoi incantesimi Lesser Heal, Heal, Greater Heal, Penance e Prayer of Mending del 15%."
+    ],
+    "improved-inner-fire": [
+      "Aumenta il bonus all'armatura del tuo incantesimo Inner Fire del 15% e aumenta le sue cariche totali di 4.",
+      "Aumenta il bonus all'armatura del tuo incantesimo Inner Fire del 30% e aumenta le sue cariche totali di 8.",
+      "Aumenta il bonus all'armatura del tuo incantesimo Inner Fire del 45% e aumenta le sue cariche totali di 12."
+    ],
+    "improved-mana-burn": [
+      "Riduce il tempo di lancio del tuo incantesimo Mana Burn di 0.5 secondi.",
+      "Riduce il tempo di lancio del tuo incantesimo Mana Burn di 1.0 secondi."
+    ],
+    "improved-mind-blast": [
+      "Riduce il tempo di ricarica del tuo incantesimo Mind Blast di 0.5 secondi.",
+      "Riduce il tempo di ricarica del tuo incantesimo Mind Blast di 1 secondo.",
+      "Riduce il tempo di ricarica del tuo incantesimo Mind Blast di 1.5 secondi.",
+      "Riduce il tempo di ricarica del tuo incantesimo Mind Blast di 2 secondi.",
+      "Riduce il tempo di ricarica del tuo incantesimo Mind Blast di 2.5 secondi."
+    ],
+    "improved-mind-flay": [
+      "Ogni istanza di danno di Mind Flay infligge il 10% di danni in più rispetto alla sua istanza di danno precedente.",
+      "Ogni istanza di danno di Mind Flay infligge il 20% di danni in più rispetto alla sua istanza di danno precedente."
+    ],
+    "improved-power-word-shield": [
+      "Aumenta i danni assorbiti dal tuo Power Word: Shield del 7%.",
+      "Aumenta i danni assorbiti dal tuo Power Word: Shield del 14%.",
+      "Aumenta i danni assorbiti dal tuo Power Word: Shield del 20%."
+    ],
+    "improved-psychic-scream": [
+      "Riduce il tempo di ricarica del tuo incantesimo Psychic Scream di 2 secondi.",
+      "Riduce il tempo di ricarica del tuo incantesimo Psychic Scream di 4 secondi."
+    ],
+    "improved-renew": [
+      "Aumenta la quantità curata dal tuo incantesimo Renew del 5%.",
+      "Aumenta la quantità curata dal tuo incantesimo Renew del 10%.",
+      "Aumenta la quantità curata dal tuo incantesimo Renew del 15%."
+    ],
+    "improved-shadow-word-pain": [
+      "Aumenta la durata del tuo incantesimo Shadow Word: Pain di 3 secondi.",
+      "Aumenta la durata del tuo incantesimo Shadow Word: Pain di 6 secondi."
+    ],
+    "inner-focus": [
+      "Quando viene attivato, riduce il costo in Mana del tuo prossimo incantesimo del 100% e aumenta la sua probabilità di effetto critico del 25% se è un incantesimo non periodico e in grado di avere un effetto critico."
+    ],
+    "inspiration": [
+      "Le tue cure critiche non periodiche aumentano l'armatura del tuo bersaglio dell'8% per 15 secondi.",
+      "Le tue cure critiche non periodiche aumentano l'armatura del tuo bersaglio del 17% per 15 secondi.",
+      "Le tue cure critiche non periodiche aumentano l'armatura del tuo bersaglio del 25% per 15 secondi."
+    ],
+    "litany-of-light": [
+      "Quando lanci un incantesimo di cura, ottieni Mana pari al 5% del costo base dell'incantesimo se la tua cura precedente era un incantesimo diverso.",
+      "Quando lanci un incantesimo di cura, ottieni Mana pari al 10% del costo base dell'incantesimo se la tua cura precedente era un incantesimo diverso."
+    ],
+    "martyrdom": [
+      "Ti dà il 50% di probabilità di ottenere Focused Casting per 6 secondi dopo aver subito un colpo critico in mischia o a distanza. L'effetto Focused Casting ti impedisce di perdere tempo di lancio quando subisci danni e aumenta la tua resistenza agli effetti di interruzione del 20%.",
+      "Ti dà il 100% di probabilità di ottenere Focused Casting per 6 secondi dopo aver subito un colpo critico in mischia o a distanza. L'effetto Focused Casting ti impedisce di perdere tempo di lancio quando subisci danni e aumenta la tua resistenza agli effetti di interruzione del 20%."
+    ],
+    "meditation": [
+      "Permette al 17% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 33% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi."
+    ],
+    "mental-agility": [
+      "Riduce il costo in mana di Smite, Holy Fire e dei tuoi incantesimi istantanei del 3%.",
+      "Riduce il costo in mana di Smite, Holy Fire e dei tuoi incantesimi istantanei del 7%.",
+      "Riduce il costo in mana di Smite, Holy Fire e dei tuoi incantesimi istantanei del 10%."
+    ],
+    "mental-strength": [
+      "Aumenta il tuo Intelletto totale del 2%.",
+      "Aumenta il tuo Intelletto totale del 4%.",
+      "Aumenta il tuo Intelletto totale del 6%.",
+      "Aumenta il tuo Intelletto totale dell'8%.",
+      "Aumenta il tuo Intelletto totale del 10%."
+    ],
+    "mind-flay": [
+      "Assale la mente del bersaglio con energia d'Ombra, infliggendo 63 danni d'Ombra in 3 secondi e rallentando la sua velocità di movimento del 50%."
+    ],
+    "penance": [
+      "Scaglia una raffica di luce sacra sul bersaglio, infliggendo 44 danni Sacri a un nemico, oppure curando un alleato di 133, all'istante e ogni 1 secondo per 2 secondi."
+    ],
+    "power-in-light": [
+      "I tuoi incantesimi Smite e Penance infliggono il 2% di danni in più ai bersagli afflitti dal tuo Holy Fire o dal tuo Shadow Word: Pain.",
+      "I tuoi incantesimi Smite e Penance infliggono il 4% di danni in più ai bersagli afflitti dal tuo Holy Fire o dal tuo Shadow Word: Pain.",
+      "I tuoi incantesimi Smite e Penance infliggono il 6% di danni in più ai bersagli afflitti dal tuo Holy Fire o dal tuo Shadow Word: Pain.",
+      "I tuoi incantesimi Smite e Penance infliggono l'8% di danni in più ai bersagli afflitti dal tuo Holy Fire o dal tuo Shadow Word: Pain.",
+      "I tuoi incantesimi Smite e Penance infliggono il 10% di danni in più ai bersagli afflitti dal tuo Holy Fire o dal tuo Shadow Word: Pain."
+    ],
+    "power-infusion": [
+      "Infonde potere nel bersaglio, aumentando i suoi danni da incantesimo e le cure effettuate del 20% per 15 secondi."
+    ],
+    "prayer-of-mending": [
+      "Pone sul bersaglio un incantesimo che lo cura di 172 la prossima volta che subisce danni o riceve cure non periodiche. Quando la cura avviene, Prayer of Mending salta a un membro del gruppo o dell'incursione entro 20 metri. Salta fino a 5 volte e dura 30 secondi dopo ogni salto. Questo incantesimo può essere posto su un solo bersaglio alla volta per incantatore."
+    ],
+    "renewed-hope": [
+      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 2% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 1 secondo.",
+      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 4% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 2 secondi.",
+      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 6% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 3 secondi.",
+      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono l'8% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 4 secondi.",
+      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 10% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 5 secondi."
+    ],
+    "searing-light": [
+      "Aumenta i danni Sacri che infliggi del 2% e dà il 5% di probabilità, ogni volta che il tuo incantesimo Holy Fire infligge danni periodici, che il tuo prossimo Holy Nova non costi Mana.",
+      "Aumenta i danni Sacri che infliggi del 5% e dà il 10% di probabilità, ogni volta che il tuo incantesimo Holy Fire infligge danni periodici, che il tuo prossimo Holy Nova non costi Mana."
+    ],
+    "shadow-focus": [
+      "Aumenta la tua probabilità di colpire con gli incantesimi d'Ombra dell'1%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi d'Ombra del 2%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi d'Ombra del 3%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi d'Ombra del 4%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi d'Ombra del 5%."
+    ],
+    "shadow-reach": [
+      "Aumenta la gittata dei tuoi incantesimi d'Ombra offensivi del 10%.",
+      "Aumenta la gittata dei tuoi incantesimi d'Ombra offensivi del 20%."
+    ],
+    "shadow-weaving": [
+      "I tuoi incantesimi da danno d'Ombra hanno il 33% di probabilità di aumentare i danni d'Ombra che il bersaglio subisce da te del 2% per 15 secondi, accumulabile fino a 5 volte.",
+      "I tuoi incantesimi da danno d'Ombra hanno il 67% di probabilità di aumentare i danni d'Ombra che il bersaglio subisce da te del 2% per 15 secondi, accumulabile fino a 5 volte.",
+      "I tuoi incantesimi da danno d'Ombra hanno il 100% di probabilità di aumentare i danni d'Ombra che il bersaglio subisce da te del 2% per 15 secondi, accumulabile fino a 5 volte."
+    ],
+    "shadowform": [
+      "Assumi la Shadowform, aumentando i tuoi danni d'Ombra del 10%, riducendo il costo in Mana di tutti gli incantesimi d'Ombra del 50%, aumentando il bonus ai danni critici dei tuoi incantesimi d'Ombra del 100% e riducendo i danni Fisici che subisci del 15%. Tuttavia, in questa forma non puoi lanciare incantesimi di cura."
+    ],
+    "silence": [
+      "Silenzia il bersaglio, impedendogli di lanciare incantesimi per 5 secondi e interrompendo i suoi lanci di incantesimi per 3 secondi."
+    ],
+    "silent-resolve": [
+      "Riduce la minaccia generata dai tuoi incantesimi del 10% e riduce la durata degli effetti di stordimento, paura e silenzio inflitti su di te del 5%.",
+      "Riduce la minaccia generata dai tuoi incantesimi del 20% e riduce la durata degli effetti di stordimento, paura e silenzio inflitti su di te del 10%.",
+      "Riduce la minaccia generata dai tuoi incantesimi del 30% e riduce la durata degli effetti di stordimento, paura e silenzio inflitti su di te del 15%."
+    ],
+    "soul-warding": [
+      "Riduce il tempo di ricarica del tuo incantesimo Power Word: Shield di 4 secondi e riduce il suo costo in mana del 15%."
+    ],
+    "spell-warding": [
+      "Riduce tutti i danni da incantesimo subiti del 2%.",
+      "Riduce tutti i danni da incantesimo subiti del 4%.",
+      "Riduce tutti i danni da incantesimo subiti del 6%.",
+      "Riduce tutti i danni da incantesimo subiti dell'8%.",
+      "Riduce tutti i danni da incantesimo subiti del 10%."
+    ],
+    "spirit-of-redemption": [
+      "Alla morte, il sacerdote diventa Spirit of Redemption per 15 secondi. Lo Spirit of Redemption non può muoversi, attaccare, essere attaccato né essere bersaglio di alcun incantesimo o effetto. In questa forma il sacerdote può lanciare qualsiasi incantesimo di cura senza alcun costo. Quando l'effetto termina, il sacerdote muore."
+    ],
+    "spirit-tap": [
+      "Ti dà il 20% di probabilità di aumentare il tuo Spirito del 100% per 15 secondi dopo aver ucciso un bersaglio non banale o quando muore un nemico afflitto dal tuo Vampiric Embrace. Per la durata dell'effetto, il 50% della tua rigenerazione di Mana continuerà mentre lanci incantesimi.",
+      "Ti dà il 40% di probabilità di aumentare il tuo Spirito del 100% per 15 secondi dopo aver ucciso un bersaglio non banale o quando muore un nemico afflitto dal tuo Vampiric Embrace. Per la durata dell'effetto, il 50% della tua rigenerazione di Mana continuerà mentre lanci incantesimi.",
+      "Ti dà il 60% di probabilità di aumentare il tuo Spirito del 100% per 15 secondi dopo aver ucciso un bersaglio non banale o quando muore un nemico afflitto dal tuo Vampiric Embrace. Per la durata dell'effetto, il 50% della tua rigenerazione di Mana continuerà mentre lanci incantesimi.",
+      "Ti dà l'80% di probabilità di aumentare il tuo Spirito del 100% per 15 secondi dopo aver ucciso un bersaglio non banale o quando muore un nemico afflitto dal tuo Vampiric Embrace. Per la durata dell'effetto, il 50% della tua rigenerazione di Mana continuerà mentre lanci incantesimi.",
+      "Ti dà il 100% di probabilità di aumentare il tuo Spirito del 100% per 15 secondi dopo aver ucciso un bersaglio non banale o quando muore un nemico afflitto dal tuo Vampiric Embrace. Per la durata dell'effetto, il 50% della tua rigenerazione di Mana continuerà mentre lanci incantesimi."
+    ],
+    "spiritual-guidance": [
+      "Aumenta le tue cure da incantesimo fino al 5% del tuo Spirito totale e i tuoi danni da incantesimo fino all'1% del tuo Spirito totale.",
+      "Aumenta le tue cure da incantesimo fino al 10% del tuo Spirito totale e i tuoi danni da incantesimo fino al 3% del tuo Spirito totale.",
+      "Aumenta le tue cure da incantesimo fino al 15% del tuo Spirito totale e i tuoi danni da incantesimo fino al 5% del tuo Spirito totale.",
+      "Aumenta le tue cure da incantesimo fino al 20% del tuo Spirito totale e i tuoi danni da incantesimo fino al 6% del tuo Spirito totale.",
+      "Aumenta le tue cure da incantesimo fino al 25% del tuo Spirito totale e i tuoi danni da incantesimo fino all'8% del tuo Spirito totale."
+    ],
+    "spiritual-healing": [
+      "Aumenta la quantità curata dai tuoi incantesimi del 3%.",
+      "Aumenta la quantità curata dai tuoi incantesimi del 7%.",
+      "Aumenta la quantità curata dai tuoi incantesimi del 10%."
+    ],
+    "twilight-focus": [
+      "Ti dà il 23% di probabilità di evitare l'interruzione causata dai danni mentre lanci qualsiasi incantesimo.",
+      "Ti dà il 47% di probabilità di evitare l'interruzione causata dai danni mentre lanci qualsiasi incantesimo.",
+      "Ti dà il 70% di probabilità di evitare l'interruzione causata dai danni mentre lanci qualsiasi incantesimo."
+    ],
+    "twin-disciplines": [
+      "Aumenta i danni e le cure dei tuoi incantesimi istantanei dell'1%.",
+      "Aumenta i danni e le cure dei tuoi incantesimi istantanei del 2%.",
+      "Aumenta i danni e le cure dei tuoi incantesimi istantanei del 3%.",
+      "Aumenta i danni e le cure dei tuoi incantesimi istantanei del 4%.",
+      "Aumenta i danni e le cure dei tuoi incantesimi istantanei del 5%."
+    ],
+    "vampiric-embrace": [
+      "Affligge il tuo bersaglio con energia d'Ombra che fa curare tutti i membri del gruppo del 20% di tutti i danni da incantesimo d'Ombra che infliggi, per 30 secondi."
+    ],
+    "wand-specialization": [
+      "Aumenta i tuoi danni con le bacchette del 13%.",
+      "Aumenta i tuoi danni con le bacchette del 25%."
+    ]
+  },
+  "es": {
+    "binding-heal": [
+      "Sana a un objetivo aliado y al lanzador de 236 a 284. Amenaza baja."
+    ],
+    "blackout": [
+      "Da a tus hechizos de daño de las Sombras un 2% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Da a tus hechizos de daño de las Sombras un 4% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Da a tus hechizos de daño de las Sombras un 6% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Da a tus hechizos de daño de las Sombras un 8% de probabilidad de aturdir al objetivo durante 3 segundos.",
+      "Da a tus hechizos de daño de las Sombras un 10% de probabilidad de aturdir al objetivo durante 3 segundos."
+    ],
+    "blessed-recovery": [
+      "Tras recibir un golpe crítico cuerpo a cuerpo o a distancia, o sufrir más del 30% de tu Salud máxima por un solo ataque, sanas el 8% del daño recibido durante 6 segundos. Renovar este efecto conserva la sanación restante.",
+      "Tras recibir un golpe crítico cuerpo a cuerpo o a distancia, o sufrir más del 30% de tu Salud máxima por un solo ataque, sanas el 17% del daño recibido durante 6 segundos. Renovar este efecto conserva la sanación restante.",
+      "Tras recibir un golpe crítico cuerpo a cuerpo o a distancia, o sufrir más del 30% de tu Salud máxima por un solo ataque, sanas el 25% del daño recibido durante 6 segundos. Renovar este efecto conserva la sanación restante."
+    ],
+    "dark-inspiration": [
+      "Tu Mind Blast y un Mind Flay canalizado por completo provocan Dark Inspiration, lo que aumenta tu Espíritu y el de tu grupo un 3% durante 10 segundos.",
+      "Tu Mind Blast y un Mind Flay canalizado por completo provocan Dark Inspiration, lo que aumenta tu Espíritu y el de tu grupo un 6% durante 10 segundos.",
+      "Tu Mind Blast y un Mind Flay canalizado por completo provocan Dark Inspiration, lo que aumenta tu Espíritu y el de tu grupo un 9% durante 10 segundos.",
+      "Tu Mind Blast y un Mind Flay canalizado por completo provocan Dark Inspiration, lo que aumenta tu Espíritu y el de tu grupo un 12% durante 10 segundos.",
+      "Tu Mind Blast y un Mind Flay canalizado por completo provocan Dark Inspiration, lo que aumenta tu Espíritu y el de tu grupo un 15% durante 10 segundos."
+    ],
+    "darkness": [
+      "Aumenta el daño de las Sombras que infliges un 2%.",
+      "Aumenta el daño de las Sombras que infliges un 4%.",
+      "Aumenta el daño de las Sombras que infliges un 6%.",
+      "Aumenta el daño de las Sombras que infliges un 8%.",
+      "Aumenta el daño de las Sombras que infliges un 10%."
+    ],
+    "devouring-contagion": [
+      "Reduce el coste de maná de tu Devouring Plague un 25%.\n\nLos objetivos que mueren mientras Devouring Plague está activo lo propagan, y salta a 2 enemigos cercanos en un radio de 5 metros durante la duración restante.",
+      "Reduce el coste de maná de tu Devouring Plague un 50%.\n\nLos objetivos que mueren mientras Devouring Plague está activo lo propagan, y salta a 2 enemigos cercanos en un radio de 10 metros durante la duración restante."
+    ],
+    "divine-aegis": [
+      "Tus sanaciones críticas no periódicas crean un escudo protector sobre el objetivo que absorbe el 5% de la cantidad sanada. El escudo absorbe hasta 1,200 de daño y dura 12 segundos.",
+      "Tus sanaciones críticas no periódicas crean un escudo protector sobre el objetivo que absorbe el 10% de la cantidad sanada. El escudo absorbe hasta 1,200 de daño y dura 12 segundos.",
+      "Tus sanaciones críticas no periódicas crean un escudo protector sobre el objetivo que absorbe el 15% de la cantidad sanada. El escudo absorbe hasta 1,200 de daño y dura 12 segundos."
+    ],
+    "divine-fury": [
+      "Reduce el tiempo de lanzamiento de tus hechizos Smite, Holy Fire, Heal y Greater Heal en 0.1 segundos.",
+      "Reduce el tiempo de lanzamiento de tus hechizos Smite, Holy Fire, Heal y Greater Heal en 0.2 segundos.",
+      "Reduce el tiempo de lanzamiento de tus hechizos Smite, Holy Fire, Heal y Greater Heal en 0.3 segundos.",
+      "Reduce el tiempo de lanzamiento de tus hechizos Smite, Holy Fire, Heal y Greater Heal en 0.4 segundos.",
+      "Reduce el tiempo de lanzamiento de tus hechizos Smite, Holy Fire, Heal y Greater Heal en 0.5 segundos."
+    ],
+    "early-demise": [
+      "Aumenta la probabilidad de golpe crítico de Shadow Word: Death contra objetivos con un 20% de salud o menos un 15%.",
+      "Aumenta la probabilidad de golpe crítico de Shadow Word: Death contra objetivos con un 20% de salud o menos un 30%."
+    ],
+    "holy-nova": [
+      "Provoca una explosión de luz sagrada alrededor del lanzador, que inflige de 26 a 30 de daño Sagrado a todos los objetivos enemigos en un radio de 10 metros y sana a todos los miembros del grupo en un radio de 10 metros de 49 a 57. Estos efectos no generan amenaza."
+    ],
+    "holy-precision": [
+      "Aumenta tu probabilidad de golpear con hechizos Sagrados un 6%.",
+      "Aumenta tu probabilidad de golpear con hechizos Sagrados un 12%.",
+      "Aumenta tu probabilidad de golpear con hechizos Sagrados un 18%."
+    ],
+    "holy-reach": [
+      "Aumenta el alcance de tus hechizos Smite y Holy Fire y el radio de tus hechizos Prayer of Healing y Holy Nova un 10%.",
+      "Aumenta el alcance de tus hechizos Smite y Holy Fire y el radio de tus hechizos Prayer of Healing y Holy Nova un 20%."
+    ],
+    "holy-specialization": [
+      "Aumenta la probabilidad de efecto crítico de tus hechizos Sagrados un 1%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos Sagrados un 2%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos Sagrados un 3%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos Sagrados un 4%.",
+      "Aumenta la probabilidad de efecto crítico de tus hechizos Sagrados un 5%."
+    ],
+    "improved-healing": [
+      "Reduce el coste de Maná de tus hechizos Lesser Heal, Heal, Greater Heal, Penance y Prayer of Mending un 5%.",
+      "Reduce el coste de Maná de tus hechizos Lesser Heal, Heal, Greater Heal, Penance y Prayer of Mending un 10%.",
+      "Reduce el coste de Maná de tus hechizos Lesser Heal, Heal, Greater Heal, Penance y Prayer of Mending un 15%."
+    ],
+    "improved-inner-fire": [
+      "Aumenta la bonificación de armadura de tu hechizo Inner Fire un 15% y aumenta sus cargas totales en 4.",
+      "Aumenta la bonificación de armadura de tu hechizo Inner Fire un 30% y aumenta sus cargas totales en 8.",
+      "Aumenta la bonificación de armadura de tu hechizo Inner Fire un 45% y aumenta sus cargas totales en 12."
+    ],
+    "improved-mana-burn": [
+      "Reduce el tiempo de lanzamiento de tu hechizo Mana Burn en 0.5 segundos.",
+      "Reduce el tiempo de lanzamiento de tu hechizo Mana Burn en 1.0 segundos."
+    ],
+    "improved-mind-blast": [
+      "Reduce el tiempo de reutilización de tu hechizo Mind Blast en 0.5 segundos.",
+      "Reduce el tiempo de reutilización de tu hechizo Mind Blast en 1 segundo.",
+      "Reduce el tiempo de reutilización de tu hechizo Mind Blast en 1.5 segundos.",
+      "Reduce el tiempo de reutilización de tu hechizo Mind Blast en 2 segundos.",
+      "Reduce el tiempo de reutilización de tu hechizo Mind Blast en 2.5 segundos."
+    ],
+    "improved-mind-flay": [
+      "Cada instancia de daño de Mind Flay inflige un 10% más de daño que su instancia de daño anterior.",
+      "Cada instancia de daño de Mind Flay inflige un 20% más de daño que su instancia de daño anterior."
+    ],
+    "improved-power-word-shield": [
+      "Aumenta el daño absorbido por tu Power Word: Shield un 7%.",
+      "Aumenta el daño absorbido por tu Power Word: Shield un 14%.",
+      "Aumenta el daño absorbido por tu Power Word: Shield un 20%."
+    ],
+    "improved-psychic-scream": [
+      "Reduce el tiempo de reutilización de tu hechizo Psychic Scream en 2 segundos.",
+      "Reduce el tiempo de reutilización de tu hechizo Psychic Scream en 4 segundos."
+    ],
+    "improved-renew": [
+      "Aumenta la cantidad sanada por tu hechizo Renew un 5%.",
+      "Aumenta la cantidad sanada por tu hechizo Renew un 10%.",
+      "Aumenta la cantidad sanada por tu hechizo Renew un 15%."
+    ],
+    "improved-shadow-word-pain": [
+      "Aumenta la duración de tu hechizo Shadow Word: Pain en 3 segundos.",
+      "Aumenta la duración de tu hechizo Shadow Word: Pain en 6 segundos."
+    ],
+    "inner-focus": [
+      "Al activarse, reduce el coste de Maná de tu siguiente hechizo un 100% y aumenta su probabilidad de efecto crítico un 25% si es un hechizo no periódico y capaz de tener un efecto crítico."
+    ],
+    "inspiration": [
+      "Tus sanaciones críticas no periódicas aumentan la armadura de tu objetivo un 8% durante 15 segundos.",
+      "Tus sanaciones críticas no periódicas aumentan la armadura de tu objetivo un 17% durante 15 segundos.",
+      "Tus sanaciones críticas no periódicas aumentan la armadura de tu objetivo un 25% durante 15 segundos."
+    ],
+    "litany-of-light": [
+      "Cuando lanzas un hechizo de sanación, obtienes Maná equivalente al 5% del coste base del hechizo si tu sanación anterior fue un hechizo distinto.",
+      "Cuando lanzas un hechizo de sanación, obtienes Maná equivalente al 10% del coste base del hechizo si tu sanación anterior fue un hechizo distinto."
+    ],
+    "martyrdom": [
+      "Te da un 50% de probabilidad de obtener Focused Casting durante 6 segundos tras ser víctima de un golpe crítico cuerpo a cuerpo o a distancia. El efecto Focused Casting evita que pierdas tiempo de lanzamiento al recibir daño y aumenta tu resistencia a los efectos de interrupción un 20%.",
+      "Te da un 100% de probabilidad de obtener Focused Casting durante 6 segundos tras ser víctima de un golpe crítico cuerpo a cuerpo o a distancia. El efecto Focused Casting evita que pierdas tiempo de lanzamiento al recibir daño y aumenta tu resistencia a los efectos de interrupción un 20%."
+    ],
+    "meditation": [
+      "Permite que el 17% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que el 33% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que el 50% de tu regeneración de Maná continúe mientras lanzas hechizos."
+    ],
+    "mental-agility": [
+      "Reduce el coste de maná de Smite, Holy Fire y tus hechizos instantáneos un 3%.",
+      "Reduce el coste de maná de Smite, Holy Fire y tus hechizos instantáneos un 7%.",
+      "Reduce el coste de maná de Smite, Holy Fire y tus hechizos instantáneos un 10%."
+    ],
+    "mental-strength": [
+      "Aumenta tu Intelecto total un 2%.",
+      "Aumenta tu Intelecto total un 4%.",
+      "Aumenta tu Intelecto total un 6%.",
+      "Aumenta tu Intelecto total un 8%.",
+      "Aumenta tu Intelecto total un 10%."
+    ],
+    "mind-flay": [
+      "Asalta la mente del objetivo con energía de las Sombras, lo que inflige 63 de daño de las Sombras durante 3 segundos y ralentiza su velocidad de movimiento un 50%."
+    ],
+    "penance": [
+      "Lanza una ráfaga de luz sagrada contra el objetivo, que inflige 44 de daño Sagrado a un enemigo o sana 133 a un aliado, al instante y cada 1 segundo durante 2 segundos."
+    ],
+    "power-in-light": [
+      "Tus hechizos Smite y Penance infligen un 2% más de daño a los objetivos afectados por tu Holy Fire o tu Shadow Word: Pain.",
+      "Tus hechizos Smite y Penance infligen un 4% más de daño a los objetivos afectados por tu Holy Fire o tu Shadow Word: Pain.",
+      "Tus hechizos Smite y Penance infligen un 6% más de daño a los objetivos afectados por tu Holy Fire o tu Shadow Word: Pain.",
+      "Tus hechizos Smite y Penance infligen un 8% más de daño a los objetivos afectados por tu Holy Fire o tu Shadow Word: Pain.",
+      "Tus hechizos Smite y Penance infligen un 10% más de daño a los objetivos afectados por tu Holy Fire o tu Shadow Word: Pain."
+    ],
+    "power-infusion": [
+      "Infunde poder al objetivo, lo que aumenta su daño de hechizos y la sanación que realiza un 20% durante 15 segundos."
+    ],
+    "prayer-of-mending": [
+      "Coloca en el objetivo un hechizo que lo sana 172 la próxima vez que reciba daño o sanación no periódica. Cuando se produce la sanación, Prayer of Mending salta a un miembro del grupo o de la banda en un radio de 20 metros. Salta hasta 5 veces y dura 30 segundos después de cada salto. Este hechizo solo puede colocarse en un objetivo a la vez por lanzador."
+    ],
+    "renewed-hope": [
+      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 2% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 1 segundo.",
+      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 4% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 2 segundos.",
+      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 6% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 3 segundos.",
+      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 8% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 4 segundos.",
+      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 10% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 5 segundos."
+    ],
+    "searing-light": [
+      "Aumenta el daño Sagrado que infliges un 2% y da un 5% de probabilidad, cada vez que tu hechizo Holy Fire inflige daño periódico, de que tu siguiente Holy Nova no cueste Maná.",
+      "Aumenta el daño Sagrado que infliges un 5% y da un 10% de probabilidad, cada vez que tu hechizo Holy Fire inflige daño periódico, de que tu siguiente Holy Nova no cueste Maná."
+    ],
+    "shadow-focus": [
+      "Aumenta tu probabilidad de golpear con hechizos de las Sombras un 1%.",
+      "Aumenta tu probabilidad de golpear con hechizos de las Sombras un 2%.",
+      "Aumenta tu probabilidad de golpear con hechizos de las Sombras un 3%.",
+      "Aumenta tu probabilidad de golpear con hechizos de las Sombras un 4%.",
+      "Aumenta tu probabilidad de golpear con hechizos de las Sombras un 5%."
+    ],
+    "shadow-reach": [
+      "Aumenta el alcance de tus hechizos ofensivos de las Sombras un 10%.",
+      "Aumenta el alcance de tus hechizos ofensivos de las Sombras un 20%."
+    ],
+    "shadow-weaving": [
+      "Tus hechizos de daño de las Sombras tienen un 33% de probabilidad de aumentar el daño de las Sombras que el objetivo recibe de ti un 2% durante 15 segundos, acumulable hasta 5 veces.",
+      "Tus hechizos de daño de las Sombras tienen un 67% de probabilidad de aumentar el daño de las Sombras que el objetivo recibe de ti un 2% durante 15 segundos, acumulable hasta 5 veces.",
+      "Tus hechizos de daño de las Sombras tienen un 100% de probabilidad de aumentar el daño de las Sombras que el objetivo recibe de ti un 2% durante 15 segundos, acumulable hasta 5 veces."
+    ],
+    "shadowform": [
+      "Adoptas la Shadowform, lo que aumenta tu daño de las Sombras un 10%, reduce el coste de Maná de todos los hechizos de las Sombras un 50%, aumenta la bonificación de daño de golpe crítico de tus hechizos de las Sombras un 100% y reduce el daño Físico que recibes un 15%. Sin embargo, no puedes lanzar hechizos de sanación mientras estás en esta forma."
+    ],
+    "silence": [
+      "Silencia al objetivo, lo que le impide lanzar hechizos durante 5 segundos e interrumpe sus lanzamientos de hechizos durante 3 segundos."
+    ],
+    "silent-resolve": [
+      "Reduce la amenaza generada por tus hechizos un 10% y reduce la duración de los efectos de aturdimiento, miedo y silencio que te infligen un 5%.",
+      "Reduce la amenaza generada por tus hechizos un 20% y reduce la duración de los efectos de aturdimiento, miedo y silencio que te infligen un 10%.",
+      "Reduce la amenaza generada por tus hechizos un 30% y reduce la duración de los efectos de aturdimiento, miedo y silencio que te infligen un 15%."
+    ],
+    "soul-warding": [
+      "Reduce el tiempo de reutilización de tu hechizo Power Word: Shield en 4 segundos y reduce su coste de maná un 15%."
+    ],
+    "spell-warding": [
+      "Reduce todo el daño de hechizos recibido un 2%.",
+      "Reduce todo el daño de hechizos recibido un 4%.",
+      "Reduce todo el daño de hechizos recibido un 6%.",
+      "Reduce todo el daño de hechizos recibido un 8%.",
+      "Reduce todo el daño de hechizos recibido un 10%."
+    ],
+    "spirit-of-redemption": [
+      "Al morir, el sacerdote se convierte en Spirit of Redemption durante 15 segundos. El Spirit of Redemption no puede moverse, atacar, ser atacado ni ser objetivo de ningún hechizo o efecto. En esta forma, el sacerdote puede lanzar cualquier hechizo de sanación sin coste alguno. Cuando el efecto termina, el sacerdote muere."
+    ],
+    "spirit-tap": [
+      "Te da un 20% de probabilidad de aumentar tu Espíritu un 100% durante 15 segundos tras matar a un objetivo no trivial o cuando muere un enemigo afectado por tu Vampiric Embrace. Mientras dure el efecto, el 50% de tu regeneración de Maná continuará mientras lanzas hechizos.",
+      "Te da un 40% de probabilidad de aumentar tu Espíritu un 100% durante 15 segundos tras matar a un objetivo no trivial o cuando muere un enemigo afectado por tu Vampiric Embrace. Mientras dure el efecto, el 50% de tu regeneración de Maná continuará mientras lanzas hechizos.",
+      "Te da un 60% de probabilidad de aumentar tu Espíritu un 100% durante 15 segundos tras matar a un objetivo no trivial o cuando muere un enemigo afectado por tu Vampiric Embrace. Mientras dure el efecto, el 50% de tu regeneración de Maná continuará mientras lanzas hechizos.",
+      "Te da un 80% de probabilidad de aumentar tu Espíritu un 100% durante 15 segundos tras matar a un objetivo no trivial o cuando muere un enemigo afectado por tu Vampiric Embrace. Mientras dure el efecto, el 50% de tu regeneración de Maná continuará mientras lanzas hechizos.",
+      "Te da un 100% de probabilidad de aumentar tu Espíritu un 100% durante 15 segundos tras matar a un objetivo no trivial o cuando muere un enemigo afectado por tu Vampiric Embrace. Mientras dure el efecto, el 50% de tu regeneración de Maná continuará mientras lanzas hechizos."
+    ],
+    "spiritual-guidance": [
+      "Aumenta tu sanación de hechizos hasta un 5% de tu Espíritu total y tu daño de hechizos hasta un 1% de tu Espíritu total.",
+      "Aumenta tu sanación de hechizos hasta un 10% de tu Espíritu total y tu daño de hechizos hasta un 3% de tu Espíritu total.",
+      "Aumenta tu sanación de hechizos hasta un 15% de tu Espíritu total y tu daño de hechizos hasta un 5% de tu Espíritu total.",
+      "Aumenta tu sanación de hechizos hasta un 20% de tu Espíritu total y tu daño de hechizos hasta un 6% de tu Espíritu total.",
+      "Aumenta tu sanación de hechizos hasta un 25% de tu Espíritu total y tu daño de hechizos hasta un 8% de tu Espíritu total."
+    ],
+    "spiritual-healing": [
+      "Aumenta la cantidad sanada por tus hechizos un 3%.",
+      "Aumenta la cantidad sanada por tus hechizos un 7%.",
+      "Aumenta la cantidad sanada por tus hechizos un 10%."
+    ],
+    "twilight-focus": [
+      "Te da un 23% de probabilidad de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo.",
+      "Te da un 47% de probabilidad de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo.",
+      "Te da un 70% de probabilidad de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo."
+    ],
+    "twin-disciplines": [
+      "Aumenta el daño y la sanación de tus hechizos instantáneos un 1%.",
+      "Aumenta el daño y la sanación de tus hechizos instantáneos un 2%.",
+      "Aumenta el daño y la sanación de tus hechizos instantáneos un 3%.",
+      "Aumenta el daño y la sanación de tus hechizos instantáneos un 4%.",
+      "Aumenta el daño y la sanación de tus hechizos instantáneos un 5%."
+    ],
+    "vampiric-embrace": [
+      "Aflige a tu objetivo con energía de las Sombras que hace que todos los miembros del grupo se sanen un 20% de todo el daño de hechizos de las Sombras que infliges, durante 30 segundos."
+    ],
+    "wand-specialization": [
+      "Aumenta tu daño con varitas un 13%.",
+      "Aumenta tu daño con varitas un 25%."
+    ]
+  }
+}

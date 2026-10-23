@@ -117,6 +117,9 @@
  *   ★ build_complete      tutti i 51 punti spesi nel builder, una volta per       class
  *                         pagina
  *     build_import        codice o link incollato in "Apri una build"             ok (yes | no)
+ *   ★ build_published     build pubblicata sul sito, solo la prima volta (non le   class, purpose
+ *                         modifiche; 23/10/2026, BuildForm)
+ *   ★ build_vote          voto 1–5 a una build pubblicata (BuildStars)            stars, vote_type (new | update)
  *
  * Per vedere i parametri nei rapporti di GA4 vanno registrati in Amministrazione → Definizioni personalizzate, tutti
  * con ambito "evento" (method e search_term GA4 li ha già):
@@ -244,6 +247,9 @@ export type EventParams = {
   build_share: { method: "link" | "code" | "text" | "native"; class: string };
   build_complete: { class: string };
   build_import: { ok: "yes" | "no" };
+  /* build pubblicate (23/10/2026): pubblicazione (solo la prima volta) e voto */
+  build_published: { class: string; purpose: string };
+  build_vote: { stars: number; vote_type: "new" | "update" };
 };
 export type EventName = keyof EventParams;
 
@@ -299,6 +305,8 @@ export const VERCEL_PROPS = {
   build_share: ["method", "class"],
   build_complete: ["class"],
   build_import: ["ok"],
+  build_published: ["class", "purpose"],
+  build_vote: ["stars", "vote_type"],
 } as const satisfies { [N in EventName]: readonly (keyof EventParams[N] & string)[] };
 
 export const isEventName = (name: unknown): name is EventName => typeof name === "string" && Object.hasOwn(VERCEL_PROPS, name);

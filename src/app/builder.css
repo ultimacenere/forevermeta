@@ -894,3 +894,136 @@
     }
   }
 }
+
+/* Build pubblicate (23/10/2026): schede dell'elenco, pastiglia dello scopo, icone di classi e razze, griglia in sola lettura. */
+@layer components {
+  .tb-class-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 999px;
+    border: 2px solid var(--tb-ink);
+    object-fit: cover;
+    flex: none;
+    background: var(--color-night);
+  }
+  .tb-class-card .tb-class-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .tb-class-icon-lg {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 999px;
+    border: 3px solid var(--tb-ink, var(--color-sky));
+    object-fit: cover;
+    flex: none;
+  }
+  .tb-race-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 999px;
+    object-fit: cover;
+    margin-right: 0.4rem;
+    vertical-align: -0.3rem;
+    border: 1px solid var(--color-felt-line);
+  }
+  .tb-readonly .tb-cell {
+    cursor: default;
+  }
+  .tb-readonly .tb-cell:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .build-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    height: 100%;
+    border: 3px solid var(--color-felt-line);
+    border-radius: 14px;
+    background: var(--color-night);
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: var(--color-pale);
+    box-shadow: var(--shadow-card);
+    transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  }
+  .build-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--tb-ink, var(--color-sky));
+    box-shadow: var(--shadow-lift);
+  }
+  .build-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-width: 0;
+  }
+  .build-card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    border: 2px solid var(--tb-ink, var(--color-sky));
+    object-fit: cover;
+    flex: none;
+  }
+  .build-card-name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--tb-ink, var(--color-sky));
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .build-card-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-pale-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .build-card-summary {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .build-card-foot {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+    color: var(--color-pale-muted);
+  }
+  .build-card-rating {
+    color: var(--color-gold-deep);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .build-card-author {
+    margin-left: auto;
+  }
+  .pill-purpose {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--color-sky);
+    color: var(--color-sky);
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+    vertical-align: middle;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .build-card,
+    .build-card:hover {
+      transition: none;
+      transform: none;
+    }
+  }
+}

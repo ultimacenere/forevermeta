@@ -17,7 +17,7 @@ const acceptLanguage = (value: string) => [{ type: "header" as const, key: "acce
  * una sezione vera (/guides/<slug>, /glossary) porta alla stessa pagina nella lingua del visitatore. Il resto del
  * percorso non ha punti (`[^.]+`), così i file di `public` non vengono toccati.
  */
-const sections = ["about", "account", "authors", "builder", "calendar", "changes", "faq", "glossary", "guides", "login", "news", "privacy"] as const;
+const sections = ["about", "account", "authors", "builder", "builds", "calendar", "changes", "faq", "glossary", "guides", "login", "news", "privacy"] as const;
 
 function sectionRedirects() {
   const section = `:section(${sections.join("|")})`;
