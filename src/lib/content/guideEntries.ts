@@ -7,6 +7,7 @@ import { guide as legacy } from "./guideTexts/wow-forever-legacy-system";
 import { guide as camping } from "./guideTexts/wow-forever-camping-professions";
 import { guide as editions } from "./guideTexts/wow-forever-editions-prices";
 import { guide as world } from "./guideTexts/wow-forever-zones-dungeons-raids";
+import { guide as addons } from "./guideTexts/wow-forever-addons-interface";
 
 /** Le guide di ForeverMeta, una per file in guideTexts/, in inglese, italiano e spagnolo, ognuna con le sue fonti ufficiali. */
 /** Le copertine dal pacco ufficiale Blizzard (src/lib/media.ts), una diversa per guida. */
@@ -19,4 +20,5 @@ export const guideEntries: GuideEntry[] = [
   { ...camping, media: "camping" },
   { ...editions, media: "editions" },
   { ...world, media: "zones" },
+  addons,
 ];
