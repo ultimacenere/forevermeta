@@ -1,14 +1,14 @@
 /*
  * Bacheca delle gilde (23/10/2026): schede dell'elenco, pillole, stemma con l'iniziale, caselle a chip del modulo.
  * Stesse variabili del tema e stessa struttura delle schede delle build (builder.css): il colore della fazione sta in
- * `--gl-ink` (Alleanza = azzurro Skyborne, Orda = cremisi) e colora stemma, nome e bordo al passaggio.
+ * `--gl-ink` (Alleanza = blu, Orda = rosso, i colori delle fazioni del tema) e colora stemma, nome e bordo al passaggio.
  */
 @layer components {
   .gl-alliance {
-    --gl-ink: var(--color-sky);
+    --gl-ink: var(--color-alliance);
   }
   .gl-horde {
-    --gl-ink: var(--color-crimson);
+    --gl-ink: var(--color-horde);
   }
   .guild-card {
     display: flex;
@@ -119,12 +119,12 @@
     color: var(--color-sky);
   }
   .gl-pill-alliance {
-    border-color: var(--color-sky);
-    color: var(--color-sky);
+    border-color: var(--color-alliance);
+    color: var(--color-alliance);
   }
   .gl-pill-horde {
-    border-color: var(--color-crimson);
-    color: var(--color-crimson);
+    border-color: var(--color-horde);
+    color: var(--color-horde);
   }
   .gl-checks {
     display: flex;

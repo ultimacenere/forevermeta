@@ -476,7 +476,7 @@
   .tb-cell:hover,
   .tb-cell.is-active {
     transform: translateY(-1px);
-    box-shadow: 0 6px 14px -8px rgba(60, 44, 20, 0.5);
+    box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.6);
   }
   .tb-cell:focus-visible {
     outline: 3px solid var(--color-mint);

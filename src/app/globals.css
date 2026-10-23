@@ -25,58 +25,65 @@
   carte che si girano al passaggio del mouse (.card-tile).
 */
 /*
-  ForeverMeta, tema CHIARO "pergamena" (10/10/2026, Pierluigi: "lo voglio sul chiaro e con le grafiche di wow"). I nomi dei
-  token restano quelli del motore di OriginsMeta, cambiano i valori:
-    felt  = fondo della pagina (pergamena chiara)       night = schede (avorio)
-    chalk = testo principale (inchiostro blu scuro)     pale  = testo delle schede
-    mint  = accento (oro scuro, leggibile sul chiaro)   sky   = titoli (blu profondo)
-  Contrasti sul fondo delle schede #fffdf8: chalk 14:1, pale 12:1, pale-muted 5,4:1, mint 5,3:1, sky 7,2:1.
-  Le immagini del gioco (pacco ufficiale del Press Center) fanno da testata e copertine; il colore del sito resta nostro.
+  ForeverMeta, tema SCURO "abisso e bronzo" (24/10/2026, Pierluigi: "vorrei cambiare il tema del sito, con colori scuri
+  anzichè avorio", poi "procedi con il tema Abisso e bronzo"). Sostituisce il tema chiaro "pergamena" del 10/10/2026.
+  Colori presi dal logo ufficiale di WoW Forever (pacco stampa Blizzard, letti dai pixel il 24/10/2026): il blu abissale
+  del medaglione per il fondo e le schede, il bronzo della cornice per filetti e bordi, l'avorio delle lettere per il
+  testo, l'oro brunito delle smussature per tasti e accenti, il ciano dell'acqua arcana per i link. Solo i colori: la
+  grafica del logo (medaglione, cornice, rune) non entra mai nel sito (10_Materiale_Blizzard/LEGGIMI.md).
+  I nomi dei token restano quelli del motore di OriginsMeta, cambiano i valori:
+    felt  = fondo della pagina (abisso)          night  = schede (blu profondo)    felt-line = filetti (bronzo)
+    chalk = testo principale (avorio)            pale   = testo delle schede       sky       = titoli (pergamena)
+    mint  = accento (oro brunito: kicker, focus) arcane = link (ciano arcano)      gold      = tasti e cornici attive
+  Contrasti: chalk 16,4:1 sul fondo e 14,5:1 sulle schede; pale 10,6:1, pale-muted 6,6:1, titoli 11,6:1, kicker 8,4:1,
+  link 7,9:1 sulle schede; testo ink sui tasti d'oro 9,8:1. I "-soft" sono tinte da fondo e i "-deep" il testo che ci va
+  sopra (crimson e mint chiari con testo scuro, fazioni scure con testo acceso).
 */
 @theme {
-  --color-felt: #f4efe4;
-  --color-felt-deep: #e9e0cd;
-  --color-felt-soft: #eee6d6;
-  --color-felt-line: #d9ccb2;
-  --color-night: #fffdf8;
-  --color-night-2: #faf6ee;
-  --color-night-3: #f1e9d8;
-  --color-ink: #1a1206;
-  --color-ink-muted: #5c5140;
-  --color-pale: #2c3442;
-  --color-pale-muted: #5e6878;
-  --color-chalk: #1f2633;
-  --color-chalk-muted: #5b6474;
-  --color-crimson: #b3322a;
-  --color-crimson-deep: #8c2620;
-  --color-crimson-soft: #f6d6d2;
-  --color-gold: #c9962f;
-  --color-gold-deep: #9a6f1c;
-  --color-mint: #9a6510;
-  --color-mint-deep: #7a4f0c;
-  --color-mint-soft: #f3e2bd;
-  --color-sky: #1d5f8a;
-  --color-sky-deep: #164a6c;
-  --color-pink: #b23a6e;
-  --color-good: #23803f;
-  --color-bad: #b3261e;
-  /* Fazioni di Warcraft, solo come decorazione (striscia del calendario, 23/10/2026): rosso Orda e blu Alleanza
-     scuriti per il tema chiaro. Testo avorio (night) sui pieni: Orda 7,9:1, Alleanza 7,4:1; colore pieno sulla
-     tinta soft: Orda 5,3:1, Alleanza 6:1. */
-  --color-horde: #9b1c1c;
-  --color-horde-deep: #7a1414;
-  --color-horde-soft: #f9dcdc;
-  --color-alliance: #1f4e9c;
-  --color-alliance-deep: #173c7a;
-  --color-alliance-soft: #dbe5f8;
+  --color-felt: #031a2b;
+  --color-felt-deep: #021422;
+  --color-felt-soft: #072c47;
+  --color-felt-line: #5e4532;
+  --color-night: #05263a;
+  --color-night-2: #041f31;
+  --color-night-3: #0a3552;
+  --color-ink: #1f140c;
+  --color-ink-muted: #4a3527;
+  --color-pale: #cbd6e0;
+  --color-pale-muted: #9aabbb;
+  --color-chalk: #fdf6e7;
+  --color-chalk-muted: #b3bfcb;
+  --color-crimson: #f07a70;
+  --color-crimson-deep: #a6322b;
+  --color-crimson-soft: #f6cbc7;
+  --color-gold: #d7ba96;
+  --color-gold-deep: #e8cfa8;
+  --color-mint: #d7ba96;
+  --color-mint-deep: #6b4a22;
+  --color-mint-soft: #f1e2c8;
+  --color-sky: #f1dcb6;
+  --color-sky-deep: #d7ba96;
+  --color-arcane: #32c9e7;
+  --color-arcane-deep: #7fdcef;
+  --color-pink: #ec7aa8;
+  --color-good: #5fd47e;
+  --color-bad: #ff6b5f;
+  /* Fazioni di Warcraft, solo come decorazione (striscia del calendario, schede delle gilde): colore acceso sulla
+     propria tinta scura, Alleanza 5,7:1 e Orda 5,6:1. */
+  --color-horde: #f0756b;
+  --color-horde-deep: #f9a8a0;
+  --color-horde-soft: #3d171a;
+  --color-alliance: #6aa5ff;
+  --color-alliance-deep: #9cc4ff;
+  --color-alliance-soft: #0d2b52;
 
   --font-display: var(--font-display-face), Georgia, "Times New Roman", serif;
   --font-body: var(--font-manrope), "Segoe UI", Arial, sans-serif;
   --font-mono: var(--font-jet), Consolas, "Courier New", monospace;
 
-  --shadow-card: 0 1px 2px rgba(60, 44, 20, 0.08), 0 10px 28px -16px rgba(60, 44, 20, 0.25);
-  --shadow-lift: 0 2px 4px rgba(60, 44, 20, 0.10), 0 24px 40px -20px rgba(60, 44, 20, 0.35);
-  --shadow-mint: 0 0 0 1px rgba(234, 181, 78, 0.45), 0 12px 32px -14px rgba(234, 181, 78, 0.45);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 30px -16px rgba(0, 0, 0, 0.7);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.4), 0 24px 44px -20px rgba(0, 0, 0, 0.85);
+  --shadow-mint: 0 0 0 1px rgba(215, 186, 150, 0.45), 0 12px 32px -14px rgba(215, 186, 150, 0.35);
 }
 
 @layer base {
@@ -86,9 +93,9 @@
     /* Gradiente stile Instagram dei bottoni primari (decisione di Pierluigi del 21/09/2026). Contrasto del testo
        bianco misurato sui colori del gradiente: 4,76:1 sul rosso (40%), 5,25:1 sul magenta (60%), 5,79 e 6,50 sul
        viola; sull'arancio degli angoli scende a 2,3:1, quindi il testo non deve mai starci sopra (vedi .btn-primary). */
-    /* ForeverMeta (10/10/2026): il gradiente dei bottoni primari è oro antico, con testo scuro (ink) al posto del
-       bianco: ink #1a1206 sta sopra 9:1 su tutto il gradiente. Il nome della variabile resta quello del motore. */
-    --grad-ig: linear-gradient(45deg, #f3d385 0%, #e6b14c 45%, #d6993a 75%, #c98a2e 100%);
+    /* ForeverMeta: il gradiente dei bottoni primari è oro brunito (tema "abisso e bronzo", 24/10/2026), con testo scuro
+       (ink #1f140c) al posto del bianco: sopra 7:1 su tutto il gradiente. Il nome della variabile resta quello del motore. */
+    --grad-ig: linear-gradient(45deg, #ecd7b6 0%, #d7ba96 45%, #c6a47b 75%, #b38d66 100%);
     /* Colori dei post-it, tutti con testo ink #16102a: rapporti misurati tra parentesi. */
     --postit-deck: #f2d23c; /* Nuovo mazzo, giallo (12,3:1) */
     --postit-news: #c4b0ff; /* News, viola (9,6:1) */
@@ -3684,8 +3691,8 @@
   }
   .hero-forever {
     background:
-      radial-gradient(60rem 30rem at 85% -10%, rgba(130, 201, 238, 0.16), transparent 60%),
-      radial-gradient(40rem 24rem at 10% 110%, rgba(234, 181, 78, 0.14), transparent 60%),
+      radial-gradient(60rem 30rem at 85% -10%, rgba(50, 201, 231, 0.12), transparent 60%),
+      radial-gradient(40rem 24rem at 10% 110%, rgba(215, 186, 150, 0.12), transparent 60%),
       var(--color-felt);
   }
 }
@@ -3700,15 +3707,19 @@
 }
 
 /*
-  ForeverMeta, tema chiaro (10/10/2026): le classi base del motore avevano colori scuri scritti a mano (gradienti,
-  trasparenze sul blu notte). Qui sono ridisegnate per il chiaro; vengono dopo, quindi vincono. Schede avorio con un
-  filo caldo e un'ombra leggera al posto della cornice celeste da 3 px.
+  ForeverMeta, tema scuro "abisso e bronzo" (24/10/2026): le classi base del motore avevano colori scritti a mano
+  (gradienti, trasparenze); qui sono ridisegnate per l'abisso e vengono dopo, quindi vincono. Schede blu profondo con il
+  filo di bronzo, cornice d'oro brunito al passaggio, link nel ciano arcano. `color-scheme: dark` fa scuri anche i
+  controlli nativi (tendine dei select, barre di scorrimento, calendario dei campi data).
 */
 @layer base {
+  html {
+    color-scheme: dark;
+  }
   body::before {
     background-image:
-      radial-gradient(1100px 520px at 10% -10%, rgba(201, 150, 47, 0.10), transparent 60%),
-      radial-gradient(900px 500px at 100% 0%, rgba(29, 95, 138, 0.08), transparent 55%);
+      radial-gradient(1100px 520px at 10% -10%, rgba(50, 201, 231, 0.07), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(104, 70, 41, 0.22), transparent 55%);
   }
 }
 @layer components {
@@ -3731,6 +3742,9 @@
     border: 1px solid var(--color-gold);
     background: var(--color-night-2);
   }
+  .btn-gold:hover:not(:disabled, [aria-disabled="true"]) {
+    background: var(--color-gold-deep);
+  }
   .btn-ink {
     background: var(--color-night);
     color: var(--color-chalk);
@@ -3741,15 +3755,19 @@
     color: var(--color-sky);
   }
   .link-mint {
-    text-decoration-color: rgba(154, 101, 16, 0.4);
+    color: var(--color-arcane);
+    text-decoration-color: rgba(50, 201, 231, 0.45);
   }
   .link-mint:hover,
   .link-mint:focus-visible {
-    color: var(--color-mint-deep);
+    color: var(--color-arcane-deep);
   }
   .prose-night a {
-    color: var(--color-mint);
-    text-decoration-color: rgba(154, 101, 16, 0.45);
+    color: var(--color-arcane);
+    text-decoration-color: rgba(50, 201, 231, 0.45);
+  }
+  .prose-night a:hover {
+    color: var(--color-arcane-deep);
   }
   .prose-night h2 {
     color: var(--color-sky);
@@ -3776,11 +3794,11 @@
   .pill {
     border-width: 1px;
   }
-  /* testata della home: l'immagine del gioco a tutta larghezza, con una velatura scura in basso per il testo chiaro */
+  /* testata della home: l'immagine del gioco a tutta larghezza, con una velatura d'abisso a sinistra per il testo */
   .hero-forever {
     position: relative;
-    background: #1c2230;
-    color: #f6f1e6;
+    background: var(--color-felt-deep);
+    color: var(--color-chalk);
     overflow: hidden;
   }
   .hero-forever-img {
@@ -3793,24 +3811,24 @@
   .hero-forever-veil {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(14, 18, 28, 0.82) 0%, rgba(14, 18, 28, 0.55) 45%, rgba(14, 18, 28, 0.1) 100%);
+    background: linear-gradient(90deg, rgba(2, 20, 34, 0.88) 0%, rgba(2, 20, 34, 0.6) 45%, rgba(2, 20, 34, 0.12) 100%);
   }
   .hero-forever .t-hero {
-    color: #fbf6ea;
+    color: var(--color-chalk);
   }
   .hero-forever .hero-text {
-    color: #e9e2d2;
+    color: var(--color-pale);
   }
   .hero-forever .btn-ghost {
-    border-color: rgba(251, 246, 234, 0.7);
-    color: #fbf6ea;
+    border-color: rgba(253, 246, 231, 0.7);
+    color: var(--color-chalk);
   }
   .hero-forever .btn-ghost:hover:not(:disabled, [aria-disabled="true"]) {
     border-color: var(--color-gold);
-    color: #f3d385;
+    color: var(--color-gold-deep);
   }
   .hero-forever .kicker {
-    color: #f3d385;
+    color: var(--color-gold-deep);
   }
   .t-hero {
     color: var(--color-chalk);
@@ -3821,7 +3839,7 @@
   Post-it delle news in home (10/10/2026, Pierluigi: "con colori diversi vorrei rimettere come su originsmeta i
   postit"). Stesse forme e animazioni di OriginsMeta (.postit qui sopra); un colore per argomento della news
   (`topic` in news.ts): beta rosa, news lilla, pvp pesca, event azzurro. Toni pastello (Pierluigi, 10/10/2026:
-  "colori piu pastello meno accesi"), testo ink sulla carta piena (contrasto sopra 12:1 per tutti). Sul fondo pergamena l'ombra è calda e più leggera di quella pensata per il viola inchiostro.
+  "colori piu pastello meno accesi"), testo ink sulla carta piena (contrasto sopra 12:1 per tutti). Sul fondo d'abisso (24/10/2026) l'ombra è nera e piena, come sul viola inchiostro di OriginsMeta.
 */
 @layer components {
   :root {
@@ -3847,18 +3865,18 @@
     --postit-bg: var(--postit-pastel-event);
   }
   .postit {
-    box-shadow: 0 1px 1px rgba(60, 40, 10, 0.25), 2px 8px 14px -6px rgba(60, 40, 10, 0.55);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4), 2px 8px 14px -6px rgba(0, 0, 0, 0.75);
   }
   .postit-lg {
-    box-shadow: 0 1px 1px rgba(60, 40, 10, 0.3), 3px 12px 18px -6px rgba(60, 40, 10, 0.6);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45), 3px 12px 18px -6px rgba(0, 0, 0, 0.8);
   }
   .postit.is-fresh {
-    box-shadow: 0 2px 2px rgba(60, 40, 10, 0.35), 3px 14px 22px -6px rgba(60, 40, 10, 0.7);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5), 3px 14px 22px -6px rgba(0, 0, 0, 0.9);
   }
-  /* il nastro adesivo: carta velina chiara, visibile anche sulla pergamena */
+  /* il nastro adesivo: carta velina chiara */
   .postit::before {
-    background: rgba(255, 253, 248, 0.6);
-    box-shadow: 0 1px 2px rgba(60, 40, 10, 0.25);
+    background: rgba(253, 246, 231, 0.55);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
   }
   /* bollino "Nuovo": rosa chiaro con testo ink (il rosa scuro del tema darebbe poco contrasto) */
   .postit.is-fresh::after {
