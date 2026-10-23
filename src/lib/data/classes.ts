@@ -23,6 +23,8 @@ export type ClassInfo = {
   color: string;
   /** versione scura dello stesso colore, nostra, per testi e cornici sulla pergamena (contrasto ≥ 4,5:1 su #fffdf8) */
   ink: string;
+  /** icona della classe del gioco (`classicon_*`), in public/talents/icons (scaricata da import-talents.mjs --icons) */
+  icon: string;
   /** risorsa principale, nome del gioco */
   resource: "Mana" | "Rage" | "Energy";
   roles: Role[];
@@ -36,6 +38,7 @@ const tree = (id: string, name: string, role: Role): TreeInfo => ({ id, name, ro
 export const classes: ClassInfo[] = [
   {
     id: "druid",
+    icon: "classicon_druid",
     name: n("Druid", "Druido", "druida"),
     color: "#ff7c0a",
     ink: "#a84c00",
@@ -45,6 +48,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "hunter",
+    icon: "classicon_hunter",
     name: n("Hunter", "Cacciatore", "cazador"),
     color: "#aad372",
     ink: "#4a7a1a",
@@ -54,6 +58,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "mage",
+    icon: "classicon_mage",
     name: n("Mage", "Mago", "mago"),
     color: "#3fc7eb",
     ink: "#0f6f8c",
@@ -63,6 +68,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "paladin",
+    icon: "classicon_paladin",
     name: n("Paladin", "Paladino", "paladín"),
     color: "#f48cba",
     ink: "#a8386a",
@@ -72,6 +78,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "priest",
+    icon: "classicon_priest",
     name: n("Priest", "Sacerdote", "sacerdote"),
     color: "#ffffff",
     ink: "#4f6382",
@@ -81,6 +88,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "rogue",
+    icon: "classicon_rogue",
     name: n("Rogue", "Ladro", "pícaro"),
     color: "#fff468",
     ink: "#7a6a00",
@@ -90,6 +98,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "shaman",
+    icon: "classicon_shaman",
     name: n("Shaman", "Sciamano", "chamán"),
     color: "#0070dd",
     ink: "#0052a8",
@@ -99,6 +108,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "warlock",
+    icon: "classicon_warlock",
     name: n("Warlock", "Stregone", "brujo"),
     color: "#8788ee",
     ink: "#5250b5",
@@ -108,6 +118,7 @@ export const classes: ClassInfo[] = [
   },
   {
     id: "warrior",
+    icon: "classicon_warrior",
     name: n("Warrior", "Guerriero", "guerrero"),
     color: "#c69b6d",
     ink: "#7a5527",

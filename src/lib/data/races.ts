@@ -33,6 +33,8 @@ export type RaceInfo = {
   newClasses?: ClassId[];
   /** razza riservata a chi compra lo Skyborne Heroic Pack o superiore */
   paid?: boolean;
+  /** icona della razza del gioco (`achievement_character_*_male`), in public/talents/icons; gli Skyborne non ne hanno una sul CDN */
+  icon?: string;
   racials: Racial[];
 };
 
@@ -51,6 +53,7 @@ export const races: RaceInfo[] = [
   {
     id: "human",
     faction: "alliance",
+    icon: "achievement_character_human_male",
     name: n("Human", "Umano", "humano"),
     classes: ["hunter", "mage", "paladin", "priest", "rogue", "warlock", "warrior"],
     newClasses: ["hunter"],
@@ -64,6 +67,7 @@ export const races: RaceInfo[] = [
   {
     id: "dwarf",
     faction: "alliance",
+    icon: "achievement_character_dwarf_male",
     name: n("Dwarf", "Nano", "enano"),
     classes: ["hunter", "paladin", "priest", "rogue", "shaman", "warrior"],
     newClasses: ["shaman"],
@@ -77,6 +81,7 @@ export const races: RaceInfo[] = [
   {
     id: "night-elf",
     faction: "alliance",
+    icon: "achievement_character_nightelf_male",
     name: n("Night Elf", "Elfo della Notte", "elfo de la noche"),
     classes: ["druid", "hunter", "priest", "rogue", "warrior"],
     racials: [
@@ -89,6 +94,7 @@ export const races: RaceInfo[] = [
   {
     id: "gnome",
     faction: "alliance",
+    icon: "achievement_character_gnome_male",
     name: n("Gnome", "Gnomo", "gnomo"),
     classes: ["mage", "priest", "rogue", "warlock", "warrior"],
     newClasses: ["priest"],
@@ -112,6 +118,7 @@ export const races: RaceInfo[] = [
   {
     id: "orc",
     faction: "horde",
+    icon: "achievement_character_orc_male",
     name: n("Orc", "Orco", "orco"),
     classes: ["hunter", "mage", "rogue", "shaman", "warlock", "warrior"],
     newClasses: ["mage"],
@@ -125,6 +132,7 @@ export const races: RaceInfo[] = [
   {
     id: "undead",
     faction: "horde",
+    icon: "achievement_character_undead_male",
     name: n("Undead", "Non Morto", "no-muerto"),
     classes: ["mage", "paladin", "priest", "rogue", "warlock", "warrior"],
     newClasses: ["paladin"],
@@ -138,6 +146,7 @@ export const races: RaceInfo[] = [
   {
     id: "tauren",
     faction: "horde",
+    icon: "achievement_character_tauren_male",
     name: n("Tauren", "Tauren", "tauren"),
     classes: ["druid", "hunter", "shaman", "warrior"],
     racials: [
@@ -150,6 +159,7 @@ export const races: RaceInfo[] = [
   {
     id: "troll",
     faction: "horde",
+    icon: "achievement_character_troll_male",
     name: n("Troll", "Troll", "trol"),
     classes: ["hunter", "mage", "priest", "rogue", "shaman", "warlock", "warrior"],
     newClasses: ["warlock"],

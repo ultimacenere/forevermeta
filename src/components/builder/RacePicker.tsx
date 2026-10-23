@@ -16,11 +16,15 @@ export type RaceOption = {
   isNew: boolean;
   /** razza riservata a chi compra un pacchetto (gli Skyborne) */
   paid: boolean;
+  /** icona della razza, se il sito ne ha una (gli Skyborne no) */
+  icon?: string;
   racials: RacialView[];
 };
 
 export type RacePickerProps = {
   races: RaceOption[];
+  /** cartella delle icone (`/talents/icons/`) */
+  iconBase?: string;
   value: RaceId | null;
   className: string;
   labels: BuilderLabels;
@@ -32,7 +36,7 @@ export type RacePickerProps = {
  * restano visibili ma spente, con la spiegazione nel title: così si vede anche che cosa NON si può fare. Sotto, i
  * tratti razziali della razza scelta.
  */
-export function RacePicker({ races, value, className, labels, onChange }: RacePickerProps) {
+export function RacePicker({ races, iconBase, value, className, labels, onChange }: RacePickerProps) {
   const chosen = races.find((r) => r.id === value) ?? null;
   const [faction, setFaction] = useState<Faction>(chosen?.faction ?? "alliance");
   const list = races.filter((r) => r.faction === faction);
@@ -60,7 +64,13 @@ export function RacePicker({ races, value, className, labels, onChange }: RacePi
               onChange(value === r.id ? null : r.id);
             }}
           >
-            <span className="tb-race-name">{r.name}</span>
+            <span className="tb-race-name">
+              {r.icon && iconBase ? (
+                // eslint-disable-next-line @next/next/no-img-element -- icona piccola già nel sito
+                <img src={`${iconBase}${r.icon}.jpg`} alt="" className="tb-race-icon" width={20} height={20} loading="lazy" />
+              ) : null}
+              {r.name}
+            </span>
             {r.isNew && r.allowed ? <span className="tb-race-tag">{labels.newCombo}</span> : null}
           </button>
         ))}

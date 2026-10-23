@@ -1,52 +1,17 @@
 "use client";
 
 import { useCallback, useMemo, useRef, type KeyboardEvent, type MouseEvent, type PointerEvent } from "react";
-import { COLS, ROWS, addBlocker, canRemove, orderedTalents, pointsToUnlockRow, prerequisiteMet, rankOf, rowUnlocked, treePoints } from "@/lib/builder/engine";
+import { ROWS, canRemove, orderedTalents, pointsToUnlockRow, prerequisiteMet, rankOf, rowUnlocked, treePoints } from "@/lib/builder/engine";
+import { GRID_H, GRID_W, arrowPath, cellState, initialsOf } from "@/lib/builder/grid";
 import type { Build, ClassTalents, Talent, TalentTree as TalentTreeData } from "@/lib/builder/types";
 import { fill, type BuilderLabels } from "@/lib/builderLabels";
-
-/** Misure della griglia in unità del viewBox: la cella è 52 e lo spazio fra le celle un quarto della cella. Il CSS
- *  (`.tb-grid`) scala tutto insieme con `--tb-cell`, quindi le frecce restano al loro posto a ogni misura. */
-export const CELL = 52;
-export const GAP = 13;
-export const GRID_W = COLS * CELL + (COLS - 1) * GAP;
-export const GRID_H = ROWS * CELL + (ROWS - 1) * GAP;
 
 /** Pressione lunga sul touch che apre il dettaglio (ms). */
 export const LONG_PRESS_MS = 400;
 
-export type CellState = "locked" | "available" | "partial" | "maxed";
-
-export function cellState(data: ClassTalents, build: Build, talent: Talent): CellState {
-  const r = rankOf(build, talent.id);
-  if (r >= talent.maxRank) return "maxed";
-  if (r > 0) return "partial";
-  const blocker = addBlocker(data, build, talent.id);
-  return blocker === "rowLocked" || blocker === "prerequisiteMissing" ? "locked" : "available";
-}
-
-/** Iniziali di un talento per la cella senza icona: "Improved Heroic Strike" → "IH". */
-export function initialsOf(name: string): string {
-  const words = name.replace(/[^A-Za-z0-9' ]/g, " ").split(/\s+/).filter((w) => w && !/^(of|the|and|a|an|in|to|on)$/i.test(w));
-  const letters = words.slice(0, 2).map((w) => w[0]?.toUpperCase() ?? "");
-  return letters.join("") || name.slice(0, 2).toUpperCase();
-}
-
-/** Una freccia di prerequisito: scende dal talento richiesto e entra in quello che lo richiede. */
+/** Una freccia di prerequisito (tracciato in src/lib/builder/grid.ts). */
 function Arrow({ from, to, met }: { from: Talent; to: Talent; met: boolean }) {
-  const cx = (t: Talent) => t.col * (CELL + GAP) + CELL / 2;
-  const cy = (t: Talent) => t.row * (CELL + GAP) + CELL / 2;
-  let d: string;
-  if (from.col === to.col) {
-    d = `M ${cx(from)} ${cy(from) + CELL / 2} V ${cy(to) - CELL / 2}`;
-  } else if (from.row === to.row) {
-    const dir = to.col > from.col ? 1 : -1;
-    d = `M ${cx(from) + (dir * CELL) / 2} ${cy(from)} H ${cx(to) - (dir * CELL) / 2}`;
-  } else {
-    const dir = to.col > from.col ? 1 : -1;
-    d = `M ${cx(from)} ${cy(from) + CELL / 2} V ${cy(to)} H ${cx(to) - (dir * CELL) / 2}`;
-  }
-  return <path d={d} className={met ? "tb-arrow is-met" : "tb-arrow"} markerEnd={met ? "url(#tb-head-met)" : "url(#tb-head)"} />;
+  return <path d={arrowPath(from, to)} className={met ? "tb-arrow is-met" : "tb-arrow"} markerEnd={met ? "url(#tb-head-met)" : "url(#tb-head)"} />;
 }
 
 export type TreeProps = {

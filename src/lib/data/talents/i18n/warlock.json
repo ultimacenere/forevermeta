@@ -1,0 +1,506 @@
+{
+  "it": {
+    "aftermath": [
+      "Aumenta del 10% i danni iniziali del tuo incantesimo Immolate e il tuo incantesimo Conflagrate ha il 20% di probabilità di infliggere Daze al bersaglio, riducendo del 50% la velocità di movimento del bersaglio per 5 s.",
+      "Aumenta del 20% i danni iniziali del tuo incantesimo Immolate e il tuo incantesimo Conflagrate ha il 40% di probabilità di infliggere Daze al bersaglio, riducendo del 50% la velocità di movimento del bersaglio per 5 s.",
+      "Aumenta del 30% i danni iniziali del tuo incantesimo Immolate e il tuo incantesimo Conflagrate ha il 60% di probabilità di infliggere Daze al bersaglio, riducendo del 50% la velocità di movimento del bersaglio per 5 s.",
+      "Aumenta del 40% i danni iniziali del tuo incantesimo Immolate e il tuo incantesimo Conflagrate ha l'80% di probabilità di infliggere Daze al bersaglio, riducendo del 50% la velocità di movimento del bersaglio per 5 s.",
+      "Aumenta del 50% i danni iniziali del tuo incantesimo Immolate e il tuo incantesimo Conflagrate ha il 100% di probabilità di infliggere Daze al bersaglio, riducendo del 50% la velocità di movimento del bersaglio per 5 s."
+    ],
+    "agonizing-flames": [
+      "Aumenta del 3% la probabilità di colpo critico del tuo incantesimo Searing Pain e del 3% i danni inflitti da tutti i tuoi incantesimi di Destruction.",
+      "Aumenta del 7% la probabilità di colpo critico del tuo incantesimo Searing Pain e del 7% i danni inflitti da tutti i tuoi incantesimi di Destruction.",
+      "Aumenta del 10% la probabilità di colpo critico del tuo incantesimo Searing Pain e del 10% i danni inflitti da tutti i tuoi incantesimi di Destruction."
+    ],
+    "amplify-curse": [
+      "Aumenta del 50% l'effetto del tuo prossimo Curse of Weakness o Bane of Agony, oppure del 50% quello del tuo prossimo Curse of Exhaustion. Dura 30 s."
+    ],
+    "bane": [
+      "Riduce di 0.1 s il tempo di lancio dei tuoi incantesimi Shadow Bolt, Immolate e Incinerate e di 0.4 s quello del tuo incantesimo Soul Fire.",
+      "Riduce di 0.2 s il tempo di lancio dei tuoi incantesimi Shadow Bolt, Immolate e Incinerate e di 0.8 s quello del tuo incantesimo Soul Fire.",
+      "Riduce di 0.3 s il tempo di lancio dei tuoi incantesimi Shadow Bolt, Immolate e Incinerate e di 1.2 s quello del tuo incantesimo Soul Fire.",
+      "Riduce di 0.4 s il tempo di lancio dei tuoi incantesimi Shadow Bolt, Immolate e Incinerate e di 1.6 s quello del tuo incantesimo Soul Fire.",
+      "Riduce di 0.5 s il tempo di lancio dei tuoi incantesimi Shadow Bolt, Immolate e Incinerate e di 2 s quello del tuo incantesimo Soul Fire."
+    ],
+    "bane-of-havoc": [
+      "Affligge il bersaglio per 5 min, facendo sì che il 15% di tutti i danni inflitti dal Warlock ad altri bersagli venga inflitto anche al bersaglio maledetto. Bane of Havoc è limitato a 1 bersaglio e su ogni bersaglio può essere attivo un solo Bane per Warlock."
+    ],
+    "cataclysm": [
+      "Riduce del 3% il costo in Mana dei tuoi incantesimi di Destruction.",
+      "Riduce del 6% il costo in Mana dei tuoi incantesimi di Destruction.",
+      "Riduce del 10% il costo in Mana dei tuoi incantesimi di Destruction."
+    ],
+    "conflagrate": [
+      "Incendia un bersaglio già afflitto dal tuo incantesimo Immolate, infliggendo da 88 a 110 danni da Fuoco e consumando il tuo effetto Immolate."
+    ],
+    "curse-of-exhaustion": [
+      "Riduce del 30% la velocità di movimento del bersaglio per 12 s. Su ogni bersaglio può essere attiva una sola maledizione per Warlock."
+    ],
+    "decimation": [
+      "Riduce del 45% il tempo di ricarica del tuo incantesimo Soul Fire. Quando lanci Shadow Bolt o Searing Pain su un nemico sotto il 35% di salute, infliggono il 3% di danni in più e, per i successivi 10 s, il tuo incantesimo Soul Fire ha il tempo di lancio ridotto del 20% e non costa Soul Shard.",
+      "Riduce del 90% il tempo di ricarica del tuo incantesimo Soul Fire. Quando lanci Shadow Bolt o Searing Pain su un nemico sotto il 35% di salute, infliggono il 6% di danni in più e, per i successivi 10 s, il tuo incantesimo Soul Fire ha il tempo di lancio ridotto del 40% e non costa Soul Shard."
+    ],
+    "demonic-aegis": [
+      "Aumenta del 15% l'efficacia dei tuoi incantesimi Demon Skin e Demon Armor.",
+      "Aumenta del 30% l'efficacia dei tuoi incantesimi Demon Skin e Demon Armor."
+    ],
+    "demonic-brand": [
+      "Il tuo Searing Pain genera il 17% di minaccia in meno e marchia il bersaglio per 10 s. I prossimi 2 attacchi del tuo famiglio contro il bersaglio infliggono da 65 a 68 danni da Fuoco o da Ombra a seconda del famiglio. Se vengono inflitti danni da Ombra, generano una minaccia elevata.",
+      "Il tuo Searing Pain genera il 33% di minaccia in meno e marchia il bersaglio per 10 s. I prossimi 4 attacchi del tuo famiglio contro il bersaglio infliggono da 65 a 68 danni da Fuoco o da Ombra a seconda del famiglio. Se vengono inflitti danni da Ombra, generano una minaccia elevata.",
+      "Il tuo Searing Pain genera il 50% di minaccia in meno e marchia il bersaglio per 10 s. I prossimi 6 attacchi del tuo famiglio contro il bersaglio infliggono da 65 a 68 danni da Fuoco o da Ombra a seconda del famiglio. Se vengono inflitti danni da Ombra, generano una minaccia elevata."
+    ],
+    "demonic-embrace": [
+      "Aumenta del 3% la tua Tempra totale.",
+      "Aumenta del 6% la tua Tempra totale.",
+      "Aumenta del 9% la tua Tempra totale.",
+      "Aumenta del 12% la tua Tempra totale.",
+      "Aumenta del 15% la tua Tempra totale."
+    ],
+    "demonic-energies": [
+      "Curi il tuo famiglio per l'8% di tutti i danni da incantesimo che infliggi. Quando ottieni Mana da Life Tap, il tuo demone evocato ottiene il 50% del Mana che ottieni.",
+      "Curi il tuo famiglio per il 15% di tutti i danni da incantesimo che infliggi. Quando ottieni Mana da Life Tap, il tuo demone evocato ottiene il 100% del Mana che ottieni."
+    ],
+    "demonic-knowledge": [
+      "Aumenta i tuoi danni da incantesimo e i danni da incantesimo del tuo famiglio demone fino al 33% del tuo livello mentre hai un famiglio demone evocato attivo.",
+      "Aumenta i tuoi danni da incantesimo e i danni da incantesimo del tuo famiglio demone fino al 67% del tuo livello mentre hai un famiglio demone evocato attivo.",
+      "Aumenta i tuoi danni da incantesimo e i danni da incantesimo del tuo famiglio demone fino al 100% del tuo livello mentre hai un famiglio demone evocato attivo."
+    ],
+    "demonic-pact": [
+      "L'effetto del tuo Demonic Sacrifice non viene più annullato evocando un famiglio demone diverso. Evocare di nuovo il famiglio sacrificato annulla comunque l'effetto."
+    ],
+    "demonic-sacrifice": [
+      "Quando viene attivato, sacrifica il tuo demone evocato per potenziare l'aspetto opposto del tuo potere, concedendoti un effetto che dura 2 ore. L'effetto viene annullato se viene evocato un qualsiasi demone.\n\nImp: aumenta del 15% i tuoi danni da Ombra.\n\nVoidwalker: ripristina il 2% del tuo Mana totale ogni 4 s.\n\nSuccubus/Incubus: aumenta del 15% i tuoi danni da Fuoco.\n\nFelhunter: ripristina il 3% della tua Salute totale ogni 4 s."
+    ],
+    "destructive-reach": [
+      "Aumenta del 10% la gittata dei tuoi incantesimi di Destruction.",
+      "Aumenta del 20% la gittata dei tuoi incantesimi di Destruction."
+    ],
+    "fel-concentration": [
+      "Ti dà il 23% di probabilità di evitare l'interruzione causata dai danni mentre canalizzi o lanci i tuoi incantesimi Drain Life, Drain Mana, Drain Soul o Wrack.",
+      "Ti dà il 47% di probabilità di evitare l'interruzione causata dai danni mentre canalizzi o lanci i tuoi incantesimi Drain Life, Drain Mana, Drain Soul o Wrack.",
+      "Ti dà il 70% di probabilità di evitare l'interruzione causata dai danni mentre canalizzi o lanci i tuoi incantesimi Drain Life, Drain Mana, Drain Soul o Wrack."
+    ],
+    "fel-domination": [
+      "Il tuo prossimo incantesimo di evocazione di Imp, Voidwalker, Succubus, Incubus o Felhunter ha il tempo di lancio ridotto di 5.5 s e il costo in Mana ridotto del 50%."
+    ],
+    "fel-vitality": [
+      "Aumenta del 5% la salute e il Mana massimi del tuo Imp, Voidwalker, Succubus, Incubus e Felhunter e aumenta del 5% il tuo Mana massimo.",
+      "Aumenta del 10% la salute e il Mana massimi del tuo Imp, Voidwalker, Succubus, Incubus e Felhunter e aumenta del 10% il tuo Mana massimo.",
+      "Aumenta del 15% la salute e il Mana massimi del tuo Imp, Voidwalker, Succubus, Incubus e Felhunter e aumenta del 15% il tuo Mana massimo."
+    ],
+    "fire-and-brimstone": [
+      "Aumenta dell'8% la probabilità di colpo critico del tuo incantesimo Conflagrate.",
+      "Aumenta del 17% la probabilità di colpo critico del tuo incantesimo Conflagrate.",
+      "Aumenta del 25% la probabilità di colpo critico del tuo incantesimo Conflagrate."
+    ],
+    "grim-reach": [
+      "Aumenta del 10% la gittata dei tuoi incantesimi di Affliction.",
+      "Aumenta del 20% la gittata dei tuoi incantesimi di Affliction."
+    ],
+    "improved-bane-of-agony": [
+      "Aumenta del 5% i danni inflitti dal tuo Bane of Agony.",
+      "Aumenta del 10% i danni inflitti dal tuo Bane of Agony."
+    ],
+    "improved-corruption": [
+      "Riduce di 0.4 s il tempo di lancio del tuo incantesimo Corruption e aumenta del 2% i danni che infligge.",
+      "Riduce di 0.8 s il tempo di lancio del tuo incantesimo Corruption e aumenta del 4% i danni che infligge.",
+      "Riduce di 1.2 s il tempo di lancio del tuo incantesimo Corruption e aumenta del 6% i danni che infligge.",
+      "Riduce di 1.6 s il tempo di lancio del tuo incantesimo Corruption e aumenta dell'8% i danni che infligge.",
+      "Riduce di 2 s il tempo di lancio del tuo incantesimo Corruption e aumenta del 10% i danni che infligge."
+    ],
+    "improved-drains": [
+      "Aumenta del 7% la salute drenata o i danni inflitti dai tuoi incantesimi Drain Life, Drain Soul e Wrack.",
+      "Aumenta del 13% la salute drenata o i danni inflitti dai tuoi incantesimi Drain Life, Drain Soul e Wrack.",
+      "Aumenta del 20% la salute drenata o i danni inflitti dai tuoi incantesimi Drain Life, Drain Soul e Wrack."
+    ],
+    "improved-felhunter": [
+      "Aumenta del 10% la riduzione di Potenza d'attacco del Tainted Blood del tuo Felhunter, le cure del suo Devour Magic e il livello di individuazione della sua Paranoia, e riduce di 2 s il tempo di ricarica del suo Spell Lock.",
+      "Aumenta del 20% la riduzione di Potenza d'attacco del Tainted Blood del tuo Felhunter, le cure del suo Devour Magic e il livello di individuazione della sua Paranoia, e riduce di 4 s il tempo di ricarica del suo Spell Lock.",
+      "Aumenta del 30% la riduzione di Potenza d'attacco del Tainted Blood del tuo Felhunter, le cure del suo Devour Magic e il livello di individuazione della sua Paranoia, e riduce di 6 s il tempo di ricarica del suo Spell Lock."
+    ],
+    "improved-health-funnel": [
+      "Aumenta del 20% la quantità di salute trasferita dal tuo incantesimo Health Funnel, riduce del 15% il suo costo in salute e riduce del 50% tutta la minaccia generata dal tuo Health Funnel. Consente di usare Health Funnel a prescindere dalla salute del tuo demone.",
+      "Aumenta del 40% la quantità di salute trasferita dal tuo incantesimo Health Funnel, riduce del 30% il suo costo in salute e riduce del 100% tutta la minaccia generata dal tuo Health Funnel. Consente di usare Health Funnel a prescindere dalla salute del tuo demone."
+    ],
+    "improved-imp": [
+      "Aumenta del 10% i danni dell'incantesimo Firebolt del tuo Imp e del 10% l'effetto del suo incantesimo Fire Shield.",
+      "Aumenta del 20% i danni dell'incantesimo Firebolt del tuo Imp e del 20% l'effetto del suo incantesimo Fire Shield.",
+      "Aumenta del 30% i danni dell'incantesimo Firebolt del tuo Imp e del 30% l'effetto del suo incantesimo Fire Shield."
+    ],
+    "improved-life-tap": [
+      "Aumenta del 10% la quantità di Mana conferita dal tuo incantesimo Life Tap.",
+      "Aumenta del 20% la quantità di Mana conferita dal tuo incantesimo Life Tap."
+    ],
+    "improved-sayaad": [
+      "Aumenta del 10% l'effetto degli incantesimi Lash of Pain e Soothing Kiss della tua Succubus e del tuo Incubus e aumenta del 10% la durata degli incantesimi Seduction e Lesser Invisibility della tua Succubus e del tuo Incubus.",
+      "Aumenta del 20% l'effetto degli incantesimi Lash of Pain e Soothing Kiss della tua Succubus e del tuo Incubus e aumenta del 20% la durata degli incantesimi Seduction e Lesser Invisibility della tua Succubus e del tuo Incubus.",
+      "Aumenta del 30% l'effetto degli incantesimi Lash of Pain e Soothing Kiss della tua Succubus e del tuo Incubus e aumenta del 30% la durata degli incantesimi Seduction e Lesser Invisibility della tua Succubus e del tuo Incubus."
+    ],
+    "improved-shadow-bolt": [
+      "I colpi critici del tuo Shadow Bolt aumentano del 4% i danni da Ombra che il bersaglio subisce dai tuoi attacchi per 12 s.",
+      "I colpi critici del tuo Shadow Bolt aumentano dell'8% i danni da Ombra che il bersaglio subisce dai tuoi attacchi per 12 s.",
+      "I colpi critici del tuo Shadow Bolt aumentano del 12% i danni da Ombra che il bersaglio subisce dai tuoi attacchi per 12 s.",
+      "I colpi critici del tuo Shadow Bolt aumentano del 16% i danni da Ombra che il bersaglio subisce dai tuoi attacchi per 12 s.",
+      "I colpi critici del tuo Shadow Bolt aumentano del 20% i danni da Ombra che il bersaglio subisce dai tuoi attacchi per 12 s."
+    ],
+    "improved-voidwalker": [
+      "Aumenta del 10% l'efficacia degli incantesimi Torment, Consume Shadows, Sacrifice e Suffering del tuo Voidwalker.",
+      "Aumenta del 20% l'efficacia degli incantesimi Torment, Consume Shadows, Sacrifice e Suffering del tuo Voidwalker.",
+      "Aumenta del 30% l'efficacia degli incantesimi Torment, Consume Shadows, Sacrifice e Suffering del tuo Voidwalker."
+    ],
+    "incinerate": [
+      "Infligge da 99 a 113 danni da Fuoco al tuo bersaglio e il 25% di danni aggiuntivi se il bersaglio è afflitto da Immolate."
+    ],
+    "intensity": [
+      "Ti dà il 23% di probabilità di resistere all'interruzione causata dai danni mentre lanci o canalizzi qualsiasi incantesimo di Destruction.",
+      "Ti dà il 47% di probabilità di resistere all'interruzione causata dai danni mentre lanci o canalizzi qualsiasi incantesimo di Destruction.",
+      "Ti dà il 70% di probabilità di resistere all'interruzione causata dai danni mentre lanci o canalizzi qualsiasi incantesimo di Destruction."
+    ],
+    "malevolence": [
+      "Aumenta dell'1% la probabilità di effetto critico dei tuoi incantesimi d'Ombra.",
+      "Aumenta del 2% la probabilità di effetto critico dei tuoi incantesimi d'Ombra.",
+      "Aumenta del 3% la probabilità di effetto critico dei tuoi incantesimi d'Ombra.",
+      "Aumenta del 4% la probabilità di effetto critico dei tuoi incantesimi d'Ombra.",
+      "Aumenta del 5% la probabilità di effetto critico dei tuoi incantesimi d'Ombra."
+    ],
+    "master-demonologist": [
+      "Concede sia al Warlock sia al demone evocato un effetto finché quel demone è attivo.\n\nImp - Aumenta del 2% i danni da Fuoco inflitti.\n\nVoidwalker - Riduce del 2% i danni fisici subiti.\n\nSuccubus/Incubus - Aumenta del 2% i danni da Ombra inflitti.\n\nFelhunter - Riduce del 2% i danni magici subiti.",
+      "Concede sia al Warlock sia al demone evocato un effetto finché quel demone è attivo.\n\nImp - Aumenta del 4% i danni da Fuoco inflitti.\n\nVoidwalker - Riduce del 4% i danni fisici subiti.\n\nSuccubus/Incubus - Aumenta del 4% i danni da Ombra inflitti.\n\nFelhunter - Riduce del 4% i danni magici subiti.",
+      "Concede sia al Warlock sia al demone evocato un effetto finché quel demone è attivo.\n\nImp - Aumenta del 6% i danni da Fuoco inflitti.\n\nVoidwalker - Riduce del 6% i danni fisici subiti.\n\nSuccubus/Incubus - Aumenta del 6% i danni da Ombra inflitti.\n\nFelhunter - Riduce del 6% i danni magici subiti.",
+      "Concede sia al Warlock sia al demone evocato un effetto finché quel demone è attivo.\n\nImp - Aumenta dell'8% i danni da Fuoco inflitti.\n\nVoidwalker - Riduce dell'8% i danni fisici subiti.\n\nSuccubus/Incubus - Aumenta dell'8% i danni da Ombra inflitti.\n\nFelhunter - Riduce dell'8% i danni magici subiti.",
+      "Concede sia al Warlock sia al demone evocato un effetto finché quel demone è attivo.\n\nImp - Aumenta del 10% i danni da Fuoco inflitti.\n\nVoidwalker - Riduce del 10% i danni fisici subiti.\n\nSuccubus/Incubus - Aumenta del 10% i danni da Ombra inflitti.\n\nFelhunter - Riduce del 10% i danni magici subiti."
+    ],
+    "master-summoner": [
+      "Riduce di 2 s il tempo di lancio dei tuoi incantesimi di evocazione di Imp, Voidwalker, Succubus, Incubus e Felhunter e del 20% il loro costo in Mana.",
+      "Riduce di 4 s il tempo di lancio dei tuoi incantesimi di evocazione di Imp, Voidwalker, Succubus, Incubus e Felhunter e del 40% il loro costo in Mana."
+    ],
+    "molten-skin": [
+      "Riduce del 2% tutti i danni subiti.",
+      "Riduce del 4% tutti i danni subiti.",
+      "Riduce del 6% tutti i danni subiti.",
+      "Riduce dell'8% tutti i danni subiti.",
+      "Riduce del 10% tutti i danni subiti."
+    ],
+    "nightfall": [
+      "Dà ai tuoi incantesimi Corruption, Drain Soul, Drain Life e Wrack il 2% di probabilità di farti entrare in Shadow Trance dopo aver danneggiato l'avversario. La Shadow Trance riduce del 100% il tempo di lancio del tuo prossimo incantesimo Shadow Bolt.",
+      "Dà ai tuoi incantesimi Corruption, Drain Soul, Drain Life e Wrack il 4% di probabilità di farti entrare in Shadow Trance dopo aver danneggiato l'avversario. La Shadow Trance riduce del 100% il tempo di lancio del tuo prossimo incantesimo Shadow Bolt."
+    ],
+    "pandemic": [
+      "Aumenta del 33% il bonus ai danni da colpo critico dei tuoi incantesimi Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life e Wrack.",
+      "Aumenta del 67% il bonus ai danni da colpo critico dei tuoi incantesimi Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life e Wrack.",
+      "Aumenta del 100% il bonus ai danni da colpo critico dei tuoi incantesimi Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life e Wrack."
+    ],
+    "pyroclasm": [
+      "Dà al tuo incantesimo Soul Fire il 13% di probabilità di stordire il bersaglio per 3 s, e ai tuoi incantesimi Rain of Fire e Hellfire il 13% di probabilità, nel corso della loro durata, di stordire per 3 s i bersagli che danneggiano.",
+      "Dà al tuo incantesimo Soul Fire il 26% di probabilità di stordire il bersaglio per 3 s, e ai tuoi incantesimi Rain of Fire e Hellfire il 26% di probabilità, nel corso della loro durata, di stordire per 3 s i bersagli che danneggiano."
+    ],
+    "ruin": [
+      "Aumenta del 20% il bonus ai danni da colpo critico dei tuoi incantesimi di Destruction.",
+      "Aumenta del 40% il bonus ai danni da colpo critico dei tuoi incantesimi di Destruction.",
+      "Aumenta del 60% il bonus ai danni da colpo critico dei tuoi incantesimi di Destruction.",
+      "Aumenta dell'80% il bonus ai danni da colpo critico dei tuoi incantesimi di Destruction.",
+      "Aumenta del 100% il bonus ai danni da colpo critico dei tuoi incantesimi di Destruction."
+    ],
+    "shadow-and-flame": [
+      "Colpire un nemico con Conflagrate aumenta del 2% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 2% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 20% di probabilità di non consumare Immolate e Shadowburn ha il 20% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta del 4% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 4% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 40% di probabilità di non consumare Immolate e Shadowburn ha il 40% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta del 6% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 6% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 60% di probabilità di non consumare Immolate e Shadowburn ha il 60% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta dell'8% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta dell'8% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha l'80% di probabilità di non consumare Immolate e Shadowburn ha l'80% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta del 10% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 10% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 100% di probabilità di non consumare Immolate e Shadowburn ha il 100% di probabilità di restituire istantaneamente un Soul Shard."
+    ],
+    "shadow-mastery": [
+      "Aumenta del 2% i danni inflitti o la vita drenata dai tuoi incantesimi d'Ombra.",
+      "Aumenta del 4% i danni inflitti o la vita drenata dai tuoi incantesimi d'Ombra.",
+      "Aumenta del 6% i danni inflitti o la vita drenata dai tuoi incantesimi d'Ombra.",
+      "Aumenta dell'8% i danni inflitti o la vita drenata dai tuoi incantesimi d'Ombra.",
+      "Aumenta del 10% i danni inflitti o la vita drenata dai tuoi incantesimi d'Ombra."
+    ],
+    "shadowburn": [
+      "Colpisce istantaneamente il bersaglio infliggendo da 65 a 73 danni da Ombra. Se un bersaglio non banale muore entro 8 s dall'essere stato colpito da Shadowburn, chi lancia l'incantesimo ottiene un Soul Shard."
+    ],
+    "siphon-life": [
+      "Trasferisce 11 punti salute dal bersaglio a chi lancia l'incantesimo ogni 3 s. Dura 30 s."
+    ],
+    "soul-harvest": [
+      "Uccidere un bersaglio non banale afflitto dal tuo Drain Soul aumenta del 50% la tua rigenerazione di Mana per 10 s e consente al 50% della normale rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Uccidere un bersaglio non banale afflitto dal tuo Drain Soul aumenta del 100% la tua rigenerazione di Mana per 10 s e consente al 100% della normale rigenerazione di Mana di continuare mentre lanci incantesimi."
+    ],
+    "soul-link": [
+      "Quando è attivo, il 30% di tutti i danni subiti da chi lancia l'incantesimo viene subito al suo posto dal tuo demone Imp, Voidwalker, Succubus, Incubus o Felhunter. Inoltre, sia il demone sia il padrone infliggono il 3% di danni in più. Dura finché il demone è attivo."
+    ],
+    "soul-siphon": [
+      "Aumenta del 4% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno degli altri tuoi effetti di Affliction attivi sul bersaglio, fino a un aumento massimo del 12%.",
+      "Aumenta dell'8% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno degli altri tuoi effetti di Affliction attivi sul bersaglio, fino a un aumento massimo del 24%.",
+      "Aumenta del 12% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno degli altri tuoi effetti di Affliction attivi sul bersaglio, fino a un aumento massimo del 36%."
+    ],
+    "suppression": [
+      "Aumenta dell'1% la tua probabilità di colpire e riduce del 4% tutta la minaccia che generi.",
+      "Aumenta del 2% la tua probabilità di colpire e riduce dell'8% tutta la minaccia che generi.",
+      "Aumenta del 3% la tua probabilità di colpire e riduce del 12% tutta la minaccia che generi.",
+      "Aumenta del 4% la tua probabilità di colpire e riduce del 16% tutta la minaccia che generi.",
+      "Aumenta del 5% la tua probabilità di colpire e riduce del 20% tutta la minaccia che generi."
+    ],
+    "unholy-power": [
+      "Aumenta del 2% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter.",
+      "Aumenta del 4% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter.",
+      "Aumenta del 6% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter.",
+      "Aumenta dell'8% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter.",
+      "Aumenta del 10% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter."
+    ],
+    "wrack": [
+      "Dilania il bersaglio dall'interno, infliggendo 36 danni da Ombra ogni 1 s e aumentando del 10% i danni che subisce dai tuoi altri effetti di danni da Ombra nel tempo per 6 s."
+    ]
+  },
+  "es": {
+    "aftermath": [
+      "Aumenta un 10% el daño inicial de tu hechizo Immolate y tu hechizo Conflagrate tiene un 20% de probabilidad de infligir Daze al objetivo, reduciendo un 50% la velocidad de movimiento del objetivo durante 5 s.",
+      "Aumenta un 20% el daño inicial de tu hechizo Immolate y tu hechizo Conflagrate tiene un 40% de probabilidad de infligir Daze al objetivo, reduciendo un 50% la velocidad de movimiento del objetivo durante 5 s.",
+      "Aumenta un 30% el daño inicial de tu hechizo Immolate y tu hechizo Conflagrate tiene un 60% de probabilidad de infligir Daze al objetivo, reduciendo un 50% la velocidad de movimiento del objetivo durante 5 s.",
+      "Aumenta un 40% el daño inicial de tu hechizo Immolate y tu hechizo Conflagrate tiene un 80% de probabilidad de infligir Daze al objetivo, reduciendo un 50% la velocidad de movimiento del objetivo durante 5 s.",
+      "Aumenta un 50% el daño inicial de tu hechizo Immolate y tu hechizo Conflagrate tiene un 100% de probabilidad de infligir Daze al objetivo, reduciendo un 50% la velocidad de movimiento del objetivo durante 5 s."
+    ],
+    "agonizing-flames": [
+      "Aumenta un 3% la probabilidad de golpe crítico de tu hechizo Searing Pain y un 3% el daño infligido por todos tus hechizos de Destruction.",
+      "Aumenta un 7% la probabilidad de golpe crítico de tu hechizo Searing Pain y un 7% el daño infligido por todos tus hechizos de Destruction.",
+      "Aumenta un 10% la probabilidad de golpe crítico de tu hechizo Searing Pain y un 10% el daño infligido por todos tus hechizos de Destruction."
+    ],
+    "amplify-curse": [
+      "Aumenta un 50% el efecto de tu próximo Curse of Weakness o Bane of Agony, o un 50% el de tu próximo Curse of Exhaustion. Dura 30 s."
+    ],
+    "bane": [
+      "Reduce en 0.1 s el tiempo de lanzamiento de tus hechizos Shadow Bolt, Immolate e Incinerate y en 0.4 s el de tu hechizo Soul Fire.",
+      "Reduce en 0.2 s el tiempo de lanzamiento de tus hechizos Shadow Bolt, Immolate e Incinerate y en 0.8 s el de tu hechizo Soul Fire.",
+      "Reduce en 0.3 s el tiempo de lanzamiento de tus hechizos Shadow Bolt, Immolate e Incinerate y en 1.2 s el de tu hechizo Soul Fire.",
+      "Reduce en 0.4 s el tiempo de lanzamiento de tus hechizos Shadow Bolt, Immolate e Incinerate y en 1.6 s el de tu hechizo Soul Fire.",
+      "Reduce en 0.5 s el tiempo de lanzamiento de tus hechizos Shadow Bolt, Immolate e Incinerate y en 2 s el de tu hechizo Soul Fire."
+    ],
+    "bane-of-havoc": [
+      "Aflige al objetivo durante 5 min, haciendo que un 15% de todo el daño infligido por el Warlock a otros objetivos se inflija también al objetivo maldito. Bane of Havoc está limitado a 1 objetivo, y solo puede haber un Bane activo por Warlock en un mismo objetivo."
+    ],
+    "cataclysm": [
+      "Reduce un 3% el coste de Maná de tus hechizos de Destruction.",
+      "Reduce un 6% el coste de Maná de tus hechizos de Destruction.",
+      "Reduce un 10% el coste de Maná de tus hechizos de Destruction."
+    ],
+    "conflagrate": [
+      "Prende fuego a un objetivo ya afligido por tu hechizo Immolate, infligiendo de 88 a 110 puntos de daño de Fuego y consumiendo tu efecto Immolate."
+    ],
+    "curse-of-exhaustion": [
+      "Reduce un 30% la velocidad de movimiento del objetivo durante 12 s. Solo puede haber una maldición activa por Warlock en un mismo objetivo."
+    ],
+    "decimation": [
+      "Reduce un 45% el tiempo de reutilización de tu hechizo Soul Fire. Cuando lanzas Shadow Bolt o Searing Pain a un enemigo por debajo del 35% de salud, infligen un 3% más de daño y, durante los siguientes 10 s, tu hechizo Soul Fire tiene su tiempo de lanzamiento reducido un 20% y no cuesta Soul Shards.",
+      "Reduce un 90% el tiempo de reutilización de tu hechizo Soul Fire. Cuando lanzas Shadow Bolt o Searing Pain a un enemigo por debajo del 35% de salud, infligen un 6% más de daño y, durante los siguientes 10 s, tu hechizo Soul Fire tiene su tiempo de lanzamiento reducido un 40% y no cuesta Soul Shards."
+    ],
+    "demonic-aegis": [
+      "Aumenta un 15% la eficacia de tus hechizos Demon Skin y Demon Armor.",
+      "Aumenta un 30% la eficacia de tus hechizos Demon Skin y Demon Armor."
+    ],
+    "demonic-brand": [
+      "Tu Searing Pain genera un 17% menos de amenaza y marca al objetivo durante 10 s. Los próximos 2 ataques de tu mascota contra el objetivo infligen de 65 a 68 puntos de daño de Fuego o de las Sombras según la mascota. Si se inflige daño de las Sombras, genera una amenaza elevada.",
+      "Tu Searing Pain genera un 33% menos de amenaza y marca al objetivo durante 10 s. Los próximos 4 ataques de tu mascota contra el objetivo infligen de 65 a 68 puntos de daño de Fuego o de las Sombras según la mascota. Si se inflige daño de las Sombras, genera una amenaza elevada.",
+      "Tu Searing Pain genera un 50% menos de amenaza y marca al objetivo durante 10 s. Los próximos 6 ataques de tu mascota contra el objetivo infligen de 65 a 68 puntos de daño de Fuego o de las Sombras según la mascota. Si se inflige daño de las Sombras, genera una amenaza elevada."
+    ],
+    "demonic-embrace": [
+      "Aumenta un 3% tu Aguante total.",
+      "Aumenta un 6% tu Aguante total.",
+      "Aumenta un 9% tu Aguante total.",
+      "Aumenta un 12% tu Aguante total.",
+      "Aumenta un 15% tu Aguante total."
+    ],
+    "demonic-energies": [
+      "Sanas a tu mascota por un 8% de todo el daño de hechizos que infliges. Cuando obtienes Maná con Life Tap, tu demonio invocado obtiene un 50% del Maná que obtienes.",
+      "Sanas a tu mascota por un 15% de todo el daño de hechizos que infliges. Cuando obtienes Maná con Life Tap, tu demonio invocado obtiene un 100% del Maná que obtienes."
+    ],
+    "demonic-knowledge": [
+      "Aumenta tu daño de hechizos y el daño de hechizos de tu mascota demonio hasta un 33% de tu nivel mientras tienes activa una mascota demonio invocada.",
+      "Aumenta tu daño de hechizos y el daño de hechizos de tu mascota demonio hasta un 67% de tu nivel mientras tienes activa una mascota demonio invocada.",
+      "Aumenta tu daño de hechizos y el daño de hechizos de tu mascota demonio hasta un 100% de tu nivel mientras tienes activa una mascota demonio invocada."
+    ],
+    "demonic-pact": [
+      "El efecto de tu Demonic Sacrifice ya no se cancela al invocar a una mascota demonio distinta. Volver a invocar a la mascota sacrificada seguirá cancelando el efecto."
+    ],
+    "demonic-sacrifice": [
+      "Al activarse, sacrifica a tu demonio invocado para potenciar el aspecto opuesto de tu poder, otorgándote un efecto que dura 2 horas. El efecto se cancela si se invoca a cualquier demonio.\n\nImp: aumenta un 15% tu daño de las Sombras.\n\nVoidwalker: restaura un 2% de tu Maná total cada 4 s.\n\nSuccubus/Incubus: aumenta un 15% tu daño de Fuego.\n\nFelhunter: restaura un 3% de tu Salud total cada 4 s."
+    ],
+    "destructive-reach": [
+      "Aumenta un 10% el alcance de tus hechizos de Destruction.",
+      "Aumenta un 20% el alcance de tus hechizos de Destruction."
+    ],
+    "fel-concentration": [
+      "Te da un 23% de probabilidad de evitar la interrupción causada por el daño mientras canalizas o lanzas tus hechizos Drain Life, Drain Mana, Drain Soul o Wrack.",
+      "Te da un 47% de probabilidad de evitar la interrupción causada por el daño mientras canalizas o lanzas tus hechizos Drain Life, Drain Mana, Drain Soul o Wrack.",
+      "Te da un 70% de probabilidad de evitar la interrupción causada por el daño mientras canalizas o lanzas tus hechizos Drain Life, Drain Mana, Drain Soul o Wrack."
+    ],
+    "fel-domination": [
+      "Tu próximo hechizo de invocación de Imp, Voidwalker, Succubus, Incubus o Felhunter tiene su tiempo de lanzamiento reducido en 5.5 s y su coste de Maná reducido un 50%."
+    ],
+    "fel-vitality": [
+      "Aumenta un 5% la salud y el Maná máximos de tu Imp, Voidwalker, Succubus, Incubus y Felhunter, y aumenta un 5% tu Maná máximo.",
+      "Aumenta un 10% la salud y el Maná máximos de tu Imp, Voidwalker, Succubus, Incubus y Felhunter, y aumenta un 10% tu Maná máximo.",
+      "Aumenta un 15% la salud y el Maná máximos de tu Imp, Voidwalker, Succubus, Incubus y Felhunter, y aumenta un 15% tu Maná máximo."
+    ],
+    "fire-and-brimstone": [
+      "Aumenta un 8% la probabilidad de golpe crítico de tu hechizo Conflagrate.",
+      "Aumenta un 17% la probabilidad de golpe crítico de tu hechizo Conflagrate.",
+      "Aumenta un 25% la probabilidad de golpe crítico de tu hechizo Conflagrate."
+    ],
+    "grim-reach": [
+      "Aumenta un 10% el alcance de tus hechizos de Affliction.",
+      "Aumenta un 20% el alcance de tus hechizos de Affliction."
+    ],
+    "improved-bane-of-agony": [
+      "Aumenta un 5% el daño infligido por tu Bane of Agony.",
+      "Aumenta un 10% el daño infligido por tu Bane of Agony."
+    ],
+    "improved-corruption": [
+      "Reduce en 0.4 s el tiempo de lanzamiento de tu hechizo Corruption y aumenta un 2% el daño que inflige.",
+      "Reduce en 0.8 s el tiempo de lanzamiento de tu hechizo Corruption y aumenta un 4% el daño que inflige.",
+      "Reduce en 1.2 s el tiempo de lanzamiento de tu hechizo Corruption y aumenta un 6% el daño que inflige.",
+      "Reduce en 1.6 s el tiempo de lanzamiento de tu hechizo Corruption y aumenta un 8% el daño que inflige.",
+      "Reduce en 2 s el tiempo de lanzamiento de tu hechizo Corruption y aumenta un 10% el daño que inflige."
+    ],
+    "improved-drains": [
+      "Aumenta un 7% la salud drenada o el daño infligido por tus hechizos Drain Life, Drain Soul y Wrack.",
+      "Aumenta un 13% la salud drenada o el daño infligido por tus hechizos Drain Life, Drain Soul y Wrack.",
+      "Aumenta un 20% la salud drenada o el daño infligido por tus hechizos Drain Life, Drain Soul y Wrack."
+    ],
+    "improved-felhunter": [
+      "Aumenta un 10% la reducción de Poder de ataque del Tainted Blood de tu Felhunter, la sanación de su Devour Magic y el nivel de detección de su Paranoia, y reduce en 2 s el tiempo de reutilización de su Spell Lock.",
+      "Aumenta un 20% la reducción de Poder de ataque del Tainted Blood de tu Felhunter, la sanación de su Devour Magic y el nivel de detección de su Paranoia, y reduce en 4 s el tiempo de reutilización de su Spell Lock.",
+      "Aumenta un 30% la reducción de Poder de ataque del Tainted Blood de tu Felhunter, la sanación de su Devour Magic y el nivel de detección de su Paranoia, y reduce en 6 s el tiempo de reutilización de su Spell Lock."
+    ],
+    "improved-health-funnel": [
+      "Aumenta un 20% la cantidad de salud transferida por tu hechizo Health Funnel, reduce un 15% su coste de salud y reduce un 50% toda la amenaza que genera tu Health Funnel. Permite usar Health Funnel sin importar la salud de tu demonio.",
+      "Aumenta un 40% la cantidad de salud transferida por tu hechizo Health Funnel, reduce un 30% su coste de salud y reduce un 100% toda la amenaza que genera tu Health Funnel. Permite usar Health Funnel sin importar la salud de tu demonio."
+    ],
+    "improved-imp": [
+      "Aumenta un 10% el daño del hechizo Firebolt de tu Imp y un 10% el efecto de su hechizo Fire Shield.",
+      "Aumenta un 20% el daño del hechizo Firebolt de tu Imp y un 20% el efecto de su hechizo Fire Shield.",
+      "Aumenta un 30% el daño del hechizo Firebolt de tu Imp y un 30% el efecto de su hechizo Fire Shield."
+    ],
+    "improved-life-tap": [
+      "Aumenta un 10% la cantidad de Maná que otorga tu hechizo Life Tap.",
+      "Aumenta un 20% la cantidad de Maná que otorga tu hechizo Life Tap."
+    ],
+    "improved-sayaad": [
+      "Aumenta un 10% el efecto de los hechizos Lash of Pain y Soothing Kiss de tu Succubus y tu Incubus, y aumenta un 10% la duración de los hechizos Seduction y Lesser Invisibility de tu Succubus y tu Incubus.",
+      "Aumenta un 20% el efecto de los hechizos Lash of Pain y Soothing Kiss de tu Succubus y tu Incubus, y aumenta un 20% la duración de los hechizos Seduction y Lesser Invisibility de tu Succubus y tu Incubus.",
+      "Aumenta un 30% el efecto de los hechizos Lash of Pain y Soothing Kiss de tu Succubus y tu Incubus, y aumenta un 30% la duración de los hechizos Seduction y Lesser Invisibility de tu Succubus y tu Incubus."
+    ],
+    "improved-shadow-bolt": [
+      "Los golpes críticos de tu Shadow Bolt aumentan un 4% el daño de las Sombras que el objetivo recibe de tus ataques durante 12 s.",
+      "Los golpes críticos de tu Shadow Bolt aumentan un 8% el daño de las Sombras que el objetivo recibe de tus ataques durante 12 s.",
+      "Los golpes críticos de tu Shadow Bolt aumentan un 12% el daño de las Sombras que el objetivo recibe de tus ataques durante 12 s.",
+      "Los golpes críticos de tu Shadow Bolt aumentan un 16% el daño de las Sombras que el objetivo recibe de tus ataques durante 12 s.",
+      "Los golpes críticos de tu Shadow Bolt aumentan un 20% el daño de las Sombras que el objetivo recibe de tus ataques durante 12 s."
+    ],
+    "improved-voidwalker": [
+      "Aumenta un 10% la eficacia de los hechizos Torment, Consume Shadows, Sacrifice y Suffering de tu Voidwalker.",
+      "Aumenta un 20% la eficacia de los hechizos Torment, Consume Shadows, Sacrifice y Suffering de tu Voidwalker.",
+      "Aumenta un 30% la eficacia de los hechizos Torment, Consume Shadows, Sacrifice y Suffering de tu Voidwalker."
+    ],
+    "incinerate": [
+      "Inflige de 99 a 113 puntos de daño de Fuego a tu objetivo y un 25% de daño adicional si el objetivo está afligido por Immolate."
+    ],
+    "intensity": [
+      "Te da un 23% de probabilidad de resistir la interrupción causada por el daño mientras lanzas o canalizas cualquier hechizo de Destruction.",
+      "Te da un 47% de probabilidad de resistir la interrupción causada por el daño mientras lanzas o canalizas cualquier hechizo de Destruction.",
+      "Te da un 70% de probabilidad de resistir la interrupción causada por el daño mientras lanzas o canalizas cualquier hechizo de Destruction."
+    ],
+    "malevolence": [
+      "Aumenta un 1% la probabilidad de efecto crítico de tus hechizos de las Sombras.",
+      "Aumenta un 2% la probabilidad de efecto crítico de tus hechizos de las Sombras.",
+      "Aumenta un 3% la probabilidad de efecto crítico de tus hechizos de las Sombras.",
+      "Aumenta un 4% la probabilidad de efecto crítico de tus hechizos de las Sombras.",
+      "Aumenta un 5% la probabilidad de efecto crítico de tus hechizos de las Sombras."
+    ],
+    "master-demonologist": [
+      "Otorga tanto al Warlock como al demonio invocado un efecto mientras ese demonio esté activo.\n\nImp - Aumenta un 2% el daño de Fuego infligido.\n\nVoidwalker - Reduce un 2% el daño físico recibido.\n\nSuccubus/Incubus - Aumenta un 2% el daño de las Sombras infligido.\n\nFelhunter - Reduce un 2% el daño mágico recibido.",
+      "Otorga tanto al Warlock como al demonio invocado un efecto mientras ese demonio esté activo.\n\nImp - Aumenta un 4% el daño de Fuego infligido.\n\nVoidwalker - Reduce un 4% el daño físico recibido.\n\nSuccubus/Incubus - Aumenta un 4% el daño de las Sombras infligido.\n\nFelhunter - Reduce un 4% el daño mágico recibido.",
+      "Otorga tanto al Warlock como al demonio invocado un efecto mientras ese demonio esté activo.\n\nImp - Aumenta un 6% el daño de Fuego infligido.\n\nVoidwalker - Reduce un 6% el daño físico recibido.\n\nSuccubus/Incubus - Aumenta un 6% el daño de las Sombras infligido.\n\nFelhunter - Reduce un 6% el daño mágico recibido.",
+      "Otorga tanto al Warlock como al demonio invocado un efecto mientras ese demonio esté activo.\n\nImp - Aumenta un 8% el daño de Fuego infligido.\n\nVoidwalker - Reduce un 8% el daño físico recibido.\n\nSuccubus/Incubus - Aumenta un 8% el daño de las Sombras infligido.\n\nFelhunter - Reduce un 8% el daño mágico recibido.",
+      "Otorga tanto al Warlock como al demonio invocado un efecto mientras ese demonio esté activo.\n\nImp - Aumenta un 10% el daño de Fuego infligido.\n\nVoidwalker - Reduce un 10% el daño físico recibido.\n\nSuccubus/Incubus - Aumenta un 10% el daño de las Sombras infligido.\n\nFelhunter - Reduce un 10% el daño mágico recibido."
+    ],
+    "master-summoner": [
+      "Reduce en 2 s el tiempo de lanzamiento de tus hechizos de invocación de Imp, Voidwalker, Succubus, Incubus y Felhunter y un 20% su coste de Maná.",
+      "Reduce en 4 s el tiempo de lanzamiento de tus hechizos de invocación de Imp, Voidwalker, Succubus, Incubus y Felhunter y un 40% su coste de Maná."
+    ],
+    "molten-skin": [
+      "Reduce un 2% todo el daño recibido.",
+      "Reduce un 4% todo el daño recibido.",
+      "Reduce un 6% todo el daño recibido.",
+      "Reduce un 8% todo el daño recibido.",
+      "Reduce un 10% todo el daño recibido."
+    ],
+    "nightfall": [
+      "Da a tus hechizos Corruption, Drain Soul, Drain Life y Wrack un 2% de probabilidad de hacerte entrar en Shadow Trance tras dañar al adversario. Shadow Trance reduce un 100% el tiempo de lanzamiento de tu próximo hechizo Shadow Bolt.",
+      "Da a tus hechizos Corruption, Drain Soul, Drain Life y Wrack un 4% de probabilidad de hacerte entrar en Shadow Trance tras dañar al adversario. Shadow Trance reduce un 100% el tiempo de lanzamiento de tu próximo hechizo Shadow Bolt."
+    ],
+    "pandemic": [
+      "Aumenta un 33% la bonificación de daño de golpe crítico de tus hechizos Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life y Wrack.",
+      "Aumenta un 67% la bonificación de daño de golpe crítico de tus hechizos Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life y Wrack.",
+      "Aumenta un 100% la bonificación de daño de golpe crítico de tus hechizos Corruption, Bane of Agony, Bane of Doom, Drain Soul, Drain Life, Siphon Life y Wrack."
+    ],
+    "pyroclasm": [
+      "Da a tu hechizo Soul Fire un 13% de probabilidad de aturdir al objetivo durante 3 s, y a tus hechizos Rain of Fire y Hellfire un 13% de probabilidad, a lo largo de su duración, de aturdir durante 3 s a los objetivos que dañan.",
+      "Da a tu hechizo Soul Fire un 26% de probabilidad de aturdir al objetivo durante 3 s, y a tus hechizos Rain of Fire y Hellfire un 26% de probabilidad, a lo largo de su duración, de aturdir durante 3 s a los objetivos que dañan."
+    ],
+    "ruin": [
+      "Aumenta un 20% la bonificación de daño de golpe crítico de tus hechizos de Destruction.",
+      "Aumenta un 40% la bonificación de daño de golpe crítico de tus hechizos de Destruction.",
+      "Aumenta un 60% la bonificación de daño de golpe crítico de tus hechizos de Destruction.",
+      "Aumenta un 80% la bonificación de daño de golpe crítico de tus hechizos de Destruction.",
+      "Aumenta un 100% la bonificación de daño de golpe crítico de tus hechizos de Destruction."
+    ],
+    "shadow-and-flame": [
+      "Golpear a un enemigo con Conflagrate aumenta un 2% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 2% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 20% de probabilidad de no consumir Immolate y Shadowburn tiene un 20% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 4% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 4% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 40% de probabilidad de no consumir Immolate y Shadowburn tiene un 40% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 6% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 6% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 60% de probabilidad de no consumir Immolate y Shadowburn tiene un 60% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 8% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 8% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 80% de probabilidad de no consumir Immolate y Shadowburn tiene un 80% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 10% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 10% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 100% de probabilidad de no consumir Immolate y Shadowburn tiene un 100% de probabilidad de devolver instantáneamente un Soul Shard."
+    ],
+    "shadow-mastery": [
+      "Aumenta un 2% el daño infligido o la vida drenada por tus hechizos de las Sombras.",
+      "Aumenta un 4% el daño infligido o la vida drenada por tus hechizos de las Sombras.",
+      "Aumenta un 6% el daño infligido o la vida drenada por tus hechizos de las Sombras.",
+      "Aumenta un 8% el daño infligido o la vida drenada por tus hechizos de las Sombras.",
+      "Aumenta un 10% el daño infligido o la vida drenada por tus hechizos de las Sombras."
+    ],
+    "shadowburn": [
+      "Golpea instantáneamente al objetivo infligiendo de 65 a 73 puntos de daño de las Sombras. Si un objetivo no trivial muere en los 8 s posteriores a ser golpeado por Shadowburn, el lanzador obtiene un Soul Shard."
+    ],
+    "siphon-life": [
+      "Transfiere 11 puntos de salud del objetivo al lanzador cada 3 s. Dura 30 s."
+    ],
+    "soul-harvest": [
+      "Matar a un objetivo no trivial afligido por tu Drain Soul aumenta un 50% tu regeneración de Maná durante 10 s y permite que un 50% de la regeneración normal de Maná continúe mientras lanzas hechizos.",
+      "Matar a un objetivo no trivial afligido por tu Drain Soul aumenta un 100% tu regeneración de Maná durante 10 s y permite que un 100% de la regeneración normal de Maná continúe mientras lanzas hechizos."
+    ],
+    "soul-link": [
+      "Mientras está activo, un 30% de todo el daño que recibe el lanzador lo recibe en su lugar tu demonio Imp, Voidwalker, Succubus, Incubus o Felhunter. Además, tanto el demonio como el amo infligen un 3% más de daño. Dura mientras el demonio esté activo."
+    ],
+    "soul-siphon": [
+      "Aumenta un 4% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus otros efectos de Affliction activos en el objetivo, hasta un aumento máximo del 12%.",
+      "Aumenta un 8% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus otros efectos de Affliction activos en el objetivo, hasta un aumento máximo del 24%.",
+      "Aumenta un 12% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus otros efectos de Affliction activos en el objetivo, hasta un aumento máximo del 36%."
+    ],
+    "suppression": [
+      "Aumenta un 1% tu probabilidad de golpear y reduce un 4% toda la amenaza que generas.",
+      "Aumenta un 2% tu probabilidad de golpear y reduce un 8% toda la amenaza que generas.",
+      "Aumenta un 3% tu probabilidad de golpear y reduce un 12% toda la amenaza que generas.",
+      "Aumenta un 4% tu probabilidad de golpear y reduce un 16% toda la amenaza que generas.",
+      "Aumenta un 5% tu probabilidad de golpear y reduce un 20% toda la amenaza que generas."
+    ],
+    "unholy-power": [
+      "Aumenta un 2% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter.",
+      "Aumenta un 4% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter.",
+      "Aumenta un 6% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter.",
+      "Aumenta un 8% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter.",
+      "Aumenta un 10% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter."
+    ],
+    "wrack": [
+      "Desgarra al objetivo desde dentro, infligiendo 36 puntos de daño de las Sombras cada 1 s y aumentando un 10% el daño que recibe de tus otros efectos de daño de las Sombras en el tiempo durante 6 s."
+    ]
+  }
+}

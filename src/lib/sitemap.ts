@@ -29,6 +29,8 @@ export const PAGE_UPDATED: Record<string, string> = {
   // il builder (22/10/2026): la pagina delle classi e una pagina per classe, con i suoi tre alberi
   "/builder": "2026-10-22",
   ...Object.fromEntries(classIds.map((id) => [`/builder/${id}`, "2026-10-22"])),
+  // le build pubblicate (23/10/2026): l'elenco qui, le schede in /<lingua>/sitemap-builds.xml
+  "/builds": "2026-10-23",
 };
 
 export const SITEMAP_SECTIONS = ["pages", "news", "guides"] as const;
@@ -85,5 +87,27 @@ export function sitemapIndexResponse(): Response {
       items.push({ url: `${siteUrl}${sectionSitemapPath(s, l)}`, lastmod: clampDay(pages.flatMap((p) => p.days)) });
     }
   }
+  // le build pubblicate: una sitemap per lingua, rigenerata dalle Server Action (vuota finché non ce ne sono)
+  for (const l of locales) items.push({ url: `${siteUrl}${buildsSitemapPath(l)}`, lastmod: clampDay([PAGE_UPDATED["/builds"]]) });
   return new Response(sitemapIndexXml(items), { headers: XML_HEADERS });
+}
+
+/**
+ * Sitemap delle build pubblicate (23/10/2026), una per lingua: ogni scheda compare solo nella sitemap della lingua
+ * della sua guida e solo da `BUILD_MIN_WORDS` parole (nelle altre lingue è noindex). Letta dal database con il client
+ * anonimo; se la tabella non c'è ancora, la sitemap è vuota. `lastmod` dal giorno dell'ultimo aggiornamento.
+ */
+export async function buildsSitemapResponse(locale: Locale): Promise<Response> {
+  const { sitemapBuilds } = await import("./community/buildQueries");
+  const { BUILD_MIN_WORDS } = await import("./community/builds");
+  const all = await sitemapBuilds();
+  const entries: UrlEntry[] = all
+    .filter((b) => b.lang === locale && b.words >= BUILD_MIN_WORDS)
+    .map((b) => ({ url: `${siteUrl}${href(locale, `/builds/${b.slug}`)}`, lastmod: clampDay([b.updated, PAGE_UPDATED["/builds"]]), alternates: alternatesFor(`/builds/${b.slug}`, [locale]).languages }));
+  return new Response(urlsetXml(entries), { headers: XML_HEADERS });
+}
+
+/** Indirizzo della sitemap delle build di una lingua, per l'indice. */
+export function buildsSitemapPath(locale: Locale): string {
+  return `/${locale}/sitemap-builds.xml`;
 }

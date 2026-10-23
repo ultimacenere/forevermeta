@@ -73,3 +73,55 @@ annulla e ripeti. Touch (`pointer: coarse`): tocco +1 e selezione, "−" e "i" s
 fissa in basso (riassunto, punti, livello, Condividi). Ogni azione o rifiuto viene detto nell'area `aria-live`.
 
 Misura (`src/lib/analytics.ts`): `build_share` (method, class), `build_complete` (class), `build_import` (ok).
+
+## Testi dei talenti in italiano e spagnolo (23/10/2026)
+
+Pierluigi: "le abilità sono in inglese e non sono tradotte in lingua, andrebbero messe nelle altre due lingue". I testi
+di ogni rango sono tradotti da noi dall'inglese del client (il client di Forever non ha l'italiano; i testi spagnoli
+ufficiali non li abbiamo), con i nomi di talenti e abilità in inglese e il glossario dei termini di gioco del brief
+(`Attack Power` → Potenza d'attacco / Poder de ataque, `Rage` → Ira, `Haste` → Celerità / Celeridad, ecc.). Stanno in
+`src/lib/data/talents/i18n/<classe>.json` (`{ it: { <id>: [ranghi] }, es: {…} }`), scritti da
+`node scripts/talent-translations.mjs <cartella> --apply` dai file `tr-<classe>.json` di una traduzione (controlli: id,
+numero di ranghi, numeri uguali all'inglese); `--check` li confronta con i dati attuali dopo un'importazione (un
+talento nuovo senza traduzione tiene il testo inglese). `localizeTalents(data, locale)` (`src/lib/data/talents/index.ts`)
+mette i testi tradotti al posto degli inglesi per le pagine it ed es; la pagina lo dice in fondo (`textsOurs`). Il
+confronto con Classic nel dettaglio resta in inglese.
+
+## Build pubblicate (23/10/2026)
+
+Pierluigi: "attiviamo la pubblicazione delle build sì da subito". Sul modello dei mazzi della community di OriginsMeta.
+
+| Pezzo | File |
+| --- | --- |
+| Regole pure (campi, limiti, slug, soglia di indicizzazione, tabella mancante) | `src/lib/community/builds.ts` + `builds.test.ts` |
+| Letture (elenco, scheda, le mie, sitemap) | `src/lib/community/buildQueries.ts` |
+| Server Action (pubblica, modifica, stato, elimina, vota) | `src/lib/community/buildActions.ts` |
+| Dati delle pagine (classi, razze, autore, link al builder) | `src/lib/community/buildView.ts` |
+| Testi EN/IT/ES | `src/lib/buildLabels.ts` (componenti) e `dictionaries/*.ts` (`builds`) |
+| Componenti | `src/components/builds/` (`BuildForm`, `BuildList`, `BuildTrees` in sola lettura, `BuildStars`, `BuildOwnerActions`, `BuildExtras`) |
+| Pagine | `/builds` (ISR 300), `/builds/[slug]` (ISR 60), `/builds/publish` e `/builds/[slug]/edit` (dinamiche, noindex, nel matcher del proxy), sezione `#builds` di `/account` |
+| Sitemap | `/<lingua>/sitemap-builds.xml` (`buildsSitemapResponse`), nell'indice |
+| SQL | blocco `-- ===== 23/10/2026: BUILD PUBBLICATE =====` in fondo a `supabase/schema.sql` |
+
+Giro: builder → "Pubblica la tua build" (link a `/builds/publish#<codice>`; senza accesso la pagina mostra il link al
+login che riporta qui, hash compreso) → modulo (nome, scopo, lingua della guida, riassunto, come si gioca, punti di
+forza, punti deboli, note) → Server Action `publishBuild`: rilegge il codice con il motore (classe, razza, livello,
+punti), lo salva in forma canonica, slug dal nome più quattro caratteri casuali → scheda `/builds/<slug>?new=1`.
+Regole: testo semplice (niente HTML né Markdown), riassunto 40–600 caratteri, "come si gioca" 100–6.000, le altre
+sezioni facoltative; una build senza punti non si pubblica; 20 build pubblicate per iscritto (trigger
+`enforce_build_limit`); voti 1–5 uno per iscritto e per build, mai sulla propria (policy); le letture pubbliche
+filtrano su `status = 'published'`; la scheda è indicizzata solo nella lingua della guida e da 75 parole
+(`buildIndexable`), nelle altre lingue è noindex e dice in che lingua è la guida. Eventi `build_published` e
+`build_vote`. Niente annuncio su Discord finché ForeverMeta non ha i suoi webhook.
+
+**Il sito regge senza migrazione**: se la tabella non c'è, l'elenco e il modulo dicono "non ancora attivo"
+(`tableMissing`). **Migrazione da lanciare** dalla cartella del repository, con la password del database in
+`.env.local` (PowerShell: un comando per riga):
+
+```
+cd C:\Users\User\Desktop\forevermeta
+node scripts\db-migrate.mjs
+```
+
+Verifica dopo: `/it/builds` risponde con l'elenco vuoto ("Nessuna build pubblicata ancora") invece del messaggio
+"non ancora attive"; una build pubblicata dal builder compare in `/account#builds` e in `/it/builds`.

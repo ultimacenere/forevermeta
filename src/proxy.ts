@@ -25,5 +25,5 @@ export async function proxy(request: NextRequest) {
 
 // Il matcher deve restare scritto per esteso (Next lo legge alla build): una lingua nuova va aggiunta a mano.
 export const config = {
-  matcher: ["/:locale(en|it|es)/account"],
+  matcher: ["/:locale(en|it|es)/account", "/:locale(en|it|es)/builds/publish", "/:locale(en|it|es)/builds/:slug/edit"],
 };

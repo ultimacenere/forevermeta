@@ -1,0 +1,508 @@
+{
+  "it": {
+    "arcane-blast": [
+      "Investe il bersaglio con un'esplosione di energia, infliggendo da 34 a 38 danni Arcani. Ogni volta che lanci Arcane Blast ottieni il 15% del tuo Intelletto come Danni da incantesimo e il costo in Mana di Arcane Blast aumenta del 175%. L'effetto si accumula fino a 4 volte e dura 15 secondi dal momento della prima applicazione."
+    ],
+    "arcane-concentration": [
+      "Ti dà una probabilità del 2% di entrare in stato di Clearcasting dopo che un qualsiasi incantesimo di danno colpisce un bersaglio. Lo stato di Clearcasting riduce del 100% il costo in Mana del tuo prossimo incantesimo di danno.",
+      "Ti dà una probabilità del 4% di entrare in stato di Clearcasting dopo che un qualsiasi incantesimo di danno colpisce un bersaglio. Lo stato di Clearcasting riduce del 100% il costo in Mana del tuo prossimo incantesimo di danno.",
+      "Ti dà una probabilità del 6% di entrare in stato di Clearcasting dopo che un qualsiasi incantesimo di danno colpisce un bersaglio. Lo stato di Clearcasting riduce del 100% il costo in Mana del tuo prossimo incantesimo di danno.",
+      "Ti dà una probabilità dell'8% di entrare in stato di Clearcasting dopo che un qualsiasi incantesimo di danno colpisce un bersaglio. Lo stato di Clearcasting riduce del 100% il costo in Mana del tuo prossimo incantesimo di danno.",
+      "Ti dà una probabilità del 10% di entrare in stato di Clearcasting dopo che un qualsiasi incantesimo di danno colpisce un bersaglio. Lo stato di Clearcasting riduce del 100% il costo in Mana del tuo prossimo incantesimo di danno."
+    ],
+    "arcane-focus": [
+      "Aumenta la tua probabilità di colpire con gli incantesimi Arcani dell'1%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi Arcani del 2%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi Arcani del 3%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi Arcani del 4%.",
+      "Aumenta la tua probabilità di colpire con gli incantesimi Arcani del 5%."
+    ],
+    "arcane-geometry": [
+      "Aumenta di 3 metri la gittata dei tuoi incantesimi Arcani.",
+      "Aumenta di 6 metri la gittata dei tuoi incantesimi Arcani."
+    ],
+    "arcane-impact": [
+      "Aumenta del 2% la probabilità di colpo critico dei tuoi incantesimi Arcani.",
+      "Aumenta del 4% la probabilità di colpo critico dei tuoi incantesimi Arcani.",
+      "Aumenta del 6% la probabilità di colpo critico dei tuoi incantesimi Arcani."
+    ],
+    "arcane-instability": [
+      "Aumenta dell'1% i danni inflitti dai tuoi incantesimi e dell'1% la tua probabilità di colpo critico.",
+      "Aumenta del 2% i danni inflitti dai tuoi incantesimi e del 2% la tua probabilità di colpo critico.",
+      "Aumenta del 3% i danni inflitti dai tuoi incantesimi e del 3% la tua probabilità di colpo critico."
+    ],
+    "arcane-meditation": [
+      "Permette al 17% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 33% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
+      "Permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi."
+    ],
+    "arcane-mind": [
+      "Aumenta del 2% il tuo Intelletto e aumenta del 20% il bonus ai danni critici dei tuoi incantesimi Arcani.",
+      "Aumenta del 4% il tuo Intelletto e aumenta del 40% il bonus ai danni critici dei tuoi incantesimi Arcani.",
+      "Aumenta del 6% il tuo Intelletto e aumenta del 60% il bonus ai danni critici dei tuoi incantesimi Arcani.",
+      "Aumenta dell'8% il tuo Intelletto e aumenta dell'80% il bonus ai danni critici dei tuoi incantesimi Arcani.",
+      "Aumenta del 10% il tuo Intelletto e aumenta del 100% il bonus ai danni critici dei tuoi incantesimi Arcani."
+    ],
+    "arcane-power": [
+      "Per i prossimi 15 secondi i tuoi incantesimi infliggono il 30% di danni in più, ma costano il 30% di Mana in più."
+    ],
+    "arcane-resilience": [
+      "Aumenta la tua Armatura di un valore pari al 25% del tuo Intelletto.",
+      "Aumenta la tua Armatura di un valore pari al 50% del tuo Intelletto."
+    ],
+    "arcane-shielding": [
+      "Riduce del 17% il Mana perso per ogni punto di danno subito mentre il tuo incantesimo Mana Shield è attivo e aumenta del 25% le resistenze conferite dal tuo incantesimo Mage Armor.",
+      "Riduce del 33% il Mana perso per ogni punto di danno subito mentre il tuo incantesimo Mana Shield è attivo e aumenta del 50% le resistenze conferite dal tuo incantesimo Mage Armor."
+    ],
+    "arcane-subtlety": [
+      "Riduce di 8 la resistenza del tuo bersaglio a tutti i tuoi incantesimi e riduce del 15% la minaccia causata dai tuoi incantesimi Arcani.",
+      "Riduce di 15 la resistenza del tuo bersaglio a tutti i tuoi incantesimi e riduce del 30% la minaccia causata dai tuoi incantesimi Arcani."
+    ],
+    "arcane-wrath": [
+      "Lancia un proiettile di pura energia Arcana contro il bersaglio nemico, causando da 122 a 146 danni Arcani. Questo incantesimo ottiene Danni da incantesimo aggiuntivi pari al 5% del tuo Mana massimo."
+    ],
+    "arctic-reach": [
+      "Aumenta del 10% la gittata dei tuoi incantesimi Frostbolt, Frost Blast e Blizzard e il raggio dei tuoi incantesimi Frost Nova e Cone of Cold.",
+      "Aumenta del 20% la gittata dei tuoi incantesimi Frostbolt, Frost Blast e Blizzard e il raggio dei tuoi incantesimi Frost Nova e Cone of Cold."
+    ],
+    "blast-wave": [
+      "Un'ondata di fiamme si irradia dall'incantatore, infliggendo da 154 a 184 danni da Fuoco a tutti i nemici investiti dall'esplosione e applicando loro l'effetto Daze, che riduce del 50% la velocità di movimento per 6 secondi."
+    ],
+    "burning-soul": [
+      "Dà ai tuoi incantesimi di Fuoco una probabilità del 23% di non perdere tempo di lancio quando subisci danni e riduce del 10% la minaccia causata dai tuoi incantesimi di Fuoco.",
+      "Dà ai tuoi incantesimi di Fuoco una probabilità del 47% di non perdere tempo di lancio quando subisci danni e riduce del 20% la minaccia causata dai tuoi incantesimi di Fuoco.",
+      "Dà ai tuoi incantesimi di Fuoco una probabilità del 70% di non perdere tempo di lancio quando subisci danni e riduce del 30% la minaccia causata dai tuoi incantesimi di Fuoco."
+    ],
+    "cold-snap": [
+      "Azzera il tempo di ricarica rimanente di tutti gli altri tuoi incantesimi di Gelo."
+    ],
+    "combustion": [
+      "Quando viene attivato, questo incantesimo fa sì che ogni colpo andato a segno dei tuoi incantesimi di danno da Fuoco aumenti del 10% la tua probabilità di colpo critico con gli incantesimi di danno da Fuoco. L'effetto dura finché non hai causato 3 colpi critici non periodici con incantesimi di Fuoco."
+    ],
+    "critical-mass": [
+      "Aumenta del 2% la probabilità di colpo critico dei tuoi incantesimi di Fuoco.",
+      "Aumenta del 4% la probabilità di colpo critico dei tuoi incantesimi di Fuoco.",
+      "Aumenta del 6% la probabilità di colpo critico dei tuoi incantesimi di Fuoco.",
+      "Aumenta dell'8% la probabilità di colpo critico dei tuoi incantesimi di Fuoco.",
+      "Aumenta del 10% la probabilità di colpo critico dei tuoi incantesimi di Fuoco."
+    ],
+    "elemental-precision": [
+      "Aumenta del 2% la tua probabilità di colpire con gli incantesimi di Gelo e di Fuoco.",
+      "Aumenta del 4% la tua probabilità di colpire con gli incantesimi di Gelo e di Fuoco.",
+      "Aumenta del 6% la tua probabilità di colpire con gli incantesimi di Gelo e di Fuoco."
+    ],
+    "fingers-of-frost": [
+      "Dà ai tuoi effetti Chill una probabilità del 15% di conferirti l'effetto Fingers of Frost, che tratta il tuo prossimo 1 incantesimo lanciato come se il bersaglio fosse congelato. Dura 15 secondi.",
+      "Dà ai tuoi effetti Chill una probabilità del 15% di conferirti l'effetto Fingers of Frost, che tratta i tuoi prossimi 2 incantesimi lanciati come se il bersaglio fosse congelato. Dura 15 secondi."
+    ],
+    "fire-power": [
+      "Aumenta dell'1% i danni inflitti dai tuoi incantesimi di Fuoco per ogni tuo effetto di Fuoco presente sul bersaglio, fino a un aumento massimo del 4%. Gli effetti che mescolano più scuole di magia non contano.",
+      "Aumenta del 2% i danni inflitti dai tuoi incantesimi di Fuoco per ogni tuo effetto di Fuoco presente sul bersaglio, fino a un aumento massimo dell'8%. Gli effetti che mescolano più scuole di magia non contano.",
+      "Aumenta del 3% i danni inflitti dai tuoi incantesimi di Fuoco per ogni tuo effetto di Fuoco presente sul bersaglio, fino a un aumento massimo del 12%. Gli effetti che mescolano più scuole di magia non contano."
+    ],
+    "flame-throwing": [
+      "Aumenta di 3 metri la gittata dei tuoi incantesimi di Fuoco.",
+      "Aumenta di 6 metri la gittata dei tuoi incantesimi di Fuoco."
+    ],
+    "frost-channeling": [
+      "Riduce del 5% il costo in Mana dei tuoi incantesimi di Gelo e riduce del 10% la minaccia causata dai tuoi incantesimi di Gelo.",
+      "Riduce del 10% il costo in Mana dei tuoi incantesimi di Gelo e riduce del 20% la minaccia causata dai tuoi incantesimi di Gelo.",
+      "Riduce del 15% il costo in Mana dei tuoi incantesimi di Gelo e riduce del 30% la minaccia causata dai tuoi incantesimi di Gelo."
+    ],
+    "frost-warding": [
+      "Aumenta del 15% l'Armatura e le resistenze conferite dai tuoi incantesimi Frost Armor e Ice Armor, dà al tuo Frost Ward una probabilità del 10% di annullare l'incantesimo di danno da cui protegge e aumenta del 10% la quantità assorbita dai tuoi Ice Barrier e Frost Ward.",
+      "Aumenta del 30% l'Armatura e le resistenze conferite dai tuoi incantesimi Frost Armor e Ice Armor, dà al tuo Frost Ward una probabilità del 20% di annullare l'incantesimo di danno da cui protegge e aumenta del 20% la quantità assorbita dai tuoi Ice Barrier e Frost Ward."
+    ],
+    "frostbite": [
+      "Dà ai tuoi effetti Chill una probabilità del 5% di congelare il bersaglio per 5 secondi.",
+      "Dà ai tuoi effetti Chill una probabilità del 10% di congelare il bersaglio per 5 secondi.",
+      "Dà ai tuoi effetti Chill una probabilità del 15% di congelare il bersaglio per 5 secondi."
+    ],
+    "heating-up": [
+      "I colpi critici non periodici con Fireball, Frostfire Bolt, Fire Blast e Scorch riducono del 25% il tempo di lancio del tuo prossimo Pyroblast lanciato entro 20 secondi, accumulandosi fino a 3 volte. Fire Blast conferisce un accumulo aggiuntivo ogni volta che infligge danni."
+    ],
+    "ice-barrier": [
+      "Ti avvolge in uno scudo che assorbe 447 danni e aumenta del 3% i tuoi danni da Gelo per 1 minuto. Finché sei protetto dallo scudo, i tuoi danni da Gelo aumentano di un ulteriore 3% e non perdi tempo di lancio quando subisci danni."
+    ],
+    "ice-block": [
+      "Vieni racchiuso in un blocco di ghiaccio che ti protegge da tutti gli attacchi fisici e dagli incantesimi per 10 secondi, ma in quel lasso di tempo non puoi attaccare, muoverti né lanciare incantesimi."
+    ],
+    "ice-lance": [
+      "Infligge da 28 a 32 danni da Gelo a un bersaglio nemico. Infligge il 200% di danni in più ai bersagli congelati."
+    ],
+    "ice-shards": [
+      "Aumenta del 20% il bonus ai danni critici dei tuoi incantesimi di Gelo.",
+      "Aumenta del 40% il bonus ai danni critici dei tuoi incantesimi di Gelo.",
+      "Aumenta del 60% il bonus ai danni critici dei tuoi incantesimi di Gelo.",
+      "Aumenta dell'80% il bonus ai danni critici dei tuoi incantesimi di Gelo.",
+      "Aumenta del 100% il bonus ai danni critici dei tuoi incantesimi di Gelo."
+    ],
+    "ignite": [
+      "I tuoi colpi critici con gli incantesimi di danno da Fuoco fanno bruciare il bersaglio per un ulteriore 8% dei danni del tuo incantesimo in 4 secondi.",
+      "I tuoi colpi critici con gli incantesimi di danno da Fuoco fanno bruciare il bersaglio per un ulteriore 16% dei danni del tuo incantesimo in 4 secondi.",
+      "I tuoi colpi critici con gli incantesimi di danno da Fuoco fanno bruciare il bersaglio per un ulteriore 24% dei danni del tuo incantesimo in 4 secondi.",
+      "I tuoi colpi critici con gli incantesimi di danno da Fuoco fanno bruciare il bersaglio per un ulteriore 32% dei danni del tuo incantesimo in 4 secondi.",
+      "I tuoi colpi critici con gli incantesimi di danno da Fuoco fanno bruciare il bersaglio per un ulteriore 40% dei danni del tuo incantesimo in 4 secondi."
+    ],
+    "impact": [
+      "Dà ai tuoi incantesimi di Fuoco una probabilità del 3% di stordire il bersaglio per 2 secondi.",
+      "Dà ai tuoi incantesimi di Fuoco una probabilità del 7% di stordire il bersaglio per 2 secondi.",
+      "Dà ai tuoi incantesimi di Fuoco una probabilità del 10% di stordire il bersaglio per 2 secondi."
+    ],
+    "improved-blizzard": [
+      "Aggiunge un effetto Chill al tuo incantesimo Blizzard. Questo effetto riduce del 15% la velocità di movimento del bersaglio per 1.5 secondi.",
+      "Aggiunge un effetto Chill al tuo incantesimo Blizzard. Questo effetto riduce del 25% la velocità di movimento del bersaglio per 1.5 secondi.",
+      "Aggiunge un effetto Chill al tuo incantesimo Blizzard. Questo effetto riduce del 40% la velocità di movimento del bersaglio per 1.5 secondi."
+    ],
+    "improved-channeling": [
+      "Ti dà una probabilità del 20% di evitare l'interruzione causata dai danni mentre canalizzi Arcane Missiles e una probabilità del 14% mentre lanci Arcane Blast o Arcane Wrath.",
+      "Ti dà una probabilità del 40% di evitare l'interruzione causata dai danni mentre canalizzi Arcane Missiles e una probabilità del 28% mentre lanci Arcane Blast o Arcane Wrath.",
+      "Ti dà una probabilità del 60% di evitare l'interruzione causata dai danni mentre canalizzi Arcane Missiles e una probabilità del 42% mentre lanci Arcane Blast o Arcane Wrath.",
+      "Ti dà una probabilità dell'80% di evitare l'interruzione causata dai danni mentre canalizzi Arcane Missiles e una probabilità del 56% mentre lanci Arcane Blast o Arcane Wrath.",
+      "Ti dà una probabilità del 100% di evitare l'interruzione causata dai danni mentre canalizzi Arcane Missiles e una probabilità del 70% mentre lanci Arcane Blast o Arcane Wrath."
+    ],
+    "improved-cone-of-cold": [
+      "Aumenta del 12% i danni inflitti dal tuo incantesimo Cone of Cold.",
+      "Aumenta del 23% i danni inflitti dal tuo incantesimo Cone of Cold.",
+      "Aumenta del 35% i danni inflitti dal tuo incantesimo Cone of Cold."
+    ],
+    "improved-counterspell": [
+      "Il tuo Counterspell silenzia anche il bersaglio per 2 secondi.",
+      "Il tuo Counterspell silenzia anche il bersaglio per 4 secondi."
+    ],
+    "improved-fire-blast": [
+      "Riduce di 1 secondo il tempo di ricarica del tuo incantesimo Fire Blast e aumenta di 8 metri la sua gittata.",
+      "Riduce di 2 secondi il tempo di ricarica del tuo incantesimo Fire Blast e aumenta di 15 metri la sua gittata."
+    ],
+    "improved-fire-ward": [
+      "Fa sì che il tuo Fire Ward abbia una probabilità del 10% di riflettere gli incantesimi di Fuoco mentre è attivo.",
+      "Fa sì che il tuo Fire Ward abbia una probabilità del 20% di riflettere gli incantesimi di Fuoco mentre è attivo."
+    ],
+    "improved-fireball": [
+      "Riduce di 0.1 secondi il tempo di lancio dei tuoi incantesimi Fireball e Frostfire Bolt.",
+      "Riduce di 0.2 secondi il tempo di lancio dei tuoi incantesimi Fireball e Frostfire Bolt.",
+      "Riduce di 0.3 secondi il tempo di lancio dei tuoi incantesimi Fireball e Frostfire Bolt.",
+      "Riduce di 0.4 secondi il tempo di lancio dei tuoi incantesimi Fireball e Frostfire Bolt.",
+      "Riduce di 0.5 secondi il tempo di lancio dei tuoi incantesimi Fireball e Frostfire Bolt."
+    ],
+    "improved-flamestrike": [
+      "Aumenta del 5% la probabilità di colpo critico del tuo incantesimo Flamestrike.",
+      "Aumenta del 10% la probabilità di colpo critico del tuo incantesimo Flamestrike.",
+      "Aumenta del 15% la probabilità di colpo critico del tuo incantesimo Flamestrike."
+    ],
+    "improved-frost-nova": [
+      "Riduce di 2 secondi il tempo di ricarica del tuo incantesimo Frost Nova.",
+      "Riduce di 4 secondi il tempo di ricarica del tuo incantesimo Frost Nova."
+    ],
+    "improved-frostbolt": [
+      "Riduce di 0.1 secondi il tempo di lancio dei tuoi incantesimi Frostbolt e Frost Blast.",
+      "Riduce di 0.2 secondi il tempo di lancio dei tuoi incantesimi Frostbolt e Frost Blast.",
+      "Riduce di 0.3 secondi il tempo di lancio dei tuoi incantesimi Frostbolt e Frost Blast.",
+      "Riduce di 0.4 secondi il tempo di lancio dei tuoi incantesimi Frostbolt e Frost Blast.",
+      "Riduce di 0.5 secondi il tempo di lancio dei tuoi incantesimi Frostbolt e Frost Blast."
+    ],
+    "improved-scorch": [
+      "Il tuo incantesimo Scorch ha una probabilità del 33% di rendere il tuo bersaglio vulnerabile ai danni da Fuoco. Questa vulnerabilità aumenta del 3% tutti i danni da Fuoco che infliggi al tuo bersaglio e dura 30 secondi, accumulandosi fino a 5 volte.",
+      "Il tuo incantesimo Scorch ha una probabilità del 67% di rendere il tuo bersaglio vulnerabile ai danni da Fuoco. Questa vulnerabilità aumenta del 3% tutti i danni da Fuoco che infliggi al tuo bersaglio e dura 30 secondi, accumulandosi fino a 5 volte.",
+      "Il tuo incantesimo Scorch ha una probabilità del 100% di rendere il tuo bersaglio vulnerabile ai danni da Fuoco. Questa vulnerabilità aumenta del 3% tutti i danni da Fuoco che infliggi al tuo bersaglio e dura 30 secondi, accumulandosi fino a 5 volte."
+    ],
+    "incineration": [
+      "Aumenta del 2% la probabilità di colpo critico dei tuoi incantesimi Fire Blast, Ice Lance, Arcane Blast e Scorch.",
+      "Aumenta del 4% la probabilità di colpo critico dei tuoi incantesimi Fire Blast, Ice Lance, Arcane Blast e Scorch.",
+      "Aumenta del 6% la probabilità di colpo critico dei tuoi incantesimi Fire Blast, Ice Lance, Arcane Blast e Scorch."
+    ],
+    "magic-absorption": [
+      "Aumenta di 5 tutte le tue resistenze e fa sì che ogni incantesimo a cui resisti completamente ti ripristini l'1% del tuo Mana totale. Non può attivarsi più di 1 volta al secondo.",
+      "Aumenta di 10 tutte le tue resistenze e fa sì che ogni incantesimo a cui resisti completamente ti ripristini il 2% del tuo Mana totale. Non può attivarsi più di 1 volta al secondo."
+    ],
+    "master-of-elements": [
+      "I tuoi colpi critici di Fuoco e di Gelo rimborsano il 10% del loro costo base in Mana.",
+      "I tuoi colpi critici di Fuoco e di Gelo rimborsano il 20% del loro costo base in Mana.",
+      "I tuoi colpi critici di Fuoco e di Gelo rimborsano il 30% del loro costo base in Mana."
+    ],
+    "missile-barrage": [
+      "Dà al tuo incantesimo Arcane Blast una probabilità del 20%, ai colpi del tuo Arcane Missile una probabilità del 5% e ai tuoi incantesimi Arcane Wrath, Fireball, Frostbolt e Frostfire Bolt una probabilità del 10% di ridurre del 50% la durata della canalizzazione del tuo prossimo incantesimo Arcane Missiles, ridurre del 100% il suo costo in Mana e far sì che i missili partano ogni 0.5 secondi.",
+      "Dà al tuo incantesimo Arcane Blast una probabilità del 40%, ai colpi del tuo Arcane Missile una probabilità del 10% e ai tuoi incantesimi Arcane Wrath, Fireball, Frostbolt e Frostfire Bolt una probabilità del 20% di ridurre del 50% la durata della canalizzazione del tuo prossimo incantesimo Arcane Missiles, ridurre del 100% il suo costo in Mana e far sì che i missili partano ogni 0.5 secondi."
+    ],
+    "permafrost": [
+      "Aumenta dell'11% la durata dei tuoi effetti Chill e riduce di un ulteriore 3% la velocità del bersaglio.",
+      "Aumenta del 22% la durata dei tuoi effetti Chill e riduce di un ulteriore 7% la velocità del bersaglio.",
+      "Aumenta del 33% la durata dei tuoi effetti Chill e riduce di un ulteriore 10% la velocità del bersaglio."
+    ],
+    "presence-of-mind": [
+      "Quando viene attivato, il tuo prossimo incantesimo da Mago con un tempo di lancio inferiore a 10 secondi diventa un incantesimo istantaneo."
+    ],
+    "pyroblast": [
+      "Scaglia un enorme macigno infuocato che causa da 101 a 131 danni da Fuoco e altri 44 danni da Fuoco in 12 secondi."
+    ],
+    "shatter": [
+      "Aumenta del 17% la probabilità di colpo critico di tutti i tuoi incantesimi contro i bersagli congelati.",
+      "Aumenta del 33% la probabilità di colpo critico di tutti i tuoi incantesimi contro i bersagli congelati.",
+      "Aumenta del 50% la probabilità di colpo critico di tutti i tuoi incantesimi contro i bersagli congelati."
+    ],
+    "wand-specialization": [
+      "Aumenta i danni che infliggi con le bacchette del 13%.",
+      "Aumenta i danni che infliggi con le bacchette del 25%."
+    ],
+    "winters-chill": [
+      "Dà ai tuoi incantesimi Frostbolt, Frost Blast e Ice Lance potenziato da Fingers of Frost una probabilità del 20% di applicare Winter's Chill, che aumenta del 5% i danni che il bersaglio subisce dal tuo prossimo Cone of Cold, il quale ottiene inoltre un ulteriore 7% dei tuoi Danni da incantesimo, accumulandosi fino a 5 volte.",
+      "Dà ai tuoi incantesimi Frostbolt, Frost Blast e Ice Lance potenziato da Fingers of Frost una probabilità del 40% di applicare Winter's Chill, che aumenta del 5% i danni che il bersaglio subisce dal tuo prossimo Cone of Cold, il quale ottiene inoltre un ulteriore 7% dei tuoi Danni da incantesimo, accumulandosi fino a 5 volte.",
+      "Dà ai tuoi incantesimi Frostbolt, Frost Blast e Ice Lance potenziato da Fingers of Frost una probabilità del 60% di applicare Winter's Chill, che aumenta del 5% i danni che il bersaglio subisce dal tuo prossimo Cone of Cold, il quale ottiene inoltre un ulteriore 7% dei tuoi Danni da incantesimo, accumulandosi fino a 5 volte.",
+      "Dà ai tuoi incantesimi Frostbolt, Frost Blast e Ice Lance potenziato da Fingers of Frost una probabilità dell'80% di applicare Winter's Chill, che aumenta del 5% i danni che il bersaglio subisce dal tuo prossimo Cone of Cold, il quale ottiene inoltre un ulteriore 7% dei tuoi Danni da incantesimo, accumulandosi fino a 5 volte.",
+      "Dà ai tuoi incantesimi Frostbolt, Frost Blast e Ice Lance potenziato da Fingers of Frost una probabilità del 100% di applicare Winter's Chill, che aumenta del 5% i danni che il bersaglio subisce dal tuo prossimo Cone of Cold, il quale ottiene inoltre un ulteriore 7% dei tuoi Danni da incantesimo, accumulandosi fino a 5 volte."
+    ]
+  },
+  "es": {
+    "arcane-blast": [
+      "Golpea al objetivo con una explosión de energía, infligiendo de 34 a 38 de daño Arcano. Cada vez que lanzas Arcane Blast, obtienes un 15% de tu Intelecto como Daño de hechizos y el coste de Maná de Arcane Blast aumenta en un 175%. El efecto se acumula hasta 4 veces y dura 15 s desde el momento de la primera aplicación."
+    ],
+    "arcane-concentration": [
+      "Te otorga un 2% de probabilidad de entrar en estado de Clearcasting después de que cualquier hechizo de daño golpee a un objetivo. El estado de Clearcasting reduce en un 100% el coste de Maná de tu siguiente hechizo de daño.",
+      "Te otorga un 4% de probabilidad de entrar en estado de Clearcasting después de que cualquier hechizo de daño golpee a un objetivo. El estado de Clearcasting reduce en un 100% el coste de Maná de tu siguiente hechizo de daño.",
+      "Te otorga un 6% de probabilidad de entrar en estado de Clearcasting después de que cualquier hechizo de daño golpee a un objetivo. El estado de Clearcasting reduce en un 100% el coste de Maná de tu siguiente hechizo de daño.",
+      "Te otorga un 8% de probabilidad de entrar en estado de Clearcasting después de que cualquier hechizo de daño golpee a un objetivo. El estado de Clearcasting reduce en un 100% el coste de Maná de tu siguiente hechizo de daño.",
+      "Te otorga un 10% de probabilidad de entrar en estado de Clearcasting después de que cualquier hechizo de daño golpee a un objetivo. El estado de Clearcasting reduce en un 100% el coste de Maná de tu siguiente hechizo de daño."
+    ],
+    "arcane-focus": [
+      "Aumenta tu probabilidad de golpear con hechizos Arcanos en un 1%.",
+      "Aumenta tu probabilidad de golpear con hechizos Arcanos en un 2%.",
+      "Aumenta tu probabilidad de golpear con hechizos Arcanos en un 3%.",
+      "Aumenta tu probabilidad de golpear con hechizos Arcanos en un 4%.",
+      "Aumenta tu probabilidad de golpear con hechizos Arcanos en un 5%."
+    ],
+    "arcane-geometry": [
+      "Aumenta en 3 metros el alcance de tus hechizos Arcanos.",
+      "Aumenta en 6 metros el alcance de tus hechizos Arcanos."
+    ],
+    "arcane-impact": [
+      "Aumenta en un 2% la probabilidad de golpe crítico de tus hechizos Arcanos.",
+      "Aumenta en un 4% la probabilidad de golpe crítico de tus hechizos Arcanos.",
+      "Aumenta en un 6% la probabilidad de golpe crítico de tus hechizos Arcanos."
+    ],
+    "arcane-instability": [
+      "Aumenta en un 1% el daño infligido por tus hechizos y en un 1% tu probabilidad de golpe crítico.",
+      "Aumenta en un 2% el daño infligido por tus hechizos y en un 2% tu probabilidad de golpe crítico.",
+      "Aumenta en un 3% el daño infligido por tus hechizos y en un 3% tu probabilidad de golpe crítico."
+    ],
+    "arcane-meditation": [
+      "Permite que un 17% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que un 33% de tu regeneración de Maná continúe mientras lanzas hechizos.",
+      "Permite que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos."
+    ],
+    "arcane-mind": [
+      "Aumenta tu Intelecto en un 2% y aumenta en un 20% la bonificación de daño crítico de tus hechizos Arcanos.",
+      "Aumenta tu Intelecto en un 4% y aumenta en un 40% la bonificación de daño crítico de tus hechizos Arcanos.",
+      "Aumenta tu Intelecto en un 6% y aumenta en un 60% la bonificación de daño crítico de tus hechizos Arcanos.",
+      "Aumenta tu Intelecto en un 8% y aumenta en un 80% la bonificación de daño crítico de tus hechizos Arcanos.",
+      "Aumenta tu Intelecto en un 10% y aumenta en un 100% la bonificación de daño crítico de tus hechizos Arcanos."
+    ],
+    "arcane-power": [
+      "Durante los próximos 15 s, tus hechizos infligen un 30% más de daño, pero cuestan un 30% más de Maná."
+    ],
+    "arcane-resilience": [
+      "Aumenta tu Armadura en una cantidad igual al 25% de tu Intelecto.",
+      "Aumenta tu Armadura en una cantidad igual al 50% de tu Intelecto."
+    ],
+    "arcane-shielding": [
+      "Reduce en un 17% el Maná perdido por cada punto de daño recibido mientras tu hechizo Mana Shield está activo y aumenta en un 25% las resistencias que otorga tu hechizo Mage Armor.",
+      "Reduce en un 33% el Maná perdido por cada punto de daño recibido mientras tu hechizo Mana Shield está activo y aumenta en un 50% las resistencias que otorga tu hechizo Mage Armor."
+    ],
+    "arcane-subtlety": [
+      "Reduce en 8 la resistencia de tu objetivo a todos tus hechizos y reduce en un 15% la amenaza causada por tus hechizos Arcanos.",
+      "Reduce en 15 la resistencia de tu objetivo a todos tus hechizos y reduce en un 30% la amenaza causada por tus hechizos Arcanos."
+    ],
+    "arcane-wrath": [
+      "Lanza un proyectil de energía Arcana pura contra el objetivo enemigo, causando de 122 a 146 de daño Arcano. Este hechizo obtiene Daño de hechizos adicional igual al 5% de tu Maná máximo."
+    ],
+    "arctic-reach": [
+      "Aumenta en un 10% el alcance de tus hechizos Frostbolt, Frost Blast y Blizzard y el radio de tus hechizos Frost Nova y Cone of Cold.",
+      "Aumenta en un 20% el alcance de tus hechizos Frostbolt, Frost Blast y Blizzard y el radio de tus hechizos Frost Nova y Cone of Cold."
+    ],
+    "blast-wave": [
+      "Una ola de llamas se irradia desde el lanzador, infligiendo de 154 a 184 de daño de Fuego a todos los enemigos alcanzados por la explosión y aplicándoles el efecto Daze, que reduce su velocidad de movimiento en un 50% durante 6 s."
+    ],
+    "burning-soul": [
+      "Otorga a tus hechizos de Fuego un 23% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño y reduce en un 10% la amenaza causada por tus hechizos de Fuego.",
+      "Otorga a tus hechizos de Fuego un 47% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño y reduce en un 20% la amenaza causada por tus hechizos de Fuego.",
+      "Otorga a tus hechizos de Fuego un 70% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño y reduce en un 30% la amenaza causada por tus hechizos de Fuego."
+    ],
+    "cold-snap": [
+      "Termina el tiempo de reutilización restante de todos tus demás hechizos de Escarcha."
+    ],
+    "combustion": [
+      "Al activarse, este hechizo hace que cada impacto de tus hechizos de daño de Fuego aumente en un 10% tu probabilidad de golpe crítico con hechizos de daño de Fuego. Este efecto dura hasta que hayas causado 3 golpes críticos no periódicos con hechizos de Fuego."
+    ],
+    "critical-mass": [
+      "Aumenta en un 2% la probabilidad de golpe crítico de tus hechizos de Fuego.",
+      "Aumenta en un 4% la probabilidad de golpe crítico de tus hechizos de Fuego.",
+      "Aumenta en un 6% la probabilidad de golpe crítico de tus hechizos de Fuego.",
+      "Aumenta en un 8% la probabilidad de golpe crítico de tus hechizos de Fuego.",
+      "Aumenta en un 10% la probabilidad de golpe crítico de tus hechizos de Fuego."
+    ],
+    "elemental-precision": [
+      "Aumenta en un 2% tu probabilidad de golpear con hechizos de Escarcha y de Fuego.",
+      "Aumenta en un 4% tu probabilidad de golpear con hechizos de Escarcha y de Fuego.",
+      "Aumenta en un 6% tu probabilidad de golpear con hechizos de Escarcha y de Fuego."
+    ],
+    "fingers-of-frost": [
+      "Otorga a tus efectos Chill un 15% de probabilidad de concederte el efecto Fingers of Frost, que trata tu siguiente 1 hechizo lanzado como si el objetivo estuviera congelado. Dura 15 s.",
+      "Otorga a tus efectos Chill un 15% de probabilidad de concederte el efecto Fingers of Frost, que trata tus siguientes 2 hechizos lanzados como si el objetivo estuviera congelado. Dura 15 s."
+    ],
+    "fire-power": [
+      "Aumenta en un 1% el daño infligido por tus hechizos de Fuego por cada efecto de Fuego tuyo presente en el objetivo, hasta un aumento máximo de un 4%. Los efectos que mezclan varias escuelas de magia no cuentan.",
+      "Aumenta en un 2% el daño infligido por tus hechizos de Fuego por cada efecto de Fuego tuyo presente en el objetivo, hasta un aumento máximo de un 8%. Los efectos que mezclan varias escuelas de magia no cuentan.",
+      "Aumenta en un 3% el daño infligido por tus hechizos de Fuego por cada efecto de Fuego tuyo presente en el objetivo, hasta un aumento máximo de un 12%. Los efectos que mezclan varias escuelas de magia no cuentan."
+    ],
+    "flame-throwing": [
+      "Aumenta en 3 metros el alcance de tus hechizos de Fuego.",
+      "Aumenta en 6 metros el alcance de tus hechizos de Fuego."
+    ],
+    "frost-channeling": [
+      "Reduce en un 5% el coste de Maná de tus hechizos de Escarcha y reduce en un 10% la amenaza causada por tus hechizos de Escarcha.",
+      "Reduce en un 10% el coste de Maná de tus hechizos de Escarcha y reduce en un 20% la amenaza causada por tus hechizos de Escarcha.",
+      "Reduce en un 15% el coste de Maná de tus hechizos de Escarcha y reduce en un 30% la amenaza causada por tus hechizos de Escarcha."
+    ],
+    "frost-warding": [
+      "Aumenta en un 15% la Armadura y las resistencias que otorgan tus hechizos Frost Armor e Ice Armor, da a tu Frost Ward un 10% de probabilidad de anular el hechizo de daño contra el que protege y aumenta en un 10% la cantidad absorbida por tus Ice Barrier y Frost Ward.",
+      "Aumenta en un 30% la Armadura y las resistencias que otorgan tus hechizos Frost Armor e Ice Armor, da a tu Frost Ward un 20% de probabilidad de anular el hechizo de daño contra el que protege y aumenta en un 20% la cantidad absorbida por tus Ice Barrier y Frost Ward."
+    ],
+    "frostbite": [
+      "Otorga a tus efectos Chill un 5% de probabilidad de congelar al objetivo durante 5 s.",
+      "Otorga a tus efectos Chill un 10% de probabilidad de congelar al objetivo durante 5 s.",
+      "Otorga a tus efectos Chill un 15% de probabilidad de congelar al objetivo durante 5 s."
+    ],
+    "heating-up": [
+      "Los golpes críticos no periódicos con Fireball, Frostfire Bolt, Fire Blast y Scorch reducen en un 25% el tiempo de lanzamiento de tu siguiente Pyroblast lanzado en los 20 s siguientes, acumulándose hasta 3 veces. Fire Blast otorga una acumulación adicional cada vez que inflige daño."
+    ],
+    "ice-barrier": [
+      "Te envuelve en un escudo que absorbe 447 de daño y aumenta tu daño de Escarcha en un 3% durante 1 minuto. Mientras estás protegido por el escudo, tu daño de Escarcha aumenta en un 3% adicional y no pierdes tiempo de lanzamiento cuando recibes daño."
+    ],
+    "ice-block": [
+      "Quedas encerrado en un bloque de hielo que te protege de todos los ataques físicos y hechizos durante 10 s, pero durante ese tiempo no puedes atacar, moverte ni lanzar hechizos."
+    ],
+    "ice-lance": [
+      "Inflige de 28 a 32 de daño de Escarcha a un objetivo enemigo. Inflige un 200% más de daño a los objetivos congelados."
+    ],
+    "ice-shards": [
+      "Aumenta en un 20% la bonificación de daño crítico de tus hechizos de Escarcha.",
+      "Aumenta en un 40% la bonificación de daño crítico de tus hechizos de Escarcha.",
+      "Aumenta en un 60% la bonificación de daño crítico de tus hechizos de Escarcha.",
+      "Aumenta en un 80% la bonificación de daño crítico de tus hechizos de Escarcha.",
+      "Aumenta en un 100% la bonificación de daño crítico de tus hechizos de Escarcha."
+    ],
+    "ignite": [
+      "Tus golpes críticos con hechizos de daño de Fuego hacen que el objetivo arda por un 8% adicional del daño de tu hechizo durante 4 s.",
+      "Tus golpes críticos con hechizos de daño de Fuego hacen que el objetivo arda por un 16% adicional del daño de tu hechizo durante 4 s.",
+      "Tus golpes críticos con hechizos de daño de Fuego hacen que el objetivo arda por un 24% adicional del daño de tu hechizo durante 4 s.",
+      "Tus golpes críticos con hechizos de daño de Fuego hacen que el objetivo arda por un 32% adicional del daño de tu hechizo durante 4 s.",
+      "Tus golpes críticos con hechizos de daño de Fuego hacen que el objetivo arda por un 40% adicional del daño de tu hechizo durante 4 s."
+    ],
+    "impact": [
+      "Otorga a tus hechizos de Fuego un 3% de probabilidad de aturdir al objetivo durante 2 s.",
+      "Otorga a tus hechizos de Fuego un 7% de probabilidad de aturdir al objetivo durante 2 s.",
+      "Otorga a tus hechizos de Fuego un 10% de probabilidad de aturdir al objetivo durante 2 s."
+    ],
+    "improved-blizzard": [
+      "Añade un efecto Chill a tu hechizo Blizzard. Este efecto reduce en un 15% la velocidad de movimiento del objetivo durante 1.5 s.",
+      "Añade un efecto Chill a tu hechizo Blizzard. Este efecto reduce en un 25% la velocidad de movimiento del objetivo durante 1.5 s.",
+      "Añade un efecto Chill a tu hechizo Blizzard. Este efecto reduce en un 40% la velocidad de movimiento del objetivo durante 1.5 s."
+    ],
+    "improved-channeling": [
+      "Te otorga un 20% de probabilidad de evitar la interrupción causada por el daño mientras canalizas Arcane Missiles y un 14% de probabilidad mientras lanzas Arcane Blast o Arcane Wrath.",
+      "Te otorga un 40% de probabilidad de evitar la interrupción causada por el daño mientras canalizas Arcane Missiles y un 28% de probabilidad mientras lanzas Arcane Blast o Arcane Wrath.",
+      "Te otorga un 60% de probabilidad de evitar la interrupción causada por el daño mientras canalizas Arcane Missiles y un 42% de probabilidad mientras lanzas Arcane Blast o Arcane Wrath.",
+      "Te otorga un 80% de probabilidad de evitar la interrupción causada por el daño mientras canalizas Arcane Missiles y un 56% de probabilidad mientras lanzas Arcane Blast o Arcane Wrath.",
+      "Te otorga un 100% de probabilidad de evitar la interrupción causada por el daño mientras canalizas Arcane Missiles y un 70% de probabilidad mientras lanzas Arcane Blast o Arcane Wrath."
+    ],
+    "improved-cone-of-cold": [
+      "Aumenta en un 12% el daño infligido por tu hechizo Cone of Cold.",
+      "Aumenta en un 23% el daño infligido por tu hechizo Cone of Cold.",
+      "Aumenta en un 35% el daño infligido por tu hechizo Cone of Cold."
+    ],
+    "improved-counterspell": [
+      "Tu Counterspell también silencia al objetivo durante 2 s.",
+      "Tu Counterspell también silencia al objetivo durante 4 s."
+    ],
+    "improved-fire-blast": [
+      "Reduce en 1 s el tiempo de reutilización de tu hechizo Fire Blast y aumenta su alcance en 8 metros.",
+      "Reduce en 2 s el tiempo de reutilización de tu hechizo Fire Blast y aumenta su alcance en 15 metros."
+    ],
+    "improved-fire-ward": [
+      "Hace que tu Fire Ward tenga un 10% de probabilidad de reflejar hechizos de Fuego mientras está activo.",
+      "Hace que tu Fire Ward tenga un 20% de probabilidad de reflejar hechizos de Fuego mientras está activo."
+    ],
+    "improved-fireball": [
+      "Reduce en 0.1 s el tiempo de lanzamiento de tus hechizos Fireball y Frostfire Bolt.",
+      "Reduce en 0.2 s el tiempo de lanzamiento de tus hechizos Fireball y Frostfire Bolt.",
+      "Reduce en 0.3 s el tiempo de lanzamiento de tus hechizos Fireball y Frostfire Bolt.",
+      "Reduce en 0.4 s el tiempo de lanzamiento de tus hechizos Fireball y Frostfire Bolt.",
+      "Reduce en 0.5 s el tiempo de lanzamiento de tus hechizos Fireball y Frostfire Bolt."
+    ],
+    "improved-flamestrike": [
+      "Aumenta en un 5% la probabilidad de golpe crítico de tu hechizo Flamestrike.",
+      "Aumenta en un 10% la probabilidad de golpe crítico de tu hechizo Flamestrike.",
+      "Aumenta en un 15% la probabilidad de golpe crítico de tu hechizo Flamestrike."
+    ],
+    "improved-frost-nova": [
+      "Reduce en 2 s el tiempo de reutilización de tu hechizo Frost Nova.",
+      "Reduce en 4 s el tiempo de reutilización de tu hechizo Frost Nova."
+    ],
+    "improved-frostbolt": [
+      "Reduce en 0.1 s el tiempo de lanzamiento de tus hechizos Frostbolt y Frost Blast.",
+      "Reduce en 0.2 s el tiempo de lanzamiento de tus hechizos Frostbolt y Frost Blast.",
+      "Reduce en 0.3 s el tiempo de lanzamiento de tus hechizos Frostbolt y Frost Blast.",
+      "Reduce en 0.4 s el tiempo de lanzamiento de tus hechizos Frostbolt y Frost Blast.",
+      "Reduce en 0.5 s el tiempo de lanzamiento de tus hechizos Frostbolt y Frost Blast."
+    ],
+    "improved-scorch": [
+      "Tu hechizo Scorch tiene un 33% de probabilidad de hacer que tu objetivo sea vulnerable al daño de Fuego. Esta vulnerabilidad aumenta en un 3% todo el daño de Fuego que infliges a tu objetivo y dura 30 s, acumulándose hasta 5 veces.",
+      "Tu hechizo Scorch tiene un 67% de probabilidad de hacer que tu objetivo sea vulnerable al daño de Fuego. Esta vulnerabilidad aumenta en un 3% todo el daño de Fuego que infliges a tu objetivo y dura 30 s, acumulándose hasta 5 veces.",
+      "Tu hechizo Scorch tiene un 100% de probabilidad de hacer que tu objetivo sea vulnerable al daño de Fuego. Esta vulnerabilidad aumenta en un 3% todo el daño de Fuego que infliges a tu objetivo y dura 30 s, acumulándose hasta 5 veces."
+    ],
+    "incineration": [
+      "Aumenta en un 2% la probabilidad de golpe crítico de tus hechizos Fire Blast, Ice Lance, Arcane Blast y Scorch.",
+      "Aumenta en un 4% la probabilidad de golpe crítico de tus hechizos Fire Blast, Ice Lance, Arcane Blast y Scorch.",
+      "Aumenta en un 6% la probabilidad de golpe crítico de tus hechizos Fire Blast, Ice Lance, Arcane Blast y Scorch."
+    ],
+    "magic-absorption": [
+      "Aumenta en 5 todas tus resistencias y hace que todos los hechizos a los que resistes por completo te restauren un 1% de tu Maná total. No puede activarse más de 1 vez por segundo.",
+      "Aumenta en 10 todas tus resistencias y hace que todos los hechizos a los que resistes por completo te restauren un 2% de tu Maná total. No puede activarse más de 1 vez por segundo."
+    ],
+    "master-of-elements": [
+      "Tus golpes críticos de Fuego y de Escarcha reembolsan un 10% de su coste base de Maná.",
+      "Tus golpes críticos de Fuego y de Escarcha reembolsan un 20% de su coste base de Maná.",
+      "Tus golpes críticos de Fuego y de Escarcha reembolsan un 30% de su coste base de Maná."
+    ],
+    "missile-barrage": [
+      "Otorga a tu hechizo Arcane Blast un 20% de probabilidad, a los impactos de tu Arcane Missile un 5% de probabilidad y a tus hechizos Arcane Wrath, Fireball, Frostbolt y Frostfire Bolt un 10% de probabilidad de reducir en un 50% la duración de la canalización de tu siguiente hechizo Arcane Missiles, reducir su coste de Maná en un 100% y hacer que los misiles se disparen cada 0.5 s.",
+      "Otorga a tu hechizo Arcane Blast un 40% de probabilidad, a los impactos de tu Arcane Missile un 10% de probabilidad y a tus hechizos Arcane Wrath, Fireball, Frostbolt y Frostfire Bolt un 20% de probabilidad de reducir en un 50% la duración de la canalización de tu siguiente hechizo Arcane Missiles, reducir su coste de Maná en un 100% y hacer que los misiles se disparen cada 0.5 s."
+    ],
+    "permafrost": [
+      "Aumenta en un 11% la duración de tus efectos Chill y reduce la velocidad del objetivo en un 3% adicional.",
+      "Aumenta en un 22% la duración de tus efectos Chill y reduce la velocidad del objetivo en un 7% adicional.",
+      "Aumenta en un 33% la duración de tus efectos Chill y reduce la velocidad del objetivo en un 10% adicional."
+    ],
+    "presence-of-mind": [
+      "Al activarse, tu siguiente hechizo de Mago con un tiempo de lanzamiento inferior a 10 s se convierte en un hechizo instantáneo."
+    ],
+    "pyroblast": [
+      "Arroja una inmensa roca ardiente que causa de 101 a 131 de daño de Fuego y 44 de daño de Fuego adicional durante 12 s."
+    ],
+    "shatter": [
+      "Aumenta en un 17% la probabilidad de golpe crítico de todos tus hechizos contra objetivos congelados.",
+      "Aumenta en un 33% la probabilidad de golpe crítico de todos tus hechizos contra objetivos congelados.",
+      "Aumenta en un 50% la probabilidad de golpe crítico de todos tus hechizos contra objetivos congelados."
+    ],
+    "wand-specialization": [
+      "Aumenta el daño que infliges con varitas en un 13%.",
+      "Aumenta el daño que infliges con varitas en un 25%."
+    ],
+    "winters-chill": [
+      "Otorga a tus hechizos Frostbolt, Frost Blast e Ice Lance potenciado por Fingers of Frost un 20% de probabilidad de aplicar Winter's Chill, que aumenta en un 5% el daño que el objetivo recibe de tu siguiente Cone of Cold, el cual además obtiene un 7% adicional de tu Daño de hechizos, acumulándose hasta 5 veces.",
+      "Otorga a tus hechizos Frostbolt, Frost Blast e Ice Lance potenciado por Fingers of Frost un 40% de probabilidad de aplicar Winter's Chill, que aumenta en un 5% el daño que el objetivo recibe de tu siguiente Cone of Cold, el cual además obtiene un 7% adicional de tu Daño de hechizos, acumulándose hasta 5 veces.",
+      "Otorga a tus hechizos Frostbolt, Frost Blast e Ice Lance potenciado por Fingers of Frost un 60% de probabilidad de aplicar Winter's Chill, que aumenta en un 5% el daño que el objetivo recibe de tu siguiente Cone of Cold, el cual además obtiene un 7% adicional de tu Daño de hechizos, acumulándose hasta 5 veces.",
+      "Otorga a tus hechizos Frostbolt, Frost Blast e Ice Lance potenciado por Fingers of Frost un 80% de probabilidad de aplicar Winter's Chill, que aumenta en un 5% el daño que el objetivo recibe de tu siguiente Cone of Cold, el cual además obtiene un 7% adicional de tu Daño de hechizos, acumulándose hasta 5 veces.",
+      "Otorga a tus hechizos Frostbolt, Frost Blast e Ice Lance potenciado por Fingers of Frost un 100% de probabilidad de aplicar Winter's Chill, que aumenta en un 5% el daño que el objetivo recibe de tu siguiente Cone of Cold, el cual además obtiene un 7% adicional de tu Daño de hechizos, acumulándose hasta 5 veces."
+    ]
+  }
+}

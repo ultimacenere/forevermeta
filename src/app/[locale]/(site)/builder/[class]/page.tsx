@@ -9,7 +9,7 @@ import { BuilderNotes } from "../page";
 import { BUILDER_PATH, classHrefs, classPageUrl, classPath, raceOptions, treeList } from "@/lib/builder/page";
 import { classIds, className, getClass, isClassId } from "@/lib/data/classes";
 import { racesOfClass, raceName, racialsSources } from "@/lib/data/races";
-import { TALENT_ICON_BASE, talentsOf } from "@/lib/data/talents";
+import { TALENT_ICON_BASE, localizeTalents, talentsOf } from "@/lib/data/talents";
 import { builderLabels, fill } from "@/lib/builderLabels";
 
 type Params = Promise<{ locale: string; class: string }>;
@@ -39,7 +39,7 @@ export default async function ClassBuilderPage({ params }: { params: Params }) {
   if (!isClassId(cls)) notFound();
   const c = getClass(cls);
   const name = className(c, locale);
-  const data = talentsOf(cls);
+  const data = localizeTalents(talentsOf(cls), locale);
   const labels = builderLabels[locale];
   const b = d.builder;
   const path = href(locale, classPath(cls));
@@ -53,6 +53,7 @@ export default async function ClassBuilderPage({ params }: { params: Params }) {
           },
         ]
       : []),
+    ...(locale !== "en" ? [{ label: labels.textsOurs }] : []),
     ...racialsSources,
   ];
   return (
@@ -70,7 +71,7 @@ export default async function ClassBuilderPage({ params }: { params: Params }) {
         <ClassStrip locale={locale} current={cls} label={labels.pickClass} />
       </div>
       <div className="mt-6">
-        <TalentBuilder classId={cls} className={name} color={c.color} ink={c.ink} data={data} races={raceOptions(locale, cls)} labels={labels} pageUrl={classPageUrl(locale, cls)} classHrefs={classHrefs(locale)} iconBase={TALENT_ICON_BASE} />
+        <TalentBuilder classId={cls} className={name} color={c.color} ink={c.ink} data={data} races={raceOptions(locale, cls)} labels={labels} pageUrl={classPageUrl(locale, cls)} classHrefs={classHrefs(locale)} iconBase={TALENT_ICON_BASE} publishHref={href(locale, "/builds/publish")} />
       </div>
       <section className="mt-10 text-sm text-pale" aria-labelledby="builder-races">
         <h2 id="builder-races" className="t-section">
