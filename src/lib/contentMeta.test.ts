@@ -29,7 +29,7 @@ const { newsItems }: typeof import("./data/newsItems") = await import("./data/ne
 const { guideEntries }: typeof import("./content/guideEntries") = await import("./content/guideEntries.ts");
 
 const locales = ["en", "it", "es"] as const;
-const pages = ["", "/news", "/guides", "/glossary", "/calendar", "/changes", "/faq", "/about", "/authors", "/privacy"];
+const pages = ["", "/news", "/builder", "/guides", "/glossary", "/calendar", "/changes", "/faq", "/about", "/authors", "/privacy"];
 const guideSlugs = new Set(guideEntries.map((g) => g.slug));
 const newsSlugs = new Set(newsItems.map((n) => n.slug));
 

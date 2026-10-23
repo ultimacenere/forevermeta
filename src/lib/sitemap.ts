@@ -2,6 +2,7 @@ import { alternatesFor, href, locales, siteUrl, type Locale } from "./i18n";
 import { sitemapIndexXml, urlsetXml, type IndexEntry, type UrlEntry } from "./seoXml";
 import { sortedNews, newsPath } from "./data/news";
 import { guideEntries } from "./content/guideEntries";
+import { classIds } from "./data/classes";
 
 /**
  * Sitemap di ForeverMeta (stesso schema di OriginsMeta, ridotto): /sitemap.xml è l'indice di /sitemap-home.xml (le
@@ -25,6 +26,9 @@ export const PAGE_UPDATED: Record<string, string> = {
   "/about": "2026-10-10",
   "/authors": "2026-10-10",
   "/authors/pierluigi-cella": "2026-10-10",
+  // il builder (22/10/2026): la pagina delle classi e una pagina per classe, con i suoi tre alberi
+  "/builder": "2026-10-22",
+  ...Object.fromEntries(classIds.map((id) => [`/builder/${id}`, "2026-10-22"])),
 };
 
 export const SITEMAP_SECTIONS = ["pages", "news", "guides"] as const;

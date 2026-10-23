@@ -112,6 +112,11 @@
  *                         deck_open_builder con placement=draft)
  *   ★ donate_click        clic su "Dona ora" verso la pagina di donazione di      placement (header | menu: la tendina
  *                         PayPal (06/10/2026, PayPalButton; attributi sul link)   del telefono)
+ *   ★ build_share         build del builder di ForeverMeta copiata o condivisa    method (link | code | text | native),
+ *                         (22/10/2026, TalentBuilder)                             class (id della classe)
+ *   ★ build_complete      tutti i 51 punti spesi nel builder, una volta per       class
+ *                         pagina
+ *     build_import        codice o link incollato in "Apri una build"             ok (yes | no)
  *
  * Per vedere i parametri nei rapporti di GA4 vanno registrati in Amministrazione → Definizioni personalizzate, tutti
  * con ambito "evento" (method e search_term GA4 li ha già):
@@ -235,6 +240,10 @@ export type EventParams = {
   draft_start: { format: string; opponent: "bot" | "friend" };
   draft_complete: { format: string; grade: string };
   donate_click: { placement: string };
+  /* builder di ForeverMeta (22/10/2026): condivisione, build completa (51 punti), apertura da un codice */
+  build_share: { method: "link" | "code" | "text" | "native"; class: string };
+  build_complete: { class: string };
+  build_import: { ok: "yes" | "no" };
 };
 export type EventName = keyof EventParams;
 
@@ -287,6 +296,9 @@ export const VERCEL_PROPS = {
   draft_start: ["format", "opponent"],
   draft_complete: ["format", "grade"],
   donate_click: ["placement"],
+  build_share: ["method", "class"],
+  build_complete: ["class"],
+  build_import: ["ok"],
 } as const satisfies { [N in EventName]: readonly (keyof EventParams[N] & string)[] };
 
 export const isEventName = (name: unknown): name is EventName => typeof name === "string" && Object.hasOwn(VERCEL_PROPS, name);
