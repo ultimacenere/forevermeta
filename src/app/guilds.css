@@ -1,0 +1,173 @@
+/*
+ * Bacheca delle gilde (23/10/2026): schede dell'elenco, pillole, stemma con l'iniziale, caselle a chip del modulo.
+ * Stesse variabili del tema e stessa struttura delle schede delle build (builder.css): il colore della fazione sta in
+ * `--gl-ink` (Alleanza = azzurro Skyborne, Orda = cremisi) e colora stemma, nome e bordo al passaggio.
+ */
+@layer components {
+  .gl-alliance {
+    --gl-ink: var(--color-sky);
+  }
+  .gl-horde {
+    --gl-ink: var(--color-crimson);
+  }
+  .guild-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    height: 100%;
+    border: 3px solid var(--color-felt-line);
+    border-radius: 14px;
+    background: var(--color-night);
+    padding: 1rem 1.1rem;
+    text-decoration: none;
+    color: var(--color-pale);
+    box-shadow: var(--shadow-card);
+    transition:
+      transform 160ms ease,
+      border-color 160ms ease,
+      box-shadow 160ms ease;
+  }
+  .guild-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gl-ink, var(--color-sky));
+    box-shadow: var(--shadow-lift);
+  }
+  .guild-card-head {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    min-width: 0;
+  }
+  .gl-crest {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex: none;
+    border-radius: 999px;
+    border: 2px solid var(--gl-ink, var(--color-sky));
+    color: var(--gl-ink, var(--color-sky));
+    background: color-mix(in oklab, var(--gl-ink, var(--color-sky)) 14%, var(--color-night));
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+  .gl-crest-lg {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.4rem;
+  }
+  .guild-card-name {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--gl-ink, var(--color-sky));
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+  .guild-card-sub {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--color-pale-muted);
+  }
+  .guild-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  .guild-card-summary {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    white-space: pre-line;
+  }
+  .guild-card-foot {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.8rem;
+    font-size: 0.78rem;
+    color: var(--color-pale-muted);
+  }
+  .guild-card-roles {
+    color: var(--color-gold-deep);
+    font-weight: 700;
+  }
+  .guild-card-author {
+    margin-left: auto;
+  }
+  .gl-pill {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1.5px solid var(--color-felt-line);
+    color: var(--color-pale);
+    border-radius: 999px;
+    padding: 0.1rem 0.5rem;
+    vertical-align: middle;
+  }
+  .gl-pill-lang {
+    border-color: var(--color-sky);
+    color: var(--color-sky);
+  }
+  .gl-pill-alliance {
+    border-color: var(--color-sky);
+    color: var(--color-sky);
+  }
+  .gl-pill-horde {
+    border-color: var(--color-crimson);
+    color: var(--color-crimson);
+  }
+  .gl-checks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.35rem;
+  }
+  .gl-check {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    border: 1.5px solid var(--color-felt-line);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.85rem;
+    color: var(--color-pale);
+    cursor: pointer;
+    user-select: none;
+    transition:
+      border-color 120ms ease,
+      background-color 120ms ease;
+  }
+  .gl-check input {
+    accent-color: var(--color-gold-deep);
+  }
+  .gl-check.is-on {
+    border-color: var(--color-gold-deep);
+    color: var(--color-chalk);
+    background: color-mix(in oklab, var(--color-gold-deep) 12%, var(--color-night));
+  }
+  .gl-check.is-off {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  .gl-check:focus-within {
+    outline: 2px solid var(--color-sky);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .guild-card,
+    .guild-card:hover {
+      transition: none;
+      transform: none;
+    }
+  }
+}

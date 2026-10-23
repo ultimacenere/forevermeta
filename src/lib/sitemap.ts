@@ -31,6 +31,8 @@ export const PAGE_UPDATED: Record<string, string> = {
   ...Object.fromEntries(classIds.map((id) => [`/builder/${id}`, "2026-10-22"])),
   // le build pubblicate (23/10/2026): l'elenco qui, le schede in /<lingua>/sitemap-builds.xml
   "/builds": "2026-10-23",
+  // la bacheca delle gilde (23/10/2026): l'elenco qui, gli annunci in /<lingua>/sitemap-guilds.xml
+  "/guilds": "2026-10-23",
 };
 
 export const SITEMAP_SECTIONS = ["pages", "news", "guides"] as const;
@@ -89,7 +91,29 @@ export function sitemapIndexResponse(): Response {
   }
   // le build pubblicate: una sitemap per lingua, rigenerata dalle Server Action (vuota finché non ce ne sono)
   for (const l of locales) items.push({ url: `${siteUrl}${buildsSitemapPath(l)}`, lastmod: clampDay([PAGE_UPDATED["/builds"]]) });
+  // gli annunci di gilda (23/10/2026): stessa cosa
+  for (const l of locales) items.push({ url: `${siteUrl}${guildsSitemapPath(l)}`, lastmod: clampDay([PAGE_UPDATED["/guilds"]]) });
   return new Response(sitemapIndexXml(items), { headers: XML_HEADERS });
+}
+
+/**
+ * Sitemap della bacheca delle gilde (23/10/2026), una per lingua: ogni annuncio compare solo nella sitemap della lingua
+ * della sua descrizione, da `GUILD_MIN_WORDS` parole e se non è scaduto (le letture lasciano già fuori gli scaduti).
+ * `lastmod` dal giorno dell'ultimo aggiornamento o rinnovo.
+ */
+export async function guildsSitemapResponse(locale: Locale): Promise<Response> {
+  const { sitemapGuilds } = await import("./community/guildQueries");
+  const { GUILD_MIN_WORDS, guildWords } = await import("./community/guilds");
+  const all = await sitemapGuilds();
+  const entries: UrlEntry[] = all
+    .filter((g) => g.lang === locale && guildWords(g.description) >= GUILD_MIN_WORDS)
+    .map((g) => ({ url: `${siteUrl}${href(locale, `/guilds/${g.slug}`)}`, lastmod: clampDay([g.updated, g.refreshed, PAGE_UPDATED["/guilds"]]), alternates: alternatesFor(`/guilds/${g.slug}`, [locale]).languages }));
+  return new Response(urlsetXml(entries), { headers: XML_HEADERS });
+}
+
+/** Indirizzo della sitemap delle gilde di una lingua, per l'indice. */
+export function guildsSitemapPath(locale: Locale): string {
+  return `/${locale}/sitemap-guilds.xml`;
 }
 
 /**

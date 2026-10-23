@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { ClassId, RaceId } from "@/lib/builder/types";
-import { BUILD_PURPOSES, pointsFromCode, type BuildPurpose, type CommunityBuild } from "@/lib/community/builds";
+import { formatDate, href, type Locale } from "@/lib/i18n";
+import { BUILD_PURPOSES, buildPath, pointsFromCode, type BuildPurpose, type CommunityBuild } from "@/lib/community/builds";
 import { fill } from "@/lib/builderLabels";
 import type { BuildLabels } from "@/lib/buildLabels";
 
@@ -20,9 +21,9 @@ export type BuildListProps = {
   classes: ClassMeta[];
   raceNames: Record<RaceId, string>;
   labels: BuildLabels;
-  hrefOf: (slug: string) => string;
+  /** lingua della pagina: link e date si costruiscono qui (a un componente client non si passano funzioni: il prerender di /builds falliva) */
+  locale: Locale;
   iconBase: string;
-  dateOf: (iso: string) => string;
   /** classe preselezionata (pagina del builder di una classe) */
   initialClass?: ClassId | "";
 };
@@ -31,7 +32,7 @@ export type BuildListProps = {
  * Elenco delle build pubblicate con i filtri (classe, scopo, ordine): tutte le schede stanno nell'HTML, i filtri le
  * nascondono soltanto, come la tabella del glossario. L'ordine "più votate" usa un voto pesato sul numero di voti.
  */
-export function BuildList({ items, classes, raceNames, labels, hrefOf, iconBase, dateOf, initialClass = "" }: BuildListProps) {
+export function BuildList({ items, classes, raceNames, labels, locale, iconBase, initialClass = "" }: BuildListProps) {
   const [cls, setCls] = useState<ClassId | "">(initialClass);
   const [purpose, setPurpose] = useState<BuildPurpose | "">("");
   const [sort, setSort] = useState<"newest" | "top">("newest");
@@ -87,7 +88,7 @@ export function BuildList({ items, classes, raceNames, labels, hrefOf, iconBase,
             const summary = pointsFromCode(b.code).join(" / ");
             return (
               <li key={b.id} className="min-w-0">
-                <Link href={hrefOf(b.slug)} className="build-card" style={c ? ({ "--tb-class": c.color, "--tb-ink": c.ink } as React.CSSProperties) : undefined} prefetch={false}>
+                <Link href={href(locale, buildPath(b.slug))} className="build-card" style={c ? ({ "--tb-class": c.color, "--tb-ink": c.ink } as React.CSSProperties) : undefined} prefetch={false}>
                   <span className="build-card-head">
                     {c ? (
                       // eslint-disable-next-line @next/next/no-img-element -- icona piccola già nel sito
@@ -106,7 +107,7 @@ export function BuildList({ items, classes, raceNames, labels, hrefOf, iconBase,
                     <span className="pill-purpose">{labels.purposes[b.purpose]}</span>
                     <span className="build-card-rating">{b.votes ? `★ ${b.avg.toFixed(1)} · ${b.votes}` : labels.rating.noVotes}</span>
                     <span className="build-card-author">
-                      {b.author} · {dateOf(b.created_at)}
+                      {b.author} · {formatDate(locale, b.created_at.slice(0, 10))}
                     </span>
                   </span>
                 </Link>

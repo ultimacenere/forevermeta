@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { formatDate, href } from "@/lib/i18n";
+import { href } from "@/lib/i18n";
 import { pageMeta, resolveLocale, type LocaleParams } from "@/lib/page";
 import { JsonLd, breadcrumbs } from "@/components/JsonLd";
 import { BuildList, type BuildListItem } from "@/components/builds/BuildList";
 import { listPublishedBuilds } from "@/lib/community/buildQueries";
-import { buildPath } from "@/lib/community/builds";
 import { authorOf, classMetas, raceNameMap } from "@/lib/community/buildView";
 import { buildLabels } from "@/lib/buildLabels";
 import { TALENT_ICON_BASE } from "@/lib/data/talents";
@@ -61,7 +60,7 @@ export default async function BuildsPage({ params }: { params: LocaleParams }) {
         {unavailable ? (
           <p className="card-night p-6 text-pale-muted">{L.list.unavailable}</p>
         ) : (
-          <BuildList items={items} classes={classMetas(locale)} raceNames={raceNameMap(locale)} labels={L} hrefOf={(slug) => href(locale, buildPath(slug))} iconBase={TALENT_ICON_BASE} dateOf={(iso) => formatDate(locale, iso.slice(0, 10))} />
+          <BuildList items={items} classes={classMetas(locale)} raceNames={raceNameMap(locale)} labels={L} locale={locale} iconBase={TALENT_ICON_BASE} />
         )}
       </div>
       <section className="mt-14 border-t border-felt-line pt-8" aria-labelledby="builds-how">

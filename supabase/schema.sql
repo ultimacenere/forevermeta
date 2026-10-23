@@ -6516,3 +6516,99 @@ create policy "users remove own build vote" on public.build_votes for delete usi
 
 grant select on public.community_builds, public.build_votes, public.build_ratings to anon, authenticated;
 grant insert, update, delete on public.community_builds, public.build_votes to authenticated;
+
+-- =====================================================================================================
+-- ===== 23/10/2026: BACHECA GILDE =====
+-- =====================================================================================================
+-- Annunci di reclutamento delle gilde di WoW: Forever pubblicati dagli iscritti (Pierluigi, 23/10/2026: "iniziamo qui ad
+-- approcciare la bacheca gilde"), sul modello delle build pubblicate: una riga per annuncio con regione, reame, tipo di
+-- reame, fazione, lingue, obiettivi, ruoli e classi cercati, giorni di raid, dimensione, descrizione nella lingua
+-- dell'autore e i contatti (invito Discord già normalizzato dal sito in https://discord.gg/<codice>, sito, nota di
+-- contatto: almeno uno dei tre). `refreshed_at` è il rinnovo dell'autore: gli annunci fermi da più di 45 giorni escono
+-- dall'elenco pubblico (filtro del sito, src/lib/community/guilds.ts, non del database). Tetto di 3 annunci pubblicati
+-- per iscritto (trigger). Le segnalazioni le scrive chi è entrato e le leggono solo gli admin. Le letture pubbliche
+-- filtrano su status = 'published'; il proprietario e gli admin vedono anche i nascosti.
+create table if not exists public.community_guilds (
+  id uuid primary key default gen_random_uuid(),
+  slug text unique not null check (slug ~ '^[a-z0-9-]{3,80}$'),
+  owner uuid not null references public.profiles(id) on delete cascade,
+  name text not null check (char_length(name) between 2 and 24),
+  region text not null check (region in ('eu','us','kr','tw','other')),
+  realm text not null check (char_length(realm) between 2 and 40),
+  realm_type text not null default 'normal' check (realm_type in ('normal','pvp','rp','hardcore')),
+  faction text not null check (faction in ('alliance','horde')),
+  languages text[] not null check (cardinality(languages) between 1 and 3 and languages <@ array['en','it','es','de','fr','pt','ru','pl','other']::text[]),
+  focus text[] not null check (cardinality(focus) between 1 and 4 and focus <@ array['leveling','dungeons','raids','pvp','social','rp']::text[]),
+  roles text[] not null default '{}' check (roles <@ array['tank','healer','dps']::text[]),
+  classes text[] not null default '{}' check (classes <@ array['druid','hunter','mage','paladin','priest','rogue','shaman','warlock','warrior']::text[]),
+  raid_days text[] not null default '{}' check (raid_days <@ array['mon','tue','wed','thu','fri','sat','sun']::text[]),
+  schedule text not null default '' check (char_length(schedule) <= 120),
+  size text not null default 'forming' check (size in ('forming','small','medium','large')),
+  description_lang text not null default 'en' check (description_lang in ('en','it','es')),
+  description text not null check (char_length(description) between 80 and 4000),
+  discord_url text not null default '' check (discord_url = '' or discord_url ~ '^https://discord\.gg/[A-Za-z0-9-]{2,64}$'),
+  website_url text not null default '' check (website_url = '' or website_url ~ '^https?://[^[:space:]]{4,200}$'),
+  contact text not null default '' check (char_length(contact) <= 80),
+  status text not null default 'published' check (status in ('published','hidden')),
+  refreshed_at timestamptz not null default now(),
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  constraint community_guilds_contact_check check (discord_url <> '' or website_url <> '' or contact <> '')
+);
+create index if not exists community_guilds_status_idx on public.community_guilds (status, refreshed_at desc);
+create index if not exists community_guilds_owner_idx on public.community_guilds (owner);
+create index if not exists community_guilds_region_idx on public.community_guilds (region, faction);
+
+drop trigger if exists community_guilds_touch on public.community_guilds;
+create trigger community_guilds_touch before update on public.community_guilds
+  for each row execute function public.touch_updated_at();
+
+-- tetto agli annunci pubblicati per iscritto (il sito lo dice prima con un messaggio; qui il controllo vero)
+create or replace function public.enforce_guild_limit()
+returns trigger language plpgsql security definer set search_path = public as $$
+declare n int;
+begin
+  if new.status = 'published' and (tg_op = 'INSERT' or old.status <> 'published') then
+    select count(*) into n from public.community_guilds where owner = new.owner and status = 'published' and id <> new.id;
+    if n >= 3 then raise exception 'guild limit reached' using errcode = 'check_violation'; end if;
+  end if;
+  return new;
+end $$;
+drop trigger if exists community_guilds_limit on public.community_guilds;
+create trigger community_guilds_limit before insert or update on public.community_guilds
+  for each row execute function public.enforce_guild_limit();
+
+create table if not exists public.guild_reports (
+  id bigserial primary key,
+  guild_id uuid not null references public.community_guilds(id) on delete cascade,
+  user_id uuid references public.profiles(id) on delete set null,
+  reason text not null check (char_length(reason) between 3 and 500),
+  created_at timestamptz not null default now()
+);
+create index if not exists guild_reports_guild_idx on public.guild_reports (guild_id, created_at desc);
+
+alter table public.community_guilds enable row level security;
+alter table public.guild_reports enable row level security;
+
+drop policy if exists "published guilds are public" on public.community_guilds;
+create policy "published guilds are public" on public.community_guilds for select
+  using (status = 'published' or owner = auth.uid() or public.is_admin());
+drop policy if exists "users insert own guilds" on public.community_guilds;
+create policy "users insert own guilds" on public.community_guilds for insert
+  with check (owner = auth.uid());
+drop policy if exists "owners update guilds" on public.community_guilds;
+create policy "owners update guilds" on public.community_guilds for update
+  using (owner = auth.uid() or public.is_admin()) with check (owner = auth.uid() or public.is_admin());
+drop policy if exists "owners remove guilds" on public.community_guilds;
+create policy "owners remove guilds" on public.community_guilds for delete
+  using (owner = auth.uid() or public.is_admin());
+
+drop policy if exists "users report guilds" on public.guild_reports;
+create policy "users report guilds" on public.guild_reports for insert
+  with check (user_id = auth.uid());
+drop policy if exists "admins read guild reports" on public.guild_reports;
+create policy "admins read guild reports" on public.guild_reports for select using (public.is_admin());
+
+grant select on public.community_guilds to anon, authenticated;
+grant insert, update, delete on public.community_guilds to authenticated;
+grant select, insert on public.guild_reports to authenticated;

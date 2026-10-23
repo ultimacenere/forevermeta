@@ -46,6 +46,42 @@ type BuildVoteRow = {
   updated_at: string;
 };
 
+/** Annuncio di gilda (blocco "BACHECA GILDE" di supabase/schema.sql, 23/10/2026). */
+export type GuildRow = {
+  id: string;
+  slug: string;
+  owner: string;
+  name: string;
+  region: string;
+  realm: string;
+  realm_type: string;
+  faction: string;
+  languages: string[];
+  focus: string[];
+  roles: string[];
+  classes: string[];
+  raid_days: string[];
+  schedule: string;
+  size: string;
+  description_lang: string;
+  description: string;
+  discord_url: string;
+  website_url: string;
+  contact: string;
+  status: string;
+  refreshed_at: string;
+  created_at: string;
+  updated_at: string;
+};
+
+type GuildReportRow = {
+  id: number;
+  guild_id: string;
+  user_id: string | null;
+  reason: string;
+  created_at: string;
+};
+
 export type Database = {
   public: {
     Tables: {
@@ -65,6 +101,18 @@ export type Database = {
         Row: BuildVoteRow;
         Insert: Pick<BuildVoteRow, "build_id" | "user_id" | "stars"> & Partial<BuildVoteRow>;
         Update: Partial<BuildVoteRow>;
+        Relationships: [];
+      };
+      community_guilds: {
+        Row: GuildRow;
+        Insert: Partial<GuildRow> & Pick<GuildRow, "slug" | "owner" | "name" | "region" | "realm" | "faction" | "languages" | "focus" | "description">;
+        Update: Partial<GuildRow>;
+        Relationships: [{ foreignKeyName: "community_guilds_owner_fkey"; columns: ["owner"]; isOneToOne: false; referencedRelation: "profiles"; referencedColumns: ["id"] }];
+      };
+      guild_reports: {
+        Row: GuildReportRow;
+        Insert: Pick<GuildReportRow, "guild_id" | "reason"> & Partial<GuildReportRow>;
+        Update: Partial<GuildReportRow>;
         Relationships: [];
       };
     };
