@@ -11,6 +11,8 @@ export type BuildListItem = Pick<CommunityBuild, "id" | "slug" | "name" | "class
   author: string;
   avg: number;
   votes: number;
+  /** data di pubblicazione già formattata nella lingua (le funzioni non passano a un componente client) */
+  date: string;
 };
 
 export type ClassMeta = { id: ClassId; name: string; color: string; ink: string; icon: string };
@@ -20,9 +22,9 @@ export type BuildListProps = {
   classes: ClassMeta[];
   raceNames: Record<RaceId, string>;
   labels: BuildLabels;
-  hrefOf: (slug: string) => string;
+  /** base degli indirizzi delle schede (`/<lingua>/builds`) */
+  hrefBase: string;
   iconBase: string;
-  dateOf: (iso: string) => string;
   /** classe preselezionata (pagina del builder di una classe) */
   initialClass?: ClassId | "";
 };
@@ -31,7 +33,7 @@ export type BuildListProps = {
  * Elenco delle build pubblicate con i filtri (classe, scopo, ordine): tutte le schede stanno nell'HTML, i filtri le
  * nascondono soltanto, come la tabella del glossario. L'ordine "più votate" usa un voto pesato sul numero di voti.
  */
-export function BuildList({ items, classes, raceNames, labels, hrefOf, iconBase, dateOf, initialClass = "" }: BuildListProps) {
+export function BuildList({ items, classes, raceNames, labels, hrefBase, iconBase, initialClass = "" }: BuildListProps) {
   const [cls, setCls] = useState<ClassId | "">(initialClass);
   const [purpose, setPurpose] = useState<BuildPurpose | "">("");
   const [sort, setSort] = useState<"newest" | "top">("newest");
@@ -87,7 +89,7 @@ export function BuildList({ items, classes, raceNames, labels, hrefOf, iconBase,
             const summary = pointsFromCode(b.code).join(" / ");
             return (
               <li key={b.id} className="min-w-0">
-                <Link href={hrefOf(b.slug)} className="build-card" style={c ? ({ "--tb-class": c.color, "--tb-ink": c.ink } as React.CSSProperties) : undefined} prefetch={false}>
+                <Link href={`${hrefBase}/${b.slug}`} className="build-card" style={c ? ({ "--tb-class": c.color, "--tb-ink": c.ink } as React.CSSProperties) : undefined} prefetch={false}>
                   <span className="build-card-head">
                     {c ? (
                       // eslint-disable-next-line @next/next/no-img-element -- icona piccola già nel sito
@@ -106,7 +108,7 @@ export function BuildList({ items, classes, raceNames, labels, hrefOf, iconBase,
                     <span className="pill-purpose">{labels.purposes[b.purpose]}</span>
                     <span className="build-card-rating">{b.votes ? `★ ${b.avg.toFixed(1)} · ${b.votes}` : labels.rating.noVotes}</span>
                     <span className="build-card-author">
-                      {b.author} · {dateOf(b.created_at)}
+                      {b.author} · {b.date}
                     </span>
                   </span>
                 </Link>
