@@ -19,7 +19,11 @@ export type CalendarEvent = {
 
 const n = (en: string, it: string, es: string): L10n => ({ en, it, es });
 
-/** Fonti ufficiali delle date (raccolta del 10/10/2026, aggiornata il 23/10/2026). */
+/**
+ * Fonti ufficiali delle date (raccolta del 10/10/2026, aggiornata il 28/10/2026). L'apertura reale della prenotazione
+ * dei nomi in Europa (verso le 20:40 CET del 27/10, con il ritardo annunciato nel launcher) viene dal live blog di
+ * Wowhead (aggiornamento delle 12:40 PDT): Blizzard non ha dato un orario nuovo.
+ */
 const preorder = {
   label: "Pre-Purchase World of Warcraft: Forever Upgrades (Blizzard News, 12/09/2026)",
   url: "https://news.blizzard.com/en-us/article/24301508/pre-purchase-world-of-warcraft-forever-upgrades-and-begin-your-next-journey-in-azeroth",
@@ -68,9 +72,9 @@ export const events: CalendarEvent[] = [
     startAt: "2026-10-27T18:00:00+01:00",
     title: n("Early Name Reservation", "Prenotazione anticipata dei nomi", "Reserva de nombres anticipada"),
     text: n(
-      "With any upgrade edition you can reserve up to three character names in total across all rulesets, first come, first served. It opens on 27 October at 18:00 CET in Europe and at 1:00 p.m. PDT in North America, and closes on 3 November.",
-      "Con un'edizione a pagamento puoi prenotare fino a tre nomi di personaggio in totale su tutti i set di regole, a chi arriva prima. Apre il 27 ottobre alle 18:00 in Italia (18:00 CET) e alle 13:00 PDT in Nord America, e chiude il 3 novembre.",
-      "Con cualquier edición de pago puedes reservar hasta tres nombres de personaje en total entre todos los conjuntos de reglas; el primero que llega se lo queda. Abre el 27 de octubre a las 18:00 CET en Europa y a las 13:00 PDT en Norteamérica, y cierra el 3 de noviembre.",
+      "With any upgrade edition you can reserve up to three character names in total across all rulesets, including Roleplay-PvP, first come, first served, until 3 November. It was scheduled for 27 October at 18:00 CET in Europe and 1:00 p.m. PDT in North America; in Europe it actually opened about 20:40 CET, after a delay announced in the Battle.net launcher.",
+      "Con un'edizione a pagamento puoi prenotare fino a tre nomi di personaggio in totale su tutti i set di regole, Roleplay-PvP compreso, a chi arriva prima, fino al 3 novembre. Era prevista il 27 ottobre alle 18:00 in Italia (18:00 CET) e alle 13:00 PDT in Nord America; in Europa è partita davvero verso le 20:40, dopo un ritardo annunciato nel launcher di Battle.net.",
+      "Con cualquier edición de pago puedes reservar hasta tres nombres de personaje en total entre todos los conjuntos de reglas, Rol-JcJ incluido; el primero que llega se lo queda, hasta el 3 de noviembre. Estaba prevista el 27 de octubre a las 18:00 CET en Europa y a las 13:00 PDT en Norteamérica; en Europa abrió de verdad hacia las 20:40 CET, tras un retraso anunciado en el launcher de Battle.net.",
     ),
     source: names,
   },

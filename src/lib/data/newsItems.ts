@@ -12,6 +12,9 @@ import campingOfficial from "./newsTexts/camping-official";
 import rpPvp from "./newsTexts/roleplay-pvp-ruleset";
 import betaEnd from "./newsTexts/beta-end-celebration";
 import podcast5 from "./newsTexts/podcast-episode-5";
+import racialsFinalPass from "./newsTexts/racials-final-pass-october-26";
+import nameReservationOpening from "./newsTexts/name-reservation-opening-october-27";
+import layeringCadence from "./newsTexts/blizzard-layering-cadence-dual-spec";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -203,4 +206,7 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   rpPvp,
   betaEnd,
   podcast5,
+  racialsFinalPass,
+  nameReservationOpening,
+  layeringCadence,
 ];

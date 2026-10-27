@@ -2198,6 +2198,104 @@ export const changeUpdates: ChangeUpdate[] = [
       ),
     ],
   },
+  {
+    // Post 7 del 26/10/2026 (20:35 UTC), completato dal post 8 del 27/10 (15:37 UTC) con Blood Fury, Berserking e Touch
+    // of the Grave, «additions that were intended to be listed». Beta chiusa dal 23/10: nessuna build da indicare.
+    id: "2026-10-26-dev-notes-racials",
+    date: "2026-10-26",
+    title: l(
+      "Development Notes, October 26–27: final pass on racials before launch",
+      "Note di sviluppo del 26–27 ottobre: ultima revisione delle razziali prima del lancio",
+      "Notas de desarrollo del 26 y 27 de octubre: última revisión de las raciales antes del lanzamiento",
+    ),
+    url: `${DEV_NOTES}/7`,
+    items: [
+      c(
+        "races",
+        "Blizzard's final pass prioritises racial identity: some role- or class-focused racials replaced by generic ones come back, except the weapon specializations (Sword, Axe, Mace), which do not return. The beta closed on 23 October, so these changes were not available in any test build.",
+        "L'ultima revisione di Blizzard mette al primo posto l'identità delle razze: tornano alcune razziali legate a ruolo o classe che erano state sostituite da bonus generici, tranne le specializzazioni d'arma (Sword, Axe, Mace), che non tornano. La beta è chiusa dal 23 ottobre: queste modifiche non sono state in nessuna build di prova.",
+        "La última revisión de Blizzard da prioridad a la identidad de las razas: vuelven algunas raciales ligadas a un rol o una clase que se habían sustituido por bonificaciones genéricas, salvo las especializaciones de arma (Sword, Axe, Mace), que no vuelven. La beta cerró el 23 de octubre: estos cambios no han estado en ninguna build de prueba.",
+      ),
+      c(
+        "races",
+        "Human: Ruthless now increases critical strike chance by 1% (was 2%); The Human Spirit increases Spirit by 10% (was 5%).",
+        "Umano: Ruthless ora aumenta la probabilità di colpo critico dell'1% (era il 2%); The Human Spirit aumenta lo Spirito del 10% (era il 5%).",
+        "Humano: Ruthless ahora aumenta la probabilidad de golpe crítico un 1 % (era un 2 %); The Human Spirit aumenta el espíritu un 10 % (era un 5 %).",
+      ),
+      c(
+        "races",
+        "Dwarf: Earth Fury (2% increased critical strike damage and healing) removed; new passive Artisan's Precision increases hit chance with spells and attacks by 1%.",
+        "Nano: tolta Earth Fury (danni e cure critiche +2%); la nuova passiva Artisan's Precision aumenta dell'1% la probabilità di colpire con incantesimi e attacchi.",
+        "Enano: eliminada Earth Fury (daño y sanación críticos +2 %); la nueva pasiva Artisan's Precision aumenta un 1 % la probabilidad de golpe con hechizos y ataques.",
+      ),
+      c(
+        "races",
+        "Tauren: Plainsrunning grants 2% movement speed per stack (was 1%), up to 60% (was 30%), and no longer increases mounted speed.",
+        "Tauren: Plainsrunning dà il 2% di velocità di movimento per accumulo (era l'1%), fino al 60% (era il 30%), e non aumenta più la velocità a cavallo.",
+        "Tauren: Plainsrunning da un 2 % de velocidad de movimiento por acumulación (era un 1 %), hasta un 60 % (era un 30 %), y ya no aumenta la velocidad montado.",
+      ),
+      c(
+        "races",
+        "Tauren: Endurance now only increases total health by 5% (no hit chance or critical damage modifiers).",
+        "Tauren: Endurance ora aumenta solo la salute totale del 5% (niente probabilità di colpire né danni critici).",
+        "Tauren: Endurance ahora solo aumenta la salud total un 5 % (sin probabilidad de golpe ni daño crítico).",
+      ),
+      c(
+        "races",
+        "Orc: Savage (1% increased critical strike chance) removed; Command is back, increasing Hunter and Warlock pet damage by 5%.",
+        "Orco: tolta Savage (critico +1%); torna Command, che aumenta del 5% i danni dei pet del Cacciatore e dello Stregone.",
+        "Orco: eliminada Savage (crítico +1 %); vuelve Command, que aumenta un 5 % el daño de las mascotas del cazador y del brujo.",
+      ),
+      c(
+        "races",
+        "Orc: Blood Fury cooldown reduced to 2 minutes (was 3 minutes). Added on 27 October.",
+        "Orco: la ricarica di Blood Fury scende a 2 minuti (era 3). Aggiunta il 27 ottobre.",
+        "Orco: la reutilización de Blood Fury baja a 2 minutos (eran 3). Añadido el 27 de octubre.",
+      ),
+      c(
+        "races",
+        "Troll: Berserking lasts 15 seconds (was 10 seconds). Added on 27 October.",
+        "Troll: Berserking dura 15 secondi (erano 10). Aggiunta il 27 ottobre.",
+        "Trol: Berserking dura 15 segundos (eran 10). Añadido el 27 de octubre.",
+      ),
+      c(
+        "races",
+        "Undead: Touch of the Grave internal cooldown reduced to 15 seconds (was 25 seconds). Added on 27 October.",
+        "Non Morto: la ricarica interna di Touch of the Grave scende a 15 secondi (erano 25). Aggiunta il 27 ottobre.",
+        "No-muerto: la reutilización interna de Touch of the Grave baja a 15 segundos (eran 25). Añadido el 27 de octubre.",
+      ),
+      c(
+        "races",
+        "Skyborne: Wind-Blessed haste bonus reduced to 2% (was 3%).",
+        "Skyborne: il bonus di celerità di Wind-Blessed scende al 2% (era il 3%).",
+        "Skyborne: la bonificación de celeridad de Wind-Blessed baja a un 2 % (era un 3 %).",
+      ),
+      c(
+        "races",
+        "High Order Skyborne: Read Leyline increases health and mana regeneration by 50% (was 100%) for 15 seconds; it cannot be used while Innervate is active, which replaces it as the stronger effect.",
+        "Skyborne High Order: Read Leyline aumenta la rigenerazione di salute e mana del 50% (era il 100%) per 15 secondi; non si usa con Innervate attivo, che la sostituisce perché più forte.",
+        "Skyborne de la Orden Eminente: Read Leyline aumenta la regeneración de salud y maná un 50 % (era un 100 %) durante 15 segundos; no se puede usar con Innervate activo, que la sustituye por ser más fuerte.",
+      ),
+      c(
+        "races",
+        "High Order Skyborne: using Read Leyline at a ley line also grants Attuned for 1 hour, which raises its bonus to 100%. Attuned persists through death and is removed on entering a raid.",
+        "Skyborne High Order: usata su una linea di ley, Read Leyline dà anche Attuned per 1 ora, che porta il bonus al 100%. Attuned resta dopo la morte e sparisce entrando in un'incursione.",
+        "Skyborne de la Orden Eminente: usada en una línea ley, Read Leyline también da Attuned durante 1 hora, que sube la bonificación al 100 %. Attuned se mantiene tras morir y desaparece al entrar en una banda.",
+      ),
+      c(
+        "races",
+        "Windshaper Skyborne: Skysight increases movement speed by 15% (was 10%) for 15 seconds.",
+        "Skyborne Windshaper: Skysight aumenta la velocità di movimento del 15% (era il 10%) per 15 secondi.",
+        "Skyborne Formaviento: Skysight aumenta la velocidad de movimiento un 15 % (era un 10 %) durante 15 segundos.",
+      ),
+      c(
+        "races",
+        "Windshaper Skyborne: using Skysight at an elemental convergence also grants Charged for 1 hour, which raises its bonus to 30%. Charged persists through death and is removed on entering a raid.",
+        "Skyborne Windshaper: usata su una convergenza elementale, Skysight dà anche Charged per 1 ora, che porta il bonus al 30%. Charged resta dopo la morte e sparisce entrando in un'incursione.",
+        "Skyborne Formaviento: usada en una convergencia elemental, Skysight también da Charged durante 1 hora, que sube la bonificación al 30 %. Charged se mantiene tras morir y desaparece al entrar en una banda.",
+      ),
+    ],
+  },
 ];
 
 /** Etichette delle aree, nelle tre lingue: le nove classi, poi i sistemi. */
