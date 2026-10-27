@@ -8,6 +8,8 @@ import { classNameMap, raceNameMap } from "@/lib/community/buildView";
 import { buildLabels, languageNames } from "@/lib/buildLabels";
 
 export const dynamic = "force-dynamic";
+// la Server Action traduce la guida dopo la risposta (`after()`): la funzione resta viva finché il modello risponde
+export const maxDuration = 300;
 
 export async function generateMetadata({ params }: { params: LocaleParams }): Promise<Metadata> {
   const { locale, dict } = await resolveLocale(params);

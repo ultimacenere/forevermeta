@@ -115,6 +115,7 @@ export function BuildForm({ locale, labels, classNames, raceNames, languageNames
             <label htmlFor="bf-lang" className="kicker text-pale-muted">
               {f.guideLang}
             </label>
+            <p className="text-xs text-pale-muted">{f.guideLangHint}</p>
             <select id="bf-lang" name="guideLang" value={fields.guideLang} onChange={set("guideLang")} className="mt-1 w-full rounded-lg border border-felt-line bg-night-2 px-3 py-2 text-chalk">
               {(Object.keys(languageNames) as Locale[]).map((l) => (
                 <option key={l} value={l}>

@@ -34,6 +34,8 @@ export type BuildRow = {
   notes: string;
   game_version: string;
   status: string;
+  /** traduzioni automatiche di nome e guida, una per lingua (blocco "BUILD TRADOTTE" di schema.sql) */
+  translations: Record<string, unknown>;
   created_at: string;
   updated_at: string;
 };
@@ -44,6 +46,81 @@ type BuildVoteRow = {
   stars: number;
   created_at: string;
   updated_at: string;
+};
+
+/** Annuncio di gilda (blocco "BACHECA GILDE" di supabase/schema.sql, 23/10/2026). */
+export type GuildRow = {
+  id: string;
+  slug: string;
+  owner: string;
+  name: string;
+  region: string;
+  ruleset: string;
+  faction: string;
+  languages: string[];
+  focus: string[];
+  roles: string[];
+  classes: string[];
+  raid_days: string[];
+  schedule: string;
+  size: string;
+  description_lang: string;
+  description: string;
+  discord_url: string;
+  website_url: string;
+  contact: string;
+  status: string;
+  refreshed_at: string;
+  created_at: string;
+  updated_at: string;
+};
+
+type GuildReportRow = {
+  id: number;
+  guild_id: string;
+  user_id: string | null;
+  reason: string;
+  created_at: string;
+};
+
+/** Interfaccia condivisa (blocco "INTERFACCE" di supabase/schema.sql, 24/10/2026). */
+export type InterfaceRow = {
+  id: string;
+  slug: string;
+  owner: string;
+  name: string;
+  layout: string;
+  cooldowns: string;
+  shots: string[];
+  classes: string[];
+  roles: string[];
+  input: string;
+  preset: string;
+  resolution: string;
+  ui_scale: number | null;
+  addons: string;
+  description_lang: string;
+  description: string;
+  game_version: string;
+  status: string;
+  created_at: string;
+  updated_at: string;
+};
+
+type InterfaceVoteRow = {
+  interface_id: string;
+  user_id: string;
+  stars: number;
+  created_at: string;
+  updated_at: string;
+};
+
+type InterfaceReportRow = {
+  id: number;
+  interface_id: string;
+  user_id: string | null;
+  reason: string;
+  created_at: string;
 };
 
 export type Database = {
@@ -67,10 +144,44 @@ export type Database = {
         Update: Partial<BuildVoteRow>;
         Relationships: [];
       };
+      community_guilds: {
+        Row: GuildRow;
+        Insert: Partial<GuildRow> & Pick<GuildRow, "slug" | "owner" | "name" | "region" | "faction" | "languages" | "focus" | "description">;
+        Update: Partial<GuildRow>;
+        Relationships: [{ foreignKeyName: "community_guilds_owner_fkey"; columns: ["owner"]; isOneToOne: false; referencedRelation: "profiles"; referencedColumns: ["id"] }];
+      };
+      guild_reports: {
+        Row: GuildReportRow;
+        Insert: Pick<GuildReportRow, "guild_id" | "reason"> & Partial<GuildReportRow>;
+        Update: Partial<GuildReportRow>;
+        Relationships: [];
+      };
+      community_interfaces: {
+        Row: InterfaceRow;
+        Insert: Partial<InterfaceRow> & Pick<InterfaceRow, "slug" | "owner" | "name" | "layout" | "shots" | "description">;
+        Update: Partial<InterfaceRow>;
+        Relationships: [{ foreignKeyName: "community_interfaces_owner_fkey"; columns: ["owner"]; isOneToOne: false; referencedRelation: "profiles"; referencedColumns: ["id"] }];
+      };
+      interface_votes: {
+        Row: InterfaceVoteRow;
+        Insert: Pick<InterfaceVoteRow, "interface_id" | "user_id" | "stars"> & Partial<InterfaceVoteRow>;
+        Update: Partial<InterfaceVoteRow>;
+        Relationships: [];
+      };
+      interface_reports: {
+        Row: InterfaceReportRow;
+        Insert: Pick<InterfaceReportRow, "interface_id" | "reason"> & Partial<InterfaceReportRow>;
+        Update: Partial<InterfaceReportRow>;
+        Relationships: [];
+      };
     };
     Views: {
       build_ratings: {
         Row: { build_id: string; avg_stars: number | string; votes: number };
+        Relationships: [];
+      };
+      interface_ratings: {
+        Row: { interface_id: string; avg_stars: number | string; votes: number };
         Relationships: [];
       };
     };

@@ -11,6 +11,12 @@ import { buildPath, pointsFromCode } from "@/lib/community/builds";
 import { classNameMap } from "@/lib/community/buildView";
 import { buildLabels } from "@/lib/buildLabels";
 import { fill } from "@/lib/builderLabels";
+import { listUserGuilds } from "@/lib/community/guildQueries";
+import { guildPath } from "@/lib/community/guilds";
+import { guildLabels } from "@/lib/guildLabels";
+import { listUserInterfaces } from "@/lib/community/interfaceQueries";
+import { interfacePath } from "@/lib/community/interfaces";
+import { interfaceLabels } from "@/lib/interfaceLabels";
 
 export const dynamic = "force-dynamic";
 
@@ -42,6 +48,10 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
   const L = buildLabels[locale];
   const mine = await listUserBuilds(supabase, user.id);
   const classNames = classNameMap(locale);
+  const G = guildLabels[locale];
+  const myGuilds = await listUserGuilds(supabase, user.id);
+  const U = interfaceLabels[locale];
+  const myInterfaces = await listUserInterfaces(supabase, user.id);
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -98,6 +108,78 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
                 </Link>
                 <Link href={href(locale, `${buildPath(b.slug)}/edit`)} className="btn btn-ghost px-3 py-1 text-xs" prefetch={false}>
                   {L.owner.edit}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      <section id="guilds" className="mt-10" aria-labelledby="account-guilds">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 id="account-guilds" className="t-section">
+            {G.account.title}
+          </h2>
+          <Link href={href(locale, "/guilds/publish")} className="btn btn-gold px-3 py-1.5 text-xs" prefetch={false}>
+            {G.account.publish}
+          </Link>
+        </div>
+        {myGuilds.unavailable ? (
+          <p className="mt-4 text-sm text-pale-muted">{G.list.unavailable}</p>
+        ) : myGuilds.guilds.length === 0 ? (
+          <p className="mt-4 text-sm text-pale-muted">{G.account.empty}</p>
+        ) : (
+          <ul className="mt-4 space-y-2">
+            {myGuilds.guilds.map((g) => (
+              <li key={g.id} className="card-night flex flex-wrap items-center gap-3 p-4 text-sm">
+                <div className="min-w-0 flex-1">
+                  <p className="t-item text-base">{g.name}</p>
+                  <p className="text-pale-muted">
+                    {G.factions[g.faction]} · {G.regions[g.region]} · {G.rulesets[g.ruleset]} · {g.languages.map((l) => G.languages[l]).join(", ")} · {G.page.refreshed} {formatDate(locale, g.refreshed_at.slice(0, 10))}
+                  </p>
+                </div>
+                <span className={g.status === "published" ? "stat-pill bg-mint-soft text-mint-deep" : "stat-pill bg-crimson-soft text-crimson-deep"}>{G.account.status[g.status]}</span>
+                <Link href={href(locale, guildPath(g.slug))} className="btn btn-choice px-3 py-1 text-xs" prefetch={false}>
+                  {G.account.open}
+                </Link>
+                <Link href={href(locale, `${guildPath(g.slug)}/edit`)} className="btn btn-ghost px-3 py-1 text-xs" prefetch={false}>
+                  {G.owner.edit}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
+      <section id="interfaces" className="mt-10" aria-labelledby="account-interfaces">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 id="account-interfaces" className="t-section">
+            {U.account.title}
+          </h2>
+          <Link href={href(locale, "/interfaces/publish")} className="btn btn-gold px-3 py-1.5 text-xs" prefetch={false}>
+            {U.account.publish}
+          </Link>
+        </div>
+        {myInterfaces.unavailable ? (
+          <p className="mt-4 text-sm text-pale-muted">{U.list.unavailable}</p>
+        ) : myInterfaces.interfaces.length === 0 ? (
+          <p className="mt-4 text-sm text-pale-muted">{U.account.empty}</p>
+        ) : (
+          <ul className="mt-4 space-y-2">
+            {myInterfaces.interfaces.map((i) => (
+              <li key={i.id} className="card-night flex flex-wrap items-center gap-3 p-4 text-sm">
+                <div className="min-w-0 flex-1">
+                  <p className="t-item text-base">{i.name}</p>
+                  <p className="text-pale-muted">
+                    {U.inputs[i.input]} · {i.roles.length ? i.roles.map((r) => U.roles[r]).join(", ") : U.page.anyRole} · {formatDate(locale, i.created_at.slice(0, 10))}
+                  </p>
+                </div>
+                <span className={i.status === "published" ? "stat-pill bg-mint-soft text-mint-deep" : "stat-pill bg-crimson-soft text-crimson-deep"}>{U.account.status[i.status]}</span>
+                <Link href={href(locale, interfacePath(i.slug))} className="btn btn-choice px-3 py-1 text-xs" prefetch={false}>
+                  {U.account.open}
+                </Link>
+                <Link href={href(locale, `${interfacePath(i.slug)}/edit`)} className="btn btn-ghost px-3 py-1 text-xs" prefetch={false}>
+                  {U.owner.edit}
                 </Link>
               </li>
             ))}

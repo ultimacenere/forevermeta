@@ -10,6 +10,7 @@ import { isClassId } from "@/lib/data/classes";
 import { racesOfClass } from "@/lib/data/races";
 import { talentsOf } from "@/lib/data/talents";
 import { BUILDS_PER_USER, BUILD_SLUG_RE, buildPath, checkFields, newSlug, tableMissing, type BuildFields } from "./builds";
+import { translateBuildLater } from "./buildTranslate";
 
 /**
  * Server Action delle build pubblicate (23/10/2026): pubblicazione, modifica, stato, eliminazione e voto. Le regole dei
@@ -99,10 +100,12 @@ export async function publishBuild(_prev: BuildActionState, formData: FormData):
     const { data, error } = await supabase
       .from("community_builds")
       .insert({ ...row, slug })
-      .select("slug")
+      .select("id, slug")
       .single();
     if (!error && data) {
       revalidateBuildPaths(slug);
+      // nome e guida nelle altre due lingue, dopo la risposta al browser (senza ANTHROPIC_API_KEY non fa nulla)
+      translateBuildLater(supabase, (data as { id: string }).id);
       return { ok: true, href: `/${locale}${buildPath(slug)}?new=1` };
     }
     if (error?.code !== "23505") return writeError(error);
@@ -127,11 +130,13 @@ export async function updateBuild(_prev: BuildActionState, formData: FormData): 
     if ("error" in code) return code;
     Object.assign(patch, { class_id: code.classId, race_id: code.raceId, level: code.level, code: code.code, points: code.points, game_version: code.gameVersion });
   }
-  const { data, error } = await supabase.from("community_builds").update(patch).eq("id", id).eq("owner", user.id).select("slug").maybeSingle();
+  const { data, error } = await supabase.from("community_builds").update(patch).eq("id", id).eq("owner", user.id).select("slug, status").maybeSingle();
   if (error) return writeError(error);
   if (!data) return { error: "forbidden" };
   const slug = (data as { slug: string }).slug;
   revalidateBuildPaths(slug);
+  // il testo è cambiato: le traduzioni rimaste indietro si rifanno (solo per una build online)
+  if ((data as { status: string }).status === "published") translateBuildLater(supabase, id);
   return { ok: true, href: `/${locale}${buildPath(slug)}` };
 }
 
@@ -147,6 +152,8 @@ export async function setBuildStatus(formData: FormData): Promise<BuildActionSta
   if (error) return writeError(error);
   if (!data) return { error: "forbidden" };
   revalidateBuildPaths((data as { slug: string }).slug);
+  // tornata online: se una traduzione manca o è rimasta indietro, si rifà
+  if (status === "published") translateBuildLater(supabase, id);
   return { ok: true };
 }
 

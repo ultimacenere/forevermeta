@@ -250,6 +250,12 @@ export type EventParams = {
   /* build pubblicate (23/10/2026): pubblicazione (solo la prima volta) e voto */
   build_published: { class: string; purpose: string };
   build_vote: { stars: number; vote_type: "new" | "update" };
+  /* bacheca delle gilde (23/10/2026): pubblicazione di un annuncio (solo la prima volta) */
+  guild_published: { region: string; faction: string; lang: string };
+  /* interfacce condivise (24/10/2026): pubblicazione (solo la prima volta), copia della stringa, voto */
+  interface_published: { input: string; addons: "yes" | "no" };
+  interface_copy: { kind: "layout" | "cooldowns" };
+  interface_vote: { stars: number; vote_type: "new" | "update" };
 };
 export type EventName = keyof EventParams;
 
@@ -307,6 +313,10 @@ export const VERCEL_PROPS = {
   build_import: ["ok"],
   build_published: ["class", "purpose"],
   build_vote: ["stars", "vote_type"],
+  guild_published: ["lang", "region"],
+  interface_published: ["input", "addons"],
+  interface_copy: ["kind"],
+  interface_vote: ["stars", "vote_type"],
 } as const satisfies { [N in EventName]: readonly (keyof EventParams[N] & string)[] };
 
 export const isEventName = (name: unknown): name is EventName => typeof name === "string" && Object.hasOwn(VERCEL_PROPS, name);

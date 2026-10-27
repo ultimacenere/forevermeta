@@ -21,7 +21,7 @@ export type ClassInfo = {
   nameMx?: string;
   /** colore della classe nel gioco (nomi nei gruppi, chat): accento del builder */
   color: string;
-  /** versione scura dello stesso colore, nostra, per testi e cornici sulla pergamena (contrasto ≥ 4,5:1 su #fffdf8) */
+  /** colore per testi e cornici sul fondo scuro (contrasto ≥ 4,5:1 su #05263a e #031a2b, tema "abisso e bronzo" del 24/10/2026): il colore del gioco, solo lo sciamano schiarito del 20% */
   ink: string;
   /** icona della classe del gioco (`classicon_*`), in public/talents/icons (scaricata da import-talents.mjs --icons) */
   icon: string;
@@ -41,7 +41,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_druid",
     name: n("Druid", "Druido", "druida"),
     color: "#ff7c0a",
-    ink: "#a84c00",
+    ink: "#ff7c0a",
     resource: "Mana",
     roles: ["caster", "melee", "tank", "healer"],
     trees: [tree("balance", "Balance", "caster"), tree("feral-combat", "Feral Combat", "melee"), tree("restoration", "Restoration", "healer")],
@@ -51,7 +51,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_hunter",
     name: n("Hunter", "Cacciatore", "cazador"),
     color: "#aad372",
-    ink: "#4a7a1a",
+    ink: "#aad372",
     resource: "Mana",
     roles: ["ranged"],
     trees: [tree("beast-mastery", "Beast Mastery", "ranged"), tree("marksmanship", "Marksmanship", "ranged"), tree("survival", "Survival", "ranged")],
@@ -61,7 +61,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_mage",
     name: n("Mage", "Mago", "mago"),
     color: "#3fc7eb",
-    ink: "#0f6f8c",
+    ink: "#3fc7eb",
     resource: "Mana",
     roles: ["caster"],
     trees: [tree("arcane", "Arcane", "caster"), tree("fire", "Fire", "caster"), tree("frost", "Frost", "caster")],
@@ -71,7 +71,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_paladin",
     name: n("Paladin", "Paladino", "paladín"),
     color: "#f48cba",
-    ink: "#a8386a",
+    ink: "#f48cba",
     resource: "Mana",
     roles: ["healer", "tank", "melee"],
     trees: [tree("holy", "Holy", "healer"), tree("protection", "Protection", "tank"), tree("retribution", "Retribution", "melee")],
@@ -81,7 +81,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_priest",
     name: n("Priest", "Sacerdote", "sacerdote"),
     color: "#ffffff",
-    ink: "#4f6382",
+    ink: "#ffffff",
     resource: "Mana",
     roles: ["healer", "caster"],
     trees: [tree("discipline", "Discipline", "healer"), tree("holy", "Holy", "healer"), tree("shadow", "Shadow", "caster")],
@@ -91,7 +91,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_rogue",
     name: n("Rogue", "Ladro", "pícaro"),
     color: "#fff468",
-    ink: "#7a6a00",
+    ink: "#fff468",
     resource: "Energy",
     roles: ["melee"],
     trees: [tree("assassination", "Assassination", "melee"), tree("combat", "Combat", "melee"), tree("subtlety", "Subtlety", "melee")],
@@ -101,7 +101,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_shaman",
     name: n("Shaman", "Sciamano", "chamán"),
     color: "#0070dd",
-    ink: "#0052a8",
+    ink: "#338de4",
     resource: "Mana",
     roles: ["caster", "melee", "healer"],
     trees: [tree("elemental", "Elemental", "caster"), tree("enhancement", "Enhancement", "melee"), tree("restoration", "Restoration", "healer")],
@@ -111,7 +111,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_warlock",
     name: n("Warlock", "Stregone", "brujo"),
     color: "#8788ee",
-    ink: "#5250b5",
+    ink: "#8788ee",
     resource: "Mana",
     roles: ["caster"],
     trees: [tree("affliction", "Affliction", "caster"), tree("demonology", "Demonology", "caster"), tree("destruction", "Destruction", "caster")],
@@ -121,7 +121,7 @@ export const classes: ClassInfo[] = [
     icon: "classicon_warrior",
     name: n("Warrior", "Guerriero", "guerrero"),
     color: "#c69b6d",
-    ink: "#7a5527",
+    ink: "#c69b6d",
     resource: "Rage",
     roles: ["melee", "tank"],
     trees: [tree("arms", "Arms", "melee"), tree("fury", "Fury", "melee"), tree("protection", "Protection", "tank")],
