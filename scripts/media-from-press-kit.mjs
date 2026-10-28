@@ -36,6 +36,14 @@ const jobs = [
   [`${S}/WoW_Forever_SCENIC_Announce_Skyborne_Customization_061.png`, "news-skyborne.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Dungeon_AlcazPrison_066.jpg`, "news-dungeon-leveling.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_SCENIC_Announce_Race_Class_NewCombos_055.png`, "news-class-deep-dives.webp", 1600, 900, "centre"],
+  // copertine della guida addon e delle news del 22-27/10, al posto di quelle tipografiche (28/10/2026)
+  [`${S}/WoW_Forever_SCENIC_Announce_Skyborne_Customization_060.png`, "cover-addons.webp", 1600, 900, "centre"],
+  [`${C}/WoW_Forever_Cinematic_Still_9.jpeg`, "news-name-reservation.webp", 1600, 900, "north"],
+  [`${S}/WoW_Forever_SCENIC_Announce_Skyborne_Customization_062.png`, "news-name-reservation-times.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_Announce_Dungeon_KrolDokStronghold_071.jpg`, "news-nine-dungeons.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_SCENIC_Announce_NewLighting_Orgrimmar_053.png`, "news-layering-orgrimmar.webp", 1600, 900, "centre"],
+  [`${C}/WoW_Forever_Cinematic_Still_10.jpeg`, "news-racials-dwarf.webp", 1600, 900, "centre"],
+  [`${C}/WoW_Forever_Cinematic_Still_12.jpeg`, "news-roleplay-pvp.webp", 1600, 900, "centre"],
   [`${S}/WoW_Camelot_Announce_Zones_Mulgore_022.jpg`, "news-racials-mulgore.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],

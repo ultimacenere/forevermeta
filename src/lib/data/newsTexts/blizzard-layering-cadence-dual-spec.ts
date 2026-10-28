@@ -1,3 +1,4 @@
+import { media } from "../../media";
 import type { NewsItem } from "../news";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
@@ -21,13 +22,8 @@ const item: NewsItem = {
   date: "2026-10-27",
   source: "site",
   topic: "news",
-  image: "/covers/blizzard-layering-cadence-dual-spec.png",
-  cover: { word: "Layering", tone: "gold" },
-  imageAlt: n(
-    "ForeverMeta typographic cover with the word «Layering» in gold on a midnight blue background",
-    "Copertina tipografica di ForeverMeta con la scritta «Layering» in oro su fondo blu notte",
-    "Portada tipográfica de ForeverMeta con la palabra «Layering» en dorado sobre fondo azul noche",
-  ),
+  image: media.layering.src,
+  imageAlt: media.layering.alt,
   guides: ["wow-forever-rulesets", "wow-forever-zones-dungeons-raids"],
   title: n(
     "Blizzard before WoW Forever's launch: fewer layer swaps, new content every four months, dual spec at launch",

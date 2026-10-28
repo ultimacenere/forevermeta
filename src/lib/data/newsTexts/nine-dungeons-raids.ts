@@ -1,3 +1,4 @@
+import { media } from "../../media";
 import type { NewsItem } from "../news";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
@@ -17,13 +18,8 @@ const item: NewsItem = {
   source: "blizzard",
   topic: "news",
   url: DUNGEONS,
-  image: "/covers/nine-dungeons-levels-and-raids-december-9.png",
-  cover: { word: "Blackmaw Hold", tone: "gold" },
-  imageAlt: n(
-    "ForeverMeta typographic cover with the words «Blackmaw Hold» in gold on a midnight blue background",
-    "Copertina tipografica di ForeverMeta con la scritta «Blackmaw Hold» in oro su fondo blu notte",
-    "Portada tipográfica de ForeverMeta con las palabras «Blackmaw Hold» en dorado sobre fondo azul noche",
-  ),
+  image: media.nineDungeons.src,
+  imageAlt: media.nineDungeons.alt,
   guides: ["wow-forever-zones-dungeons-raids", "wow-forever-legacy-system"],
   title: n(
     "WoW Forever: the levels of the nine new dungeons and the three raids of 9 December, Onyxia's Lair included",

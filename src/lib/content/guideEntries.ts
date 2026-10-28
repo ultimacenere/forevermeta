@@ -20,5 +20,5 @@ export const guideEntries: GuideEntry[] = [
   { ...camping, media: "camping" },
   { ...editions, media: "editions" },
   { ...world, media: "zones" },
-  addons,
+  { ...addons, media: "addons" },
 ];

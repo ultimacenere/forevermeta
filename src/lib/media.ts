@@ -158,6 +158,63 @@ export const media = {
       "Captura de World of Warcraft: Forever: una aeronave pasa junto a las mesetas de Cima del Trueno, en Mulgore, al atardecer",
     ),
   ),
+  // copertine della guida addon e delle news del 22-27/10, al posto di quelle tipografiche (28/10/2026)
+  addons: cover(
+    "/media/cover-addons.webp",
+    n(
+      "World of Warcraft: Forever screenshot: a blue-skinned Skyborne character in light clothes on a stone path, with large trees in the background",
+      "Screenshot di World of Warcraft: Forever: un personaggio Skyborne dalla pelle azzurra in abiti chiari su un sentiero di pietra, con grandi alberi sullo sfondo",
+      "Captura de World of Warcraft: Forever: un personaje célico de piel azul con ropa clara en un camino de piedra, con grandes árboles al fondo",
+    ),
+  ),
+  nameReservation: cover(
+    "/media/news-name-reservation.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a blue-skinned woman with white hair and glowing eyes, arms open among clouds and mountains",
+      "Fotogramma del cinematic di World of Warcraft: Forever: una donna dalla pelle azzurra, capelli bianchi e occhi luminosi, a braccia aperte fra nuvole e montagne",
+      "Fotograma de la cinemática de World of Warcraft: Forever: una mujer de piel azul, pelo blanco y ojos brillantes, con los brazos abiertos entre nubes y montañas",
+    ),
+  ),
+  nameReservationTimes: cover(
+    "/media/news-name-reservation-times.webp",
+    n(
+      "World of Warcraft: Forever screenshot: a blue-skinned Skyborne character in leather armour on a cobbled path, in front of houses with blue roofs",
+      "Screenshot di World of Warcraft: Forever: un personaggio Skyborne dalla pelle azzurra in armatura di cuoio su un sentiero lastricato, davanti a case dai tetti azzurri",
+      "Captura de World of Warcraft: Forever: un personaje célico de piel azul con armadura de cuero en un camino empedrado, delante de casas de tejados azules",
+    ),
+  ),
+  nineDungeons: cover(
+    "/media/news-nine-dungeons.webp",
+    n(
+      "World of Warcraft: Forever screenshot: ogres in front of the stone arch of the Krol'dok Stronghold dungeon, with spiked towers",
+      "Screenshot di World of Warcraft: Forever: ogre davanti all'arco di pietra del dungeon Krol'dok Stronghold, con torri a punta",
+      "Captura de World of Warcraft: Forever: ogros delante del arco de piedra de la mazmorra Krol'dok Stronghold, con torres puntiagudas",
+    ),
+  ),
+  layering: cover(
+    "/media/news-layering-orgrimmar.webp",
+    n(
+      "World of Warcraft: Forever screenshot: Orgrimmar at sunset, with the Horde's buildings and an airship in the sky",
+      "Screenshot di World of Warcraft: Forever: Orgrimmar al tramonto, con gli edifici dell'Orda e un dirigibile nel cielo",
+      "Captura de World of Warcraft: Forever: Orgrimmar al atardecer, con los edificios de la Horda y un zepelín en el cielo",
+    ),
+  ),
+  racialsDwarf: cover(
+    "/media/news-racials-dwarf.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a red-bearded dwarf with an axe, in the falling snow",
+      "Fotogramma del cinematic di World of Warcraft: Forever: un nano dalla barba rossa con un'ascia, sotto la neve",
+      "Fotograma de la cinemática de World of Warcraft: Forever: un enano de barba pelirroja con un hacha, bajo la nieve",
+    ),
+  ),
+  roleplayPvp: cover(
+    "/media/news-roleplay-pvp.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a hooded undead warrior with the Horde emblem on the chest, shouting",
+      "Fotogramma del cinematic di World of Warcraft: Forever: un guerriero non morto incappucciato con il simbolo dell'Orda sul petto, che urla",
+      "Fotograma de la cinemática de World of Warcraft: Forever: un guerrero no muerto encapuchado con el emblema de la Horda en el pecho, gritando",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

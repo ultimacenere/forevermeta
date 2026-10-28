@@ -1,3 +1,4 @@
+import { media } from "../../media";
 import type { NewsItem } from "../news";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
@@ -17,13 +18,8 @@ const item: NewsItem = {
   source: "blizzard",
   topic: "beta",
   url: POST,
-  image: "/covers/racials-final-pass-october-26.png",
-  cover: { word: "Artisan's Precision", tone: "gold" },
-  imageAlt: n(
-    "ForeverMeta typographic cover with the words «Artisan's Precision» in gold on a midnight blue background",
-    "Copertina tipografica di ForeverMeta con la scritta «Artisan's Precision» in oro su fondo blu notte",
-    "Portada tipográfica de ForeverMeta con las palabras «Artisan's Precision» en dorado sobre fondo azul noche",
-  ),
+  image: media.racialsDwarf.src,
+  imageAlt: media.racialsDwarf.alt,
   guides: ["wow-forever-races-classes"],
   title: n(
     "WoW Forever racials, final pass before launch: Command returns, Dwarves get hit, Tauren run faster",

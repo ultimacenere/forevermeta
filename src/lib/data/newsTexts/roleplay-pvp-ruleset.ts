@@ -1,3 +1,4 @@
+import { media } from "../../media";
 import type { NewsItem } from "../news";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
@@ -16,13 +17,8 @@ const item: NewsItem = {
   source: "blizzard",
   topic: "pvp",
   url: POST,
-  image: "/covers/roleplay-pvp-ruleset-at-launch.png",
-  cover: { word: "Roleplay-PvP", tone: "gold" },
-  imageAlt: n(
-    "ForeverMeta typographic cover with the words «Roleplay-PvP» in gold on a midnight blue background",
-    "Copertina tipografica di ForeverMeta con la scritta «Roleplay-PvP» in oro su fondo blu notte",
-    "Portada tipográfica de ForeverMeta con las palabras «Roleplay-PvP» en dorado sobre fondo azul noche",
-  ),
+  image: media.roleplayPvp.src,
+  imageAlt: media.roleplayPvp.alt,
   guides: ["wow-forever-rulesets", "wow-forever-release-date"],
   title: n(
     "WoW Forever adds a Roleplay-PvP ruleset at launch: Blizzard changes its mind after player feedback",

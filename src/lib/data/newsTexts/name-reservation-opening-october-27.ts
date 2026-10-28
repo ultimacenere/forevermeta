@@ -1,3 +1,4 @@
+import { media } from "../../media";
 import type { NewsItem } from "../news";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
@@ -18,13 +19,8 @@ const item: NewsItem = {
   source: "blizzard",
   topic: "event",
   url: POST,
-  image: "/covers/name-reservation-opening-october-27.png",
-  cover: { word: "Early Name Reservation", tone: "sky" },
-  imageAlt: n(
-    "ForeverMeta typographic cover with the words «Early Name Reservation» in light blue on a midnight blue background",
-    "Copertina tipografica di ForeverMeta con la scritta «Early Name Reservation» in azzurro su fondo blu notte",
-    "Portada tipográfica de ForeverMeta con las palabras «Early Name Reservation» en azul claro sobre fondo azul noche",
-  ),
+  image: media.nameReservation.src,
+  imageAlt: media.nameReservation.alt,
   guides: ["wow-forever-release-date", "wow-forever-rulesets"],
   title: n(
     "WoW Forever name reservation is open: a late start in Europe, queues in America, Roleplay-PvP available",
