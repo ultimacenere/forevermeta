@@ -15,6 +15,10 @@ import podcast5 from "./newsTexts/podcast-episode-5";
 import racialsFinalPass from "./newsTexts/racials-final-pass-october-26";
 import nameReservationOpening from "./newsTexts/name-reservation-opening-october-27";
 import layeringCadence from "./newsTexts/blizzard-layering-cadence-dual-spec";
+import launchTimes from "./newsTexts/launch-times-starter-guide";
+import podcast6 from "./newsTexts/podcast-episode-6";
+import classHotfixes from "./newsTexts/class-hotfixes-october-28-30";
+import nameFilterFactions from "./newsTexts/name-filter-fix-faction-locks";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -209,4 +213,8 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   racialsFinalPass,
   nameReservationOpening,
   layeringCadence,
+  launchTimes,
+  podcast6,
+  classHotfixes,
+  nameFilterFactions,
 ];

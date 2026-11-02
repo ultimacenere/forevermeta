@@ -5,13 +5,13 @@
  *   FW1 . <classe> . <razza|xx> . <livello> . <albero 1> . <albero 2> . <albero 3>
  *
  * dove ogni albero è una cifra per talento (il rango, 0–5) nell'ordine del file dei dati (stabile fra una patch e
- * l'altra: un talento nuovo si accoda, uno spostato di casella tiene il posto), con gli zeri finali tolti ("0" per un
- * albero vuoto). Esempio: `FW1.wa.hm.60.0532001.0.0`. Le sigle di classi e razze sono fisse (`CLASS_CODES`,
- * `RACE_CODES`); un codice con una sigla sconosciuta o una versione diversa non si legge. Se in futuro la grammatica
- * cambia, la versione sale e la vecchia resta leggibile.
+ * l'altra: un talento nuovo si accoda, uno spostato di casella tiene il posto, uno tolto lascia un posto vuoto in
+ * `codeSlots`), con gli zeri finali tolti ("0" per un albero vuoto). Esempio: `FW1.wa.hm.60.0532001.0.0`. Le sigle di
+ * classi e razze sono fisse (`CLASS_CODES`, `RACE_CODES`); un codice con una sigla sconosciuta o una versione diversa
+ * non si legge. Se in futuro la grammatica cambia, la versione sale e la vecchia resta leggibile.
  */
 import { MAX_LEVEL, sanitize } from "./engine";
-import type { Build, ClassId, ClassTalents, RaceId } from "./types";
+import type { Build, ClassId, ClassTalents, RaceId, TalentTree } from "./types";
 
 export const CODE_VERSION = "FW1";
 export const NO_RACE = "xx";
@@ -52,9 +52,14 @@ export function raceFromCode(code: string): RaceId | null {
   return raceByCode.get(code.toLowerCase()) ?? null;
 }
 
+/** Gli id nell'ordine delle cifre di un albero: `codeSlots` se il file li ha (posti vuoti compresi), se no `talents`. */
+function slotsOf(tree: TalentTree): (string | null)[] {
+  return tree.codeSlots ?? tree.talents.map((t) => t.id);
+}
+
 function treeDigits(data: ClassTalents, build: Build, treeIndex: number): string {
   // l'ordine delle cifre è quello del file dei dati, non della griglia (vedi `TalentTree.talents` in types.ts)
-  const digits = data.trees[treeIndex].talents.map((t) => String(Math.min(9, Math.max(0, build.ranks[t.id] ?? 0))));
+  const digits = slotsOf(data.trees[treeIndex]).map((id) => String(id ? Math.min(9, Math.max(0, build.ranks[id] ?? 0)) : 0));
   const s = digits.join("").replace(/0+$/, "");
   return s || "0";
 }
@@ -90,10 +95,11 @@ export function decodeBuild(data: ClassTalents, code: string, allowedRaces?: rea
   for (let i = 0; i < 3; i++) {
     const digits = parts[4 + i] ?? "";
     if (!/^\d*$/.test(digits)) return null;
-    const talents = data.trees[i].talents;
-    for (let j = 0; j < digits.length && j < talents.length; j++) {
+    const slots = slotsOf(data.trees[i]);
+    for (let j = 0; j < digits.length && j < slots.length; j++) {
       const r = Number(digits[j]);
-      if (r > 0) ranks[talents[j].id] = r;
+      const id = slots[j];
+      if (r > 0 && id) ranks[id] = r;
     }
   }
   return sanitize(data, { classId: data.classId, raceId: head.raceId, level: head.level, ranks }, allowedRaces);

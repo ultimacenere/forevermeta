@@ -4,9 +4,13 @@ export const guide: GuideEntry = {
   slug: "wow-forever-camping-professions",
   category: "systems",
   published: "2026-10-10",
-  updated: "2026-10-23",
+  updated: "2026-11-02",
   cover: { word: "Camping", tone: "sky" },
   sources: [
+    {
+      label: "New Player's Starter Guide: Welcome to World of Warcraft: Forever (Blizzard News, October 28, 2026)",
+      url: "https://news.blizzard.com/en-us/article/24315280/new-players-starter-guide-welcome-to-world-of-warcraft-forever",
+    },
     {
       label: "Gather Around the Campfire in World of Warcraft: Forever (Blizzard News, October 21, 2026)",
       url: "https://news.blizzard.com/en-us/article/24301516/gather-around-the-campfire-in-world-of-warcraft-forever",
@@ -103,6 +107,8 @@ The beta ended on October 23, 2026, after a two-day extension. The rules above a
 
 ## Professions {#professions}
 
+Each character can learn two primary professions and all three secondary ones, Cooking, Fishing and First Aid, according to Blizzard's New Player's Starter Guide of October 28. The primary ones are the gathering professions (Herbalism, Mining, Skinning) and the crafting ones (Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring). All of them except Mining have an item in Blizzard's sample table of camp features above.
+
 According to the Deep Dive recap, professions get:
 
 - over **600 new recipes** across professions and level ranges;
@@ -118,9 +124,9 @@ Professions are tied into the [Legacy System](/en/guides/wow-forever-legacy-syst
 From the BlizzCon panel recaps (What's Next and Deep Dive):
 
 - **Transmog** is optional and can be turned off.
-- A **Classic Mode**.
-- **HD and SD models**, with the classic animations restored for the HD models. The SD models of the Skyborne, and their SD druid forms, are in development and due in early 2027, according to the article of October 7.
-- Official **gamepad** support.
+- A **Classic Mode**. The Starter Guide of October 28 describes the choice you actually get on your first login, the Experience Preset: Classic (SD models, no quest markers, no one-bag, transmog off, classic layout) or Enhanced (the opposite). It is only a starting point and every setting can be changed later.
+- **HD and SD models**, with the classic animations restored for the HD models. You pick HD or SD for each character and can change it at a Barbershop (Starter Guide). The SD models of the Skyborne, and their SD druid forms, are in development and due in early 2027, according to the article of October 7.
+- **Controller** support: official, but Blizzard's Starter Guide says it is "in a beta state".
 - A **mount** is given to you when you learn riding.
 
 In the beta, the development notes also mention a **Cooldown Manager**: it is off by default, it can be turned on in the options, and since the October 8 build it covers all classes.
@@ -133,7 +139,7 @@ New terms are explained in the [glossary](/en/glossary), and the full list of di
 - **Improved campfires**: at which skill cooks learn the 5- and 10-slot versions, what the Alchemy Laboratory and the Tanning Rack do, and how long a fire stays lit.
 - **Blueprints**: what they unlock; the article of October 21 does not use the word.
 - **Trade factions**: how the Azeroth Commerce Authority and Durotar Supply and Logistics work, from reputation to rewards.
-- **Classic Mode**: Blizzard lists it, but we have not found a detailed official description to cite yet.`,
+- **Classic Mode and the Classic preset**: the panels speak of a Classic Mode, the Starter Guide of a Classic Experience Preset; Blizzard does not say whether they are the same thing. The full comparison is in [what WoW Forever is](/en/guides/what-is-wow-forever).`,
       faq: [
         {
           q: "Is Camping the same as the Campfire feature?",
@@ -215,6 +221,8 @@ La beta è finita il 23 ottobre 2026, dopo una proroga di due giorni. Le regole 
 
 ## Le professioni {#professioni}
 
+Ogni personaggio può imparare due professioni primarie e tutte e tre le secondarie, Cooking, Fishing e First Aid (Cucina, Pesca e Primo Soccorso), secondo la guida per i nuovi giocatori di Blizzard del 28 ottobre. Le primarie sono quelle di raccolta (Herbalism, Mining, Skinning) e quelle di creazione (Alchemy, Blacksmithing, Enchanting, Engineering, Leatherworking, Tailoring). Tutte tranne Mining hanno un oggetto nella tabella campione delle camp feature qui sopra.
+
 Secondo il resoconto del pannello Deep Dive, le professioni ricevono:
 
 - più di **600 ricette nuove**, distribuite fra le professioni e le fasce di livello;
@@ -230,9 +238,9 @@ Le professioni pesano anche nel [Legacy System](/it/guides/wow-forever-legacy-sy
 Dai resoconti dei pannelli della BlizzCon (What's Next e Deep Dive):
 
 - La **trasmogrificazione** (transmog) è facoltativa e si può disattivare.
-- Un **Classic Mode**.
-- **Modelli HD e SD**, con le animazioni classiche ripristinate per i modelli HD. I modelli SD degli Skyborne, con le loro forme druidiche SD, sono in sviluppo e arriveranno all'inizio del 2027, secondo l'articolo del 7 ottobre.
-- Supporto ufficiale al **gamepad**.
+- Un **Classic Mode**. La guida per i nuovi giocatori del 28 ottobre descrive la scelta che si fa davvero al primo accesso, la configurazione dell'esperienza (Experience Preset): Classic (modelli SD, niente segnalazioni delle missioni, niente borsa singola, transmog spento, interfaccia classica) o Enhanced (il contrario). È solo un punto di partenza e ogni impostazione si cambia dopo.
+- **Modelli HD e SD**, con le animazioni classiche ripristinate per i modelli HD. HD o SD si sceglie per ogni personaggio e si cambia da un Barbiere (guida per i nuovi giocatori). I modelli SD degli Skyborne, con le loro forme druidiche SD, sono in sviluppo e arriveranno all'inizio del 2027, secondo l'articolo del 7 ottobre.
+- Supporto ufficiale al **gamepad**, che però la guida di Blizzard definisce "in fase di beta" ("in a beta state").
 - Una **cavalcatura** in regalo quando impari la monta.
 
 In beta le note di sviluppo citano anche un **Cooldown Manager**: è spento di base, si accende dalle opzioni e dalla build dell'8 ottobre copre tutte le classi.
@@ -245,7 +253,7 @@ I termini nuovi sono spiegati nel [glossario](/it/glossary) e l'elenco completo 
 - **I Campfire migliorati**: a quale skill i cuochi imparano le versioni da 5 e da 10 posti, cosa fanno l'Alchemy Laboratory e il Tanning Rack, e quanto resta acceso un fuoco.
 - **I Blueprint**: che cosa sbloccano; l'articolo del 21 ottobre non usa la parola.
 - **Le fazioni del commercio**: come funzionano Azeroth Commerce Authority e Durotar Supply and Logistics, dalla reputazione alle ricompense.
-- **Il Classic Mode**: Blizzard lo cita, ma non abbiamo ancora trovato una descrizione ufficiale dettagliata da riportare.`,
+- **Il Classic Mode e la configurazione Classic**: i pannelli parlano di un Classic Mode, la guida per i nuovi giocatori di una configurazione Classic; Blizzard non dice se siano la stessa cosa. Il confronto completo è in [cos'è WoW Forever](/it/guides/what-is-wow-forever).`,
       faq: [
         {
           q: "Camping e «Campfire feature» sono la stessa cosa?",
@@ -327,6 +335,8 @@ La beta terminó el 23 de octubre de 2026, tras una prórroga de dos días. Las 
 
 ## Las profesiones {#profesiones}
 
+Cada personaje puede aprender dos profesiones principales y las tres secundarias, cocina, pesca y primeros auxilios, según la guía para nuevos jugadores de Blizzard del 28 de octubre. Las principales son las de recolección (herboristería, minería, desuello) y las de fabricación (alquimia, herrería, encantamiento, ingeniería, peletería, sastrería). Todas salvo la minería tienen un objeto en la tabla de muestra de los objetos de campamento de arriba.
+
 Según el resumen de la mesa redonda Deep Dive, las profesiones reciben:
 
 - más de **600 recetas nuevas** repartidas entre profesiones y rangos de nivel;
@@ -342,9 +352,9 @@ Las profesiones también cuentan en el [sistema de legado](/es/guides/wow-foreve
 Según los resúmenes de las mesas redondas de la BlizzCon (What's Next y Deep Dive):
 
 - La **transfiguración** (transmog) es opcional y se puede desactivar.
-- Un **Classic Mode** (modo clásico).
-- **Modelos HD y SD**, con las animaciones clásicas recuperadas para los modelos HD. Los modelos SD de los célicos (cielonato en Latinoamérica), con sus formas de druida SD, están en desarrollo y llegarán a principios de 2027, según el artículo del 7 de octubre.
-- Compatibilidad oficial con **mando**.
+- Un **Classic Mode** (modo clásico). La guía para nuevos jugadores del 28 de octubre describe la elección que se hace de verdad al primer inicio de sesión, la configuración predeterminada de experiencia: Clásica (modelos SD, sin marcas de misión, sin bolsa única, transfiguración desactivada, interfaz clásica) o Mejorada (lo contrario). Es solo un punto de partida y cada ajuste se cambia después.
+- **Modelos HD y SD**, con las animaciones clásicas recuperadas para los modelos HD. HD o SD se elige para cada personaje y se cambia en una peluquería (guía para nuevos jugadores). Los modelos SD de los célicos (cielonato en Latinoamérica), con sus formas de druida SD, están en desarrollo y llegarán a principios de 2027, según el artículo del 7 de octubre.
+- Compatibilidad oficial con **mando**, que la guía de Blizzard describe como "en fase beta".
 - Una **montura** de regalo cuando aprendes a montar.
 
 En la beta, las notas de desarrollo mencionan también un **Cooldown Manager**: viene desactivado, se activa desde las opciones y desde la compilación del 8 de octubre cubre todas las clases.
@@ -357,7 +367,7 @@ Los términos nuevos están en el [glosario](/es/glossary) y la lista completa d
 - **Las hogueras mejoradas**: con qué habilidad aprenden los cocineros las versiones de 5 y 10 huecos, qué hacen el Alchemy Laboratory y el Tanning Rack, y cuánto tiempo sigue encendida una hoguera.
 - **Los planos**: qué desbloquean; el artículo del 21 de octubre no usa la palabra.
 - **Las facciones comerciales**: cómo funcionan la Azeroth Commerce Authority y Durotar Supply and Logistics, de la reputación a las recompensas.
-- **El Classic Mode**: Blizzard lo menciona, pero aún no hemos encontrado una descripción oficial detallada que citar.`,
+- **El Classic Mode y la configuración Clásica**: las mesas redondas hablan de un Classic Mode, la guía para nuevos jugadores de una configuración Clásica; Blizzard no dice si son lo mismo. La comparación completa está en [qué es WoW Forever](/es/guides/what-is-wow-forever).`,
       faq: [
         {
           q: "¿La acampada es lo mismo que la «Campfire feature»?",

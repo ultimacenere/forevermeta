@@ -12,10 +12,15 @@
 //                                                   risponde 403 a caso); un'icona assente lascia il talento senza
 //                                                   `icon` e il builder mostra le iniziali
 //   node scripts/import-talents.mjs --check         non scrive: confronta con i file che ci sono e riporta le differenze
+//   node scripts/import-talents.mjs --order-from <cartella>
+//                                                   prende ordine e posti del codice dai file di quella cartella
+//                                                   invece che da quelli in src/ (per rifare un import già scritto)
 //
 // Ordine dei talenti: ogni albero tiene l'ordine del file già scritto (è l'ordine delle cifre del codice
-// condivisibile); i talenti nuovi si accodano, quelli spariti si tolgono (e i codici che li usavano perdono quel
-// punto, come dice `sanitize`). Il file va committato insieme a `gameVersion` nuova.
+// condivisibile); i talenti nuovi si accodano. Un talento sparito, o passato a un altro albero, lascia il suo posto
+// vuoto in `codeSlots` (cifra sempre 0), così le cifre dei codici vecchi non scivolano sul talento accanto: chi lo
+// usava perde solo quel punto (e quelli che ne dipendevano, come dice `sanitize`). Il file va committato insieme a
+// `gameVersion` nuova; dopo l'import i talenti con il testo cambiato vanno ritradotti (scripts/talent-translations.mjs).
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -86,8 +91,24 @@ async function downloadIcon(name) {
 }
 
 function readExisting(classId) {
-  const file = join(outDir, `${classId}.json`);
+  const file = join(opt("--order-from") ?? outDir, `${classId}.json`);
   return existsSync(file) ? JSON.parse(readFileSync(file, "utf8")) : null;
+}
+
+/**
+ * I posti delle cifre del codice: quelli del file già scritto (i suoi `codeSlots`, o l'ordine dei suoi talenti), con
+ * `null` al posto dei talenti spariti o passati a un altro albero, più i talenti nuovi in coda nell'ordine di `talents`.
+ * Restituisce null quando coincidono con l'ordine di `talents` (nessun posto vuoto): il campo resta fuori dal file.
+ */
+function codeSlotsFor(existingTree, talents) {
+  const ids = new Set(talents.map((t) => t.id));
+  const before = existingTree ? (existingTree.codeSlots ?? existingTree.talents.map((t) => t.id)) : [];
+  const slots = before.map((id) => (id && ids.has(id) ? id : null));
+  const placed = new Set(slots.filter(Boolean));
+  for (const t of talents) if (!placed.has(t.id)) slots.push(t.id);
+  while (slots.length && slots[slots.length - 1] === null) slots.pop();
+  const plain = talents.map((t) => t.id);
+  return slots.length === plain.length && slots.every((id, i) => id === plain[i]) ? null : slots;
 }
 
 /** Ordina i talenti come nel file già scritto (per id), poi i nuovi in ordine di griglia. */
@@ -132,7 +153,9 @@ function convertClass(name, raw, existing, iconOk, today) {
     const idByName = new Map(talents.map((t) => [t.name, t.id]));
     for (const t of talents) if (t.requires) t.requires = { id: idByName.get(t.requires.name) };
     const removed = (tree.removed ?? []).map((r) => ({ name: r.name, maxRank: r.max, ...(r.text ? { text: r.text } : {}), ...(Number.isInteger(r.row) ? { row: r.row - 1 } : {}) }));
-    return { id: treeId, name: tree.name, role: meta.roles[i], talents: keepOrder(existing?.trees?.[i], talents), ...(removed.length ? { removed } : {}) };
+    const ordered = keepOrder(existing?.trees?.[i], talents);
+    const codeSlots = codeSlotsFor(existing?.trees?.[i], ordered);
+    return { id: treeId, name: tree.name, role: meta.roles[i], talents: ordered, ...(codeSlots ? { codeSlots } : {}), ...(removed.length ? { removed } : {}) };
   });
   const sourceLine = String(raw.source ?? "");
   const build = /build\s+(\d+(?:\.\d+)*)/i.exec(sourceLine)?.[1] ?? "beta";

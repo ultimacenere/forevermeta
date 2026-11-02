@@ -4,9 +4,17 @@ export const guide: GuideEntry = {
   slug: "wow-forever-editions-prices",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-10-23",
+  updated: "2026-11-02",
   cover: { word: "Editions", tone: "gold" },
   sources: [
+    {
+      label: "New Player's Starter Guide: Welcome to World of Warcraft: Forever (Blizzard News, 28 October 2026)",
+      url: "https://news.blizzard.com/en-us/article/24315280/new-players-starter-guide-welcome-to-world-of-warcraft-forever",
+    },
+    {
+      label: "Claim Your World of Warcraft: Forever Character Names (Blizzard News, 20 October 2026)",
+      url: "https://news.blizzard.com/en-us/article/24303866/claim-your-world-of-warcraft-forever-character-names",
+    },
     {
       label: "Pre-Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth (Blizzard News, 12 September 2026)",
       url: "https://news.blizzard.com/en-us/article/24301508/pre-purchase-world-of-warcraft-forever-upgrades-and-begin-your-next-journey-in-azeroth",
@@ -44,6 +52,8 @@ export const guide: GuideEntry = {
 ## What you need to play {#what-you-need}
 
 Blizzard's pre-purchase article of 12 September 2026 states that World of Warcraft, including Forever, requires a World of Warcraft Subscription or Game Time. The three editions are called "optional upgrade editions": none of them is needed to log in on launch day, 4 November 2026 (times in our [release date guide](/en/guides/wow-forever-release-date)).
+
+You install Forever through the Battle.net app and play on Windows or Mac with keyboard and mouse. Controllers work too, but Blizzard's Starter Guide of 28 October says controller support is "in a beta state".
 
 What the base access leaves out is the new race. According to the shop's legal notes, playing the Skyborne and their starting zone, Zephras Isle, requires the Skyborne Heroic Pack or higher. More on the race in the [races and classes guide](/en/guides/wow-forever-races-classes).
 
@@ -84,7 +94,7 @@ The official name is Invite-A-Friend. The Heroic Pack comes with 1 code, the Epi
 
 ## Early Name Reservation {#name-reservation}
 
-Any upgrade purchase includes Early Name Reservation, from 27 October to 3 November 2026 (PST): up to three characters, and names go to whoever claims them first. It opens on 27 October at 18:00 CET in Europe and 1:00 p.m. PDT in North America, and the three names count across all rulesets. Key dates are on the [calendar](/en/calendar).
+Any upgrade purchase includes Early Name Reservation, from 27 October through 3 November 2026: up to three characters, and names go to whoever claims them first. It opened on 27 October at 18:00 CET in Europe and 1:00 p.m. PDT in North America, and the three names count across all rulesets. Blizzard gives no closing time for 3 November. Key dates are on the [calendar](/en/calendar).
 
 ## Beta access {#beta-access}
 
@@ -99,7 +109,7 @@ There is also a physical World of Warcraft: Forever Collector's Edition, sold th
 ## What we don't know yet {#what-we-dont-know}
 
 - Price and contents of the physical Collector's Edition.
-- The exact time Early Name Reservation opens on 27 October.
+- The exact time Early Name Reservation closes on 3 November.
 - Whether prices will change before or after launch: those above are a reading from 10 October 2026.
 
 More answers in the [FAQ](/en/faq).`,
@@ -133,6 +143,8 @@ More answers in the [FAQ](/en/faq).`,
 ## Cosa serve per giocare {#cosa-serve}
 
 L'articolo di Blizzard sul preacquisto, del 12 settembre 2026, dice che World of Warcraft, Forever compreso, richiede l'abbonamento o il tempo di gioco. Le tre edizioni sono presentate come aggiornamenti facoltativi: nessuna serve per entrare il giorno del lancio, il 4 novembre 2026 (in Italia la mezzanotte fra il 4 e il 5; orari nella [guida alla data di uscita](/it/guides/wow-forever-release-date)).
+
+Forever si installa dall'app Battle.net e si gioca su Windows o Mac con mouse e tastiera. Funzionano anche i controller, ma secondo la guida per i nuovi giocatori di Blizzard del 28 ottobre il supporto è "in fase di beta" ("in a beta state").
 
 Una cosa però l'accesso base non la dà: la nuova razza. Secondo le note legali del negozio, per giocare gli Skyborne e la loro zona iniziale, Zephras Isle, serve il Pacchetto Heroic Skyborne o un'edizione superiore. Della razza parliamo nella [guida a razze e classi](/it/guides/wow-forever-races-classes).
 
@@ -173,7 +185,7 @@ Il nome ufficiale del programma è Invite-A-Friend. Il Pacchetto Heroic dà 1 co
 
 ## Prenotazione dei nomi {#prenotazione-nomi}
 
-Qualsiasi aggiornamento comprende la prenotazione anticipata dei nomi, dal 27 ottobre al 3 novembre 2026 (ora del Pacifico): fino a tre personaggi, e il nome va a chi lo prende per primo. Apre il 27 ottobre alle 18:00 in Italia (13:00 PDT in Nord America), e i tre nomi contano su tutti i set di regole. Le date sono anche nel [calendario](/it/calendar).
+Qualsiasi aggiornamento comprende la prenotazione anticipata dei nomi, dal 27 ottobre al 3 novembre 2026: fino a tre personaggi, e il nome va a chi lo prende per primo. Ha aperto il 27 ottobre alle 18:00 in Italia (13:00 PDT in Nord America), e i tre nomi contano su tutti i set di regole. Per il 3 novembre Blizzard non dà un'ora di chiusura. Le date sono anche nel [calendario](/it/calendar).
 
 ## Accesso alla beta {#accesso-alla-beta}
 
@@ -188,7 +200,7 @@ Esiste anche un'edizione fisica, la World of Warcraft: Forever Collector's Editi
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
 - Prezzo e contenuto della Collector's Edition fisica.
-- L'ora esatta in cui si apre la prenotazione dei nomi il 27 ottobre.
+- L'ora esatta in cui si chiude la prenotazione dei nomi il 3 novembre.
 - Se i prezzi cambieranno prima o dopo il lancio: quelli qui sopra sono letti il 10 ottobre 2026.
 
 Altre risposte nelle [domande frequenti](/it/faq).`,
@@ -222,6 +234,8 @@ Altre risposte nelle [domande frequenti](/it/faq).`,
 ## Qué necesitas para jugar {#que-necesitas}
 
 Lo dice el artículo de Blizzard sobre la precompra del 12 de septiembre de 2026: las tres ediciones son mejoras opcionales y ninguna hace falta para jugar desde el lanzamiento, el 4 de noviembre de 2026 (en España, la medianoche entre el 4 y el 5; horarios en la [guía de la fecha de lanzamiento](/es/guides/wow-forever-release-date)).
+
+Forever se instala desde la aplicación de Battle.net y se juega en Windows o Mac con teclado y ratón. También funcionan los mandos, pero según la guía para nuevos jugadores de Blizzard del 28 de octubre la compatibilidad está "en fase beta".
 
 Lo que el acceso básico no incluye es la nueva raza. Según las notas legales de la tienda, para jugar con los célicos y su zona inicial, la Isla de Zephras, necesitas el Pack Heroic de los célicos o una edición superior. Más sobre la raza en la [guía de razas y clases](/es/guides/wow-forever-races-classes).
 
@@ -266,7 +280,7 @@ Ojo: el artículo para España dice «del 5 al 12 de noviembre» en el texto y d
 
 ## Reserva de nombres {#reserva-de-nombres}
 
-Cualquier mejora incluye la reserva de nombres anticipada, del 27 de octubre al 3 de noviembre de 2026 (hora del Pacífico): hasta tres personajes, y cada nombre es para quien lo reserve primero. Abre el 27 de octubre a las 18:00 CET en Europa (13:00 PDT en Norteamérica), y los tres nombres cuentan entre todos los conjuntos de reglas. Fechas en el [calendario](/es/calendar).
+Cualquier mejora incluye la reserva de nombres anticipada, del 27 de octubre al 3 de noviembre de 2026: hasta tres personajes, y cada nombre es para quien lo reserve primero. Abrió el 27 de octubre a las 18:00 CET en Europa (13:00 PDT en Norteamérica), y los tres nombres cuentan entre todos los conjuntos de reglas. Para el 3 de noviembre Blizzard no da hora de cierre. Fechas en el [calendario](/es/calendar).
 
 ## Acceso a la beta {#acceso-a-la-beta}
 
@@ -281,7 +295,7 @@ También existe una edición física, la World of Warcraft: Forever Collector's 
 ## Lo que aún no sabemos {#lo-que-aun-no-sabemos}
 
 - Precio y contenido de la edición de coleccionista física.
-- La hora exacta a la que se abre la reserva de nombres el 27 de octubre.
+- La hora exacta a la que se cierra la reserva de nombres el 3 de noviembre.
 - Si los precios cambiarán: los de arriba son del 10 de octubre.
 
 Más respuestas en las [preguntas frecuentes](/es/faq).`,

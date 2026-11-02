@@ -81,9 +81,9 @@
       "Aumenta il bonus alla Potenza d'attacco in mischia del tuo Rockbiter Weapon del 20%, l'effetto del tuo Windfury Weapon del 40% e aumenta i danni inflitti dai tuoi Flametongue Weapon e Frostbrand Weapon del 15%."
     ],
     "eye-of-the-storm": [
-      "Riduce del 23% il ritardo del lancio causato dagli attacchi che ti infliggono danni mentre lanci Lightning Bolt, Chain Lightning e Lava Burst.",
-      "Riduce del 47% il ritardo del lancio causato dagli attacchi che ti infliggono danni mentre lanci Lightning Bolt, Chain Lightning e Lava Burst.",
-      "Riduce del 70% il ritardo del lancio causato dagli attacchi che ti infliggono danni mentre lanci Lightning Bolt, Chain Lightning e Lava Burst."
+      "Dà ai tuoi incantesimi Lightning Bolt, Chain Lightning e Lava Burst una probabilità del 23% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi Lightning Bolt, Chain Lightning e Lava Burst una probabilità del 47% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi Lightning Bolt, Chain Lightning e Lava Burst una probabilità del 70% di non perdere tempo di lancio quando subisci danni."
     ],
     "flurry": [
       "Aumenta la tua velocità d'attacco del 5% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
@@ -97,9 +97,9 @@
       "Aumenta la quantità di danni ridotta dai tuoi Stoneskin Totem e Windwall Totem del 20% e riduce il tempo di ricarica del tuo Grounding Totem di 2 s."
     ],
     "healing-focus": [
-      "Ti dà una probabilità del 23% di evitare l'interruzione causata dai danni mentre lanci un incantesimo di cura.",
-      "Ti dà una probabilità del 47% di evitare l'interruzione causata dai danni mentre lanci un incantesimo di cura.",
-      "Ti dà una probabilità del 70% di evitare l'interruzione causata dai danni mentre lanci un incantesimo di cura."
+      "Dà ai tuoi incantesimi di cura una probabilità del 23% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi di cura una probabilità del 47% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi di cura una probabilità del 70% di non perdere tempo di lancio quando subisci danni."
     ],
     "healing-way": [
       "Aumenta la quantità di cure del tuo incantesimo Healing Wave del 8%.",
@@ -331,9 +331,9 @@
       "Aumenta la bonificación de Poder de ataque cuerpo a cuerpo de tu Rockbiter Weapon en un 20%, el efecto de tu Windfury Weapon en un 40% y aumenta el daño infligido por tus Flametongue Weapon y Frostbrand Weapon en un 15%."
     ],
     "eye-of-the-storm": [
-      "Reduce en un 23% el retraso del lanzamiento causado por los ataques que te infligen daño mientras lanzas Lightning Bolt, Chain Lightning y Lava Burst.",
-      "Reduce en un 47% el retraso del lanzamiento causado por los ataques que te infligen daño mientras lanzas Lightning Bolt, Chain Lightning y Lava Burst.",
-      "Reduce en un 70% el retraso del lanzamiento causado por los ataques que te infligen daño mientras lanzas Lightning Bolt, Chain Lightning y Lava Burst."
+      "Otorga a tus hechizos Lightning Bolt, Chain Lightning y Lava Burst un 23% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Otorga a tus hechizos Lightning Bolt, Chain Lightning y Lava Burst un 47% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Otorga a tus hechizos Lightning Bolt, Chain Lightning y Lava Burst un 70% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño."
     ],
     "flurry": [
       "Aumenta tu velocidad de ataque en un 5% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
@@ -347,9 +347,9 @@
       "Aumenta la cantidad de daño reducida por tus Stoneskin Totem y Windwall Totem en un 20% y reduce el tiempo de reutilización de tu Grounding Totem en 2 s."
     ],
     "healing-focus": [
-      "Te otorga una probabilidad del 23% de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo de sanación.",
-      "Te otorga una probabilidad del 47% de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo de sanación.",
-      "Te otorga una probabilidad del 70% de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo de sanación."
+      "Otorga a tus hechizos de sanación un 23% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Otorga a tus hechizos de sanación un 47% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Otorga a tus hechizos de sanación un 70% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño."
     ],
     "healing-way": [
       "Aumenta la cantidad sanada por tu hechizo Healing Wave en un 8%.",

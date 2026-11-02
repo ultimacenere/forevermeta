@@ -1,14 +1,14 @@
 {
   "classId": "warlock",
-  "gameVersion": "1.60.1.70425",
+  "gameVersion": "1.60.1.70630",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-10-23",
+    "fetched": "2026-11-02",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70425."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630. The Warlock trees carry the server's hotfixes of 30 Oct 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -108,9 +108,9 @@
           "col": 2,
           "maxRank": 3,
           "ranks": [
-            "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 7%.",
-            "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 13%.",
-            "Increases health drained or damage done by your Drain Life, Drain Soul, and Wrack spells by 20%."
+            "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 7%.",
+            "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 13%.",
+            "Increases Health drained, damage done, or Mana drained by your Drain Life, Drain Soul, and Drain Mana spells by 20%."
           ],
           "icon": "spell_shadow_haunting",
           "classic": {
@@ -140,9 +140,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Gives you a 23% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells.",
-            "Gives you a 47% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells.",
-            "Gives you a 70% chance to avoid interruption caused by damage while channeling or casting your Drain Life, Drain Mana, Drain Soul, or Wrack spells."
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Drain Life, Drain Mana, Drain Soul, and Wrack spells a 70% chance to not lose casting time when you take damage."
           ],
           "icon": "spell_shadow_fingerofdeath",
           "classic": {
@@ -157,7 +157,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 50%. Lasts 30 sec."
+            "Increases the effect of your next Curse of Weakness or Bane of Agony by 50%, or your next Curse of Exhaustion by 20%. Lasts 30 sec."
           ],
           "icon": "spell_shadow_contagion",
           "classic": {
@@ -844,9 +844,9 @@
           "col": 0,
           "maxRank": 3,
           "ranks": [
-            "Gives you a 23% chance to resist interruption caused by damage while casting or channeling any Destruction spell.",
-            "Gives you a 47% chance to resist interruption caused by damage while casting or channeling any Destruction spell.",
-            "Gives you a 70% chance to resist interruption caused by damage while casting or channeling any Destruction spell."
+            "Gives your Destruction spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Destruction spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Destruction spells a 70% chance to not lose casting time when you take damage."
           ],
           "icon": "spell_fire_lavaspawn",
           "classic": {

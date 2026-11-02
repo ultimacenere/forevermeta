@@ -28,6 +28,8 @@ type Build = import("./types").Build;
 
 const { addPoint, canAdd, canRemove, addBlocker, emptyBuild, levelForPoints, maxOut, pointsAtLevel, removePoint, requiredLevel, resetTree, sanitize, totalPoints, treeSummary, validateBuild, buildAsText, mainTree, withLevel } = engine;
 const { encodeBuild, decodeBuild, peekCode, codeFromInput } = code;
+// @ts-expect-error TS5097: Node richiede l'estensione .ts nell'import
+const storage: typeof import("./storage") = await import("./storage.ts");
 
 const t = (id: string, row: number, col: number, maxRank: number, requires?: string) => ({
   id,
@@ -216,6 +218,24 @@ describe("codice condivisibile", () => {
     const b = decodeBuild(data, "FW1.wa.xx.60.0530001")!;
     assert.deepEqual(b.ranks, { b: 5 }, "c vuole a al massimo, h vuole la fila 3: restano solo i 5 su b");
     assert.equal(b.level, 60);
+  });
+  test("un talento tolto lascia il posto vuoto: le cifre dei codici vecchi non scivolano", () => {
+    // come se un hotfix avesse tolto b (secondo posto di Arms): i dati nuovi non hanno b, ma codeSlots tiene il posto
+    const after: ClassTalents = {
+      ...data,
+      trees: [{ ...data.trees[0], talents: data.trees[0].talents.filter((x) => x.id !== "b"), codeSlots: ["a", null, "c", "d", "e", "f", "g", "h", "i", "j"] }, data.trees[1], data.trees[2]],
+    };
+    const old = decodeBuild(after, "FW1.wa.xx.60.553.2")!;
+    assert.deepEqual(old.ranks, { a: 5, c: 3, x: 2 }, "i 5 punti su b si perdono, quelli su a e c restano dove erano");
+    assert.equal(encodeBuild(after, old), "FW1.wa.xx.60.503.2.0", "il posto vuoto si scrive sempre 0");
+  });
+  test("il salvataggio nel browser riprende i codici del builder", () => {
+    const saved = storage.withStored(null, "warrior", "FW1.wa.hm.60.503.2.0");
+    assert.deepEqual(storage.parseStored(saved), { warrior: "FW1.wa.hm.60.503.2.0" });
+    assert.deepEqual(storage.parseStored(storage.withStored(saved, "mage", "FW1.ma.xx.60.5")), { warrior: "FW1.wa.hm.60.503.2.0", mage: "FW1.ma.xx.60.5" });
+    assert.deepEqual(storage.parseStored(storage.withStored(saved, "warrior", null)), {});
+    assert.deepEqual(storage.parseStored('{"warrior":"v1.vecchio","mage":3}'), {}, "valori che non sono codici FW1");
+    assert.deepEqual(storage.parseStored("non json"), {});
   });
   test("il codice si trova dentro un link o incollato", () => {
     assert.equal(codeFromInput("https://forevermeta.me/it/builder/warrior#FW1.wa.hm.60.503.2.0"), "FW1.wa.hm.60.503.2.0");

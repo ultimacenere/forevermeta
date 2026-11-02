@@ -60,6 +60,10 @@ export type TalentTree = {
   /** i talenti nell'ordine del file dei dati: è anche l'ordine delle cifre nel codice condivisibile (un talento
    *  nuovo si accoda, uno spostato di casella tiene il posto, così i codici vecchi restano leggibili) */
   talents: Talent[];
+  /** l'ordine delle cifre del codice quando non è più quello di `talents`: un talento tolto dal gioco o passato a un
+   *  altro albero lascia il suo posto vuoto (`null`, cifra sempre 0) invece di far scorrere le cifre dei codici vecchi
+   *  sul talento sbagliato. Contiene ogni id di `talents` una volta sola (lo scrive `scripts/import-talents.mjs`). */
+  codeSlots?: (string | null)[];
   removed?: RemovedTalent[];
 };
 

@@ -55,7 +55,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "platforms",
       q: "Which platforms is WoW Forever on?",
-      a: "PC and Mac, according to Blizzard's press fact sheet, with official gamepad support.",
+      a: "Windows and Mac, according to Blizzard's press fact sheet and the Starter Guide of 28 October 2026. Gamepads are officially supported, but Blizzard describes that support as \"in a beta state\".",
       links: [{ path: "/guides/what-is-wow-forever", label: "What WoW Forever is" }],
     },
   ],
@@ -108,7 +108,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "platforms",
       q: "Su che piattaforme esce WoW Forever?",
-      a: "PC e Mac, secondo la scheda di Blizzard per la stampa, con il supporto ufficiale al gamepad.",
+      a: "Windows e Mac, secondo la scheda di Blizzard per la stampa e la Starter Guide del 28 ottobre 2026. Il gamepad è supportato ufficialmente, ma Blizzard dice che il supporto è ancora \"in a beta state\", in fase beta.",
       links: [{ path: "/guides/what-is-wow-forever", label: "Che cos'è WoW Forever" }],
     },
   ],
@@ -161,7 +161,7 @@ export const faqEntries: Record<Locale, Faq[]> = {
     {
       id: "platforms",
       q: "¿En qué plataformas sale WoW Forever?",
-      a: "PC y Mac, según la ficha de prensa de Blizzard, con soporte oficial para mando.",
+      a: "Windows y Mac, según la ficha de prensa de Blizzard y la guía de iniciación del 28 de octubre de 2026. El mando tiene soporte oficial, pero Blizzard dice que todavía está \"in a beta state\", en fase beta.",
       links: [{ path: "/guides/what-is-wow-forever", label: "Qué es WoW Forever" }],
     },
   ],

@@ -4,9 +4,17 @@ export const guide: GuideEntry = {
   slug: "wow-forever-zones-dungeons-raids",
   category: "world",
   published: "2026-10-10",
-  updated: "2026-10-23",
+  updated: "2026-11-02",
   cover: { word: "Riverglades", tone: "sky" },
   sources: [
+    {
+      label: "World of Warcraft: Forever Goes Live Globally November 4! (Blizzard News, 29 October 2026)",
+      url: "https://news.blizzard.com/en-us/article/24315820/world-of-warcraft-forever-goes-live-globally-november-4",
+    },
+    {
+      label: "WoW Forever startet mit Raids, die schwerer sind als der Geschmolzene Kern (Mein-MMO, interview with Kris Zierhut and Aidan Moon, 28 October 2026)",
+      url: "https://mein-mmo.de/wow-forever-interview-aidan-moon-kris-zierhut/",
+    },
     {
       label: "Explore the New Dungeons of World of Warcraft: Forever (Blizzard News, 20 October 2026)",
       url: "https://news.blizzard.com/en-us/article/24301455/explore-the-new-dungeons-of-world-of-warcraft-forever",
@@ -70,7 +78,7 @@ According to the What's Next panel recap (12 September 2026), Zephras Isle is an
 
 The same recap describes the Riverglades as a rugged frontier of rivers, grasslands, trade routes, struggling communities and old grudges, covering much of the mid-30s to mid-40s. The Found Photos recap (13 September) adds that it is roughly the size of Stranglethorn Vale. Its port, Powderfuse Port, connects to the Burning Steppes, Redridge Mountains, Swamp of Sorrows and Badlands, and you reach it by the Steamwheedle Cartel's sea route from Tanaris.
 
-The two articles give different quest counts: more than 150 new quests in the first, nearly 200 in the second. Both figures are Blizzard's; the final number hasn't been confirmed.
+On quests, the What's Next recap says more than 150 new ones, the Found Photos recap nearly 200. Blizzard's launch article of 29 October, the most recent, repeats "more than 150 new quests" for the zone, out of more than 1,000 new quests across the whole 1–60 journey. The two figures don't necessarily clash, but Blizzard hasn't given an exact count.
 
 A note on the name: Blizzard's press fact sheet calls the zone "Riverlands", but every public Blizzard page and article says Riverglades, so that's the name used here.
 
@@ -80,7 +88,7 @@ Mount Hyjal lets you explore the aftermath of Archimonde's defeat and journey th
 
 ### Shen'dralas
 
-Blizzard calls Shen'dralas a long-hidden mystery between Mulgore and Desolace. You reach it from south of Desolace, through the Valley of Bones. Unlike the other three, it has no section of its own on the official Forever page.
+Blizzard calls Shen'dralas a long-hidden mystery between Mulgore and Desolace. You reach it from south of Desolace, through the Valley of Bones. Unlike the other three, it has no section of its own on the official Forever page. Mein-MMO, after a tour of the zone with two developers, gives it levels 45 to 55: that is the magazine's figure, not a Blizzard one.
 
 ## Expanded zones and sea routes {#expanded-zones}
 
@@ -116,6 +124,17 @@ Three level 60 raids open on 9 December 2026, according to Blizzard's "Raid Over
 
 The Barrow Deeps is the prison that held Illidan Stormrage for 10,000 years. Hyjal Summit opens with an ancient guardian and then offers multiple paths above and below ground. Onyxia's Lair returns as a three-phase fight with heavy fire damage: every raider needs the Drakefire Amulet in their bags, earned through a faction-specific questline that ends in Upper Blackrock Spire. Blizzard says all raids are "currently planned" to reset weekly. The boss counts of the two new raids match the [Legacy System](/en/guides/wow-forever-legacy-system) challenges. Blizzard also mentions new tier sets and a legendary reward without details, and in the podcast of 22 October it described Molten Core as "reimagined", without a date. Dates are on the [calendar](/en/calendar).
 
+### What the developers told Mein-MMO
+
+In an interview with Mein-MMO published on 28 October, Principal Designer Kris Zierhut added some details. They come from the press, not from a Blizzard article:
+
+- **Onyxia** is a "Classic Plus" version: largely the original fight, with a few small surprises and bug fixes. Her Deep Breath has been fixed so she uses it reliably, and the encounter is meant as an accessible 40-player guild event rather than an ultra-hard fight.
+- **The Barrow Deeps and Hyjal Summit** are a little harder than Molten Core and closer to Blackwing Lair, with encounters that reward preparation: raid buffs, consumables, resistance gear.
+- **One difficulty** at launch for everyone, with hidden bosses and special unlock conditions early on; Ulduar-style hard modes may come later, not at launch.
+- **Loot**: dungeon and raid drops are missing from the client's local item database, so they cannot be datamined before someone loots them in game.
+- **Recipes**: more than 600 new profession recipes can drop from dungeon enemies, bosses and rare spawns.
+- **Legendaries**: the very first legendary item will need a guild-wide crafting effort, and over time every class and specialization should get a chance at one.
+
 ## Darkspear Islands battleground {#darkspear-islands}
 
 Announced on 7 October 2026, the Darkspear Islands lie off the shores of Dustwallow Marsh. It's a 15v15 battleground for levels 30 to 60: two teams fight over four control points plus a central flag, and the first to reach 2,000 points wins.
@@ -125,15 +144,20 @@ The two sides are the Darkspear Raiders, based on the Merchant Coast in the Barr
 ## What we don't know yet {#what-we-dont-know}
 
 - The boss count of every dungeon.
-- The levels of Mount Hyjal and Shen'dralas.
-- The final number of quests in the Riverglades.
+- The official levels of Mount Hyjal and Shen'dralas.
+- The exact number of quests in the Riverglades: "more than 150" is the latest official figure.
 - When the "reimagined" Molten Core opens.
+- What the hidden bosses are and how they unlock.
 
 More answers in the [FAQ](/en/faq).`,
       faq: [
         {
           q: "What level is the Riverglades in WoW Forever?",
-          a: "Blizzard says the zone covers much of the mid-30s to mid-40s experience. You get there by ship from Tanaris.",
+          a: "Blizzard says the zone covers much of the mid-30s to mid-40s experience, with more than 150 new quests. You get there by ship from Tanaris.",
+        },
+        {
+          q: "How hard are WoW Forever's new raids?",
+          a: "Kris Zierhut told Mein-MMO that the Barrow Deeps and Hyjal Summit are a little harder than Molten Core, closer to Blackwing Lair, while Onyxia is close to the original fight. At launch there is only one difficulty.",
         },
         {
           q: "How many players are WoW Forever's new raids for?",
@@ -170,7 +194,7 @@ Secondo il riepilogo del panel What's Next (12 settembre 2026), Zephras Isle è 
 
 Lo stesso riepilogo descrive Riverglades come una frontiera aspra di fiumi, praterie, rotte commerciali, comunità in difficoltà e vecchi rancori, per buona parte dei livelli da metà dei 30 a metà dei 40. Il riepilogo del panel Found Photos (13 settembre) aggiunge che è grande più o meno come Stranglethorn Vale. Il suo porto, Powderfuse Port, è collegato a Burning Steppes, Redridge Mountains, Swamp of Sorrows e Badlands, e ci si arriva con la rotta navale dello Steamwheedle Cartel da Tanaris.
 
-I due articoli danno numeri diversi di missioni: più di 150 nel primo, quasi 200 nel secondo. Sono tutti e due numeri di Blizzard; quello definitivo non è confermato.
+Sulle missioni, il riepilogo di What's Next dice più di 150 nuove, quello di Found Photos quasi 200. L'articolo di Blizzard sul lancio del 29 ottobre, il più recente, ripete "più di 150 missioni inedite" per la zona, su oltre 1.000 missioni nuove in tutto il viaggio dal livello 1 al 60. I due numeri non si contraddicono per forza, ma Blizzard non ha dato un conteggio preciso.
 
 Una nota sul nome: la scheda per la stampa di Blizzard chiama la zona «Riverlands», ma tutte le pagine e gli articoli pubblici di Blizzard dicono Riverglades, e qui usiamo quello.
 
@@ -180,7 +204,7 @@ Su Mount Hyjal esplori le conseguenze della sconfitta di Archimonde e attraversi
 
 ### Shen'dralas
 
-Blizzard presenta Shen'dralas come un mistero rimasto a lungo nascosto fra Mulgore e Desolace. Ci si arriva da sud di Desolace, attraverso la Valley of Bones. A differenza delle altre tre, sulla pagina ufficiale di Forever non ha una scheda sua.
+Blizzard presenta Shen'dralas come un mistero rimasto a lungo nascosto fra Mulgore e Desolace. Ci si arriva da sud di Desolace, attraverso la Valley of Bones. A differenza delle altre tre, sulla pagina ufficiale di Forever non ha una scheda sua. Mein-MMO, dopo un giro nella zona con due sviluppatori, le dà i livelli dal 45 al 55: è il dato della rivista, non di Blizzard.
 
 ## Zone ampliate e rotte navali {#zone-ampliate}
 
@@ -216,6 +240,17 @@ Il 9 dicembre 2026 aprono tre incursioni di livello 60, secondo la «Panoramica 
 
 Barrow Deeps è la prigione che ha tenuto Illidan Stormrage per 10.000 anni. Hyjal Summit si apre con un guardiano antico e poi offre più percorsi, sopra e sotto terra. Onyxia's Lair torna come scontro in tre fasi con molto danno da fuoco: ogni membro dell'incursione deve avere nelle borse il Drakefire Amulet, che si ottiene con una catena di missioni diversa per fazione e che finisce in Upper Blackrock Spire. Blizzard dice che tutte le incursioni, «secondo i piani attuali», si azzerano ogni settimana. Il numero dei boss delle due incursioni nuove coincide con le sfide del [Legacy System](/it/guides/wow-forever-legacy-system). Blizzard annuncia anche nuovi set tier e una ricompensa leggendaria senza dettagli, e nel podcast del 22 ottobre ha descritto Molten Core come «reimagined», senza una data. Le date sono nel [calendario](/it/calendar).
 
+### Cosa hanno detto gli sviluppatori a Mein-MMO
+
+In un'intervista a Mein-MMO pubblicata il 28 ottobre, il Principal Designer Kris Zierhut ha aggiunto qualche dettaglio. Arriva dalla stampa, non da un articolo di Blizzard:
+
+- **Onyxia** è una versione "Classic Plus": in gran parte lo scontro originale, con qualche piccola sorpresa e bug corretti. Il suo Deep Breath è stato sistemato perché lo usi in modo affidabile, e l'incontro è pensato come una festa di gilda da 40 accessibile, non come uno scontro durissimo.
+- **Barrow Deeps e Hyjal Summit** sono un po' più difficili di Molten Core e vicini a Blackwing Lair, con incontri che premiano la preparazione: buff dell'incursione, consumabili, equipaggiamento con le resistenze.
+- **Una sola difficoltà** al lancio, uguale per tutti, con boss nascosti e condizioni di sblocco speciali già all'inizio; hard mode alla Ulduar forse più avanti, non al lancio.
+- **Bottino**: i drop di dungeon e incursioni non sono nel database degli oggetti del client, quindi non si possono estrarre con il datamining prima che qualcuno li ottenga in gioco.
+- **Ricette**: oltre 600 ricette nuove delle professioni possono cadere da nemici dei dungeon, boss e rari.
+- **Leggendari**: il primo oggetto leggendario richiederà uno sforzo di creazione di tutta la gilda, e col tempo ogni classe e specializzazione dovrebbe avere il suo.
+
 ## Il campo di battaglia Darkspear Islands {#darkspear-islands}
 
 Annunciate il 7 ottobre 2026, le Darkspear Islands stanno al largo di Dustwallow Marsh. È un campo di battaglia 15 contro 15 per i livelli dal 30 al 60: due squadre si contendono quattro punti di controllo più una bandiera centrale, e vince la prima che arriva a 2000 punti.
@@ -225,15 +260,20 @@ Le due parti sono i Darkspear Raiders, con base a Merchant Coast nelle Barrens, 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
 - Il numero di boss di ogni dungeon.
-- I livelli di Mount Hyjal e Shen'dralas.
-- Il numero definitivo di missioni a Riverglades.
+- I livelli ufficiali di Mount Hyjal e Shen'dralas.
+- Il numero preciso di missioni a Riverglades: "più di 150" è l'ultimo dato ufficiale.
 - Quando apre il Molten Core «reimagined».
+- Quali sono i boss nascosti e come si sbloccano.
 
 Altre risposte nelle [domande frequenti](/it/faq).`,
       faq: [
         {
           q: "Di che livello è Riverglades in WoW Forever?",
-          a: "Secondo Blizzard copre buona parte dei livelli da metà dei 30 a metà dei 40. Ci si arriva in nave da Tanaris.",
+          a: "Secondo Blizzard copre buona parte dei livelli da metà dei 30 a metà dei 40, con più di 150 missioni nuove. Ci si arriva in nave da Tanaris.",
+        },
+        {
+          q: "Quanto sono difficili le nuove incursioni di WoW Forever?",
+          a: "Kris Zierhut ha detto a Mein-MMO che Barrow Deeps e Hyjal Summit sono un po' più difficili di Molten Core, vicine a Blackwing Lair, mentre Onyxia è vicina allo scontro originale. Al lancio c'è una sola difficoltà.",
         },
         {
           q: "Per quanti giocatori sono i nuovi raid di WoW Forever?",
@@ -270,7 +310,7 @@ Según el resumen del panel What's Next (12 de septiembre de 2026), es una zona 
 
 El mismo resumen describe Clarofluvial como una frontera agreste de ríos, praderas, rutas comerciales, comunidades en apuros y viejos rencores, que cubre buena parte de los niveles de mediados de los 30 a mediados de los 40. El resumen del panel Found Photos (13 de septiembre) añade que es más o menos del tamaño de la Vega de Tuercespina. Su puerto, Powderfuse Port, conecta con Las Estepas Ardientes, las Montañas Crestagrana, el Pantano de las Penas y las Tierras Inhóspitas, y se llega por la ruta marítima del Cártel Bonvapor desde Tanaris.
 
-Las cifras de misiones no coinciden: más de 150 según el primer resumen, casi 200 según el segundo; la definitiva no está confirmada. Y la versión latinoamericana del primero habla de los niveles 30 a 50, a diferencia del original en inglés.
+Sobre las misiones, el resumen de What's Next habla de más de 150 nuevas y el de Found Photos de casi 200. El artículo de Blizzard sobre el lanzamiento del 29 de octubre, el más reciente, repite "más de 150 nuevas misiones" para la zona, de más de 1000 misiones nuevas en todo el recorrido del nivel 1 al 60. Las dos cifras no tienen por qué contradecirse, pero Blizzard no ha dado un número exacto. Y la versión latinoamericana del primer resumen habla de los niveles 30 a 50, a diferencia del original en inglés.
 
 Nota: la ficha de prensa de Blizzard en inglés dice «Riverlands», pero todas las páginas y artículos públicos dicen Riverglades.
 
@@ -280,7 +320,7 @@ En el Monte Hyjal exploras las secuelas de la derrota de Archimonde y recorres l
 
 ### Shen'dralas
 
-Blizzard presenta Shen'dralas como un misterio oculto durante mucho tiempo entre Mulgore y Desolace. Se llega desde el sur de Desolace. A diferencia de las otras tres, no tiene ficha propia en la página oficial de Forever.
+Blizzard presenta Shen'dralas como un misterio oculto durante mucho tiempo entre Mulgore y Desolace. Se llega desde el sur de Desolace. A diferencia de las otras tres, no tiene ficha propia en la página oficial de Forever. Mein-MMO, tras recorrer la zona con dos desarrolladores, le da los niveles 45 a 55: es la cifra de la revista, no de Blizzard.
 
 ## Zonas ampliadas y rutas marítimas {#zonas-ampliadas}
 
@@ -316,6 +356,17 @@ El 9 de diciembre de 2026 abren tres bandas de nivel 60, según el «Raid Overvi
 
 Las Cavernas del Túmulo son la prisión que retuvo a Illidan Tempestira durante 10 000 años. La Cima Hyjal empieza con un guardián ancestral y luego ofrece varios caminos, sobre y bajo tierra. La Guarida de Onyxia vuelve como un combate en tres fases con mucho daño de fuego: cada miembro de la banda necesita en las bolsas el Drakefire Amulet, que se consigue con una cadena de misiones distinta por facción y que termina en Cumbre de Roca Negra Superior. Blizzard dice que todas las bandas, «según los planes actuales», se reinician cada semana. El número de jefes de las dos bandas nuevas coincide con los desafíos del [sistema de legado](/es/guides/wow-forever-legacy-system). Blizzard anuncia también nuevos conjuntos de tier y una recompensa legendaria sin detalles, y en el pódcast del 22 de octubre describió el Núcleo de Magma como «reimagined», sin fecha. Tienes las fechas en el [calendario](/es/calendar).
 
+### Lo que los desarrolladores contaron a Mein-MMO
+
+En una entrevista con Mein-MMO publicada el 28 de octubre, el Principal Designer Kris Zierhut añadió algunos detalles. Llegan de la prensa, no de un artículo de Blizzard:
+
+- **Onyxia** es una versión "Classic Plus": en gran parte el combate original, con alguna pequeña sorpresa y errores corregidos. Su Deep Breath se ha arreglado para que lo use de forma fiable, y el encuentro está pensado como una fiesta de hermandad de 40 accesible, no como un combate durísimo.
+- **Las Cavernas del Túmulo y la Cima Hyjal** son algo más difíciles que el Núcleo de Magma y se acercan a la Guarida Alanegra (Blackwing Lair), con encuentros que premian la preparación: beneficios de banda, consumibles, equipo de resistencias.
+- **Una sola dificultad** en el lanzamiento, igual para todos, con jefes ocultos y condiciones de desbloqueo especiales desde el principio; los modos difíciles al estilo de Ulduar quizá lleguen más adelante, no en el lanzamiento.
+- **Botín**: lo que sueltan mazmorras y bandas no está en la base de datos de objetos del cliente, así que no se puede extraer con datamining antes de que alguien lo consiga en el juego.
+- **Recetas**: más de 600 recetas nuevas de profesión pueden caer de enemigos de mazmorra, jefes y criaturas raras.
+- **Legendarios**: el primer objeto legendario exigirá un esfuerzo de fabricación de toda la hermandad, y con el tiempo cada clase y especialización debería tener el suyo.
+
 ## El campo de batalla de las Islas Lanza Negra {#islas-lanza-negra}
 
 Anunciadas el 7 de octubre de 2026, las Islas Lanza Negra están frente a la costa del Marjal Revolcafango. Es un campo de batalla JcJ de 15 contra 15 para los niveles 30 a 60: dos equipos se disputan cuatro puntos de control y una bandera central, y gana el primero que llega a 2000 puntos.
@@ -325,15 +376,20 @@ Los dos bandos son los Asaltantes Lanza Negra, con base en la Merchant Coast de 
 ## Lo que aún no sabemos {#lo-que-aun-no-sabemos}
 
 - El número de jefes de cada mazmorra.
-- Los niveles del Monte Hyjal y de Shen'dralas.
-- El número definitivo de misiones de Clarofluvial.
+- Los niveles oficiales del Monte Hyjal y de Shen'dralas.
+- El número exacto de misiones de Clarofluvial: "más de 150" es la última cifra oficial.
 - Cuándo abre el Núcleo de Magma «reimagined».
+- Cuáles son los jefes ocultos y cómo se desbloquean.
 
 Más respuestas en las [preguntas frecuentes](/es/faq).`,
       faq: [
         {
           q: "¿De qué nivel es Clarofluvial en WoW Forever?",
-          a: "Según Blizzard, cubre buena parte de los niveles de mediados de los 30 a mediados de los 40. Se llega en barco desde Tanaris.",
+          a: "Según Blizzard, cubre buena parte de los niveles de mediados de los 30 a mediados de los 40, con más de 150 misiones nuevas. Se llega en barco desde Tanaris.",
+        },
+        {
+          q: "¿Qué dificultad tienen las nuevas bandas de WoW Forever?",
+          a: "Kris Zierhut dijo a Mein-MMO que las Cavernas del Túmulo y la Cima Hyjal son algo más difíciles que el Núcleo de Magma, cerca de la Guarida Alanegra, mientras que Onyxia se parece al combate original. En el lanzamiento hay una sola dificultad.",
         },
         {
           q: "¿Para cuántos jugadores son las nuevas bandas de WoW Forever?",

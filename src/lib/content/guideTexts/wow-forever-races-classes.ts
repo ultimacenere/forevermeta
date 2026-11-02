@@ -4,9 +4,21 @@ export const guide: GuideEntry = {
   slug: "wow-forever-races-classes",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-10-10",
+  updated: "2026-11-02",
   cover: { word: "Skyborne", tone: "sky" },
   sources: [
+    {
+      label: "WoW Forever Development Notes, October 26, 2026 (Kaivax, Blizzard forums): final pass on racial abilities before launch",
+      url: "https://us.forums.blizzard.com/en/wow/t/2360696/7",
+    },
+    {
+      label: "WoW Forever Development Notes, October 27, 2026 (Kaivax, Blizzard forums): Orc, Troll and Undead additions",
+      url: "https://us.forums.blizzard.com/en/wow/t/2360696/8",
+    },
+    {
+      label: "Massive Talent Tree Changes to Druids and Paladins - Class Tuning for WoW: Forever (Wowhead, October 30, 2026): live hotfixes without official notes",
+      url: "https://www.wowhead.com/forever/news/massive-talent-tree-changes-to-druids-and-paladins-class-tuning-for-wow-forever-383670",
+    },
     {
       label: "Create the Hero You Want to Be in World of Warcraft: Forever (Blizzard News, September 22, 2026)",
       url: "https://news.blizzard.com/en-us/article/24304075/create-the-hero-you-want-to-be-in-world-of-warcraft-forever",
@@ -46,6 +58,8 @@ The tables come from Blizzard's article "Create the Hero You Want to Be in World
 ## The nine classes {#classes}
 
 Druid, Hunter, Mage, Paladin, Priest, Rogue, Shaman, Warlock and Warrior. Blizzard has published class deep dives for the Hunter and Druid, Priest and Warrior (September 30), Mage and Shaman, and Rogue and Warlock (October 7).
+
+On October 30 the talent trees of the Paladin (all three) and of the Druid (Feral and Restoration above all) were reworked on the live servers through hotfixes, with no official notes: Wowhead spotted the changes in the game data. Our [talent builder](/en/builder) has been updated with the new trees.
 
 ## Horde races and classes {#horde}
 
@@ -103,7 +117,7 @@ The Skyborne are the new race of Forever, presented in "WoW: Forever Meet the Ne
 - **Two versions**: the Windshaper Skyborne join the Horde, the High Order Skyborne join the Alliance.
 - **Classes**: both can be Warriors, Hunters, Rogues and Druids, with druid forms of their own. Only the Windshaper can be Shamans, only the High Order can be Mages.
 - **Starting zone**: Zephras Isle, from level 1 to 12, an elemental starting experience among the skies with architecture inspired by Skywall.
-- **Racial abilities**: Walk on Air, Wind Blessed and Elemental Insight, plus Skysight for the Windshaper or Read Ley Line for the High Order.
+- **Racial abilities**: Walk on Air, Wind Blessed and Elemental Insight, plus Skysight for the Windshaper or Read Ley Line for the High Order (the October 26 notes spell them Wind-Blessed and Read Leyline; what changed is below).
 - **Access**: according to the legal notes of the Forever page and the shop, the Skyborne and Zephras Isle require the Skyborne Heroic Pack or higher. See [editions and prices](/en/guides/wow-forever-editions-prices).
 
 On October 7 Blizzard announced that Standard Definition models for the Skyborne, druid forms included, are in development and arriving in early 2027.
@@ -114,13 +128,27 @@ The Undead Paladin is one of the headline novelties: the Forever page puts "the 
 
 ## Racial abilities {#racials}
 
-Each race has two active and two passive racial abilities (Deep Dive recap). The full list for every race, with what each ability does, is in Blizzard's September 22 article linked in the sources.
+Each race has two active and two passive racial abilities (Deep Dive recap). Blizzard's September 22 article lists them, but some numbers changed during the beta, and the last revision before launch is in the development notes Kaivax posted on the official forums on October 26, 2026, completed on October 27 with the Orc, Troll and Undead changes. Blizzard says it gave priority to racial identity, accepting that some races will be slightly more effective in some roles, and brought back several role- or class-focused racials; the weapon specializations (Sword, Axe, Mace) do not return. In short:
+
+| Race | What changed on October 26–27 |
+|---|---|
+| Human | Ruthless: critical chance 1% (was 2%); The Human Spirit: Spirit +10% (was 5%) |
+| Dwarf | Earth Fury removed, replaced by Artisan's Precision: hit chance with spells and attacks +1% |
+| Tauren | Plainsrunning: up to +60% movement speed, no longer while mounted; Endurance: only +5% health |
+| Orc | Savage removed, Command back (Hunter and Warlock pet damage +5%); Blood Fury: 2-minute cooldown |
+| Troll | Berserking lasts 15 seconds (was 10) |
+| Undead | Touch of the Grave: 15-second internal cooldown (was 25) |
+| Skyborne | Wind-Blessed: haste 2% (was 3%); Read Leyline and Skysight last 15 seconds and grow stronger with the one-hour buffs Attuned (at a Ley Line) and Charged (at an elemental convergence) |
+| Night Elf, Gnome | No changes |
+
+What each racial does now, race by race, is shown in our [talent builder](/en/builder) when you pick a race. The beta closed on October 23, so these values have not been tested in any build: we will check them in game at launch.
 
 ## What we don't know yet {#unknowns}
 
 - **Which combinations will come next**, and when: Blizzard only says more are planned.
 - **The exact date of the Skyborne Standard Definition models**: only "early 2027".
 - **Deep dives for the Paladin**: none published as of October 10.
+- **The October 30 talent changes**: Blizzard has not published notes for them, so whether they are final will only be clear in game.
 
 Race, class and zone names in Italian and Spanish are in the [glossary](/en/glossary). To choose where to play, read the guide to [rulesets](/en/guides/wow-forever-rulesets).`,
       faq: [
@@ -151,6 +179,8 @@ Le tabelle vengono dall'articolo di Blizzard "Crea l'eroe che desideri essere in
 ## Le nove classi {#classi}
 
 Druido (Druid), Cacciatore (Hunter), Mago (Mage), Paladino (Paladin), Sacerdote (Priest), Ladro (Rogue), Sciamano (Shaman), Stregone (Warlock) e Guerriero (Warrior). Blizzard ha pubblicato gli approfondimenti su Cacciatore e Druido, Sacerdote e Guerriero (30 settembre), Mago e Sciamano, Ladro e Stregone (7 ottobre).
+
+Il 30 ottobre gli alberi dei talenti del Paladino (tutti e tre) e del Druido (soprattutto Feral e Restoration) sono stati rifatti sui server live con degli hotfix, senza note ufficiali: Wowhead ha visto le modifiche nei dati di gioco. Il nostro [builder dei talenti](/it/builder) è aggiornato con gli alberi nuovi.
 
 ## Razze e classi dell'Orda {#orda}
 
@@ -208,7 +238,7 @@ Gli Skyborne sono la razza nuova di Forever, presentata in "WoW: Forever - Ti pr
 - **Due versioni**: gli Skyborne Windshaper stanno con l'Orda, gli Skyborne High Order con l'Alleanza.
 - **Classi**: tutti e due possono essere Guerrieri, Cacciatori, Ladri e Druidi, con forme druidiche proprie. Solo i Windshaper possono essere Sciamani, solo gli High Order Maghi.
 - **Zona iniziale**: Zephras Isle, dal livello 1 al 12, un inizio fra cielo ed elementi con un'architettura ispirata a Skywall.
-- **Abilità razziali**: Walk on Air, Wind Blessed ed Elemental Insight, più Skysight per i Windshaper o Read Ley Line per gli High Order.
+- **Abilità razziali**: Walk on Air, Wind Blessed ed Elemental Insight, più Skysight per i Windshaper o Read Ley Line per gli High Order (le note del 26 ottobre scrivono Wind-Blessed e Read Leyline; cosa è cambiato è più sotto).
 - **Accesso**: secondo le note legali della pagina di Forever e del negozio, Skyborne e Zephras Isle richiedono il Pacchetto Heroic Skyborne o superiore. Vedi [edizioni e prezzi](/it/guides/wow-forever-editions-prices).
 
 Il 7 ottobre Blizzard ha annunciato che i modelli in Standard Definition degli Skyborne, forme druidiche comprese, sono in sviluppo e arriveranno all'inizio del 2027.
@@ -219,13 +249,27 @@ Il Paladino Non Morto è una delle novità in vetrina: la pagina di Forever mett
 
 ## Le abilità razziali {#razziali}
 
-Ogni razza ha due abilità razziali attive e due passive (riepilogo del Deep Dive). L'elenco completo per ogni razza, con cosa fa ogni abilità, è nell'articolo di Blizzard del 22 settembre che trovi fra le fonti.
+Ogni razza ha due abilità razziali attive e due passive (riepilogo del Deep Dive). L'articolo di Blizzard del 22 settembre le elenca, ma in beta alcuni numeri sono cambiati, e l'ultima revisione prima del lancio è nelle note di sviluppo che Kaivax ha pubblicato sul forum ufficiale il 26 ottobre 2026, completate il 27 con le modifiche a Orco, Troll e Non Morto. Blizzard spiega di aver messo al primo posto l'identità delle razze, accettando che alcune rendano un po' meglio in certi ruoli, e di aver riportato diverse razziali legate al ruolo o alla classe; le specializzazioni d'arma (Sword, Axe, Mace) non tornano. In sintesi (i nomi restano in inglese, come nelle pagine italiane di Blizzard):
+
+| Razza | Cosa è cambiato il 26–27 ottobre |
+|---|---|
+| Umano | Ruthless: critico 1% (era 2%); The Human Spirit: Spirito +10% (era 5%) |
+| Nano | Earth Fury tolta, al suo posto Artisan's Precision: probabilità di colpire con incantesimi e attacchi +1% |
+| Tauren | Plainsrunning: fino a +60% di velocità di movimento, non più a cavallo; Endurance: solo +5% di salute |
+| Orco | Savage tolta, torna Command (danni dei pet di Cacciatore e Stregone +5%); Blood Fury: ricarica di 2 minuti |
+| Troll | Berserking dura 15 secondi (erano 10) |
+| Non Morto | Touch of the Grave: ricarica interna di 15 secondi (erano 25) |
+| Skyborne | Wind-Blessed: celerità 2% (era 3%); Read Leyline e Skysight durano 15 secondi e diventano più forti con i buff di un'ora Attuned (su una Ley Line) e Charged (su una elemental convergence) |
+| Elfo della Notte, Gnomo | Nessuna modifica |
+
+Cosa fa oggi ogni razziale, razza per razza, lo vedi nel nostro [builder dei talenti](/it/builder) quando scegli la razza. La beta è chiusa dal 23 ottobre, quindi questi valori non sono stati provati in nessuna build: li ricontrolliamo in gioco al lancio.
 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
 - **Quali combinazioni arriveranno dopo**, e quando: Blizzard dice solo che ce ne saranno altre.
 - **La data precisa dei modelli Standard Definition degli Skyborne**: solo "inizio 2027".
 - **L'approfondimento sul Paladino**: al 10 ottobre non è uscito.
+- **Le modifiche ai talenti del 30 ottobre**: Blizzard non ha pubblicato note, quindi se siano definitive si capirà solo in gioco.
 
 I nomi di razze, classi e zone nelle varie lingue sono nel [glossario](/it/glossary). Per scegliere dove giocare, leggi la guida ai [set di regole](/it/guides/wow-forever-rulesets).`,
       faq: [
@@ -256,6 +300,8 @@ Las tablas vienen del artículo de Blizzard del 22 de septiembre de 2026 sobre l
 ## Las nueve clases {#clases}
 
 Druida, cazador, mago, paladín, sacerdote, pícaro, chamán, brujo y guerrero. Entre el 30 de septiembre y el 7 de octubre Blizzard publicó repasos a fondo de ocho de ellas: todas menos el paladín.
+
+El 30 de octubre los árboles de talentos del paladín (los tres) y del druida (sobre todo Feral y Restoration) se rehicieron en los servidores del lanzamiento con hotfixes, sin notas oficiales: Wowhead vio los cambios en los datos del juego. Nuestro [calculador de talentos](/es/builder) ya tiene los árboles nuevos.
 
 ## Razas y clases de la Horda {#horda}
 
@@ -313,7 +359,7 @@ Blizzard presentó a los célicos el 22 de septiembre. La ficha de prensa de Bli
 - **Dos versiones**: los célicos Formaviento (cielonato de los Formavientos en Latinoamérica) van con la Horda; los célicos de la Orden Eminente (cielonato de la Suma Orden) van con la Alianza.
 - **Clases**: ambos pueden ser guerreros, cazadores, pícaros y druidas, con formas de druida propias. Solo los Formaviento pueden ser chamanes y solo los de la Orden Eminente pueden ser magos.
 - **Zona inicial**: la Isla de Zephras (Isla Zephras en Latinoamérica), del nivel 1 al 12, un comienzo elemental entre los cielos con una arquitectura inspirada en el Muro Celeste (Skywall).
-- **Habilidades raciales**: Walk on Air, Wind Blessed y Elemental Insight, más Skysight para los Formaviento o Read Ley Line para la Orden Eminente. Son los nombres del artículo en inglés.
+- **Habilidades raciales**: Walk on Air, Wind Blessed y Elemental Insight, más Skysight para los Formaviento o Read Ley Line para la Orden Eminente. Son los nombres del artículo en inglés; las notas del 26 de octubre escriben Wind-Blessed y Read Leyline (lo que cambió está más abajo).
 - **Acceso**: según las notas legales de la página de Forever y de la tienda, los célicos y la Isla de Zephras requieren el Pack Heroic de los célicos o superior. Consulta [ediciones y precios](/es/guides/wow-forever-editions-prices).
 
 El 7 de octubre Blizzard anunció que los modelos en definición estándar de los célicos, formas de druida incluidas, están en desarrollo y llegarán a principios de 2027.
@@ -324,13 +370,27 @@ El paladín no-muerto es una de las novedades destacadas: la página de Forever 
 
 ## Habilidades raciales {#raciales}
 
-Cada raza tiene dos habilidades raciales activas y dos pasivas (resumen del "Repaso a fondo"). La lista completa, con lo que hace cada habilidad, está en el artículo de Blizzard del 22 de septiembre (en las fuentes).
+Cada raza tiene dos habilidades raciales activas y dos pasivas (resumen del "Repaso a fondo"). El artículo de Blizzard del 22 de septiembre las enumera, pero en la beta cambiaron algunas cifras, y la última revisión antes del lanzamiento está en las notas de desarrollo que Kaivax publicó en el foro oficial el 26 de octubre de 2026, completadas el 27 con los cambios de orco, trol y no-muerto. Blizzard explica que ha dado prioridad a la identidad de cada raza, aceptando que algunas rindan un poco mejor en ciertos papeles, y que ha recuperado varias raciales ligadas al rol o a la clase; las especializaciones de arma (Sword, Axe, Mace) no vuelven. En resumen (con los nombres en inglés):
+
+| Raza | Qué cambió el 26 y el 27 de octubre |
+|---|---|
+| Humano | Ruthless: probabilidad de crítico del 1% (era 2%); The Human Spirit: espíritu +10% (era 5%) |
+| Enano | Earth Fury eliminada, sustituida por Artisan's Precision: probabilidad de golpe con hechizos y ataques +1% |
+| Tauren | Plainsrunning: hasta +60% de velocidad de movimiento, ya no con montura; Endurance: solo +5% de salud |
+| Orco | Savage eliminada, vuelve Command (daño de las mascotas de cazador y brujo +5%); Blood Fury: reutilización de 2 minutos |
+| Trol | Berserking dura 15 segundos (eran 10) |
+| No-muerto | Touch of the Grave: reutilización interna de 15 segundos (eran 25) |
+| Célicos | Wind-Blessed: celeridad del 2% (era 3%); Read Leyline y Skysight duran 15 segundos y se refuerzan con los beneficios de una hora Attuned (en una Ley Line) y Charged (en una elemental convergence) |
+| Elfo de la noche, gnomo | Sin cambios |
+
+Lo que hace hoy cada racial, raza por raza, lo ves en nuestro [calculador de talentos](/es/builder) al elegir la raza. La beta está cerrada desde el 23 de octubre, así que estos valores no se han probado en ninguna build: los comprobaremos en el juego en el lanzamiento.
 
 ## Lo que aún no sabemos {#lo-que-no-sabemos}
 
 - **Qué combinaciones llegarán después**, y cuándo: Blizzard solo dice que habrá más.
 - **La fecha exacta de los modelos en definición estándar de los célicos**: solo "principios de 2027".
 - **Los nombres en español de las habilidades raciales** y de algunos lugares.
+- **Los cambios de talentos del 30 de octubre**: Blizzard no ha publicado notas, así que si son definitivos solo se sabrá en el juego.
 
 Los nombres de razas, clases y zonas en cada idioma están en el [glosario](/es/glossary). Para elegir dónde jugar, lee la guía de los [conjuntos de reglas](/es/guides/wow-forever-rulesets).`,
       faq: [

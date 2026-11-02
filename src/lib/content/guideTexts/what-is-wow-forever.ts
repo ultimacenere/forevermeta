@@ -4,9 +4,21 @@ export const guide: GuideEntry = {
   slug: "what-is-wow-forever",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-10-23",
+  updated: "2026-11-02",
   cover: { word: "WoW Forever", tone: "gold" },
   sources: [
+    {
+      label: "New Player's Starter Guide: Welcome to World of Warcraft: Forever (Blizzard News, October 28, 2026)",
+      url: "https://news.blizzard.com/en-us/article/24315280/new-players-starter-guide-welcome-to-world-of-warcraft-forever",
+    },
+    {
+      label: "World of Warcraft: Forever Goes Live Globally November 4! (Blizzard News, October 29, 2026)",
+      url: "https://news.blizzard.com/en-us/article/24315820/world-of-warcraft-forever-goes-live-globally-november-4",
+    },
+    {
+      label: "Return to Azeroth in World of Warcraft: Forever (Blizzard News, October 29, 2026)",
+      url: "https://news.blizzard.com/en-us/article/24315643/return-to-azeroth-in-world-of-warcraft-forever",
+    },
     {
       label: "Pre-Purchase World of Warcraft: Forever Upgrades and Begin Your Next Journey in Azeroth (Blizzard News, September 12, 2026)",
       url: "https://news.blizzard.com/en-us/article/24301508/pre-purchase-world-of-warcraft-forever-upgrades-and-begin-your-next-journey-in-azeroth",
@@ -67,7 +79,7 @@ export const guide: GuideEntry = {
       excerpt:
         "World of Warcraft: Forever explained: the new WoW from the Classic team, out November 4, 2026, with Skyborne, new zones, 9 dungeons, 2 raids and level cap 60.",
       imageAlt: "ForeverMeta typographic cover with the words «WoW Forever» in gold on a midnight blue background",
-      body: `World of Warcraft: Forever is a new version of WoW made by the team behind WoW Classic: a reimagined Azeroth with revamped gameplay, rooted in the original game, with a level cap of 60. It launches on November 4, 2026 on PC and Mac, and access is included with a World of Warcraft Subscription or Game Time. This overview uses only Blizzard sources (the articles since BlizzCon 2026, the press fact sheet, the Battle.net Shop), and every section links to a detailed guide.
+      body: `World of Warcraft: Forever is a new version of WoW made by the team behind WoW Classic: a reimagined Azeroth with revamped gameplay, rooted in the original game, with a level cap of 60. It launches on November 4, 2026 on Windows and Mac, and access is included with a World of Warcraft Subscription or Game Time. This overview uses only Blizzard sources (the articles since BlizzCon 2026, the press fact sheet, the Battle.net Shop), and every section links to a detailed guide.
 
 ## At a glance {#at-a-glance}
 
@@ -80,7 +92,24 @@ export const guide: GuideEntry = {
 
 ## What kind of game it is {#what-kind-of-game}
 
-You pick the Alliance or the Horde and level from 1 to 60 in an Azeroth that is familiar but changed. The press fact sheet promises over 1,000 new quests across Azeroth, revamped talent trees and new gear. The graphics get new lighting and volumetric fog, with a Classic Mode and a choice of HD or SD models. Transmog is optional, and gamepads are officially supported. Post-launch updates will add content at every level, so arriving later does not mean falling behind.
+You pick the Alliance or the Horde and level from 1 to 60 in an Azeroth that is familiar but changed. Blizzard's launch article of October 29 confirms more than 1,000 new quests across the level 1–60 journey, more than 150 of them in the Riverglades alone; the press fact sheet adds revamped talent trees and new gear. The graphics get new lighting and volumetric fog, with a choice of HD or SD models. Transmog is optional. You play on Windows or Mac with keyboard and mouse; controller support is there too, but Blizzard's Starter Guide of October 28 says it is "in a beta state". Post-launch updates will add content at every level, so arriving later does not mean falling behind.
+
+## First login: Classic or Enhanced {#experience-preset}
+
+The first time you log in, before you even pick a ruleset, the game asks you to choose an **Experience Preset**. The press fact sheet had mentioned a "Classic Mode"; this is the choice the Starter Guide of October 28 describes. Its starting settings, summed up:
+
+| Starting setting | Classic | Enhanced |
+|---|---|---|
+| Character models | Standard Definition (SD) | High Definition (HD) |
+| Quest points of interest and objective areas | Off | On |
+| One bag (all bags in one window) | Off | On |
+| Transmog | Off | On |
+| Default movement keys | Turn the camera | Strafe |
+| Screen layout | Classic | Centralized |
+
+If you are not sure, Blizzard suggests Enhanced. The preset is a starting point, not a lock: the selection screen only appears on your first login, but you can switch preset later under Options, System – Preset (Return to Azeroth article, October 29) and change each setting under Game Menu > Options.
+
+Separately, each time you create a character you choose HD or SD models and animations. The choice only changes how that character looks, not its abilities or progress, and you can change it later in the Options or at a Barbershop in game.
 
 ## Price: subscription and optional editions {#price}
 
@@ -104,7 +133,7 @@ Six race-class combinations are new: Gnome Priest, Human Hunter, Dwarf Shaman, O
 
 New zones include Zephras Isle, the Riverglades (an Eastern Kingdoms frontier for roughly the mid-30s to mid-40s), Mount Hyjal and Shen'dralas, between Mulgore and Desolace. The press fact sheet says "Riverlands", but every public Blizzard page says Riverglades.
 
-There are nine new dungeons, from the Hall of Thanes beneath Ironforge to the City of Dalaran. The two raids are Hyjal Summit (20 players, 13 bosses) and the Barrow Deeps (10 players, 8 bosses), and new raids unlock on December 9. There is also a new 15v15 battleground, the Darkspear Islands. Details: [zones, dungeons and raids](/en/guides/wow-forever-zones-dungeons-raids).
+There are nine new dungeons, from the Hall of Thanes beneath Ironforge to the City of Dalaran. The two new raids are Hyjal Summit (20 players, 13 bosses) and the Barrow Deeps (10 players, 8 bosses): they unlock on December 9 together with Onyxia's Lair, as the launch article of October 29 repeats. There is also a new 15v15 battleground, the Darkspear Islands. Details: [zones, dungeons and raids](/en/guides/wow-forever-zones-dungeons-raids).
 
 ## New systems: Legacy and Camping {#systems}
 
@@ -114,11 +143,11 @@ Camping turns the old Cooking Fire into a Basic Campfire: other players can stop
 
 ## Rulesets {#rulesets}
 
-You don't pick a realm, you pick a ruleset: Normal, PvP, Roleplaying or Hardcore, which arrives after launch. Each ruleset is its own world and a character can't switch. More in the [rulesets guide](/en/guides/wow-forever-rulesets).
+You don't pick a realm, you pick a ruleset: Normal, PvP, Roleplaying, Roleplay-PvP or Hardcore, which arrives after launch. Each ruleset is its own world and a character can't switch. Groups, guilds, dungeons and raids only bring together characters on the same ruleset and of the same faction. More in the [rulesets guide](/en/guides/wow-forever-rulesets).
 
 ## Beta and launch {#beta-and-launch}
 
-The beta ran from September 17 to October 23, 2026 (PST; extended by two days on October 20), by invitation or with the Epic Pack or the Collection. Early Name Reservation runs from October 27 to November 3. Launch is November 4 at 3:00 p.m. PST, which is midnight between November 4 and 5 in Central Europe. All times and dates: [release date guide](/en/guides/wow-forever-release-date) and the [calendar](/en/calendar).
+The beta ran from September 17 to October 23, 2026 (PST; extended by two days on October 20), by invitation or with the Epic Pack or the Collection. Early Name Reservation runs from October 27 through November 3. Launch is November 4 at 3:00 p.m. PST, which is midnight between November 4 and 5 in Central Europe: on October 29 Blizzard published a table with the time for each region, and every region starts at the same moment, 23:00 UTC. All times and dates: [release date guide](/en/guides/wow-forever-release-date) and the [calendar](/en/calendar).
 
 ## Languages {#languages}
 
@@ -127,7 +156,7 @@ On the Battle.net Shop page for Forever, read on October 10, 2026, the available
 ## What we don't know yet {#what-we-dont-know-yet}
 
 - When Hardcore will arrive: Blizzard only says "sometime after launch".
-- Which raids unlock on December 9.
+- When controller support leaves its "beta state".
 - Price and contents of the Collector's Edition.
 - Whether Italian will come later: no article mentions it, so it is worth checking again at launch.
 
@@ -139,7 +168,11 @@ Unfamiliar terms: see the [glossary](/en/glossary) and the [FAQ](/en/faq).`,
         },
         {
           q: "Can I play WoW Forever on a Mac?",
-          a: "Yes. Blizzard's fact sheet lists PC and Mac as platforms. Blizzard also published minimum GPU families: AMD GCN 1, NVIDIA Maxwell or Intel Skylake.",
+          a: "Yes. Blizzard's Starter Guide of October 28 says you can play on Windows or Mac. Blizzard also published minimum GPU families: AMD GCN 1, NVIDIA Maxwell or Intel Skylake.",
+        },
+        {
+          q: "What is the Experience Preset in WoW Forever?",
+          a: "A choice you make on your first login: Classic (SD models, no quest markers, separate bags, transmog off) or Enhanced (the opposite). It only sets the starting options, and you can change it later.",
         },
         {
           q: "What is the level cap in WoW Forever?",
@@ -157,7 +190,7 @@ Unfamiliar terms: see the [glossary](/en/glossary) and the [FAQ](/en/faq).`,
       excerpt:
         "Cos'è World of Warcraft: Forever: il nuovo WoW del team di Classic, in uscita il 4 novembre 2026, con Skyborne, zone nuove, 9 dungeon, 2 raid e livello 60.",
       imageAlt: "Copertina tipografica di ForeverMeta con la scritta «WoW Forever» in oro su fondo blu notte",
-      body: `World of Warcraft: Forever è una nuova versione di WoW fatta dal team di WoW Classic: un'Azeroth reimmaginata, con un gioco rinnovato ma fedele all'originale e il livello massimo a 60. Esce il 4 novembre 2026 (in Italia alla mezzanotte fra il 4 e il 5) su PC e Mac, ed è compreso nell'abbonamento a World of Warcraft o nel tempo di gioco. Questa panoramica usa solo fonti Blizzard (gli articoli dalla BlizzCon 2026, la scheda per la stampa, lo shop di Battle.net) e ogni sezione rimanda alla guida con i dettagli.
+      body: `World of Warcraft: Forever è una nuova versione di WoW fatta dal team di WoW Classic: un'Azeroth reimmaginata, con un gioco rinnovato ma fedele all'originale e il livello massimo a 60. Esce il 4 novembre 2026 (in Italia alla mezzanotte fra il 4 e il 5) su Windows e Mac, ed è compreso nell'abbonamento a World of Warcraft o nel tempo di gioco. Questa panoramica usa solo fonti Blizzard (gli articoli dalla BlizzCon 2026, la scheda per la stampa, lo shop di Battle.net) e ogni sezione rimanda alla guida con i dettagli.
 
 ## In breve {#in-breve}
 
@@ -170,7 +203,24 @@ Unfamiliar terms: see the [glossary](/en/glossary) and the [FAQ](/en/faq).`,
 
 ## Che gioco è {#che-gioco-e}
 
-Scegli l'Alleanza o l'Orda e sali dal livello 1 al 60 in un'Azeroth conosciuta ma cambiata. La scheda per la stampa parla di oltre 1.000 missioni nuove, alberi dei talenti rinnovati e nuovo equipaggiamento. La grafica ha luci nuove e nebbia volumetrica, con una Classic Mode e modelli HD o SD a scelta. La trasmogrificazione è facoltativa e il gamepad è supportato ufficialmente.
+Scegli l'Alleanza o l'Orda e sali dal livello 1 al 60 in un'Azeroth conosciuta ma cambiata. L'articolo di Blizzard sul lancio, del 29 ottobre, conferma più di 1.000 missioni nuove dal livello 1 al 60, di cui più di 150 nella sola Riverglades; la scheda per la stampa aggiunge alberi dei talenti rinnovati e nuovo equipaggiamento. La grafica ha luci nuove e nebbia volumetrica, con modelli HD o SD a scelta. La trasmogrificazione è facoltativa. Si gioca su Windows o Mac con mouse e tastiera; c'è anche il supporto ai controller, ma secondo la guida per i nuovi giocatori del 28 ottobre è "in fase di beta" ("in a beta state").
+
+## Il primo accesso: Classic o Enhanced {#configurazione-esperienza}
+
+La prima volta che entri, prima ancora di scegliere il set di regole, il gioco ti chiede la **configurazione dell'esperienza** (Experience Preset). La scheda per la stampa parlava di una "Classic Mode"; questa è la scelta che descrive la guida per i nuovi giocatori del 28 ottobre. Le impostazioni di partenza, in sintesi:
+
+| Impostazione iniziale | Classic | Enhanced |
+|---|---|---|
+| Modelli dei personaggi | Standard Definition (SD) | High Definition (HD) |
+| Punti d'interesse e aree degli obiettivi delle missioni | Spenti | Accesi |
+| Borsa singola (tutte le borse in una finestra) | Spenta | Accesa |
+| Trasmogrificazione | Spenta | Accesa |
+| Tasti di movimento predefiniti | Ruotano la visuale | Spostamento laterale |
+| Disposizione dell'interfaccia | Classica | Centralizzata |
+
+Se non sai quale scegliere, Blizzard consiglia Enhanced. La configurazione è un punto di partenza, non un vincolo: la schermata di scelta compare solo al primo accesso, ma puoi cambiare configurazione più avanti da Options, System - Preset (articolo "Torna su Azeroth" del 29 ottobre) e modificare ogni impostazione da Game Menu > Options. Il client non è in italiano, quindi i menu hanno i nomi inglesi.
+
+A parte, ogni volta che crei un personaggio scegli modelli e animazioni HD o SD. La scelta cambia solo l'aspetto di quel personaggio, non abilità né progressi, e la puoi cambiare più avanti dalle Options o da un Barbiere (Barbershop) in gioco.
 
 ## Prezzo: abbonamento ed edizioni facoltative {#prezzo}
 
@@ -194,7 +244,7 @@ Sei abbinamenti di razza e classe sono nuovi: Sacerdote gnomo, Cacciatore umano,
 
 Fra le zone nuove ci sono Zephras Isle, Riverglades (negli Eastern Kingdoms, per i livelli dalla metà dei 30 alla metà dei 40), Mount Hyjal e Shen'dralas, fra Mulgore e Desolace. La scheda per la stampa dice "Riverlands", ma tutte le pagine pubbliche di Blizzard dicono Riverglades.
 
-I dungeon (le spedizioni) nuovi sono nove, da Hall of Thanes sotto Ironforge a City of Dalaran. I raid (le incursioni) sono Hyjal Summit (20 giocatori, 13 boss) e Barrow Deeps (10 giocatori, 8 boss), e i nuovi raid si sbloccano il 9 dicembre. C'è anche un campo di battaglia nuovo, 15 contro 15: le Darkspear Islands. I dettagli sono in [zone, dungeon e raid](/it/guides/wow-forever-zones-dungeons-raids).
+I dungeon (le spedizioni) nuovi sono nove, da Hall of Thanes sotto Ironforge a City of Dalaran. I raid (le incursioni) nuovi sono Hyjal Summit (20 giocatori, 13 boss) e Barrow Deeps (10 giocatori, 8 boss): si sbloccano il 9 dicembre insieme a Onyxia's Lair, come ripete l'articolo sul lancio del 29 ottobre. C'è anche un campo di battaglia nuovo, 15 contro 15: le Darkspear Islands. I dettagli sono in [zone, dungeon e raid](/it/guides/wow-forever-zones-dungeons-raids).
 
 ## Sistemi nuovi: Legacy e Camping {#sistemi}
 
@@ -204,11 +254,11 @@ Il Camping trasforma il vecchio fuoco da cucina in un Basic Campfire, dove gli a
 
 ## Set di regole {#set-di-regole}
 
-Non scegli un reame ma un set di regole (ruleset): Normal, PvP, Roleplaying o Hardcore, che arriva dopo il lancio. Ogni set di regole è un mondo a sé e un personaggio non può cambiarlo. Approfondisci nella guida ai [set di regole](/it/guides/wow-forever-rulesets).
+Non scegli un reame ma un set di regole (ruleset): Normal, PvP, Roleplaying, Roleplay-PvP o Hardcore, che arriva dopo il lancio. Ogni set di regole è un mondo a sé e un personaggio non può cambiarlo. Gruppi, gilde, dungeon e raid mettono insieme solo personaggi dello stesso set di regole e della stessa fazione. Approfondisci nella guida ai [set di regole](/it/guides/wow-forever-rulesets).
 
 ## Beta e lancio {#beta-e-lancio}
 
-La beta è andata dal 17 settembre al 23 ottobre 2026 (ora del Pacifico, prorogata di due giorni il 20 ottobre), su invito o con il Pacchetto Epic o la Collection, e la prenotazione anticipata dei nomi dal 27 ottobre al 3 novembre. Il lancio, alle 15:00 PST del 4 novembre, in Italia cade alle 00:00 del 5. Orari e date nella guida alla [data di uscita](/it/guides/wow-forever-release-date) e nel [calendario](/it/calendar).
+La beta è andata dal 17 settembre al 23 ottobre 2026 (ora del Pacifico, prorogata di due giorni il 20 ottobre), su invito o con il Pacchetto Epic o la Collection, e la prenotazione anticipata dei nomi dal 27 ottobre al 3 novembre. Il lancio, alle 15:00 PST del 4 novembre, in Italia cade alle 00:00 del 5: il 29 ottobre Blizzard ha pubblicato la tabella con l'ora di ogni regione, e tutte partono nello stesso istante, le 23:00 UTC. Orari e date nella guida alla [data di uscita](/it/guides/wow-forever-release-date) e nel [calendario](/it/calendar).
 
 ## Lingue: niente italiano {#lingue}
 
@@ -217,7 +267,7 @@ Sulla pagina di Forever dello shop di Battle.net, letta il 10 ottobre 2026, fra 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo-ancora}
 
 - Quando arriverà Hardcore: Blizzard dice solo "dopo il lancio".
-- Quali raid si sbloccano il 9 dicembre.
+- Quando il supporto ai controller uscirà dalla fase di beta.
 - Prezzo e contenuto della Collector's Edition.
 - Se l'italiano arriverà più avanti: nessun articolo ne parla, quindi conviene ricontrollare al lancio.
 
@@ -233,7 +283,11 @@ Per i termini: [glossario](/it/glossary) e [domande frequenti](/it/faq).`,
         },
         {
           q: "Si può giocare a WoW Forever su Mac?",
-          a: "Sì. La scheda ufficiale indica PC e Mac. Blizzard ha pubblicato anche le schede video minime: AMD GCN 1, NVIDIA Maxwell o Intel Skylake.",
+          a: "Sì. La guida per i nuovi giocatori di Blizzard del 28 ottobre dice che si gioca su Windows o Mac. Blizzard ha pubblicato anche le schede video minime: AMD GCN 1, NVIDIA Maxwell o Intel Skylake.",
+        },
+        {
+          q: "Cos'è la configurazione dell'esperienza (Experience Preset)?",
+          a: "Una scelta che fai al primo accesso: Classic (modelli SD, niente segnalazioni delle missioni, borse separate, trasmogrificazione spenta) o Enhanced (il contrario). Decide solo le impostazioni di partenza e si può cambiare dopo.",
         },
         {
           q: "Qual è il livello massimo di WoW Forever?",
@@ -247,7 +301,7 @@ Per i termini: [glossario](/it/glossary) e [domande frequenti](/it/faq).`,
       excerpt:
         "Qué es World of Warcraft: Forever: el nuevo WoW del equipo de Classic, que sale el 4 de noviembre de 2026 con célicos, zonas nuevas, 9 mazmorras y 2 bandas.",
       imageAlt: "Portada tipográfica de ForeverMeta con el texto «WoW Forever» en dorado sobre fondo azul noche",
-      body: `World of Warcraft: Forever es una nueva versión de WoW hecha por el equipo de WoW Classic: una Azeroth reinventada, con la jugabilidad renovada pero fiel al original y el nivel máximo en 60. Sale el 4 de noviembre de 2026 para PC y Mac, y el acceso está incluido en la suscripción a World of Warcraft o en el tiempo de juego. Este resumen usa solo fuentes de Blizzard (los artículos desde la BlizzCon 2026, la ficha de prensa, la tienda de Battle.net) y cada sección te lleva a la guía con los detalles.
+      body: `World of Warcraft: Forever es una nueva versión de WoW hecha por el equipo de WoW Classic: una Azeroth reinventada, con la jugabilidad renovada pero fiel al original y el nivel máximo en 60. Sale el 4 de noviembre de 2026 para Windows y Mac, y el acceso está incluido en la suscripción a World of Warcraft o en el tiempo de juego. Este resumen usa solo fuentes de Blizzard (los artículos desde la BlizzCon 2026, la ficha de prensa, la tienda de Battle.net) y cada sección te lleva a la guía con los detalles.
 
 ## En breve {#en-breve}
 
@@ -260,7 +314,24 @@ Per i termini: [glossario](/it/glossary) e [domande frequenti](/it/faq).`,
 
 ## Qué tipo de juego es {#que-tipo-de-juego-es}
 
-Eliges la Alianza o la Horda y subes del nivel 1 al 60 en una Azeroth conocida pero cambiada. La ficha de prensa habla de más de 1000 misiones nuevas, árboles de talentos rediseñados y equipo nuevo. Los gráficos tienen iluminación nueva y niebla volumétrica, con un Classic Mode y modelos HD o SD a elegir. La transfiguración es opcional y el mando tiene soporte oficial.
+Eliges la Alianza o la Horda y subes del nivel 1 al 60 en una Azeroth conocida pero cambiada. El artículo de Blizzard sobre el lanzamiento, del 29 de octubre, confirma más de 1000 misiones nuevas entre el nivel 1 y el 60, más de 150 solo en Clarofluvial; la ficha de prensa añade árboles de talentos rediseñados y equipo nuevo. Los gráficos tienen iluminación nueva y niebla volumétrica, con modelos HD o SD a elegir. La transfiguración es opcional. Se juega en Windows o Mac con teclado y ratón; también hay compatibilidad con mandos, pero según la guía para nuevos jugadores del 28 de octubre está "en fase beta".
+
+## El primer inicio de sesión: Clásica o Mejorada {#configuracion-de-experiencia}
+
+La primera vez que entras, antes incluso de elegir el conjunto de reglas, el juego te pide la **configuración predeterminada de experiencia** (Experience Preset; en Latinoamérica, "experiencia predeterminada"). La ficha de prensa hablaba de un "Classic Mode"; esta es la elección que describe la guía para nuevos jugadores del 28 de octubre. Sus ajustes iniciales, resumidos:
+
+| Ajuste inicial | Clásica | Mejorada |
+|---|---|---|
+| Modelos de personaje | Definición estándar (SD) | Alta definición (HD) |
+| Puntos de interés y zonas de objetivos de las misiones | No | Sí |
+| Una bolsa (todas las bolsas en una ventana) | No | Sí |
+| Transfiguración | No | Sí |
+| Teclas de movimiento predeterminadas | Giran la cámara | Movimiento lateral |
+| Diseño de la interfaz | Clásico | Centralizado |
+
+En Latinoamérica las opciones se llaman Clásico y Mejorado. Si no sabes cuál elegir, Blizzard recomienda la Mejorada. Es un punto de partida, no un bloqueo: la pantalla de elección solo aparece en el primer inicio de sesión, pero puedes cambiar de configuración más adelante en Opciones, apartado Sistema (artículo "Vuelve a Azeroth" del 29 de octubre) y ajustar cada opción en Menú del juego > Opciones.
+
+Aparte, cada vez que creas un personaje eliges modelos y animaciones HD o SD. La elección solo cambia el aspecto de ese personaje, no sus facultades ni su progreso, y puedes cambiarla después en las Opciones o en una peluquería del juego.
 
 ## Precio: suscripción y ediciones opcionales {#precio}
 
@@ -282,9 +353,9 @@ Seis combinaciones de raza y clase son nuevas: gnomo sacerdote, humano cazador, 
 
 ## El mundo: zonas, mazmorras y bandas {#el-mundo}
 
-Entre las zonas nuevas están la Isla de Zephras, Clarofluvial (Claros del Río en Latinoamérica), en los Reinos del Este, para los niveles de mediados de los 30 a los 40,, el Monte Hyjal y Shen'dralas, entre Mulgore y Desolace.
+Entre las zonas nuevas están la Isla de Zephras, Clarofluvial (Claros del Río en Latinoamérica), en los Reinos del Este, para los niveles de mediados de los 30 a los 40, el Monte Hyjal y Shen'dralas, entre Mulgore y Desolace.
 
-Las mazmorras nuevas son nueve, del Salón de los Feudales (Salón de Señores Feudales en Latinoamérica) a la Ciudad de Dalaran. Las bandas son la Cima Hyjal (20 jugadores, 13 jefes) y las Cavernas del Túmulo (10 jugadores, 8 jefes), y las bandas nuevas se desbloquean el 9 de diciembre. Hay también un campo de batalla nuevo de 15 contra 15, las Islas Lanza Negra. Detalles en [zonas, mazmorras y bandas](/es/guides/wow-forever-zones-dungeons-raids).
+Las mazmorras nuevas son nueve, del Salón de los Feudales (Salón de Señores Feudales en Latinoamérica) a la Ciudad de Dalaran. Las bandas nuevas son la Cima Hyjal (20 jugadores, 13 jefes) y las Cavernas del Túmulo (10 jugadores, 8 jefes): se desbloquean el 9 de diciembre junto con la Guarida de Onyxia, como repite el artículo del lanzamiento del 29 de octubre. Hay también un campo de batalla nuevo de 15 contra 15, las Islas Lanza Negra. Detalles en [zonas, mazmorras y bandas](/es/guides/wow-forever-zones-dungeons-raids).
 
 ## Sistemas nuevos: legado y acampada {#sistemas}
 
@@ -294,11 +365,11 @@ La acampada convierte la lumbre de cocina en una hoguera básica donde otros jug
 
 ## Conjuntos de reglas {#conjuntos-de-reglas}
 
-No eliges un reino, sino un conjunto de reglas: Normal, JcJ, Rol o Hardcore (Extremo en Latinoamérica), que llega después del lanzamiento. Cada conjunto es un mundo aparte y un personaje no puede cambiarlo ([conjuntos de reglas](/es/guides/wow-forever-rulesets)).
+No eliges un reino, sino un conjunto de reglas: Normal, JcJ, Rol, Rol-JcJ o Hardcore (Extremo en Latinoamérica), que llega después del lanzamiento. Cada conjunto es un mundo aparte y un personaje no puede cambiarlo. Grupos, hermandades, mazmorras y bandas solo reúnen a personajes del mismo conjunto y de la misma facción ([conjuntos de reglas](/es/guides/wow-forever-rulesets)).
 
 ## Beta y lanzamiento {#beta-y-lanzamiento}
 
-La beta fue del 17 de septiembre al 23 de octubre de 2026 (hora del Pacífico, prorrogada dos días el 20 de octubre) y la reserva de nombres anticipada del 27 de octubre al 3 de noviembre. El lanzamiento, a las 15:00 PST del 4 de noviembre, cae a las 00:00 del 5 en España peninsular y a las 17:00 del 4 en Ciudad de México. Detalles en la [fecha de lanzamiento](/es/guides/wow-forever-release-date) y el [calendario](/es/calendar).
+La beta fue del 17 de septiembre al 23 de octubre de 2026 (hora del Pacífico, prorrogada dos días el 20 de octubre) y la reserva de nombres anticipada del 27 de octubre al 3 de noviembre. El lanzamiento, a las 15:00 PST del 4 de noviembre, cae a las 00:00 del 5 en España peninsular y a las 17:00 del 4 en Ciudad de México: el 29 de octubre Blizzard publicó la tabla con la hora de cada región, y todas empiezan en el mismo instante, las 23:00 UTC. Detalles en la [fecha de lanzamiento](/es/guides/wow-forever-release-date) y el [calendario](/es/calendar).
 
 ## Idiomas {#idiomas}
 
@@ -307,7 +378,7 @@ En la tienda de Battle.net (consultada el 10 de octubre de 2026), Forever tiene 
 ## Lo que aún no sabemos {#lo-que-aun-no-sabemos}
 
 - Cuándo llegará Hardcore: Blizzard solo dice que será después del lanzamiento.
-- Qué bandas se desbloquean el 9 de diciembre.
+- Cuándo saldrá de la fase beta la compatibilidad con mandos.
 - Precio y contenido de la Collector's Edition.
 
 Para los términos: [glosario](/es/glossary) y [preguntas frecuentes](/es/faq).`,
@@ -322,7 +393,11 @@ Para los términos: [glosario](/es/glossary) y [preguntas frecuentes](/es/faq).`
         },
         {
           q: "¿Se puede jugar a WoW Forever en Mac?",
-          a: "Sí. La ficha oficial indica PC y Mac. Blizzard también publicó las tarjetas gráficas mínimas: AMD GCN 1, NVIDIA Maxwell o Intel Skylake.",
+          a: "Sí. La guía para nuevos jugadores de Blizzard del 28 de octubre dice que se juega en Windows o Mac. Blizzard también publicó las tarjetas gráficas mínimas: AMD GCN 1, NVIDIA Maxwell o Intel Skylake.",
+        },
+        {
+          q: "¿Qué es la configuración predeterminada de experiencia?",
+          a: "Una elección que haces al primer inicio de sesión: Clásica (modelos SD, sin marcas de misión, bolsas separadas, transfiguración desactivada) o Mejorada (lo contrario). Solo fija los ajustes iniciales y se puede cambiar después.",
         },
         {
           q: "¿Cuál es el nivel máximo de WoW Forever?",

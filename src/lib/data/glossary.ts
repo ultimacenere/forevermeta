@@ -76,6 +76,38 @@ export const glossarySources = {
     label: n("World of Warcraft: Forever on the Battle.net Shop", "World of Warcraft: Forever nel negozio Battle.net", "World of Warcraft: Forever en la tienda de Battle.net"),
     url: "https://eu.shop.battle.net/en-gb/product/world-of-warcraft-forever",
   },
+  classDeepDive: {
+    label: n(
+      "World of Warcraft: Forever Class Deep Dives — Hunter and Druid (Blizzard News, 30/09/2026)",
+      "World of Warcraft: Forever - Approfondimento sulle classi Cacciatore e Druido (Blizzard News, 30/09/2026)",
+      "World of Warcraft: Forever: Repaso a fondo de las clases cazador y druida (Blizzard News, 30/09/2026)",
+    ),
+    url: "https://news.blizzard.com/en-us/article/24301515/world-of-warcraft-forever-class-deep-dives-hunter-and-druid",
+  },
+  portalRoom: {
+    label: n(
+      "Your Next Adventure in WoW: Forever Starts in the WoW Portal Room (Blizzard News, 27/10/2026)",
+      "La tua prossima avventura in WoW: Forever inizia nella Portal Room di WoW (Blizzard News, 27/10/2026)",
+      "Tu próxima aventura en WoW: Forever comienza en WoW Portal Room (Blizzard News, 27/10/2026)",
+    ),
+    url: "https://news.blizzard.com/en-us/article/24315203/your-next-adventure-in-wow-forever-starts-in-the-wow-portal-room",
+  },
+  starterGuide: {
+    label: n(
+      "New Player's Starter Guide: Welcome to World of Warcraft: Forever (Blizzard News, 28/10/2026)",
+      "Guida rapida per principianti: ti diamo il benvenuto su World of Warcraft: Forever (Blizzard News, 28/10/2026)",
+      "Guía de iniciación para nuevos jugadores: te damos la bienvenida a World of Warcraft: Forever (Blizzard News, 28/10/2026)",
+    ),
+    url: "https://news.blizzard.com/en-us/article/24315280/new-players-starter-guide-welcome-to-world-of-warcraft-forever",
+  },
+  podcastTech: {
+    label: n(
+      "Watch the WoW: Forever Podcast: All About Tech (Blizzard News, 29/10/2026)",
+      "Guarda il WoW: Forever Podcast: tutto sulla tecnologia (Blizzard News, 29/10/2026)",
+      "No te pierdas el pódcast de WoW: Forever sobre tecnología (Blizzard News, 29/10/2026)",
+    ),
+    url: "https://news.blizzard.com/en-us/article/24315819/watch-the-wow-forever-podcast-all-about-tech",
+  },
 } as const;
 
 const o = (term: string): GlossaryName => ({ term, official: true });
@@ -280,15 +312,57 @@ export const glossary: GlossaryTerm[] = [
     id: "ruleset-rp-pvp",
     category: "system",
     en: "Roleplay-PvP (ruleset)",
-    it: en("Roleplay-PvP"),
-    es: en("Rol-JcJ"),
-    mx: en("Rol-JcJ"),
+    it: o("Roleplay-PvP"),
+    es: o("Juego de rol con JcJ"),
+    mx: o("Juego de rol JcJ"),
     note: n(
-      "Added on 22 October 2026 for launch; Blizzard has not published its rules or localized names yet.",
-      "Aggiunto il 22 ottobre 2026 per il lancio; Blizzard non ha ancora pubblicato le regole né i nomi nelle altre lingue.",
-      "Añadido el 22 de octubre de 2026 para el lanzamiento; Blizzard aún no ha publicado sus reglas ni los nombres en otros idiomas.",
+      "Added on 22 October 2026 and available at launch: the naming and behavior rules of Roleplaying plus open-world PvP. Blizzard has not said whether PvP's one-faction-per-account rule applies to it.",
+      "Aggiunto il 22 ottobre 2026 e disponibile al lancio: le regole su nomi e comportamento del Roleplaying più il PvP nel mondo aperto. Blizzard non ha detto se valga anche qui la regola del PvP di una sola fazione per account.",
+      "Añadido el 22 de octubre de 2026 y disponible en el lanzamiento: las normas de nombres y comportamiento de Rol más el JcJ en el mundo abierto. Blizzard no ha dicho si se le aplica la regla del JcJ de una sola facción por cuenta.",
     ),
-    source: "rpPvp",
+    source: "starterGuide",
+  },
+  {
+    id: "experience-preset",
+    category: "system",
+    en: "Experience Preset",
+    it: o("configurazione dell'esperienza"),
+    es: o("configuración predeterminada de experiencia"),
+    mx: o("experiencia predeterminada"),
+    note: n(
+      "Chosen on your first login, before the ruleset: Classic (SD models, no quest markers, no one-bag, transmog off, classic layout) or Enhanced (HD models, those features on, centralized layout). It only sets the starting options and can be changed later.",
+      "Si sceglie al primo accesso, prima del set di regole: Classic (modelli SD, niente segnalazioni delle missioni né borsa singola, transmog spento, interfaccia classica) o Enhanced (modelli HD, quelle funzioni accese, interfaccia centralizzata). Decide solo le impostazioni di partenza e si può cambiare dopo.",
+      "Se elige en el primer inicio de sesión, antes del conjunto de reglas: Clásica (modelos SD, sin marcas de misión ni bolsa única, transfiguración desactivada, interfaz clásica) o Mejorada (modelos HD, esas funciones activadas, interfaz centralizada); en Latinoamérica, Clásico y Mejorado. Solo fija los ajustes iniciales y se puede cambiar después.",
+    ),
+    source: "starterGuide",
+  },
+  {
+    id: "layering",
+    category: "system",
+    en: "layering",
+    it: en("layering"),
+    es: en("capas"),
+    mx: en("capas"),
+    note: n(
+      "With no realms, a crowded zone is split into copies called layers, and the game tries to keep you with players you have already met. At launch, joining a group shows a prompt with a time window instead of moving you at once.",
+      "Senza reami, una zona affollata viene divisa in copie, i layer, e il gioco cerca di tenerti con i giocatori che hai già incontrato. Al lancio, entrando in un gruppo compare un avviso con una finestra di tempo invece dello spostamento immediato.",
+      "Sin reinos, una zona concurrida se divide en copias, las capas, y el juego intenta mantenerte con los jugadores que ya conoces. En el lanzamiento, al unirte a un grupo aparece un aviso con un margen de tiempo en lugar de moverte al instante.",
+    ),
+    source: "podcastTech",
+  },
+  {
+    id: "dual-spec",
+    category: "system",
+    en: "Dual Specialization",
+    it: o("doppia specializzazione"),
+    es: o("doble especialización"),
+    mx: o("doble especialización"),
+    note: n(
+      "Two talent setups per character, available from level 40; players call it dual spec. Talents are changed at a class trainer in a major city.",
+      "Due configurazioni di talenti per personaggio, dal livello 40; i giocatori lo chiamano dual spec. I talenti si cambiano dall'istruttore della classe in una città principale.",
+      "Dos configuraciones de talentos por personaje, desde el nivel 40; los jugadores lo llaman dual spec. Los talentos se cambian con el instructor de clase en una ciudad principal.",
+    ),
+    source: "classDeepDive",
   },
   {
     id: "ruleset-hardcore",
@@ -309,6 +383,20 @@ export const glossary: GlossaryTerm[] = [
   { id: "end-game", category: "content", en: "end game", it: o("gioco di livello massimo"), es: o("sistema poscampaña"), mx: o("fase final del juego"), source: "factSheet" },
   { id: "quests", category: "content", en: "quests", it: o("missioni"), es: o("misiones"), mx: o("misiones"), note: n("Over 1,000 new ones.", "Oltre 1.000 nuove.", "Más de 1000 nuevas."), source: "factSheet" },
   { id: "early-name-reservation", category: "content", en: "Early Name Reservation", it: o("prenotazione anticipata dei nomi"), es: o("reserva de nombres anticipada"), mx: o("reserva anticipada de nombres"), note: n("27 October – 3 November 2026, with any upgrade: opens at 18:00 CET in Europe and 1:00 p.m. PDT in North America, three names across all rulesets.", "Dal 27 ottobre al 3 novembre 2026, con un'edizione a pagamento: apre alle 18:00 CET in Europa e alle 13:00 PDT in Nord America, tre nomi su tutti i set di regole.", "Del 27 de octubre al 3 de noviembre de 2026, con cualquier edición de pago: abre a las 18:00 CET en Europa y a las 13:00 PDT en Norteamérica, tres nombres entre todos los conjuntos."), source: "names" },
+  {
+    id: "portal-room",
+    category: "content",
+    en: "WoW Portal Room",
+    it: o("Portal Room di WoW"),
+    es: o("WoW Portal Room"),
+    mx: o("Sala de Portales de WoW"),
+    note: n(
+      "The official World of Warcraft Discord server, with community Ambassadors; Blizzard points Forever players there to find a group or a community.",
+      "Il server Discord ufficiale di World of Warcraft, con gli ambasciatori delle community; Blizzard lo indica ai giocatori di Forever per trovare un gruppo o una community.",
+      "El servidor de Discord oficial de World of Warcraft, con embajadores de las comunidades; Blizzard lo recomienda a los jugadores de Forever para encontrar grupo o comunidad.",
+    ),
+    source: "portalRoom",
+  },
   { id: "invite-a-friend", category: "content", en: "Invite-A-Friend", it: o("Invita un amico"), es: o("código de invitación de lanzamiento"), mx: o("código de invitación para el lanzamiento"), note: n("Launch codes emailed from 20 October, valid 4–11 November.", "Codici inviati via email dal 20 ottobre, validi dal 4 all'11 novembre.", "Códigos enviados por correo desde el 20 de octubre, válidos del 4 al 11 de noviembre."), source: "shop" },
   // Edizioni
   { id: "skyborne-heroic-pack", category: "edition", en: "Skyborne Heroic Pack", it: o("Pacchetto Heroic Skyborne"), es: o("Pack Heroic de los célicos"), mx: o("Paquete heroico de los cielonato"), source: "shop" },

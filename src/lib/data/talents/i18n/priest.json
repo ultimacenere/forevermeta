@@ -1,8 +1,5 @@
 {
   "it": {
-    "binding-heal": [
-      "Cura un bersaglio alleato e l'incantatore da 236 a 284. Bassa minaccia."
-    ],
     "blackout": [
       "Dà ai tuoi incantesimi da danno d'Ombra il 2% di probabilità di stordire il bersaglio per 3 secondi.",
       "Dà ai tuoi incantesimi da danno d'Ombra il 4% di probabilità di stordire il bersaglio per 3 secondi.",
@@ -48,6 +45,9 @@
     "early-demise": [
       "Aumenta la probabilità di colpo critico di Shadow Word: Death sui bersagli con il 20% di salute o meno del 15%.",
       "Aumenta la probabilità di colpo critico di Shadow Word: Death sui bersagli con il 20% di salute o meno del 30%."
+    ],
+    "holy-binding": [
+      "Ogni volta che curi con Flash Heal un bersaglio diverso da te, anche tu ricevi una cura pari al 50% di quella quantità. Questa cura non genera minaccia."
     ],
     "holy-nova": [
       "Provoca un'esplosione di luce sacra attorno all'incantatore, infliggendo da 26 a 30 danni Sacri a tutti i bersagli nemici entro 10 metri e curando tutti i membri del gruppo entro 10 metri per un valore da 49 a 57. Questi effetti non generano minaccia."
@@ -164,11 +164,11 @@
       "Pone sul bersaglio un incantesimo che lo cura di 172 la prossima volta che subisce danni o riceve cure non periodiche. Quando la cura avviene, Prayer of Mending salta a un membro del gruppo o dell'incursione entro 20 metri. Salta fino a 5 volte e dura 30 secondi dopo ogni salto. Questo incantesimo può essere posto su un solo bersaglio alla volta per incantatore."
     ],
     "renewed-hope": [
-      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 2% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 1 secondo.",
-      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 4% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 2 secondi.",
-      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 6% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 3 secondi.",
-      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono l'8% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 4 secondi.",
-      "Le tue cure di Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 10% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 5 secondi."
+      "Le tue cure di Flash Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 2% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 1 secondo.",
+      "Le tue cure di Flash Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 4% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 2 secondi.",
+      "Le tue cure di Flash Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 6% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 3 secondi.",
+      "Le tue cure di Flash Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono l'8% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 4 secondi.",
+      "Le tue cure di Flash Heal, Lesser Heal, Heal, Greater Heal e Penance ottengono il 10% di probabilità di colpo critico in più quando vengono lanciate su bersagli con Weakened Soul, e riducono la durata residua di Weakened Soul sul loro bersaglio di 5 secondi."
     ],
     "searing-light": [
       "Aumenta i danni Sacri che infliggi del 2% e dà il 5% di probabilità, ogni volta che il tuo incantesimo Holy Fire infligge danni periodici, che il tuo prossimo Holy Nova non costi Mana.",
@@ -234,9 +234,9 @@
       "Aumenta la quantità curata dai tuoi incantesimi del 10%."
     ],
     "twilight-focus": [
-      "Ti dà il 23% di probabilità di evitare l'interruzione causata dai danni mentre lanci qualsiasi incantesimo.",
-      "Ti dà il 47% di probabilità di evitare l'interruzione causata dai danni mentre lanci qualsiasi incantesimo.",
-      "Ti dà il 70% di probabilità di evitare l'interruzione causata dai danni mentre lanci qualsiasi incantesimo."
+      "Dà ai tuoi incantesimi una probabilità del 23% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi una probabilità del 47% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi una probabilità del 70% di non perdere tempo di lancio quando subisci danni."
     ],
     "twin-disciplines": [
       "Aumenta i danni e le cure dei tuoi incantesimi istantanei dell'1%.",
@@ -254,9 +254,6 @@
     ]
   },
   "es": {
-    "binding-heal": [
-      "Sana a un objetivo aliado y al lanzador de 236 a 284. Amenaza baja."
-    ],
     "blackout": [
       "Da a tus hechizos de daño de las Sombras un 2% de probabilidad de aturdir al objetivo durante 3 segundos.",
       "Da a tus hechizos de daño de las Sombras un 4% de probabilidad de aturdir al objetivo durante 3 segundos.",
@@ -302,6 +299,9 @@
     "early-demise": [
       "Aumenta la probabilidad de golpe crítico de Shadow Word: Death contra objetivos con un 20% de salud o menos un 15%.",
       "Aumenta la probabilidad de golpe crítico de Shadow Word: Death contra objetivos con un 20% de salud o menos un 30%."
+    ],
+    "holy-binding": [
+      "Cada vez que sanas con Flash Heal a un objetivo distinto de ti, te sanas un 50% de esa cantidad. Esta sanación no genera amenaza."
     ],
     "holy-nova": [
       "Provoca una explosión de luz sagrada alrededor del lanzador, que inflige de 26 a 30 de daño Sagrado a todos los objetivos enemigos en un radio de 10 metros y sana a todos los miembros del grupo en un radio de 10 metros de 49 a 57. Estos efectos no generan amenaza."
@@ -418,11 +418,11 @@
       "Coloca en el objetivo un hechizo que lo sana 172 la próxima vez que reciba daño o sanación no periódica. Cuando se produce la sanación, Prayer of Mending salta a un miembro del grupo o de la banda en un radio de 20 metros. Salta hasta 5 veces y dura 30 segundos después de cada salto. Este hechizo solo puede colocarse en un objetivo a la vez por lanzador."
     ],
     "renewed-hope": [
-      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 2% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 1 segundo.",
-      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 4% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 2 segundos.",
-      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 6% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 3 segundos.",
-      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 8% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 4 segundos.",
-      "Tus sanaciones de Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 10% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 5 segundos."
+      "Tus sanaciones de Flash Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 2% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 1 segundo.",
+      "Tus sanaciones de Flash Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 4% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 2 segundos.",
+      "Tus sanaciones de Flash Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 6% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 3 segundos.",
+      "Tus sanaciones de Flash Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 8% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 4 segundos.",
+      "Tus sanaciones de Flash Heal, Lesser Heal, Heal, Greater Heal y Penance obtienen un 10% más de probabilidad de golpe crítico cuando se lanzan sobre objetivos con Weakened Soul, y reducen la duración restante de Weakened Soul en su objetivo en 5 segundos."
     ],
     "searing-light": [
       "Aumenta el daño Sagrado que infliges un 2% y da un 5% de probabilidad, cada vez que tu hechizo Holy Fire inflige daño periódico, de que tu siguiente Holy Nova no cueste Maná.",
@@ -488,9 +488,9 @@
       "Aumenta la cantidad sanada por tus hechizos un 10%."
     ],
     "twilight-focus": [
-      "Te da un 23% de probabilidad de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo.",
-      "Te da un 47% de probabilidad de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo.",
-      "Te da un 70% de probabilidad de evitar la interrupción causada por el daño mientras lanzas cualquier hechizo."
+      "Da a tus hechizos un 23% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Da a tus hechizos un 47% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Da a tus hechizos un 70% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño."
     ],
     "twin-disciplines": [
       "Aumenta el daño y la sanación de tus hechizos instantáneos un 1%.",

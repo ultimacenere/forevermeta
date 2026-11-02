@@ -31,8 +31,12 @@ arriva con il lancio del gioco (04/11/2026) e riusa il modello dei mazzi della c
   cambiate). Le descrizioni brevi delle razziali in italiano e spagnolo sono nostre; i nomi restano in inglese.
 - **Gli alberi dei talenti** (465 talenti, nomi, posizioni, ranghi, testo per rango, prerequisiti, confronto con Classic)
   vengono dai JSON pubblici di talentsforever.com, pubblicati con licenza **CC BY 4.0** (pagine /about e /terms del sito,
-  campi `license` e `attribution` del file). Il sito li legge dal client della beta e dichiara la build (`gameVersion`,
-  oggi 1.60.1.70425 del 20/10/2026). **Non sono verificati nel gioco**: ogni pagina lo dice in fondo (`dataNotVerified`),
+  campi `license` e `attribution` del file). Il sito li legge dal client e dichiara la build (`gameVersion`, oggi
+  1.60.1.70630 con gli hotfix del 28 e 30/10/2026, file generato il 30/10 e importato il 2/11; prima 1.60.1.70425 del
+  20/10). Gli hotfix del 30/10 hanno rifatto i tre alberi del Paladino e cambiato Druido, Mago e Sacerdote sui server live
+  senza note ufficiali: dopo ogni import i talenti con il testo cambiato vanno ritradotti in IT/ES, perché
+  `localizeTalents` tiene la traduzione vecchia se il numero dei ranghi è lo stesso. **Non sono verificati nel gioco**:
+  ogni pagina lo dice in fondo (`dataNotVerified`),
   con l'attribuzione richiesta dalla licenza e il link. Dopo il lancio si confrontano nel gioco, come per le carte su
   OriginsMeta, e `verifiedInGame` passa a true. Testi, nomi e icone restano di Blizzard Entertainment: il footer porta il
   notice e la non affiliazione.

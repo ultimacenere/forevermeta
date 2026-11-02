@@ -1,14 +1,14 @@
 {
   "classId": "warrior",
-  "gameVersion": "1.60.1.70425",
+  "gameVersion": "1.60.1.70630",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-10-23",
+    "fetched": "2026-11-02",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70425."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630."
   },
   "trees": [
     {

@@ -215,6 +215,39 @@ export const media = {
       "Fotograma de la cinemática de World of Warcraft: Forever: un guerrero no muerto encapuchado con el emblema de la Horda en el pecho, gritando",
     ),
   ),
+  // copertine delle news del 28/10-2/11 (2/11/2026)
+  launchTimes: cover(
+    "/media/news-launch-times.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a city of slender towers and domes behind a glowing violet magic barrier, at sunset",
+      "Fotogramma del cinematic di World of Warcraft: Forever: una città di torri sottili e cupole dietro una barriera magica viola e luminosa, al tramonto",
+      "Fotograma de la cinemática de World of Warcraft: Forever: una ciudad de torres finas y cúpulas tras una barrera mágica violeta y luminosa, al atardecer",
+    ),
+  ),
+  podcastTech: cover(
+    "/media/news-podcast-tech.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the new water: a calm sea at sunset, with rocks and a small island on the horizon",
+      "Screenshot di World of Warcraft: Forever con l'acqua nuova: un mare calmo al tramonto, con scogli e un isolotto all'orizzonte",
+      "Captura de World of Warcraft: Forever con el agua nueva: un mar en calma al atardecer, con rocas y un islote en el horizonte",
+    ),
+  ),
+  factionLocks: cover(
+    "/media/news-faction-locks.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Darkspear Islands battleground: wooden huts on a hill of red sand by a turquoise sea",
+      "Screenshot di World of Warcraft: Forever del campo di battaglia Darkspear Islands: capanne di legno su una collina di sabbia rossa sul mare turchese",
+      "Captura de World of Warcraft: Forever del campo de batalla Darkspear Islands: chozas de madera en una colina de arena roja junto a un mar turquesa",
+    ),
+  ),
+  classHotfixes: cover(
+    "/media/news-class-hotfixes.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a hooded warrior in plate armour raises a glowing golden hammer",
+      "Fotogramma del cinematic di World of Warcraft: Forever: un guerriero incappucciato in armatura di piastre solleva un martello dorato e luminoso",
+      "Fotograma de la cinemática de World of Warcraft: Forever: un guerrero encapuchado con armadura de placas alza un martillo dorado y luminoso",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

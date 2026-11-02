@@ -13,7 +13,7 @@
       "Aumenta del 10% la probabilità di colpo critico del tuo incantesimo Searing Pain e del 10% i danni inflitti da tutti i tuoi incantesimi di Destruction."
     ],
     "amplify-curse": [
-      "Aumenta del 50% l'effetto del tuo prossimo Curse of Weakness o Bane of Agony, oppure del 50% quello del tuo prossimo Curse of Exhaustion. Dura 30 s."
+      "Aumenta del 50% l'effetto del tuo prossimo Curse of Weakness o Bane of Agony, oppure del 20% quello del tuo prossimo Curse of Exhaustion. Dura 30 s."
     ],
     "bane": [
       "Riduce di 0.1 s il tempo di lancio dei tuoi incantesimi Shadow Bolt, Immolate e Incinerate e di 0.4 s quello del tuo incantesimo Soul Fire.",
@@ -76,9 +76,9 @@
       "Aumenta del 20% la gittata dei tuoi incantesimi di Destruction."
     ],
     "fel-concentration": [
-      "Ti dà il 23% di probabilità di evitare l'interruzione causata dai danni mentre canalizzi o lanci i tuoi incantesimi Drain Life, Drain Mana, Drain Soul o Wrack.",
-      "Ti dà il 47% di probabilità di evitare l'interruzione causata dai danni mentre canalizzi o lanci i tuoi incantesimi Drain Life, Drain Mana, Drain Soul o Wrack.",
-      "Ti dà il 70% di probabilità di evitare l'interruzione causata dai danni mentre canalizzi o lanci i tuoi incantesimi Drain Life, Drain Mana, Drain Soul o Wrack."
+      "Dà ai tuoi incantesimi Drain Life, Drain Mana, Drain Soul e Wrack una probabilità del 23% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi Drain Life, Drain Mana, Drain Soul e Wrack una probabilità del 47% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi Drain Life, Drain Mana, Drain Soul e Wrack una probabilità del 70% di non perdere tempo di lancio quando subisci danni."
     ],
     "fel-domination": [
       "Il tuo prossimo incantesimo di evocazione di Imp, Voidwalker, Succubus, Incubus o Felhunter ha il tempo di lancio ridotto di 5.5 s e il costo in Mana ridotto del 50%."
@@ -109,9 +109,9 @@
       "Riduce di 2 s il tempo di lancio del tuo incantesimo Corruption e aumenta del 10% i danni che infligge."
     ],
     "improved-drains": [
-      "Aumenta del 7% la salute drenata o i danni inflitti dai tuoi incantesimi Drain Life, Drain Soul e Wrack.",
-      "Aumenta del 13% la salute drenata o i danni inflitti dai tuoi incantesimi Drain Life, Drain Soul e Wrack.",
-      "Aumenta del 20% la salute drenata o i danni inflitti dai tuoi incantesimi Drain Life, Drain Soul e Wrack."
+      "Aumenta del 7% la Salute drenata, i danni inflitti o il Mana drenato dai tuoi incantesimi Drain Life, Drain Soul e Drain Mana.",
+      "Aumenta del 13% la Salute drenata, i danni inflitti o il Mana drenato dai tuoi incantesimi Drain Life, Drain Soul e Drain Mana.",
+      "Aumenta del 20% la Salute drenata, i danni inflitti o il Mana drenato dai tuoi incantesimi Drain Life, Drain Soul e Drain Mana."
     ],
     "improved-felhunter": [
       "Aumenta del 10% la riduzione di Potenza d'attacco del Tainted Blood del tuo Felhunter, le cure del suo Devour Magic e il livello di individuazione della sua Paranoia, e riduce di 2 s il tempo di ricarica del suo Spell Lock.",
@@ -152,9 +152,9 @@
       "Infligge da 99 a 113 danni da Fuoco al tuo bersaglio e il 25% di danni aggiuntivi se il bersaglio è afflitto da Immolate."
     ],
     "intensity": [
-      "Ti dà il 23% di probabilità di resistere all'interruzione causata dai danni mentre lanci o canalizzi qualsiasi incantesimo di Destruction.",
-      "Ti dà il 47% di probabilità di resistere all'interruzione causata dai danni mentre lanci o canalizzi qualsiasi incantesimo di Destruction.",
-      "Ti dà il 70% di probabilità di resistere all'interruzione causata dai danni mentre lanci o canalizzi qualsiasi incantesimo di Destruction."
+      "Dà ai tuoi incantesimi di Destruction una probabilità del 23% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi di Destruction una probabilità del 47% di non perdere tempo di lancio quando subisci danni.",
+      "Dà ai tuoi incantesimi di Destruction una probabilità del 70% di non perdere tempo di lancio quando subisci danni."
     ],
     "malevolence": [
       "Aumenta dell'1% la probabilità di effetto critico dei tuoi incantesimi d'Ombra.",
@@ -265,7 +265,7 @@
       "Aumenta un 10% la probabilidad de golpe crítico de tu hechizo Searing Pain y un 10% el daño infligido por todos tus hechizos de Destruction."
     ],
     "amplify-curse": [
-      "Aumenta un 50% el efecto de tu próximo Curse of Weakness o Bane of Agony, o un 50% el de tu próximo Curse of Exhaustion. Dura 30 s."
+      "Aumenta un 50% el efecto de tu próximo Curse of Weakness o Bane of Agony, o un 20% el de tu próximo Curse of Exhaustion. Dura 30 s."
     ],
     "bane": [
       "Reduce en 0.1 s el tiempo de lanzamiento de tus hechizos Shadow Bolt, Immolate e Incinerate y en 0.4 s el de tu hechizo Soul Fire.",
@@ -328,9 +328,9 @@
       "Aumenta un 20% el alcance de tus hechizos de Destruction."
     ],
     "fel-concentration": [
-      "Te da un 23% de probabilidad de evitar la interrupción causada por el daño mientras canalizas o lanzas tus hechizos Drain Life, Drain Mana, Drain Soul o Wrack.",
-      "Te da un 47% de probabilidad de evitar la interrupción causada por el daño mientras canalizas o lanzas tus hechizos Drain Life, Drain Mana, Drain Soul o Wrack.",
-      "Te da un 70% de probabilidad de evitar la interrupción causada por el daño mientras canalizas o lanzas tus hechizos Drain Life, Drain Mana, Drain Soul o Wrack."
+      "Da a tus hechizos Drain Life, Drain Mana, Drain Soul y Wrack un 23% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Da a tus hechizos Drain Life, Drain Mana, Drain Soul y Wrack un 47% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Da a tus hechizos Drain Life, Drain Mana, Drain Soul y Wrack un 70% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño."
     ],
     "fel-domination": [
       "Tu próximo hechizo de invocación de Imp, Voidwalker, Succubus, Incubus o Felhunter tiene su tiempo de lanzamiento reducido en 5.5 s y su coste de Maná reducido un 50%."
@@ -361,9 +361,9 @@
       "Reduce en 2 s el tiempo de lanzamiento de tu hechizo Corruption y aumenta un 10% el daño que inflige."
     ],
     "improved-drains": [
-      "Aumenta un 7% la salud drenada o el daño infligido por tus hechizos Drain Life, Drain Soul y Wrack.",
-      "Aumenta un 13% la salud drenada o el daño infligido por tus hechizos Drain Life, Drain Soul y Wrack.",
-      "Aumenta un 20% la salud drenada o el daño infligido por tus hechizos Drain Life, Drain Soul y Wrack."
+      "Aumenta un 7% la salud drenada, el daño infligido o el Maná drenado por tus hechizos Drain Life, Drain Soul y Drain Mana.",
+      "Aumenta un 13% la salud drenada, el daño infligido o el Maná drenado por tus hechizos Drain Life, Drain Soul y Drain Mana.",
+      "Aumenta un 20% la salud drenada, el daño infligido o el Maná drenado por tus hechizos Drain Life, Drain Soul y Drain Mana."
     ],
     "improved-felhunter": [
       "Aumenta un 10% la reducción de Poder de ataque del Tainted Blood de tu Felhunter, la sanación de su Devour Magic y el nivel de detección de su Paranoia, y reduce en 2 s el tiempo de reutilización de su Spell Lock.",
@@ -404,9 +404,9 @@
       "Inflige de 99 a 113 puntos de daño de Fuego a tu objetivo y un 25% de daño adicional si el objetivo está afligido por Immolate."
     ],
     "intensity": [
-      "Te da un 23% de probabilidad de resistir la interrupción causada por el daño mientras lanzas o canalizas cualquier hechizo de Destruction.",
-      "Te da un 47% de probabilidad de resistir la interrupción causada por el daño mientras lanzas o canalizas cualquier hechizo de Destruction.",
-      "Te da un 70% de probabilidad de resistir la interrupción causada por el daño mientras lanzas o canalizas cualquier hechizo de Destruction."
+      "Da a tus hechizos de Destruction un 23% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Da a tus hechizos de Destruction un 47% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño.",
+      "Da a tus hechizos de Destruction un 70% de probabilidad de no perder tiempo de lanzamiento cuando recibes daño."
     ],
     "malevolence": [
       "Aumenta un 1% la probabilidad de efecto crítico de tus hechizos de las Sombras.",

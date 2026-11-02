@@ -1,14 +1,14 @@
 {
   "classId": "mage",
-  "gameVersion": "1.60.1.70425",
+  "gameVersion": "1.60.1.70630",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-10-23",
+    "fetched": "2026-11-02",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70425. The Mage trees carry the server's hotfixes of 20 Oct 2026 over that build, read from the beta's hotfix cache by other readers and cross-checked with Blizzard's notes; those are not in the client's files."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630. The Mage trees carry the server's hotfixes of 28 Oct 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Mage trees carry the server's hotfixes of 30 Oct 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -33,36 +33,17 @@
           }
         },
         {
-          "id": "arcane-focus",
-          "name": "Arcane Focus",
+          "id": "improved-channeling",
+          "name": "Improved Channeling",
           "row": 0,
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "Improves your chance to hit with Arcane spells by 1%.",
-            "Improves your chance to hit with Arcane spells by 2%.",
-            "Improves your chance to hit with Arcane spells by 3%.",
-            "Improves your chance to hit with Arcane spells by 4%.",
-            "Improves your chance to hit with Arcane spells by 5%."
-          ],
-          "icon": "spell_holy_devotion",
-          "classic": {
-            "status": "changed",
-            "text": "Reduces the chance that the opponent can resist your Arcane spells by 2%."
-          }
-        },
-        {
-          "id": "improved-channeling",
-          "name": "Improved Channeling",
-          "row": 0,
-          "col": 2,
-          "maxRank": 5,
-          "ranks": [
-            "Gives you a 20% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 14% chance while casting Arcane Blast or Arcane Wrath.",
-            "Gives you a 40% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 28% chance while casting Arcane Blast or Arcane Wrath.",
-            "Gives you a 60% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 42% chance while casting Arcane Blast or Arcane Wrath.",
-            "Gives you a 80% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 56% chance while casting Arcane Blast or Arcane Wrath.",
-            "Gives you a 100% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 70% chance while casting Arcane Blast or Arcane Wrath."
+            "Gives your Arcane Missiles spell a 20% chance and your Arcane Blast and Arcane Wrath spells a 14% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 40% chance and your Arcane Blast and Arcane Wrath spells a 28% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 60% chance and your Arcane Blast and Arcane Wrath spells a 42% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 80% chance and your Arcane Blast and Arcane Wrath spells a 56% chance to not lose casting time when you take damage.",
+            "Gives your Arcane Missiles spell a 100% chance and your Arcane Blast and Arcane Wrath spells a 70% chance to not lose casting time when you take damage."
           ],
           "icon": "spell_nature_starfall",
           "classic": {
@@ -73,12 +54,12 @@
         {
           "id": "missile-barrage",
           "name": "Missile Barrage",
-          "row": 0,
+          "row": 1,
           "col": 3,
           "maxRank": 2,
           "ranks": [
-            "Gives your Arcane Blast spell a 20% chance, your Arcane Missile hits a 5% chance, and your Arcane Wrath, Fireball, Frostbolt, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
-            "Gives your Arcane Blast spell a 40% chance, your Arcane Missile hits a 10% chance, and your Arcane Wrath, Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
+            "Gives your Arcane Blast spell a 20% chance, and your Arcane Wrath, Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 10% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec.",
+            "Gives your Arcane Blast spell a 40% chance, and your Arcane Wrath, Fireball, Frostbolt, Frost Blast, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
           ],
           "icon": "ability_mage_missilebarrage",
           "classic": {
@@ -138,12 +119,13 @@
         {
           "id": "arcane-resilience",
           "name": "Arcane Resilience",
-          "row": 1,
-          "col": 3,
-          "maxRank": 2,
+          "row": 0,
+          "col": 2,
+          "maxRank": 3,
           "ranks": [
             "Increases your Armor by an amount equal to 25% of your Intellect.",
-            "Increases your Armor by an amount equal to 50% of your Intellect."
+            "Increases your Armor by an amount equal to 50% of your Intellect.",
+            "Increases your Armor by an amount equal to 75% of your Intellect."
           ],
           "icon": "spell_arcane_arcaneresilience",
           "classic": {
@@ -190,7 +172,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application."
+            "Blasts the target with energy, dealing 34 to 38 Arcane damage. Each time you cast Arcane Blast, you gain 12% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 100%. Effect stacks up to 4 times and lasts 18 sec from time of initial application."
           ],
           "icon": "spell_arcane_blast",
           "classic": {
@@ -335,7 +317,34 @@
           }
         }
       ],
+      "codeSlots": [
+        "wand-specialization",
+        null,
+        "improved-channeling",
+        "missile-barrage",
+        "arcane-subtlety",
+        "magic-absorption",
+        "arcane-concentration",
+        "arcane-resilience",
+        "arcane-geometry",
+        "arcane-impact",
+        "arcane-blast",
+        "arcane-shielding",
+        "improved-counterspell",
+        "arcane-meditation",
+        "arcane-wrath",
+        "presence-of-mind",
+        "arcane-mind",
+        "arcane-instability",
+        "arcane-power"
+      ],
       "removed": [
+        {
+          "name": "Arcane Focus",
+          "maxRank": 5,
+          "text": "Reduces the chance that the opponent can resist your Arcane spells by 2%.",
+          "row": 0
+        },
         {
           "name": "Magic Attunement",
           "maxRank": 2,
@@ -352,8 +361,8 @@
         {
           "id": "improved-fire-blast",
           "name": "Improved Fire Blast",
-          "row": 0,
-          "col": 0,
+          "row": 2,
+          "col": 3,
           "maxRank": 2,
           "ranks": [
             "Reduces the cooldown of your Fire Blast spell by 1 sec and increases its range by 8 yards.",
@@ -370,35 +379,18 @@
           "name": "Incineration",
           "row": 0,
           "col": 1,
-          "maxRank": 3,
+          "maxRank": 5,
           "ranks": [
             "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 2%.",
             "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 4%.",
-            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%."
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%.",
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 8%.",
+            "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 10%."
           ],
           "icon": "spell_fire_flameshock",
           "classic": {
             "status": "changed",
             "text": "Increases the critical strike chance of your Fire Blast and Scorch spells by 2%."
-          }
-        },
-        {
-          "id": "improved-fireball",
-          "name": "Improved Fireball",
-          "row": 0,
-          "col": 2,
-          "maxRank": 5,
-          "ranks": [
-            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.1 sec.",
-            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.2 sec.",
-            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.3 sec.",
-            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.4 sec.",
-            "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
-          ],
-          "icon": "spell_fire_flamebolt",
-          "classic": {
-            "status": "changed",
-            "text": "Reduces the casting time of your Fireball spell by 0.1 sec."
           }
         },
         {
@@ -510,7 +502,7 @@
             "Your Scorch spell has a 67% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times.",
             "Your Scorch spell has a 100% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times."
           ],
-          "icon": "spell_fire_windsofwoe",
+          "icon": "spell_fire_soulburn",
           "classic": {
             "status": "changed",
             "text": "Your Scorch spells have a 33% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases the Fire damage dealt to your target by 3% and lasts 30 sec. Stacks up to 5 times."
@@ -570,18 +562,15 @@
           "name": "Critical Mass",
           "row": 4,
           "col": 1,
-          "maxRank": 5,
+          "maxRank": 3,
           "ranks": [
             "Increases the critical strike chance of your Fire spells by 2%.",
             "Increases the critical strike chance of your Fire spells by 4%.",
-            "Increases the critical strike chance of your Fire spells by 6%.",
-            "Increases the critical strike chance of your Fire spells by 8%.",
-            "Increases the critical strike chance of your Fire spells by 10%."
+            "Increases the critical strike chance of your Fire spells by 6%."
           ],
           "icon": "spell_nature_wispheal",
           "classic": {
-            "status": "changed",
-            "text": "Increases the critical strike chance of your Fire spells by 2%."
+            "status": "same"
           }
         },
         {
@@ -633,7 +622,46 @@
             "status": "changed",
             "text": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 critical strikes with Fire spells."
           }
+        },
+        {
+          "id": "accelerant",
+          "name": "Accelerant",
+          "row": 0,
+          "col": 2,
+          "maxRank": 5,
+          "ranks": [
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.1 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.2 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.3 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.4 sec.",
+            "Reduces the casting time of your Fireball, Frostfire Bolt, and Arcane Wrath spells by 0.5 sec."
+          ],
+          "icon": "spell_fire_flamebolt",
+          "classic": {
+            "status": "changed",
+            "text": "Reduces the casting time of your Fireball spell by 0.1 sec."
+          }
         }
+      ],
+      "codeSlots": [
+        "improved-fire-blast",
+        "incineration",
+        null,
+        "ignite",
+        "flame-throwing",
+        "impact",
+        "burning-soul",
+        "improved-flamestrike",
+        "pyroblast",
+        "improved-scorch",
+        "improved-fire-ward",
+        "heating-up",
+        "master-of-elements",
+        "critical-mass",
+        "blast-wave",
+        "fire-power",
+        "combustion",
+        "accelerant"
       ]
     },
     {
@@ -674,23 +702,6 @@
           "classic": {
             "status": "changed",
             "text": "Reduces the casting time of your Frostbolt spell by 0.1 sec."
-          }
-        },
-        {
-          "id": "elemental-precision",
-          "name": "Elemental Precision",
-          "row": 0,
-          "col": 2,
-          "maxRank": 3,
-          "ranks": [
-            "Improves your chance to hit with Frost and Fire spells by 2%.",
-            "Improves your chance to hit with Frost and Fire spells by 4%.",
-            "Improves your chance to hit with Frost and Fire spells by 6%."
-          ],
-          "icon": "spell_ice_magicdamage",
-          "classic": {
-            "status": "changed",
-            "text": "Reduces the chance that the opponent can resist your Frost and Fire spells by 2%."
           }
         },
         {
@@ -800,7 +811,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Deals 28 to 32 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
+            "Deals 28 to 32 Frost damage to an enemy target. Deals 300% increased damage to Frozen targets."
           ],
           "icon": "spell_frost_frostblast",
           "classic": {
@@ -814,8 +825,8 @@
           "col": 0,
           "maxRank": 2,
           "ranks": [
-            "Increases the range of your Frostbolt, Frost Blast, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
-            "Increases the range of your Frostbolt, Frost Blast, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
+            "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 10%.",
+            "Increases the range of your Frostbolt, Frost Blast, Ice Lance, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
           ],
           "icon": "spell_shadow_darkritual",
           "classic": {
@@ -912,11 +923,11 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
-            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 5% and it gains an additional 7% of your spell damage, stacking up to 5 times."
+            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 20% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 40% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 60% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 80% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times.",
+            "Gives your Frostbolt, Frost Blast, and Fingers of Frost empowered Ice Lance spells a 100% chance to apply Winter's Chill, increasing the target's damage taken from your next Cone of Cold by 20% and it gains an additional 7% of your spell damage, stacking up to 5 times."
           ],
           "icon": "spell_frost_chillingblast",
           "classic": {
@@ -931,7 +942,7 @@
           "col": 1,
           "maxRank": 1,
           "ranks": [
-            "Shield yourself, absorbing 447 damage and increasing your Frost damage by 3% for 1 min. While shielded, your Frost damage is increased by an additional 3% and you do not lose casting time when you take damage."
+            "Shield yourself, absorbing 447 damage and increasing your Frost damage by 15% for 1 min. While shielded, your Frost damage is increased by an additional 5% and you do not lose casting time when you take damage."
           ],
           "requires": {
             "id": "cold-snap"
@@ -941,7 +952,45 @@
             "status": "changed",
             "text": "Instantly shields you, absorbing 454 damage. Lasts 1 min. While the shield holds, spells will not be interrupted."
           }
+        },
+        {
+          "id": "precision",
+          "name": "Precision",
+          "row": 0,
+          "col": 2,
+          "maxRank": 3,
+          "ranks": [
+            "Improves your chance to hit with all spells by 2%.",
+            "Improves your chance to hit with all spells by 4%.",
+            "Improves your chance to hit with all spells by 6%."
+          ],
+          "icon": "spell_ice_magicdamage",
+          "classic": {
+            "status": "changed",
+            "text": "Reduces the chance that the opponent can resist your Frost and Fire spells by 2%."
+          }
         }
+      ],
+      "codeSlots": [
+        "frost-warding",
+        "improved-frostbolt",
+        null,
+        "ice-shards",
+        "frostbite",
+        "improved-frost-nova",
+        "permafrost",
+        "frost-channeling",
+        "improved-blizzard",
+        "ice-lance",
+        "arctic-reach",
+        "ice-block",
+        "shatter",
+        "improved-cone-of-cold",
+        "cold-snap",
+        "fingers-of-frost",
+        "winters-chill",
+        "ice-barrier",
+        "precision"
       ],
       "removed": [
         {

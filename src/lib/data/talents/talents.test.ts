@@ -5,7 +5,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 type Talent = { id: string; name: string; row: number; col: number; maxRank: number; ranks: string[]; requires?: { id: string }; icon?: string; classic?: { status: string; text?: string } };
-type Tree = { id: string; name: string; role: string; talents: Talent[]; removed?: { name: string; maxRank: number }[] };
+type Tree = { id: string; name: string; role: string; talents: Talent[]; codeSlots?: (string | null)[]; removed?: { name: string; maxRank: number }[] };
 type ClassTalents = { classId: string; gameVersion: string; source: { label: string; url?: string; license?: string; fetched: string; verifiedInGame: boolean; attribution?: string }; trees: Tree[] };
 
 const here = join(import.meta.dirname ?? ".", ".");
@@ -58,6 +58,12 @@ describe("alberi dei talenti", () => {
         assert.ok(above >= 30, `${tree.name}: nelle prime sei file ci sono solo ${above} punti, l'ultima fila non si apre`);
         assert.ok(maxPoints >= 31, `${tree.name}: con tutti i ranghi si arriva solo a ${maxPoints} punti`);
         assert.ok(tree.talents.some((t) => t.row === 6), `${tree.name}: nessun talento nell'ultima fila`);
+        // i posti del codice condivisibile: ogni talento dell'albero una volta sola, più i posti vuoti dei talenti tolti
+        if (tree.codeSlots) {
+          const filled = tree.codeSlots.filter((s): s is string => s !== null);
+          assert.deepEqual([...filled].sort(), tree.talents.map((t) => t.id).sort(), `${tree.name}: codeSlots non corrisponde ai talenti`);
+          assert.notEqual(tree.codeSlots.at(-1), null, `${tree.name}: posto vuoto in fondo a codeSlots`);
+        }
         total += tree.talents.length;
       }
       assert.ok(total >= 45 && total <= 60, `${id}: ${total} talenti`);

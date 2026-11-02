@@ -16,7 +16,8 @@ export function parseStored(raw: string | null): StoredBuilds {
     if (!parsed || typeof parsed !== "object") return {};
     const out: StoredBuilds = {};
     for (const [k, v] of Object.entries(parsed as Record<string, unknown>)) {
-      if (typeof v === "string" && /^v1\./.test(v)) out[k as ClassId] = v;
+      // i codici sono quelli di code.ts (`FW1.…`); fino al 2/11/2026 qui si cercava "v1." e nulla veniva mai ripreso
+      if (typeof v === "string" && /^fw1\./i.test(v)) out[k as ClassId] = v;
     }
     return out;
   } catch {

@@ -20,13 +20,18 @@ export type CalendarEvent = {
 const n = (en: string, it: string, es: string): L10n => ({ en, it, es });
 
 /**
- * Fonti ufficiali delle date (raccolta del 10/10/2026, aggiornata il 28/10/2026). L'apertura reale della prenotazione
- * dei nomi in Europa (verso le 20:40 CET del 27/10, con il ritardo annunciato nel launcher) viene dal live blog di
- * Wowhead (aggiornamento delle 12:40 PDT): Blizzard non ha dato un orario nuovo.
+ * Fonti ufficiali delle date (raccolta del 10/10/2026, aggiornata il 28/10 e il 2/11/2026). L'apertura reale della
+ * prenotazione dei nomi in Europa (verso le 20:40 CET del 27/10, con il ritardo annunciato nel launcher) viene dal live
+ * blog di Wowhead (aggiornamento delle 12:40 PDT): Blizzard non ha dato un orario nuovo. L'ora del lancio per regione
+ * viene dalla tabella dell'articolo del 29/10 (la versione it-it non ha la tabella e nel sommario scrive "00:01 CET").
  */
 const preorder = {
   label: "Pre-Purchase World of Warcraft: Forever Upgrades (Blizzard News, 12/09/2026)",
   url: "https://news.blizzard.com/en-us/article/24301508/pre-purchase-world-of-warcraft-forever-upgrades-and-begin-your-next-journey-in-azeroth",
+};
+const goesLive = {
+  label: "World of Warcraft: Forever Goes Live Globally November 4! (Blizzard News, 29/10/2026)",
+  url: "https://news.blizzard.com/en-us/article/24315820/world-of-warcraft-forever-goes-live-globally-november-4",
 };
 const betaEnd = {
   label: "The WoW Forever Beta Celebration is Underway (Kaivax, Blizzard forums, 22/10/2026)",
@@ -84,11 +89,11 @@ export const events: CalendarEvent[] = [
     startAt: "2026-11-04T15:00:00-08:00",
     title: n("World of Warcraft: Forever launch", "Lancio di World of Warcraft: Forever", "Lanzamiento de World of Warcraft: Forever"),
     text: n(
-      "Global launch on 4 November 2026 at 3:00 p.m. PST, which is midnight between 4 and 5 November in Central Europe (00:00 CET on 5 November, as Blizzard's Italian and Spanish pages say).",
-      "Lancio mondiale il 4 novembre 2026 alle 15:00 PST, cioè la mezzanotte fra il 4 e il 5 novembre in Italia (00:00 CET del 5 novembre, come dicono le pagine italiane di Blizzard).",
-      "Lanzamiento mundial el 4 de noviembre de 2026 a las 15:00 PST, es decir, la medianoche entre el 4 y el 5 de noviembre en España (00:00 CET del 5 de noviembre, como dicen las páginas de Blizzard en español).",
+      "Global launch on 4 November 2026 at 3:00 p.m. PST (23:00 UTC), which is midnight between 4 and 5 November in Central Europe: 00:00 CET on 5 November in Blizzard's table of times by region, 23:00 in the UK.",
+      "Lancio mondiale il 4 novembre 2026 alle 15:00 PST (23:00 UTC), cioè la mezzanotte fra il 4 e il 5 novembre in Italia: 00:00 CET del 5 novembre nella tabella degli orari per regione di Blizzard (la pagina italiana scrive 00:01).",
+      "Lanzamiento mundial el 4 de noviembre de 2026 a las 15:00 PST (23:00 UTC), es decir, la medianoche entre el 4 y el 5 de noviembre en España: 00:00 CET del 5 de noviembre en la tabla de horarios por región de Blizzard.",
     ),
-    source: preorder,
+    source: goesLive,
   },
   {
     slug: "raids",

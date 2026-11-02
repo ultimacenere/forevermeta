@@ -1,14 +1,14 @@
 {
   "classId": "priest",
-  "gameVersion": "1.60.1.70425",
+  "gameVersion": "1.60.1.70630",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-10-23",
+    "fetched": "2026-11-02",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70425."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630. The Priest trees carry the server's hotfixes of 30 Oct 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -273,11 +273,11 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
-            "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
+            "Your heals from Flash Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec."
           ],
           "requires": {
             "id": "soul-warding"
@@ -361,9 +361,9 @@
           "col": 0,
           "maxRank": 3,
           "ranks": [
-            "Gives you a 23% chance to avoid interruption caused by damage while casting any spell.",
-            "Gives you a 47% chance to avoid interruption caused by damage while casting any spell.",
-            "Gives you a 70% chance to avoid interruption caused by damage while casting any spell."
+            "Gives your spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your spells a 70% chance to not lose casting time when you take damage."
           ],
           "icon": "spell_holy_healingfocus",
           "classic": {
@@ -542,20 +542,6 @@
           }
         },
         {
-          "id": "binding-heal",
-          "name": "Binding Heal",
-          "row": 3,
-          "col": 3,
-          "maxRank": 1,
-          "ranks": [
-            "Heals a friendly target and the caster for 236 to 284. Low threat."
-          ],
-          "icon": "spell_holy_blindingheal",
-          "classic": {
-            "status": "new"
-          }
-        },
-        {
           "id": "litany-of-light",
           "name": "Litany of Light",
           "row": 4,
@@ -637,7 +623,41 @@
           "classic": {
             "status": "new"
           }
+        },
+        {
+          "id": "holy-binding",
+          "name": "Holy Binding",
+          "row": 3,
+          "col": 3,
+          "maxRank": 1,
+          "ranks": [
+            "Each time you heal a target other than yourself with Flash Heal, you are healed for 50% as much. This healing generates no threat."
+          ],
+          "icon": "spell_holy_blindingheal",
+          "classic": {
+            "status": "new"
+          }
         }
+      ],
+      "codeSlots": [
+        "twilight-focus",
+        "improved-renew",
+        "holy-specialization",
+        "spell-warding",
+        "divine-fury",
+        "holy-nova",
+        "blessed-recovery",
+        "inspiration",
+        "holy-reach",
+        "improved-healing",
+        "searing-light",
+        null,
+        "litany-of-light",
+        "spirit-of-redemption",
+        "spiritual-guidance",
+        "spiritual-healing",
+        "prayer-of-mending",
+        "holy-binding"
       ],
       "removed": [
         {
