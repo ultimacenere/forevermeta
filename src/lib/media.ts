@@ -248,6 +248,39 @@ export const media = {
       "Fotograma de la cinemática de World of Warcraft: Forever: un guerrero encapuchado con armadura de placas alza un martillo dorado y luminoso",
     ),
   ),
+  // copertine delle news del 2-5/11 (5/11/2026)
+  newsDevNotesNov2: cover(
+    "/media/news-dev-notes-nov-2.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a bearded dwarf in furs stands beside a bear at night, as a glowing blue hammer flies overhead",
+      "Fotogramma del cinematic di World of Warcraft: Forever: un nano barbuto con le pellicce accanto a un orso di notte, mentre un martello blu e luminoso vola sopra di loro",
+      "Fotograma de la cinemática de World of Warcraft: Forever: un enano barbudo con pieles junto a un oso de noche, mientras un martillo azul y luminoso vuela sobre ellos",
+    ),
+  ),
+  newsLaunchDay: cover(
+    "/media/news-launch-day.webp",
+    n(
+      "World of Warcraft: Forever screenshot: three Horde players around a campfire beside a tent on red earth at sunset, with an orc tower behind them",
+      "Screenshot di World of Warcraft: Forever: tre giocatori dell'Orda intorno a un fuoco da campo accanto a una tenda, sulla terra rossa al tramonto, con una torre orchesca dietro",
+      "Captura de World of Warcraft: Forever: tres jugadores de la Horda alrededor de una hoguera junto a una tienda, sobre tierra roja al atardecer, con una torre orca detrás",
+    ),
+  ),
+  newsTaldramir: cover(
+    "/media/news-taldramir.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Ashenvale with the new lighting: a forest path under tall trees, crossed by shafts of light",
+      "Screenshot di World of Warcraft: Forever di Ashenvale con la nuova illuminazione: un sentiero nel bosco sotto alberi altissimi, attraversato da fasci di luce",
+      "Captura de World of Warcraft: Forever de Ashenvale con la nueva iluminación: un sendero en el bosque bajo árboles altísimos, atravesado por haces de luz",
+    ),
+  ),
+  newsEveGuides: cover(
+    "/media/news-eve-guides.webp",
+    n(
+      "World of Warcraft: Forever cinematic still: a gigantic tree rises above misty mountains at night, crossed by glowing blue streams",
+      "Fotogramma del cinematic di World of Warcraft: Forever: un albero gigantesco si alza sopra montagne nella nebbia, di notte, attraversato da correnti blu luminose",
+      "Fotograma de la cinemática de World of Warcraft: Forever: un árbol gigantesco se alza sobre montañas entre la niebla, de noche, atravesado por corrientes azules luminosas",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",
