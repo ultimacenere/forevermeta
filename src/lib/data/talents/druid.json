@@ -1,14 +1,14 @@
 {
   "classId": "druid",
-  "gameVersion": "1.60.1.70630",
+  "gameVersion": "1.60.1.70755",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-11-02",
+    "fetched": "2026-11-05",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630. The Druid trees carry the server's hotfixes of 30 Oct 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Druid numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Druid trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -279,7 +279,7 @@
           "col": 1,
           "maxRank": 1,
           "ranks": [
-            "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells. The act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+            "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
           ],
           "icon": "spell_nature_forceofnature",
           "classic": {
@@ -600,11 +600,11 @@
           "col": 0,
           "maxRank": 5,
           "ranks": [
-            "Increases damage done by your melee abilities on Bleeding targets by 2%.",
-            "Increases damage done by your melee abilities on Bleeding targets by 4%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 3%.",
             "Increases damage done by your melee abilities on Bleeding targets by 6%.",
-            "Increases damage done by your melee abilities on Bleeding targets by 8%.",
-            "Increases damage done by your melee abilities on Bleeding targets by 10%."
+            "Increases damage done by your melee abilities on Bleeding targets by 9%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 12%.",
+            "Increases damage done by your melee abilities on Bleeding targets by 15%."
           ],
           "requires": {
             "id": "predatory-strikes"

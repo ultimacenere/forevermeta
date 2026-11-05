@@ -32,9 +32,10 @@ arriva con il lancio del gioco (04/11/2026) e riusa il modello dei mazzi della c
 - **Gli alberi dei talenti** (465 talenti, nomi, posizioni, ranghi, testo per rango, prerequisiti, confronto con Classic)
   vengono dai JSON pubblici di talentsforever.com, pubblicati con licenza **CC BY 4.0** (pagine /about e /terms del sito,
   campi `license` e `attribution` del file). Il sito li legge dal client e dichiara la build (`gameVersion`, oggi
-  1.60.1.70630 con gli hotfix del 28 e 30/10/2026, file generato il 30/10 e importato il 2/11; prima 1.60.1.70425 del
-  20/10). Gli hotfix del 30/10 hanno rifatto i tre alberi del Paladino e cambiato Druido, Mago e Sacerdote sui server live
-  senza note ufficiali: dopo ogni import i talenti con il testo cambiato vanno ritradotti in IT/ES, perché
+  1.60.1.70755 con le note di sviluppo del 2/11/2026, file generato il 4/11 e importato il 5/11; prima 1.60.1.70630 con
+  gli hotfix del 28 e 30/10, e 1.60.1.70425 del 20/10). Gli hotfix del 30/10 hanno rifatto i tre alberi del Paladino e
+  cambiato Druido, Mago e Sacerdote sui server live senza note ufficiali; le note del 2/11 hanno rifatto il Ladro (7
+  talenti tolti, 8 nuovi) e cambiato Guerriero e Sciamano (via Lava Burst ed Elemental Mastery): dopo ogni import i talenti con il testo cambiato vanno ritradotti in IT/ES, perché
   `localizeTalents` tiene la traduzione vecchia se il numero dei ranghi è lo stesso. **Non sono verificati nel gioco**:
   ogni pagina lo dice in fondo (`dataNotVerified`),
   con l'attribuzione richiesta dalla licenza e il link. Dopo il lancio si confrontano nel gioco, come per le carte su

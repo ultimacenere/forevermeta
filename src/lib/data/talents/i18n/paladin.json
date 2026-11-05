@@ -133,7 +133,7 @@
       "Applica Light's Vigil a un bersaglio alleato per 30 secondi. Il prossimo Holy Shock dell'incantatore su quel bersaglio non attiva alcun tempo di ricarica e cura il bersaglio e il suo gruppo di un valore compreso tra 325 e 343. In ogni gruppo può essere attivo un solo Vigil per Paladino."
     ],
     "oath-of-light": [
-      "Presti giuramento di proteggere l'alleato bersaglio per 5 minuti, aumentando le cure dei tuoi Holy Light, Flash of Light e Holy Shock su di lui. Il Paladino può avere un solo Oath of Light attivo alla volta."
+      "Presti giuramento di proteggere l'alleato bersaglio per 5 minuti, aumentando fino a 400 le cure del tuo Holy Light su di lui, fino a 115 quelle del tuo Flash of Light e fino a 230 quelle del tuo Holy Shock. Il Paladino può avere un solo Oath of Light attivo alla volta."
     ],
     "precision": [
       "Aumenta dell'1% la tua probabilità di colpire.",
@@ -220,9 +220,9 @@
       "Riduce di 1.0 secondi il tempo di lancio del tuo incantesimo Turn Undead e di 10 secondi il suo tempo di ricarica, e gli permette di avere effetto anche sui Demoni."
     ],
     "two-handed-weapon-specialization": [
-      "Aumenta del 2% i danni fisici che infliggi e riduce del 7% tutta la minaccia che generi mentre hai equipaggiata un'arma da mischia a due mani.",
-      "Aumenta del 4% i danni fisici che infliggi e riduce del 14% tutta la minaccia che generi mentre hai equipaggiata un'arma da mischia a due mani.",
-      "Aumenta del 6% i danni fisici che infliggi e riduce del 20% tutta la minaccia che generi mentre hai equipaggiata un'arma da mischia a due mani."
+      "Aumenta del 2% i danni Fisici e Sacri che infliggi e riduce del 7% tutta la minaccia che generi mentre hai equipaggiata un'arma da mischia a due mani.",
+      "Aumenta del 4% i danni Fisici e Sacri che infliggi e riduce del 14% tutta la minaccia che generi mentre hai equipaggiata un'arma da mischia a due mani.",
+      "Aumenta del 6% i danni Fisici e Sacri che infliggi e riduce del 20% tutta la minaccia che generi mentre hai equipaggiata un'arma da mischia a due mani."
     ],
     "unsealed-wrath": [
       "I tuoi attacchi in mischia conservano una copia del tuo Seal attivo per 15 secondi, accumulandosi fino a 3 volte. Mettere a segno un attacco con un Seal diverso consuma tutti gli accumuli e dà al Seal conservato la sua normale probabilità di attivarsi per ciascun accumulo."
@@ -232,9 +232,9 @@
       "Riduce del 30% la durata degli effetti di Paura e Disorientamento su di te."
     ],
     "vengeance": [
-      "Aumenta dell'1% i danni Fisici e Sacri che infliggi per 30 secondi dopo aver messo a segno un colpo critico non periodico. Si cumula fino a 3 volte.",
-      "Aumenta del 2% i danni Fisici e Sacri che infliggi per 30 secondi dopo aver messo a segno un colpo critico non periodico. Si cumula fino a 3 volte.",
-      "Aumenta del 3% i danni Fisici e Sacri che infliggi per 30 secondi dopo aver messo a segno un colpo critico non periodico. Si cumula fino a 3 volte."
+      "Aumenta dell'1% i danni Fisici e Sacri che infliggi per 30 secondi dopo aver messo a segno un colpo critico non periodico. Si cumula fino a 5 volte.",
+      "Aumenta del 2% i danni Fisici e Sacri che infliggi per 30 secondi dopo aver messo a segno un colpo critico non periodico. Si cumula fino a 5 volte.",
+      "Aumenta del 3% i danni Fisici e Sacri che infliggi per 30 secondi dopo aver messo a segno un colpo critico non periodico. Si cumula fino a 5 volte."
     ],
     "vindication": [
       "Dà ai tuoi attacchi in mischia che infliggono danni una probabilità di ridurre di 68 la Potenza d'attacco del bersaglio per 30 secondi.",
@@ -376,7 +376,7 @@
       "Aplica Light's Vigil a un objetivo aliado durante 30 segundos. El siguiente Holy Shock del lanzador sobre el objetivo no activa ningún tiempo de reutilización y sana al objetivo y a su grupo de 325 a 343. Cada Paladín solo puede tener un Vigil activo en cada grupo."
     ],
     "oath-of-light": [
-      "Juras proteger al aliado objetivo durante 5 minutos, lo que aumenta la sanación de tus Holy Light, Flash of Light y Holy Shock sobre él. El Paladín solo puede tener un Oath of Light jurado a la vez."
+      "Juras proteger al aliado objetivo durante 5 minutos, lo que aumenta hasta 400 la sanación de tu Holy Light sobre él, hasta 115 la de tu Flash of Light y hasta 230 la de tu Holy Shock. El Paladín solo puede tener un Oath of Light jurado a la vez."
     ],
     "precision": [
       "Aumenta un 1% tu probabilidad de golpear.",
@@ -463,9 +463,9 @@
       "Reduce en 1.0 segundos el tiempo de lanzamiento de tu hechizo Turn Undead y en 10 segundos su tiempo de reutilización, y le permite afectar a Demonios."
     ],
     "two-handed-weapon-specialization": [
-      "Aumenta un 2% el daño Físico que infliges y reduce un 7% toda la amenaza que generas mientras llevas equipada un arma cuerpo a cuerpo a dos manos.",
-      "Aumenta un 4% el daño Físico que infliges y reduce un 14% toda la amenaza que generas mientras llevas equipada un arma cuerpo a cuerpo a dos manos.",
-      "Aumenta un 6% el daño Físico que infliges y reduce un 20% toda la amenaza que generas mientras llevas equipada un arma cuerpo a cuerpo a dos manos."
+      "Aumenta un 2% el daño Físico y Sagrado que infliges y reduce un 7% toda la amenaza que generas mientras llevas equipada un arma cuerpo a cuerpo a dos manos.",
+      "Aumenta un 4% el daño Físico y Sagrado que infliges y reduce un 14% toda la amenaza que generas mientras llevas equipada un arma cuerpo a cuerpo a dos manos.",
+      "Aumenta un 6% el daño Físico y Sagrado que infliges y reduce un 20% toda la amenaza que generas mientras llevas equipada un arma cuerpo a cuerpo a dos manos."
     ],
     "unsealed-wrath": [
       "Tus ataques cuerpo a cuerpo almacenan una copia de tu Seal activo durante 15 segundos, acumulándose hasta 3 veces. Asestar un ataque con un Seal distinto consume todas las acumulaciones y otorga al Seal almacenado su probabilidad normal de activarse una vez por cada acumulación."
@@ -475,9 +475,9 @@
       "Reduce un 30% la duración de los efectos de Miedo y Desorientación sobre ti."
     ],
     "vengeance": [
-      "Aumenta un 1% el daño Físico y Sagrado que infliges durante 30 segundos tras asestar un golpe crítico no periódico. Se acumula hasta 3 veces.",
-      "Aumenta un 2% el daño Físico y Sagrado que infliges durante 30 segundos tras asestar un golpe crítico no periódico. Se acumula hasta 3 veces.",
-      "Aumenta un 3% el daño Físico y Sagrado que infliges durante 30 segundos tras asestar un golpe crítico no periódico. Se acumula hasta 3 veces."
+      "Aumenta un 1% el daño Físico y Sagrado que infliges durante 30 segundos tras asestar un golpe crítico no periódico. Se acumula hasta 5 veces.",
+      "Aumenta un 2% el daño Físico y Sagrado que infliges durante 30 segundos tras asestar un golpe crítico no periódico. Se acumula hasta 5 veces.",
+      "Aumenta un 3% el daño Físico y Sagrado que infliges durante 30 segundos tras asestar un golpe crítico no periódico. Se acumula hasta 5 veces."
     ],
     "vindication": [
       "Otorga a tus ataques cuerpo a cuerpo que infligen daño una probabilidad de reducir en 68 el Poder de ataque del objetivo durante 30 segundos.",

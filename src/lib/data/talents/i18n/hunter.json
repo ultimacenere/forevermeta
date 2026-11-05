@@ -1,9 +1,9 @@
 {
   "it": {
     "barrage": [
-      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 3%.",
-      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 7%.",
-      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 10%."
+      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 5%.",
+      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 10%.",
+      "Aumenta i danni inflitti dalle tue abilità Multi-Shot, Aimed Shot e Volley del 15%."
     ],
     "bestial-discipline": [
       "Aumenta la rigenerazione di Focus dei tuoi animali del 10% e permette al 25% della tua rigenerazione di Mana di continuare mentre lanci incantesimi.",
@@ -152,11 +152,11 @@
       "Aumenta la tua probabilità di colpo critico con tutti gli attacchi del 5%."
     ],
     "lightning-reflexes": [
-      "Aumenta la tua Agilità del 2%.",
-      "Aumenta la tua Agilità del 4%.",
+      "Aumenta la tua Agilità del 3%.",
       "Aumenta la tua Agilità del 6%.",
-      "Aumenta la tua Agilità dell'8%.",
-      "Aumenta la tua Agilità del 10%."
+      "Aumenta la tua Agilità del 9%.",
+      "Aumenta la tua Agilità del 12%.",
+      "Aumenta la tua Agilità del 15%."
     ],
     "lone-wolf": [
       "Infliggi il 20% di danni in più con tutti gli attacchi mentre non hai un animale attivo."
@@ -206,7 +206,7 @@
       "Un tiro a corta gittata che infligge il 50% dei danni dell'arma e disorienta il bersaglio per 4 secondi. Qualsiasi danno inflitto rimuove l'effetto. Interrompe il tuo attacco quando viene usato."
     ],
     "sniper-shot": [
-      "Un tiro a lunga gittata che infligge i danni a distanza più 160 e aumenta la gittata dei tuoi prossimi 3 Shot di 10 metri per 10 secondi."
+      "Un tiro a lunga gittata che infligge i danni a distanza più 320 e aumenta la gittata dei tuoi prossimi 3 Shot di 10 metri per 10 secondi."
     ],
     "spirit-bond": [
       "Mentre il tuo animale è attivo, tu e il tuo animale rigenerate l'1% della Salute totale ogni 10 secondi.",
@@ -239,7 +239,7 @@
       "Riduce il tempo di ricarica delle tue abilità Trap e Deterrence del 40%."
     ],
     "trueshot-aura": [
-      "Aumenta la Potenza d'attacco a distanza dei membri del gruppo o dell'incursione entro 45 metri di 15 punti."
+      "Aumenta la Potenza d'attacco a distanza dei membri del gruppo o dell'incursione entro 45 metri di 20 punti."
     ],
     "unleashed-fury": [
       "Aumenta i danni inflitti dai tuoi animali e dai tuoi falchi del 3%.",
@@ -251,9 +251,9 @@
   },
   "es": {
     "barrage": [
-      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 3%.",
-      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 7%.",
-      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 10%."
+      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 5%.",
+      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 10%.",
+      "Aumenta el daño infligido por tus habilidades Multi-Shot, Aimed Shot y Volley en un 15%."
     ],
     "bestial-discipline": [
       "Aumenta la regeneración de Focus de tus mascotas en un 10% y permite que un 25% de tu regeneración de Maná continúe mientras lanzas hechizos.",
@@ -402,11 +402,11 @@
       "Aumenta tu probabilidad de golpe crítico con todos los ataques en un 5%."
     ],
     "lightning-reflexes": [
-      "Aumenta tu Agilidad en un 2%.",
-      "Aumenta tu Agilidad en un 4%.",
+      "Aumenta tu Agilidad en un 3%.",
       "Aumenta tu Agilidad en un 6%.",
-      "Aumenta tu Agilidad en un 8%.",
-      "Aumenta tu Agilidad en un 10%."
+      "Aumenta tu Agilidad en un 9%.",
+      "Aumenta tu Agilidad en un 12%.",
+      "Aumenta tu Agilidad en un 15%."
     ],
     "lone-wolf": [
       "Infliges un 20% más de daño con todos los ataques mientras no tienes una mascota activa."
@@ -456,7 +456,7 @@
       "Un disparo de corto alcance que inflige un 50% del daño del arma y desorienta al objetivo durante 4 segundos. Cualquier daño causado elimina el efecto. Desactiva tu ataque al usarlo."
     ],
     "sniper-shot": [
-      "Un disparo de largo alcance que inflige el daño a distancia más 160 y aumenta el alcance de tus próximos 3 Shot en 10 metros durante 10 segundos."
+      "Un disparo de largo alcance que inflige el daño a distancia más 320 y aumenta el alcance de tus próximos 3 Shot en 10 metros durante 10 segundos."
     ],
     "spirit-bond": [
       "Mientras tu mascota está activa, tú y tu mascota regeneran un 1% de la Salud total cada 10 segundos.",
@@ -489,7 +489,7 @@
       "Reduce el tiempo de reutilización de tus habilidades Trap y Deterrence en un 40%."
     ],
     "trueshot-aura": [
-      "Aumenta el Poder de ataque a distancia de los miembros del grupo o de la banda a menos de 45 metros en 15."
+      "Aumenta el Poder de ataque a distancia de los miembros del grupo o de la banda a menos de 45 metros en 20."
     ],
     "unleashed-fury": [
       "Aumenta el daño infligido por tus mascotas y halcones en un 3%.",

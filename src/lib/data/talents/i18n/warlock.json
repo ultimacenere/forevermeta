@@ -202,11 +202,11 @@
       "Aumenta del 100% il bonus ai danni da colpo critico dei tuoi incantesimi di Destruction."
     ],
     "shadow-and-flame": [
-      "Colpire un nemico con Conflagrate aumenta del 2% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 2% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 20% di probabilità di non consumare Immolate e Shadowburn ha il 20% di probabilità di restituire istantaneamente un Soul Shard.",
-      "Colpire un nemico con Conflagrate aumenta del 4% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 4% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 40% di probabilità di non consumare Immolate e Shadowburn ha il 40% di probabilità di restituire istantaneamente un Soul Shard.",
-      "Colpire un nemico con Conflagrate aumenta del 6% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 6% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 60% di probabilità di non consumare Immolate e Shadowburn ha il 60% di probabilità di restituire istantaneamente un Soul Shard.",
-      "Colpire un nemico con Conflagrate aumenta dell'8% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta dell'8% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha l'80% di probabilità di non consumare Immolate e Shadowburn ha l'80% di probabilità di restituire istantaneamente un Soul Shard.",
-      "Colpire un nemico con Conflagrate aumenta del 10% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 10% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 100% di probabilità di non consumare Immolate e Shadowburn ha il 100% di probabilità di restituire istantaneamente un Soul Shard."
+      "Colpire un nemico con Conflagrate aumenta del 4% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 4% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 20% di probabilità di non consumare Immolate e Shadowburn ha il 20% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta dell'8% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta dell'8% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 40% di probabilità di non consumare Immolate e Shadowburn ha il 40% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta del 12% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 12% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 60% di probabilità di non consumare Immolate e Shadowburn ha il 60% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta del 16% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 16% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha l'80% di probabilità di non consumare Immolate e Shadowburn ha l'80% di probabilità di restituire istantaneamente un Soul Shard.",
+      "Colpire un nemico con Conflagrate aumenta del 20% tutti i danni da Ombra che infliggi per 20 s, e colpire un nemico con Shadowburn aumenta del 20% tutti i danni da Fuoco che infliggi per 20 s. Inoltre, Conflagrate ha il 100% di probabilità di non consumare Immolate e Shadowburn ha il 100% di probabilità di restituire istantaneamente un Soul Shard."
     ],
     "shadow-mastery": [
       "Aumenta del 2% i danni inflitti o la vita drenata dai tuoi incantesimi d'Ombra.",
@@ -248,7 +248,7 @@
       "Aumenta del 10% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter."
     ],
     "wrack": [
-      "Dilania il bersaglio dall'interno, infliggendo 36 danni da Ombra ogni 1 s e aumentando del 10% i danni che subisce dai tuoi altri effetti di danni da Ombra nel tempo per 6 s."
+      "Dilania il bersaglio dall'interno, infliggendo 86 danni da Ombra ogni 1 s e aumentando del 10% i danni che subisce dai tuoi altri effetti di danni da Ombra nel tempo per 6 s."
     ]
   },
   "es": {
@@ -454,11 +454,11 @@
       "Aumenta un 100% la bonificación de daño de golpe crítico de tus hechizos de Destruction."
     ],
     "shadow-and-flame": [
-      "Golpear a un enemigo con Conflagrate aumenta un 2% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 2% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 20% de probabilidad de no consumir Immolate y Shadowburn tiene un 20% de probabilidad de devolver instantáneamente un Soul Shard.",
-      "Golpear a un enemigo con Conflagrate aumenta un 4% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 4% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 40% de probabilidad de no consumir Immolate y Shadowburn tiene un 40% de probabilidad de devolver instantáneamente un Soul Shard.",
-      "Golpear a un enemigo con Conflagrate aumenta un 6% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 6% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 60% de probabilidad de no consumir Immolate y Shadowburn tiene un 60% de probabilidad de devolver instantáneamente un Soul Shard.",
-      "Golpear a un enemigo con Conflagrate aumenta un 8% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 8% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 80% de probabilidad de no consumir Immolate y Shadowburn tiene un 80% de probabilidad de devolver instantáneamente un Soul Shard.",
-      "Golpear a un enemigo con Conflagrate aumenta un 10% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 10% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 100% de probabilidad de no consumir Immolate y Shadowburn tiene un 100% de probabilidad de devolver instantáneamente un Soul Shard."
+      "Golpear a un enemigo con Conflagrate aumenta un 4% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 4% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 20% de probabilidad de no consumir Immolate y Shadowburn tiene un 20% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 8% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 8% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 40% de probabilidad de no consumir Immolate y Shadowburn tiene un 40% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 12% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 12% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 60% de probabilidad de no consumir Immolate y Shadowburn tiene un 60% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 16% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 16% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 80% de probabilidad de no consumir Immolate y Shadowburn tiene un 80% de probabilidad de devolver instantáneamente un Soul Shard.",
+      "Golpear a un enemigo con Conflagrate aumenta un 20% todo el daño de las Sombras que infliges durante 20 s, y golpear a un enemigo con Shadowburn aumenta un 20% todo el daño de Fuego que infliges durante 20 s. Además, Conflagrate tiene un 100% de probabilidad de no consumir Immolate y Shadowburn tiene un 100% de probabilidad de devolver instantáneamente un Soul Shard."
     ],
     "shadow-mastery": [
       "Aumenta un 2% el daño infligido o la vida drenada por tus hechizos de las Sombras.",
@@ -500,7 +500,7 @@
       "Aumenta un 10% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter."
     ],
     "wrack": [
-      "Desgarra al objetivo desde dentro, infligiendo 36 puntos de daño de las Sombras cada 1 s y aumentando un 10% el daño que recibe de tus otros efectos de daño de las Sombras en el tiempo durante 6 s."
+      "Desgarra al objetivo desde dentro, infligiendo 86 puntos de daño de las Sombras cada 1 s y aumentando un 10% el daño que recibe de tus otros efectos de daño de las Sombras en el tiempo durante 6 s."
     ]
   }
 }

@@ -1,14 +1,14 @@
 {
   "classId": "warrior",
-  "gameVersion": "1.60.1.70630",
+  "gameVersion": "1.60.1.70755",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-11-02",
+    "fetched": "2026-11-05",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Warrior numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Warrior trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Warrior trees carry the server's hotfixes of 4 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -89,12 +89,10 @@
           "name": "Improved Tactical Mastery",
           "row": 1,
           "col": 1,
-          "maxRank": 5,
+          "maxRank": 3,
           "ranks": [
-            "Tactical Mastery lets you retain up to an additional 3 Rage when you change stances.",
-            "Tactical Mastery lets you retain up to an additional 6 Rage when you change stances.",
-            "Tactical Mastery lets you retain up to an additional 9 Rage when you change stances.",
-            "Tactical Mastery lets you retain up to an additional 12 Rage when you change stances.",
+            "Tactical Mastery lets you retain up to an additional 5 Rage when you change stances.",
+            "Tactical Mastery lets you retain up to an additional 10 Rage when you change stances.",
             "Tactical Mastery lets you retain up to an additional 15 Rage when you change stances."
           ],
           "icon": "spell_nature_enchantarmor",
@@ -164,7 +162,7 @@
           "col": 0,
           "maxRank": 1,
           "ranks": [
-            "A brutal attack that deals 40% weapon damage. Deals an additional 80% weapon damage against Giants, Dragonkin, and mounted targets. Mounted targets are dismounted."
+            "A brutal attack that deals 75% weapon damage. Deals an additional 75% weapon damage against Giants, Dragonkin, and mounted targets. Mounted targets are dismounted."
           ],
           "icon": "inv_spear_01",
           "classic": {
@@ -178,9 +176,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Increases the damage you deal with two-handed melee weapons by 1%.",
             "Increases the damage you deal with two-handed melee weapons by 2%.",
-            "Increases the damage you deal with two-handed melee weapons by 3%."
+            "Increases the damage you deal with two-handed melee weapons by 4%.",
+            "Increases the damage you deal with two-handed melee weapons by 6%."
           ],
           "icon": "inv_axe_09",
           "classic": {
@@ -212,12 +210,9 @@
           "name": "Bloodthrill",
           "row": 4,
           "col": 0,
-          "maxRank": 5,
+          "maxRank": 2,
           "ranks": [
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 4% chance to allow an activation of Overpower.",
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 8% chance to allow an activation of Overpower.",
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 12% chance to allow an activation of Overpower.",
-            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 16% chance to allow an activation of Overpower.",
+            "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 10% chance to allow an activation of Overpower.",
             "Grants your Main Hand melee attacks against enemies afflicted by your Rend a 20% chance to allow an activation of Overpower."
           ],
           "icon": "inv_sword_01",
@@ -264,8 +259,8 @@
           "col": 0,
           "maxRank": 2,
           "ranks": [
-            "Reduces the global cooldown and cast time of your Slam ability by 0.25 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec.",
-            "Reduces the global cooldown and cast time of your Slam ability by 0.50 sec. In addition, Slam no longer interrupts or delays your melee swing and Slam's cooldown is reduced by 3.0 sec."
+            "Reduces the cooldown of your Slam ability by 2.5 sec, the cast time and global cooldown by 0.25 sec, and Slam no longer interrupts or delays your melee swing.",
+            "Reduces the cooldown of your Slam ability by 5.0 sec, the cast time and global cooldown by 0.50 sec, and Slam no longer interrupts or delays your melee swing."
           ],
           "icon": "ability_warrior_decisivestrike",
           "classic": {
@@ -346,11 +341,11 @@
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "Increases the area of effect of your Shouts by 10% and reduces their Rage cost by 5%.",
-            "Increases the area of effect of your Shouts by 20% and reduces their Rage cost by 10%.",
-            "Increases the area of effect of your Shouts by 30% and reduces their Rage cost by 15%.",
-            "Increases the area of effect of your Shouts by 40% and reduces their Rage cost by 20%.",
-            "Increases the area of effect of your Shouts by 50% and reduces their Rage cost by 25%."
+            "Increases the area of effect of your Shouts by 10% and reduces the Rage cost by of your Shouts and Howls by 5%.",
+            "Increases the area of effect of your Shouts by 20% and reduces the Rage cost by of your Shouts and Howls by 10%.",
+            "Increases the area of effect of your Shouts by 30% and reduces the Rage cost by of your Shouts and Howls by 15%.",
+            "Increases the area of effect of your Shouts by 40% and reduces the Rage cost by of your Shouts and Howls by 20%.",
+            "Increases the area of effect of your Shouts by 50% and reduces the Rage cost by of your Shouts and Howls by 25%."
           ],
           "icon": "spell_nature_purge",
           "classic": {
@@ -482,24 +477,10 @@
           }
         },
         {
-          "id": "raging-blows",
-          "name": "Raging Blows",
-          "row": 3,
-          "col": 1,
-          "maxRank": 1,
-          "ranks": [
-            "Reduces the Rage cost of your Cleave and Whirlwind abilities by 3."
-          ],
-          "icon": "ability_whirlwind",
-          "classic": {
-            "status": "new"
-          }
-        },
-        {
           "id": "enrage",
           "name": "Enrage",
-          "row": 3,
-          "col": 2,
+          "row": 2,
+          "col": 3,
           "maxRank": 5,
           "ranks": [
             "Gives you a 30% chance to deal 2% increased Physical damage for 12 sec after being the victim of any damaging attack.",
@@ -580,18 +561,13 @@
           "id": "flurry",
           "name": "Flurry",
           "row": 5,
-          "col": 1,
-          "maxRank": 5,
+          "col": 2,
+          "maxRank": 3,
           "ranks": [
-            "Increases your melee attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
             "Increases your melee attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your melee attack speed by 15% for your next 3 swings after dealing a melee critical strike.",
             "Increases your melee attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your melee attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+            "Increases your melee attack speed by 30% for your next 3 swings after dealing a melee critical strike."
           ],
-          "requires": {
-            "id": "death-wish"
-          },
           "icon": "ability_ghoulfrenzy",
           "classic": {
             "status": "changed",
@@ -601,7 +577,7 @@
         {
           "id": "gore-drinker",
           "name": "Gore Drinker",
-          "row": 5,
+          "row": 4,
           "col": 2,
           "maxRank": 2,
           "ranks": [
@@ -609,7 +585,7 @@
             "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health."
           ],
           "requires": {
-            "id": "enrage"
+            "id": "blood-craze"
           },
           "icon": "racial_troll_berserk",
           "classic": {
@@ -625,12 +601,65 @@
           "ranks": [
             "Instantly attack the target causing damage equal to 45% of your Attack Power plus 30 and increasing your movement speed by 10% for 10 sec."
           ],
+          "requires": {
+            "id": "death-wish"
+          },
           "icon": "spell_nature_bloodlust",
           "classic": {
             "status": "changed",
             "text": "Instantly attack the target causing damage equal to 45% of your attack power. In addition, the next 5 successful melee attacks will restore 10 health. This effect lasts 8 sec."
           }
+        },
+        {
+          "id": "reckless-swings",
+          "name": "Reckless Swings",
+          "row": 3,
+          "col": 1,
+          "maxRank": 1,
+          "ranks": [
+            "Your next 4 melee attacks generate 5 additional Rage. Lasts 8 sec."
+          ],
+          "icon": "ability_warrior_bloodfrenzy",
+          "classic": {
+            "status": "new"
+          }
+        },
+        {
+          "id": "improved-whirlwind",
+          "name": "Improved Whirlwind",
+          "row": 5,
+          "col": 0,
+          "maxRank": 2,
+          "ranks": [
+            "Reduces the cooldown of your Whirlwind ability by 1 sec and increases the damage it deals to the closest enemy by 15%.",
+            "Reduces the cooldown of your Whirlwind ability by 2 sec and increases the damage it deals to the closest enemy by 30%."
+          ],
+          "icon": "ability_whirlwind",
+          "classic": {
+            "status": "new"
+          }
         }
+      ],
+      "codeSlots": [
+        "booming-voice",
+        "cruelty",
+        "lingering-rage",
+        "unbridled-wrath",
+        "furious-precision",
+        "piercing-howl",
+        "blood-craze",
+        "dual-wield-specialization",
+        null,
+        "enrage",
+        "improved-execute",
+        "improved-berserker-rage",
+        "death-wish",
+        "improved-intercept",
+        "flurry",
+        "gore-drinker",
+        "bloodthirst",
+        "reckless-swings",
+        "improved-whirlwind"
       ],
       "removed": [
         {
@@ -822,9 +851,9 @@
           "col": 3,
           "maxRank": 3,
           "ranks": [
-            "Increases all threat generated in Defensive stance by an additional 5% while a shield is equipped.",
-            "Increases all threat generated in Defensive stance by an additional 10% while a shield is equipped.",
-            "Increases all threat generated in Defensive stance by an additional 15% while a shield is equipped."
+            "Increases all threat generated in Defensive stance by an additional 7% while a shield is equipped.",
+            "Increases all threat generated in Defensive stance by an additional 13% while a shield is equipped.",
+            "Increases all threat generated in Defensive stance by an additional 20% while a shield is equipped."
           ],
           "icon": "ability_warrior_innerrage",
           "classic": {

@@ -129,7 +129,7 @@
       "Riduce il costo in Mana dei tuoi incantesimi che infliggono danni del 25%."
     ],
     "moonkin-form": [
-      "Ti trasformi in Moonkin Form: la probabilità che Omen of Clarity si attivi aumenta del 100%, il contributo all'armatura degli oggetti del 360% e la probabilità di colpo critico di tutti i membri del gruppo o dell'incursione entro 45 metri del 3%. Protegge inoltre chi la usa dagli effetti di Polymorph e impedisce l'uso degli incantesimi di cura. L'atto di trasformarsi libera chi lo compie dagli effetti di Polymorph e da quelli che riducono il movimento."
+      "Ti trasformi in Moonkin Form: la probabilità che Omen of Clarity si attivi aumenta del 100%, il contributo all'armatura degli oggetti del 360% e la probabilità di colpo critico di tutti i membri del gruppo o dell'incursione entro 45 metri del 3%. Protegge inoltre chi la usa dagli effetti di Polymorph e impedisce l'uso degli incantesimi di cura.\n\nL'atto di trasformarsi libera chi lo compie dagli effetti di Polymorph e da quelli che riducono il movimento."
     ],
     "natural-instinct": [
       "Aumenta il bonus ai danni dei colpi critici delle tue abilità in mischia del 10% e aumenta le tue cure da incantesimo del 12% del tuo Intelletto.",
@@ -199,11 +199,11 @@
       "Permette al 50% della tua rigenerazione di Mana di continuare mentre lanci incantesimi."
     ],
     "rend-and-tear": [
-      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 2%.",
-      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 4%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 3%.",
       "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 6%.",
-      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento dell'8%.",
-      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 10%."
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 9%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 12%.",
+      "Aumenta i danni inflitti dalle tue abilità in mischia ai bersagli affetti da sanguinamento del 15%."
     ],
     "savage-fury": [
       "Aumenta i danni inflitti dalle tue abilità Claw, Rake, Shred, Maul e Swipe del 5%.",
@@ -382,7 +382,7 @@
       "Reduce el coste de Maná de tus hechizos de daño en un 25%."
     ],
     "moonkin-form": [
-      "Te transformas en Moonkin Form: la probabilidad de que se active Omen of Clarity aumenta un 100%, la contribución de armadura de los objetos un 360% y la probabilidad de golpe crítico de todos los miembros del grupo o de la banda a menos de 45 metros un 3%. Además, protege al lanzador de los efectos de Polymorph e impide el uso de hechizos de sanación. El acto de cambiar de forma libera al lanzador de los efectos de Polymorph y de los efectos que reducen el movimiento."
+      "Te transformas en Moonkin Form: la probabilidad de que se active Omen of Clarity aumenta un 100%, la contribución de armadura de los objetos un 360% y la probabilidad de golpe crítico de todos los miembros del grupo o de la banda a menos de 45 metros un 3%. Además, protege al lanzador de los efectos de Polymorph e impide el uso de hechizos de sanación.\n\nEl acto de cambiar de forma libera al lanzador de los efectos de Polymorph y de los efectos que reducen el movimiento."
     ],
     "natural-instinct": [
       "Aumenta la bonificación de daño de golpe crítico de tus habilidades cuerpo a cuerpo en un 10% y aumenta tu sanación de hechizos en un 12% de tu Intelecto.",
@@ -452,11 +452,11 @@
       "Permite que un 50% de tu regeneración de Maná continúe mientras lanzas hechizos."
     ],
     "rend-and-tear": [
-      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 2%.",
-      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 4%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 3%.",
       "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 6%.",
-      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 8%.",
-      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 10%."
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 9%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 12%.",
+      "Aumenta el daño de tus habilidades cuerpo a cuerpo contra objetivos con sangrado en un 15%."
     ],
     "savage-fury": [
       "Aumenta el daño de tus habilidades Claw, Rake, Shred, Maul y Swipe en un 5%.",

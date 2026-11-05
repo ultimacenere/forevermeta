@@ -26,18 +26,15 @@
       "Attacca istantaneamente il bersaglio infliggendo danni pari al 45% della tua Potenza d'attacco più 30 e aumentando la tua velocità di movimento del 10% per 10 secondi."
     ],
     "bloodthrill": [
-      "Concede ai tuoi attacchi in mischia con la mano principale contro i nemici affetti dal tuo Rend il 4% di probabilità di consentire un'attivazione di Overpower.",
-      "Concede ai tuoi attacchi in mischia con la mano principale contro i nemici affetti dal tuo Rend l'8% di probabilità di consentire un'attivazione di Overpower.",
-      "Concede ai tuoi attacchi in mischia con la mano principale contro i nemici affetti dal tuo Rend il 12% di probabilità di consentire un'attivazione di Overpower.",
-      "Concede ai tuoi attacchi in mischia con la mano principale contro i nemici affetti dal tuo Rend il 16% di probabilità di consentire un'attivazione di Overpower.",
+      "Concede ai tuoi attacchi in mischia con la mano principale contro i nemici affetti dal tuo Rend il 10% di probabilità di consentire un'attivazione di Overpower.",
       "Concede ai tuoi attacchi in mischia con la mano principale contro i nemici affetti dal tuo Rend il 20% di probabilità di consentire un'attivazione di Overpower."
     ],
     "booming-voice": [
-      "Aumenta l'area d'effetto delle tue abilità Shout del 10% e riduce il loro costo in Ira del 5%.",
-      "Aumenta l'area d'effetto delle tue abilità Shout del 20% e riduce il loro costo in Ira del 10%.",
-      "Aumenta l'area d'effetto delle tue abilità Shout del 30% e riduce il loro costo in Ira del 15%.",
-      "Aumenta l'area d'effetto delle tue abilità Shout del 40% e riduce il loro costo in Ira del 20%.",
-      "Aumenta l'area d'effetto delle tue abilità Shout del 50% e riduce il loro costo in Ira del 25%."
+      "Aumenta l'area d'effetto delle tue abilità Shout del 10% e riduce il costo in Ira delle tue abilità Shout e Howl del 5%.",
+      "Aumenta l'area d'effetto delle tue abilità Shout del 20% e riduce il costo in Ira delle tue abilità Shout e Howl del 10%.",
+      "Aumenta l'area d'effetto delle tue abilità Shout del 30% e riduce il costo in Ira delle tue abilità Shout e Howl del 15%.",
+      "Aumenta l'area d'effetto delle tue abilità Shout del 40% e riduce il costo in Ira delle tue abilità Shout e Howl del 20%.",
+      "Aumenta l'area d'effetto delle tue abilità Shout del 50% e riduce il costo in Ira delle tue abilità Shout e Howl del 25%."
     ],
     "concussion-blow": [
       "Stordisce il bersaglio per 5 secondi."
@@ -58,9 +55,9 @@
       "I tuoi colpi critici fanno sanguinare l'avversario, infliggendo il 60% dei danni medi della tua arma da mischia in 12 secondi."
     ],
     "defiance": [
-      "Aumenta tutta la minaccia generata in Defensive stance di un ulteriore 5% mentre hai uno scudo equipaggiato.",
-      "Aumenta tutta la minaccia generata in Defensive stance di un ulteriore 10% mentre hai uno scudo equipaggiato.",
-      "Aumenta tutta la minaccia generata in Defensive stance di un ulteriore 15% mentre hai uno scudo equipaggiato."
+      "Aumenta tutta la minaccia generata in Defensive stance di un ulteriore 7% mentre hai uno scudo equipaggiato.",
+      "Aumenta tutta la minaccia generata in Defensive stance di un ulteriore 13% mentre hai uno scudo equipaggiato.",
+      "Aumenta tutta la minaccia generata in Defensive stance di un ulteriore 20% mentre hai uno scudo equipaggiato."
     ],
     "deflection": [
       "Aumenta la tua probabilità di parata dell'1%.",
@@ -84,11 +81,9 @@
       "Ti conferisce il 30% di probabilità di infliggere danni fisici aumentati del 10% per 12 secondi dopo aver subito un qualsiasi attacco dannoso."
     ],
     "flurry": [
-      "Aumenta la tua velocità d'attacco in mischia del 5% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
       "Aumenta la tua velocità d'attacco in mischia del 10% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
-      "Aumenta la tua velocità d'attacco in mischia del 15% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
       "Aumenta la tua velocità d'attacco in mischia del 20% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia.",
-      "Aumenta la tua velocità d'attacco in mischia del 25% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia."
+      "Aumenta la tua velocità d'attacco in mischia del 30% per i tuoi prossimi 3 colpi dopo aver inflitto un colpo critico in mischia."
     ],
     "focused-rage": [
       "Riduce il costo in Ira delle tue abilità offensive di 1.",
@@ -166,8 +161,8 @@
       "Riduce il tempo di ricarica della tua abilità Shield Wall di 11.0 minuti."
     ],
     "improved-slam": [
-      "Riduce il tempo di ricarica globale e il tempo di lancio della tua abilità Slam di 0.25 secondi. Inoltre, Slam non interrompe né ritarda più il tuo attacco in mischia e il tempo di ricarica di Slam è ridotto di 3.0 secondi.",
-      "Riduce il tempo di ricarica globale e il tempo di lancio della tua abilità Slam di 0.50 secondi. Inoltre, Slam non interrompe né ritarda più il tuo attacco in mischia e il tempo di ricarica di Slam è ridotto di 3.0 secondi."
+      "Riduce il tempo di ricarica della tua abilità Slam di 2.5 secondi, il tempo di lancio e il tempo di ricarica globale di 0.25 secondi, e Slam non interrompe né ritarda più il tuo attacco in mischia.",
+      "Riduce il tempo di ricarica della tua abilità Slam di 5.0 secondi, il tempo di lancio e il tempo di ricarica globale di 0.50 secondi, e Slam non interrompe né ritarda più il tuo attacco in mischia."
     ],
     "improved-sunder-armor": [
       "Riduce il costo in Ira della tua abilità Sunder Armor di 1.",
@@ -175,16 +170,18 @@
       "Riduce il costo in Ira della tua abilità Sunder Armor di 3."
     ],
     "improved-tactical-mastery": [
-      "Tactical Mastery ti permette di conservare fino a 3 Ira in più quando cambi posizione.",
-      "Tactical Mastery ti permette di conservare fino a 6 Ira in più quando cambi posizione.",
-      "Tactical Mastery ti permette di conservare fino a 9 Ira in più quando cambi posizione.",
-      "Tactical Mastery ti permette di conservare fino a 12 Ira in più quando cambi posizione.",
+      "Tactical Mastery ti permette di conservare fino a 5 Ira in più quando cambi posizione.",
+      "Tactical Mastery ti permette di conservare fino a 10 Ira in più quando cambi posizione.",
       "Tactical Mastery ti permette di conservare fino a 15 Ira in più quando cambi posizione."
     ],
     "improved-thunder-clap": [
       "Riduce il costo in Ira della tua abilità Thunder Clap di 2.",
       "Riduce il costo in Ira della tua abilità Thunder Clap di 4.",
       "Riduce il costo in Ira della tua abilità Thunder Clap di 6."
+    ],
+    "improved-whirlwind": [
+      "Riduce il tempo di ricarica della tua abilità Whirlwind di 1 secondo e aumenta i danni che infligge al nemico più vicino del 15%.",
+      "Riduce il tempo di ricarica della tua abilità Whirlwind di 2 secondi e aumenta i danni che infligge al nemico più vicino del 30%."
     ],
     "iron-will": [
       "Riduce la durata degli effetti di stordimento e paura che subisci del 3%.",
@@ -213,8 +210,8 @@
     "piercing-howl": [
       "Fa sì che tutti i nemici entro 10 metri subiscano l'effetto Dazed, riducendo la loro velocità di movimento del 50% per 6 secondi."
     ],
-    "raging-blows": [
-      "Riduce il costo in Ira delle tue abilità Cleave e Whirlwind di 3."
+    "reckless-swings": [
+      "I tuoi prossimi 4 attacchi in mischia generano 5 Ira in più. Dura 8 secondi."
     ],
     "shield-slam": [
       "Colpisce il bersaglio con il tuo scudo, infliggendo da 421 a 439 danni, aumentati dal tuo valore di blocco, e ha il 50% di probabilità di dissolvere 1 effetto magico sul bersaglio. Genera una quantità di minaccia molto alta."
@@ -227,15 +224,15 @@
       "Aumenta la tua probabilità di bloccare gli attacchi con lo scudo del 5% e ti conferisce il 100% di probabilità di generare 5 Ira quando blocchi."
     ],
     "spearing-strike": [
-      "Un attacco brutale che infligge il 40% dei danni dell'arma. Infligge un ulteriore 80% dei danni dell'arma contro Giganti, Dragonkin e bersagli in sella. I bersagli in sella vengono disarcionati."
+      "Un attacco brutale che infligge il 75% dei danni dell'arma. Infligge un ulteriore 75% dei danni dell'arma contro Giganti, Dragonkin e bersagli in sella. I bersagli in sella vengono disarcionati."
     ],
     "sweeping-strikes": [
       "I tuoi prossimi 5 attacchi in mischia colpiscono un ulteriore avversario nelle vicinanze."
     ],
     "two-handed-weapon-specialization": [
-      "Aumenta i danni che infliggi con le armi da mischia a due mani dell'1%.",
       "Aumenta i danni che infliggi con le armi da mischia a due mani del 2%.",
-      "Aumenta i danni che infliggi con le armi da mischia a due mani del 3%."
+      "Aumenta i danni che infliggi con le armi da mischia a due mani del 4%.",
+      "Aumenta i danni che infliggi con le armi da mischia a due mani del 6%."
     ],
     "unbridled-wrath": [
       "Ti conferisce il 12% di probabilità di generare 1 Ira aggiuntiva quando infliggi danni in mischia con un'arma.",
@@ -282,18 +279,15 @@
       "Ataca al objetivo al instante causando un daño igual al 45% de tu Poder de ataque más 30 y aumentando tu velocidad de movimiento en un 10% durante 10 segundos."
     ],
     "bloodthrill": [
-      "Otorga a tus ataques cuerpo a cuerpo con la mano principal contra enemigos afectados por tu Rend un 4% de probabilidad de permitir una activación de Overpower.",
-      "Otorga a tus ataques cuerpo a cuerpo con la mano principal contra enemigos afectados por tu Rend un 8% de probabilidad de permitir una activación de Overpower.",
-      "Otorga a tus ataques cuerpo a cuerpo con la mano principal contra enemigos afectados por tu Rend un 12% de probabilidad de permitir una activación de Overpower.",
-      "Otorga a tus ataques cuerpo a cuerpo con la mano principal contra enemigos afectados por tu Rend un 16% de probabilidad de permitir una activación de Overpower.",
+      "Otorga a tus ataques cuerpo a cuerpo con la mano principal contra enemigos afectados por tu Rend un 10% de probabilidad de permitir una activación de Overpower.",
       "Otorga a tus ataques cuerpo a cuerpo con la mano principal contra enemigos afectados por tu Rend un 20% de probabilidad de permitir una activación de Overpower."
     ],
     "booming-voice": [
-      "Aumenta el área de efecto de tus habilidades Shout en un 10% y reduce su coste de Ira en un 5%.",
-      "Aumenta el área de efecto de tus habilidades Shout en un 20% y reduce su coste de Ira en un 10%.",
-      "Aumenta el área de efecto de tus habilidades Shout en un 30% y reduce su coste de Ira en un 15%.",
-      "Aumenta el área de efecto de tus habilidades Shout en un 40% y reduce su coste de Ira en un 20%.",
-      "Aumenta el área de efecto de tus habilidades Shout en un 50% y reduce su coste de Ira en un 25%."
+      "Aumenta el área de efecto de tus habilidades Shout en un 10% y reduce el coste de Ira de tus habilidades Shout y Howl en un 5%.",
+      "Aumenta el área de efecto de tus habilidades Shout en un 20% y reduce el coste de Ira de tus habilidades Shout y Howl en un 10%.",
+      "Aumenta el área de efecto de tus habilidades Shout en un 30% y reduce el coste de Ira de tus habilidades Shout y Howl en un 15%.",
+      "Aumenta el área de efecto de tus habilidades Shout en un 40% y reduce el coste de Ira de tus habilidades Shout y Howl en un 20%.",
+      "Aumenta el área de efecto de tus habilidades Shout en un 50% y reduce el coste de Ira de tus habilidades Shout y Howl en un 25%."
     ],
     "concussion-blow": [
       "Aturde al objetivo durante 5 segundos."
@@ -314,9 +308,9 @@
       "Tus golpes críticos hacen sangrar a tu oponente, infligiendo un 60% del daño medio de tu arma cuerpo a cuerpo durante 12 segundos."
     ],
     "defiance": [
-      "Aumenta toda la amenaza generada en Defensive stance en un 5% adicional mientras llevas un escudo equipado.",
-      "Aumenta toda la amenaza generada en Defensive stance en un 10% adicional mientras llevas un escudo equipado.",
-      "Aumenta toda la amenaza generada en Defensive stance en un 15% adicional mientras llevas un escudo equipado."
+      "Aumenta toda la amenaza generada en Defensive stance en un 7% adicional mientras llevas un escudo equipado.",
+      "Aumenta toda la amenaza generada en Defensive stance en un 13% adicional mientras llevas un escudo equipado.",
+      "Aumenta toda la amenaza generada en Defensive stance en un 20% adicional mientras llevas un escudo equipado."
     ],
     "deflection": [
       "Aumenta tu probabilidad de parar en un 1%.",
@@ -340,11 +334,9 @@
       "Te otorga un 30% de probabilidad de infligir un 10% más de daño físico durante 12 segundos tras ser víctima de cualquier ataque que inflija daño."
     ],
     "flurry": [
-      "Aumenta tu velocidad de ataque cuerpo a cuerpo en un 5% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
       "Aumenta tu velocidad de ataque cuerpo a cuerpo en un 10% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
-      "Aumenta tu velocidad de ataque cuerpo a cuerpo en un 15% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
       "Aumenta tu velocidad de ataque cuerpo a cuerpo en un 20% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo.",
-      "Aumenta tu velocidad de ataque cuerpo a cuerpo en un 25% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo."
+      "Aumenta tu velocidad de ataque cuerpo a cuerpo en un 30% durante tus siguientes 3 golpes tras infligir un golpe crítico cuerpo a cuerpo."
     ],
     "focused-rage": [
       "Reduce el coste de Ira de tus habilidades ofensivas en 1.",
@@ -422,8 +414,8 @@
       "Reduce el tiempo de reutilización de tu habilidad Shield Wall en 11.0 minutos."
     ],
     "improved-slam": [
-      "Reduce el tiempo de reutilización global y el tiempo de lanzamiento de tu habilidad Slam en 0.25 segundos. Además, Slam ya no interrumpe ni retrasa tu ataque cuerpo a cuerpo y el tiempo de reutilización de Slam se reduce en 3.0 segundos.",
-      "Reduce el tiempo de reutilización global y el tiempo de lanzamiento de tu habilidad Slam en 0.50 segundos. Además, Slam ya no interrumpe ni retrasa tu ataque cuerpo a cuerpo y el tiempo de reutilización de Slam se reduce en 3.0 segundos."
+      "Reduce el tiempo de reutilización de tu habilidad Slam en 2.5 segundos, el tiempo de lanzamiento y el tiempo de reutilización global en 0.25 segundos, y Slam ya no interrumpe ni retrasa tu ataque cuerpo a cuerpo.",
+      "Reduce el tiempo de reutilización de tu habilidad Slam en 5.0 segundos, el tiempo de lanzamiento y el tiempo de reutilización global en 0.50 segundos, y Slam ya no interrumpe ni retrasa tu ataque cuerpo a cuerpo."
     ],
     "improved-sunder-armor": [
       "Reduce el coste de Ira de tu habilidad Sunder Armor en 1.",
@@ -431,16 +423,18 @@
       "Reduce el coste de Ira de tu habilidad Sunder Armor en 3."
     ],
     "improved-tactical-mastery": [
-      "Tactical Mastery te permite conservar hasta 3 de Ira adicional cuando cambias de actitud.",
-      "Tactical Mastery te permite conservar hasta 6 de Ira adicional cuando cambias de actitud.",
-      "Tactical Mastery te permite conservar hasta 9 de Ira adicional cuando cambias de actitud.",
-      "Tactical Mastery te permite conservar hasta 12 de Ira adicional cuando cambias de actitud.",
+      "Tactical Mastery te permite conservar hasta 5 de Ira adicional cuando cambias de actitud.",
+      "Tactical Mastery te permite conservar hasta 10 de Ira adicional cuando cambias de actitud.",
       "Tactical Mastery te permite conservar hasta 15 de Ira adicional cuando cambias de actitud."
     ],
     "improved-thunder-clap": [
       "Reduce el coste de Ira de tu habilidad Thunder Clap en 2.",
       "Reduce el coste de Ira de tu habilidad Thunder Clap en 4.",
       "Reduce el coste de Ira de tu habilidad Thunder Clap en 6."
+    ],
+    "improved-whirlwind": [
+      "Reduce el tiempo de reutilización de tu habilidad Whirlwind en 1 segundo y aumenta el daño que inflige al enemigo más cercano en un 15%.",
+      "Reduce el tiempo de reutilización de tu habilidad Whirlwind en 2 segundos y aumenta el daño que inflige al enemigo más cercano en un 30%."
     ],
     "iron-will": [
       "Reduce la duración de los efectos de aturdimiento y miedo que recibes en un 3%.",
@@ -469,8 +463,8 @@
     "piercing-howl": [
       "Hace que todos los enemigos a menos de 10 metros queden bajo el efecto Dazed, reduciendo su velocidad de movimiento en un 50% durante 6 segundos."
     ],
-    "raging-blows": [
-      "Reduce el coste de Ira de tus habilidades Cleave y Whirlwind en 3."
+    "reckless-swings": [
+      "Tus siguientes 4 ataques cuerpo a cuerpo generan 5 de Ira adicional. Dura 8 segundos."
     ],
     "shield-slam": [
       "Golpea al objetivo con tu escudo, causando de 421 a 439 de daño, aumentado por tu valor de bloqueo, y tiene un 50% de probabilidad de disipar 1 efecto mágico del objetivo. Genera una cantidad de amenaza muy alta."
@@ -483,15 +477,15 @@
       "Aumenta tu probabilidad de bloquear ataques con tu escudo en un 5% y te otorga un 100% de probabilidad de generar 5 de Ira cuando bloqueas."
     ],
     "spearing-strike": [
-      "Un ataque brutal que inflige un 40% del daño de arma. Inflige un 80% de daño de arma adicional contra Gigantes, Dragonkin y objetivos montados. Los objetivos montados son desmontados."
+      "Un ataque brutal que inflige un 75% del daño de arma. Inflige un 75% de daño de arma adicional contra Gigantes, Dragonkin y objetivos montados. Los objetivos montados son desmontados."
     ],
     "sweeping-strikes": [
       "Tus siguientes 5 ataques cuerpo a cuerpo golpean a un oponente cercano adicional."
     ],
     "two-handed-weapon-specialization": [
-      "Aumenta el daño que infliges con armas cuerpo a cuerpo a dos manos en un 1%.",
       "Aumenta el daño que infliges con armas cuerpo a cuerpo a dos manos en un 2%.",
-      "Aumenta el daño que infliges con armas cuerpo a cuerpo a dos manos en un 3%."
+      "Aumenta el daño que infliges con armas cuerpo a cuerpo a dos manos en un 4%.",
+      "Aumenta el daño que infliges con armas cuerpo a cuerpo a dos manos en un 6%."
     ],
     "unbridled-wrath": [
       "Te otorga un 12% de probabilidad de generar 1 de Ira adicional cuando infliges daño cuerpo a cuerpo con un arma.",

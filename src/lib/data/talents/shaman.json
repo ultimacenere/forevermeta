@@ -1,14 +1,14 @@
 {
   "classId": "shaman",
-  "gameVersion": "1.60.1.70630",
+  "gameVersion": "1.60.1.70755",
   "source": {
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-11-02",
+    "fetched": "2026-11-05",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70630."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Shaman numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Shaman trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -23,16 +23,15 @@
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 2%.",
-            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 4%.",
-            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 6%.",
-            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 8%.",
-            "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 10%."
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 2%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 4%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 6%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 8%.",
+            "Reduces the mana cost of your Shock, Lightning Bolt, and Chain Lightning spells by 10%."
           ],
           "icon": "spell_nature_wispsplode",
           "classic": {
-            "status": "changed",
-            "text": "Reduces the mana cost of your Shock, Lightning Bolt and Chain Lightning spells by 2%."
+            "status": "same"
           }
         },
         {
@@ -97,9 +96,9 @@
           "col": 2,
           "maxRank": 3,
           "ranks": [
-            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.17 sec.",
-            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.33 sec.",
-            "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.50 sec."
+            "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.17 sec.",
+            "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.33 sec.",
+            "Reduces the cast time of your Lightning Bolt and Chain Lightning spells by 0.50 sec."
           ],
           "icon": "spell_lightning_lightningbolt01",
           "classic": {
@@ -114,9 +113,9 @@
           "col": 3,
           "maxRank": 3,
           "ranks": [
-            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
-            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
-            "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
+            "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 5%, as well as increases the duration of your Flame Shock spell by 3 sec.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 10%, as well as increases the duration of your Flame Shock spell by 6 sec.",
+            "Increases the damage done by your Fire Totems and by your Flame Shock and Fire Nova spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
           ],
           "icon": "spell_fire_immolation",
           "classic": {
@@ -178,9 +177,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 23% chance to not lose casting time when you take damage.",
-            "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 47% chance to not lose casting time when you take damage.",
-            "Gives your Lightning Bolt, Chain Lightning, and Lava Burst spells a 70% chance to not lose casting time when you take damage."
+            "Gives your Lightning Bolt and Chain Lightning spells a 23% chance to not lose casting time when you take damage.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 47% chance to not lose casting time when you take damage.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 70% chance to not lose casting time when you take damage."
           ],
           "icon": "spell_nature_eyeofthestorm",
           "classic": {
@@ -209,27 +208,13 @@
           "col": 0,
           "maxRank": 2,
           "ranks": [
-            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 3 yards and reduces the cooldown of Totemic Projection by 10 sec.",
-            "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards and reduces the cooldown of Totemic Projection by 20 sec."
+            "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 3 yards.",
+            "Increases the range of your Lightning Bolt, Chain Lightning, and Fire Nova spells by 6 yards."
           ],
           "icon": "spell_nature_stormreach",
           "classic": {
             "status": "changed",
             "text": "Increases the range of your Lightning Bolt and Chain Lightning spells by 3 yards."
-          }
-        },
-        {
-          "id": "lava-burst",
-          "name": "Lava Burst",
-          "row": 4,
-          "col": 1,
-          "maxRank": 1,
-          "ranks": [
-            "You hurl molten lava at the target, dealing 113 to 145 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
-          ],
-          "icon": "spell_shaman_lavaburst",
-          "classic": {
-            "status": "new"
           }
         },
         {
@@ -239,9 +224,9 @@
           "col": 2,
           "maxRank": 3,
           "ranks": [
-            "Gives your Lightning Bolt and Chain Lightning spells a 3% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
-            "Gives your Lightning Bolt and Chain Lightning spells a 7% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
-            "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+            "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 20% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat.",
+            "Gives your Lightning Bolt and Chain Lightning spells a 30% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
           ],
           "requires": {
             "id": "elemental-alacrity"
@@ -274,31 +259,58 @@
           }
         },
         {
-          "id": "elemental-mastery",
-          "name": "Elemental Mastery",
+          "id": "call-of-thunder",
+          "name": "Call of Thunder",
+          "row": 4,
+          "col": 1,
+          "maxRank": 1,
+          "ranks": [
+            "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by 5%."
+          ],
+          "icon": "spell_nature_callstorm",
+          "classic": {
+            "status": "changed",
+            "text": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by an additional 1%."
+          }
+        },
+        {
+          "id": "lightning-mastery",
+          "name": "Lightning Mastery",
           "row": 6,
           "col": 1,
           "maxRank": 1,
           "ranks": [
-            "Gain mastery over Fire and Lightning, reducing the cast time of Lightning Bolt and Lava Burst by 0.5 sec, and removing the cooldown from Chain Lightning. Lasts 15 sec."
+            "Gain mastery over Lightning, reducing the cast time of your Lightning Bolt spell by 0.5 sec, and removing the cooldown from your Chain Lightning spell. Lasts 15 sec."
           ],
           "requires": {
-            "id": "lava-burst"
+            "id": "call-of-thunder"
           },
-          "icon": "spell_nature_wispheal",
+          "icon": "spell_nature_unrelentingstorm",
           "classic": {
             "status": "changed",
             "text": "When activated, this spell gives your next Fire, Frost, or Nature damage spell a 100% critical strike chance and reduces the mana cost by 100%."
           }
         }
       ],
-      "removed": [
-        {
-          "name": "Call of Thunder",
-          "maxRank": 5,
-          "text": "Increases the critical strike chance of your Lightning Bolt and Chain Lightning spells by an additional 1%.",
-          "row": 2
-        }
+      "codeSlots": [
+        "convection",
+        "concussion",
+        "elemental-devastation",
+        "reverberation",
+        "elemental-alacrity",
+        "call-of-flame",
+        "elemental-focus",
+        "elemental-warding",
+        "trial-by-fire",
+        "eye-of-the-storm",
+        "earthbound",
+        "elemental-reach",
+        null,
+        "lightning-overload",
+        "elemental-fury",
+        null,
+        "call-of-thunder",
+        "lightning-mastery"
       ]
     },
     {
@@ -382,9 +394,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Increases your Attack Power by an amount equal to 33% of your Intellect.",
-            "Increases your Attack Power by an amount equal to 67% of your Intellect.",
-            "Increases your Attack Power by an amount equal to 100% of your Intellect."
+            "Increases your Attack Power by an amount equal to 50% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 100% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 150% of your Intellect."
           ],
           "icon": "spell_nature_mentalquickness",
           "classic": {
@@ -394,8 +406,8 @@
         {
           "id": "improved-ghost-wolf",
           "name": "Improved Ghost Wolf",
-          "row": 1,
-          "col": 2,
+          "row": 3,
+          "col": 3,
           "maxRank": 2,
           "ranks": [
             "Reduces the cast time of your Ghost Wolf spell by 1.0 sec, and Ghost Wolf may be used indoors.",
@@ -411,7 +423,7 @@
           "id": "improved-lightning-shield",
           "name": "Improved Lightning Shield",
           "row": 1,
-          "col": 3,
+          "col": 2,
           "maxRank": 3,
           "ranks": [
             "Increases the damage done by your Lightning Shield orbs by 5%.",
@@ -420,7 +432,8 @@
           ],
           "icon": "spell_nature_lightningshield",
           "classic": {
-            "status": "same"
+            "status": "moved",
+            "text": "Increases the damage done by your Lightning Shield orbs by 5%."
           }
         },
         {
@@ -497,11 +510,11 @@
           "col": 1,
           "maxRank": 5,
           "ranks": [
-            "Increases your attack speed by 5% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your attack speed by 10% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your attack speed by 15% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your attack speed by 20% for your next 3 swings after dealing a melee critical strike.",
-            "Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+            "Increases your attack speed by 6% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 12% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 18% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 24% for your next 3 swings after dealing a melee critical strike.",
+            "Increases your attack speed by 30% for your next 3 swings after dealing a melee critical strike."
           ],
           "requires": {
             "id": "mental-dexterity"
@@ -519,7 +532,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+            "Instantly strike for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
           ],
           "icon": "ability_shaman_stormstrike",
           "classic": {
@@ -911,7 +924,7 @@
           "col": 1,
           "maxRank": 1,
           "ranks": [
-            "Heals a friendly target for 485 to 533, an additional 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+            "Heals a friendly target for 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
           ],
           "requires": {
             "id": "healing-way"
