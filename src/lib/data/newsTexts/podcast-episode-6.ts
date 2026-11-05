@@ -7,7 +7,7 @@ const n = (en: string, it: string, es: string) => ({ en, it, es });
  * Episodio 6 del WoW: Forever Podcast, "All About Tech ft. Shobek", pubblicato da Blizzard il 29 ottobre 2026 alle
  * 16:15 UTC (articolo 24315819 in en-us, it-it ed es-es; video sul canale YouTube World of Warcraft, ID BVyhnixdPQg,
  * 68 minuti). L'articolo presenta solo gli ospiti e le didascalie del video non erano scaricabili: il contenuto viene
- * dai capitoli ufficiali del video e dai resoconti di Wowhead (383649, 383650, 383652), Icy Veins (tre articoli),
+ * dai capitoli ufficiali del video e dai resoconti di Wowhead (383649, 383650, 383652),
  * PCGamesN (1/11) e GameSpot (29/10), letti il 2/11. Dove le testate non concordano su chi ha detto una frase, il testo
  * scrive "gli sviluppatori". Da riascoltare sul video prima di dare le citazioni per verificate.
  */
@@ -21,8 +21,6 @@ const GOLIVE_ES = "https://news.blizzard.com/es-es/article/24315820/world-of-war
 const WH_REFRESH = "https://www.wowhead.com/news=383649/forced-world-refreshes-will-be-significantly-reduced-for-wow-forever";
 const WH_ZONES = "https://www.wowhead.com/news=383650/blizzard-working-on-top-layering-issues-in-wow-forever";
 const WH_OCE = "https://www.wowhead.com/news=383652/blizzard-addresses-day-and-night-cycle-issues-for-oceanic-players-in-wow-forever";
-const ICY_VEINS = "https://www.icy-veins.com/wow-forever/news/proximity-chat-day-night-cycles-the-wow-forever-podcast-ep-6/";
-const ICY_VEINS_HOLIDAYS = "https://www.icy-veins.com/wow-forever/news/blizzard-rebuilt-layering-so-wow-forever-holiday-events-run-smoothly/";
 const PCGAMESN = "https://www.pcgamesn.com/world-of-warcraft/forever-rule-sets-layering-world";
 const GAMESPOT = "https://www.gamespot.com/articles/wow-forever-wont-have-dead-servers/";
 const OCE_TOPIC = "https://us.forums.blizzard.com/en/wow/t/oce-vs-na-daynight-cycle-%E2%80%93-devs-want-your-feedback/2395850";
@@ -82,7 +80,7 @@ const item: NewsItem = {
     ],
   },
   body: n(
-    `On 29 October 2026 at 16:15 UTC Blizzard published [Watch the WoW: Forever Podcast: All About Tech](${ARTICLE}), the sixth episode of the official podcast, a 68-minute [video on the World of Warcraft YouTube channel](${VIDEO}). Blizzard's article only introduces the guests, and the video's captions could not be downloaded: what follows is reconstructed from the official chapters of the video and from the reports of Wowhead ([1](${WH_REFRESH}), [2](${WH_ZONES}), [3](${WH_OCE})), [Icy Veins](${ICY_VEINS}), [PCGamesN](${PCGAMESN}) and [GameSpot](${GAMESPOT}). Where the outlets do not agree on who said a sentence, we write "the developers".
+    `On 29 October 2026 at 16:15 UTC Blizzard published [Watch the WoW: Forever Podcast: All About Tech](${ARTICLE}), the sixth episode of the official podcast, a 68-minute [video on the World of Warcraft YouTube channel](${VIDEO}). Blizzard's article only introduces the guests, and the video's captions could not be downloaded: what follows is reconstructed from the official chapters of the video and from the reports of Wowhead ([1](${WH_REFRESH}), [2](${WH_ZONES}), [3](${WH_OCE})), [PCGamesN](${PCGAMESN}) and [GameSpot](${GAMESPOT}). Where the outlets do not agree on who said a sentence, we write "the developers".
 
 ## Who is on the episode {#guests}
 
@@ -94,9 +92,9 @@ On the tech side, Williams explained, as PCGamesN reports, that Forever was buil
 
 Layering runs several copies of the world to spread players out. According to Williams, as reported by Wowhead, the system tries to place you where it thinks your community is: players you have met, allied or rival guilds. In the beta the algorithm was "overaggressive" and moved players too often; a chart shown in the episode has the forced "world refreshes" falling over the weeks of the beta.
 
-The change you will notice at launch: **joining a group no longer moves you at once**. A warning appears with a **time window**, and you move when you are ready; forced moves should be **much less frequent** in general. Williams's example: you don't want to be moved while you are in a cave and find an elite standing right next to you. Resendez added that the technology keeps improving, and the developers said the last 24 hours of the beta gave them a lot of data (Icy Veins).
+The change you will notice at launch: **joining a group no longer moves you at once**. A warning appears with a **time window**, and you move when you are ready; forced moves should be **much less frequent** in general. Williams's example: you don't want to be moved while you are in a cave and find an elite standing right next to you. Resendez added that the technology keeps improving, and the developers said the last 24 hours of the beta gave them a lot of data.
 
-Holidays stay as players remember them at launch. According to [Icy Veins](${ICY_VEINS_HOLIDAYS}), Williams said that the layering and world-state systems were rebuilt so that events run smoothly, and that bigger changes to the holidays may come later.
+At launch the holidays stay as players remember them. Williams explained that the layering and world-state systems were rebuilt for them, so that events run smoothly; bigger changes to the holidays may come later.
 
 ## Zone borders stay, but the links can be tuned {#zones}
 
@@ -106,7 +104,7 @@ Resendez mentioned reports of players disappearing while looking from Orgrimmar 
 
 ## Ideas, not promises: mass PvP and bigger groups {#ideas}
 
-Shobek asked about groups of 80 to 120 players. Greenfield answered (PCGamesN) that the team has been thinking about letting players form an army of that size, or an alliance of several groups; Icy Veins sums up the tone as "never say never". Williams joked about a whiteboard on campus with "megaraid" written on it, and said Blizzard has considered detecting PvP battles automatically and expanding the servers a little to keep them in one piece.
+Shobek asked about groups of 80 to 120 players. Greenfield answered (PCGamesN) that the team has been thinking about letting players form an army of that size, or an alliance of several groups: not a promise, but not a no either. Williams joked about a whiteboard on campus with "megaraid" written on it, and said Blizzard has considered detecting PvP battles automatically and expanding the servers a little to keep them in one piece.
 
 Proximity chat, which players used at their own community events, is another idea with nothing to announce. On a way to make an unwanted player vanish from your world, Williams said he does not know whether it will ever come; the ignore list stays, Greenfield added, but it does not remove anyone from your world. None of this is announced for launch.
 
@@ -123,7 +121,7 @@ Oceanic players share the world with North America, and in-game day and night fo
 ## Hardcore and the next episode {#next}
 
 - **Hardcore**: talking about the warning before a layer change, Williams said it will matter "when Hardcore comes out shortly". It is not a date: Blizzard's [launch article](${GOLIVE}) of 29 October still says the ruleset arrives "sometime after launch".
-- **Next episode**: the last chapter of the video is "Podcast Back in 2 Weeks", and there is no episode in launch week. Icy Veins gives 12 November, on lore, but Blizzard has not announced a date.
+- **Next episode**: the last chapter of the video is "Podcast Back in 2 Weeks", and there is no episode in launch week. Two weeks from 29 October would be 12 November, but Blizzard has not announced a date.
 
 The previous episode, the end-of-beta special, is in our [article on episode 5](/en/news/podcast-episode-5-end-of-beta-special).
 
@@ -133,7 +131,7 @@ The previous episode, the end-of-beta special, is in our [article on episode 5](
 - **The other chapters**: name reservations, realm communities and faction locks were discussed, but the reports we read say little or nothing about them.
 - **How long the time window lasts** before a layer change, and which zones will be linked at launch.
 - **Day and night in Oceania** and the **emergency lever**: no decision, only questions and options.`,
-    `Il 29 ottobre 2026 alle 16:15 UTC (le 17:15 in Italia) Blizzard ha pubblicato [Guarda il WoW: Forever Podcast: tutto sulla tecnologia](${ARTICLE_IT}), il sesto episodio del podcast ufficiale, un [video di 68 minuti sul canale YouTube di World of Warcraft](${VIDEO}). L'articolo di Blizzard presenta solo gli ospiti e le didascalie del video non si potevano scaricare: quello che segue è ricostruito dai capitoli ufficiali del video e dai resoconti di Wowhead ([1](${WH_REFRESH}), [2](${WH_ZONES}), [3](${WH_OCE})), [Icy Veins](${ICY_VEINS}), [PCGamesN](${PCGAMESN}) e [GameSpot](${GAMESPOT}), tutti in inglese. Dove le testate non concordano su chi ha detto una frase, scriviamo "gli sviluppatori".
+    `Il 29 ottobre 2026 alle 16:15 UTC (le 17:15 in Italia) Blizzard ha pubblicato [Guarda il WoW: Forever Podcast: tutto sulla tecnologia](${ARTICLE_IT}), il sesto episodio del podcast ufficiale, un [video di 68 minuti sul canale YouTube di World of Warcraft](${VIDEO}). L'articolo di Blizzard presenta solo gli ospiti e le didascalie del video non si potevano scaricare: quello che segue è ricostruito dai capitoli ufficiali del video e dai resoconti di Wowhead ([1](${WH_REFRESH}), [2](${WH_ZONES}), [3](${WH_OCE})), [PCGamesN](${PCGAMESN}) e [GameSpot](${GAMESPOT}), tutti in inglese. Dove le testate non concordano su chi ha detto una frase, scriviamo "gli sviluppatori".
 
 ## Chi c'è nella puntata {#ospiti}
 
@@ -145,9 +143,9 @@ Sulla tecnologia, Williams ha spiegato, come riporta PCGamesN, che Forever è st
 
 Il layering fa girare più copie del mondo per distribuire i giocatori. Secondo Williams, come riporta Wowhead, il sistema cerca di metterti dove pensa che sia la tua comunità: giocatori che hai incontrato, gilde alleate o rivali. In beta l'algoritmo era "overaggressive", troppo zelante, e spostava i giocatori troppo spesso; un grafico mostrato nella puntata fa vedere i "world refresh" forzati che calano settimana dopo settimana.
 
-Il cambio che si noterà al lancio: **entrare in un gruppo non ti sposta più subito**. Compare un avviso con una **finestra di tempo**, e ti sposti quando sei pronto; in generale i cambi forzati saranno **molto meno frequenti**. L'esempio di Williams: non vuoi essere spostato mentre sei in una grotta e ritrovarti un élite accanto. Resendez ha aggiunto che la tecnologia continua a migliorare, e gli sviluppatori hanno detto che le ultime 24 ore di beta hanno dato loro moltissimi dati (Icy Veins).
+Il cambio che si noterà al lancio: **entrare in un gruppo non ti sposta più subito**. Compare un avviso con una **finestra di tempo**, e ti sposti quando sei pronto; in generale i cambi forzati saranno **molto meno frequenti**. L'esempio di Williams: non vuoi essere spostato mentre sei in una grotta e ritrovarti un élite accanto. Resendez ha aggiunto che la tecnologia continua a migliorare, e gli sviluppatori hanno detto che le ultime 24 ore di beta hanno dato loro moltissimi dati.
 
-Le feste restano come le ricordano i giocatori. Secondo [Icy Veins](${ICY_VEINS_HOLIDAYS}), Williams ha detto che i sistemi di layering e dello stato del mondo sono stati rifatti perché gli eventi girino senza intoppi, e che cambi più grandi alle feste potranno arrivare più avanti.
+Al lancio le feste restano come le ricordano i giocatori. Williams ha spiegato che per loro sono stati rifatti i sistemi di layering e dello stato del mondo, così che gli eventi girino senza intoppi; cambi più grandi alle feste potranno arrivare più avanti.
 
 ## I confini di zona restano, ma i collegamenti si regolano {#zone}
 
@@ -157,7 +155,7 @@ Resendez ha citato le segnalazioni di giocatori che sparivano guardando da Orgri
 
 ## Idee, non promesse: PvP di massa e gruppi più grandi {#idee}
 
-Shobek ha chiesto di gruppi da 80 a 120 giocatori. Greenfield ha risposto (PCGamesN) che il team ci sta pensando, come un esercito di quella misura o un'alleanza fra più gruppi; Icy Veins riassume il tono con "mai dire mai". Williams ha scherzato su una lavagna nella sede di Blizzard con scritto "megaraid", e ha detto che si è pensato di riconoscere in automatico le battaglie PvP e di allargare un po' i server per tenerle tutte insieme.
+Shobek ha chiesto di gruppi da 80 a 120 giocatori. Greenfield ha risposto (PCGamesN) che il team ci sta pensando, come un esercito di quella misura o un'alleanza fra più gruppi: non è una promessa, ma nemmeno un no. Williams ha scherzato su una lavagna nella sede di Blizzard con scritto "megaraid", e ha detto che si è pensato di riconoscere in automatico le battaglie PvP e di allargare un po' i server per tenerle tutte insieme.
 
 La chat di prossimità, che i giocatori usavano nei loro eventi, è un'altra idea senza niente da annunciare. Su un modo per far sparire dal proprio mondo un giocatore sgradito, Williams ha detto di non sapere se arriverà mai; la lista degli ignorati resta, ha aggiunto Greenfield, ma non toglie nessuno dal tuo mondo. Niente di tutto questo è annunciato per il lancio.
 
@@ -174,7 +172,7 @@ I giocatori dell'Oceania condividono il mondo con il Nord America, e il giorno e
 ## Hardcore e la prossima puntata {#prossimo}
 
 - **Hardcore**: parlando dell'avviso prima di un cambio di layer, Williams ha detto che conterà "quando Hardcore uscirà a breve" ("shortly"). Non è una data: l'[articolo del lancio](${GOLIVE_IT}) del 29 ottobre dice ancora che il set di regole arriverà "in un secondo momento dopo il lancio".
-- **Prossima puntata**: l'ultimo capitolo del video è "Podcast Back in 2 Weeks", e nella settimana del lancio non c'è un episodio. Icy Veins dà il 12 novembre, sul lore, ma Blizzard non ha annunciato una data.
+- **Prossima puntata**: l'ultimo capitolo del video è "Podcast Back in 2 Weeks", e nella settimana del lancio non c'è un episodio. Due settimane dal 29 ottobre fanno il 12 novembre, ma Blizzard non ha annunciato una data.
 
 La puntata precedente, lo speciale di fine beta, è nel nostro [articolo sull'episodio 5](/it/news/podcast-episode-5-end-of-beta-special).
 
@@ -184,7 +182,7 @@ La puntata precedente, lo speciale di fine beta, è nel nostro [articolo sull'ep
 - **Gli altri capitoli**: prenotazione dei nomi, comunità dei reami e blocchi di fazione sono stati discussi, ma i resoconti che abbiamo letto ne dicono poco o niente.
 - **Quanto dura la finestra di tempo** prima di un cambio di layer, e quali zone saranno collegate al lancio.
 - **Giorno e notte in Oceania** e **leva d'emergenza**: nessuna decisione, solo domande e possibilità.`,
-    `El 29 de octubre de 2026 a las 16:15 UTC (las 17:15 en España peninsular) Blizzard publicó [No te pierdas el pódcast de WoW: Forever sobre tecnología](${ARTICLE_ES}), el sexto episodio del pódcast oficial, un [vídeo de 68 minutos en el canal de YouTube de World of Warcraft](${VIDEO}). El artículo de Blizzard solo presenta a los invitados y los subtítulos del vídeo no se podían descargar: lo que sigue está reconstruido a partir de los capítulos oficiales del vídeo y de los resúmenes de Wowhead ([1](${WH_REFRESH}), [2](${WH_ZONES}), [3](${WH_OCE})), [Icy Veins](${ICY_VEINS}), [PCGamesN](${PCGAMESN}) y [GameSpot](${GAMESPOT}), todos en inglés. Cuando las webs no coinciden en quién dijo una frase, escribimos "los desarrolladores".
+    `El 29 de octubre de 2026 a las 16:15 UTC (las 17:15 en España peninsular) Blizzard publicó [No te pierdas el pódcast de WoW: Forever sobre tecnología](${ARTICLE_ES}), el sexto episodio del pódcast oficial, un [vídeo de 68 minutos en el canal de YouTube de World of Warcraft](${VIDEO}). El artículo de Blizzard solo presenta a los invitados y los subtítulos del vídeo no se podían descargar: lo que sigue está reconstruido a partir de los capítulos oficiales del vídeo y de los resúmenes de Wowhead ([1](${WH_REFRESH}), [2](${WH_ZONES}), [3](${WH_OCE})), [PCGamesN](${PCGAMESN}) y [GameSpot](${GAMESPOT}), todos en inglés. Cuando las webs no coinciden en quién dijo una frase, escribimos "los desarrolladores".
 
 ## Quién está en el episodio {#invitados}
 
@@ -196,9 +194,9 @@ Sobre la tecnología, Williams explicó, según PCGamesN, que Forever se constru
 
 El sistema de capas (layering) mantiene varias copias del mundo para repartir a los jugadores. Según Williams, tal como lo recoge Wowhead, el sistema intenta ponerte donde cree que está tu comunidad: jugadores que ya conoces y hermandades aliadas o rivales. En la beta el algoritmo era "overaggressive", demasiado agresivo, y movía a los jugadores con demasiada frecuencia; un gráfico del episodio muestra cómo bajan los "world refresh" forzados semana tras semana.
 
-El cambio que se notará en el lanzamiento: **unirse a un grupo ya no te cambia de capa al instante**. Aparece un aviso con un **margen de tiempo**, y te mueves cuando estés listo; en general, los cambios forzados serán **mucho menos frecuentes**. El ejemplo de Williams: no quieres que te muevan mientras estás en una cueva y encontrarte un élite justo al lado. Resendez añadió que la tecnología sigue mejorando, y los desarrolladores dijeron que las últimas 24 horas de beta les dieron muchísimos datos (Icy Veins).
+El cambio que se notará en el lanzamiento: **unirse a un grupo ya no te cambia de capa al instante**. Aparece un aviso con un **margen de tiempo**, y te mueves cuando estés listo; en general, los cambios forzados serán **mucho menos frecuentes**. El ejemplo de Williams: no quieres que te muevan mientras estás en una cueva y encontrarte un élite justo al lado. Resendez añadió que la tecnología sigue mejorando, y los desarrolladores dijeron que las últimas 24 horas de beta les dieron muchísimos datos.
 
-Las festividades siguen como las recuerdan los jugadores. Según [Icy Veins](${ICY_VEINS_HOLIDAYS}), Williams dijo que los sistemas de capas y de estado del mundo se rehicieron para que los eventos funcionen sin problemas, y que más adelante podrían llegar cambios mayores a las festividades.
+En el lanzamiento las festividades siguen como las recuerdan los jugadores. Williams explicó que para ellas se rehicieron los sistemas de capas y de estado del mundo, de modo que los eventos funcionen sin problemas; más adelante podrían llegar cambios mayores.
 
 ## Los límites de zona se quedan, pero las uniones se ajustan {#zonas}
 
@@ -208,7 +206,7 @@ Resendez citó los avisos de jugadores que desaparecían al mirar desde Orgrimma
 
 ## Ideas, no promesas: JcJ masivo y grupos más grandes {#ideas}
 
-Shobek preguntó por grupos de 80 a 120 jugadores. Greenfield respondió (PCGamesN) que el equipo lo está pensando, como un ejército de ese tamaño o una alianza de varios grupos; Icy Veins resume el tono con un "nunca digas nunca". Williams bromeó con una pizarra en la sede de Blizzard con "megaraid" escrito, y dijo que se ha pensado en detectar automáticamente las batallas JcJ y ampliar un poco los servidores para mantenerlas unidas.
+Shobek preguntó por grupos de 80 a 120 jugadores. Greenfield respondió (PCGamesN) que el equipo lo está pensando, como un ejército de ese tamaño o una alianza de varios grupos: no es una promesa, pero tampoco un no. Williams bromeó con una pizarra en la sede de Blizzard con "megaraid" escrito, y dijo que se ha pensado en detectar automáticamente las batallas JcJ y ampliar un poco los servidores para mantenerlas unidas.
 
 El chat de proximidad, que los jugadores usaban en sus eventos, es otra idea sin nada que anunciar. Sobre una forma de hacer desaparecer de tu mundo a un jugador molesto, Williams dijo que no sabe si llegará nunca; la lista de ignorados sigue, añadió Greenfield, pero no quita a nadie de tu mundo. Nada de esto está anunciado para el lanzamiento.
 
@@ -225,7 +223,7 @@ Los jugadores de Oceanía comparten el mundo con Norteamérica, y el día y la n
 ## Hardcore y el próximo episodio {#siguiente}
 
 - **Hardcore**: hablando del aviso antes de un cambio de capa, Williams dijo que será importante "cuando salga Hardcore, en breve" ("shortly"). No es una fecha: el [artículo del lanzamiento](${GOLIVE_ES}) del 29 de octubre sigue diciendo que ese conjunto de reglas llegará "en algún momento tras el lanzamiento".
-- **Próximo episodio**: el último capítulo del vídeo es "Podcast Back in 2 Weeks", y en la semana del lanzamiento no hay episodio. Icy Veins da el 12 de noviembre, sobre el lore, pero Blizzard no ha anunciado fecha.
+- **Próximo episodio**: el último capítulo del vídeo es "Podcast Back in 2 Weeks", y en la semana del lanzamiento no hay episodio. Dos semanas desde el 29 de octubre serían el 12 de noviembre, pero Blizzard no ha anunciado fecha.
 
 El episodio anterior, el especial de fin de beta, está en nuestro [artículo sobre el episodio 5](/es/news/podcast-episode-5-end-of-beta-special).
 

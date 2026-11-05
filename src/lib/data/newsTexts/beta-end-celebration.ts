@@ -77,7 +77,7 @@ Bringing the beta back that evening hit "a small snag", as Kaivax put it: player
 
 On 22 October at 10:00 a.m. PDT Kaivax opened the thread [The WoW Forever Beta Celebration is Underway](${POST}): for the last 24 hours Blizzard is "celebrating the joy and wonder of WoW Forever with 24 hours of shenanigans and upheaval" in seven starting zones, **Zephras Isle, Dun Morogh, Elwynn Forest, Teldrassil, Durotar, Tirisfal Glades and Mulgore**. The post invites testers to log in one last time and warns, in italics, that the celebration "almost certainly" includes items and experiences that **will not** be part of WoW Forever after launch.
 
-Blizzard did not publish the list of what happens. According to what players and the fan sites Wowhead and Icy Veins reported during the day, which we have not verified ourselves, creatures of every level were dropping raid-quality epics, vendors sold experience potions and world bosses such as Azuregos and Lord Kazzak appeared in the starting zones. Johanna Faries, Blizzard's president, mentioned Azuregos and Kazzak on X.
+Blizzard did not publish the list of what happens. According to what players and the fan site Wowhead reported during the day, which we have not verified ourselves, creatures of every level were dropping raid-quality epics, vendors sold experience potions and world bosses such as Azuregos and Lord Kazzak appeared in the starting zones. Johanna Faries, Blizzard's president, mentioned Azuregos and Kazzak on X.
 
 ## A quick restart in the middle {#restart}
 
@@ -110,7 +110,7 @@ Riaccendere la beta quella sera ha avuto "un piccolo intoppo", parole di Kaivax:
 
 Il 22 ottobre alle 10:00 PDT Kaivax ha aperto la discussione [The WoW Forever Beta Celebration is Underway](${POST}): per le ultime 24 ore Blizzard "festeggia la gioia e la meraviglia di WoW Forever con 24 ore di shenanigans e sconvolgimenti" in sette zone iniziali, **Zephras Isle, Dun Morogh, Elwynn Forest, Teldrassil, Durotar, Tirisfal Glades e Mulgore**. Il post invita i tester a entrare un'ultima volta e avverte, in corsivo, che la festa include "quasi certamente" oggetti ed esperienze che **non** faranno parte di WoW Forever dopo il lancio.
 
-Blizzard non ha pubblicato l'elenco di cosa succede. Secondo quello che giocatori e siti fan come Wowhead e Icy Veins hanno raccontato durante la giornata, e che non abbiamo verificato di persona, le creature di ogni livello lasciavano epici da raid, i venditori vendevano pozioni di esperienza e nelle zone iniziali comparivano boss del mondo come Azuregos e Lord Kazzak. Johanna Faries, presidente di Blizzard, ha citato Azuregos e Kazzak su X.
+Blizzard non ha pubblicato l'elenco di cosa succede. Secondo quello che giocatori e siti fan come Wowhead hanno raccontato durante la giornata, e che non abbiamo verificato di persona, le creature di ogni livello lasciavano epici da raid, i venditori vendevano pozioni di esperienza e nelle zone iniziali comparivano boss del mondo come Azuregos e Lord Kazzak. Johanna Faries, presidente di Blizzard, ha citato Azuregos e Kazzak su X.
 
 ## Un riavvio rapido nel mezzo {#riavvio}
 
@@ -143,7 +143,7 @@ Volver a encender la beta esa noche tuvo "un pequeño contratiempo", en palabras
 
 El 22 de octubre a las 10:00 PDT Kaivax abrió el hilo [The WoW Forever Beta Celebration is Underway](${POST}): durante las últimas 24 horas Blizzard "celebra la alegría y la maravilla de WoW Forever con 24 horas de shenanigans y desbarajuste" en siete zonas iniciales, **Isla de Zephras, Dun Morogh, Bosque de Elwynn, Teldrassil, Durotar, Claros de Tirisfal y Mulgore**. El mensaje invita a los probadores a entrar una última vez y avisa, en cursiva, de que la fiesta incluye "casi con seguridad" objetos y experiencias que **no** formarán parte de WoW Forever tras el lanzamiento.
 
-Blizzard no publicó la lista de lo que ocurre. Según lo que jugadores y webs de fans como Wowhead e Icy Veins contaron durante el día, y que no hemos comprobado nosotros, las criaturas de cualquier nivel soltaban épicos de banda, los vendedores vendían pociones de experiencia y en las zonas iniciales aparecían jefes de mundo como Azuregos y Lord Kazzak. Johanna Faries, presidenta de Blizzard, mencionó a Azuregos y Kazzak en X.
+Blizzard no publicó la lista de lo que ocurre. Según lo que jugadores y webs de fans como Wowhead contaron durante el día, y que no hemos comprobado nosotros, las criaturas de cualquier nivel soltaban épicos de banda, los vendedores vendían pociones de experiencia y en las zonas iniciales aparecían jefes de mundo como Azuregos y Lord Kazzak. Johanna Faries, presidenta de Blizzard, mencionó a Azuregos y Kazzak en X.
 
 ## Un reinicio rápido en medio {#reinicio}
 

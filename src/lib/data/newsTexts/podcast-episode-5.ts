@@ -6,7 +6,7 @@ const n = (en: string, it: string, es: string) => ({ en, it, es });
 /**
  * Episodio 5 del WoW: Forever Podcast, "End of Beta Special", pubblicato da Blizzard il 22 ottobre 2026 (articolo
  * "Dive into the End of Beta Special!", video sul canale YouTube World of Warcraft, ID uOlxa3xvNq4). Blizzard non ha
- * pubblicato una trascrizione: le citazioni qui sotto sono quelle riportate da Wowhead e Icy Veins il 22 ottobre, e la
+ * pubblicato una trascrizione: le citazioni qui sotto sono quelle riportate da Wowhead e altri siti fan il 22 ottobre, e la
  * news lo dice. Da riascoltare sul video prima di darle per verificate.
  */
 const ARTICLE = "https://news.blizzard.com/en-us/article/24302577/dive-into-the-end-of-beta-special";
@@ -61,7 +61,7 @@ const item: NewsItem = {
     ],
   },
   body: n(
-    `On 22 October 2026 Blizzard published [Dive into the End of Beta Special!](${ARTICLE}), the fifth episode of the WoW: Forever Podcast, on the [World of Warcraft YouTube channel](${VIDEO}). It was planned as the last one, timed with the end of the beta on 23 October. Blizzard's article only lists the guests; what was said in the episode has been reported by Wowhead and Icy Veins, and that is where the quotes below come from. We have not transcribed the video yet.
+    `On 22 October 2026 Blizzard published [Dive into the End of Beta Special!](${ARTICLE}), the fifth episode of the WoW: Forever Podcast, on the [World of Warcraft YouTube channel](${VIDEO}). It was planned as the last one, timed with the end of the beta on 23 October. Blizzard's article only lists the guests; what was said in the episode comes from the reports of fan sites, Wowhead first of all, and that is where the quotes below come from. We have not transcribed the video yet.
 
 ## Who is on the episode {#guests}
 
@@ -79,15 +79,15 @@ Asked about his favourite fights of the first tier, Nuthals teased three: a boss
 
 ## The podcast continues {#continues}
 
-Icy Veins noticed a message in the background of the set: "The Podcast WILL Continue". The show had been planned as five episodes, one per week of beta. Greenfield hinted that a future episode would be about server infrastructure. Icy Veins also lists the episode's themes: the beta, who WoW Forever is made for, and secrets that have not been discovered yet.
+The show had been planned as five episodes, one per week of beta, but a message in the background of the set said otherwise: "The Podcast WILL Continue". Greenfield hinted that a future episode would be about server infrastructure. The rest of the episode covered the beta, the players WoW Forever is made for, and secrets that have not been discovered yet.
 
 ## What we don't know yet {#unknown}
 
-- **The exact words**: everything above is reported by Wowhead and Icy Veins; Blizzard has published no transcript, and we will check the quotes against the video.
+- **The exact words**: everything above comes from fan-site reports; Blizzard has published no transcript, and we will check the quotes against the video.
 - **Molten Core's mechanics and date**: nothing official beyond "reimagined".
 - **The "manor"**: Blizzard has not named it or said whether it is a dungeon or a raid.
 - **When the next episode comes out**, now that the beta is over.`,
-    `Il 22 ottobre 2026 Blizzard ha pubblicato [Dive into the End of Beta Special!](${ARTICLE}), il quinto episodio del WoW: Forever Podcast, sul [canale YouTube di World of Warcraft](${VIDEO}). Era previsto come l'ultimo, in coincidenza con la fine della beta del 23 ottobre. L'articolo di Blizzard elenca solo gli ospiti; quello che è stato detto nella puntata lo hanno riportato Wowhead e Icy Veins, ed è da lì che vengono le citazioni qui sotto. Non abbiamo ancora trascritto il video.
+    `Il 22 ottobre 2026 Blizzard ha pubblicato [Dive into the End of Beta Special!](${ARTICLE}), il quinto episodio del WoW: Forever Podcast, sul [canale YouTube di World of Warcraft](${VIDEO}). Era previsto come l'ultimo, in coincidenza con la fine della beta del 23 ottobre. L'articolo di Blizzard elenca solo gli ospiti; quello che è stato detto nella puntata viene dai resoconti dei siti fan, Wowhead in testa, ed è da lì che vengono le citazioni qui sotto. Non abbiamo ancora trascritto il video.
 
 ## Chi c'è nella puntata {#ospiti}
 
@@ -105,15 +105,15 @@ Sui suoi scontri preferiti del primo tier, Nuthals ne ha anticipati tre: un boss
 
 ## Il podcast continua {#continua}
 
-Icy Veins ha notato una scritta sullo sfondo del set: "The Podcast WILL Continue". Lo show era previsto in cinque puntate, una per settimana di beta. Greenfield ha accennato a una puntata futura sull'infrastruttura dei server. Icy Veins elenca anche i temi della puntata: la beta, per chi è fatto WoW Forever e i segreti che non sono ancora stati scoperti.
+Lo show era previsto in cinque puntate, una per settimana di beta, ma una scritta sullo sfondo del set diceva altro: "The Podcast WILL Continue". Greenfield ha accennato a una puntata futura sull'infrastruttura dei server. Nel resto della puntata si è parlato della beta, dei giocatori a cui è pensato WoW Forever e dei segreti non ancora scoperti.
 
 ## Cosa non sappiamo ancora {#non-sappiamo}
 
-- **Le parole esatte**: tutto quello che c'è sopra è riportato da Wowhead e Icy Veins; Blizzard non ha pubblicato una trascrizione, e confronteremo le citazioni con il video.
+- **Le parole esatte**: tutto quello che c'è sopra viene dai resoconti dei siti fan; Blizzard non ha pubblicato una trascrizione, e confronteremo le citazioni con il video.
 - **Meccaniche e data di Molten Core**: niente di ufficiale oltre a "reimagined".
 - **La "magione"**: Blizzard non l'ha nominata e non ha detto se sia un dungeon o un raid.
 - **Quando esce la prossima puntata**, ora che la beta è finita.`,
-    `El 22 de octubre de 2026 Blizzard publicó [Dive into the End of Beta Special!](${ARTICLE}), el quinto episodio del WoW: Forever Podcast, en el [canal de YouTube de World of Warcraft](${VIDEO}). Estaba previsto como el último, coincidiendo con el final de la beta el 23 de octubre. El artículo de Blizzard solo enumera a los invitados; lo que se dijo en el episodio lo han recogido Wowhead e Icy Veins, y de ahí salen las citas de abajo. Todavía no hemos transcrito el vídeo.
+    `El 22 de octubre de 2026 Blizzard publicó [Dive into the End of Beta Special!](${ARTICLE}), el quinto episodio del WoW: Forever Podcast, en el [canal de YouTube de World of Warcraft](${VIDEO}). Estaba previsto como el último, coincidiendo con el final de la beta el 23 de octubre. El artículo de Blizzard solo enumera a los invitados; lo que se dijo en el episodio lo han recogido webs de fans, con Wowhead a la cabeza, y de ahí salen las citas de abajo. Todavía no hemos transcrito el vídeo.
 
 ## Quién está en el episodio {#invitados}
 
@@ -131,11 +131,11 @@ Sobre sus combates favoritos del primer tier, Nuthals adelantó tres: un jefe en
 
 ## El pódcast sigue {#sigue}
 
-Icy Veins se fijó en un mensaje del fondo del plató: "The Podcast WILL Continue". El programa estaba previsto en cinco episodios, uno por semana de beta. Greenfield insinuó que un episodio futuro tratará de la infraestructura de servidores. Icy Veins enumera también los temas del episodio: la beta, para quién está hecho WoW Forever y los secretos que aún no se han descubierto.
+El programa estaba previsto en cinco episodios, uno por semana de beta, pero un mensaje en el fondo del plató decía otra cosa: "The Podcast WILL Continue". Greenfield insinuó que un episodio futuro tratará de la infraestructura de servidores. En el resto del episodio se habló de la beta, de los jugadores para los que está pensado WoW Forever y de los secretos que aún no se han descubierto.
 
 ## Lo que aún no sabemos {#no-sabemos}
 
-- **Las palabras exactas**: todo lo anterior lo recogen Wowhead e Icy Veins; Blizzard no ha publicado transcripción, y compararemos las citas con el vídeo.
+- **Las palabras exactas**: todo lo anterior sale de resúmenes de webs de fans; Blizzard no ha publicado transcripción, y compararemos las citas con el vídeo.
 - **Mecánicas y fecha del Núcleo de Magma**: nada oficial más allá de "reimagined".
 - **La "mansión"**: Blizzard no la ha nombrado ni ha dicho si es una mazmorra o una banda.
 - **Cuándo sale el próximo episodio**, ahora que la beta ha terminado.`,
