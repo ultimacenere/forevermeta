@@ -281,6 +281,38 @@ export const media = {
       "Fotograma de la cinemática de World of Warcraft: Forever: un árbol gigantesco se alza sobre montañas entre la niebla, de noche, atravesado por corrientes azules luminosas",
     ),
   ),
+  newsKnownIssues: cover(
+    "/media/news-known-issues.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Dalaran at sunset: a stone road leads to white towers with pointed spires, among pines and red-leaved trees",
+      "Screenshot di World of Warcraft: Forever di Dalaran al tramonto: una strada di pietra porta a torri bianche dalle guglie appuntite, fra pini e alberi rossi",
+      "Captura de World of Warcraft: Forever de Dalaran al atardecer: un camino de piedra lleva a torres blancas de agujas afiladas, entre pinos y árboles rojos",
+    ),
+  ),
+  newsDayTwo: cover(
+    "/media/news-day-two.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the new water: ships moored at wooden piers in front of a white city, with waves in the foreground",
+      "Screenshot di World of Warcraft: Forever della nuova acqua: navi ormeggiate ai pontili di legno davanti a una città bianca, con le onde in primo piano",
+      "Captura de World of Warcraft: Forever del agua nueva: barcos amarrados a muelles de madera ante una ciudad blanca, con olas en primer plano",
+    ),
+  ),
+  newsLordaeronQuests: cover(
+    "/media/news-lordaeron-quests.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Ruins of Lordaeron dungeon: an abomination among ruined stone walls and pines under a green sky",
+      "Screenshot di World of Warcraft: Forever del dungeon Ruins of Lordaeron: un abominio fra mura di pietra in rovina e pini sotto un cielo verde",
+      "Captura de World of Warcraft: Forever de la mazmorra Ruins of Lordaeron: una abominación entre muros de piedra en ruinas y pinos bajo un cielo verde",
+    ),
+  ),
+  newsRulesetsVideo: cover(
+    "/media/news-rulesets-video.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Darnassus with the new lighting: a character sits on a stone terrace before a pool, domed pavilions and violet trees",
+      "Screenshot di World of Warcraft: Forever di Darnassus con la nuova illuminazione: un personaggio seduto su una terrazza di pietra davanti a una vasca, padiglioni a cupola e alberi viola",
+      "Captura de World of Warcraft: Forever de Darnassus con la nueva iluminación: un personaje sentado en una terraza de piedra ante un estanque, pabellones con cúpula y árboles violetas",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

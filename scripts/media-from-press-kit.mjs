@@ -55,6 +55,11 @@ const jobs = [
   [`${S}/WoW_Forever_SCENIC_Announce_Camping_Players_064.jpg`, "news-launch-day.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_SCENIC_Announce_NewLighting_Ashenvale_051.jpg`, "news-taldramir.webp", 1600, 900, "centre"],
   [`${C}/WoW_Forever_Cinematic_Still_5.jpeg`, "news-eve-guides.webp", 1600, 900, "centre"],
+  // copertine delle news del 5/11 (6/11/2026)
+  [`${S}/WoW_Camelot_Announce_Zones_Dalaran_021.jpg`, "news-known-issues.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_Announce_Zones_NewWater_009.jpg`, "news-day-two.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_SCENIC_Announce_Dungeon_Lordaeron_046.png`, "news-lordaeron-quests.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_SCENIC_Announce_NewLighting_Darnassus_052.png`, "news-rulesets-video.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_Hyjal_085.jpg`, "hyjal.webp", 1600, 900, "centre"],

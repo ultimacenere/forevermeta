@@ -23,6 +23,10 @@ import devNotesNov2 from "./newsTexts/development-notes-november-2";
 import eveGuides from "./newsTexts/launch-eve-official-guides";
 import launchDay from "./newsTexts/launch-day-november-4";
 import taldramir from "./newsTexts/taldramir-violet-dust-twitch";
+import knownIssuesNov5 from "./newsTexts/known-issues-november-5";
+import dayTwo from "./newsTexts/day-two-layering-portals-maintenance";
+import firstWeekTips from "./newsTexts/first-week-tips-groups-escorts-lordaeron";
+import rulesetsVideo from "./newsTexts/rulesets-video-faction-limits";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -225,4 +229,8 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   eveGuides,
   launchDay,
   taldramir,
+  knownIssuesNov5,
+  dayTwo,
+  firstWeekTips,
+  rulesetsVideo,
 ];
