@@ -4,12 +4,16 @@ export const guide: GuideEntry = {
   slug: "wow-forever-rulesets",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-11-02",
+  updated: "2026-11-06",
   cover: { word: "Rulesets", tone: "gold" },
   sources: [
     {
       label: "Choose Your Ruleset in World of Warcraft: Forever (Blizzard News, September 21, 2026, updated October 22)",
       url: "https://news.blizzard.com/en-us/article/24302070/updated-10-22-choose-your-ruleset-in-world-of-warcraft-forever",
+    },
+    {
+      label: "Rulesets | World of Warcraft: Forever (Blizzard video, November 5, 2026)",
+      url: "https://www.youtube.com/watch?v=7ZmA4Jy6ixU",
     },
     {
       label: "The Roleplay-PvP Ruleset is Coming to WoW Forever (Aggrend, Blizzard forums, October 22, 2026)",
@@ -85,7 +89,7 @@ export const guide: GuideEntry = {
       imageAlt: "ForeverMeta typographic cover with the word «Rulesets» in gold on a midnight blue background",
       body: `World of Warcraft: Forever has no realms to choose from: when you create a character you pick a ruleset instead. There are five of them: Normal, PvP, Roleplaying, Roleplay-PvP (added on October 22, 2026) and Hardcore, and Hardcore will only arrive some time after launch. Your choice decides who you can group with, and you cannot change it later.
 
-Most of what follows comes from Blizzard's article "Choose Your Ruleset in World of Warcraft: Forever" of September 21, 2026 (updated on October 22), the BlizzCon Deep Dive panel recap of September 13, the forum post of October 22 in which Josh "Aggrend" Greenfield announced the Roleplay-PvP ruleset and the New Player's Starter Guide of October 28. What Blizzard developers said in the podcast of October 29 and in interviews reached us through the press, and we say so each time.
+Most of what follows comes from Blizzard's article "Choose Your Ruleset in World of Warcraft: Forever" of September 21, 2026 (updated on October 22), the BlizzCon Deep Dive panel recap of September 13, the forum post of October 22 in which Josh "Aggrend" Greenfield announced the Roleplay-PvP ruleset, the New Player's Starter Guide of October 28 and the video Blizzard published on November 5, the day after launch (it says PvE where the game's list says Normal). What Blizzard developers said in the podcast of October 29 and in interviews reached us through the press, and we say so each time.
 
 ## The five rulesets at a glance {#at-a-glance}
 
@@ -103,14 +107,19 @@ Blizzard does not call any ruleset the best one, and neither do we: each is desc
 
 ## Roleplay-PvP, added on October 22 {#roleplay-pvp}
 
-In episode 4 of the WoW Forever Podcast (October 15) Blizzard had explained why it did not plan a Roleplay-PvP ruleset: the roleplaying community is small, and splitting it in a realmless game that needs a critical mass of players had to be weighed carefully. On October 22, Josh "Aggrend" Greenfield announced on the official forum that the team had examined what it would take "and decided to go for it": a Roleplay-PvP ruleset will be available at launch on November 4. It has been selectable since Early Name Reservation opened on October 27: that day Kaivax warned Oceanic players about a bug and told them to create their characters "on Roleplay or Roleplay-PvP rulesets" first. The Starter Guide of October 28 and the launch article of October 29 list it among the four rulesets available at launch, with the description in the table above. Beyond that description, Blizzard has not published rules specific to it; the story is in our [news on the announcement](/en/news/roleplay-pvp-ruleset-at-launch).
+In episode 4 of the WoW Forever Podcast (October 15) Blizzard had explained why it did not plan a Roleplay-PvP ruleset: the roleplaying community is small, and splitting it in a realmless game that needs a critical mass of players had to be weighed carefully. On October 22, Josh "Aggrend" Greenfield announced on the official forum that the team had examined what it would take "and decided to go for it": a Roleplay-PvP ruleset will be available at launch on November 4. It has been selectable since Early Name Reservation opened on October 27: that day Kaivax warned Oceanic players about a bug and told them to create their characters "on Roleplay or Roleplay-PvP rulesets" first. The Starter Guide of October 28 and the launch article of October 29 list it among the four rulesets available at launch, with the description in the table above. Beyond that description, Blizzard has not published rules specific to it: the video of November 5 leaves it out, and the video's description only confirms that the ruleset exists. The story is in our [news on the announcement](/en/news/roleplay-pvp-ruleset-at-launch).
 
 ## No realms: each ruleset is its own world {#no-realms}
 
-Forever is realmless. You do not pick a server; you pick a ruleset, and each ruleset is a separate ecosystem. In practice:
+Forever is realmless. You do not pick a server; you pick a ruleset, and each ruleset is a separate ecosystem. In its video of November 5 ([our summary](/en/news/rulesets-video-faction-limits)) Blizzard explains why: realms built strong communities, but players tended to crowd onto the most populated ones, even when another realm suited their style better. Now you choose how you play rather than where, and the goal, Blizzard says, is not one giant server but to make it easier for people who play by the same rules to meet.
+
+In practice:
 
 - **Groups, guilds, dungeons and raids** only bring together players on the same ruleset and of the same faction, as the Starter Guide of October 28 puts it. If you want to play with friends, agree on both choices before you create your characters.
 - **Battlegrounds** are the exception: they may include players from other rulesets, but not from Hardcore.
+- **The outdoor world** always follows the rules of your ruleset: you cannot flip between PvE and PvP rules as you like. Blizzard says this is deliberate, because outdoor PvP only works if everyone in that world has accepted the same risk.
+- **Auction house, trade and guilds** stay inside a ruleset: anyone on Normal can trade with anyone else on Normal in the region, the same goes for PvP, and the two economies never mix.
+- **Roleplaying** has its own outdoor world: its players do not share zone copies with those on Normal or PvP, and anyone who wants combat in their story can still flag for PvP.
 
 In the podcast of October 29, Josh "Aggrend" Greenfield said the rulesets will stay separate. If one day the Roleplaying or Roleplay-PvP population could no longer sustain itself, Blizzard has "options", for example linking their auction houses or letting them group for instanced content (quoted by GameSpot). It is an emergency lever Blizzard says it would only pull if really needed, not a plan or a promise.
 
@@ -118,7 +127,7 @@ In the podcast of October 29, Josh "Aggrend" Greenfield said the rulesets will s
 
 A character stays on the ruleset where it was created. To play on another ruleset you have to create a new character.
 
-There is one exception, and it goes in one direction only: a **Hardcore character that dies** can transfer to another ruleset, PvP included.
+There is one exception, and it goes in one direction only: a **Hardcore character that dies** can transfer to another ruleset, PvP included. In the video of November 5 Blizzard says it can go to any of the three non-Hardcore rulesets it presents (Normal, PvP and Roleplaying), where in the past fallen Hardcore characters could only return to PvE. The faction rule still applies: you cannot move a dead Horde character to PvP if you already have Alliance characters there. Whether Roleplay-PvP is also an option is not stated, because the video does not cover that ruleset.
 
 ## What carries across your account {#account-wide}
 
@@ -128,13 +137,13 @@ The Legacy System article of September 23 confirms that Hardcore will not be the
 
 ## Factions on the PvP ruleset {#pvp-factions}
 
-On the **PvP** ruleset each account can play only one faction: once you create an Alliance character there, you cannot create a Horde character on that ruleset (and the other way round). On Normal, Roleplaying and Hardcore you can have characters of both factions.
+On the **PvP** ruleset each account can play only one faction: once you create an Alliance character there, you cannot create a Horde character on that ruleset (and the other way round). The video of November 5 says the choice applies across your entire regional PvP ruleset, and that there is no second PvP space for the other side. On Normal, Roleplaying and Hardcore you can have characters of both factions.
 
 Kris Zierhut, Principal Designer, confirmed it to Mein-MMO (interview published on October 28): on PvP the faction balance is enforced strictly, and a Horde character there rules out an Alliance one. He added that in the beta the split was about 51.7% Horde and 48.3% Alliance. This comes from the press, not from a Blizzard article.
 
-Blizzard also mentions faction balancing systems "similar to the approach introduced in Season of Discovery", where creating new characters of one faction could be limited for a while. Since the end of October players on the official forums report that creating a Horde character on PvP is at times refused with the message "This faction is currently unavailable on this ruleset due to population imbalance". Blizzard has not commented, so how often and for how long it happens is not confirmed.
+Blizzard also mentions faction balancing systems "similar to the approach introduced in Season of Discovery", where creating new characters of one faction could be limited for a while. The video of November 5 confirms it: Forever introduces **temporary restrictions on character creation** when an imbalance starts to affect the experience, with adjustments meant to touch individual players as little as possible. The reason given is that in the past one faction would grow to outnumber the other and PvP servers ended up feeling one-sided. Since the end of October players on the official forums report that creating a Horde character on PvP is at times refused with the message "This faction is currently unavailable on this ruleset due to population imbalance". The video does not mention that message and gives no thresholds or durations, so how often and for how long it happens is not confirmed; there is more in our [news on the Horde locks](/en/news/name-filter-fix-faction-locks).
 
-On **Roleplay-PvP** Blizzard has not said whether the one-faction rule applies. A few forum reports point that way, but they are unconfirmed and partly look like bugs. The races and classes of each faction are in our guide to [races and classes](/en/guides/wow-forever-races-classes).
+On **Roleplay-PvP** Blizzard has not said whether the one-faction rule applies, and the video of November 5 does not cover that ruleset. A few forum reports point that way, but they are unconfirmed and partly look like bugs. The races and classes of each faction are in our guide to [races and classes](/en/guides/wow-forever-races-classes).
 
 ## Layering: what changes at launch {#layering}
 
@@ -166,16 +175,18 @@ These are not recommendations, just the facts that weigh on the choice:
 
 - your friends need to be on the same ruleset and the same faction to group up, join your guild, run dungeons and raid with you;
 - on PvP your account commits to one faction, and creating characters of one faction can be limited for a while to keep the balance;
+- your auction house, trade and guilds stay inside your ruleset;
 - the ruleset cannot be changed afterwards;
-- Hardcore will not be available on November 4;
+- Hardcore is not available yet and has no date;
 - Roleplay-PvP is there from launch, but whether it has the one-faction rule is not official.
 
 ## What we don't know yet {#unknowns}
 
 - **When Hardcore arrives**: Blizzard only says "sometime after launch".
-- **How faction balancing works** in Forever: only the comparison with Season of Discovery is official; the thresholds and duration of the limits players are seeing on PvP have not been published.
+- **How faction balancing works** in Forever: the comparison with Season of Discovery and the temporary limits on character creation are official; their thresholds and duration have not been published.
 - **How the language preference is used**: Blizzard says you will meet players who share it, not how (for example in the Group Finder that appears in the beta notes).
-- **Roleplay-PvP and factions**: whether the PvP limit of one faction per account applies there too. Blizzard's ruleset article talks about "the PvP rulesets", in the plural, when it explains faction balance, but it states the one-faction rule only for "the PvP ruleset".
+- **Roleplay-PvP and factions**: whether the PvP limit of one faction per account applies there too. Blizzard's ruleset article talks about "the PvP rulesets", in the plural, when it explains faction balance, but it states the one-faction rule only for "the PvP ruleset", and the video of November 5 does not cover Roleplay-PvP.
+- **Fallen Hardcore characters and Roleplay-PvP**: the video speaks of three rulesets they can go to, and Roleplay-PvP is not one of those it presents.
 - **Merging rulesets**: the shared auction houses or groups mentioned in the podcast are only an option, with no date and no trigger announced.
 
 Localized names of the rulesets are in the [glossary](/en/glossary); more answers in the [FAQ](/en/faq).`,
@@ -186,7 +197,7 @@ Localized names of the rulesets are in the [glossary](/en/glossary); more answer
         },
         {
           q: "Can I move my character to another ruleset?",
-          a: "No, you need a new character. The only exception is a Hardcore character that dies, which can transfer to another ruleset, PvP included.",
+          a: "No, you need a new character. The only exception is a Hardcore character that dies, which can transfer to another ruleset, PvP included, as long as the faction rule there allows it.",
         },
         {
           q: "Is Hardcore available at launch?",
@@ -194,7 +205,15 @@ Localized names of the rulesets are in the [glossary](/en/glossary); more answer
         },
         {
           q: "Can I play Horde and Alliance on the PvP ruleset?",
-          a: "Not on the same account: on PvP your first character fixes the faction, a rule Kris Zierhut also confirmed to Mein-MMO. On Normal and Roleplaying you can play both.",
+          a: "Not on the same account: on PvP your first character fixes the faction across your whole regional PvP ruleset, as Blizzard repeats in its video of November 5. On Normal and Roleplaying you can play both.",
+        },
+        {
+          q: "Why can't I create a character of one faction on PvP?",
+          a: "In its video of November 5 Blizzard confirms temporary restrictions on character creation when a faction imbalance starts to affect the experience. It gives no thresholds or durations.",
+        },
+        {
+          q: "Can players on different rulesets trade with each other?",
+          a: "No. The auction house, trade and guilds stay inside a ruleset: according to Blizzard's video of November 5, the economies never mix.",
         },
         {
           q: "Can I group with a friend of the other faction?",
@@ -210,7 +229,7 @@ Localized names of the rulesets are in the [glossary](/en/glossary); more answer
       imageAlt: "Copertina tipografica di ForeverMeta con la scritta «Rulesets» in oro su fondo blu notte",
       body: `In World of Warcraft: Forever non scegli un reame: quando crei un personaggio scegli un set di regole (ruleset). Sono cinque: Normal, PvP, Roleplaying, Roleplay-PvP (aggiunto il 22 ottobre 2026) e Hardcore, e Hardcore arriverà solo qualche tempo dopo il lancio. La scelta decide con chi puoi giocare in gruppo e non si cambia più.
 
-Quasi tutti i fatti qui sotto vengono dall'articolo di Blizzard "Scegli il tuo set di regole in World of Warcraft: Forever" del 21 settembre 2026 (aggiornato il 22 ottobre; ora anche la versione italiana elenca il Roleplay-PvP), dal riepilogo del pannello Deep Dive della BlizzCon del 13 settembre, dal post sul forum del 22 ottobre con cui Josh "Aggrend" Greenfield ha annunciato il set Roleplay-PvP e dalla guida per i nuovi giocatori del 28 ottobre. Quello che gli sviluppatori hanno detto nel podcast del 29 ottobre e nelle interviste ci arriva dalla stampa, e lo diciamo ogni volta.
+Quasi tutti i fatti qui sotto vengono dall'articolo di Blizzard "Scegli il tuo set di regole in World of Warcraft: Forever" del 21 settembre 2026 (aggiornato il 22 ottobre; ora anche la versione italiana elenca il Roleplay-PvP), dal riepilogo del pannello Deep Dive della BlizzCon del 13 settembre, dal post sul forum del 22 ottobre con cui Josh "Aggrend" Greenfield ha annunciato il set Roleplay-PvP, dalla guida per i nuovi giocatori del 28 ottobre e dal video che Blizzard ha pubblicato il 5 novembre, il giorno dopo il lancio (dice PvE dove l'elenco del gioco dice Normal). Quello che gli sviluppatori hanno detto nel podcast del 29 ottobre e nelle interviste ci arriva dalla stampa, e lo diciamo ogni volta.
 
 ## I cinque set di regole in breve {#in-breve}
 
@@ -228,14 +247,19 @@ Blizzard non dice quale sia il set di regole migliore, e non lo diciamo neanche 
 
 ## Roleplay-PvP, aggiunto il 22 ottobre {#roleplay-pvp}
 
-Nella puntata 4 del podcast di WoW Forever (15 ottobre) Blizzard aveva spiegato perché non prevedeva un set di regole Roleplay-PvP: la community del gioco di ruolo è piccola, e dividerla in un gioco senza reami, che ha bisogno di una massa critica di giocatori, andava valutato con attenzione. Il 22 ottobre Josh "Aggrend" Greenfield ha annunciato sul forum ufficiale che il team ha valutato cosa servisse "e ha deciso di farlo": un set di regole Roleplay-PvP sarà disponibile al lancio del 4 novembre. Si può scegliere da quando è partita la prenotazione dei nomi, il 27 ottobre: quel giorno Kaivax ha avvisato i giocatori dell'Oceania di un bug e ha detto loro di creare prima i personaggi "on Roleplay or Roleplay-PvP rulesets". La guida per i nuovi giocatori del 28 ottobre e l'articolo del lancio del 29 ottobre lo elencano fra i quattro set disponibili al lancio, con la descrizione della tabella qui sopra; la pagina italiana lo chiama Roleplay-PvP. Altre regole proprie del set Blizzard non le ha pubblicate; la storia è nella nostra [news sull'annuncio](/it/news/roleplay-pvp-ruleset-at-launch).
+Nella puntata 4 del podcast di WoW Forever (15 ottobre) Blizzard aveva spiegato perché non prevedeva un set di regole Roleplay-PvP: la community del gioco di ruolo è piccola, e dividerla in un gioco senza reami, che ha bisogno di una massa critica di giocatori, andava valutato con attenzione. Il 22 ottobre Josh "Aggrend" Greenfield ha annunciato sul forum ufficiale che il team ha valutato cosa servisse "e ha deciso di farlo": un set di regole Roleplay-PvP sarà disponibile al lancio del 4 novembre. Si può scegliere da quando è partita la prenotazione dei nomi, il 27 ottobre: quel giorno Kaivax ha avvisato i giocatori dell'Oceania di un bug e ha detto loro di creare prima i personaggi "on Roleplay or Roleplay-PvP rulesets". La guida per i nuovi giocatori del 28 ottobre e l'articolo del lancio del 29 ottobre lo elencano fra i quattro set disponibili al lancio, con la descrizione della tabella qui sopra; la pagina italiana lo chiama Roleplay-PvP. Altre regole proprie del set Blizzard non le ha pubblicate: il video del 5 novembre non ne parla, e la descrizione del video conferma solo che il set esiste. La storia è nella nostra [news sull'annuncio](/it/news/roleplay-pvp-ruleset-at-launch).
 
 ## Niente reami: ogni set di regole è un mondo a sé {#niente-reami}
 
-Forever è "realmless": non scegli un server, scegli un set di regole, e ogni set è un ecosistema separato. In pratica:
+Forever è "realmless": non scegli un server, scegli un set di regole, e ogni set è un ecosistema separato. Nel video del 5 novembre ([il nostro riassunto](/it/news/rulesets-video-faction-limits)) Blizzard spiega perché: i reami hanno creato community forti, ma i giocatori tendevano ad ammassarsi su quelli più popolati, anche quando un altro reame era più adatto al loro stile. Ora scegli come giocare e non dove, e l'obiettivo, dice Blizzard, non è un unico server gigante ma rendere più facile incontrarsi per chi gioca con le stesse regole.
+
+In pratica:
 
 - **gruppi, gilde, dungeon (spedizioni) e raid (incursioni)** si fanno solo con chi ha lo stesso set di regole e la stessa fazione, come scrive la guida per i nuovi giocatori del 28 ottobre. Se vuoi giocare con gli amici, mettetevi d'accordo su tutte e due le scelte prima di creare i personaggi;
-- **i campi di battaglia** sono l'eccezione: possono mescolare giocatori di set diversi, ma non quelli di Hardcore.
+- **i campi di battaglia** sono l'eccezione: possono mescolare giocatori di set diversi, ma non quelli di Hardcore;
+- **il mondo esterno** segue sempre le regole del tuo set: non puoi passare dalle regole PvE a quelle PvP a piacere. Blizzard dice che è voluto, perché il PvP all'aperto funziona solo se tutti in quel mondo hanno accettato lo stesso rischio;
+- **casa d'aste, scambi e gilde** restano dentro un set di regole: chi gioca su Normal commercia con tutti quelli di Normal della regione, lo stesso vale per il PvP, e le due economie non si mescolano mai;
+- **il Roleplaying** ha un mondo esterno proprio: chi gioca lì non condivide le copie delle zone con i giocatori di Normal o PvP, e chi vuole il combattimento nella propria storia può comunque attivare il PvP.
 
 Nel podcast del 29 ottobre Josh "Aggrend" Greenfield ha detto che i set di regole resteranno separati. Se un giorno la popolazione del Roleplaying o del Roleplay-PvP non reggesse più, Blizzard ha "delle opzioni", per esempio unire le case d'asta dei due set o permettere i gruppi per le istanze (lo riporta GameSpot). È una leva d'emergenza che Blizzard dice di voler usare solo se proprio serve, non un piano né una promessa.
 
@@ -243,7 +267,7 @@ Nel podcast del 29 ottobre Josh "Aggrend" Greenfield ha detto che i set di regol
 
 Un personaggio resta sul set di regole in cui è nato. Per giocare su un altro devi creare un personaggio nuovo.
 
-C'è una sola eccezione, e va in una sola direzione: un **personaggio Hardcore che muore** può trasferirsi su un altro set di regole, PvP compreso.
+C'è una sola eccezione, e va in una sola direzione: un **personaggio Hardcore che muore** può trasferirsi su un altro set di regole, PvP compreso. Nel video del 5 novembre Blizzard dice che può andare su uno qualsiasi dei tre set non Hardcore che presenta (Normal, PvP e Roleplaying), mentre in passato i personaggi Hardcore caduti potevano tornare solo su PvE. La regola della fazione resta: non puoi spostare sul PvP un personaggio morto dell'Orda se lì hai già personaggi dell'Alleanza. Se fra le destinazioni ci sia anche il Roleplay-PvP non è detto, perché il video non parla di quel set.
 
 ## Cosa vale per tutto l'account {#account}
 
@@ -253,13 +277,13 @@ L'articolo sul Legacy System del 23 settembre conferma che Hardcore non ci sarà
 
 ## Le fazioni sul set PvP {#fazioni-pvp}
 
-Sul set **PvP** ogni account può giocare una sola fazione: se crei lì un personaggio dell'Alleanza, su quel set non potrai creare personaggi dell'Orda (e viceversa). Su Normal, Roleplaying e Hardcore puoi avere personaggi di tutte e due le fazioni.
+Sul set **PvP** ogni account può giocare una sola fazione: se crei lì un personaggio dell'Alleanza, su quel set non potrai creare personaggi dell'Orda (e viceversa). Il video del 5 novembre dice che la scelta vale per tutto il set PvP della tua regione e che non esiste un secondo spazio PvP per l'altra parte. Su Normal, Roleplaying e Hardcore puoi avere personaggi di tutte e due le fazioni.
 
 Kris Zierhut, Principal Designer, lo ha confermato a Mein-MMO (intervista pubblicata il 28 ottobre): sul PvP l'equilibrio delle fazioni è imposto in modo rigido, e un personaggio dell'Orda esclude un personaggio dell'Alleanza. Ha aggiunto che in beta la divisione era di circa 51,7% Orda e 48,3% Alleanza. Il dato arriva dalla stampa, non da un articolo di Blizzard.
 
-Blizzard parla anche di sistemi di bilanciamento delle fazioni "simili all'approccio introdotto in Season of Discovery", dove la creazione di personaggi nuovi di una fazione poteva essere limitata per un po'. Dalla fine di ottobre sul forum ufficiale i giocatori raccontano che a volte sul PvP la creazione di un personaggio dell'Orda viene rifiutata con il messaggio "This faction is currently unavailable on this ruleset due to population imbalance". Blizzard non ha commentato, quindi quanto spesso succeda e per quanto non è confermato.
+Blizzard parla anche di sistemi di bilanciamento delle fazioni "simili all'approccio introdotto in Season of Discovery", dove la creazione di personaggi nuovi di una fazione poteva essere limitata per un po'. Il video del 5 novembre lo conferma: Forever introduce **restrizioni temporanee alla creazione dei personaggi** quando uno squilibrio comincia a pesare sull'esperienza, con interventi che puntano a toccare il meno possibile i singoli giocatori. Il motivo indicato è che in passato una fazione finiva per superare l'altra e i server PvP diventavano sbilanciati. Dalla fine di ottobre sul forum ufficiale i giocatori raccontano che a volte sul PvP la creazione di un personaggio dell'Orda viene rifiutata con il messaggio "This faction is currently unavailable on this ruleset due to population imbalance". Il video non cita quel messaggio e non dà soglie né durate, quindi quanto spesso succeda e per quanto non è confermato; trovi di più nella nostra [news sui blocchi dell'Orda](/it/news/name-filter-fix-faction-locks).
 
-Sul **Roleplay-PvP** Blizzard non ha detto se valga la regola di una sola fazione. Alcune segnalazioni sul forum vanno in quella direzione, ma non sono confermate e in parte sembrano bug. Razze e classi di ogni fazione sono nella guida a [razze e classi](/it/guides/wow-forever-races-classes).
+Sul **Roleplay-PvP** Blizzard non ha detto se valga la regola di una sola fazione, e il video del 5 novembre non parla di quel set. Alcune segnalazioni sul forum vanno in quella direzione, ma non sono confermate e in parte sembrano bug. Razze e classi di ogni fazione sono nella guida a [razze e classi](/it/guides/wow-forever-races-classes).
 
 ## Il layering: cosa cambia al lancio {#layering}
 
@@ -291,16 +315,18 @@ Non sono consigli, solo i fatti che pesano sulla scelta:
 
 - per fare gruppo, entrare in gilda, fare dungeon e raid con gli amici dovete stare sullo stesso set di regole e nella stessa fazione;
 - sul PvP il tuo account sceglie una sola fazione, e la creazione di personaggi di una fazione può essere limitata per un po' per tenere l'equilibrio;
+- casa d'aste, scambi e gilde restano dentro il tuo set di regole;
 - il set di regole non si cambia dopo;
-- Hardcore non ci sarà il giorno del lancio;
+- Hardcore non c'è ancora e non ha una data;
 - Roleplay-PvP c'è dal lancio, ma che abbia la regola di una sola fazione non è ufficiale.
 
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
 - **Quando arriva Hardcore**: Blizzard dice solo "dopo il lancio".
-- **Come funziona il bilanciamento delle fazioni** in Forever: di ufficiale c'è solo il paragone con Season of Discovery; soglie e durata dei blocchi che i giocatori vedono sul PvP non sono pubblicate.
+- **Come funziona il bilanciamento delle fazioni** in Forever: di ufficiale ci sono il paragone con Season of Discovery e i limiti temporanei alla creazione dei personaggi; soglie e durata non sono pubblicate.
 - **Come si usa la lingua preferita**: Blizzard dice che incontrerai chi ha la stessa preferenza, non come (per esempio nel Group Finder che compare nelle note della beta).
-- **Roleplay-PvP e fazioni**: se il limite del PvP, una sola fazione per account, vale anche lì. Quando spiega l'equilibrio delle fazioni la versione inglese dell'articolo di Blizzard sui set di regole parla di "PvP rulesets", al plurale, ma la regola di una sola fazione la scrive solo per "the PvP ruleset".
+- **Roleplay-PvP e fazioni**: se il limite del PvP, una sola fazione per account, vale anche lì. Quando spiega l'equilibrio delle fazioni la versione inglese dell'articolo di Blizzard sui set di regole parla di "PvP rulesets", al plurale, ma la regola di una sola fazione la scrive solo per "the PvP ruleset", e il video del 5 novembre non parla di Roleplay-PvP.
+- **Personaggi Hardcore caduti e Roleplay-PvP**: il video parla di tre set di destinazione, e il Roleplay-PvP non è fra quelli che presenta.
 - **Set di regole uniti**: case d'asta o gruppi in comune, citati nel podcast, sono solo un'opzione, senza date né condizioni annunciate.
 
 I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); altre risposte nelle [FAQ](/it/faq).`,
@@ -311,7 +337,7 @@ I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); 
         },
         {
           q: "Posso spostare un personaggio su un altro set di regole?",
-          a: "No, serve un personaggio nuovo. L'unica eccezione è un personaggio Hardcore che muore: può trasferirsi su un altro set, PvP compreso.",
+          a: "No, serve un personaggio nuovo. L'unica eccezione è un personaggio Hardcore che muore: può trasferirsi su un altro set, PvP compreso, se lì la regola della fazione lo permette.",
         },
         {
           q: "Hardcore c'è al lancio?",
@@ -319,7 +345,15 @@ I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); 
         },
         {
           q: "Sul set PvP posso giocare sia Orda sia Alleanza?",
-          a: "Non con lo stesso account: sul PvP il primo personaggio decide la fazione, una regola che Kris Zierhut ha confermato anche a Mein-MMO. Su Normal e Roleplaying puoi giocarle tutte e due.",
+          a: "Non con lo stesso account: sul PvP il primo personaggio decide la fazione per tutto il set PvP della tua regione, come ripete Blizzard nel video del 5 novembre. Su Normal e Roleplaying puoi giocarle tutte e due.",
+        },
+        {
+          q: "Perché non riesco a creare un personaggio di una fazione sul PvP?",
+          a: "Nel video del 5 novembre Blizzard conferma restrizioni temporanee alla creazione dei personaggi quando uno squilibrio fra le fazioni comincia a pesare sull'esperienza. Non dà soglie né durate.",
+        },
+        {
+          q: "I giocatori di set di regole diversi possono commerciare fra loro?",
+          a: "No. Casa d'aste, scambi e gilde restano dentro un set di regole: secondo il video di Blizzard del 5 novembre le economie non si mescolano mai.",
         },
         {
           q: "Posso fare gruppo con un amico dell'altra fazione?",
@@ -335,7 +369,7 @@ I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); 
       imageAlt: "Portada tipográfica de ForeverMeta con la palabra «Rulesets» en dorado sobre fondo azul noche",
       body: `En World of Warcraft: Forever no eliges reino: al crear un personaje eliges un conjunto de reglas. Son cinco: Normal, JcJ, Rol, Rol-JcJ (añadido el 22 de octubre de 2026) y Hardcore, y Hardcore llegará algún tiempo después del lanzamiento. Tu elección decide con quién puedes agruparte y no se puede cambiar después.
 
-Casi todos los datos vienen del artículo de Blizzard del 21 de septiembre de 2026 sobre los conjuntos de reglas (actualizado el 22 de octubre; ahora también la versión española incluye el Rol-JcJ), del resumen del "Repaso a fondo" de la BlizzCon (13 de septiembre), del mensaje en el foro del 22 de octubre con el que Josh "Aggrend" Greenfield anunció el conjunto Rol-JcJ y de la guía para nuevos jugadores del 28 de octubre. Lo que los desarrolladores dijeron en el pódcast del 29 de octubre y en entrevistas nos llega a través de la prensa, y lo indicamos cada vez.
+Casi todos los datos vienen del artículo de Blizzard del 21 de septiembre de 2026 sobre los conjuntos de reglas (actualizado el 22 de octubre; ahora también la versión española incluye el Rol-JcJ), del resumen del "Repaso a fondo" de la BlizzCon (13 de septiembre), del mensaje en el foro del 22 de octubre con el que Josh "Aggrend" Greenfield anunció el conjunto Rol-JcJ, de la guía para nuevos jugadores del 28 de octubre y del vídeo que Blizzard publicó el 5 de noviembre, el día después del lanzamiento (dice JcE donde la lista del juego dice Normal). Lo que los desarrolladores dijeron en el pódcast del 29 de octubre y en entrevistas nos llega a través de la prensa, y lo indicamos cada vez.
 
 ## Los cinco conjuntos de reglas de un vistazo {#de-un-vistazo}
 
@@ -355,14 +389,19 @@ Blizzard no dice cuál es el mejor, y nosotros tampoco.
 
 ## Rol-JcJ, añadido el 22 de octubre {#rol-jcj}
 
-En el episodio 4 del pódcast de WoW Forever (15 de octubre) Blizzard había explicado por qué no preveía un conjunto de reglas de rol con JcJ: la comunidad de rol es pequeña, y dividirla en un juego sin reinos, que necesita una masa crítica de jugadores, había que sopesarlo con cuidado. El 22 de octubre Josh "Aggrend" Greenfield anunció en el foro oficial que el equipo había examinado qué haría falta "y decidió hacerlo": un conjunto de reglas Rol-JcJ (Roleplay-PvP) estará disponible en el lanzamiento del 4 de noviembre. Se puede elegir desde que abrió la reserva de nombres, el 27 de octubre: ese día Kaivax avisó a los jugadores de Oceanía de un error y les pidió crear primero sus personajes "on Roleplay or Roleplay-PvP rulesets". La guía para nuevos jugadores del 28 de octubre y el artículo del lanzamiento del 29 de octubre lo incluyen entre los cuatro conjuntos disponibles en el lanzamiento, con la descripción de la tabla de arriba. Su nombre oficial es «Juego de rol con JcJ» en España y «Juego de rol JcJ» en Latinoamérica; aquí lo abreviamos Rol-JcJ. Blizzard no ha publicado más reglas propias del conjunto; la historia está en nuestra [noticia sobre el anuncio](/es/news/roleplay-pvp-ruleset-at-launch).
+En el episodio 4 del pódcast de WoW Forever (15 de octubre) Blizzard había explicado por qué no preveía un conjunto de reglas de rol con JcJ: la comunidad de rol es pequeña, y dividirla en un juego sin reinos, que necesita una masa crítica de jugadores, había que sopesarlo con cuidado. El 22 de octubre Josh "Aggrend" Greenfield anunció en el foro oficial que el equipo había examinado qué haría falta "y decidió hacerlo": un conjunto de reglas Rol-JcJ (Roleplay-PvP) estará disponible en el lanzamiento del 4 de noviembre. Se puede elegir desde que abrió la reserva de nombres, el 27 de octubre: ese día Kaivax avisó a los jugadores de Oceanía de un error y les pidió crear primero sus personajes "on Roleplay or Roleplay-PvP rulesets". La guía para nuevos jugadores del 28 de octubre y el artículo del lanzamiento del 29 de octubre lo incluyen entre los cuatro conjuntos disponibles en el lanzamiento, con la descripción de la tabla de arriba. Su nombre oficial es «Juego de rol con JcJ» en España y «Juego de rol JcJ» en Latinoamérica; aquí lo abreviamos Rol-JcJ. Blizzard no ha publicado más reglas propias del conjunto: el vídeo del 5 de noviembre no habla de él, y la descripción del vídeo solo confirma que existe. La historia está en nuestra [noticia sobre el anuncio](/es/news/roleplay-pvp-ruleset-at-launch).
 
 ## Sin reinos: cada conjunto es un mundo propio {#sin-reinos}
 
-No eliges servidor: cada conjunto de reglas es un ecosistema separado. En la práctica:
+No eliges servidor: cada conjunto de reglas es un ecosistema separado. En el vídeo del 5 de noviembre ([nuestro resumen](/es/news/rulesets-video-faction-limits)) Blizzard explica por qué: los reinos crearon comunidades fuertes, pero los jugadores tendían a amontonarse en los más poblados, aunque otro reino encajara mejor con su estilo. Ahora eliges cómo jugar y no dónde, y el objetivo, dice Blizzard, no es un único servidor gigante, sino facilitar que se encuentre quien juega con las mismas reglas.
+
+En la práctica:
 
 - **grupos, hermandades, mazmorras y bandas** solo reúnen a jugadores del mismo conjunto y de la misma facción, como dice la guía para nuevos jugadores del 28 de octubre. Si quieres jugar con tus amigos, poneos de acuerdo en las dos cosas antes de crear los personajes;
-- **los campos de batalla** son la excepción: pueden mezclar jugadores de distintos conjuntos, pero no los de Hardcore.
+- **los campos de batalla** son la excepción: pueden mezclar jugadores de distintos conjuntos, pero no los de Hardcore;
+- **el mundo exterior** sigue siempre las reglas de tu conjunto: no puedes pasar de las reglas JcE a las de JcJ a voluntad. Blizzard dice que es a propósito, porque el JcJ en exteriores solo funciona si todos en ese mundo han aceptado el mismo riesgo;
+- **la casa de subastas, el comercio y las hermandades** no salen de un conjunto de reglas: quien juega en Normal comercia con todos los de Normal de su región, lo mismo vale para JcJ, y las dos economías nunca se mezclan;
+- **Rol** tiene su propio mundo exterior: quienes juegan ahí no comparten las copias de las zonas con los jugadores de Normal o JcJ, y quien quiera combate en su historia puede activar el JcJ igualmente.
 
 En el pódcast del 29 de octubre Josh "Aggrend" Greenfield dijo que los conjuntos de reglas seguirán separados. Si algún día la población de Rol o de Rol-JcJ no se sostuviera, Blizzard tiene "opciones", por ejemplo unir sus casas de subastas o permitir grupos para el contenido instanciado (lo cuenta GameSpot). Es una palanca de emergencia que Blizzard dice que solo usaría si hiciera falta de verdad, no un plan ni una promesa.
 
@@ -370,7 +409,7 @@ En el pódcast del 29 de octubre Josh "Aggrend" Greenfield dijo que los conjunto
 
 Un personaje se queda en el conjunto de reglas donde se creó. Para jugar en otro tienes que crear un personaje nuevo.
 
-Hay una sola excepción: un **personaje de Hardcore que muere** puede trasladarse a otro conjunto de reglas, JcJ incluido.
+Hay una sola excepción: un **personaje de Hardcore que muere** puede trasladarse a otro conjunto de reglas, JcJ incluido. En el vídeo del 5 de noviembre Blizzard dice que puede ir a cualquiera de los tres conjuntos no Hardcore que presenta (Normal, JcJ y Rol), mientras que antes los personajes caídos de Hardcore solo podían volver a JcE. La regla de facción sigue vigente: no puedes llevar a JcJ un personaje muerto de la Horda si ya tienes ahí personajes de la Alianza. No se dice si Rol-JcJ está también entre los destinos, porque el vídeo no habla de ese conjunto.
 
 ## Qué se comparte en toda la cuenta {#cuenta}
 
@@ -380,13 +419,13 @@ El artículo del 23 de septiembre sobre el sistema de legado anuncia 12 desafío
 
 ## Las facciones en el conjunto JcJ {#facciones-jcj}
 
-En el conjunto **JcJ** cada cuenta solo puede jugar una facción: si creas allí un personaje de la Alianza, no podrás crear personajes de la Horda en ese conjunto (y al revés). En Normal, Rol y Hardcore puedes tener personajes de ambas facciones.
+En el conjunto **JcJ** cada cuenta solo puede jugar una facción: si creas allí un personaje de la Alianza, no podrás crear personajes de la Horda en ese conjunto (y al revés). El vídeo del 5 de noviembre dice que la elección vale para todo el conjunto JcJ de tu región y que no existe un segundo espacio JcJ para el otro bando. En Normal, Rol y Hardcore puedes tener personajes de ambas facciones.
 
 Kris Zierhut, Principal Designer, lo confirmó a Mein-MMO (entrevista publicada el 28 de octubre): en JcJ el equilibrio de facciones se aplica de forma estricta, y un personaje de la Horda impide crear uno de la Alianza. Añadió que en la beta el reparto era de un 51,7 % de Horda y un 48,3 % de Alianza. El dato llega de la prensa, no de un artículo de Blizzard.
 
-Blizzard menciona también sistemas de equilibrio de facciones "similares al enfoque introducido en Season of Discovery", donde la creación de personajes nuevos de una facción podía limitarse durante un tiempo. Desde finales de octubre, en el foro oficial hay jugadores que cuentan que a veces en JcJ se rechaza la creación de un personaje de la Horda con el mensaje "This faction is currently unavailable on this ruleset due to population imbalance". Blizzard no lo ha comentado, así que con qué frecuencia pasa y cuánto dura no está confirmado.
+Blizzard menciona también sistemas de equilibrio de facciones "similares al enfoque introducido en Season of Discovery", donde la creación de personajes nuevos de una facción podía limitarse durante un tiempo. El vídeo del 5 de noviembre lo confirma: Forever introduce **restricciones temporales en la creación de personajes** cuando un desequilibrio empieza a afectar a la experiencia, con ajustes que intentan afectar lo menos posible a cada jugador. El motivo que da es que en el pasado una facción acababa superando a la otra y los servidores JcJ quedaban desequilibrados. Desde finales de octubre, en el foro oficial hay jugadores que cuentan que a veces en JcJ se rechaza la creación de un personaje de la Horda con el mensaje "This faction is currently unavailable on this ruleset due to population imbalance". El vídeo no menciona ese mensaje ni da umbrales o duraciones, así que con qué frecuencia pasa y cuánto dura no está confirmado; hay más en nuestra [noticia sobre los bloqueos de la Horda](/es/news/name-filter-fix-faction-locks).
 
-En **Rol-JcJ** Blizzard no ha dicho si se aplica la regla de una sola facción. Algunos avisos en el foro apuntan a que sí, pero no están confirmados y en parte parecen errores. Las razas y clases de cada facción están en la guía de [razas y clases](/es/guides/wow-forever-races-classes).
+En **Rol-JcJ** Blizzard no ha dicho si se aplica la regla de una sola facción, y el vídeo del 5 de noviembre no habla de ese conjunto. Algunos avisos en el foro apuntan a que sí, pero no están confirmados y en parte parecen errores. Las razas y clases de cada facción están en la guía de [razas y clases](/es/guides/wow-forever-races-classes).
 
 ## Las capas (layering): qué cambia en el lanzamiento {#capas}
 
@@ -418,16 +457,18 @@ No son recomendaciones, solo los datos que pesan en la elección:
 
 - para agruparte, entrar en una hermandad, hacer mazmorras y bandas con tus amigos, todos deben estar en el mismo conjunto y en la misma facción;
 - en JcJ tu cuenta se queda con una sola facción, y la creación de personajes de una facción puede limitarse durante un tiempo para mantener el equilibrio;
+- la casa de subastas, el comercio y las hermandades no salen de tu conjunto de reglas;
 - el conjunto de reglas no se cambia después;
-- Hardcore no estará disponible el día del lanzamiento;
+- Hardcore aún no está disponible y no tiene fecha;
 - Rol-JcJ está desde el lanzamiento, pero que tenga la regla de una sola facción no es oficial.
 
 ## Lo que aún no sabemos {#lo-que-no-sabemos}
 
 - **Cuándo llega Hardcore**: Blizzard solo dice "después del lanzamiento". La página para Latinoamérica dice "poco después", pero el original en inglés no da ningún plazo.
-- **Cómo funciona el equilibrio de facciones** en Forever: lo único oficial es la comparación con Season of Discovery; los umbrales y la duración de los bloqueos que ven los jugadores en JcJ no se han publicado.
+- **Cómo funciona el equilibrio de facciones** en Forever: lo oficial es la comparación con Season of Discovery y los límites temporales en la creación de personajes; los umbrales y la duración no se han publicado.
 - **Cómo se usa el idioma preferido**: Blizzard dice que te encontrarás con quien comparte esa preferencia, no cómo (por ejemplo en el Group Finder que aparece en las notas de la beta).
-- **Rol-JcJ y las facciones**: si el límite del JcJ, una sola facción por cuenta, se aplica también allí. Cuando explica el equilibrio de facciones, la versión inglesa del artículo de Blizzard sobre los conjuntos de reglas habla de "PvP rulesets", en plural, pero la regla de una sola facción la escribe solo para "the PvP ruleset".
+- **Rol-JcJ y las facciones**: si el límite del JcJ, una sola facción por cuenta, se aplica también allí. Cuando explica el equilibrio de facciones, la versión inglesa del artículo de Blizzard sobre los conjuntos de reglas habla de "PvP rulesets", en plural, pero la regla de una sola facción la escribe solo para "the PvP ruleset", y el vídeo del 5 de noviembre no habla de Rol-JcJ.
+- **Personajes caídos de Hardcore y Rol-JcJ**: el vídeo habla de tres conjuntos de destino, y Rol-JcJ no está entre los que presenta.
 - **Conjuntos unidos**: las casas de subastas o los grupos en común que se mencionaron en el pódcast son solo una opción, sin fecha ni condiciones anunciadas.
 
 Los nombres de los conjuntos de reglas en cada idioma están en el [glosario](/es/glossary); más respuestas en las [preguntas frecuentes](/es/faq).`,
@@ -438,7 +479,7 @@ Los nombres de los conjuntos de reglas en cada idioma están en el [glosario](/e
         },
         {
           q: "¿Puedo pasar mi personaje a otro conjunto de reglas?",
-          a: "No, necesitas un personaje nuevo. La única excepción es un personaje de Hardcore que muere: puede trasladarse a otro conjunto, JcJ incluido.",
+          a: "No, necesitas un personaje nuevo. La única excepción es un personaje de Hardcore que muere: puede trasladarse a otro conjunto, JcJ incluido, si allí lo permite la regla de facción.",
         },
         {
           q: "¿Hardcore está disponible en el lanzamiento?",
@@ -446,7 +487,15 @@ Los nombres de los conjuntos de reglas en cada idioma están en el [glosario](/e
         },
         {
           q: "¿Puedo jugar con la Horda y la Alianza en el conjunto JcJ?",
-          a: "No con la misma cuenta: en JcJ tu primer personaje fija la facción, una regla que Kris Zierhut también confirmó a Mein-MMO. En Normal y Rol puedes jugar con las dos.",
+          a: "No con la misma cuenta: en JcJ tu primer personaje fija la facción en todo el conjunto JcJ de tu región, como repite Blizzard en el vídeo del 5 de noviembre. En Normal y Rol puedes jugar con las dos.",
+        },
+        {
+          q: "¿Por qué no puedo crear un personaje de una facción en JcJ?",
+          a: "En el vídeo del 5 de noviembre Blizzard confirma restricciones temporales en la creación de personajes cuando un desequilibrio entre facciones empieza a afectar a la experiencia. No da umbrales ni duraciones.",
+        },
+        {
+          q: "¿Pueden comerciar entre sí jugadores de distintos conjuntos de reglas?",
+          a: "No. La casa de subastas, el comercio y las hermandades no salen de un conjunto de reglas: según el vídeo de Blizzard del 5 de noviembre, las economías nunca se mezclan.",
         },
         {
           q: "¿Puedo agruparme con un amigo de la otra facción?",
