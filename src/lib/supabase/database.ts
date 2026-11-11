@@ -2,7 +2,8 @@
  * Tipi delle tabelle di Supabase lette dal sito: `profiles` (account e avatar) e, dal 23/10/2026, le build pubblicate
  * (`community_builds`, `build_votes`, vista `build_ratings`: blocco "BUILD PUBBLICATE" di supabase/schema.sql).
  * Lo schema completo, ereditato dal motore di OriginsMeta, sta in supabase/schema.sql; i tipi delle altre tabelle si
- * aggiungono qui quando una pagina comincia a leggerle (tier list, gilde).
+ * aggiungono qui quando una pagina comincia a leggerle (tier list, gilde). Dall'11/11/2026 anche i PC collegati, i contributi
+ * e le funzioni di ForeverMeta Companion (/account/tracker, /api/tracker/*).
  */
 type ProfileRow = {
   id: string;
@@ -123,6 +124,34 @@ type InterfaceReportRow = {
   created_at: string;
 };
 
+/** Un PC collegato da ForeverMeta Companion (blocco TRACKER): il proprietario non legge l'impronta del token né `owner`. */
+export type TrackerDeviceRow = {
+  id: string;
+  name: string;
+  created_at: string;
+  last_seen_at: string | null;
+  revoked_at: string | null;
+};
+
+/** Righe mandate dall'app per giorno (blocco "11/11/2026: OGGETTI"): le legge solo il proprietario. */
+export type ContributionRow = {
+  owner: string;
+  day: string;
+  received: number;
+  ah_received: number;
+  added: number;
+  items: number;
+  opens: number;
+  loot: number;
+  vendor: number;
+  quest: number;
+  inspect: number;
+  chat: number;
+  ah: number;
+  prices: number;
+  updated_at: string;
+};
+
 export type Database = {
   public: {
     Tables: {
@@ -174,6 +203,18 @@ export type Database = {
         Update: Partial<InterfaceReportRow>;
         Relationships: [];
       };
+      tracker_devices: {
+        Row: TrackerDeviceRow;
+        Insert: Record<string, never>;
+        Update: Record<string, never>;
+        Relationships: [];
+      };
+      contributions: {
+        Row: ContributionRow;
+        Insert: Record<string, never>;
+        Update: Record<string, never>;
+        Relationships: [];
+      };
     };
     Views: {
       build_ratings: {
@@ -185,7 +226,19 @@ export type Database = {
         Relationships: [];
       };
     };
-    Functions: Record<string, never>;
+    Functions: {
+      /* ForeverMeta Companion (blocchi TRACKER e "11/11/2026: OGGETTI"): errori con raise exception '<codice>' (trackerErrorCode di src/lib/tracker/upload.ts) */
+      /** codice monouso "ABCD-EFGH" per collegare l'app (10 minuti, al massimo 5 l'ora), per chi ha fatto l'accesso */
+      tracker_link_code: { Args: Record<string, never>; Returns: string };
+      /** l'app scambia il codice con il token (anon, dalla rotta /api/tracker/link) */
+      tracker_link_claim: { Args: { p_code: string; p_name: string }; Returns: { token: string; username: string | null }[] };
+      /** l'app si scollega con il suo token; true se valeva */
+      tracker_device_unlink: { Args: { p_token: string }; Returns: boolean };
+      /** scollega un proprio PC; true se c'era */
+      tracker_revoke: { Args: { p_device: string }; Returns: boolean };
+      /** oggetti, provenienze e prezzi dall'app (anon, con il token, dalla rotta /api/tracker/items) */
+      tracker_items_submit: { Args: { p_token: string; p_payload: unknown }; Returns: { added: number; skipped: number } };
+    };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;
   };

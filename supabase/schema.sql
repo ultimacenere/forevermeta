@@ -6860,3 +6860,518 @@ begin
 exception when others then
   raise notice 'Storage interface-shots non configurato da SQL (%): creare bucket e policy dalla dashboard, vedi docs/interfacce.md.', sqlerrm;
 end $$;
+
+-- =====================================================================================================
+-- ===== 11/11/2026: OGGETTI =====
+-- =====================================================================================================
+-- Oggetti, provenienze e prezzi dell'asta raccolti dall'addon ForeverMeta Tracker e mandati dall'app ForeverMeta
+-- Companion (fase 1 del piano del 24/10/2026, nella KB; contratto dei dati in forevermeta-addons/tracker/docs/formato.md,
+-- guida in docs/tracker.md). Al lancio Blizzard nasconde le statistiche degli oggetti finché non cadono in gioco: le
+-- vede solo chi gioca, e l'addon registra quello che il giocatore apre (bottino, mercanti, missioni, ispezione, link in
+-- chat, tooltip, ricerche e scansioni dell'asta lanciate da lui).
+--   Collegamento: lo stesso del blocco TRACKER (tracker_devices, tracker_link_code, tracker_link_claim,
+--   tracker_device_unlink, tracker_revoke): l'app ha un token "omt_…" per PC, il database ne tiene l'impronta.
+--   Invio: tracker_items_submit (anon, con il token, dalla rotta /api/tracker/items). Al massimo 200 righe per chiamata,
+--   5.000 voci di prezzo per chiamata, 20.000 righe e 300 istantanee dell'asta al giorno per utente (si contano anche
+--   le righe scartate). Ogni riga deve avere la forma del contratto (tracker_item_row_ok = isItemRow di
+--   src/lib/tracker/items.ts, con le stesse chiavi ammesse: una chiave in più scarta la riga); le altre si saltano.
+--   Solo tabelle aggregate, fuse all'arrivo: nessuna osservazione grezza resta nel database. Mai nomi di giocatori:
+--   il contratto non ne porta e le righe del tooltip fra "<" e ">" ("<Made by …>", "<Gift from …>") si tolgono anche
+--   qui. Del bottino resta l'impronta della fonte (tracker_loot_seen, 3 giorni) per non contare due volte lo stesso
+--   cadavere aperto da più giocatori dello stesso gruppo: la conta il primo che lo apre.
+--   Verifica: un oggetto o una provenienza diventa "verificato" quando lo segnalano tracker_items_verify_min() utenti
+--   diversi (3 per partire). Chi ha contribuito sta in item_contributors e item_source_contributors, che nessun client
+--   legge. I dettagli di un oggetto (nome per lingua, statistiche, righe del tooltip) li riscrive l'ultimo che li manda.
+--   Lettura: per ora solo i propri contributi (contributions, per i crediti). Le pagine Oggetti (fase 2) avranno le
+--   loro funzioni di lettura; fino ad allora le tabelle restano chiuse ad anon e authenticated.
+-- Nomi dei vincoli: solo quelli automatici delle colonne; le chiavi multi-colonna sono primarie o "unique" senza nome.
+create table if not exists public.items (
+  item_key text primary key check (item_key ~ '^[0-9]{1,7}(:-?[0-9]{1,6}(:[0-9]{1,6}([.][0-9]{1,6}){0,15})?)?$'),
+  item_id integer not null check (item_id between 1 and 9999999),
+  names jsonb not null default '{}'::jsonb check (jsonb_typeof(names) = 'object'),
+  quality smallint check (quality between 0 and 8),
+  item_level smallint check (item_level between 0 and 1000),
+  required_level smallint check (required_level between 0 and 100),
+  class_id smallint check (class_id between 0 and 30),
+  subclass_id smallint check (subclass_id between 0 and 100),
+  equip_loc text not null default '' check (equip_loc ~ '^(INVTYPE_[A-Z0-9_]{1,30})?$'),
+  bind_type smallint check (bind_type between 0 and 9),
+  stats jsonb not null default '{}'::jsonb check (jsonb_typeof(stats) = 'object'),
+  tooltip jsonb not null default '{}'::jsonb check (jsonb_typeof(tooltip) = 'object'),
+  details_at timestamptz,
+  details_build text not null default '' check (details_build ~ '^[0-9]{0,7}$'),
+  seen bigint not null default 0,
+  contributors integer not null default 0,
+  verified boolean not null default false,
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now()
+);
+create index if not exists items_item_id_idx on public.items (item_id);
+
+create table if not exists public.item_contributors (
+  item_key text not null references public.items(item_key) on delete cascade,
+  owner uuid not null references public.profiles(id) on delete cascade,
+  first_at timestamptz not null default now(),
+  primary key (item_key, owner)
+);
+
+create table if not exists public.item_sources (
+  id bigint generated always as identity primary key,
+  item_key text not null references public.items(item_key) on delete cascade,
+  kind text not null check (kind in ('loot', 'vendor', 'quest', 'inspect', 'chat')),
+  source text not null default '' check (source = '' or source ~ '^(npc|obj|item|quest):[0-9]{1,9}$'),
+  zone_id integer not null default 0 check (zone_id between 0 and 1000000),
+  seen bigint not null default 0,
+  quantity bigint not null default 0,
+  min_level smallint check (min_level between 1 and 100),
+  max_level smallint check (max_level between 1 and 100),
+  vendor_price bigint check (vendor_price >= 0),
+  vendor_lot integer check (vendor_lot between 1 and 10000),
+  vendor_stock integer check (vendor_stock between -1 and 1000000),
+  vendor_extended boolean,
+  quest_choice boolean,
+  contributors integer not null default 0,
+  verified boolean not null default false,
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now(),
+  unique (item_key, kind, source, zone_id)
+);
+create index if not exists item_sources_source_idx on public.item_sources (source, zone_id) where source <> '';
+
+create table if not exists public.item_source_contributors (
+  source_id bigint not null references public.item_sources(id) on delete cascade,
+  owner uuid not null references public.profiles(id) on delete cascade,
+  first_at timestamptz not null default now(),
+  primary key (source_id, owner)
+);
+
+create table if not exists public.loot_sources (
+  source text not null check (source ~ '^(npc|obj|item):[0-9]{1,9}$'),
+  zone_id integer not null default 0 check (zone_id between 0 and 1000000),
+  opens bigint not null default 0,
+  first_seen_at timestamptz not null default now(),
+  last_seen_at timestamptz not null default now(),
+  primary key (source, zone_id)
+);
+
+create table if not exists public.tracker_loot_seen (
+  key text primary key check (key ~ '^[0-9a-f]{8}(:[0-9:.-]{1,120})?$'),
+  owner uuid not null references public.profiles(id) on delete cascade,
+  t bigint not null,
+  seen_at timestamptz not null default now()
+);
+create index if not exists tracker_loot_seen_at_idx on public.tracker_loot_seen (seen_at);
+
+create table if not exists public.auction_prices (
+  item_key text not null check (item_key ~ '^[0-9]{1,7}(:-?[0-9]{1,6}(:[0-9]{1,6}([.][0-9]{1,6}){0,15})?)?$'),
+  region text not null check (region in ('US', 'EU', 'KR', 'TW', 'CN')),
+  realm text not null check (char_length(realm) between 1 and 60),
+  faction text not null check (faction in ('Alliance', 'Horde', 'Neutral')),
+  day date not null,
+  min_price bigint not null check (min_price >= 0),
+  median_price bigint not null check (median_price >= 0),
+  medians bigint[] not null default '{}' check (cardinality(medians) <= 48),
+  quantity bigint not null default 0 check (quantity >= 0),
+  samples integer not null default 0,
+  updated_at timestamptz not null default now(),
+  primary key (item_key, region, realm, faction, day)
+);
+create index if not exists auction_prices_day_idx on public.auction_prices (day);
+
+create table if not exists public.contributions (
+  owner uuid not null references public.profiles(id) on delete cascade,
+  day date not null,
+  received integer not null default 0,
+  ah_received integer not null default 0,
+  added integer not null default 0,
+  items integer not null default 0,
+  opens integer not null default 0,
+  loot integer not null default 0,
+  vendor integer not null default 0,
+  quest integer not null default 0,
+  inspect integer not null default 0,
+  chat integer not null default 0,
+  ah integer not null default 0,
+  prices integer not null default 0,
+  updated_at timestamptz not null default now(),
+  primary key (owner, day)
+);
+
+comment on table public.items is 'Oggetti visti in gioco dagli utenti di ForeverMeta Companion (11/11/2026): dettagli per lingua, conteggi, contributori distinti, verificato da 3.';
+comment on table public.item_sources is 'Da dove viene un oggetto (bottino, mercante, missione, ispezione, chat) per fonte e mappa: conteggi aggregati, mai nomi di giocatori.';
+comment on table public.loot_sources is 'Finestre di bottino aperte per fonte e mappa: il denominatore delle probabilità di drop.';
+comment on table public.tracker_loot_seen is 'Impronte delle fonti di bottino già contate (3 giorni): lo stesso cadavere aperto da più giocatori conta una volta.';
+comment on table public.auction_prices is 'Prezzi dell''asta per oggetto, regione, reame (GetRealmName), fazione e giorno: minimo, mediana delle istantanee, quantità, campioni.';
+comment on table public.contributions is 'Righe mandate da ogni utente per giorno (limiti giornalieri e crediti ai contributori).';
+
+alter table public.items enable row level security;
+alter table public.item_contributors enable row level security;
+alter table public.item_sources enable row level security;
+alter table public.item_source_contributors enable row level security;
+alter table public.loot_sources enable row level security;
+alter table public.tracker_loot_seen enable row level security;
+alter table public.auction_prices enable row level security;
+alter table public.contributions enable row level security;
+
+-- Nessuna scrittura diretta (solo tracker_items_submit); dei contributi ognuno legge i suoi.
+revoke all on public.items, public.item_contributors, public.item_sources, public.item_source_contributors,
+  public.loot_sources, public.tracker_loot_seen, public.auction_prices, public.contributions from anon, authenticated;
+drop policy if exists "contributions: owner reads" on public.contributions;
+create policy "contributions: owner reads" on public.contributions for select to authenticated using (owner = (select auth.uid()));
+grant select on public.contributions to authenticated;
+
+-- Quanti utenti diversi servono per dire "verificato".
+create or replace function public.tracker_items_verify_min()
+returns integer language sql immutable set search_path = public, pg_temp as $$
+  select 3;
+$$;
+
+-- Numero JSON dentro un intervallo; con p_int solo interi (12 e 12.0 sì, 12.5 no).
+create or replace function public.tracker_num_ok(v jsonb, lo numeric, hi numeric, p_int boolean)
+returns boolean language sql immutable set search_path = public, pg_temp as $$
+  select coalesce(jsonb_typeof(v) = 'number'
+    and (v #>> '{}')::numeric between lo and hi
+    and (not p_int or (v #>> '{}')::numeric = trunc((v #>> '{}')::numeric)), false);
+$$;
+
+-- Campo facoltativo: assente o null.
+create or replace function public.tracker_absent(r jsonb, k text)
+returns boolean language sql immutable set search_path = public, pg_temp as $$
+  select coalesce(jsonb_typeof(r -> k), 'null') = 'null';
+$$;
+
+-- Chiave di un oggetto come nel contratto: id, suffisso casuale, bonus.
+create or replace function public.tracker_item_key_ok(v jsonb)
+returns boolean language sql immutable set search_path = public, pg_temp as $$
+  select coalesce(jsonb_typeof(v) = 'string'
+    and (v #>> '{}') ~ '^[0-9]{1,7}(:-?[0-9]{1,6}(:[0-9]{1,6}([.][0-9]{1,6}){0,15})?)?$'
+    and split_part(v #>> '{}', ':', 1)::integer between 1 and 9999999, false);
+$$;
+
+-- Testo di 1..maxlen caratteri.
+create or replace function public.tracker_text_ok(v jsonb, maxlen integer)
+returns boolean language sql immutable set search_path = public, pg_temp as $$
+  select coalesce(jsonb_typeof(v) = 'string' and char_length(v #>> '{}') between 1 and maxlen, false);
+$$;
+
+-- Una riga di /api/tracker/items (contratto §2): stessi campi, stesse chiavi ammesse e stessi limiti di isItemRow in
+-- src/lib/tracker/items.ts. L'ora `t` (secondi Unix del client) va dal 2026 a domani.
+create or replace function public.tracker_item_row_ok(r jsonb)
+returns boolean language plpgsql stable set search_path = public, pg_temp as $$
+declare
+  k text;
+  allowed text[];
+  src text;
+  e jsonb;
+  st record;
+  n integer;
+begin
+  if jsonb_typeof(r) is distinct from 'object' or jsonb_typeof(r -> 'k') is distinct from 'string' then return false; end if;
+  k := r ->> 'k';
+  allowed := case k
+    when 'open' then array['k', 't', 's', 'z', 'l', 'g']
+    when 'loot' then array['k', 't', 'i', 'n', 's', 'z', 'l', 'g']
+    when 'vendor' then array['k', 't', 'i', 's', 'z', 'p', 'n', 'a', 'x']
+    when 'quest' then array['k', 't', 'i', 's', 'n', 'ch']
+    when 'inspect' then array['k', 't', 'i']
+    when 'chat' then array['k', 't', 'i']
+    when 'item' then array['k', 't', 'i', 'name', 'loc', 'q', 'il', 'rl', 'c', 'sc', 'eq', 'b', 'st', 'tt']
+    when 'ah' then array['k', 't', 'src', 'r', 'rm', 'f', 'e']
+  end;
+  if allowed is null or (r - allowed) <> '{}'::jsonb then return false; end if;
+  if not public.tracker_num_ok(r -> 't', 1767225600, extract(epoch from now())::numeric + 86400, true) then return false; end if;
+  -- oggetto: obbligatorio per tutti tranne open e ah
+  if k not in ('open', 'ah') and not public.tracker_item_key_ok(r -> 'i') then return false; end if;
+  -- fonte
+  if k in ('open', 'loot', 'vendor', 'quest') then
+    if jsonb_typeof(r -> 's') is distinct from 'string' then return false; end if;
+    src := r ->> 's';
+    if k in ('open', 'loot') and src !~ '^(npc|obj|item):[0-9]{1,9}$' then return false; end if;
+    if k = 'vendor' and src !~ '^npc:[0-9]{1,9}$' then return false; end if;
+    if k = 'quest' and src !~ '^quest:[0-9]{1,9}$' then return false; end if;
+  end if;
+  if not public.tracker_absent(r, 'z') and not public.tracker_num_ok(r -> 'z', 0, 1000000, true) then return false; end if;
+  if not public.tracker_absent(r, 'l') and not public.tracker_num_ok(r -> 'l', 1, 100, true) then return false; end if;
+  if not public.tracker_absent(r, 'g') and (jsonb_typeof(r -> 'g') <> 'string' or (r ->> 'g') !~ '^[0-9a-f]{8}$') then return false; end if;
+  if not public.tracker_absent(r, 'n') and not public.tracker_num_ok(r -> 'n', 1, 10000, true) then return false; end if;
+  if k = 'vendor' then
+    if not public.tracker_num_ok(r -> 'p', 0, 10000000000000, true) then return false; end if;
+    if not public.tracker_absent(r, 'a') and not public.tracker_num_ok(r -> 'a', -1, 1000000, true) then return false; end if;
+    if not public.tracker_absent(r, 'x') and jsonb_typeof(r -> 'x') <> 'boolean' then return false; end if;
+  end if;
+  if k = 'quest' and not public.tracker_absent(r, 'ch') and jsonb_typeof(r -> 'ch') <> 'boolean' then return false; end if;
+  if k = 'item' then
+    if not public.tracker_absent(r, 'name') and not public.tracker_text_ok(r -> 'name', 200) then return false; end if;
+    if not public.tracker_absent(r, 'loc') and (jsonb_typeof(r -> 'loc') <> 'string' or (r ->> 'loc') !~ '^[a-z]{2}[A-Z]{2}$') then return false; end if;
+    if public.tracker_absent(r, 'loc') and not (public.tracker_absent(r, 'name') and public.tracker_absent(r, 'tt')) then return false; end if;
+    if not public.tracker_absent(r, 'q') and not public.tracker_num_ok(r -> 'q', 0, 8, true) then return false; end if;
+    if not public.tracker_absent(r, 'il') and not public.tracker_num_ok(r -> 'il', 0, 1000, true) then return false; end if;
+    if not public.tracker_absent(r, 'rl') and not public.tracker_num_ok(r -> 'rl', 0, 100, true) then return false; end if;
+    if not public.tracker_absent(r, 'c') and not public.tracker_num_ok(r -> 'c', 0, 30, true) then return false; end if;
+    if not public.tracker_absent(r, 'sc') and not public.tracker_num_ok(r -> 'sc', 0, 100, true) then return false; end if;
+    if not public.tracker_absent(r, 'eq') and (jsonb_typeof(r -> 'eq') <> 'string' or (r ->> 'eq') !~ '^(INVTYPE_[A-Z0-9_]{1,30})?$') then return false; end if;
+    if not public.tracker_absent(r, 'b') and not public.tracker_num_ok(r -> 'b', 0, 9, true) then return false; end if;
+    if not public.tracker_absent(r, 'st') then
+      if jsonb_typeof(r -> 'st') <> 'object' then return false; end if;
+      n := 0;
+      for st in select key, value from jsonb_each(r -> 'st') loop
+        n := n + 1;
+        if n > 40 or st.key !~ '^[A-Z0-9_]{1,60}$' or not public.tracker_num_ok(st.value, -1000000, 1000000, false) then return false; end if;
+      end loop;
+    end if;
+    if not public.tracker_absent(r, 'tt') then
+      if jsonb_typeof(r -> 'tt') <> 'array' or jsonb_array_length(r -> 'tt') > 40 then return false; end if;
+      if exists (select 1 from jsonb_array_elements(r -> 'tt') as l(x) where jsonb_typeof(x) <> 'string' or char_length(x #>> '{}') > 300) then return false; end if;
+    end if;
+  end if;
+  if k = 'ah' then
+    if jsonb_typeof(r -> 'src') is distinct from 'string' or (r ->> 'src') not in ('replicate', 'browse', 'commodity', 'item') then return false; end if;
+    if jsonb_typeof(r -> 'r') is distinct from 'string' or (r ->> 'r') not in ('US', 'EU', 'KR', 'TW', 'CN') then return false; end if;
+    if not public.tracker_text_ok(r -> 'rm', 60) or (r ->> 'rm') ~ '[[:cntrl:]]' then return false; end if;
+    if jsonb_typeof(r -> 'f') is distinct from 'string' or (r ->> 'f') not in ('Alliance', 'Horde', 'Neutral') then return false; end if;
+    e := r -> 'e';
+    if jsonb_typeof(e) is distinct from 'array' or jsonb_array_length(e) not between 1 and 500 then return false; end if;
+    if exists (
+      select 1 from jsonb_array_elements(e) as p(x)
+       where jsonb_typeof(x) <> 'array' or jsonb_array_length(x) <> 5
+          or not public.tracker_item_key_ok(x -> 0)
+          or not public.tracker_num_ok(x -> 1, 0, 10000000000000, false)
+          or not public.tracker_num_ok(x -> 2, 0, 10000000000000, false)
+          or not public.tracker_num_ok(x -> 3, 1, 10000000, true)
+          or not public.tracker_num_ok(x -> 4, 1, 1000000, true)) then
+      return false;
+    end if;
+  end if;
+  return true;
+end $$;
+
+-- Un oggetto visto (righe diverse da ah): la riga in items e, la prima volta per quell'utente, un contributore in più.
+create or replace function public.tracker_items_touch(p_key text, p_owner uuid, p_at timestamptz)
+returns void language plpgsql security definer set search_path = public, pg_temp as $$
+declare
+  rows_in integer;
+begin
+  insert into public.items as i (item_key, item_id, seen, first_seen_at, last_seen_at)
+  values (p_key, split_part(p_key, ':', 1)::integer, 1, p_at, p_at)
+  on conflict (item_key) do update set seen = i.seen + 1,
+    first_seen_at = least(i.first_seen_at, excluded.first_seen_at), last_seen_at = greatest(i.last_seen_at, excluded.last_seen_at);
+  insert into public.item_contributors (item_key, owner) values (p_key, p_owner) on conflict do nothing;
+  get diagnostics rows_in = row_count;
+  if rows_in > 0 then
+    update public.items set contributors = contributors + 1, verified = contributors + 1 >= public.tracker_items_verify_min()
+     where item_key = p_key;
+  end if;
+end $$;
+
+-- Una provenienza vista: la riga in item_sources (conteggi, livelli) e il contributore; restituisce l'id della riga.
+create or replace function public.tracker_item_source_touch(p_key text, p_kind text, p_source text, p_zone integer, p_owner uuid,
+                                                            p_at timestamptz, p_qty integer, p_level integer)
+returns bigint language plpgsql security definer set search_path = public, pg_temp as $$
+declare
+  sid bigint;
+  rows_in integer;
+begin
+  insert into public.item_sources as s (item_key, kind, source, zone_id, seen, quantity, min_level, max_level, first_seen_at, last_seen_at)
+  values (p_key, p_kind, p_source, p_zone, 1, coalesce(p_qty, 1), p_level, p_level, p_at, p_at)
+  on conflict (item_key, kind, source, zone_id) do update set seen = s.seen + 1, quantity = s.quantity + coalesce(excluded.quantity, 1),
+    min_level = least(s.min_level, excluded.min_level), max_level = greatest(s.max_level, excluded.max_level),
+    first_seen_at = least(s.first_seen_at, excluded.first_seen_at), last_seen_at = greatest(s.last_seen_at, excluded.last_seen_at)
+  returning s.id into sid;
+  insert into public.item_source_contributors (source_id, owner) values (sid, p_owner) on conflict do nothing;
+  get diagnostics rows_in = row_count;
+  if rows_in > 0 then
+    update public.item_sources set contributors = contributors + 1, verified = contributors + 1 >= public.tracker_items_verify_min()
+     where id = sid;
+  end if;
+  return sid;
+end $$;
+
+-- ---------- righe dall'app (anon, con il token) ----------
+-- Token sconosciuto o scollegato: 'invalid_token' (l'app si scollega). Corpo senza v = 1, senza un array "batch" di al
+-- massimo 200 righe o con più di 5.000 voci di prezzo: 'bad_request'. Oltre i limiti del giorno (UTC): 'too_many'.
+-- Restituisce {"added": righe usate, "skipped": righe scartate o già contate}.
+create or replace function public.tracker_items_submit(p_token text, p_payload jsonb)
+returns jsonb language plpgsql security definer set search_path = public, pg_temp as $$
+declare
+  dev_id uuid;
+  dev_owner uuid;
+  batch jsonb;
+  n integer;
+  n_ah integer;
+  n_prices integer;
+  today date := (now() at time zone 'utc')::date;
+  c_received integer;
+  c_ah integer;
+  r jsonb;
+  k text;
+  ikey text;
+  g text;
+  tsec bigint;
+  at_ts timestamptz;
+  zone integer;
+  lvl integer;
+  sid bigint;
+  rows_in integer;
+  added integer := 0;
+  skipped integer := 0;
+  c_items integer := 0;
+  c_opens integer := 0;
+  c_loot integer := 0;
+  c_vendor integer := 0;
+  c_quest integer := 0;
+  c_inspect integer := 0;
+  c_chat integer := 0;
+  c_ahrows integer := 0;
+  c_prices integer := 0;
+  lines jsonb;
+  loc text;
+begin
+  if p_token is null or p_token !~ '^omt_[0-9a-f]{64}$' then raise exception 'invalid_token'; end if;
+  select d.id, d.owner into dev_id, dev_owner from public.tracker_devices d
+   where d.token_hash = encode(sha256(convert_to(p_token, 'UTF8')), 'hex') and d.revoked_at is null;
+  if dev_id is null then raise exception 'invalid_token'; end if;
+  update public.tracker_devices set last_seen_at = now() where id = dev_id;
+
+  if jsonb_typeof(p_payload) is distinct from 'object' or jsonb_typeof(p_payload -> 'v') is distinct from 'number'
+     or (p_payload ->> 'v') <> '1' or jsonb_typeof(p_payload -> 'batch') is distinct from 'array' then
+    raise exception 'bad_request';
+  end if;
+  batch := p_payload -> 'batch';
+  n := jsonb_array_length(batch);
+  if n > 200 then raise exception 'bad_request'; end if;
+  select count(*)::integer, coalesce(sum(case when jsonb_typeof(x -> 'e') = 'array' then jsonb_array_length(x -> 'e') else 0 end), 0)::integer
+    into n_ah, n_prices
+    from jsonb_array_elements(batch) as b(x) where jsonb_typeof(x) = 'object' and x ->> 'k' = 'ah';
+  if n_prices > 5000 then raise exception 'bad_request'; end if;
+
+  select c.received, c.ah_received into c_received, c_ah from public.contributions c where c.owner = dev_owner and c.day = today;
+  if coalesce(c_received, 0) + n > 20000 or coalesce(c_ah, 0) + n_ah > 300 then raise exception 'too_many'; end if;
+
+  delete from public.tracker_loot_seen where seen_at < now() - interval '3 days';
+
+  for r in select value from jsonb_array_elements(batch) loop
+    if not public.tracker_item_row_ok(r) then
+      skipped := skipped + 1;
+      continue;
+    end if;
+    k := r ->> 'k';
+    tsec := (r ->> 't')::numeric::bigint;
+    at_ts := least(to_timestamp(tsec), now());
+    ikey := r ->> 'i';
+    g := r ->> 'g';
+    zone := coalesce((r ->> 'z')::numeric::integer, 0);
+    lvl := (r ->> 'l')::numeric::integer;
+
+    if k = 'open' then
+      if g is not null then
+        insert into public.tracker_loot_seen (key, owner, t) values (g, dev_owner, tsec) on conflict do nothing;
+        get diagnostics rows_in = row_count;
+        if rows_in = 0 then skipped := skipped + 1; continue; end if;
+      end if;
+      insert into public.loot_sources as l (source, zone_id, opens, first_seen_at, last_seen_at)
+      values (r ->> 's', zone, 1, at_ts, at_ts)
+      on conflict (source, zone_id) do update set opens = l.opens + 1,
+        first_seen_at = least(l.first_seen_at, excluded.first_seen_at), last_seen_at = greatest(l.last_seen_at, excluded.last_seen_at);
+      c_opens := c_opens + 1;
+
+    elsif k = 'loot' then
+      if g is not null then
+        -- l'apertura di questa fonte deve essere dello stesso utente, nello stesso momento (stesso gestore dell'addon)
+        if not exists (select 1 from public.tracker_loot_seen s where s.key = g and s.owner = dev_owner and tsec between s.t and s.t + 5) then
+          skipped := skipped + 1;
+          continue;
+        end if;
+        insert into public.tracker_loot_seen (key, owner, t) values (g || ':' || ikey, dev_owner, tsec) on conflict do nothing;
+        get diagnostics rows_in = row_count;
+        if rows_in = 0 then skipped := skipped + 1; continue; end if;
+      end if;
+      perform public.tracker_items_touch(ikey, dev_owner, at_ts);
+      perform public.tracker_item_source_touch(ikey, 'loot', r ->> 's', zone, dev_owner, at_ts, coalesce((r ->> 'n')::numeric::integer, 1), lvl);
+      c_loot := c_loot + 1;
+
+    elsif k = 'vendor' then
+      perform public.tracker_items_touch(ikey, dev_owner, at_ts);
+      sid := public.tracker_item_source_touch(ikey, 'vendor', r ->> 's', zone, dev_owner, at_ts, 1, null);
+      update public.item_sources set vendor_price = (r ->> 'p')::numeric::bigint, vendor_lot = coalesce((r ->> 'n')::numeric::integer, 1),
+             vendor_stock = coalesce((r ->> 'a')::numeric::integer, -1), vendor_extended = coalesce((r ->> 'x')::boolean, false)
+       where id = sid;
+      c_vendor := c_vendor + 1;
+
+    elsif k = 'quest' then
+      perform public.tracker_items_touch(ikey, dev_owner, at_ts);
+      sid := public.tracker_item_source_touch(ikey, 'quest', r ->> 's', 0, dev_owner, at_ts, coalesce((r ->> 'n')::numeric::integer, 1), null);
+      update public.item_sources set quest_choice = coalesce((r ->> 'ch')::boolean, false) where id = sid;
+      c_quest := c_quest + 1;
+
+    elsif k in ('inspect', 'chat') then
+      perform public.tracker_items_touch(ikey, dev_owner, at_ts);
+      perform public.tracker_item_source_touch(ikey, k, '', 0, dev_owner, at_ts, 1, null);
+      if k = 'inspect' then c_inspect := c_inspect + 1; else c_chat := c_chat + 1; end if;
+
+    elsif k = 'item' then
+      perform public.tracker_items_touch(ikey, dev_owner, at_ts);
+      loc := r ->> 'loc';
+      -- righe del tooltip senza caratteri di controllo e senza quelle fra "<" e ">" (chi l'ha fabbricato o regalato)
+      if not public.tracker_absent(r, 'tt') then
+        select coalesce(jsonb_agg(to_jsonb(t.line) order by t.ord), '[]'::jsonb) into lines
+          from (select btrim(regexp_replace(x #>> '{}', '[[:cntrl:]]+', ' ', 'g')) as line, ord
+                  from jsonb_array_elements(r -> 'tt') with ordinality as a(x, ord)) t
+         where t.line <> '' and t.line !~ '^<.*>$';
+      else
+        lines := null;
+      end if;
+      update public.items set
+        names = case when public.tracker_absent(r, 'name') then names
+                     else names || jsonb_build_object(loc, btrim(regexp_replace(r ->> 'name', '[[:cntrl:]]+', ' ', 'g'))) end,
+        tooltip = case when lines is null then tooltip else tooltip || jsonb_build_object(loc, lines) end,
+        quality = coalesce((r ->> 'q')::numeric::smallint, quality),
+        item_level = coalesce((r ->> 'il')::numeric::smallint, item_level),
+        required_level = coalesce((r ->> 'rl')::numeric::smallint, required_level),
+        class_id = coalesce((r ->> 'c')::numeric::smallint, class_id),
+        subclass_id = coalesce((r ->> 'sc')::numeric::smallint, subclass_id),
+        equip_loc = coalesce(r ->> 'eq', equip_loc),
+        bind_type = coalesce((r ->> 'b')::numeric::smallint, bind_type),
+        stats = case when public.tracker_absent(r, 'st') then stats else r -> 'st' end,
+        details_at = greatest(coalesce(details_at, at_ts), at_ts),
+        details_build = case when coalesce(p_payload #>> '{client,build}', '') ~ '^[0-9]{1,7}$' then p_payload #>> '{client,build}' else details_build end
+       where item_key = ikey;
+      c_items := c_items + 1;
+
+    elsif k = 'ah' then
+      insert into public.auction_prices as a (item_key, region, realm, faction, day, min_price, median_price, medians, quantity, samples, updated_at)
+      select p.key, r ->> 'r', r ->> 'rm', r ->> 'f', (to_timestamp(tsec) at time zone 'utc')::date,
+             p.min_price, p.median_price, array[p.median_price], p.quantity, 1, now()
+        from (select x ->> 0 as key,
+                     min(round((x ->> 1)::numeric))::bigint as min_price,
+                     (percentile_disc(0.5) within group (order by round((x ->> 2)::numeric)))::bigint as median_price,
+                     max((x ->> 3)::numeric)::bigint as quantity
+                from jsonb_array_elements(r -> 'e') as e(x)
+               group by x ->> 0) p
+      on conflict (item_key, region, realm, faction, day) do update set
+        min_price = least(a.min_price, excluded.min_price),
+        medians = (a.medians || excluded.medians)[greatest(1, cardinality(a.medians) + 1 - 47):],
+        median_price = (select percentile_disc(0.5) within group (order by m)
+                          from unnest((a.medians || excluded.medians)[greatest(1, cardinality(a.medians) + 1 - 47):]) as u(m)),
+        quantity = greatest(a.quantity, excluded.quantity),
+        samples = a.samples + 1,
+        updated_at = now();
+      c_ahrows := c_ahrows + 1;
+      c_prices := c_prices + jsonb_array_length(r -> 'e');
+    end if;
+    added := added + 1;
+  end loop;
+
+  insert into public.contributions as c (owner, day, received, ah_received, added, items, opens, loot, vendor, quest, inspect, chat, ah, prices, updated_at)
+  values (dev_owner, today, n, n_ah, added, c_items, c_opens, c_loot, c_vendor, c_quest, c_inspect, c_chat, c_ahrows, c_prices, now())
+  on conflict (owner, day) do update set received = c.received + excluded.received, ah_received = c.ah_received + excluded.ah_received,
+    added = c.added + excluded.added, items = c.items + excluded.items, opens = c.opens + excluded.opens, loot = c.loot + excluded.loot,
+    vendor = c.vendor + excluded.vendor, quest = c.quest + excluded.quest, inspect = c.inspect + excluded.inspect,
+    chat = c.chat + excluded.chat, ah = c.ah + excluded.ah, prices = c.prices + excluded.prices, updated_at = now();
+
+  return jsonb_build_object('added', added, 'skipped', skipped);
+end $$;
+
+revoke all on function public.tracker_items_touch(text, uuid, timestamptz) from public, anon, authenticated;
+revoke all on function public.tracker_item_source_touch(text, text, text, integer, uuid, timestamptz, integer, integer) from public, anon, authenticated;
+revoke all on function public.tracker_items_submit(text, jsonb) from public;
+grant execute on function public.tracker_items_submit(text, jsonb) to anon, authenticated;

@@ -17,6 +17,7 @@ import { guildLabels } from "@/lib/guildLabels";
 import { listUserInterfaces } from "@/lib/community/interfaceQueries";
 import { interfacePath } from "@/lib/community/interfaces";
 import { interfaceLabels } from "@/lib/interfaceLabels";
+import { trackerLabels } from "@/lib/trackerLabels";
 
 export const dynamic = "force-dynamic";
 
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: { params: LocaleParams }): Pr
 /**
  * Account: profilo e uscita, poi "Le tue build" (23/10/2026: build pubblicate e nascoste, con i link alla scheda e
  * alla modifica). Tier list della community e gilde arrivano con il lancio del gioco e avranno qui le loro sezioni.
+ * Dall'11/11/2026 in fondo il collegamento a ForeverMeta Companion (/account/tracker), l'app del tracker degli oggetti.
  */
 export default async function AccountPage({ params }: { params: LocaleParams }) {
   const { locale, dict: d } = await resolveLocale(params);
@@ -52,6 +54,7 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
   const myGuilds = await listUserGuilds(supabase, user.id);
   const U = interfaceLabels[locale];
   const myInterfaces = await listUserInterfaces(supabase, user.id);
+  const T = trackerLabels[locale].account;
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
@@ -185,6 +188,18 @@ export default async function AccountPage({ params }: { params: LocaleParams }) 
             ))}
           </ul>
         )}
+      </section>
+
+      <section id="tracker" className="mt-10" aria-labelledby="account-tracker">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 id="account-tracker" className="t-section">
+            {T.title}
+          </h2>
+          <Link href={href(locale, "/account/tracker")} className="btn btn-choice px-3 py-1.5 text-xs" prefetch={false}>
+            {T.open}
+          </Link>
+        </div>
+        <p className="mt-4 text-sm text-pale-muted">{T.text}</p>
       </section>
     </div>
   );

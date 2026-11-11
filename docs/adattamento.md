@@ -43,7 +43,7 @@ Copia fatta l'08/10/2026 da `ultimacenere/originsmeta` al commit `9fdf3fe`. Ques
 
 - Dati: `src/lib/data/` (carte e `woo-cards.json`, `card-lore*.ts`, `card-history.ts`, luoghi, news, eventi, tier list, mazzi, autori), `src/lib/content/` (guide, FAQ).
 - Dizionari: `src/lib/dictionaries/{en,it,es,fr}.ts`. Il francese c'è nel motore: tenerlo o no è una decisione di Pierluigi (in francese Forever ha già JudgeHype e Kami-labs).
-- Documenti di Origins: `docs/spagnolo.md`, `docs/francese.md`, `docs/testi-di-gioco.md`, `docs/tracker.md`, `docs/fumetti.md`, `docs/guide-community.md` (gli ultimi due descrivono funzioni del motore, da rileggere).
+- Documenti di Origins: `docs/spagnolo.md`, `docs/francese.md`, `docs/testi-di-gioco.md`, `docs/fumetti.md`, `docs/guide-community.md` (gli ultimi due descrivono funzioni del motore, da rileggere).
 - Script legati a Origins: `scripts/import-woo.mjs`, `scripts/official-texts.mjs`, `scripts/import-card-art.mjs`, `scripts/llms-txt.mjs`.
 
 ## Funzioni del motore
