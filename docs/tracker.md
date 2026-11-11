@@ -8,7 +8,7 @@ questo file era la guida del tracker di OriginsMeta, copiata con il motore: la s
 ## Cos'è
 
 Tre pezzi (nomi decisi da Pierluigi l'11/11/2026):
-- **ForeverMeta Tracker**, addon Lua nel gioco (cartella `ForeverMeta_Tracker`, distribuito su CurseForge): annota
+- **ForeverMeta Tracker**, addon Lua nel gioco (cartella `ForeverMetaTracker`, distribuito su CurseForge): annota
   quello che il giocatore vede mentre gioca (bottino, mercanti, ricompense delle missioni, ispezione, oggetti linkati in
   chat, tooltip, ricerche e scansioni dell'asta lanciate da lui) nei suoi SavedVariables, che il gioco scrive sul disco
   al logout, al cambio personaggio e con `/reload`;
