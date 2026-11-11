@@ -79,10 +79,10 @@ L'app deve quindi mandare le istantanee dell'asta in chiamate di al massimo 10 r
 - `tracker_loot_seen`: impronte `g` delle fonti già contate negli ultimi 3 giorni (e `g:chiave` per il loro bottino).
   Lo stesso cadavere aperto da più giocatori del gruppo conta una volta (il primo); il bottino conta solo se l'apertura
   è dello stesso utente e nello stesso momento (5 secondi); un reinvio dello stesso cadavere non conta.
-- `auction_prices`: oggetto × regione × reame (`GetRealmName()`; in Forever sembra il set di regole, "PvE", da
-  verificare in gioco) × fazione × giorno UTC: minimo del giorno, mediana delle mediane delle istantanee (al massimo
-  48 tenute), quantità massima, campioni. Le aste restano separate per fazione finché la verifica in gioco non dice se
-  l'asta è comune.
+- `auction_prices`: oggetto × regione × reame (`GetRealmName()`; in gioco l'11/11 vale `CAMWOW EU4 Realm 5 PvE`) ×
+  fazione × giorno UTC: minimo del giorno, mediana delle mediane delle istantanee (al massimo 48 tenute; le ricerche
+  `browse` conoscono solo il minimo e non entrano nelle mediane), quantità massima, campioni. Le aste restano separate
+  per fazione finché una prova con un personaggio dell'altra fazione non dice se l'asta è comune.
 - `contributions`: utente × giorno: righe ricevute, usate e per tipo (crediti e limiti). La legge solo il proprietario
   (`/account/tracker`).
 - `item_contributors`, `item_source_contributors`: chi ha contribuito a un oggetto o a una provenienza, solo per

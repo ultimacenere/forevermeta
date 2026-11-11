@@ -7338,9 +7338,13 @@ begin
       c_items := c_items + 1;
 
     elsif k = 'ah' then
+      -- Un'istantanea "browse" (elenco di una ricerca) conosce solo il minimo: aggiorna minimo e quantità ma non entra
+      -- nelle mediane, che scenderebbero verso il minimo (coi dati veri dell'11/11: Linen Cloth 24 invece di 30).
       insert into public.auction_prices as a (item_key, region, realm, faction, day, min_price, median_price, medians, quantity, samples, updated_at)
       select p.key, r ->> 'r', r ->> 'rm', r ->> 'f', (to_timestamp(tsec) at time zone 'utc')::date,
-             p.min_price, p.median_price, array[p.median_price], p.quantity, 1, now()
+             p.min_price, p.median_price,
+             case when r ->> 'src' = 'browse' then '{}'::bigint[] else array[p.median_price] end,
+             p.quantity, 1, now()
         from (select x ->> 0 as key,
                      min(round((x ->> 1)::numeric))::bigint as min_price,
                      (percentile_disc(0.5) within group (order by round((x ->> 2)::numeric)))::bigint as median_price,
@@ -7349,9 +7353,11 @@ begin
                group by x ->> 0) p
       on conflict (item_key, region, realm, faction, day) do update set
         min_price = least(a.min_price, excluded.min_price),
-        medians = (a.medians || excluded.medians)[greatest(1, cardinality(a.medians) + 1 - 47):],
-        median_price = (select percentile_disc(0.5) within group (order by m)
-                          from unnest((a.medians || excluded.medians)[greatest(1, cardinality(a.medians) + 1 - 47):]) as u(m)),
+        medians = (a.medians || excluded.medians)[greatest(1, cardinality(a.medians) + cardinality(excluded.medians) - 47):],
+        -- senza mediane vere (solo ricerche "browse") la mediana resta il minimo
+        median_price = coalesce((select percentile_disc(0.5) within group (order by m)
+                          from unnest((a.medians || excluded.medians)[greatest(1, cardinality(a.medians) + cardinality(excluded.medians) - 47):]) as u(m)),
+                          least(a.min_price, excluded.min_price)),
         quantity = greatest(a.quantity, excluded.quantity),
         samples = a.samples + 1,
         updated_at = now();
