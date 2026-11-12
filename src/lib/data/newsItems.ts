@@ -27,6 +27,11 @@ import knownIssuesNov5 from "./newsTexts/known-issues-november-5";
 import dayTwo from "./newsTexts/day-two-layering-portals-maintenance";
 import firstWeekTips from "./newsTexts/first-week-tips-groups-escorts-lordaeron";
 import rulesetsVideo from "./newsTexts/rulesets-video-faction-limits";
+import firstWeekRecord from "./newsTexts/first-week-record-launch-crash-totems";
+import factionBalanceNov10 from "./newsTexts/pvp-faction-balance-november-10";
+import classTuningNov10 from "./newsTexts/class-tuning-november-10";
+import dungeonXpGold from "./newsTexts/dungeon-xp-quest-gold-november-10";
+import raidsInterviews from "./newsTexts/raids-december-9-developer-interviews";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -233,4 +238,9 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   dayTwo,
   firstWeekTips,
   rulesetsVideo,
+  firstWeekRecord,
+  factionBalanceNov10,
+  classTuningNov10,
+  dungeonXpGold,
+  raidsInterviews,
 ];

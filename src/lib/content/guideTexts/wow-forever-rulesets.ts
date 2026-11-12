@@ -4,7 +4,7 @@ export const guide: GuideEntry = {
   slug: "wow-forever-rulesets",
   category: "start",
   published: "2026-10-10",
-  updated: "2026-11-06",
+  updated: "2026-11-12",
   cover: { word: "Rulesets", tone: "gold" },
   sources: [
     {
@@ -14,6 +14,10 @@ export const guide: GuideEntry = {
     {
       label: "Rulesets | World of Warcraft: Forever (Blizzard video, November 5, 2026)",
       url: "https://www.youtube.com/watch?v=7ZmA4Jy6ixU",
+    },
+    {
+      label: "PvP Faction Balance Updates - November 10 (Kaivax, Blizzard forums, November 10, 2026)",
+      url: "https://us.forums.blizzard.com/en/wow/t/pvp-faction-balance-updates-november-10/2408781",
     },
     {
       label: "The Roleplay-PvP Ruleset is Coming to WoW Forever (Aggrend, Blizzard forums, October 22, 2026)",
@@ -143,7 +147,9 @@ Kris Zierhut, Principal Designer, confirmed it to Mein-MMO (interview published 
 
 Blizzard also mentions faction balancing systems "similar to the approach introduced in Season of Discovery", where creating new characters of one faction could be limited for a while. The video of November 5 confirms it: Forever introduces **temporary restrictions on character creation** when an imbalance starts to affect the experience, with adjustments meant to touch individual players as little as possible. The reason given is that in the past one faction would grow to outnumber the other and PvP servers ended up feeling one-sided. Since the end of October players on the official forums report that creating a Horde character on PvP is at times refused with the message "This faction is currently unavailable on this ruleset due to population imbalance". The video does not mention that message and gives no thresholds or durations, so how often and for how long it happens is not confirmed; there is more in our [news on the Horde locks](/en/news/name-filter-fix-faction-locks).
 
-On **Roleplay-PvP** Blizzard has not said whether the one-faction rule applies, and the video of November 5 does not cover that ruleset. A few forum reports point that way, but they are unconfirmed and partly look like bugs. The races and classes of each faction are in our guide to [races and classes](/en/guides/wow-forever-races-classes).
+On November 10 Kaivax explained how the system works now: character creation looks at the overall faction balance of each region's PvP rulesets over time, rather than at snapshots, and the goal is to get as close to 50/50 as possible. The most unbalanced region was at about 55/45, and creating characters on the more populous faction will get increasingly difficult: at that point Horde on the North American PvP rulesets and Alliance on European Roleplay-PvP, which may flip as players move. Details in our [news on the faction balance update](/en/news/pvp-faction-balance-november-10).
+
+On **Roleplay-PvP** the creation limits for faction balance do apply: Blizzard's post of November 10 names European Roleplay-PvP among the rulesets where the Alliance is harder to create. Whether the one-faction-per-account rule applies there too has still not been said, and the video of November 5 does not cover that ruleset. A few forum reports point that way, but they are unconfirmed and partly look like bugs. The races and classes of each faction are in our guide to [races and classes](/en/guides/wow-forever-races-classes).
 
 ## Layering: what changes at launch {#layering}
 
@@ -183,9 +189,9 @@ These are not recommendations, just the facts that weigh on the choice:
 ## What we don't know yet {#unknowns}
 
 - **When Hardcore arrives**: Blizzard only says "sometime after launch".
-- **How faction balancing works** in Forever: the comparison with Season of Discovery and the temporary limits on character creation are official; their thresholds and duration have not been published.
+- **How faction balancing works** in Forever: the comparison with Season of Discovery and the temporary limits on character creation are official, and since November 10 the system looks at the overall balance of each region rather than at snapshots; thresholds and duration have not been published.
 - **How the language preference is used**: Blizzard says you will meet players who share it, not how (for example in the Group Finder that appears in the beta notes).
-- **Roleplay-PvP and factions**: whether the PvP limit of one faction per account applies there too. Blizzard's ruleset article talks about "the PvP rulesets", in the plural, when it explains faction balance, but it states the one-faction rule only for "the PvP ruleset", and the video of November 5 does not cover Roleplay-PvP.
+- **Roleplay-PvP and factions**: whether the PvP limit of one faction per account applies there too. Blizzard's ruleset article talks about "the PvP rulesets", in the plural, when it explains faction balance, but it states the one-faction rule only for "the PvP ruleset", and the video of November 5 does not cover Roleplay-PvP. The balance limits on creation, on the other hand, do apply there (post of November 10).
 - **Fallen Hardcore characters and Roleplay-PvP**: the video speaks of three rulesets they can go to, and Roleplay-PvP is not one of those it presents.
 - **Merging rulesets**: the shared auction houses or groups mentioned in the podcast are only an option, with no date and no trigger announced.
 
@@ -209,7 +215,7 @@ Localized names of the rulesets are in the [glossary](/en/glossary); more answer
         },
         {
           q: "Why can't I create a character of one faction on PvP?",
-          a: "In its video of November 5 Blizzard confirms temporary restrictions on character creation when a faction imbalance starts to affect the experience. It gives no thresholds or durations.",
+          a: "Blizzard limits character creation on the more populous faction to keep the balance. Since November 10 the system looks at the overall balance of each region's PvP rulesets, Roleplay-PvP included; Blizzard gives no thresholds or durations.",
         },
         {
           q: "Can players on different rulesets trade with each other?",
@@ -283,7 +289,9 @@ Kris Zierhut, Principal Designer, lo ha confermato a Mein-MMO (intervista pubbli
 
 Blizzard parla anche di sistemi di bilanciamento delle fazioni "simili all'approccio introdotto in Season of Discovery", dove la creazione di personaggi nuovi di una fazione poteva essere limitata per un po'. Il video del 5 novembre lo conferma: Forever introduce **restrizioni temporanee alla creazione dei personaggi** quando uno squilibrio comincia a pesare sull'esperienza, con interventi che puntano a toccare il meno possibile i singoli giocatori. Il motivo indicato è che in passato una fazione finiva per superare l'altra e i server PvP diventavano sbilanciati. Dalla fine di ottobre sul forum ufficiale i giocatori raccontano che a volte sul PvP la creazione di un personaggio dell'Orda viene rifiutata con il messaggio "This faction is currently unavailable on this ruleset due to population imbalance". Il video non cita quel messaggio e non dà soglie né durate, quindi quanto spesso succeda e per quanto non è confermato; trovi di più nella nostra [news sui blocchi dell'Orda](/it/news/name-filter-fix-faction-locks).
 
-Sul **Roleplay-PvP** Blizzard non ha detto se valga la regola di una sola fazione, e il video del 5 novembre non parla di quel set. Alcune segnalazioni sul forum vanno in quella direzione, ma non sono confermate e in parte sembrano bug. Razze e classi di ogni fazione sono nella guida a [razze e classi](/it/guides/wow-forever-races-classes).
+Il 10 novembre Kaivax ha spiegato come funziona ora: la creazione dei personaggi guarda l'equilibrio complessivo delle fazioni nei set PvP di ogni regione nel tempo, non istantanee, con l'obiettivo di avvicinarsi il più possibile al 50/50. La regione più sbilanciata era intorno al 55/45, e creare personaggi della fazione più popolosa diventerà sempre più difficile: in quel momento l'Orda sui set PvP del Nord America e l'Alleanza sul Roleplay-PvP europeo, una situazione che può invertirsi. I dettagli sono nella nostra [news sul bilanciamento delle fazioni](/it/news/pvp-faction-balance-november-10).
+
+Sul **Roleplay-PvP** i limiti alla creazione per l'equilibrio delle fazioni valgono: il post del 10 novembre cita proprio il Roleplay-PvP europeo fra i set dove l'Alleanza è più difficile da creare. Se valga anche la regola di una sola fazione per account Blizzard non l'ha ancora detto, e il video del 5 novembre non parla di quel set. Alcune segnalazioni sul forum vanno in quella direzione, ma non sono confermate e in parte sembrano bug. Razze e classi di ogni fazione sono nella guida a [razze e classi](/it/guides/wow-forever-races-classes).
 
 ## Il layering: cosa cambia al lancio {#layering}
 
@@ -323,9 +331,9 @@ Non sono consigli, solo i fatti che pesano sulla scelta:
 ## Cosa non sappiamo ancora {#cosa-non-sappiamo}
 
 - **Quando arriva Hardcore**: Blizzard dice solo "dopo il lancio".
-- **Come funziona il bilanciamento delle fazioni** in Forever: di ufficiale ci sono il paragone con Season of Discovery e i limiti temporanei alla creazione dei personaggi; soglie e durata non sono pubblicate.
+- **Come funziona il bilanciamento delle fazioni** in Forever: di ufficiale ci sono il paragone con Season of Discovery e i limiti temporanei alla creazione dei personaggi, e dal 10 novembre il sistema guarda l'equilibrio complessivo di ogni regione e non istantanee; soglie e durata non sono pubblicate.
 - **Come si usa la lingua preferita**: Blizzard dice che incontrerai chi ha la stessa preferenza, non come (per esempio nel Group Finder che compare nelle note della beta).
-- **Roleplay-PvP e fazioni**: se il limite del PvP, una sola fazione per account, vale anche lì. Quando spiega l'equilibrio delle fazioni la versione inglese dell'articolo di Blizzard sui set di regole parla di "PvP rulesets", al plurale, ma la regola di una sola fazione la scrive solo per "the PvP ruleset", e il video del 5 novembre non parla di Roleplay-PvP.
+- **Roleplay-PvP e fazioni**: se il limite del PvP, una sola fazione per account, vale anche lì. Quando spiega l'equilibrio delle fazioni la versione inglese dell'articolo di Blizzard sui set di regole parla di "PvP rulesets", al plurale, ma la regola di una sola fazione la scrive solo per "the PvP ruleset", e il video del 5 novembre non parla di Roleplay-PvP. I limiti alla creazione per l'equilibrio, invece, lì valgono (post del 10 novembre).
 - **Personaggi Hardcore caduti e Roleplay-PvP**: il video parla di tre set di destinazione, e il Roleplay-PvP non è fra quelli che presenta.
 - **Set di regole uniti**: case d'asta o gruppi in comune, citati nel podcast, sono solo un'opzione, senza date né condizioni annunciate.
 
@@ -349,7 +357,7 @@ I nomi dei set di regole nelle varie lingue sono nel [glossario](/it/glossary); 
         },
         {
           q: "Perché non riesco a creare un personaggio di una fazione sul PvP?",
-          a: "Nel video del 5 novembre Blizzard conferma restrizioni temporanee alla creazione dei personaggi quando uno squilibrio fra le fazioni comincia a pesare sull'esperienza. Non dà soglie né durate.",
+          a: "Blizzard limita la creazione di personaggi della fazione più popolosa per tenere l'equilibrio. Dal 10 novembre il sistema guarda l'equilibrio complessivo dei set PvP di ogni regione, Roleplay-PvP compreso; soglie e durate non sono pubblicate.",
         },
         {
           q: "I giocatori di set di regole diversi possono commerciare fra loro?",
@@ -425,7 +433,9 @@ Kris Zierhut, Principal Designer, lo confirmó a Mein-MMO (entrevista publicada 
 
 Blizzard menciona también sistemas de equilibrio de facciones "similares al enfoque introducido en Season of Discovery", donde la creación de personajes nuevos de una facción podía limitarse durante un tiempo. El vídeo del 5 de noviembre lo confirma: Forever introduce **restricciones temporales en la creación de personajes** cuando un desequilibrio empieza a afectar a la experiencia, con ajustes que intentan afectar lo menos posible a cada jugador. El motivo que da es que en el pasado una facción acababa superando a la otra y los servidores JcJ quedaban desequilibrados. Desde finales de octubre, en el foro oficial hay jugadores que cuentan que a veces en JcJ se rechaza la creación de un personaje de la Horda con el mensaje "This faction is currently unavailable on this ruleset due to population imbalance". El vídeo no menciona ese mensaje ni da umbrales o duraciones, así que con qué frecuencia pasa y cuánto dura no está confirmado; hay más en nuestra [noticia sobre los bloqueos de la Horda](/es/news/name-filter-fix-faction-locks).
 
-En **Rol-JcJ** Blizzard no ha dicho si se aplica la regla de una sola facción, y el vídeo del 5 de noviembre no habla de ese conjunto. Algunos avisos en el foro apuntan a que sí, pero no están confirmados y en parte parecen errores. Las razas y clases de cada facción están en la guía de [razas y clases](/es/guides/wow-forever-races-classes).
+El 10 de noviembre Kaivax explicó cómo funciona ahora: la creación de personajes tiene en cuenta el equilibrio global de facciones en los conjuntos JcJ de cada región a lo largo del tiempo, no instantáneas, con el objetivo de acercarse lo más posible al 50/50. La región más desequilibrada estaba en torno al 55/45, y crear personajes de la facción más poblada será cada vez más difícil: en ese momento, la Horda en los conjuntos JcJ de Norteamérica y la Alianza en Rol-JcJ de Europa, algo que puede invertirse. Los detalles están en nuestra [noticia sobre el equilibrio de facciones](/es/news/pvp-faction-balance-november-10).
+
+En **Rol-JcJ** sí se aplican los límites de creación por equilibrio de facciones: el mensaje del 10 de noviembre cita precisamente Rol-JcJ de Europa entre los conjuntos donde cuesta crear personajes de la Alianza. Si allí rige también la regla de una sola facción por cuenta, Blizzard aún no lo ha dicho, y el vídeo del 5 de noviembre no habla de ese conjunto. Algunos avisos en el foro apuntan a que sí, pero no están confirmados y en parte parecen errores. Las razas y clases de cada facción están en la guía de [razas y clases](/es/guides/wow-forever-races-classes).
 
 ## Las capas (layering): qué cambia en el lanzamiento {#capas}
 
@@ -465,9 +475,9 @@ No son recomendaciones, solo los datos que pesan en la elección:
 ## Lo que aún no sabemos {#lo-que-no-sabemos}
 
 - **Cuándo llega Hardcore**: Blizzard solo dice "después del lanzamiento". La página para Latinoamérica dice "poco después", pero el original en inglés no da ningún plazo.
-- **Cómo funciona el equilibrio de facciones** en Forever: lo oficial es la comparación con Season of Discovery y los límites temporales en la creación de personajes; los umbrales y la duración no se han publicado.
+- **Cómo funciona el equilibrio de facciones** en Forever: lo oficial es la comparación con Season of Discovery y los límites temporales en la creación de personajes, y desde el 10 de noviembre el sistema mira el equilibrio global de cada región y no instantáneas; los umbrales y la duración no se han publicado.
 - **Cómo se usa el idioma preferido**: Blizzard dice que te encontrarás con quien comparte esa preferencia, no cómo (por ejemplo en el Group Finder que aparece en las notas de la beta).
-- **Rol-JcJ y las facciones**: si el límite del JcJ, una sola facción por cuenta, se aplica también allí. Cuando explica el equilibrio de facciones, la versión inglesa del artículo de Blizzard sobre los conjuntos de reglas habla de "PvP rulesets", en plural, pero la regla de una sola facción la escribe solo para "the PvP ruleset", y el vídeo del 5 de noviembre no habla de Rol-JcJ.
+- **Rol-JcJ y las facciones**: si el límite del JcJ, una sola facción por cuenta, se aplica también allí. Cuando explica el equilibrio de facciones, la versión inglesa del artículo de Blizzard sobre los conjuntos de reglas habla de "PvP rulesets", en plural, pero la regla de una sola facción la escribe solo para "the PvP ruleset", y el vídeo del 5 de noviembre no habla de Rol-JcJ. Los límites de creación por equilibrio, en cambio, sí se aplican allí (mensaje del 10 de noviembre).
 - **Personajes caídos de Hardcore y Rol-JcJ**: el vídeo habla de tres conjuntos de destino, y Rol-JcJ no está entre los que presenta.
 - **Conjuntos unidos**: las casas de subastas o los grupos en común que se mencionaron en el pódcast son solo una opción, sin fecha ni condiciones anunciadas.
 
@@ -491,7 +501,7 @@ Los nombres de los conjuntos de reglas en cada idioma están en el [glosario](/e
         },
         {
           q: "¿Por qué no puedo crear un personaje de una facción en JcJ?",
-          a: "En el vídeo del 5 de noviembre Blizzard confirma restricciones temporales en la creación de personajes cuando un desequilibrio entre facciones empieza a afectar a la experiencia. No da umbrales ni duraciones.",
+          a: "Blizzard limita la creación de personajes de la facción más poblada para mantener el equilibrio. Desde el 10 de noviembre el sistema mira el equilibrio global de los conjuntos JcJ de cada región, Rol-JcJ incluido; no se han publicado umbrales ni duraciones.",
         },
         {
           q: "¿Pueden comerciar entre sí jugadores de distintos conjuntos de reglas?",

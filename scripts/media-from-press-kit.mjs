@@ -60,6 +60,12 @@ const jobs = [
   [`${S}/WoW_Forever_Announce_Zones_NewWater_009.jpg`, "news-day-two.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_SCENIC_Announce_Dungeon_Lordaeron_046.png`, "news-lordaeron-quests.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_SCENIC_Announce_NewLighting_Darnassus_052.png`, "news-rulesets-video.webp", 1600, 900, "centre"],
+  // copertine delle news del 6-11/11 (12/11/2026)
+  [`${C}/WoW_Forever_Cinematic_Still_3.jpeg`, "news-class-tuning.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_Announce_Dungeon_DrownedCity_062.jpg`, "news-dungeon-xp-gold.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Camelot_Announce_Zones_Riverglades_035.jpg`, "news-faction-balance.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_Announce_Raid_BarrowDeeps_077.jpg`, "news-raids-interviews.webp", 1600, 900, "centre"],
+  [`${C}/WoW_Forever_Cinematic_Still_2.jpeg`, "news-first-week.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_Hyjal_085.jpg`, "hyjal.webp", 1600, 900, "centre"],

@@ -313,6 +313,51 @@ export const media = {
       "Captura de World of Warcraft: Forever de Darnassus con la nueva iluminación: un personaje sentado en una terraza de piedra ante un estanque, pabellones con cúpula y árboles violetas",
     ),
   ),
+  /** fotogramma 3 del filmato di lancio: news sui ritocchi alle classi del 10/11 */
+  newsClassTuning: cover(
+    "/media/news-class-tuning.webp",
+    n(
+      "Still from the World of Warcraft: Forever launch cinematic: two travellers, one of them a bear, climb a snowy mountain slope in a blizzard",
+      "Fotogramma del filmato di lancio di World of Warcraft: Forever: due viaggiatori, uno dei quali è un orso, risalgono un pendio innevato nella tormenta",
+      "Fotograma de la cinemática de lanzamiento de World of Warcraft: Forever: dos viajeros, uno de ellos un oso, suben una ladera nevada en plena ventisca",
+    ),
+  ),
+  /** Drowned City 062: news su XP dei dungeon e oro delle missioni */
+  newsDungeonXpGold: cover(
+    "/media/news-dungeon-xp-gold.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Drowned City dungeon: a dead tree and wrecked wooden huts on a sunny shore",
+      "Screenshot di World of Warcraft: Forever del dungeon Drowned City: un albero secco e capanne di legno in rovina su una riva assolata",
+      "Captura de World of Warcraft: Forever de la mazmorra Drowned City: un árbol seco y chozas de madera en ruinas en una orilla soleada",
+    ),
+  ),
+  /** Riverglades 035: news sul bilanciamento delle fazioni sul PvP */
+  newsFactionBalance: cover(
+    "/media/news-faction-balance.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Riverglades: a stone watchtower on a rocky bluff above a river, among wooded hills",
+      "Screenshot di World of Warcraft: Forever delle Riverglades: una torre di guardia di pietra su uno sperone di roccia sopra un fiume, fra colline boscose",
+      "Captura de World of Warcraft: Forever de los Riverglades: una atalaya de piedra sobre un peñasco junto a un río, entre colinas boscosas",
+    ),
+  ),
+  /** Barrow Deeps 077: news sulle interviste agli sviluppatori sulle incursioni */
+  newsRaidsInterviews: cover(
+    "/media/news-raids-interviews.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Barrow Deeps raid: an icy blue cavern with hanging stalactites and a frozen pool",
+      "Screenshot di World of Warcraft: Forever dell'incursione Barrow Deeps: una caverna di ghiaccio azzurro con stalattiti e uno specchio d'acqua gelato",
+      "Captura de World of Warcraft: Forever de la banda Cavernas del Túmulo: una caverna de hielo azul con estalactitas y un estanque helado",
+    ),
+  ),
+  /** fotogramma 2 del filmato di lancio: news sulla prima settimana */
+  newsFirstWeek: cover(
+    "/media/news-first-week.webp",
+    n(
+      "Still from the World of Warcraft: Forever launch cinematic: a huge shadowy figure looms over dark mountains crossed by glowing blue streams",
+      "Fotogramma del filmato di lancio di World of Warcraft: Forever: un'enorme figura d'ombra incombe su montagne scure attraversate da scie azzurre luminose",
+      "Fotograma de la cinemática de lanzamiento de World of Warcraft: Forever: una enorme figura en sombra se alza sobre montañas oscuras surcadas por ríos de luz azul",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",
