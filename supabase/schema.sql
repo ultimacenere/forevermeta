@@ -6919,7 +6919,7 @@ create table if not exists public.item_sources (
   id bigint generated always as identity primary key,
   item_key text not null references public.items(item_key) on delete cascade,
   kind text not null check (kind in ('loot', 'vendor', 'quest', 'inspect', 'chat')),
-  source text not null default '' check (source = '' or source ~ '^(npc|obj|item|quest):[0-9]{1,9}$'),
+  source text not null default '' check (source = '' or source ~ '^(npc|obj|item|de|quest):[0-9]{1,9}$'),
   zone_id integer not null default 0 check (zone_id between 0 and 1000000),
   seen bigint not null default 0,
   quantity bigint not null default 0,
@@ -6946,7 +6946,7 @@ create table if not exists public.item_source_contributors (
 );
 
 create table if not exists public.loot_sources (
-  source text not null check (source ~ '^(npc|obj|item):[0-9]{1,9}$'),
+  source text not null check (source ~ '^(npc|obj|item|de):[0-9]{1,9}$'),
   zone_id integer not null default 0 check (zone_id between 0 and 1000000),
   opens bigint not null default 0,
   first_seen_at timestamptz not null default now(),
@@ -7086,7 +7086,7 @@ begin
   if k in ('open', 'loot', 'vendor', 'quest') then
     if jsonb_typeof(r -> 's') is distinct from 'string' then return false; end if;
     src := r ->> 's';
-    if k in ('open', 'loot') and src !~ '^(npc|obj|item):[0-9]{1,9}$' then return false; end if;
+    if k in ('open', 'loot') and src !~ '^(npc|obj|item|de):[0-9]{1,9}$' then return false; end if;
     if k = 'vendor' and src !~ '^npc:[0-9]{1,9}$' then return false; end if;
     if k = 'quest' and src !~ '^quest:[0-9]{1,9}$' then return false; end if;
   end if;

@@ -60,6 +60,9 @@ describe("righe di /api/tracker/items", () => {
   test("fonti giuste per tipo", () => {
     assert.equal(I.isItemRow({ ...valid.loot, s: "obj:1731" }, NOW), true);
     assert.equal(I.isItemRow({ ...valid.loot, s: "item:0" }, NOW), true);
+    assert.equal(I.isItemRow({ ...valid.loot, s: "de:14145" }, NOW), true);
+    assert.equal(I.isItemRow({ ...valid.open, s: "de:14145" }, NOW), true);
+    assert.equal(I.isItemRow({ ...valid.vendor, s: "de:14145" }, NOW), false);
     assert.equal(I.isItemRow({ ...valid.loot, s: "quest:1" }, NOW), false);
     assert.equal(I.isItemRow({ ...valid.vendor, s: "obj:1" }, NOW), false);
     assert.equal(I.isItemRow({ ...valid.quest, s: "npc:1" }, NOW), false);
@@ -125,7 +128,9 @@ describe("stessi limiti del blocco OGGETTI di schema.sql", () => {
     assert.equal(I.ITEM_LIMITS.ahPerDay, 300);
     assert.equal(I.ITEM_LIMITS.verifyMin, 3);
     assert.ok(block.includes(`'${I.ITEM_KEY_RE.source}'`), "regex della chiave");
-    assert.ok(block.includes("'^(npc|obj|item):[0-9]{1,9}$'") && I.LOOT_SOURCE_RE.source === "^(npc|obj|item):[0-9]{1,9}$");
+    assert.ok(block.includes("'^(npc|obj|item|de):[0-9]{1,9}$'") && I.LOOT_SOURCE_RE.source === "^(npc|obj|item|de):[0-9]{1,9}$");
+    assert.ok(block.includes("'^(npc|obj|item|de|quest):[0-9]{1,9}$'"), "fonti di item_sources");
+    assert.ok(!block.includes("(npc|obj|item):") && !block.includes("(npc|obj|item|quest):"), "nessuna regex vecchia");
     assert.ok(block.includes(`tracker_num_ok(r -> 't', ${I.EARLIEST_T},`), "prima ora");
     assert.ok(block.includes("tracker_text_ok(r -> 'name', 200)") && block.includes("char_length(x #>> '{}') > 300") && block.includes("tracker_text_ok(r -> 'rm', 60)"));
   });

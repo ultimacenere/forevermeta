@@ -72,7 +72,8 @@ L'app deve quindi mandare le istantanee dell'asta in chiamate di al massimo 10 r
   per lingua del client, qualità, livelli, classe, slot, legame, statistiche, build del client dei dettagli, quante
   volte è stato visto, contributori distinti, verificato. I dettagli li riscrive l'ultimo che li manda.
 - `item_sources`: oggetto × tipo (`loot`, `vendor`, `quest`, `inspect`, `chat`) × fonte (`npc:<id>`, `obj:<id>`,
-  `item:<id>`, `quest:<id>`) × mappa: quante volte, quantità, livelli del giocatore, prezzo e disponibilità del
+  `item:<id>` contenitore aperto dalle borse, `de:<id>` arma o armatura disincantata, `quest:<id>`) × mappa (0 dentro
+  le istanze, che in Forever non hanno mappa): quante volte, quantità, livelli del giocatore, prezzo e disponibilità del
   mercante, ricompensa a scelta, contributori, verificato.
 - `loot_sources`: finestre di bottino aperte per fonte e mappa, il denominatore delle probabilità di drop
   (`item_sources.seen` / `loot_sources.opens`).

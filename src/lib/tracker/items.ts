@@ -38,7 +38,8 @@ const DAY_S = 86_400;
 const MAX_PRICE = 10_000_000_000_000;
 
 export const ITEM_KEY_RE = /^[0-9]{1,7}(:-?[0-9]{1,6}(:[0-9]{1,6}([.][0-9]{1,6}){0,15})?)?$/;
-export const LOOT_SOURCE_RE = /^(npc|obj|item):[0-9]{1,9}$/;
+// "item:<id>" contenitore aperto dalle borse, "de:<id>" arma o armatura disincantata (addon 0.1.3).
+export const LOOT_SOURCE_RE = /^(npc|obj|item|de):[0-9]{1,9}$/;
 export const VENDOR_SOURCE_RE = /^npc:[0-9]{1,9}$/;
 export const QUEST_SOURCE_RE = /^quest:[0-9]{1,9}$/;
 export const GUID_HASH_RE = /^[0-9a-f]{8}$/;
