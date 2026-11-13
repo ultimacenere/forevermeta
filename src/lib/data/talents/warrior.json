@@ -5,10 +5,10 @@
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-11-05",
+    "fetched": "2026-11-13",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Warrior numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Warrior trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Warrior trees carry the server's hotfixes of 4 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Warrior numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Warrior trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Warrior trees carry the server's hotfixes of 4 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Warrior trees carry the server's hotfixes of 6 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -581,8 +581,8 @@
           "col": 2,
           "maxRank": 2,
           "ranks": [
-            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
-            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health."
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, Reckless Swings, and Bloodthirst abilities cause your next 3 melee attacks to restore 0.5% of your maximum Health.",
+            "Your Enrage, Berserker Rage, Bloodrage, Death Wish, Reckless Swings, and Bloodthirst abilities cause your next 3 melee attacks to restore 1.0% of your maximum Health."
           ],
           "requires": {
             "id": "blood-craze"

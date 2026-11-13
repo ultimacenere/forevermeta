@@ -229,9 +229,9 @@
       "Quando è attivo, il 30% di tutti i danni subiti da chi lancia l'incantesimo viene subito al suo posto dal tuo demone Imp, Voidwalker, Succubus, Incubus o Felhunter. Inoltre, sia il demone sia il padrone infliggono il 3% di danni in più. Dura finché il demone è attivo."
     ],
     "soul-siphon": [
-      "Aumenta del 4% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno degli altri tuoi effetti di Affliction attivi sul bersaglio, fino a un aumento massimo del 12%.",
-      "Aumenta dell'8% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno degli altri tuoi effetti di Affliction attivi sul bersaglio, fino a un aumento massimo del 24%.",
-      "Aumenta del 12% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno degli altri tuoi effetti di Affliction attivi sul bersaglio, fino a un aumento massimo del 36%."
+      "Aumenta del 4% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno dei tuoi effetti Corruption, Siphon Life e Bane of Agony attivi sul bersaglio, fino a un aumento massimo del 12%.",
+      "Aumenta del 8% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno dei tuoi effetti Corruption, Siphon Life e Bane of Agony attivi sul bersaglio, fino a un aumento massimo del 24%.",
+      "Aumenta del 12% i danni inflitti o la salute drenata dai tuoi incantesimi Drain Life, Drain Soul e Wrack per ciascuno dei tuoi effetti Corruption, Siphon Life e Bane of Agony attivi sul bersaglio, fino a un aumento massimo del 36%."
     ],
     "suppression": [
       "Aumenta dell'1% la tua probabilità di colpire e riduce del 4% tutta la minaccia che generi.",
@@ -248,7 +248,7 @@
       "Aumenta del 10% tutti i danni inflitti dai tuoi famigli Imp, Voidwalker, Succubus, Incubus e Felhunter."
     ],
     "wrack": [
-      "Dilania il bersaglio dall'interno, infliggendo 86 danni da Ombra ogni 1 s e aumentando del 10% i danni che subisce dai tuoi altri effetti di danni da Ombra nel tempo per 6 s."
+      "Dilania il bersaglio dall'interno per 6 s, infliggendo 60 danni da Ombra ogni 1 s. Mentre lo canalizzi, i tuoi effetti Siphon Life, Corruption e Bane of Agony sul bersaglio infliggono i loro danni periodici il 100% più in fretta."
     ]
   },
   "es": {
@@ -481,9 +481,9 @@
       "Mientras está activo, un 30% de todo el daño que recibe el lanzador lo recibe en su lugar tu demonio Imp, Voidwalker, Succubus, Incubus o Felhunter. Además, tanto el demonio como el amo infligen un 3% más de daño. Dura mientras el demonio esté activo."
     ],
     "soul-siphon": [
-      "Aumenta un 4% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus otros efectos de Affliction activos en el objetivo, hasta un aumento máximo del 12%.",
-      "Aumenta un 8% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus otros efectos de Affliction activos en el objetivo, hasta un aumento máximo del 24%.",
-      "Aumenta un 12% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus otros efectos de Affliction activos en el objetivo, hasta un aumento máximo del 36%."
+      "Aumenta un 4% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus efectos de Corruption, Siphon Life y Bane of Agony activos en el objetivo, hasta un aumento máximo del 12%.",
+      "Aumenta un 8% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus efectos de Corruption, Siphon Life y Bane of Agony activos en el objetivo, hasta un aumento máximo del 24%.",
+      "Aumenta un 12% el daño infligido o la salud drenada por tus hechizos Drain Life, Drain Soul y Wrack por cada uno de tus efectos de Corruption, Siphon Life y Bane of Agony activos en el objetivo, hasta un aumento máximo del 36%."
     ],
     "suppression": [
       "Aumenta un 1% tu probabilidad de golpear y reduce un 4% toda la amenaza que generas.",
@@ -500,7 +500,7 @@
       "Aumenta un 10% todo el daño infligido por tus mascotas Imp, Voidwalker, Succubus, Incubus y Felhunter."
     ],
     "wrack": [
-      "Desgarra al objetivo desde dentro, infligiendo 86 puntos de daño de las Sombras cada 1 s y aumentando un 10% el daño que recibe de tus otros efectos de daño de las Sombras en el tiempo durante 6 s."
+      "Desgarra al objetivo desde dentro durante 6 s, infligiendo 60 puntos de daño de las Sombras cada 1 s. Mientras lo canalizas, tus efectos de Siphon Life, Corruption y Bane of Agony en el objetivo infligen su daño periódico un 100% más rápido."
     ]
   }
 }

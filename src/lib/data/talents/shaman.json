@@ -5,10 +5,10 @@
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-11-05",
+    "fetched": "2026-11-13",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Shaman numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Shaman trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Shaman numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Shaman trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Shaman trees carry the server's hotfixes of 10 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -394,9 +394,9 @@
           "col": 1,
           "maxRank": 3,
           "ranks": [
-            "Increases your Attack Power by an amount equal to 50% of your Intellect.",
-            "Increases your Attack Power by an amount equal to 100% of your Intellect.",
-            "Increases your Attack Power by an amount equal to 150% of your Intellect."
+            "Increases your Attack Power by an amount equal to 33% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 66% of your Intellect.",
+            "Increases your Attack Power by an amount equal to 100% of your Intellect."
           ],
           "icon": "spell_nature_mentalquickness",
           "classic": {
@@ -532,7 +532,7 @@
           "col": 2,
           "maxRank": 1,
           "ranks": [
-            "Instantly strike for 150% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+            "Instantly strike for 100% weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
           ],
           "icon": "ability_shaman_stormstrike",
           "classic": {
@@ -595,11 +595,11 @@
           "col": 2,
           "maxRank": 5,
           "ranks": [
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 4%. Stacks up to 5 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 8%. Stacks up to 5 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 12%. Stacks up to 5 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 16%. Stacks up to 5 times. Lasts 30 sec.",
-            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 6 times per minute.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 7 times per minute.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 8 times per minute.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 9 times per minute.",
+            "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec. Activates about 10 times per minute."
           ],
           "icon": "spell_shaman_maelstromweapon",
           "classic": {

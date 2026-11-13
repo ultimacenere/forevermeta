@@ -2551,6 +2551,90 @@ export const changeUpdates: ChangeUpdate[] = [
       ),
     ],
   },
+  {
+    id: "2026-11-10-hotfixes",
+    date: "2026-11-10",
+    title: l(
+      "Hotfixes of November 10: first class tuning after launch",
+      "Hotfix del 10 novembre: primo bilanciamento delle classi dopo il lancio",
+      "Correcciones del 10 de noviembre: primer ajuste de clases tras el lanzamiento",
+    ),
+    url: "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-11-2026/2403040",
+    items: [
+      c(
+        "hunter",
+        "Hunter pets had 150% of their normal health because of a bug; they now have 115%.",
+        "I famigli del Cacciatore avevano il 150% della vita normale per un bug; ora hanno il 115%.",
+        "Las mascotas del cazador tenían el 150% de su salud normal por un error; ahora tienen el 115%.",
+      ),
+      c(
+        "hunter",
+        "Arcane Shot and Summon Hawk (Beast Mastery) cost 11% of base Mana at every rank, and the Hawk deals about 80% more melee damage.",
+        "Arcane Shot e Summon Hawk (Beast Mastery) costano l'11% del Mana base a ogni rango, e il falco infligge circa l'80% di danni in mischia in più.",
+        "Arcane Shot y Summon Hawk (Beast Mastery) cuestan el 11% del maná base en todos los rangos, y el halcón inflige alrededor de un 80% más de daño cuerpo a cuerpo.",
+      ),
+      c(
+        "shaman",
+        "Weapon imbues and weapon totems can be active together, for example Windfury Weapon with Windfury Totem.",
+        "Gli imbue delle armi e i totem delle armi possono essere attivi insieme, per esempio Windfury Weapon con Windfury Totem.",
+        "Los imbuidos de arma y los tótems de arma pueden estar activos a la vez, por ejemplo Windfury Weapon con Windfury Totem.",
+      ),
+      c(
+        "shaman",
+        "Stormstrike deals 100% weapon damage (was 150%) and has an 8 sec cooldown (was 6 sec).",
+        "Stormstrike infligge il 100% dei danni dell'arma (era 150%) e ha un tempo di recupero di 8 s (era 6 s).",
+        "Stormstrike inflige un 100% del daño del arma (antes 150%) y tiene un tiempo de reutilización de 8 s (antes 6 s).",
+      ),
+      c(
+        "shaman",
+        "Mental Dexterity grants Attack Power equal to 33/66/100% of Intellect (was 50/100/150%).",
+        "Mental Dexterity dà Potenza d'attacco pari al 33/66/100% dell'Intelletto (era 50/100/150%).",
+        "Mental Dexterity otorga Poder de ataque igual al 33/66/100% del Intelecto (antes 50/100/150%).",
+      ),
+      c(
+        "shaman",
+        "Maelstrom Weapon reduces cast time and Mana cost by 20% per application at every rank (was 4/8/12/16/20%) and activates about 6/7/8/9/10 times per minute by rank (was 20 times at every rank).",
+        "Maelstrom Weapon riduce tempo di lancio e costo in Mana del 20% per carica a ogni rango (era 4/8/12/16/20%) e si attiva circa 6/7/8/9/10 volte al minuto secondo il rango (era 20 volte a ogni rango).",
+        "Maelstrom Weapon reduce el tiempo de lanzamiento y el coste de maná un 20% por acumulación en todos los rangos (antes 4/8/12/16/20%) y se activa unas 6/7/8/9/10 veces por minuto según el rango (antes 20 veces en todos los rangos).",
+      ),
+      c(
+        "shaman",
+        "Rage of the Storm (Shaman quest reward) has 16 Strength instead of Intellect and a 3.6 weapon speed (was 3.2).",
+        "Rage of the Storm (ricompensa della missione dello Sciamano) ha 16 di Forza invece dell'Intelletto e velocità 3.6 (era 3.2).",
+        "Rage of the Storm (recompensa de la misión del chamán) tiene 16 de Fuerza en lugar de Intelecto y velocidad 3.6 (antes 3.2).",
+      ),
+      c(
+        "warlock",
+        "Imp, Voidwalker, Incubus and Succubus have about 15% more base health, and the first four ranks of the Imp's Firebolt deal more damage.",
+        "Imp, Voidwalker, Incubus e Succubus hanno circa il 15% di vita base in più, e i primi quattro ranghi del Firebolt dell'Imp infliggono più danni.",
+        "Imp, Voidwalker, Incubus y Succubus tienen alrededor de un 15% más de salud base, y los cuatro primeros rangos del Firebolt del Imp infligen más daño.",
+      ),
+      c(
+        "warlock",
+        "Soul Siphon counts only Corruption, Siphon Life and Bane of Agony on the target (was any Affliction effect): 4/8/12% each, up to 36%.",
+        "Soul Siphon conta solo Corruption, Siphon Life e Bane of Agony sul bersaglio (prima qualsiasi effetto di Affliction): 4/8/12% ciascuno, fino al 36%.",
+        "Soul Siphon solo cuenta Corruption, Siphon Life y Bane of Agony en el objetivo (antes cualquier efecto de Affliction): 4/8/12% cada uno, hasta un 36%.",
+      ),
+      c(
+        "warlock",
+        "Wrack deals 30% less damage and no longer increases periodic damage; while it is channeled, Siphon Life, Corruption and Bane of Agony deal their periodic damage 100% faster, and the time gained is kept after the channel ends.",
+        "Wrack infligge il 30% di danni in meno e non aumenta più i danni periodici; mentre è canalizzato, Siphon Life, Corruption e Bane of Agony infliggono i danni periodici il 100% più in fretta, e il tempo guadagnato resta anche dopo la fine del canale.",
+        "Wrack inflige un 30% menos de daño y ya no aumenta el daño periódico; mientras se canaliza, Siphon Life, Corruption y Bane of Agony infligen su daño periódico un 100% más rápido, y el tiempo ganado se conserva al terminar la canalización.",
+      ),
+      c(
+        "druid",
+        "Restoration: Nature's Swiftness also makes Wild Growth instant.",
+        "Restoration: Nature's Swiftness rende istantaneo anche Wild Growth.",
+        "Restoration: Nature's Swiftness también hace instantáneo Wild Growth.",
+      ),
+      c(
+        "warrior",
+        "Arms: Sweeping Strikes no longer loses charges when no second target is hit.",
+        "Arms: Sweeping Strikes non perde più cariche se non colpisce un secondo bersaglio.",
+        "Arms: Sweeping Strikes ya no pierde cargas si no golpea a un segundo objetivo.",
+      ),
+    ],
+  },
 ];
 
 /** Etichette delle aree, nelle tre lingue: le nove classi, poi i sistemi. */

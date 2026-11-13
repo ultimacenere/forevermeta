@@ -5,10 +5,10 @@
     "label": "talentsforever.com",
     "url": "https://talentsforever.com/",
     "license": "CC BY 4.0",
-    "fetched": "2026-11-05",
+    "fetched": "2026-11-13",
     "verifiedInGame": false,
     "attribution": "Data from talentsforever.com (https://talentsforever.com)",
-    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Druid numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Druid trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
+    "note": "Talent trees and every rank's text from the WoW Forever beta client, build 1.60.1.70755. Some Druid numbers follow Blizzard's development notes of 2 Nov 2026, ahead of any game data. The Druid trees carry the server's hotfixes of 3 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files. The Druid trees carry the server's hotfixes of 6 Nov 2026 over that build, read from the beta's hotfix cache and cross-checked with Blizzard's notes or Wowhead's tooltips; those are not in the client's files."
   },
   "trees": [
     {
@@ -860,7 +860,7 @@
           "col": 3,
           "maxRank": 1,
           "ranks": [
-            "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of the consumed spell."
+            "Instantly heals a target with your active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect."
           ],
           "icon": "inv_relics_idolofrejuvenation",
           "classic": {

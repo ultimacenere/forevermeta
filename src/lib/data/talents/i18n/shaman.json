@@ -139,19 +139,19 @@
       "Dà ai tuoi incantesimi Lightning Bolt e Chain Lightning una probabilità del 30% di lanciare un secondo incantesimo simile sullo stesso bersaglio senza costi aggiuntivi, che infligge metà dei danni e non genera minaccia."
     ],
     "maelstrom-weapon": [
-      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 4%. Si accumula fino a 5 volte. Dura 30 s.",
-      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 8%. Si accumula fino a 5 volte. Dura 30 s.",
-      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 12%. Si accumula fino a 5 volte. Dura 30 s.",
-      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 16%. Si accumula fino a 5 volte. Dura 30 s.",
-      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s."
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s. Si attiva circa 6 volte al minuto.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s. Si attiva circa 7 volte al minuto.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s. Si attiva circa 8 volte al minuto.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s. Si attiva circa 9 volte al minuto.",
+      "Quando infliggi danni con un attacco in mischia, hai una probabilità di ridurre il tempo di lancio e il costo in Mana del tuo prossimo incantesimo Lightning Bolt del 20%. Si accumula fino a 5 volte. Dura 30 s. Si attiva circa 10 volte al minuto."
     ],
     "mana-tide-totem": [
       "Evoca un Mana Tide Totem con 5 Salute ai piedi dell'incantatore per 12 s, che ripristina 88 Mana ogni 3 secondi ai membri del gruppo entro 30 metri."
     ],
     "mental-dexterity": [
-      "Aumenta la tua Potenza d'attacco di una quantità pari al 50% del tuo Intelletto.",
-      "Aumenta la tua Potenza d'attacco di una quantità pari al 100% del tuo Intelletto.",
-      "Aumenta la tua Potenza d'attacco di una quantità pari al 150% del tuo Intelletto."
+      "Aumenta la tua Potenza d'attacco di una quantità pari al 33% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco di una quantità pari al 66% del tuo Intelletto.",
+      "Aumenta la tua Potenza d'attacco di una quantità pari al 100% del tuo Intelletto."
     ],
     "mental-quickness": [
       "Aumenta i tuoi Danni da incantesimo e le tue Cure fino al 15% del tuo Intelletto.",
@@ -204,7 +204,7 @@
       "Dà una probabilità di parare gli attacchi in mischia nemici, riduce del 30% tutta la minaccia generata dai tuoi attacchi mentre Rockbiter Weapon non è attivo e aumenta del 30% tutta la minaccia generata mentre Rockbiter Weapon è attivo."
     ],
     "stormstrike": [
-      "Colpisci istantaneamente infliggendo il 150% dei danni dell'arma e aumenti del 20% per 12 s i danni che infliggi al bersaglio con il tuo prossimo incantesimo Lightning Bolt, Chain Lightning o Earth Shock."
+      "Colpisci istantaneamente infliggendo il 100% dei danni dell'arma e aumenti del 20% per 12 s i danni che infliggi al bersaglio con il tuo prossimo incantesimo Lightning Bolt, Chain Lightning o Earth Shock."
     ],
     "thundering-strikes": [
       "Aumenta la tua probabilità di colpo critico con tutti gli incantesimi e gli attacchi del 1%.",
@@ -389,19 +389,19 @@
       "Otorga a tus hechizos Lightning Bolt y Chain Lightning una probabilidad del 30% de lanzar un segundo hechizo similar sobre el mismo objetivo sin coste adicional, que inflige la mitad del daño y no genera amenaza."
     ],
     "maelstrom-weapon": [
-      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 4%. Se acumula hasta 5 veces. Dura 30 s.",
-      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 8%. Se acumula hasta 5 veces. Dura 30 s.",
-      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 12%. Se acumula hasta 5 veces. Dura 30 s.",
-      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 16%. Se acumula hasta 5 veces. Dura 30 s.",
-      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s."
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s. Se activa unas 6 veces por minuto.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s. Se activa unas 7 veces por minuto.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s. Se activa unas 8 veces por minuto.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s. Se activa unas 9 veces por minuto.",
+      "Cuando infliges daño con un ataque cuerpo a cuerpo, tienes una probabilidad de reducir el tiempo de lanzamiento y el coste de Maná de tu siguiente hechizo Lightning Bolt en un 20%. Se acumula hasta 5 veces. Dura 30 s. Se activa unas 10 veces por minuto."
     ],
     "mana-tide-totem": [
       "Invoca un Mana Tide Totem con 5 de Salud a los pies del taumaturgo durante 12 s, que restaura 88 de Maná cada 3 segundos a los miembros del grupo en un radio de 30 metros."
     ],
     "mental-dexterity": [
-      "Aumenta tu Poder de ataque en una cantidad igual al 50% de tu Intelecto.",
-      "Aumenta tu Poder de ataque en una cantidad igual al 100% de tu Intelecto.",
-      "Aumenta tu Poder de ataque en una cantidad igual al 150% de tu Intelecto."
+      "Aumenta tu Poder de ataque en una cantidad igual al 33% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en una cantidad igual al 66% de tu Intelecto.",
+      "Aumenta tu Poder de ataque en una cantidad igual al 100% de tu Intelecto."
     ],
     "mental-quickness": [
       "Aumenta tu Daño de hechizos y tu Sanación hasta en un 15% de tu Intelecto.",
@@ -454,7 +454,7 @@
       "Otorga una probabilidad de parar los ataques cuerpo a cuerpo enemigos, reduce en un 30% toda la amenaza generada por tus ataques mientras Rockbiter Weapon no está activo y aumenta en un 30% toda la amenaza generada mientras Rockbiter Weapon está activo."
     ],
     "stormstrike": [
-      "Golpeas al instante infligiendo un 150% del daño del arma y aumentas en un 20% durante 12 s el daño que infliges al objetivo con tu siguiente hechizo Lightning Bolt, Chain Lightning o Earth Shock."
+      "Golpeas al instante infligiendo un 100% del daño del arma y aumentas en un 20% durante 12 s el daño que infliges al objetivo con tu siguiente hechizo Lightning Bolt, Chain Lightning o Earth Shock."
     ],
     "thundering-strikes": [
       "Aumenta tu probabilidad de golpe crítico con todos los hechizos y ataques en un 1%.",
