@@ -394,6 +394,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de Riverglades al atardecer: un río en calma entre colinas verdes y árboles frondosos",
     ),
   ),
+  /** Skywatch 023: news sul video Blizzard dei gradi PvP (Honor e Rank Points) del 18/11 */
+  newsPvpRanksVideo: cover(
+    "/media/news-pvp-ranks-video.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Skywatch: a tall hide tent with carved wooden poles on a grassy plateau under a blue sky",
+      "Screenshot di World of Warcraft: Forever di Skywatch: un'alta tenda di pelli con pali di legno intagliato su un altopiano erboso sotto un cielo azzurro",
+      "Captura de World of Warcraft: Forever de Skywatch: una alta tienda de pieles con postes de madera tallada en una meseta de hierba bajo un cielo azul",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

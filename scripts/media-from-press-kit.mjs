@@ -71,6 +71,8 @@ const jobs = [
   [`${S}/WoW_Forever_Announce_Dungeon_HallOfThanes_053.jpg`, "news-blackmaw-economy.webp", 1600, 900, "centre"],
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_042.jpg`, "news-hotfixes-nov-13-19.webp", 1600, 900, "centre"],
   [`${S}/WoW_Camelot_Announce_Zones_Riverglades_040.jpg`, "news-podcasts-7-8.webp", 1600, 900, "centre"],
+  // copertina della news sul video dei gradi PvP del 18/11 (20/11/2026)
+  [`${S}/WoW_Camelot_Announce_Zones_Skywatch_023.jpg`, "news-pvp-ranks-video.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_Hyjal_085.jpg`, "hyjal.webp", 1600, 900, "centre"],
