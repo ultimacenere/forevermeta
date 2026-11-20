@@ -358,6 +358,42 @@ export const media = {
       "Fotograma de la cinemática de lanzamiento de World of Warcraft: Forever: una enorme figura en sombra se alza sobre montañas oscuras surcadas por ríos de luz azul",
     ),
   ),
+  /** Riverglades 039: news sui numeri ufficiali del 17/11 (15 milioni di personaggi) */
+  newsRecordNumbers: cover(
+    "/media/news-record-numbers.webp",
+    n(
+      "World of Warcraft: Forever screenshot of a Riverglades town: a stone statue of a rider in a cobbled square between red-roofed houses",
+      "Screenshot di World of Warcraft: Forever di un paese delle Riverglades: la statua di pietra di un cavaliere in una piazza lastricata fra case dai tetti rossi",
+      "Captura de World of Warcraft: Forever de un pueblo de Riverglades: la estatua de piedra de un jinete en una plaza empedrada entre casas de tejados rojos",
+    ),
+  ),
+  /** Hall of Thanes 053: news su Blackmaw Hold, XP nei dungeon ed economia (13-18/11) */
+  newsBlackmawEconomy: cover(
+    "/media/news-blackmaw-economy.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Hall of Thanes dungeon: a dark stone hall with statues, blue lamps and a throne at the far end",
+      "Screenshot di World of Warcraft: Forever del dungeon Hall of Thanes: una sala di pietra buia con statue, lampade azzurre e un trono in fondo",
+      "Captura de World of Warcraft: Forever de la mazmorra Hall of Thanes: una sala de piedra oscura con estatuas, lámparas azules y un trono al fondo",
+    ),
+  ),
+  /** Zephras 042: news sugli hotfix del 13-19/11 */
+  newsHotfixesNov13: cover(
+    "/media/news-hotfixes-nov-13-19.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Zephras Isle: houses with blue roofs and a tall white tower in a golden haze",
+      "Screenshot di World of Warcraft: Forever di Zephras Isle: case dai tetti azzurri e un'alta torre bianca in una foschia dorata",
+      "Captura de World of Warcraft: Forever de Zephras Isle: casas de tejados azules y una alta torre blanca entre una bruma dorada",
+    ),
+  ),
+  /** Riverglades 040: news sui podcast 7 e 8 e sul racconto "Cost of Honor" */
+  newsPodcasts78: cover(
+    "/media/news-podcasts-7-8.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Riverglades at sunset: a calm river between green hills and broad trees",
+      "Screenshot di World of Warcraft: Forever delle Riverglades al tramonto: un fiume calmo fra colline verdi e alberi dalle chiome larghe",
+      "Captura de World of Warcraft: Forever de Riverglades al atardecer: un río en calma entre colinas verdes y árboles frondosos",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

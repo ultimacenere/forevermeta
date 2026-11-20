@@ -66,6 +66,11 @@ const jobs = [
   [`${S}/WoW_Camelot_Announce_Zones_Riverglades_035.jpg`, "news-faction-balance.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_BarrowDeeps_077.jpg`, "news-raids-interviews.webp", 1600, 900, "centre"],
   [`${C}/WoW_Forever_Cinematic_Still_2.jpeg`, "news-first-week.webp", 1600, 900, "centre"],
+  // copertine delle news del 12-19/11 (20/11/2026)
+  [`${S}/WoW_Camelot_Announce_Zones_Riverglades_039.jpg`, "news-record-numbers.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Forever_Announce_Dungeon_HallOfThanes_053.jpg`, "news-blackmaw-economy.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Camelot_Announce_Zones_Zephras_042.jpg`, "news-hotfixes-nov-13-19.webp", 1600, 900, "centre"],
+  [`${S}/WoW_Camelot_Announce_Zones_Riverglades_040.jpg`, "news-podcasts-7-8.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_Hyjal_085.jpg`, "hyjal.webp", 1600, 900, "centre"],

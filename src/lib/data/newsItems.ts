@@ -32,6 +32,10 @@ import factionBalanceNov10 from "./newsTexts/pvp-faction-balance-november-10";
 import classTuningNov10 from "./newsTexts/class-tuning-november-10";
 import dungeonXpGold from "./newsTexts/dungeon-xp-quest-gold-november-10";
 import raidsInterviews from "./newsTexts/raids-december-9-developer-interviews";
+import byTheNumbers from "./newsTexts/forever-by-the-numbers-15-million-characters";
+import blackmawEconomy from "./newsTexts/blackmaw-hold-exploit-dungeon-xp-ubrs-november-17";
+import hotfixesNov13 from "./newsTexts/hotfixes-november-13-19-classes-items";
+import podcasts78 from "./newsTexts/podcast-episodes-7-8-lore-classes";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -243,4 +247,8 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   classTuningNov10,
   dungeonXpGold,
   raidsInterviews,
+  blackmawEconomy,
+  byTheNumbers,
+  hotfixesNov13,
+  podcasts78,
 ];
