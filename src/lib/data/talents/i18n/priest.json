@@ -246,7 +246,7 @@
       "Aumenta i danni e le cure dei tuoi incantesimi istantanei del 5%."
     ],
     "vampiric-embrace": [
-      "Affligge il tuo bersaglio con energia d'Ombra che fa curare tutti i membri del gruppo del 20% di tutti i danni da incantesimo d'Ombra che infliggi, per 30 secondi."
+      "Affligge il tuo bersaglio con energia d'Ombra che fa curare tutti i membri del gruppo del 10% di tutti i danni da incantesimo d'Ombra che infliggi, per 30 secondi. Su di te le cure di questo effetto aumentano del 100%."
     ],
     "wand-specialization": [
       "Aumenta i tuoi danni con le bacchette del 13%.",
@@ -500,7 +500,7 @@
       "Aumenta el daño y la sanación de tus hechizos instantáneos un 5%."
     ],
     "vampiric-embrace": [
-      "Aflige a tu objetivo con energía de las Sombras que hace que todos los miembros del grupo se sanen un 20% de todo el daño de hechizos de las Sombras que infliges, durante 30 segundos."
+      "Aflige a tu objetivo con energía de las Sombras que hace que todos los miembros del grupo se sanen un 10% de todo el daño de hechizos de las Sombras que infliges, durante 30 segundos. Las sanaciones de este efecto sobre ti aumentan un 100%."
     ],
     "wand-specialization": [
       "Aumenta tu daño con varitas un 13%.",

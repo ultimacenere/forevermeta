@@ -10,7 +10,7 @@ const n = (en: string, it: string, es: string) => ({ en, it, es });
  * raccontato nella news class-tuning-november-10. Manutenzione settimanale del 17/11 nelle Americhe e del 18/11 in Europa
  * dal thread EU (topic 639885, post 6). Dungeon, XP, Blackmaw Hold, UBRS, rimborsi e casa d'aste stanno nella news gemella
  * blackmaw-hold-exploit-dungeon-xp-ubrs-november-17. Apertura delle incursioni (9/12) dalle note di sviluppo del 2/11
- * (news del sito). Builder: testi dei talenti degli hotfix del 10/11, senza questi ritocchi (vero al 20/11).
+ * (news del sito). Builder aggiornato il 20/11 (data.json di talentsforever del 18/11): cambia solo Vampiric Embrace.
  */
 const HOTFIX = "https://us.forums.blizzard.com/en/wow/t/wow-forever-hotfixes-november-19-2026/2403040";
 
@@ -147,7 +147,7 @@ Each entry also lists many quest fixes, for example: several quest items now dro
 
 ## Our builder {#builder}
 
-The talent texts in our [builder](/en/builder) are those of the hotfixes of 10 November and do not yet include the changes listed here, such as Wild Growth, Vampiric Embrace or Two-Handed Weapon Specialization. For an overview of the classes there is our [races and classes guide](/en/guides/wow-forever-races-classes).`,
+Since 20 November our [talent builder](/en/builder) shows the new Vampiric Embrace text (10% for the party, 100% more for the Priest). The other talents in this article were bug fixes that do not change their tooltip: Two-Handed Weapon Specialization already promised Holy damage, and the Wild Growth coefficient does not appear in the text. Every entry, day by day, is also in our [log of changes](/en/changes). For an overview of the classes there is our [races and classes guide](/en/guides/wow-forever-races-classes).`,
     `Blizzard tiene un solo thread degli hotfix di WoW Forever sui forum e ci aggiunge una voce datata ogni volta che cambia qualcosa. Fra il 14 e il 20 novembre ne sono arrivate quattro: [13 novembre](${HOTFIX}/10), pubblicata alle 01:54 UTC del 14 (02:54 CET), [16 novembre](${HOTFIX}/11), [17 novembre](${HOTFIX}/12) e [19 novembre](${HOTFIX}/13), pubblicata alle 04:00 UTC del 20 (05:00 CET). Ogni punto qui sotto porta la data della sua voce. I cambi ai dungeon degli stessi giorni, con Upper Blackrock Spire e Blackmaw Hold, sono in [un articolo a parte](/it/news/blackmaw-hold-exploit-dungeon-xp-ubrs-november-17). I nomi di talenti, incantesimi e oggetti restano in inglese, come nel gioco.
 
 ## Stordimenti con rendimenti decrescenti {#stordimenti}
@@ -222,7 +222,7 @@ Ogni voce ha anche molte correzioni alle missioni, per esempio: diversi oggetti 
 
 ## Il nostro builder {#builder}
 
-I testi dei talenti del nostro [builder](/it/builder) sono quelli degli hotfix del 10 novembre e non hanno ancora i ritocchi raccontati qui, come Wild Growth, Vampiric Embrace o Two-Handed Weapon Specialization. Per un quadro delle classi c'è la nostra [guida a razze e classi](/it/guides/wow-forever-races-classes).`,
+Dal 20 novembre il nostro [builder dei talenti](/it/builder) ha il testo nuovo di Vampiric Embrace (10% per il gruppo, 100% in più per il Sacerdote). Gli altri talenti di questo articolo erano correzioni di bug che non cambiano il tooltip: Two-Handed Weapon Specialization prometteva già i danni Sacri, e il coefficiente di Wild Growth nel testo non compare. Tutte le voci, giorno per giorno, sono anche nel nostro [storico delle modifiche](/it/changes). Per un quadro delle classi c'è la nostra [guida a razze e classi](/it/guides/wow-forever-races-classes).`,
     `Blizzard añade a su hilo de hotfixes de WoW Forever una entrada con fecha cada vez que cambia algo. Entre el 14 y el 20 de noviembre llegaron cuatro: [13 de noviembre](${HOTFIX}/10), publicada a las 01:54 UTC del 14 (02:54 CET), [16 de noviembre](${HOTFIX}/11), [17 de noviembre](${HOTFIX}/12) y [19 de noviembre](${HOTFIX}/13), publicada a las 04:00 UTC del 20 (05:00 CET). Cada punto lleva la fecha de su entrada. Los cambios en las mazmorras de esos días, con Upper Blackrock Spire y Blackmaw Hold, están en [otro artículo](/es/news/blackmaw-hold-exploit-dungeon-xp-ubrs-november-17). Los nombres de talentos, hechizos y objetos siguen en inglés, como en el juego.
 
 ## Aturdimientos con rendimientos decrecientes {#aturdimientos}
@@ -297,7 +297,7 @@ Hay también muchas correcciones de misiones, por ejemplo: varios objetos de mis
 
 ## Nuestro calculador {#calculador}
 
-Los textos de los talentos de nuestro [calculador](/es/builder) son los de los hotfixes del 10 de noviembre y todavía no tienen estos ajustes, como Wild Growth, Vampiric Embrace o Two-Handed Weapon Specialization. Para un panorama de las clases tienes nuestra [guía de razas y clases](/es/guides/wow-forever-races-classes).`,
+Desde el 20 de noviembre nuestro [calculador de talentos](/es/builder) tiene el texto nuevo de Vampiric Embrace (10% para el grupo, 100% más para el sacerdote). Los demás talentos de este artículo eran correcciones de errores que no cambian su descripción: Two-Handed Weapon Specialization ya prometía daño Sagrado, y el coeficiente de Wild Growth no aparece en el texto. Todas las entradas, día a día, están también en nuestro [historial de cambios](/es/changes). Para un panorama de las clases tienes nuestra [guía de razas y clases](/es/guides/wow-forever-races-classes).`,
   ),
   faq: {
     en: [
