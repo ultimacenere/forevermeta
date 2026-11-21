@@ -403,6 +403,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de Skywatch: una alta tienda de pieles con postes de madera tallada en una meseta de hierba bajo un cielo azul",
     ),
   ),
+  /** Shaper's Terrace 068: news sugli hotfix del 20/11 (reset dei dungeon a 5 all'ora) */
+  newsHotfixesNov20: cover(
+    "/media/news-hotfixes-nov-20.webp",
+    n(
+      "World of Warcraft: Forever screenshot of The Shaper's Terrace dungeon: vine-covered stone gates among giant ferns and glowing yellow crystals under a green sky",
+      "Screenshot di World of Warcraft: Forever del dungeon The Shaper's Terrace: portali di pietra coperti di rampicanti fra felci giganti e cristalli gialli luminosi sotto un cielo verde",
+      "Captura de World of Warcraft: Forever de la mazmorra The Shaper's Terrace: portones de piedra cubiertos de enredaderas entre helechos gigantes y cristales amarillos brillantes bajo un cielo verde",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",
