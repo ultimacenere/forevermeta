@@ -412,6 +412,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de la mazmorra The Shaper's Terrace: portones de piedra cubiertos de enredaderas entre helechos gigantes y cristales amarillos brillantes bajo un cielo verde",
     ),
   ),
+  /** Excavation Site 055: news sui World Buffs tolti alle schermate di caricamento (bug del 22/11) */
+  newsWorldBuffsBug: cover(
+    "/media/news-world-buffs-bug.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Excavation Site dungeon in the Wetlands: fossil bones in tall marsh grass at dusk, with flat-topped trees and rocks behind",
+      "Screenshot di World of Warcraft: Forever del dungeon Excavation Site nelle Wetlands: ossa fossili nell'erba alta di palude al crepuscolo, con alberi dalla chioma piatta e rocce sullo sfondo",
+      "Captura de World of Warcraft: Forever de la mazmorra Excavation Site en Wetlands: huesos fósiles entre la hierba alta del pantano al anochecer, con árboles de copa plana y rocas al fondo",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

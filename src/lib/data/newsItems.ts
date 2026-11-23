@@ -38,6 +38,7 @@ import hotfixesNov13 from "./newsTexts/hotfixes-november-13-19-classes-items";
 import podcasts78 from "./newsTexts/podcast-episodes-7-8-lore-classes";
 import pvpRanksVideo from "./newsTexts/pvp-ranks-honor-rank-points-seasons-journey-video";
 import hotfixesNov20 from "./newsTexts/hotfixes-november-20-dungeon-resets-stormshroud";
+import worldBuffsBug from "./newsTexts/world-buffs-loading-screen-bug-aidan-moon";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -255,4 +256,5 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   podcasts78,
   pvpRanksVideo,
   hotfixesNov20,
+  worldBuffsBug,
 ];

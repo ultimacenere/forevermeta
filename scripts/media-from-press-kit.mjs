@@ -75,6 +75,8 @@ const jobs = [
   [`${S}/WoW_Camelot_Announce_Zones_Skywatch_023.jpg`, "news-pvp-ranks-video.webp", 1600, 900, "centre"],
   // copertina della news sugli hotfix del 20/11 (21/11/2026)
   [`${S}/WoW_Forever_Announce_Dungeon_ShaperTerrace_068.jpg`, "news-hotfixes-nov-20.webp", 1600, 900, "centre"],
+  // copertina della news sui World Buffs tolti alle schermate di caricamento (23/11/2026)
+  [`${S}/WoW_Forever_Announce_Dungeon_ExcavationSite_055.jpg`, "news-world-buffs-bug.webp", 1600, 900, "centre"],
   // altre immagini per la home e le pagine
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_047.jpg`, "zephras.webp", 1600, 900, "centre"],
   [`${S}/WoW_Forever_Announce_Raid_Hyjal_085.jpg`, "hyjal.webp", 1600, 900, "centre"],
