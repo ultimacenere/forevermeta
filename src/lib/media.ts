@@ -421,6 +421,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de la mazmorra Excavation Site en Wetlands: huesos fósiles entre la hierba alta del pantano al anochecer, con árboles de copa plana y rocas al fondo",
     ),
   ),
+  /** Timbermaw Hold 057: news sugli hotfix del 23/11 (World Buffs, Mortal Strike, Uldaman) */
+  newsHotfixesNov23: cover(
+    "/media/news-hotfixes-nov-23.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the Timbermaw Hold dungeon: a furbolg on a wooden fishing dock in a dark lake, among autumn trees with red and orange leaves under a blue evening sky",
+      "Screenshot di World of Warcraft: Forever del dungeon Timbermaw Hold: un furbolg su un pontile di legno da pesca in un lago scuro, fra alberi autunnali dalle foglie rosse e arancioni sotto un cielo blu di sera",
+      "Captura de World of Warcraft: Forever de la mazmorra Timbermaw Hold: un furbolg en un embarcadero de pesca de madera en un lago oscuro, entre árboles otoñales de hojas rojas y naranjas bajo un cielo azul de atardecer",
+    ),
+  ),
   /** miniatura ufficiale del video "Your Leveling Journey Past 30" (canale YouTube World of Warcraft, 19/10/2026), scelta da Pierluigi */
   levelingPast30: {
     src: "/media/news-leveling-past-30.webp",

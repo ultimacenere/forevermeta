@@ -20,6 +20,7 @@ const WH_ULDAMAN =
 const item: NewsItem = {
   slug: "world-buffs-removed-loading-screen-bug-fix-aidan-moon",
   date: "2026-11-22",
+  updated: "2026-11-24",
   source: "site",
   topic: "news",
   image: media.newsWorldBuffsBug.src,
@@ -72,7 +73,9 @@ const item: NewsItem = {
     ],
   },
   body: n(
-    `On Sunday 22 November 2026 players noticed that their World Buffs in WoW Forever disappeared whenever the game showed a loading screen. A few hours later a Blizzard designer confirmed that it was not a design change. This article separates what Blizzard has said from what only players and Wowhead have observed. Spell, item and place names stay in English, as in the game.
+    `**Update, 24 November 2026.** The fix is official: Blizzard's [hotfix note of 23 November](/en/news/hotfixes-november-23-world-buffs-mortal-strike-uldaman) says World Buffs no longer fall off when you change areas, but they are still removed when you enter a raid instance. The same note restores the Obsidian Sentinel's loot in Uldaman, and Blizzard called the lockbox change a temporary measure. The text below is the original article of 23 November.
+
+On Sunday 22 November 2026 players noticed that their World Buffs in WoW Forever disappeared whenever the game showed a loading screen. A few hours later a Blizzard designer confirmed that it was not a design change. This article separates what Blizzard has said from what only players and Wowhead have observed. Spell, item and place names stay in English, as in the game.
 
 ## What happens to World Buffs {#what-happens}
 
@@ -109,7 +112,9 @@ Over the same weekend Wowhead tested two other changes. **Neither appears in Bli
 - **Uldaman, Obsidian Sentinel.** [Wowhead found](${WH_ULDAMAN}) that this boss, which stands just inside the back entrance, no longer drops its Rare items: in its test it left only coins and Solid Stone. One side effect matters for levelling characters: the Axe of Lingering Dread came from this boss, and without it the Pendulum of Doom cannot be put together for now.
 
 Both follow a week in which Blizzard acted on gold sources, from the dungeon reset cap to the accounts sanctioned for [Blackmaw Hold](/en/news/blackmaw-hold-exploit-dungeon-xp-ubrs-november-17). We will update this article if Blizzard documents either change or restores the axe. More on Uldaman, Dire Maul and the other instances in our [guide to zones, dungeons and raids](/en/guides/wow-forever-zones-dungeons-raids).`,
-    `Domenica 22 novembre 2026 i giocatori si sono accorti che i loro World Buffs in WoW Forever sparivano ogni volta che il gioco mostrava una schermata di caricamento. Poche ore dopo un designer di Blizzard ha confermato che non era un cambio voluto. Questo articolo tiene separato ciò che ha detto Blizzard da ciò che hanno osservato solo i giocatori e Wowhead. I nomi di incantesimi, oggetti e luoghi restano in inglese, come nel gioco.
+    `**Aggiornamento del 24 novembre 2026.** La correzione è ufficiale: la [nota degli hotfix del 23 novembre](/it/news/hotfixes-november-23-world-buffs-mortal-strike-uldaman) dice che i World Buffs non si perdono più cambiando zona, ma vengono ancora tolti quando si entra in un'incursione. La stessa nota rimette il bottino dell'Obsidian Sentinel di Uldaman, e Blizzard ha definito temporaneo il cambio ai lockbox. Sotto c'è l'articolo originale del 23 novembre.
+
+Domenica 22 novembre 2026 i giocatori si sono accorti che i loro World Buffs in WoW Forever sparivano ogni volta che il gioco mostrava una schermata di caricamento. Poche ore dopo un designer di Blizzard ha confermato che non era un cambio voluto. Questo articolo tiene separato ciò che ha detto Blizzard da ciò che hanno osservato solo i giocatori e Wowhead. I nomi di incantesimi, oggetti e luoghi restano in inglese, come nel gioco.
 
 ## Cosa succede ai World Buffs {#cosa-succede}
 
@@ -146,7 +151,9 @@ Nello stesso fine settimana Wowhead ha provato altri due cambi. **Nessuno dei du
 - **Uldaman, Obsidian Sentinel.** [Wowhead ha verificato](${WH_ULDAMAN}) che questo boss, subito dietro l'ingresso posteriore, non lascia più i suoi oggetti Rare: nella sua prova ha lasciato solo monete e Solid Stone. Un effetto collaterale conta per chi sta livellando: l'Axe of Lingering Dread cadeva da questo boss, e senza quella il Pendulum of Doom per ora non si può comporre.
 
 Tutti e due arrivano dopo una settimana in cui Blizzard è intervenuta sulle fonti di oro, dal limite ai reset dei dungeon agli account sanzionati per [Blackmaw Hold](/it/news/blackmaw-hold-exploit-dungeon-xp-ubrs-november-17). Aggiorneremo questo articolo se Blizzard documenta uno dei due cambi o rimette l'ascia. Altro su Uldaman, Dire Maul e le altre istanze nella nostra [guida a zone, dungeon e incursioni](/it/guides/wow-forever-zones-dungeons-raids).`,
-    `El domingo 22 de noviembre de 2026 los jugadores notaron que sus World Buffs en WoW Forever desaparecían cada vez que el juego mostraba una pantalla de carga. Pocas horas después un diseñador de Blizzard confirmó que no era un cambio intencionado. Este artículo separa lo que ha dicho Blizzard de lo que solo han observado los jugadores y Wowhead. Los nombres de hechizos, objetos y lugares siguen en inglés, como en el juego.
+    `**Actualización del 24 de noviembre de 2026.** El arreglo es oficial: la [nota de hotfixes del 23 de noviembre](/es/news/hotfixes-november-23-world-buffs-mortal-strike-uldaman) dice que los World Buffs ya no se pierden al cambiar de zona, aunque se siguen quitando al entrar en una banda. La misma nota devuelve el botín del Obsidian Sentinel de Uldaman, y Blizzard calificó de temporal el cambio de los lockboxes. Debajo está el artículo original del 23 de noviembre.
+
+El domingo 22 de noviembre de 2026 los jugadores notaron que sus World Buffs en WoW Forever desaparecían cada vez que el juego mostraba una pantalla de carga. Pocas horas después un diseñador de Blizzard confirmó que no era un cambio intencionado. Este artículo separa lo que ha dicho Blizzard de lo que solo han observado los jugadores y Wowhead. Los nombres de hechizos, objetos y lugares siguen en inglés, como en el juego.
 
 ## Qué pasa con los World Buffs {#que-pasa}
 
@@ -192,7 +199,7 @@ Los dos llegan tras una semana en la que Blizzard actuó sobre las fuentes de or
       },
       {
         q: "When will the World Buffs bug in WoW Forever be fixed?",
-        a: "Aidan Moon wrote on 22 November 2026 that the bug would be fixed the next day, 23 November. Blizzard has not confirmed the fix in its hotfix notes yet, so check that your buffs survive a loading screen before you use them.",
+        a: "It was fixed with the hotfixes of 23 November 2026, as Aidan Moon had announced the day before. Blizzard's note says World Buffs no longer fall off when changing areas, but they are still removed when you enter a raid instance.",
       },
       {
         q: "Can you use World Buffs in dungeons in WoW Forever?",
@@ -200,7 +207,7 @@ Los dos llegan tras una semana en la que Blizzard actuó sobre las fuentes de or
       },
       {
         q: "Did Blizzard remove the loot from the Obsidian Sentinel in Uldaman?",
-        a: "Wowhead found on 22-23 November 2026 that the Obsidian Sentinel no longer drops its Rare items, which also makes the Pendulum of Doom impossible to assemble for now. Blizzard has not listed or explained the change in its hotfix notes.",
+        a: "Wowhead found on 22-23 November 2026 that the Obsidian Sentinel no longer drops its Rare items, which also blocked the Pendulum of Doom. In the hotfixes of 23 November 2026 Blizzard wrote that the boss drops loot as intended again, without saying what it now drops.",
       },
     ],
     it: [
@@ -210,7 +217,7 @@ Los dos llegan tras una semana en la que Blizzard actuó sobre las fuentes de or
       },
       {
         q: "Quando viene corretto il bug dei World Buffs in WoW Forever?",
-        a: "Aidan Moon ha scritto il 22 novembre 2026 che il bug sarebbe stato corretto il giorno dopo, il 23 novembre. Blizzard non ha ancora confermato la correzione nelle note degli hotfix: prima di usare i buff controllate che reggano a una schermata di caricamento.",
+        a: "È stato corretto con gli hotfix del 23 novembre 2026, come Aidan Moon aveva annunciato il giorno prima. La nota di Blizzard dice che i World Buffs non si perdono più cambiando zona, ma vengono ancora tolti quando si entra in un'incursione.",
       },
       {
         q: "Si possono usare i World Buffs nei dungeon in WoW Forever?",
@@ -218,7 +225,7 @@ Los dos llegan tras una semana en la que Blizzard actuó sobre las fuentes de or
       },
       {
         q: "Blizzard ha tolto il bottino dell'Obsidian Sentinel di Uldaman?",
-        a: "Wowhead ha verificato il 22-23 novembre 2026 che l'Obsidian Sentinel non lascia più i suoi oggetti Rare, e questo per ora rende impossibile comporre il Pendulum of Doom. Blizzard non ha elencato né spiegato il cambio nelle note degli hotfix.",
+        a: "Wowhead ha verificato il 22-23 novembre 2026 che l'Obsidian Sentinel non lascia più i suoi oggetti Rare, e questo bloccava anche il Pendulum of Doom. Negli hotfix del 23 novembre 2026 Blizzard ha scritto che il boss lascia di nuovo il bottino come previsto, senza dire cosa lascia ora.",
       },
     ],
     es: [
@@ -228,7 +235,7 @@ Los dos llegan tras una semana en la que Blizzard actuó sobre las fuentes de or
       },
       {
         q: "¿Cuándo se arregla el error de los World Buffs en WoW Forever?",
-        a: "Aidan Moon escribió el 22 de noviembre de 2026 que el error se corregiría al día siguiente, el 23 de noviembre. Blizzard aún no ha confirmado el arreglo en sus notas de hotfixes: antes de usar los buffs comprueba que aguantan una pantalla de carga.",
+        a: "Se corrigió con los hotfixes del 23 de noviembre de 2026, como había anunciado Aidan Moon el día anterior. La nota de Blizzard dice que los World Buffs ya no se pierden al cambiar de zona, aunque se siguen quitando al entrar en una banda.",
       },
       {
         q: "¿Se pueden usar los World Buffs en las mazmorras de WoW Forever?",
@@ -236,7 +243,7 @@ Los dos llegan tras una semana en la que Blizzard actuó sobre las fuentes de or
       },
       {
         q: "¿Ha quitado Blizzard el botín del Obsidian Sentinel de Uldaman?",
-        a: "Wowhead comprobó el 22 y 23 de noviembre de 2026 que el Obsidian Sentinel ya no suelta sus objetos Rare, lo que por ahora impide montar el Pendulum of Doom. Blizzard no ha incluido ni explicado el cambio en sus notas de hotfixes.",
+        a: "Wowhead comprobó el 22 y 23 de noviembre de 2026 que el Obsidian Sentinel ya no suelta sus objetos Rare, lo que también bloqueaba el Pendulum of Doom. En los hotfixes del 23 de noviembre de 2026 Blizzard escribió que el jefe vuelve a soltar botín como estaba previsto, sin decir qué suelta ahora.",
       },
     ],
   },
