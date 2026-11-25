@@ -403,6 +403,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de Skywatch: una alta tienda de pieles con postes de madera tallada en una meseta de hierba bajo un cielo azul",
     ),
   ),
+  /** Zephras 049: news sul fumetto "Al'Aketh Rising" (24/11) */
+  newsAlAkethComic: cover(
+    "/media/news-al-aketh-comic.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Zephras Isle: a wooden jetty on a green lagoon, misty peaks on the left and a white spire in the haze",
+      "Screenshot di World of Warcraft: Forever di Zephras Isle: un pontile di legno su una laguna verde, picchi nella nebbia a sinistra e una guglia bianca nella foschia",
+      "Captura de World of Warcraft: Forever de Zephras Isle: un embarcadero de madera en una laguna verde, picos entre la niebla a la izquierda y una aguja blanca en la bruma",
+    ),
+  ),
   /** Shaper's Terrace 068: news sugli hotfix del 20/11 (reset dei dungeon a 5 all'ora) */
   newsHotfixesNov20: cover(
     "/media/news-hotfixes-nov-20.webp",
