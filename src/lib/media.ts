@@ -403,6 +403,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de Skywatch: una alta tienda de pieles con postes de madera tallada en una meseta de hierba bajo un cielo azul",
     ),
   ),
+  /** City of Dalaran 074: news sul video "Class Utility For Groups" (23/11) */
+  newsClassUtilityVideo: cover(
+    "/media/news-class-utility-video.webp",
+    n(
+      "World of Warcraft: Forever screenshot of the City of Dalaran dungeon: robed casters with glowing hands around a purple ritual circle, skeletons on the stone floor",
+      "Screenshot di World of Warcraft: Forever del dungeon City of Dalaran: incantatori in tunica con le mani luminose attorno a un cerchio rituale viola, scheletri sul pavimento di pietra",
+      "Captura de World of Warcraft: Forever de la mazmorra City of Dalaran: lanzadores con túnica y manos brillantes alrededor de un círculo ritual morado, esqueletos en el suelo de piedra",
+    ),
+  ),
   /** Zephras 049: news sul fumetto "Al'Aketh Rising" (24/11) */
   newsAlAkethComic: cover(
     "/media/news-al-aketh-comic.webp",

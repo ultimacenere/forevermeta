@@ -73,6 +73,8 @@ const jobs = [
   [`${S}/WoW_Camelot_Announce_Zones_Riverglades_040.jpg`, "news-podcasts-7-8.webp", 1600, 900, "centre"],
   // copertina della news sul fumetto Al'Aketh Rising (25/11/2026)
   [`${S}/WoW_Camelot_Announce_Zones_Zephras_049.jpg`, "news-al-aketh-comic.webp", 1600, 900, "centre"],
+  // copertina della news sul video "Class Utility For Groups" (25/11/2026)
+  [`${S}/WoW_Forever_Announce_Dungeon_Dalaran_074.jpg`, "news-class-utility-video.webp", 1600, 900, "centre"],
   // copertina della news sul video dei gradi PvP del 18/11 (20/11/2026)
   [`${S}/WoW_Camelot_Announce_Zones_Skywatch_023.jpg`, "news-pvp-ranks-video.webp", 1600, 900, "centre"],
   // copertina della news sugli hotfix del 20/11 (21/11/2026)
