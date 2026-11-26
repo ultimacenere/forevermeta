@@ -403,6 +403,15 @@ export const media = {
       "Captura de World of Warcraft: Forever de Skywatch: una alta tienda de pieles con postes de madera tallada en una meseta de hierba bajo un cielo azul",
     ),
   ),
+  /** Darkshore 049: news sugli hotfix del 25/11 (Druido Balance, Alterac Valley) */
+  newsHotfixesNov25: cover(
+    "/media/news-hotfixes-nov-25.webp",
+    n(
+      "World of Warcraft: Forever screenshot of Darkshore: a misty beach at sunset with a pink sun over the sea, twisted trees and a small campfire on the sand",
+      "Screenshot di World of Warcraft: Forever di Darkshore: una spiaggia nella nebbia al tramonto con un sole rosa sul mare, alberi contorti e un piccolo fuoco sulla sabbia",
+      "Captura de World of Warcraft: Forever de Darkshore: una playa entre la niebla al atardecer con un sol rosado sobre el mar, árboles retorcidos y una pequeña hoguera en la arena",
+    ),
+  ),
   /** City of Dalaran 074: news sul video "Class Utility For Groups" (23/11) */
   newsClassUtilityVideo: cover(
     "/media/news-class-utility-video.webp",

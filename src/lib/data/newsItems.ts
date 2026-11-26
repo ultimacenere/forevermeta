@@ -42,6 +42,7 @@ import worldBuffsBug from "./newsTexts/world-buffs-loading-screen-bug-aidan-moon
 import hotfixesNov23 from "./newsTexts/hotfixes-november-23-world-buffs-mortal-strike-uldaman";
 import alAkethComic from "./newsTexts/al-aketh-rising-comic-skyborne-constable-aonda";
 import classUtilityVideo from "./newsTexts/class-utility-groups-video-battle-shout-banes";
+import hotfixesNov25 from "./newsTexts/hotfixes-november-25-balance-druid-alterac-valley-riding";
 
 const n = (en: string, it: string, es: string) => ({ en, it, es });
 
@@ -263,4 +264,5 @@ Los niveles de City of Dalaran y si las correcciones que Blizzard anunció antes
   hotfixesNov23,
   alAkethComic,
   classUtilityVideo,
+  hotfixesNov25,
 ];
